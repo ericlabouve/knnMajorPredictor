@@ -1,0 +1,3268 @@
+http://www.omnidesigngroup.com/currentprojects-cpsimpson.aspx
+
+Structural Analysis of Overhead Crane in Simpson StrongTie Laboratory
+
+Amy Poehlitz
+
+Architectural Engineering Department
+California Polytechnic State University, San Luis Obispo
+Advisor: Dr. Craig Baltimore, PhD, SE
+June 2017
+
+© 2017 Amy Poehlitz
+
+Poehlitz 2
+
+Table of Contents
+Introduction
+
+..............................................................................................................
+
+3
+
+Project Management ....................................................................................................
+
+4
+
+Structural Analysis ........................................................................................................
+
+7
+
+Verification of Existing Conditions ..................................................................
+
+8
+
+Capacity of Existing Members ..........................................................................
+
+11
+
+New Loading .....................................................................................................
+
+12
+
+Final Design
+
+....................................................................................................
+
+15
+
+Conclusion
+
+..............................................................................................................
+
+19
+
+Appendices
+
+..............................................................................................................
+
+20
+
+Appendix A
+
+.....................................................................................................
+
+20
+
+Appendix B
+
+.....................................................................................................
+
+22
+
+Appendix C
+
+.....................................................................................................
+
+24
+
+Appendix D
+
+.....................................................................................................
+
+26
+
+Appendix E ......................................................................................................
+
+34
+
+Appendix F ......................................................................................................
+
+62
+
+Poehlitz 3
+
+Introduction
+Since its opening in 2010, the Cal Poly’s Simpson Strong-Tie Material Demonstration Laboratory has
+been used for multiple activities by the College of Architecture and Environmental Design. Currently, the
+bottom floor is used for Construction Management laboratory classes. These classes allow students to
+practice construction techniques at full scale. The size of these projects is problematic when assemblies
+need to be moved or when the finished structure needs to be removed from the building. For example,
+one class builds a small portion of a traditionally constructed house. The roof for this structure is
+constructed on the ground and lifted into place atop walls. Currently, the lifting is accomplished with the
+student’s brute force and a forklift, which is ineffective, dangerous, and requires advance coordination
+with the Facilities Department. Installing a crane overhead would allow projects to be maneuvered
+safely.
+Scope of the Report
+This report investigates the existing building’s structural ability to accommodate an overhead crane.
+There are several ways to add an overhead crane to a building. This report investigates attaching a crane
+to the roof beams. For an explanation of the decision, see the Estimate of Existing Capacity section. The
+ability to support a crane is dependent on the available capacity of the existing structure. Specifically,
+this report considers the capacity of the existing roof and columns for the new crane loading. The
+concrete walls and foundations were not evaluated because of impending and unknown loading from
+cantilever load racks. The analysis is also limited to the gravity system. The crane represents about a 7%
+increase in the weight of the roof. Therefore, it is likely the lateral system has the capacity for the
+increased forces. The report only considers the structural impact of a crane and does not consider
+electrical or MEP systems.
+This report also covers working in an interdisciplinary design team and managing a project. Working
+collaboratively requires professional communication and time management. The techniques used
+helped ensure timely completion of the project despite the lack of structured class time.
+Report Overview
+The final deliverable for this senior project was a set of calculations that will be used in the proposal
+process to Cal Poly Facilities. The report opens with a discussion of project management techniques for
+small projects and how they were applied to create the calculation package. Then the report outlines an
+analysis procedure for building additions illustrated by examples from this project. The procedure begins
+with the verification of existing conditions, followed by estimating the existing capacity to decide which
+design to pursue. Once the general direction is decided the new loading needs to be defined. Then, if all
+the previous steps indicate the addition is possible, the report describes how complete the final design.
+
+Poehlitz 4
+
+Project Management
+A successful project depends not only on the individual skills of the team members, but also on their
+ability to work together towards a common goal. A well-managed project facilitates collaboration
+through communication of clear objectives. The management process for small projects can be outlined
+through the following steps:
+Management Process for Small Projects
+Initial Tasks
+ Choosing Design Team
+ Kick-Off Meeting
+o Project Defined
+o Project Deliverables and Due Dates
+o Establish Methods of Communication
+ Determine Project Priorities
+During Project
+ Communication Between Team Members: RFI Process
+ Scheduling
+o Schedule
+o Weekly Status Reports
+Brief Descriptions of the Steps:
+Design Team
+Traditionally, a design team consists of an owner, contractor, architect, and engineer. Each member
+contributes their specific expertise to the project. The design team for the Simpson Strong-Tie building
+project consisted of Amy Poehlitz, as structural engineer, and Paul Redden, as both owner’s
+representative and contractor. The project did not need an architect. An architect’s role might have
+included aesthetic decisions or maintaining accessibility and egress.
+Kick-Off Meeting
+A successful project needs a kick-off meeting. This meeting clearly defines the scope of the project and
+the responsibilities of each team member. Responsibilities could include deliverables at specific due
+dates or expectations for communication throughout the project. This project was defined as the
+structural impact of installing an overhead crane in the Simpson Strong-Tie Building. The crane should
+access the first six bays of the bottom floor and need not extend outside of the building perimeter. It
+was agreed the final deliverable would be a set of calculations created by Amy Poehlitz. The calculation
+would form part of a proposal by the Construction Management Department to the Cal Poly Facilities
+Department. Communication between the engineer and owner-contractor would mainly occur through
+weekly status reports. There would be weekly meeting between the engineer and her advisor.
+
+Poehlitz 5
+
+Project Priorities
+
+Figure 1: The Three Project Priorities
+At the start of a project, it is important to define the client’s priorities so the team knows what to focus
+on. A project can only optimize two of the three priorities:
+
+
+
+
+Time
+Cost
+Quality
+
+For example, a project can have a short timeline and low cost but the deliverable won’t be good quality.
+On this project, time and quality were priorities. Time was required because the project had to be
+finished in a quarter. Quality was required because the calculations were going to be used for the
+internal Cal Poly approval process. In an actual firm, the project would have had a premium on the price
+because the high likelihood of additional work to stay on schedule. The additional work is often finding
+alternative ways to get information that another team member is behind schedule in providing. For
+example, in this project the crane vender had not delivered their quote and I needed the load
+information to evaluate the existing structure. To stay on schedule, I sized all the crane members to get
+a load estimate. If the project had a longer timeline I could have waited for the quote and saved the
+extra work. For more information on the process of estimating loading see the Estimating New Loading
+in Projects with Strict Deadline subsection in New Loading.
+Communication
+Methods of communication are as varied as projects. This project used weekly status reports for the
+majority of project communication. Status reports are used in different forms in many different
+industries. For this project, the reports included:
+
+
+
+
+A summary of any meetings that occurred that week
+Action items for each team member
+Progress on action items from the previous weeks
+
+Meeting notes are valuable to update team members not at the meeting and to act as reference
+material for meeting attendees. The action items provide discrete goals that can be updated on a weekly
+
+Poehlitz 6
+
+basis. The flexibility lets the goals reflect the actual progress of the project, compared to the rigid overall
+schedule.
+The weekly status reports were also used in place of RFI (Request for Information) procedures. RFIs are
+a set procedure used for information transfer between team members. RFIs were not used due to the
+size of the project. In large projects, RFIs offer a way to organize the large and varied amounts of
+information shared. In a small project, like this, a less formal system is sufficient and the exchange of
+information happens weekly, either in meetings or over email.
+For more information on RFIs:
+Brazee, Art. " The Anatomy of a Request for Information (RFI)." Jobsite. Procore Technologies, Inc, 29
+Mar. 2016. Web. 14 June 2017.
+
+Scheduling
+Scheduling is designed keep a project on track, by making agreed deliverable dates for all to see.
+Reverse scheduling is often useful for projects with hard deadlines. A reverse schedule is created
+working backward from the completion date instead of forward from the present. It is recommended to
+include flux time in the schedule to allow the project to recover from unforeseen complications.
+Reverse scheduling was used for this project because the deadline of the end of the academic quarter
+could not be moved.
+Schedules for projects are dependent on actions of all team members.
+
+
+
+
+
+Reverse Scheduling: used with a deadline that cannot be moved
+Information Based Scheduling: individual discipline progress is dependent on the results of other
+disciplines (team members). This type of scheduling benefits from the use of a facilitator. This
+facilitator is commonly seen as a construction manager (as opposed to construction contractor).
+Goal Based Scheduling: benefits of meeting short terms goals are used as the basis for
+deadlines. For example, seasonal changes can affect a project.
+
+The above list of methods of forming a schedule has not been vetted, but is the experience of the
+advisor.
+Often, one team member needs another member’s task to be completed before they can start their
+own. For example, the architect might need information from the client. Instead of declaring a hard
+deadline, the architect can ask if it works with the owner’s schedule. This allows gives the owner
+flexibility. Another approach is to communicate why the information is needed quickly. Often, the owner
+is invested in completing the project on schedule.
+
+Poehlitz 7
+
+Structural Analysis
+Working within an existing building brings additional challenges. Significant amounts of time go into
+verifying the existing structure before the design can begin. The structural analysis process for additions
+is outlined through the following steps:
+Structural Analysis Process for Additions
+
+
+
+
+
+
+
+
+Verify Existing Conditions (discussed on page 8)
+o Structural Members
+o Connections
+o Loading Conditions
+Estimate of Existing Capacity (page 11)
+New Loading and Loading Location on Existing Structural Elements (page 12)
+o Estimating New Loading in Projects with Strict Deadlines
+If above conditions positive, than final design (page 15)
+o Check of Existing Structure’s Capacity
+o Design of Connection between Existing Structure and Addition
+If above negative structure is not a good candidate for proposed addition/remodel
+
+Poehlitz 8
+
+Verification of Existing Conditions
+The existing state of a building needs to be understood before the effect of any additions can be
+analyzed. This process includes determining the existing structural members, how those members are
+connected, and what loading is placed on the members.
+This section compares the existing conditions in the Simpson Strong-Tie Building to as-built drawings
+obtained from California Polytechnic State University, San Luis Obispo dated February 2011. The plans
+were obtained through Cal Poly’s construction drawing archive, Web-Planroom. The existing building
+has a timber framed roof (heavy timber joists and glulam beams) supported on pre-engineered lumber
+parallam columns. These columns are supported on a concrete wall which rests on a continuous spread
+footing. The interior of the building can be seen in figure 2.
+
+Joist
+Beam
+
+Columns
+
+Figure 2: Interior of Simpson Strong-Tie Building
+Roof Member Sizes:
+Sizes of the roof members were inspected visibly and appeared in accordance with the as-built plans.
+The exposed nature of the roof made it easy to inspect the structure.
+Connections:
+The connections were also inspected visibly and appeared to match the details in the as-built drawings.
+
+Figure 3: Drafted Detail and Existing Connection
+
+Poehlitz 9
+
+Roof Loading:
+The use of the roof has not changed so a live load of 20psf for maintenance is still appropriate.
+The general notes state the building was designed for a total roof loading of 20psf in areas without the
+green roof and 32 psf in areas with the green roof. The green roof was never installed. The layers of the
+roof could not be verified by inspection but it could be confirmed there is wood decking as the base
+layer and PVC roofing as the top layer. It is reasonable to assume the roof was constructed as shown in
+the details in figure 4. Based on the as-built drawings, a take-off of the roof might include:
+80 mil PVC Roofing
+Rigid Insulation
+5/8” Plywood Roof
+Sheathing
+3x6 Douglas Fir Decking
+Sprinklers
+MEP
+Total
+
+0.5 psf
+1.5 psf
+1.8
+7.6
+5.2
+2
+
+psf
+psf
+psf
+psf
+
+18.6 psf
+
+Figure 4: Roof Construction Details
+Based on the details in Figure 4, a dead load of 20psf is reasonable. The dead load calculation does not
+consider is the weight of the skylights. These loads will be applied separately.
+
+Poehlitz 10
+
+An interesting loading condition on the roof is the presence of personal safety restraints (see figure 5).
+These are hooks that maintenance workers can use while on the roof to attach themselves and hang
+from the building. These loads transfer directly to the glulam beams.
+
+Figure 5: Personal Safety Restraints
+Drainage also needed to be considered when determining existing loads on the roof. If ponding occurs,
+the weight of the water can quickly become significant. The Simpson Strong Tie Building does not have a
+problem with debris build up, as there are no nearby overhanging trees to deposit debris on the surface.
+However, after rain there is a small amount of pooling near the down sprouts (see Figure 6).
+
+Figure 6: Pooling Near Drain Pipes
+
+Figure 7: Extent of Pooling Relative to Roof Area
+
+The water is not deep and the nets protecting the down sprouts seem clear of debris, which limits the
+possible depth of puddling. The sitting water is a result of the roof sloping slightly toward the edge of
+the roof instead of in toward the drainpipes. The puddling only occurs near the downspouts and only
+within the gutter channels on the edge of the roof. The limited extent of the pooling can be seen in
+Figure 7 on the next page. The loading effect of these puddles will be neglected because their shallow
+depth and narrow extent results in limited impact on the capacity of the structural members.
+
+Poehlitz 11
+
+Estimate Existing Capacity
+Often there are multiple ways that an addition can be attached to an existing structure. To decide which
+option to investigate, start by estimating whether the structure has the capacity for each option. This
+will reduce the time spent pursuing options that will not work. After the options have been reduced to
+only those that are plausible the final selection should be based on other factors. These factors will vary
+from project to project but may include minimal impact to the structural system, minimal impact to
+usable space, and least cost. If after further investigation the first option is unworkable, the other
+options can be returned to.
+
+Figure 8: Possible Methods for Attaching Overhead Crane to Structures
+The addition for this project was an overhead crane. There are several ways to add an overhead crane to
+a building as shown in figure 8:
+
+
+
+
+attaching the crane runways to the columns
+installing separate columns (stanchions) that would support the crane completely apart from
+the existing structure
+attaching the runways to the roof
+
+A quick calculation shown on page 31 in Appendix E showed the existing columns did not have the
+capacity for the eccentric loading in option one. The separate frame is possible but not preferred as it
+would take up floor space and require foundation work. Therefore, this report investigates installing a
+crane to the roof beams. For this option, the ability to support a crane is dependent on the capacity of
+the existing structure.
+
+Poehlitz 12
+
+New Loading
+Once the general approach to installing the addition has been defined, the impact on the structure
+needs to be quantified. Often, the impact is a load in a critical location. If the location of the addition is
+flexible the placement should consider the existing building systems, such as MEP and structural. The
+ideal location has the minimum impact on the existing systems. For example, the Simpson Strong-Tie
+building has fire sprinklers installed above where the crane members will be installed. To minimize
+interference with water coverage, the runways should be placed directly below the first row of
+sprinklers as shown in figure 9. By placing the beams directly below the sprinklers, the umbrella water
+sprinkling effect will be minimally impacted.
+
+Figure 9: Approximate Location of Crane Members: Runways in Green, Bridge Girder in Blue
+Estimating New Loading in Projects with Strict Deadlines
+Sometimes tasks in projects are discipline dependent. For example, in this project the new loading could
+not be fully defined until the quote came in from the crane vender. In projects with longer or more
+flexible deadlines a delay may have minimal effect. However, this project needed to stay on schedule
+and meet a hard deadline. Luckily, if information is delayed the situation is often not hopeless, but does
+require unscheduled or uncompensated effort. Often, the information can be found an alternative way.
+In this case load information was needed. To increase accuracy, loads can be based on a similar existing
+condition. For more information on how this effects the project’s cost see the Project Priorities
+subsection in Project Management.
+As mentioned, on this project the crane quote was delayed and analysis of the existing structure needed
+to begin for the project to stay on schedule. To estimate the load I needed to size the crane members, a
+task that would also be completed by the crane vender. To keep the numbers realistic, the design was
+based off an existing crane, the overhead crane in Cal Poly’s High Bay Laboratory, shown in figure 10.
+The most important value from the existing crane was the deflection criterion. The deflection criterion
+
+Poehlitz 13
+
+for cranes is stricter than the code value because any slope in the beam affects the crane’s ability to
+function. The actual deflection of the crane was found and divided by the span to give a deflection
+criterion of Δ < l/586, four times stricter than the applicable IBC code value. The criterion is still
+reasonable, it agrees with the masonry code criteria of l/600, per TMS 402-13 Section 5.2.1.4.1. The
+masonry code limits deflection to mitigate cracking. The deflection criterion from the existing crane was
+used while sizing the crane members. The crane members were sized for bending, shear, and deflection.
+
+Figure 10: Overhead Crane in High Bay Laboratory
+Shortly after the loads had been calculated, the quote came through from the vender. The estimate was
+only 60% of the load given by the vender (crane quote in Appendix D). The estimated structure was
+lighter because a deeper member was chosen for the bridge girder that was more efficient for bending.
+The vender may have chosen a different, heavier section to limit torsional concerns or to maintain
+ceiling heights. The difference in values illustrates why designs using estimates should be conservative
+to limit redesign.
+Influence Lines in Sizing Crane Members
+The demand placed on members comes from the loading. In this case, determining the loading was
+complicated by the crane’s ability to change positions. Each position is a distinct loading condition. To
+capture all these conditions, the analysis utilized influence lines. Influence lines show how a reaction or
+internal force at a specific location changes as a load moves across the structure. For example, an
+influence line for the moment at the center of the beam, as shown in figure 11, gives the value of the
+moment in that specific spot for each possible location of the load. This means there could be many
+different moment influence lines for the same beam. In comparison, moment diagrams give the
+moment at every different location on the beam for a single load configuration. Influence lines are not
+the same as considering the increase in forces from the dynamic effects of the crane’s movements. The
+dynamic effects were neglected in this project because the crane has a limiter on its speed to lessen
+those effects.
+
+Poehlitz 14
+
+Figure 11: Influence Lines for Bridge Girder
+In this project, the moving load was the crane housing and hoist, applied on the bridge girder. Influence
+lines were found for the moment at the center, the shear at the end, the deflection, and the reactions at
+the ends. The maximum values from the shear, moment and deflection influence lines were used to size
+the bridge girder (see figure 11). The vertical reactions were also found and used to load the glulam
+beams. The influence lines for bending, shear, and the vertical reactions were found using the MüllerBreslau Principle (explanation in Appendix C). The influence line for displacement was found using
+Maxwell’s Reciprocal Displacement (explanation in Appendix C).
+
+Poehlitz 15
+
+Final Design
+Once all the work has been done to define the existing structure and new loading the design can be
+finalized. This includes the final check of the building’s capacity as well as any connections that need to
+be designed between the addition and the existing structure.
+Check of Existing Structure’s Capacity
+To check the existing capacity, follow the load flow through structure and check the capacity of each
+member affected by addition. For each member check shear, moment, and deflection. The capacity of
+any connections also needs to be checked.
+The crane load enters the structure on the glulam beams. The crane loading is expressed as a function
+instead of a discrete value because of the movement of the hoist (functions in figure 11). Two loading
+cases were considered to capture the extremes of the functions, shown in figure 12: the entire load on
+one hanger and the load split between both hangers. The beam is symmetric so the concentrated load
+only needs to be considered on one side.
+
+Figure 12: Crane Load Cases on Glulam Beam
+The analysis of the beam was furthered complicated by the tapered cross-section. The taper means the
+moment of inertia changes along the length of the beam. To capture the change, the moment of inertia
+needs to be expressed as a function in the deflection equation. To avoid an unnecessary complex
+integration, the deflection of the beam was found by computer structural analysis software (ETABS).
+The tapered cross-section also complicated the bending capacity check. Bending was checked using
+stress. However, the equation to relate moment to bending stress is dependent on the height of the
+section and the moment of inertia, both which change in tapered cross-sections. Therefore, the place of
+highest moment, in this case the center of the beam, might not be the location of highest stress. A
+spreadsheet was made (in Microsoft Excel) that calculated the section properties at increments along
+the beam. The bending stress was checked at each increment. The graph shown in figure 13 illustrates
+how the stress changes along the beam. The peak stress occurs approximately twelve feet from the end
+
+Poehlitz 16
+
+of the beam, not at the center where maximum moment occurs. The uncertainty in the location of
+maximum demand is why demand on changing cross-sections should be checked across the length of
+the beam. The glulam beams had sufficient capacity in bending. The beam capacity calculations can be
+found in Appendix E.
+
+Bending Stress of Glulam Beams
+
+Bending Stress (ksi)
+
+2.50
+2.00
+1.50
+
+Load Case 1
+
+1.00
+
+Load Case 2
+
+0.50
+0.00
+0
+
+10
+
+20
+
+30
+
+Distance Along Beam (ft)
+
+40
+
+50
+
+Figure 13: Bending Stress on Tapered Glulam Beams (load cases correspond with figure 12)
+The glulam beams are connected to the columns by a bearing connection, shown in figure 14. The
+governing capacity for this connection was the axial capacity of the parallel strand laminated column.
+The column capacity governs and additional loading cannot be applied, such as future storage racks.
+The axial capacity of the column was low because its large unbraced length makes it susceptible to
+buckling. The column had just enough capacity to support the additional weight of the crane. The
+existing capacity of the structure is governed by the axial capacity of the columns. The conclusion of the
+analysis is the roof and columns have enough capacity to support the proposed crane. It is noted that
+the columns were efficiently designed by the original engineer and the additional capacity is most likely
+due to the green roof loading, which never built.
+If the crane is installed, a green roof cannot be installed in the future.
+
+Figure 14: Glulam Beam to Column Connection
+
+Poehlitz 17
+
+Design of Connection between Existing Structure and Addition
+Once it has been determined that the structure can support the addition, the connection to the
+structure can be designed. The following connection design is a suggestion and shows that a connection
+is possible. A connection is dependent on the actual crane selected to be installed and the connection
+needs to match the manufacturer’s specifications.
+The only connection for this addition was between the runways and the glulam beams. The vender’s
+quote only gave a vertical gravity load for the connection (see crane quote in Appendix D). If the
+connection only took vertical load, it is unclear what would prevent the bridge girder and runways from
+rotating. A connection needs to resist 2% of a member’s axial capacity along the member’s axis to
+prevent the member from failing in torsion per AISC 318. To account for the uncertainty in the load flow,
+two connections were designed, one that only resisted gravity load, shown as connection one in figure
+15, and a connection that provides torsional resistance to the bridge girder, shown as connection two in
+figure 15. The connection that provides torsional resistance is much wider than the connection only
+resisting gravity. The lateral load resisted by connection two created a large moment because of the
+eccentricity between the connection and the bridge girder. That moment is resisted by the couple
+formed by two lines of the bolts. The connection had to be wide to reduce the forces on each line of
+bolts to allowable levels.
+
+Figure 15: Initial Connection Design
+
+Poehlitz 18
+
+The design of both connections was governed by the bearing of the bolts in the glulam beams. This was
+expected because the loading was perpendicular to the grain; the direction timber is the weakest.
+Connections in glulam beams under constant stress that load the beam perpendicular to the grain tend
+to fail over time through the delamination of layers. The initial plan to prevent this was to install two lag
+screws directly connecting the flange of the runways to the glulam beam, shown in figure 15. The lag
+screws were sized to carry the entire unfactored gravity load as a backup system separate from the plate
+connection. However, the failure area of the lag screws interfered with the through bolts. It was decided
+that instead of adding a separate back up system, a system to prevent delamination should be included.
+A strap was added on each side of the connection that passes around the entire perimeter of the glulam,
+shown in figure 16. The strap will hold the layers of the glulam together, not allowing them to
+delaminate. The strap will need to be sized to accommodate the swelling and shrinking of the wood
+throughout seasonal humidity changes.
+
+Figure 16: Final Connection Design
+Again, the connection was designed to show the ability of the glulam beams to support the crane.
+Connection redesign and sizing will likely be needed when the design is finalized.
+
+Poehlitz 19
+
+Conclusion
+This report found the Simpson Strong-Tie building can support a 2-ton overhead crane. The report
+specifically investigated hanging the crane from the glulam beams. The type of crane considered was a
+two-ton hoist with the system specified by the vender, Dearborn Overhead Cranes (more information
+can be found in the crane quote in Appendix D). More specifically, the existing structure can support a
+hanger load of 7.8 kips, occurring four and a half feet away from the exterior wall on the glulam beams.
+While not investigated, supporting the crane on a separate column (stanchion) is also a viable option;
+however existing foundation coordination will have to be considered.
+The capacity of the existing structure is governed by the axial capacity of the parallel strand laminated
+columns. The columns were originally designed to support a green roof. The green roof was never
+installed, creating enough extra capacity to allow the installation of the crane. After the installation of
+the crane the columns will be at capacity and will not have the ability to support additional loads, from
+either the load racks or any future additions including a green roof.
+The connection design included in the report is suggested. It is mainly included to show the ability of the
+beam to support the crane. Connection sizing and redesign will likely be needed for the chosen crane.
+The steps outlined in the project management section were sufficient for this small project. The project
+was completed on time. I gained experience working in an interdisciplinary team, especially on a project
+on a short schedule.
+Hopefully the calculation package will contribute to Cal Poly Facility’s approval for overhead crane
+installation in the Simpson Strong-Tie building.
+
+Acknowledgements
+I would like to thank Paul Redden for his support and expertise on the project. I would also like to thank
+my advisor, Craig Baltimore, for his guidance and constructive critique.
+
+Poehlitz 20
+
+Appendix A – Example of Weekly Status Report
+Status Report
+
+4.18.2017
+
+Project: Overhead Crane Installation in Simpson Strong-Tie Material Demonstration Laboratory
+Engineer: Amy Poehlitz
+Advisor: Craig Baltimore
+Owner: Construction Management Department
+Owner’s Representation: Paul Redden
+
+Summary- 4/18 Meeting with Craig Baltimore
+Reviewed crane options
+Column Connection: not preferred. Places eccentric loading on columns.
+
+Connection to Glulam Beams: preferred. I am using this option for the initial
+design
+
+Separate Frame: needs more investigation. Need to see if it would interfere
+with existing foundations.
+
+Discussed what governing capacity might be
+-crushing in connection or beam shear
+Discussed potential need for kicker depending on connection detail from crane to glulam beam, AISC Lattice
+Discussed loading condition for personal safety restraints, depends on rating of support
+Next Meeting: 10 am 4/25; Bldg. 21 Room 108B
+
+Poehlitz 21
+
+Tasks for Week
+Paul
+- More information on the desired crane. Bottleneck Item - Due 4/21
+Provide specifications and cut sheets
+Weight of the assembly including weight of crane and weight of runways/beams
+Deflection limit for bridge girder (allows me to estimate size of beams while waiting for cut sheets,
+determined by limit for operation of crane)
+Speed of the crane/dynamic loading from manufacturer
+Connection detail between crane and glulam beam
+Which bays does the crane needs to access (need to access mezzanine?). To you want to access the full
+width of the building (project north to south)?
+
+Amy
+-Write report section on management techniques – Due 4/25
+-Check crushing on existing beam connection – Due 4/25
+-Placement rail so it does not interfere with fire sprinklers – Due 4/25
+-Write report section on influence lines – Due 4/25
+-Influence lines for vertical reactions and deflection of bridge girder – Due 4/25
+
+Tasks from Previous Week
+Amy
+
+-Project Schedule – (complete)
+
+-Outline Senior Project Report – (complete)
+
+-Moment and Shear Diagram for Tapered Glu-Lams – (complete)
+
+Poehlitz 22
+
+Appendix B – Project Schedule
+Schedule
+
+4.11.2017
+
+Project: Overhead Crane Installation in Simpson Strong-Tie Material Demonstration Laboratory
+Engineer: Amy Poehlitz
+Advisor: Craig Baltimore
+Owner: Construction Management Department
+Owner’s Representation: Paul Redden
+
+4/11 – Weekly Meeting
+Senior Project Report Introduction
+Calculation Package Building Description
+4/13
+Outline Senior Project Report
+Memo – Verification of As-Builts
+4/14
+Receive Specifications and Cut Sheets for Crane
+4/18 – Weekly Meeting
+Shear/Moment Diagrams for Variable Cross-Section Glulams
+Questions on Influence Lines
+4/25 – Weekly Meeting
+Influence Lines for Glulam Internal Forces
+Rough Draft Report: Management
+5/2 – Weekly Meeting
+Influence Lines for Glulam Reactions
+Rough Draft Report: Verifying As-Builts
+5/9 – Weekly Meeting
+Evaluation of Existing Columns
+Rough Draft Report: Analysis
+
+Poehlitz 23
+
+5/16 – Weekly Meeting
+Design of Connection between Crane and Existing Structure
+Rough Draft Report: Design
+5/23 – Weekly Meeting
+Compile Calculation Package
+Rough Draft Report: Conclusion
+5/30 – Weekly Meeting
+Final Draft of Senior Project Report for Review
+Address Comments on Calculation Package
+6/2 – Weekly Meeting
+Address Comments on Senior Project Report
+6/6 – Weekly Meeting
+Project Wrap-up
+6/8 - Senior Project Presentation
+
+Poehlitz 24
+
+Appendix C – Explanation of Methods to Develop Influence Lines
+Müller-Breslau Principle
+The Müller-Breslau Principle states the influence line for an action is proportional to the displacement of
+a structure where the action is replaced with a unit displacement or rotation. Reaction forces and
+internal shears are replaced with unit displacements. Moment reactions and internal moments are
+replaced with unit rotations. For example, the internal moment at the center of the beam in figure 16
+was released and replaced by a unit rotation. The resulting displacement of the structure, shown in red,
+is proportional to the influence line for the internal moment. The line is then scaled by solving a single
+loading case.
+
+Figure 16: Using Müller-Breslau Principle
+For more information:
+structurefree. “Influence Lines with Muller-Breslau Principle (part 1) - Structural Analysis.” Online Video
+Clip. YouTube. YouTube, 23 October 2012. Web. May 15 2017.
+
+Poehlitz 25
+
+Maxwell’s Reciprocal Displacement
+This principle states that the displacement at point A resulting from a load at point B is the same as the
+displacement at point B from that same load at point A. For example, if F B and FA from figure 17 were
+equal than ΔAB and ΔBA would also be equivalent. To this principle to influence lines apply a load to the
+center of the beam and solve for the displacements at every point on the beam. By Maxwell’s Reciprocal
+Displacement the displacement at any location on the beam from the load at the middle is also the
+displacement at the middle from the load at that location.
+
+Figure 17: Maxwell’s Reciprocal Displacement
+For more information:
+Parvanova, Sonya. "Influence lines for displacements." Faculty - Sonya Lubomirova Purvanova-Joncheva.
+University of Architecture, Civil Engineering and Geodesy, 2011. Web. 16 May 2017.
+
+Poehlitz 26
+
+Appendix D – Crane Quote
+
+Poehlitz 27
+
+*** Cover Sheet ***
+To: Paul Redden
+Company: California Polytechnic State University
+
+From: Dan Yeakey
+Quote#: 178021
+Date: 05/05/17
+Pages (including this page): 6
+Comments: Bridge Crane
+
+Dearborn Overhead Crane
+Since 1947
+DESIGN SPECIFICATIONS
+Material design and safety features, based on service classification, will conform to the following listed specifications and
+codes where applicable and appropriate:
+Crane Manufacturers Association of America, Inc., CMAA 70-74, Latest Edition
+American National Standard, B30.11-1980 “Underhung Cranes”
+American National Standard, ANSI-B30.16 “Overhead Hoist”
+Hoist Manufacturers Institute – Specification HMI 100-74
+Manual of Steel Construction, Latest Edition
+National Electrical Code – Latest Edition
+Specification for Welding Industrial & Mill Cranes ANSI/AWS D 14.1 – 1997
+
+Poehlitz 28
+
+05/05/17
+
+Proposal No. 178021
+
+ATTN: Paul Redden
+California Polytechnic State University
+
+SUBJECT: Bridge Crane
+
+SCOPE
+One 2 ton under running, single girder crane per attached specifications. Our quote includes all crane
+and hoist components, runways, 4 conductor runway electrification, engineering, fabrication, painting.
+
+PRICING
+Item Description
+2 ton under running, single girder crane
+72’ Runways and End stops
+Runway Electrification System
+•
+•
+•
+•
+•
+
+Material Installation
+18300
+5800
+900
+Totals:
+By others
+$25,000.00
+Remote Radio System Adder: $1,000, installed per crane
+Installation not included.
+We can also provide (1) man to supervise your crew with the install and start-up process
+@ $800/day plus travel and expenses
+Please add sales tax where applicable
+Freight not included
+
+We hope the above information and enclosures are sufficient to answer any questions you
+might have regarding this equipment. Should there be any further questions or a need to
+get a better price quoted, please feel free to call. We would welcome the opportunity to
+further discuss our proposal with you.
+Price quoted is subject to increase to cover any applicable sales or use tax which we are required by law
+to pay or collect as a result of this transaction. We reserve the right to correct any stenographic errors.
+
+Terms: 35% down payment, 55% prior to delivery
+10% net 30 (pending credit approval.)
+Due to the volatile steel market, all quotations must be confirmed prior to acceptance of order .
+Delivery: 5-6 weeks after receipt of signed approval drawings
+and Purchase Order
+Ordered by:
+Attached Bid Notes are an integral part of this proposal.
+Total Amount:
+Quoted By: DJY
+PO Number:
+Respectfully submitted,
+
+Dan Yeakey
+Dan Yeakey, DEARBORN CRANE & ENGINEERING CO.
+
+Poehlitz 29
+
+Crane Specifications
+Quote No:
+Customer:
+Attention:
+
+178021
+California Polytechnic State University
+Paul Redden
+
+Date:
+
+05/05/17
+
+Crane Data
+Crane type
+Capacity
+Span
+Lift
+Hoist
+Wheel Load
+End Trucks
+Configuration
+Girder Type
+
+under running, single girder
+2 Tons
+40'- 0"
+22'- 0"
+2 ton wire rope
+3200 lbs.
+5'- 10" wheel base
+single girder
+standard wide-flange
+
+Standard
+items
+
+2 speed hoist , Weight Watcher Load Cell, Trolley Brake, Trolley Bumpers, Hoist
+Geared Upper and Lower Limit, Bridge Travel Slow Down Limit Switch, Trolley
+VFD Control, Bridge VFD Control, Warning Horn, Hoist Inspection Test Record,
+Wire Rope Certification, Hook Forging Certificate
+
+# of Cranes
+Operation
+Power
+Reeving
+Control Encl.
+Crane Rating
+Operation type
+Cross Conductors
+Paint
+
+1
+Indoors
+460/3/60
+2/1
+NEMA 12
+CMAA C
+Sliding P.B.
+Festooned
+Yellow
+
+Runway Data
+Runway
+
+72’ supported every 12’
+
+Runway Conductors
+
+Hanger Load
+
+Estimated at 7.8 Kip – to be
+verified by engineering
+
+Runway Collectors
+
+Standard primer – gray
+If required, foundations are by others. Loading are provided at time of order.
+
+Paint
+
+Electrical Data
+Drive
+Hoist
+Trolley
+Bridge
+
+Motor Type
+
+Speed (FPM)
+
+Brakes
+
+Crane Duty
+Crane Duty
+Crane Duty
+
+20/3.3 two speed
+65 VFD
+100 VFD
+
+DC Disc
+DC Disc
+DC Disc
+
+4 bar Conductor
+system
+Tandum Spring Shoe
+type
+
+Poehlitz 30
+
+Bid Notes
+The following bid notes are included as an integral part of the quote. Variances and/or exceptions may affect the
+final price of this equipment.
+•
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Dearborn installation is computed on a straight time basis. Installation requested to be done outside normal
+working hours may require overtime charges. Pricing also assumes all work is done in a continuous fashion
+with a single "Start up and Shut down". Additional charges may be incurred if Dearborn is required to pull
+off the job and restart later.
+Dearborn cannot accept responsibility for any existing support or building structures.
+Proper sizing, location, alignment to CMAA recommendations, and spacing of Runways, columns, support
+steel and/or ASCE rail is responsibility of others where Dearborn does not supply these items.
+Design and supply of material for any concrete work is not included unless otherwise called out in quotation.
+All material factory painted using manufacturers standard paint with field paint touch up, by Dearborn.
+Temporary electric power for lighting and welders by others. Dearborn uses Gas welders as a standard
+Removal of any obstruction in crane path, by others. Exception only if agreed to in advance in writing with
+Dearborn
+Disposal of leaded paint chips, asbestos, or any other hazardous material which may need to be removed
+during the crane installation will be the responsibility of the owner.
+Handling and storage of materials due to delays by customer may result in additional charges.
+A complete Operating & Maintenance manual with appropriate spare parts list is included.
+All installation prices assume a clear work area with concrete floors in place. Delays and/or extra time
+incurred by the field crews due to inaccessibility to work area will be billed at then current rates for men and
+equipment .Exception only if agreed to in advance in writing with Dearborn .
+Adequate headroom above the bridge crane must be available to allow the boom of the mobile crane to set the
+crane and hoist. Exception only if agreed to in advance in writing with Dearborn .
+A fused disconnect and power from source to the disconnect and from disconnect to conductor bar is by
+others. Current taps and connection at the conductor bar is provided by Dearborn.
+Any permits required, by others.
+Basic operator orientation, including one session of approximately ½ hour at time of installation, is included.
+A more comprehensive operator and OSHA training is available on request.
+"Testing" in the scope section refers to ‘No Load’ Testing which tests all functions of equipment. Full Load
+Testing with test weights is available as described on the Load Testing Policy page.
+Limitation of liability: seller shall have no liability to buyer with respect to the sale of products or provision of
+services hereunder for lost profits or for special, consequential, exemplary or incidental damages of any kind.
+Warranty: Dearborn Overhead Crane provides a full 10 year warranty on all structural components of the
+crane (and runway system where supplied by Dearborn Overhead Crane). All mechanical and electrical
+components (such as hoists, end trucks, electrification, attachments, etc.) are supplied with a limited ONE
+year warranty on material only. Warranty period begins on the date of crane commissioning and signed
+acceptance by the customer.
+
+Poehlitz 31
+
+OPTIONAL EQUIPMENT AVAILABLE:
+•
+
+RADIO CONTROL
+
+•
+
+ANTI-COLLISION FEATURE
+
+•
+
+WARNING DEVICES
+
+•
+
+CRANE LIGHTS
+
+•
+
+ADJUSTABLE FREQUENCY DRIVES
+
+•
+
+OUTDOOR APPLICATIONS
+
+•
+
+WALKWAYS AND/OR SERVICE PLATFORMS
+(Means to access the above option is not included, but available)
+
+•
+
+SPECIAL PAINT
+
+•
+
+BELOW HOOK DEVICES (C-HOOKS, MAGNETS, SLINGS,
+ETC)
+
+DEARBORN will provide the right combination of PERFORMANCE,
+RELIABILITY and VALUE, all at the right price. We not only build and install
+the highest quality cranes; we also have a full time field service crew that repairs
+all brands of cranes. DEARBORN also provides annual service contracts for those
+customers who depend on their equipment for critical production needs or who
+want to be sure their equipment is always in top working order and OSHA
+inspections are being done in a timely fashion.
+
+Poehlitz 32
+
+Load Testing Advisory
+1) Current specifications regarding the load tests of Overhead Crane Systems
+ANSI B30.11 requires the following;
+11-2.2.2 Rated Load Test
+(a) Prior to initial use, all new, extensively repaired, and altered equipment shall be tested and inspected by, or
+under the direction of, an appointed or authorized person, and a written report should be furnished by such person,
+confirming the load rating of the system. The load rating should no be more than 80% of the maximum load
+sustained during the test.
+OSHA 1910.179 Paragraph K2 states the following;
+Rated load test.
+Test loads shall not be more than 125% of the rated load unless otherwise recommended by the manufacturer. The
+test reports shall be placed on file where readily available to appointed personnel.
+
+2) Definitions
+Hoist
+A machinery unit that is used for lifting and lowering a load.
+Crane
+A bridging structure that spans two or more runways and provides traversing motion.
+Runway
+The rails, beams, brackets and framework on which the crane operates.
+
+3) Dearborn Overhead Crane Load Testing Offer
+(Maximum crane capacity of 10 ton or less)
+It therefore is our opinion, that it is the owner’s responsibility to load test the overhead bridge crane system. The
+"system" consists of the hoist, crane, runways, columns and footings. To test the "system", requires that the full
+system be in place and therefore must occur after the completion of the crane installation. Although it is hoist
+industry practice to load test every hoist prior to shipping, this practice does not preclude the requirement for the
+full load testing upon commissioning of the full hoist, crane and runway system.
+As a service to our customers, DOC offers to provide this load test free of charge to the purchaser of a Dearborn
+Crane. To take advantage of this free offer, ALL the following criteria is required.
+1. Dearborn Must be contracted to install the crane and will perform this load test during the normal installation
+time period
+2. The customer must provide a full capacity test load** to be used for testing purposes. This load must be
+125% of the rated capacity of the crane.
+3. The load must be of reliable weight, and be easily accessible and in the immediate area of the crane to be
+tested. The weight of the load should be certifiable. If certification of the load is not practical, DOC can
+provide a scale to weigh the load for a small fee.
+4. All necessary rigging** must be provided by the customer.
+5. The load and rigging must be provided while DOC is on site for the installation. (If the customer cannot
+provide the required materials during the normal installation period, but still would like to have a Certified
+Load Test performed, a crew can be provided on a time and material basis.)
+Upon completion of the test, a temporary hand written certificate will be supplied to the owner, so that there is no
+possible exposure to the owner of not have proper documentation. The official Load Test Certificate to following
+within 2 weeks. Also, a copy will remain on file at Dearborn.
+** Dearborn Overhead Crane is not responsible for any damage that may occur to either the test weights or the rigging used.
+
+Poehlitz 33
+DIMENSIONS ARE BASED ON A CLEAR INSIDE BUILDING
+HEIGHT OF 26'-0"
+3'-10 3/4"
+
+MIN 1'-3 3/4"
+8"
+
+4 7/8"
+
+1'-4 7/8"
+
+SPAN 37'
+MIN 1'-3 3/4"
+
+2-TON
+
+4 3/4"
+
+23'-2 3/8"
+39'-4 3/8"
+
+1'-2 3/16"
+
+1'-2 3/16"
+
+5'-10 7/8"
+
+7'-4"
+
+MAX.STATIC CORNER LOAD 3.2 kips
+
+: 37'-0''
+SPAN
+: 2 TON
+LOAD
+: 22'-1 5/16''
+LIFTING HEIGHT
+: 20.0/3.2 ft/min 2-speed
+HOISTING SPEED
+TRAVERSING SPEED : 65 ft/min stepless
+TRAVELLING SPEED : 100 ft/min stepless
+WEIGHT OF TROLLEY: 520 lbs
+WEIGHT OF BRIDGE : 3617 lbs
+CRANE CLASSIFICATION : CMAA Class C
+: ASME H4
+HOIST GROUP
+CRANE DRIVE GROUP: CMAA C
+MAIN/CONTROL VOLTAGE : 460 / 115 V; 60 Hz
+: 4.33 Hp
+SUPPLY POWER
+LENGTH OF RUNWAY: 0
+
+Dearborn Overhead Crane
+Lifting Expectations Since 1947
+
+3'-3"
+
+22'-1 3/8"
+
+21'-2 1/4"
+
+25'
+
+26'
+
+1'-1 3/4"
+
+11"
+
+Poehlitz 34
+
+Appendix E- Calculation Package
+
+Table of Contents
+Building Description ..................................................................................
+
+35
+
+Gravity Load Take Off ...............................................................................
+
+36
+
+Gravity Framing
+Key Plan ........................................................................................
+Size Crane Members .....................................................................
+Analysis Existing Glulam Beam ...................................................
+Analysis Existing Connection .......................................................
+
+37
+38
+45
+53
+
+Connection Design
+Runway to Glulam Beam ..............................................................
+
+55
+
+Spring 2017
+
+Simpson Strong-Tie Crane
+
+Poehlitz 35
+
+Amy Poehlitz
+
+Building Description
+Project Description
+Location: Campus of California Polytechnic State University, San Luis Obispo, California
+General Description: Large laboratory building used for Construction Management classes. Also hosts the
+College of Architecture and Environmental design DFAB lab.
+Codes:
+Existing Building: 2007 CBC, ASCE 7-05, ACI 318-05, ASIC 360-2005, NDS 200
+New Design: 2016 CBC, ASCE 7-10, ACI 318-11, ASIC 360-2011, NDS 2015
+Roof Loading
+Dead: 20psf
+Live: 20psf
+Mezzanine
+Dead Load: 55psf
+Live Load: 125psf (Light Storage)
+Wind Design Criteria
+Basic Wind Speed: 85mph
+Wind Importance Factor: 1.15
+Wind Exposure: B
+Applicable Internal Pressure Coefficient: 0.55
+Seismic Design Criteria
+Seismic Importance Factor: 1.25
+Occupancy Category: III
+Mapped Spectral Response Accelerations: SS=1.263 S1=0.474
+Site Class: B
+Spectral Response Coefficients: SDS=0.85 SD1=0.32
+Seismic Design Category: D
+Geotechnical Information
+Site Class: B
+Allowable Bearing Pressure = 2500psf
+Gravity Load Flow – Roof
+Load is distributed by the sheathing and 3x decking onto 6x10 Purlins spaced at four feet. These purlins
+are supported by 6 3/4”x20” taperd glulam beams spaced at 12 feet, which in turn rest on 7”x7” Parallam
+PSL columns. These columns are supported by a concrete wall which sits atop a continuous spread
+footing.
+Lateral Load Flow - Roof
+The lateral loads on the roof are transferred through the sheathing and 3x decking into the rim beams. The
+rim beams collects the load into the heavy timber braced frames on the exterior of the building. The
+braces transfer the load into the concrete shear walls which connect to the foundation. The foundation
+passes the load into the ground.
+
+Poehlitz 36
+
+Gravity Load Take Off
+Dead Load
+
+Misc.
+
+0.5
+1.5
+1.8
+7.6
+5.2
+2
+1.4
+
+Total
+
+20 psf
+
+80 mil PVC Roofing
+Rigid Insulation
+5/8” Plywood Roof Sheathing
+3x6 Douglas Fir Decking
+Sprinklers
+MEP
+
+psf
+psf
+psf
+psf
+psf
+psf
+psf
+
+Live Load
+
+Maintenance
+
+20 psf
+
+Poehlitz 37
+
+ROOF KEY PLAN
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+121' - 0"
+
+8
+
+9
+
+10
+
+11
+
+6' - 0"
+
+12' - 6"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 6"
+
+3' - 7"
+
+4x12
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+4x12
+
+7"x7" Parallam
+Column TYP.
+
+A
+
+44' - 0"
+
+4x12
+
+7" x 18"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+7" x 18"
+
+CRANE RUNWAY
+
+4x12
+
+4' - 6"
+
+1
+
+CRANE RUNWAY
+4x12
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+4x12
+
+D
+
+Poehlitz 38
+
+Poehlitz 39
+
+Poehlitz 40
+
+Poehlitz 41
+
+Poehlitz 42
+
+Poehlitz 43
+
+Poehlitz 44
+
+Poehlitz 45
+
+Poehlitz 46
+
+Poehlitz 47
+
+Poehlitz 48
+
+Poehlitz 49
+
+Glulam Beam Bending Stress
+Load Case 1
+Distance Along
+Beam (ft)
+
+Height (in)
+
+Moment of
+Intertia (in^4)
+
+Moment
+(k-ft)
+
+Bending
+Stress (ksi)
+
+Distance Along
+Beam (ft)
+
+Height (in)
+
+Moment of
+Intertia (in^4)
+
+Moment
+(k-ft)
+
+Bending
+Stress (ksi)
+
+0
+
+20.00
+
+4493.33
+
+0.00
+
+0.00
+
+44
+
+20.00
+
+4493.33
+
+0.00
+
+0.00
+
+0.9
+
+20.41
+
+4774.74
+
+16.39
+
+0.42
+
+43.1
+
+20.41
+
+4774.74
+
+10.81
+
+0.28
+
+1.8
+
+20.82
+
+5067.66
+
+32.37
+
+0.80
+
+42.2
+
+20.82
+
+5067.66
+
+21.20
+
+0.52
+
+2.7
+
+21.23
+
+5372.31
+
+47.92
+
+1.14
+
+41.3
+
+21.23
+
+5372.31
+
+31.17
+
+0.74
+
+3.6
+
+21.64
+
+5688.94
+
+63.06
+
+1.44
+
+40.4
+
+21.64
+
+5688.94
+
+40.72
+
+0.93
+
+4.5
+
+22.05
+
+6017.77
+
+77.77
+
+1.71
+
+39.5
+
+22.05
+
+6017.77
+
+49.85
+
+1.10
+
+4.5
+
+22.05
+
+6017.77
+
+77.77
+
+1.71
+
+39.5
+
+22.05
+
+6017.77
+
+49.85
+
+1.10
+
+5.4722
+
+22.49
+
+6386.96
+
+85.61
+
+1.81
+
+38.5278
+
+22.49
+
+6386.96
+
+59.24
+
+1.25
+
+6.4444
+
+22.93
+
+6770.95
+
+92.97
+
+1.89
+
+37.5556
+
+22.93
+
+6770.95
+
+68.15
+
+1.38
+
+7.4167
+
+23.37
+
+7170.07
+
+99.83
+
+1.95
+
+36.5833
+
+23.37
+
+7170.07
+
+76.56
+
+1.50
+
+8.3889
+
+23.81
+
+7584.53
+
+106.20
+
+2.00
+
+35.6111
+
+23.81
+
+7584.53
+
+84.48
+
+1.59
+
+9.3611
+
+24.26
+
+8014.66
+
+112.08
+
+2.04
+
+34.6389
+
+24.26
+
+8014.66
+
+91.92
+
+1.67
+
+10.3333
+
+24.70
+
+8460.75
+
+117.48
+
+2.06
+
+33.6667
+
+24.70
+
+8460.75
+
+98.86
+
+1.73
+
+11.3056
+
+25.14
+
+8923.14
+
+122.38
+
+2.07
+
+32.6944
+
+25.14
+
+8923.14
+
+105.32
+
+1.78
+
+12.2778
+
+25.58
+
+9402.04
+
+126.79
+
+2.07
+
+31.7222
+
+25.58
+
+9402.04
+
+111.28
+
+1.82
+
+13.25
+
+26.02
+
+9897.76
+
+130.72
+
+2.06
+
+30.75
+
+26.02
+
+9897.76
+
+116.76
+
+1.84
+
+14.2222
+
+26.46
+
+10410.62
+
+134.15
+
+2.05
+
+29.7778
+
+26.46
+
+10410.62
+
+121.74
+
+1.86
+
+15.1944
+
+26.91
+
+10940.89
+
+137.10
+
+2.02
+
+28.8056
+
+26.91
+
+10940.89
+
+126.24
+
+1.86
+
+16.1667
+
+27.35
+
+11488.92
+
+139.55
+
+1.99
+
+27.8333
+
+27.35
+
+11488.92
+
+130.25
+
+1.86
+
+17.1389
+
+27.79
+
+12054.90
+
+141.52
+
+1.96
+
+26.8611
+
+27.79
+
+12054.90
+
+133.76
+
+1.85
+
+18.1111
+
+28.23
+
+12639.16
+
+143.00
+
+1.92
+
+25.8889
+
+28.23
+
+12639.16
+
+136.79
+
+1.83
+
+19.0833
+
+28.67
+
+13242.01
+
+143.98
+
+1.87
+
+24.9167
+
+28.67
+
+13242.01
+
+139.33
+
+1.81
+
+20.0556
+
+29.12
+
+13863.79
+
+144.48
+
+1.82
+
+23.9444
+
+29.12
+
+13863.79
+
+141.38
+
+1.78
+
+21.0278
+
+29.56
+
+14504.67
+
+144.49
+
+1.77
+
+22.9722
+
+29.56
+
+14504.67
+
+142.94
+
+1.75
+
+1.71
+
+22
+
+30.00
+
+15165.00
+
+144.01
+
+1.71
+
+22
+
+30.00
+
+15165.00
+
+144.01
+
+Poehlitz 50
+
+Glulam Beam Bending Stress
+Load Case 2
+Distance Along
+Beam (ft)
+
+Height (in)
+
+Moment of
+Intertia (in^4)
+
+Moment
+(k-ft)
+
+Bending
+Stress (ksi)
+
+Distance Along
+Beam (ft)
+
+Height (in)
+
+Moment of
+Intertia (in^4)
+
+Moment
+(k-ft)
+
+Bending
+Stress (ksi)
+
+0
+
+20.00
+
+4493.33
+
+0.00
+
+0.00
+
+44
+
+20.00
+
+4493.33
+
+0.00
+
+0.00
+
+0.9
+
+20.41
+
+4774.74
+
+13.60
+
+0.35
+
+43.1
+
+20.41
+
+4774.74
+
+13.60
+
+0.35
+
+1.8
+
+20.82
+
+5067.66
+
+26.78
+
+0.66
+
+42.2
+
+20.82
+
+5067.66
+
+26.78
+
+0.66
+
+2.7
+
+21.23
+
+5372.31
+
+39.55
+
+0.94
+
+41.3
+
+21.23
+
+5372.31
+
+39.55
+
+0.94
+
+3.6
+
+21.64
+
+5688.94
+
+51.89
+
+1.18
+
+40.4
+
+21.64
+
+5688.94
+
+51.89
+
+1.18
+
+4.5
+
+22.05
+
+6017.77
+
+63.81
+
+1.40
+
+39.5
+
+22.05
+
+6017.77
+
+63.81
+
+1.40
+
+4.5
+
+22.05
+
+6017.77
+
+63.81
+
+1.40
+
+39.5
+
+22.05
+
+6017.77
+
+63.81
+
+1.40
+
+5.4722
+
+22.49
+
+6386.96
+
+72.43
+
+1.53
+
+38.5278
+
+22.49
+
+6386.96
+
+72.43
+
+1.53
+
+6.4444
+
+22.93
+
+6770.95
+
+80.56
+
+1.64
+
+37.5556
+
+22.93
+
+6770.95
+
+80.56
+
+1.64
+
+7.4167
+
+23.37
+
+7170.07
+
+88.19
+
+1.72
+
+36.5833
+
+23.37
+
+7170.07
+
+88.19
+
+1.72
+
+8.3889
+
+23.81
+
+7584.53
+
+95.34
+
+1.80
+
+35.6111
+
+23.81
+
+7584.53
+
+95.34
+
+1.80
+
+9.3611
+
+24.26
+
+8014.66
+
+102.00
+
+1.85
+
+34.6389
+
+24.26
+
+8014.66
+
+102.00
+
+1.85
+
+10.3333
+
+24.70
+
+8460.75
+
+108.17
+
+1.89
+
+33.6667
+
+24.70
+
+8460.75
+
+108.17
+
+1.89
+
+11.3056
+
+25.14
+
+8923.14
+
+113.85
+
+1.92
+
+32.6944
+
+25.14
+
+8923.14
+
+113.85
+
+1.92
+
+12.2778
+
+25.58
+
+9402.04
+
+119.04
+
+1.94
+
+31.7222
+
+25.58
+
+9402.04
+
+119.04
+
+1.94
+
+13.25
+
+26.02
+
+9897.76
+
+123.74
+
+1.95
+
+30.75
+
+26.02
+
+9897.76
+
+123.74
+
+1.95
+
+14.2222
+
+26.46
+
+10410.62
+
+127.95
+
+1.95
+
+29.7778
+
+26.46
+
+10410.62
+
+127.95
+
+1.95
+
+15.1944
+
+26.91
+
+10940.89
+
+131.67
+
+1.94
+
+28.8056
+
+26.91
+
+10940.89
+
+131.67
+
+1.94
+
+16.1667
+
+27.35
+
+11488.92
+
+134.90
+
+1.93
+
+27.8333
+
+27.35
+
+11488.92
+
+134.90
+
+1.93
+
+17.1389
+
+27.79
+
+12054.90
+
+137.64
+
+1.90
+
+26.8611
+
+27.79
+
+12054.90
+
+137.64
+
+1.90
+
+18.1111
+
+28.23
+
+12639.16
+
+139.89
+
+1.87
+
+25.8889
+
+28.23
+
+12639.16
+
+139.89
+
+1.87
+
+19.0833
+
+28.67
+
+13242.01
+
+141.66
+
+1.84
+
+24.9167
+
+28.67
+
+13242.01
+
+141.66
+
+1.84
+
+20.0556
+
+29.12
+
+13863.79
+
+142.93
+
+1.80
+
+23.9444
+
+29.12
+
+13863.79
+
+142.93
+
+1.80
+
+21.0278
+
+29.56
+
+14504.67
+
+143.71
+
+1.76
+
+22.9722
+
+29.56
+
+14504.67
+
+143.71
+
+1.76
+
+22
+
+30.00
+
+15165.00
+
+144.01
+
+1.71
+
+22
+
+30.00
+
+15165.00
+
+144.01
+
+1.71
+
+Poehlitz 51
+
+Poehlitz 52
+
+Poehlitz 53
+
+COLUMNS
+
+Poehlitz 54
+
+Allowable Axial Loads (lbs) for 1.3E TimberStrand® LSL
+Effective
+Column
+Length
+
+Column
+Bearing
+Type
+
+3'
+4'
+5'
+6'
+1'
+8'
+9"
+10'.
+12'
+14'
+3'-7'
+8'
+9"
+10'
+12'
+14'
+
+3½"x3½"
+100% 115% 125%
+
+3½" X 41/a"
+100% 115% 125%
+
+Column Size
+
+100%
+
+3½"x5½"
+115% 125%
+
+100%
+
+12,165 13,665 14,625 15,210 17,085 18,280 19,120 21,475 22,980 25,205
+10,745 11,830 12,490 13,435 14,790 15,610 16,885 18,590 19,625 22,260
+9,120 9,810 10,215 11,400 12,265 12,765 14,335 15,420 16,050 18,895
+7,550 7,985 8,235 9,440 9,980 10,295 11,865 12,550 12,945 15,640
+On
+7,795 8,160 8,370 9,800 10,255 10,520 12,915
+6,235 6,525 6,695
+Column
+6,490
+6,750 6,895 8,160 8,485 8,670 10,755
+5,515
+5,195
+5,400
+Base
+7,110 7,245 9,060
+4,375 4,525 4,610 5,465 5,655 5,765 6,870
+3,725 3,840 3,905 4,655 4,795 4,880 5,850 6,030 6,135 7,715
+2,785 2,855 2,895 3,480 3,565 3,615 4,375 4,485 4,545 5,770
+2,155 2,200 2,225 2,695 2,750 2,780 3,385 3,455 3,495 4,465
+5,765 5,765 5,765 7,065 7,065 7,065 8,740 8,740 8,740 10,785
+5,195 5,400 5,515 6,490 6,750 6,895 8,160 8,485 8,670 10,755
+On
+7,110 7,245 9,060
+4,375 4,525 4,610 5,465 5,655 5,765 6,870
+Wood
+3,725
+4,655
+4,795
+4,880
+5,850
+3,905
+7,715
+3,840
+6,135
+6,030
+!2>
+m
+Plate
+2,785 2,855 2,895 3,480 3,565 3,615 4,375 4,485 4,545 5,770
+2,155 2,200 2,225 2,695 2,750 2,780 3,385 3,455 3,495 4,465
+(I) Wood plate bearing is based on compression perpendicular-to-grain stress of 425 psi adjusted per the NOS®, 3.10.4.
+(2) See connection details below.
+
+3½"x7¼"
+115%. 125%
+
+100%
+
+3½"x8¾"
+115% 125%
+
+28,310 30,290 29,985 33,680 36,035
+24,505 25,870 26,480 29,155 30,780
+20,325 21,155 22,480 24,180 25,170
+16,540 17,060 18,610 19,680 20,300
+13,520 13,870 15,365 16,085 16,500
+11,185 11,430 12,795 13,305 13,595
+9,370 9,550 10,775 11,150 11,360
+7,950 8,085 9,175 9,460 9,620
+5,910 5,995 6,860 7,030 7,130
+4,555 4,610 5,310 5,420 5,485
+10,785 10,785 12,830 12,830 12,830
+10,785 10,785 12,795 12,830 12,830
+9,370 9,550 10,775 11,150 11,360
+7,950 8,085 9,175 9,460 9,620
+5,910 5,995 6,860 7,030 7,130
+4,555 4,610 5,310 5,420 5,485
+
+Allowable Axial Loads (lbs) for 1.SE Parallam® PSL
+Column
+Bearing
+Type
+
+Column Size
+
+Effective
+Column
+3½"x3½"
+Length 100% 115% 125%
+
+On
+Column
+Base
+..
+
+6'
+71
+8'
+9'
+10'
+12'
+14'
+16'
+18'
+20'
+·. 22.'.
+24'
+
+10,595
+8 735
+7,265
+6,115
+5,200
+3,885
+3,000
+
+11,200
+9,140
+7,550
+6,320
+5,355
+3,980
+3,065
+
+:
+3½''.x5¼"
+7" x7"
+5¼0 X 7"
+3½'' X 7"
+5¼"X5¼"
+100% 115% 125% 100% 115% 125% 100% 115% 125% 100% 115% 125% 100% 115% 125%
+
+11,545
+9,370
+7,715
+6,440
+5,445
+4,030
+3,100
+
+15,890
+13,105
+10,900
+9,170
+7,800
+5,825
+4,500
+
+16,800
+13,710
+11,325
+9,480
+8,035
+5965
+4,595
+
+17,320
+14,060
+11,570
+9;660
+8,170
+6,050
+4,645
+
+21,190
+17,475
+14,535
+12,225
+10,400
+7,765
+6,005
+
+22,395
+18,280
+15,100
+12,640
+10,715
+7,955
+6,125
+
+23,095
+18,745
+15,425
+12,880
+10,895
+8,065
+6,195
+
+Slenderness ratio exceeds 50
+
+33,295 36,675 38,735 40,000 40,000
+30,010 32,545 34;030 40 000 40;000
+26,650 28,490 29,555 35,530 37,985
+24,835 25,620 31,300 33,115
+20,660 21,695 22,290 27,545 28,925
+16,160 16 805 17;175 21,545 22,405
+12,890 13,315 13,560 17,185 17,755
+10,480 10,775 10,950 13,970 1:4,370
+8,670 8,885 9,010 11,560 11,850
+7,285 7,445 7,535 9,710 I 9;925
+
+n475
+
+'
+
+I·
+
+40,000
+40,000
+39,410
+34;165
+29,725
+22;900
+18,080
+14,595
+12,010
+10,050
+
+• .
+
+General Notes
+
+40,000
+40,000
+40,000
+40,000
+40,000
+40,000
+34,155
+28,485
+24,020
+20,475
+17,630
+15;325
+
+40,000
+40,000
+40,000
+40,000
+40,000
+40,000
+35,785
+29,640
+24,860
+21;110
+18,125
+15,715
+
+40,000
+40,000
+40,000
+40,000
+40,000
+40,000
+36,720
+30,300
+25,345
+21,475
+18,405
+15,935
+
+Top or Bottom Plate Connection
+
+• Tables are based on:
+- Solid, one-piece column members used in dry-service conditions
+- Bracing in both directions at column ends
+- NDS®
+- Simple columns with axial loads only. For side loads or other combined bending
+and axial loads, see the NDS®
+• Allowable loads have been adjusted to accommodate the worst case of the
+following eccentric conditions:¼ of column thickness (first dimension) or¼ of
+column width.
+• Beams and columns must remain straight to within 5L¼sos (in.) of true alignment.
+Lis the unrestrained length of the member in feet.
+
+Two 16d (0.162" x 3½") nails for
+every l¾" of column width, nailed
+through the plate into the column
+
+For column allowable design stresses see page 5.
+
+Wide fa e
+of strands
+Wideface
+
+of strands
+
+t
+
+Trus Joist® Beam, Header and Column Specifier's Guide (California)
+
+30
+
+In order to use the manufacturer's
+published capacities when designing
+column caps, bases, or ho/downs for
+uplift, the bolts or screws must be
+installed perpendicular to the wide
+face of strands as shown at left.
+
+TJ-9020
+
+I
+
+July 2016
+
+�
+
+oo
+
+NOT install bolts or
+screws into the narrow
+face of strands
+
+Poehlitz 55
+
+Poehlitz 56
+
+Poehlitz 57
+
+Poehlitz 58
+
+Poehlitz 59
+
+Poehlitz 60
+
+Poehlitz 61
+
+Poehlitz 62
+
+Poehlitz 62 
+
+Appendix F- Drawings 
+
+Poehlitz 63
+
+Simpson Strong-Tie Crane
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+121' - 0"
+
+8
+
+9
+
+10
+
+11
+
+12' - 6"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 0"
+
+12' - 6"
+
+3' - 7"
+
+4x12
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+4x12
+
+4x12
+
+7" x 18"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+6.75x30"
+
+7" x 18"
+
+4x12
+
+S.2
+
+CRANE RUNWAY
+PER VENDER
+4x12
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+7" x 20"
+
+4x12
+
+1 Grand Ave.
+San Luis Obispo CA
+93407
+
+7"x7" Parallam
+Column TYP.
+1/2" PLYWOOD SHEATHING
+
+A
+
+CRANE RUNWAY
+PER VENDER
+
+6.75x30"
+
+TYP
+
+6.75x30"
+
+1
+
+6.75x30"
+
+4' - 6"
+
+6' - 0"
+
+44' - 0"
+
+1
+
+STRUCTURAL NOTES
+1. Sub-Purlins at 4'-0" on
+center omitted for clarity
+2. Verify in field runways are
+placed directly below fire
+sprinklers
+
+D
+
+ROOF
+FRAMING
+PLAN
+
+DATE:
+
+6/8/2015
+
+Drawn by:
+
+ROOF FRAMING PLAN
+1
+1/16" = 1'-0"
+
+AMP
+
+Checked by:
+
+Checker
+
+SCALE:
+1/16" = 1'-0"
+
+S.1
+
+Poehlitz 64
+0' - 1 1/2"
+
+0' - 4"
+
+COMPRESSIBLE
+NEOPRENE PAD
+1/8
+
+7
+
+BOTH PLATES
+
+1" ⌀ BOLT TYP
+
+0' - 4"
+
+1" ⌀ BOLT TYP
+
+1/4"x10"x18" A36 STEEL
+PLATE EACH SIDE GLULAM
+
+0' - 1 1/2"
+
+1/4x8x18 A36 STEEL
+PLATE EACH SIDE
+GLULAM
+
+0' - 7" MIN
+
+0' - 1 1/2" 0' - 7" 0' - 1 1/2"
+
+(E) TAPERED
+GLULAM BEAM
+
+0' - 4"
+
+0' - 10"
+
+1/8
+
+7
+
+BOTH PLATES
+
+1" ⌀ 11" LONG LAG SCREW TYP
+
+1" ⌀ 11" LONG LAG SCREW TYP
+
+RUNWAY BEAM PER VENDER
+
+RUNWAY BEAM PER VENDER
+
+Simpson Strong-Tie Crane
+1 Grand Ave.
+San Luis Obispo CA
+93407
+
+DETAILS
+
+BRIDGE GIRDER PER VENDER
+
+BRIDGE GIRDER PER VENDER
+
+RUNWAY TO GLULAM BEAM - LATERAL
+TORSIONAL LOAD
+2
+1 1/2" = 1'-0"
+
+(E) TAPERED GLULAM BEAM
+COMPRESSIBLE NEOPRENE PAD
+
+0' - 7" MIN
+
+0' - 10"
+
+0' - 4"
+0' - 1 1/2"
+
+0' - 1 1/2"
+
+1
+
+RUNWAY TO GLULAM BEAM
+1 1/2" = 1'-0"
+
+NOTES:
+1.NARRATIVE ON LOAD FLOW TO BE
+VERIFIED
+2.LATERAL TORSIONAL LOAD IS
+ADDRESSED BY CRANE
+MANUFACTUER IN OVERALL
+CONNECTION OF CRANE
+3.IF CONNECTION NEEDS TO
+ADDRESS LATERAL TORSIONAL LOAD
+SEE DETAIL 2/S.2
+
+DATE:
+
+6/8/2015
+
+Drawn by:
+
+AMP
+
+Checked by:
+
+Checker
+
+SCALE:
+1 1/2" = 1'-0"
+
+S.2
+
+Poehlitz 65
+
+0' - 4"
+0' - 1 1/2" 0' - 1 1/2"
+
+0' - 1 1/2"
+
+1/4"x10"x18" A36 STEEL
+PLATE EACH SIDE GLULAM
+
+0' - 4"
+
+1" ⌀ BOLT TYP
+
+0' - 4"
+
+(E) TAPERED GLULAM BEAM
+
+Simpson Strong-Tie Crane
+1 Grand Ave.
+San Luis Obispo CA
+93407
+
+0' - 7" MIN
+
+COMPRESSIBLE NEOPRENE PAD
+1/8
+
+7
+
+BOTH PLATES
+
+(N) STEEL STRAPS
+
+DETAILS
+
+RUNWAY BEAM PER VENDER
+
+BRIDGE GIRDER PER VENDER
+
+NOTES:
+1.NARRATIVE ON LOAD FLOW TO BE
+VERIFIED
+2.LATERAL TORSIONAL LOAD IS
+ADDRESSED BY CRANE
+MANUFACTUER IN OVERALL
+CONNECTION OF CRANE
+3.IF CONNECTION NEEDS TO
+ADDRESS LATERAL TORSIONAL LOAD
+SEE DETAIL 2/S.2
+
+1
+
+RUNWAY TO GLULAM BEAM - STRAPS
+1 1/2" = 1'-0"
+
+DATE:
+
+6/8/2015
+
+Drawn by:
+
+Author
+
+Checked by:
+
+Checker
+
+SCALE:
+1 1/2" = 1'-0"
+
+S.3
+
+

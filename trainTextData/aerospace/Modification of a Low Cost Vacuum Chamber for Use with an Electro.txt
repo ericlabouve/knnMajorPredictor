@@ -1,0 +1,2133 @@
+Modification of a Low Cost Vacuum Chamber for Use with an Electromagnetic Railgun
+
+A Senior Project
+presented to
+the Faculty of the Department of Aerospace Engineering
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree
+Bachelor of Science
+
+by
+Jason M. Bertels
+November, 2013
+
+© 2013, Jason M. Bertels
+1
+American Institute of Aeronautics and Astronautics
+
+Modification of a Low Cost Vacuum Chamber for Use with an
+Electromagnetic Railgun
+Jason M. Bertels1
+California Polytechnic State University, San Luis Obispo, CA, 93407
+
+This report details the design and manufacture of modifications to a low cost vacuum
+chamber intended for railgun operations. These modifications intend to increase the
+functionality of the chamber and enable the modeling of high velocity impacts in a space.
+The original vacuum chamber was constructed primarily from polyvinyl chloride to meet
+the low cost design constraints, which limits pressures obtainable to the low vacuum region
+(760 Torr to 2 Torr). Modifications include construction of a space-saving storage rack,
+replacement of external door supports, installation of an internal guide rail, and installation
+of electrical feedthroughs.
+
+Nomenclature
+A,B,C,D
+F
+g
+H
+L
+M
+m
+P
+R
+µ
+
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+
+reference points in support rack geometry
+force
+gravity
+height of steel support rack
+distance between rack wheels
+moment
+mass
+price
+reaction forces
+coefficient of static friction
+
+f
+a
+
+= friction
+= applied
+
+Subscripts
+
+I. Introduction
+
+V
+
+ACUUM chambers enable astronautical engineers to physically model the space environment in a laboratory
+setting. Micrometeorite impacts in space are a major concern for those who operate and design spacecraft. The
+ability to test high velocity impacts in an approximated space environment offers a chance to predict the damage
+micrometeorite and space debris collisions inflict on spacecraft. Also, a vacuum environment exerts less
+aerodynamic drag on a projectile used for modeling micrometeorite impacts. This report describes a project which
+aims to install and operate a railgun in an existing vacuum chamber to perform such testing.
+Previous work was undertaken by Andrew W. Bothwell and David J. Foster in 2012. 1 They designed and
+created the vacuum chamber that was modified as described in this paper. Their report states that operating a railgun
+in a vacuum chamber is appealing because it could decrease the presence of projectile-obscuring plasma discharge
+during firing and decrease the friction the projectile would experience in flight.
+The railgun project is expanding with the receipt of equipment from the Naval Post Graduate School (NPGS) in
+Monterey, CA. The equipment includes very powerful pulsed power sources. Circuitry capable of carrying high
+current and high voltages is required to fully utilize the capabilities of these capacitor banks. Also, they create large
+electromagnetic pulses when they operate, increasing shielding requirements for the data acquisition system and
+other laboratory equipment.
+1
+
+Undergraduate Student, Aerospace Engineering Department, 1 Grand Ave, AIAA Student Member
+2
+American Institute of Aeronautics and Astronautics
+
+Several goals drove the design of the modifications done to the vacuum chamber. First, the vacuum chamber
+needed to support the railgun hardware in the laboratory to efficiently use the available space. Additionally, the
+vacuum chamber needed to accommodate the experimental testing equipment being loaded into and out of the
+chamber. Finally, the system needed to support the transmission of data and command signals to and from the
+testing equipment, as well as the power needed for illumination, equipment operations, and, most significantly,
+railgun operation. Previous work suggests that the Mk. 2 railgun might operate at up to 9000V with a peak current of
+120kA. 2 The peak power in this situation might exceed 1000 megawatts, though only for a few microseconds. The
+power feedthroughs must support both the required electrical current and resist the forces created by the flow of
+current through induced magnetic fields. All components that will become part of the pressure shell of the chamber
+have special manufacturing requirements, such as air pocket elimination and leak testing.4, 5
+
+II. Initial Vacuum Chamber
+The vacuum chamber was created from schedule 80 pipe made of polyvinyl chloride (PVC) attached to a
+schedule 80 PVC wye bell fitting. The overall length of the interior of the pipe was 161.5 inches (13 feet 5.5 inches)
+the interior of the main chamber of the vacuum chamber was roughly a circle with a diameter of 241.3 millimeters
+(9.5 inches), though it had deformed over time into an ellipse with a horizontal major diameter and a vertical minor
+diameter. These differed by less than 0.5 inches. The external diameter was 10.75 inches. One inch thick Plexiglas
+was used at each of the three entrances to create transparent doors.
+The chamber was reported to achieve an
+internal pressure of 50 Torr.1
+The vacuum chamber was not able to support
+testing of a railgun due to its lack of hardware.
+Figure 1 shows a picture of the chamber before
+modifications. The aluminum blocks that secure
+the transparent acrylic end plates were not all
+adhered to the chamber. Some had broken free of
+the epoxy adhesive used to connect them to the
+exterior of the vacuum chamber. Reseach
+suggests that the cause of failure of the epoxyaluminum bond was oxidization of the aluminum.
+This could be cause by water permeating the
+Figure 1. A picture of the vacuum chamber before
+epoxy. This oxidization decreases the strength of
+modifications.
+the bond over time. Students participating in the
+railgun project at Cal Poly have little access to
+surface preparations that could prevent this, such as sulfuric acid-dichromate etch and phosphoric acid anodizing.3
+
+III. Design
+The improvements to the vacuum chamber were designed to maximize the usability of the vacuum chamber.
+Some designs are detailed in technical drawings in Appendix A.
+Table 1.
+
+Capacity
+
+Stability
+
+Driving requirements for the rack
+
+Must accommodate vacuum chamber
+Must Accommodate NPGS capacitor banks.
+Must accommodate compulsator.
+Must accommodate the vacuum chamber pump.
+Must not be easily tipped over.
+
+A. Space-Saving Support Rack Design
+The main requirements for the rack that supports the vacuum chamber are shown in Table 1. One inch square
+steel tubing with a thickness of 0.120 inches was selected for most of the rack. To increase the bending stiffness of
+the table, the long horizontal portions were selected to be 1 inch by 3 inches rectangular steel tubing of the same
+3
+American Institute of Aeronautics and Astronautics
+
+thickness. MIG welding was chosen for joining the tubes because of the speed and ease it affords. Steel plates four
+inches wide and 0.375 inches thick was used to attach the casters to the rack. The casters were cannibalized from
+decommissioned equipment from another laboratory in the Aerospace Engineering Department.
+1. Rack capacity
+The equipment the rack needs to accomadate has known dimensions. Figure 2 shows these dimensions. It was
+determined that storing these items under the rack with the vacuum chamber supported on top of the rack allowed
+the most efficient use of libratory space.
+
+Compulsator
+
+Capacitor Bank
+
+Figure 2.. The support rack must accommodate the capacitor bank and the compulsator under the chamber. The
+dimensions for these pieces of equipment are shown.
+
+To accommodate this equipment, the rack was
+designed to fit over a 58 inch tall obstacle, and to
+increase the usefulness of the space, the rack can
+accommodate obstacles of this height along a full
+11 feet of its length. These criteria drove the
+length of the rack to 14 feet.
+Saving Vacuum
+2. Stability Analysis for Space-Saving
+Chamber Rack
+Static free-body analysis of the rack was
+performed to determine the limits for tipping the
+rack. The geometry is shown in Figure 4. From
+this analysis, the following relationships are
+found
+(1)
+
+Figure 3.. A pictorial view of the design of steel support rack shows how it
+accommodates the vacuum chamber while providing a large amount of
+o
+storage space below the chamber.
+
+(2)
+
+(3)
+
+(4)
+
+4
+American Institute of Aeronautics and Astronautics
+
+By applying equilibrium,, a relationship between the
+width and the reaction can be found.
+(5)
+
+(6)
+
+(7)
+(8)
+
+(9)
+
+( 10 )
+
+Figure 4.. This free body diagram clarifies relationships
+used in the tip-over
+over analysis for selecting a rack width,
+L.. The rack is resisting a force applied at the top of the
+rack with friction at the wheels.
+
+Assuming a coefficient of static friction of 0.1, a weight of 500lb, and a height of 60 inches
+( 11 )
+( 12 )
+
+250
+200
+150
+R_b (lb)
+
+100
+50
+0
+-50 1 3 5 7 9 1113 1517 1921 23252729 313335 373941 434547
+-100
+-150
+-200
+
+L (inches)
+
+Figure 5. The reaction force RB required to maintain static equilibrium decreases as the
+rack becomes narrower. Eventually, the required force is negative, which is physically
+impossible. Here RB is plotted as a function of the width of the rack, L.
+
+5
+American Institute of Aeronautics and Astronautics
+
+Using
+the
+relationship in equation
+12,,
+the
+minimum
+distance between casters
+is found to be 12 inches.
+If the rack is narrower,
+the required force at
+point B to maintain
+equilibrium
+becomes
+negative, which is not
+physically possible.
+An L of 48 inches is
+selected to minimize the
+likelihood of a tip-over
+scenario.
+
+B. Guide Rail
+The guide rail design aims to enable quick and easy loading of experimental equipment into and out of the
+vacuum chamber. Strength, ease of use, ease of installation, and maximizing the usable space in the vacuum
+chamber were top considerations during the design process.
+3. Early Design
+Several early concepts focused on extremely slim
+guide rails. Figure 6 shows one such concept,
+proposed by previous work.1 As the designed
+matured, the tradeoff between slimness and ease of
+manufacturing became apparent, and the height of
+the design increased to 1.94 inches, or 2.
+2.44 inches if
+the proposed carriage board is used.
+Adhesives are a logical choice for fixing the
+guide rail to the chamber interior. This design
+ensures the adhesive will be adequately strong by
+providing a surface area for bonding with the vacuum
+chamber interior.
+To increase the ease of use, a method for securing
+the experimental apparatus in place is provided by
+this design.
+Figure 6.. This early guide rail design, proposed by Bothwell
+The vacuum chamber is too long for people to
+and Foster, features maximal simplicity and slim,
+easily reach into the innermost portions when
+unobstructive design. However, the minimal contact with
+installing the rail. Therefore, this design is installed
+the chamber for adhering and lack of grip on the
+experimental apparatus, which will experience
+experienc large
+in one piece, so the center portion is rigidly fastened
+electromagnetic forces during railgun operation.1
+to the accessible portion at either end of the chamber.
+Figure 7 depicts an early
+iteration of the chosen design.
+An aluminum guide rail lies
+along the bottom of the
+vacuum chamber. Carriages
+slide along the rail, gliding
+easily through the chamber.
+Experimental equipment is
+attached to the carriages. The
+aluminum guide rail is bolted
+to PVC with a curved surface,
+which is adhered to the
+chamber interior using PVC
+cement. DryLin brand “T”
+PTFE sleeve-bearing guide
+rails and carriages were
+selected for their small size,
+appropriate
+loading
+capabilities,
+and
+lowFigure 7. Early concept of the vacuum chamber guide rail.
+maintenance
+design.
+The
+DryLin rails were 1 meter long,
+so four fit in the 4.09 meter long vacuum chamber. These rails were purchased from McMaster-Carr.
+Carr.
+Figure 8 provides additional depictions of the design.
+The carriages are much narrower than the equipment the vacuum chamber is intended to support. A carriage
+board provides a wider surface to interface
+terface with the experimental equipment. Figure 10 shows a proposal for such a
+carriage board. Clearance holes for M5 screws (to interface with the DryLin carriages) and ½” UNC screws (to
+interface with the experimental equipment) span the length of the board. This design proposes a 36” long board, but
+the board is easily scaled to other lengths. The board is 7” wide, which provides a mounting surface that nearly
+spans the width of the chamber.
+6
+American Institute of Aeronautics and Astronautics
+
+Previous work developed the Mk. 2.0 EMRG. This railgun is a perfect candidate for vacuum chamber testing.
+Figure 9 is a reproduction of its depiction in Jeffery J. Maniglia’s master’s thesis.2 Figure 11 shows the Mk.2.0 being
+accommodated by the guide rail hardware, uusing a SolidWorks model of the Mk.2.0 created by Maniglia.
+
+(a)
+
+(b)
+
+(c)
+
+Figure 8.. Additional views of the early design. The rail is fixed using M4 screws, as shown in subfigure (a). Subfigures
+(b) and (c) offer views of the PVC block.
+
+Material
+aterial selection favored materials that had low
+outgassing properties. The construction
+ruction of the vacuum
+chamber from PVC limits the pumpdown performance due to
+its higher gas load when compared to metals like 304 or 316
+stainless steel. Because of this, some precautions usually
+taken when designing a high vacuum and ultra high vacuum
+were
+re unnecessary, such as the exclusion of plastics like PVC
+from the chamber. In addition, some anodized aluminum was
+used in entrance hinge,, which would have been unacceptable
+in a high vacuum system.
+The materials used also were selected for their low
+magnetic permeability due to the high electromagnetic pulse
+that the railgun creates when fired. Aluminum and aaustenitic
+stainless steels (like 304 and 316) were used, while fferritic
+and martensitic stainless steels were excluded.
+4. Final Design
+Many componets of the early design were unchanged in
+the final design, like the selection
+ection of the DryLin guide rails
+and carriages. Others were refined and revised to increase
+manufacturability and ease of use of the design.
+The PVC mounting blocks were designed to lengths
+ranging from 12 to 18 inches. At this size, the blocks are
+
+Figure 10.. A proposed carriage board, which
+interfaces with both the DryLin carriages and the
+experimental equipment. It is 36” long and 7” wide.
+
+Figure 9.. Previous work by Jeffery J. Maniglia
+provided a depiction of the Mk.2 railgun, a candidate
+for vacuum chamber testing.2
+
+Figure 11.. Using a SolidWorks model of the Mk. 2.0 developed by Jeffery J. Maniglia, an assembly is created to show how
+the guide rail design accommodates the railgun. The supporting flanges are too large to fit in the vacuum chamber, but the
+t
+design accommodates the rest of the railgun. To test this railgun in the vacuum chamber, new, less wide flanges would need
+to be designed and manufactured.
+
+7
+American Institute of Aeronautics and Astronautics
+
+sufficiently long to accurately align the rails
+as well as short enough to be machined in the
+Haas TM-1 CNC mill in the hangar at Cal
+Poly. Figure 12 shows one of the designed
+PVC mounting blocks. Appendix A contains
+techical drawings of these blocks.
+A hingee provides an easy means to secure
+the carriageboards and their payloads in place
+during testing. Figure 14 shows how the
+hinge looks assembled. The hinge door is
+held in place by a removable aluminum rod
+that is held in place by two hooks. The hooks
+are connected to the PVC mounting blocks
+using 2 inch long aluminum standoffs.
+Because of the large magnetic flux that this
+hookplate-standoff
+standoff circuit would experience
+during railgun operations, these componets
+are insulated from one another with five
+layers of Kapton tape
+ape (or an equally
+insulative barrier) and joined using insulating
+polycarbonate machine screws.
+
+Figure 12.. The 18 inch long PVC guide rail mounting block
+depicted here joins the ends of adjacent DryLin guide rails. The
+Haas TM-1
+1 mill has sufficient travel to machine all features on a
+single mill setup and operation, enabling high precision and
+accuracy to be more easily achieved.
+
+Figure 14.. The hinged door provides an easy way to secure the equipment into the chamber. Constructed primarily from PVC
+and aluminum, it features a ¼-20
+20 tapped hole on the hinged door that allows the carriage boards to be compresses against an
+aluminum block at the target end of the chamber.
+
+The hinge door has a threaded hole aligned with the hardware
+connected to the carriage. This hole accepts a ¼
+¼-20 screw, which
+pushes on the carriage boards as it turns
+turns.
+At the target end,, an aluminum block holds everything in
+place. Figure 13 depicts this block and the aluminum plates that
+transfer the forces to the vacuum chamber. Th
+These are held
+together with ¼-20
+20 threaded rods passing through holes in the
+target-end PVC mounting block.
+C. Power Delivery Feedthroughs
+Tremendous amounts of energy are delivered to the railgun
+during operation. The vacuum chamber needs to provide a means
+to deliver this power to the gun. High current capacity electrical
+
+Figure 13.. SolidWorks model of the target end of the
+guiderail. These aluminum plates provide a surface to
+secure the carriage boards
+oards against.
+
+8
+American Institute of Aeronautics and Astronautics
+
+conductors are employed in this design to accomplish this power
+delivery requirement.
+Previous work suggested that an aluminum rod, sealed to the
+vacuum chamber with epoxy, would deliver power to the railgun
+in the vacuum chamber. Figure 15 shows this design. There is
+much room for improvement for this design.
+The aluminum-epoxy
+epoxy bond cannot be trusted
+trusted, as evidenced by
+the failure of the aluminum blocks used for securing the vacuum
+chamber doors. Andy Marshall, in his book Composite Basics,
+Figure 15.. Feedthrough design proposed by
+states that untreated aluminum bonded with epoxy experience a
+Bothwell and Foster.1
+serious loss of strength over time.3 Previous work established that
+this design holds pressure, using a test where a .5 inch diameter
+copper rod was epoxied using Loctite® Quick Set epoxy into a
+1.12 inch PVC pipe, which held a vacuum, but the test was
+preformed shortly after the installation, so long
+long-term oxidation
+may
+ay not have been taken into account. This can be avoided using
+anodized aluminum,
+inum, but the anodized surface bonds poorly to
+epoxy. Two processes for bonding aluminum are accepted and
+used in the aircraft industry: FPL etch (sulfuric acid
+acid-dichromate
+etch), and Phosphoric acid anodizing (PAA). Both processes are
+improved by applying a CIAP (corrosion inhibiting adhesive
+primer). However, neither is intended for PVC
+PVC-aluminum bonds,
+and both require expensive equipment.
+Figure 16.. The disk design allows the railgun to
+Figure 16 shows a proposed alternative
+alternative. Here, a copper
+be connected to the feedthrough easily using
+feedthrough is bonded to the vacuum chamber with West Systems
+bent copper plate.
+G/Flex epoxy. This epoxy is flexible, which helps accommodate
+for the difference between the
+coefficients of thermal expansion
+of PVC and copper. Figure 17
+shows another proposed design.
+This design avoids the weaknesses
+of epoxy by using a traditional Oring to seal the chamber. The
+feedthroughs have been moved to
+the door to take advantage of the
+flat surface. However, it is
+prohibitively
+complex
+and
+complicates connecting the railgun
+to the feedthroughs.
+Figure 17. This feedthrough design avoids the use of epoxy by mimicking the
+The disk design was favored at
+design of typical vacuum chamber feedthroughs. The vacuum seal is created by
+an O-ring
+ring on the feedthrough that is compressed by tightening the nut on the
+the time this report was written. A
+exterior of the chamber. The O-ring presses
+resses against the inside surface of the door.
+0.25 inch flange was added to
+Unfortunately, this design makes connecting the feedthroughs to the railgun
+prevent the feedthrough from being
+prohibitively difficult.
+launched into the vacuum chamber
+in the event of a catastrophic failure
+of the epoxy bond. This flange also increases the contact area for connecting the power delivery circuit to the
+feedthrough, therefore decreasing the contact resistance at this point. The flange portion has a diameter of 4.00
+inches, and the portion passing through the chamber has a 3.50 inch diameter. The flange is 0.25 inches long, and
+the total length
+ngth of this cylindrical feedthrough is 1.50 inches, including the flange. Figure 18 depicts this design.
+To compare these designs, a qualitative trade study was crea
+created. Table 2 shows this
+is trade study.
+study
+
+9
+American Institute of Aeronautics and Astronautics
+
+Estimated Price
+
+Ease of Use
+
+Ease of
+Manufacturing
+
+Ease of
+Maintenance
+
+Weights:
+
+0.3
+
+0.3
+
+--------
+
+0.2
+
+0.1
+
+0.1
+
+100
+0
+
+33
+43
+
+$150
+$115
+$50
+
+0
+100
+
+100
+20
+
+Safety
+
+High Score Wins
+
+Cost
+
+Table 2. Trade Study for feedthrough designs
+
+Score
+
+Design
+Disks with Flange
+Disks
+Aluminum threaded
+hole
+door feedthrough
+
+$250
+
+100
+100
+
+50
+75
+
+0
+0
+
+65
+40.5
+
+50
+0
+
+100
+10
+
+0
+100
+
+50
+37
+
+The score for cost was determined by the following equation, where P is the price of the raw materials, and
+Plowest is the price of the cheapest solution
+solution:
+(
+13
+Error!
+Bookmark
+not
+defined.)
+
+Figure 18.. Two views of the “disk with flange” design. Four tapped holes allow copper plates to be connected to the
+inner and outer surfaces of the feedthroughs. The 0.25 inch flange prevents th
+thee feedthrough from sliding into the
+vacuum chamber if the epoxy bond fails. This design calls for the 3.50 inch diameter portion to be 1.25 inches long,
+yielding a total length of 1.50 inches for these feedthroughs.
+
+IV. Testing
+A. Rail support PVC block CAM testing
+The PVC blocks used to support the DryLin “T” guide rails were manufactured from a 2 inches by 1 inch by 48
+inches rectangular stock of PVC. Three inch long prototype segments were created using the Cal Poly Aerospace
+Engineering Department’s Haas TM-11 CNC mill. Figure 19 shows the
+he prototype during and after milling. Appendix
+C shows the G-code
+code used in this operation.
+10
+American Institute of Aeronautics and Astronautics
+
+B. Outgassing testing
+An outgassing test was used to
+determine the feasibility of using
+epoxy or PVC cement in the vacuum
+chamber. These tests were performed
+in the Space Environments lab at
+California
+Polytechnic
+State
+University, San Luis Obispo on July
+11 and 12, 2013, using the “Student
+Vacuum
+Chamber
+1”
+vacuum
+chamber.
+The chamber was
+manufactured by Laco Technologies,
+and had a model number LVC1824Figure 19. (a) shows the milling of the PVC mounting block prototype
+using a Haas TM-1 CNC mill. (b) shows the finished prototype.
+3113-VHX. The pump was a Welch
+Duo-Seal Vacuum Pump with a model
+number
+1397.
+The
+pressure
+measurement sensor was made by Gainesville Phillips, model 316.
+Five pump-down tests were undertaken. The first test collected pressure data for the chamber with only a plastic
+outgassing shield inside. This shield was used in every test to prevent the samples from depositing outgassed
+contaminants on the surfaces of the vacuum chamber. This shield was made from this sheets of acrylic adhered
+together to form a box roughly 12 inches tall by 6 inches by 6 inches.
+The second test, performed shortly after the first test, collected pressure data as the vacuum chamber was
+pumped down with the outgassing shield and a sample of the PVC pipe and a 3 inches long prototype of the PVC
+mounting blocks. No adhesive was used.
+The third test was performed the next day, and again only the outgassing shield was present in the chamber.
+The fourth and fifth test were performed shortly after the third, and contained a PVC mounting block prototype
+adhered to the PVC pipe samples with PVC cement and epoxy, respectively.
+Figure 20 shows the samples that were prepared for the vacuum chamber.
+Figure 21 shows the data taken during this test. This outgassing test showed that for pump-down times of less
+than one hour, the outgassing of the samples was less significant than that of the overall chamber. Water monolayer
+vaporization and other large gas loads dominated the data taken during these test. 4, 5 Longer tests may have yielded
+more insight into the impact these materials will have on the vacuum chamber’s performance.
+
+Figure 20. Four samples were prepared for the outgassing test, though only three were tested in the Student Vacuum
+Chamber 1 vacuum chamber. Sample 1 has no adhesive, sample 2 used PVC adhesive, sample 3 uses epoxy, and sample 4
+uses the same epoxy, but the epoxy was allowed to rest for 20 minutes before application. No loss in strength was evident
+from the delayed mating. The remaining epoxy hardened at the 50 minute mark.
+
+11
+American Institute of Aeronautics and Astronautics
+
+Figure 21. In the “Student Vacuum Chamber 1” produced by Laco Technologies. Pressure measurements taken over a 20 minute pump-down for five tests. The first and third
+tests did not contain hardware prototypes. The other tests contained prototypes of the proposed PVC mounting blocks, epoxy, and PVC cement.
+
+12
+American Institute of Aeronautics and Astronautics
+
+V. Fabrication Process
+C. Support Rack Fabrication
+Mild steel square and rectangular tubing was
+purchased and cut to length. The steel was joined using
+metal-inert-gas (MIG) welding. Figure 22 shows the
+support rack under construction.
+nstruction. At that point, the square
+ends had been welded together, but had not been joined to
+the beams that span the length of the rack. Figure 23
+shows the vacuum chamber rack after all welding was
+completed.
+
+Figure 22.Picture
+.Picture of support rack under construction.
+
+Figure 23.. The finished vacuum chamber rack.
+
+D. Experimental
+Apparatus
+Support
+Rail
+Fabrication
+The aluminum plates that transfer the hinge forces
+to the PVC mounting blocks were designed to be
+manufactured from a single aluminum bar. Figure 25
+shows how these components fit together on the
+unaltered stock. Figure 24 shows the aluminum plates
+after rough-cutting
+cutting with a bandsaw.
+
+Figure 25.. The aluminum plates were designed to be cut from a single piece of 2 inch by 0.375 inch by 36 inch piece of
+aluminum bar.
+
+A manual mill was used to machine the
+holes and curved surfaces in these parts, as
+well as the hinge door. Figures 26 through
+28 depict the milling setup, the mill used in
+these operations, and the finished hardware.
+
+Figure 24.. The aluminum plates after being rough cut with a vertical
+bandsaw.
+
+13
+American Institute of Aeronautics and Astronautics
+
+Figure 26.. A hinge sidehook in the milling vice after a
+drilling operation.
+Figure 27.. The Bridgeport mill used to manufacture several
+aluminum components.
+
+Figure 28.. Several finished aluminum components.
+
+VI. Future Work
+The support rack needs to be augmented by a superstructure that secures the chamber to the rack safely and
+stiffens the top of the metal rack,, as it was deemed too flexible once the chamber was loaded onto it.
+At the time this report was written, the PVC components for the rail and the aluminum hinge had not been
+manufactured yet. Machinists at the Cal Poly machine shops were hired to produce the components. When these
+parts are complete, the guide
+uide rail needs to be installed. A procedure for this installation can be found in Appendix B.
+The feedthroughs need to be manufactured and installed. Feedthroughs for data signals need to be designed,
+manufactured, and installed. The target end of the vacuum chamber is a prime location for these feedthroughs.
+14
+American Institute of Aeronautics and Astronautics
+
+VII. Conclusion
+This report discussed modifications to an existing low cost vacuum chamber to enable it to support the operation
+of an electromagnetic railgun. The vacuum chamber was constructed 10 inch schedule 80 PVC pipe by Andrew
+Bothwell and David Foster. The modifications continue where they left off, and additional modification will be
+required to realize the goal of modeling impacts in an artificial space environment.
+An early goal for the previous work done on this project constrained the cost of the chamber to $500. During the
+development of the chamber, this was determined to be far too restrictive. A looser constraint of $2000 was set, and
+the final cost for the bare-bones chamber came to be $1325.
+The additional costs incurred during the work detailed in this report amounts to $941.49. These costs are detailed
+in Appendix D. The original cost constraint was overly optimistic, as the additional purchases bring the total cost to
+$2266, which exceeds the cost constraint by 13%.
+Additional funding and skilled machinists will be critical to the successful completion of the vacuum chamber.
+Once complete, this vacuum chamber will provide Cal Poly students with a test bed for high speed impacts in a low
+pressure environment.
+
+15
+American Institute of Aeronautics and Astronautics
+
+Appendix
+Appendix A. Technical Drawings of the Designed Modifications
+
+Figure 29. Hinge Door
+
+16
+American Institute of Aeronautics and Astronautics
+
+Figure 30. Hinge
+
+17
+American Institute of Aeronautics and Astronautics
+
+Figure 31. Hinge Side Hook
+
+18
+American Institute of Aeronautics and Astronautics
+
+Figure 32. Hinge PVC Mounting Block
+
+19
+American Institute of Aeronautics and Astronautics
+
+Figure 33. Assembled Hinge and Mounting Block
+
+20
+American Institute of Aeronautics and Astronautics
+
+Figure 34. PVC Mounting Block for Supporting the Middle of a Guide Rail
+
+21
+American Institute of Aeronautics and Astronautics
+
+Figure 35. PVC Mounting Block for Joining Two Rails End to End
+
+22
+American Institute of Aeronautics and Astronautics
+
+Figure 36. PVC Mounting Block for the Target End of the Guide Rail
+
+23
+American Institute of Aeronautics and Astronautics
+
+Figure 37. Aluminum Plate Securing the Target End Stopping Block
+
+24
+American Institute of Aeronautics and Astronautics
+
+Figure 38. Aluminum Stopping Block for the Target End of the Guide Rail
+
+25
+American Institute of Aeronautics and Astronautics
+
+Figure 39. Assembly Drawing of Complete Guide Rail
+
+26
+American Institute of Aeronautics and Astronautics
+
+Figure 40. Assembly Drawing of the Guide Rail Installed in the Vacuum Chamber
+
+27
+American Institute of Aeronautics and Astronautics
+
+Figure 41. Proposal for a Carriage Board for Interfacing Experimental Equipment to the Guide Rail Carriages
+
+28
+American Institute of Aeronautics and Astronautics
+
+Appendix B. Guide Rail Installation Procedures
+
+System Safety Activity Plan for the Installation of the Railgun Vacuum Chamber Guide Rail
+SYSTEM SAFETY ROLES AND RESPONSIBILITIES:
+Activity Lead: ______________________
+Aero Dept Advisor: Dr. Kira Abercromby
+Aero Dept Safety Coordinator: ____________________
+Facility Coordinator: Dr. Dianne DeTurris
+Aero Dept Chair: Dr. Eric Mehiel
+Cal Poly Safety Rep:____________________________
+
+REFERENCES:
+Cal Poly Aero Lab Safety Sign-off Sheet
+Cal Poly Aero Safety Policies
+
+29
+American Institute of Aeronautics and Astronautics
+
+System Activity Plan for Vacuum Chamber Equipment Installation
+October 28, 2013
+Intent of Activity
+To support the goals of the Cal Poly railgun program, install a guide rail in the Cal Poly railgun vacuum chamber. The
+support rail, constructed primarily from PVC and aluminum and installed with epoxy and PVC cement, enables the
+loading, unloading, and securing of experimental equipment in the vacuum chamber during railgun operations. The
+hardware is 158.75 inches long (4.03 meters).
+Materials used/consumed/output during activity
+The equipment to be installed will be manufactured in the Cal Poly machine shops. The epoxy will be acquired from the
+Cal Poly Thermodynamics & Spacecraft Environments Lab (41B-137), and the PVC cement will be supplied by the
+Activity Lead, Jason Bertels.
+Facilities Used During Activity
+Prop lab
+Hardware Used During Activity
+The vacuum chamber will need to be accessed during this activity. The assembled hardware will be installed. Levels and
+a 1.90inch long spacer block will be used. A staging area near the chamber will be prepared for the epoxy application.
+Personal protective equipment, including non-latex gloves, closed toed shoes, long pants, and safety glasses, will be worn
+by all team members.
+
+Nominal Behavior During Activity
+1. The vacuum chamber will be opened at both ends, and a container of PVC cement will be places within reach of
+each end of the chamber, lids loosely resting on the container, so they can be used with one hand.
+2. Several levels will be attached to the equipment to be installed. A spacer block 1.90 inches long will be attached
+to the hinge end of the hardware to be installed.
+3. A 5 minute timer will be started, and the following procedure will be run through without applying the adhesives to
+ensure the activity can be completed before the epoxy cures. If this is not successful, additional practice runs can
+be attempted. If successful, the team will attempt to slide the carriages down the length of the installation to
+ensure proper function and ease of use. Carriages should not stop when they move between rails.
+4. If the dry run is successful, the procedure will be repeated, but the primer, epoxy, and PVC cement will be applied
+for real.
+5. The hardware is constructed from PVC blocks attached to an aluminum rail with bolts, with aluminum ends
+capable of compressing the installed equipment to secure it during operation. The PVC blocks on each end will be
+pieces will receive PVC cement primer, as will the areas they mate to on the ends of the vacuum chamber.
+6. The timer will be reset for 5 minutes and epoxy will be mixed. The epoxy will be applied to all the PVC surfaces
+that will mate with the interior of the vacuum chamber, with the exception of the two end pieces. Excess epoxy will
+be wiped off to avoid drips in the vacuum chamber.
+7. At least two team members will lift the hardware into a position where it can be slid into the vacuum chamber. The
+hardware will be inverted, so the epoxy coated curved surfaces face upward. One end will be placed inside the
+chamber.
+8. While the hardware remains inverted (so the epoxy does not touch the chamber), one team member will slide the
+equipment into the chamber until it reaches the other end and another team member can reach it.
+9. Both team members will apply PVC cement with one hand while holding the equipment in the air with the other.
+10. The rail will be immediately inverted and placed in the bottom of the chamber such that the removable spacer
+block aligns with the entrance of the chamber, and the levels show that the equipment is level.
+11. The hardware will be held in place for 60 seconds as the PVC cement cures.
+12. The levels and spacer block will be removed 10 minutes after the completion of the activity.
+13. The vacuum chamber will be closed no sooner than 1 hour after the equipment is installed to allow fumes to
+diffuse out of the chamber.
+30
+American Institute of Aeronautics and Astronautics
+
+Off-Nominal Behavior During Activity
+If epoxy, primer, PVC cement, or any other contaminant makes contact with the aluminum guide rail, the activity will be
+halted until the containment is removed.
+If the practice installations cannot be completed in less than 5 minutes, the activity has crossed a red line and will be
+rescheduled.
+If the 5 minute timer goes off before the equipment is installed, the team members should use a rod to check to make sure
+the epoxy has not cured. If it has cured, the activity has crossed a red line. The hardware will be removed and the activity
+will be rescheduled.
+If the equipment is visibly unstable, if the carriages that ride on the rail do not slide easily between rails when equipment is
+rested in the chamber after the practice run, or if anything breaks or does not function according to its intended design,
+the hardware will be removed, and the activity will be rescheduled.
+If the activity is rescheduled, the hardware will be disassembled and stored under the vacuum chamber until another
+installation is scheduled.
+Schedule
+TBD
+
+31
+American Institute of Aeronautics and Astronautics
+
+System Activity Report
+Results (Check one)
+
+□
+
+Installation of guide-rail hardware into the vacuum chamber was a success. After allowing epoxy to cure for 24 hours, the
+hardware is usable for supporting experimental equipment.
+
+□
+
+Installation of guide-rail hardware into the vacuum chamber was halted and need to be rescheduled
+
+Off-nominal behavior:
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+_____________________________________________________________________
+
+Notes:
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+____________________________________________________________
+
+Submitted by:
+
+_______________________________________
+
+Date:
+
+_______________________________________
+
+32
+American Institute of Aeronautics and Astronautics
+
+Appendix C. CNC Code Generated by CamWorks for Prototype PVC Blocks
+
+%
+O00094 (3” long PVC mount)
+N1 G00 G90 G49 G20
+N2 T01 M06 (1/2 4 FLUTE HSS
+EM)
+N3 S4000 M03
+N4 G00 G54 X.2339 Y.347 S4000
+M03
+N5 G43 H01 Z.9568 M08
+N6 G01 Z-.0432 F12.7
+N7 X.231 Z-.0641
+N8 X.2223 Z-.0833
+N9 X.2087 Z-.0993
+N10 X.1911 Z-.1109
+N11 X.1711 Z-.1172
+N12 X.15 Z-.1177
+N13 X.1241 Y.3436 Z-.1145
+N14 X.1 Y.3336 Z-.1114
+N15 X.0793 Y.3177 Z-.1083
+N16 X.0634 Y.297 Z-.1051
+N17 X.0534 Y.2729 Z-.102
+N18 X.05 Y.247 Z-.0988
+N19 Y-.1084 Z-.0436 F50.
+N20 Y-.1147 Z-.0427
+N21 Y-.2927 Z-.0221
+N22 Y-.4657 Z-.0087
+N23 Y-.4783 Z-.0078
+N24 Y-.6555 Z-.001
+N25 Y-.6808 Z-.0009
+N26 Y-1.3346
+N27 Y-1.3564 Z-.0015
+N28 Y-1.5152 Z-.0076
+N29 Y-1.5277 Z-.0082
+N30 Y-1.7051 Z-.0219
+N31 Y-1.7114 Z-.0225
+N32 Y-1.8867 Z-.0429
+N33 Y-1.8909 Z-.0435
+N34 Y-2.247 Z-.0988
+N35 X.15 F12.7
+N36 Y-1.8909 Z-.0435 F50.
+N37 Y-1.8867 Z-.0429
+N38 Y-1.7114 Z-.0225
+N39 Y-1.7051 Z-.0219
+N40 Y-1.5277 Z-.0082
+N41 Y-1.5152 Z-.0076
+N42 Y-1.3564 Z-.0015
+N43 Y-1.3346 Z-.0009
+N44 Y-.6808
+N45 Y-.6555 Z-.001
+N46 Y-.4783 Z-.0078
+N47 Y-.4657 Z-.0087
+N48 Y-.2927 Z-.0221
+N49 Y-.1147 Z-.0427
+N50 Y-.1084 Z-.0436
+N51 Y.247 Z-.0988
+N52 X.25 F12.7
+N53 Y-.1084 Z-.0436 F50.
+N54 Y-.1147 Z-.0427
+N55 Y-.2927 Z-.0221
+N56 Y-.4657 Z-.0087
+N57 Y-.4783 Z-.0078
+N58 Y-.6555 Z-.001
+N59 Y-.6808 Z-.0009
+N60 Y-1.3346
+N61 Y-1.3564 Z-.0015
+N62 Y-1.5152 Z-.0076
+N63 Y-1.5277 Z-.0082
+N64 Y-1.7051 Z-.0219
+N65 Y-1.7114 Z-.0225
+N66 Y-1.8867 Z-.0429
+N67 Y-1.8909 Z-.0435
+N68 Y-2.247 Z-.0988
+N69 X.35 F12.7
+N70 Y-1.8909 Z-.0435 F50.
+N71 Y-1.8867 Z-.0429
+N72 Y-1.7114 Z-.0225
+N73 Y-1.7051 Z-.0219
+N74 Y-1.5277 Z-.0082
+N75 Y-1.5152 Z-.0076
+N76 Y-1.3564 Z-.0015
+N77 Y-1.3346 Z-.0009
+N78 Y-.6808
+N79 Y-.6555 Z-.001
+N80 Y-.4783 Z-.0078
+N81 Y-.4657 Z-.0087
+N82 Y-.2927 Z-.0221
+N83 Y-.1147 Z-.0427
+N84 Y-.1084 Z-.0436
+N85 Y.247 Z-.0988
+N86 X.45 F12.7
+N87 Y-.1084 Z-.0436 F50.
+
+N88 Y-.1147 Z-.0427
+N89 Y-.2927 Z-.0221
+N90 Y-.4657 Z-.0087
+N91 Y-.4783 Z-.0078
+N92 Y-.6555 Z-.001
+N93 Y-.6808 Z-.0009
+N94 Y-1.3346
+N95 Y-1.3564 Z-.0015
+N96 Y-1.5152 Z-.0076
+N97 Y-1.5277 Z-.0082
+N98 Y-1.7051 Z-.0219
+N99 Y-1.7114 Z-.0225
+N100 Y-1.8867 Z-.0429
+N101 Y-1.8909 Z-.0435
+N102 Y-2.247 Z-.0988
+N103 X.55 F12.7
+N104 Y-1.8909 Z-.0435 F50.
+N105 Y-1.8867 Z-.0429
+N106 Y-1.7114 Z-.0225
+N107 Y-1.7051 Z-.0219
+N108 Y-1.5277 Z-.0082
+N109 Y-1.5152 Z-.0076
+N110 Y-1.3564 Z-.0015
+N111 Y-1.3346 Z-.0009
+N112 Y-.6808
+N113 Y-.6555 Z-.001
+N114 Y-.4783 Z-.0078
+N115 Y-.4657 Z-.0087
+N116 Y-.2927 Z-.0221
+N117 Y-.1147 Z-.0427
+N118 Y-.1084 Z-.0436
+N119 Y.247 Z-.0988
+N120 X.65 F12.7
+N121 Y-.1084 Z-.0436 F50.
+N122 Y-.1147 Z-.0427
+N123 Y-.2927 Z-.0221
+N124 Y-.4657 Z-.0087
+N125 Y-.4783 Z-.0078
+N126 Y-.6555 Z-.001
+N127 Y-.6808 Z-.0009
+N128 Y-1.3346
+N129 Y-1.3564 Z-.0015
+N130 Y-1.5152 Z-.0076
+N131 Y-1.5277 Z-.0082
+N132 Y-1.7051 Z-.0219
+N133 Y-1.7114 Z-.0225
+N134 Y-1.8867 Z-.0429
+N135 Y-1.8909 Z-.0435
+N136 Y-2.247 Z-.0988
+N137 X.75 F12.7
+N138 Y-1.8909 Z-.0435 F50.
+N139 Y-1.8867 Z-.0429
+N140 Y-1.7114 Z-.0225
+N141 Y-1.7051 Z-.0219
+N142 Y-1.5277 Z-.0082
+N143 Y-1.5152 Z-.0076
+N144 Y-1.3564 Z-.0015
+N145 Y-1.3346 Z-.0009
+N146 Y-.6808
+N147 Y-.6555 Z-.001
+N148 Y-.4783 Z-.0078
+N149 Y-.4657 Z-.0087
+N150 Y-.2927 Z-.0221
+N151 Y-.1147 Z-.0427
+N152 Y-.1084 Z-.0436
+N153 Y.247 Z-.0988
+N154 X.85 F12.7
+N155 Y-.1084 Z-.0436 F50.
+N156 Y-.1147 Z-.0427
+N157 Y-.2927 Z-.0221
+N158 Y-.4657 Z-.0087
+N159 Y-.4783 Z-.0078
+N160 Y-.6555 Z-.001
+N161 Y-.6808 Z-.0009
+N162 Y-1.3346
+N163 Y-1.3564 Z-.0015
+N164 Y-1.5152 Z-.0076
+N165 Y-1.5277 Z-.0082
+N166 Y-1.7051 Z-.0219
+N167 Y-1.7114 Z-.0225
+N168 Y-1.8867 Z-.0429
+N169 Y-1.8909 Z-.0435
+N170 Y-2.247 Z-.0988
+N171 X.95 F12.7
+N172 Y-1.8909 Z-.0435 F50.
+N173 Y-1.8867 Z-.0429
+N174 Y-1.7114 Z-.0225
+N175 Y-1.7051 Z-.0219
+N176 Y-1.5277 Z-.0082
+N177 Y-1.5152 Z-.0076
+N178 Y-1.3564 Z-.0015
+N179 Y-1.3346 Z-.0009
+
+33
+American Institute of Aeronautics and Astronautics
+
+N180
+N181
+N182
+N183
+N184
+N185
+N186
+N187
+N188
+N189
+N190
+N191
+N192
+N193
+N194
+N195
+N196
+N197
+N198
+N199
+N200
+N201
+N202
+N203
+N204
+N205
+N206
+N207
+N208
+N209
+N210
+N211
+N212
+N213
+N214
+N215
+N216
+N217
+N218
+N219
+N220
+N221
+N222
+N223
+N224
+N225
+N226
+N227
+N228
+N229
+N230
+N231
+N232
+N233
+N234
+N235
+N236
+N237
+N238
+N239
+N240
+N241
+N242
+N243
+N244
+N245
+N246
+N247
+N248
+N249
+N250
+N251
+N252
+N253
+N254
+N255
+N256
+N257
+N258
+N259
+N260
+N261
+N262
+N263
+N264
+N265
+N266
+N267
+N268
+N269
+N270
+N271
+
+Y-.6808
+Y-.6555 Z-.001
+Y-.4783 Z-.0078
+Y-.4657 Z-.0087
+Y-.2927 Z-.0221
+Y-.1147 Z-.0427
+Y-.1084 Z-.0436
+Y.247 Z-.0988
+X1.05 F12.7
+Y-.1084 Z-.0436 F50.
+Y-.1147 Z-.0427
+Y-.2927 Z-.0221
+Y-.4657 Z-.0087
+Y-.4783 Z-.0078
+Y-.6555 Z-.001
+Y-.6808 Z-.0009
+Y-1.3346
+Y-1.3564 Z-.0015
+Y-1.5152 Z-.0076
+Y-1.5277 Z-.0082
+Y-1.7051 Z-.0219
+Y-1.7114 Z-.0225
+Y-1.8867 Z-.0429
+Y-1.8909 Z-.0435
+Y-2.247 Z-.0988
+X1.15 F12.7
+Y-1.8909 Z-.0435 F50.
+Y-1.8867 Z-.0429
+Y-1.7114 Z-.0225
+Y-1.7051 Z-.0219
+Y-1.5277 Z-.0082
+Y-1.5152 Z-.0076
+Y-1.3564 Z-.0015
+Y-1.3346 Z-.0009
+Y-.6808
+Y-.6555 Z-.001
+Y-.4783 Z-.0078
+Y-.4657 Z-.0087
+Y-.2927 Z-.0221
+Y-.1147 Z-.0427
+Y-.1084 Z-.0436
+Y.247 Z-.0988
+X1.25 F12.7
+Y-.1084 Z-.0436 F50.
+Y-.1147 Z-.0427
+Y-.2927 Z-.0221
+Y-.4657 Z-.0087
+Y-.4783 Z-.0078
+Y-.6555 Z-.001
+Y-.6808 Z-.0009
+Y-1.3346
+Y-1.3564 Z-.0015
+Y-1.5152 Z-.0076
+Y-1.5277 Z-.0082
+Y-1.7051 Z-.0219
+Y-1.7114 Z-.0225
+Y-1.8867 Z-.0429
+Y-1.8909 Z-.0435
+Y-2.247 Z-.0988
+X1.35 F12.7
+Y-1.8909 Z-.0435 F50.
+Y-1.8867 Z-.0429
+Y-1.7114 Z-.0225
+Y-1.7051 Z-.0219
+Y-1.5277 Z-.0082
+Y-1.5152 Z-.0076
+Y-1.3564 Z-.0015
+Y-1.3346 Z-.0009
+Y-.6808
+Y-.6555 Z-.001
+Y-.4783 Z-.0078
+Y-.4657 Z-.0087
+Y-.2927 Z-.0221
+Y-.1147 Z-.0427
+Y-.1084 Z-.0436
+Y.247 Z-.0988
+X1.45 F12.7
+Y-.1084 Z-.0436 F50.
+Y-.1147 Z-.0427
+Y-.2927 Z-.0221
+Y-.4657 Z-.0087
+Y-.4783 Z-.0078
+Y-.6555 Z-.001
+Y-.6808 Z-.0009
+Y-1.3346
+Y-1.3564 Z-.0015
+Y-1.5152 Z-.0076
+Y-1.5277 Z-.0082
+Y-1.7051 Z-.0219
+Y-1.7114 Z-.0225
+Y-1.8867 Z-.0429
+Y-1.8909 Z-.0435
+
+N272
+N273
+N274
+N275
+N276
+N277
+N278
+N279
+N280
+N281
+N282
+N283
+N284
+N285
+N286
+N287
+N288
+N289
+N290
+N291
+N292
+N293
+N294
+N295
+N296
+N297
+N298
+N299
+N300
+N301
+N302
+N303
+N304
+N305
+N306
+N307
+N308
+N309
+N310
+N311
+N312
+N313
+N314
+N315
+N316
+N317
+N318
+N319
+N320
+N321
+N322
+N323
+N324
+N325
+N326
+N327
+N328
+N329
+N330
+N331
+N332
+N333
+N334
+N335
+N336
+N337
+N338
+N339
+N340
+N341
+N342
+N343
+N344
+N345
+N346
+N347
+N348
+N349
+N350
+N351
+N352
+N353
+N354
+N355
+N356
+N357
+N358
+N359
+N360
+N361
+N362
+N363
+
+Y-2.247 Z-.0988
+X1.55 F12.7
+Y-1.8909 Z-.0435 F50.
+Y-1.8867 Z-.0429
+Y-1.7114 Z-.0225
+Y-1.7051 Z-.0219
+Y-1.5277 Z-.0082
+Y-1.5152 Z-.0076
+Y-1.3564 Z-.0015
+Y-1.3346 Z-.0009
+Y-.6808
+Y-.6555 Z-.001
+Y-.4783 Z-.0078
+Y-.4657 Z-.0087
+Y-.2927 Z-.0221
+Y-.1147 Z-.0427
+Y-.1084 Z-.0436
+Y.247 Z-.0988
+X1.65 F12.7
+Y-.1084 Z-.0436 F50.
+Y-.1147 Z-.0427
+Y-.2927 Z-.0221
+Y-.4657 Z-.0087
+Y-.4783 Z-.0078
+Y-.6555 Z-.001
+Y-.6808 Z-.0009
+Y-1.3346
+Y-1.3564 Z-.0015
+Y-1.5152 Z-.0076
+Y-1.5277 Z-.0082
+Y-1.7051 Z-.0219
+Y-1.7114 Z-.0225
+Y-1.8867 Z-.0429
+Y-1.8909 Z-.0435
+Y-2.247 Z-.0988
+X1.75 F12.7
+Y-1.8909 Z-.0435 F50.
+Y-1.8867 Z-.0429
+Y-1.7114 Z-.0225
+Y-1.7051 Z-.0219
+Y-1.5277 Z-.0082
+Y-1.5152 Z-.0076
+Y-1.3564 Z-.0015
+Y-1.3346 Z-.0009
+Y-.6808
+Y-.6555 Z-.001
+Y-.4783 Z-.0078
+Y-.4657 Z-.0087
+Y-.2927 Z-.0221
+Y-.1147 Z-.0427
+Y-.1084 Z-.0436
+Y.247 Z-.0988
+X1.85 F12.7
+Y-.1084 Z-.0436 F50.
+Y-.1147 Z-.0427
+Y-.2927 Z-.0221
+Y-.4657 Z-.0087
+Y-.4783 Z-.0078
+Y-.6555 Z-.001
+Y-.6808 Z-.0009
+Y-1.3346
+Y-1.3564 Z-.0015
+Y-1.5152 Z-.0076
+Y-1.5277 Z-.0082
+Y-1.7051 Z-.0219
+Y-1.7114 Z-.0225
+Y-1.8867 Z-.0429
+Y-1.8909 Z-.0435
+Y-2.247 Z-.0988
+X1.95 F12.7
+Y-1.8909 Z-.0435 F50.
+Y-1.8867 Z-.0429
+Y-1.7114 Z-.0225
+Y-1.7051 Z-.0219
+Y-1.5277 Z-.0082
+Y-1.5152 Z-.0076
+Y-1.3564 Z-.0015
+Y-1.3346 Z-.0009
+Y-.6808
+Y-.6555 Z-.001
+Y-.4783 Z-.0078
+Y-.4657 Z-.0087
+Y-.2927 Z-.0221
+Y-.1147 Z-.0427
+Y-.1084 Z-.0436
+Y.247 Z-.0988
+X2.05 F12.7
+Y-.1084 Z-.0436 F50.
+Y-.1147 Z-.0427
+Y-.2927 Z-.0221
+Y-.4657 Z-.0087
+Y-.4783 Z-.0078
+
+N364
+N365
+N366
+N367
+N368
+N369
+N370
+N371
+N372
+N373
+N374
+N375
+N376
+N377
+N378
+N379
+N380
+N381
+N382
+N383
+N384
+N385
+N386
+N387
+N388
+N389
+N390
+N391
+N392
+N393
+N394
+N395
+N396
+N397
+N398
+N399
+N400
+N401
+N402
+N403
+N404
+N405
+N406
+N407
+N408
+N409
+N410
+N411
+N412
+N413
+N414
+N415
+N416
+N417
+N418
+N419
+N420
+N421
+N422
+N423
+N424
+N425
+N426
+N427
+N428
+N429
+N430
+N431
+N432
+N433
+N434
+N435
+N436
+N437
+N438
+N439
+N440
+N441
+N442
+N443
+N444
+N445
+N446
+N447
+N448
+N449
+N450
+N451
+N452
+N453
+N454
+N455
+
+Y-.6555 Z-.001
+Y-.6808 Z-.0009
+Y-1.3346
+Y-1.3564 Z-.0015
+Y-1.5152 Z-.0076
+Y-1.5277 Z-.0082
+Y-1.7051 Z-.0219
+Y-1.7114 Z-.0225
+Y-1.8867 Z-.0429
+Y-1.8909 Z-.0435
+Y-2.247 Z-.0988
+X2.15 F12.7
+Y-1.8909 Z-.0435 F50.
+Y-1.8867 Z-.0429
+Y-1.7114 Z-.0225
+Y-1.7051 Z-.0219
+Y-1.5277 Z-.0082
+Y-1.5152 Z-.0076
+Y-1.3564 Z-.0015
+Y-1.3346 Z-.0009
+Y-.6808
+Y-.6555 Z-.001
+Y-.4783 Z-.0078
+Y-.4657 Z-.0087
+Y-.2927 Z-.0221
+Y-.1147 Z-.0427
+Y-.1084 Z-.0436
+Y.247 Z-.0988
+X2.25 F12.7
+Y-.1084 Z-.0436 F50.
+Y-.1147 Z-.0427
+Y-.2927 Z-.0221
+Y-.4657 Z-.0087
+Y-.4783 Z-.0078
+Y-.6555 Z-.001
+Y-.6808 Z-.0009
+Y-1.3346
+Y-1.3564 Z-.0015
+Y-1.5152 Z-.0076
+Y-1.5277 Z-.0082
+Y-1.7051 Z-.0219
+Y-1.7114 Z-.0225
+Y-1.8867 Z-.0429
+Y-1.8909 Z-.0435
+Y-2.247 Z-.0988
+X2.35 F12.7
+Y-1.8909 Z-.0435 F50.
+Y-1.8867 Z-.0429
+Y-1.7114 Z-.0225
+Y-1.7051 Z-.0219
+Y-1.5277 Z-.0082
+Y-1.5152 Z-.0076
+Y-1.3564 Z-.0015
+Y-1.3346 Z-.0009
+Y-.6808
+Y-.6555 Z-.001
+Y-.4783 Z-.0078
+Y-.4657 Z-.0087
+Y-.2927 Z-.0221
+Y-.1147 Z-.0427
+Y-.1084 Z-.0436
+Y.247 Z-.0988
+X2.45 F12.7
+Y-.1084 Z-.0436 F50.
+Y-.1147 Z-.0427
+Y-.2927 Z-.0221
+Y-.4657 Z-.0087
+Y-.4783 Z-.0078
+Y-.6555 Z-.001
+Y-.6808 Z-.0009
+Y-1.3346
+Y-1.3564 Z-.0015
+Y-1.5152 Z-.0076
+Y-1.5277 Z-.0082
+Y-1.7051 Z-.0219
+Y-1.7114 Z-.0225
+Y-1.8867 Z-.0429
+Y-1.8909 Z-.0435
+Y-2.247 Z-.0988
+X2.55 F12.7
+Y-1.8909 Z-.0435 F50.
+Y-1.8867 Z-.0429
+Y-1.7114 Z-.0225
+Y-1.7051 Z-.0219
+Y-1.5277 Z-.0082
+Y-1.5152 Z-.0076
+Y-1.3564 Z-.0015
+Y-1.3346 Z-.0009
+Y-.6808
+Y-.6555 Z-.001
+Y-.4783 Z-.0078
+Y-.4657 Z-.0087
+
+34
+American Institute of Aeronautics and Astronautics
+
+N456 Y-.2927 Z-.0221
+N457 Y-.1147 Z-.0427
+N458 Y-.1084 Z-.0436
+N459 Y.247 Z-.0988
+N460 X2.65 F12.7
+N461 Y-.1084 Z-.0436 F50.
+N462 Y-.1147 Z-.0427
+N463 Y-.2927 Z-.0221
+N464 Y-.4657 Z-.0087
+N465 Y-.4783 Z-.0078
+N466 Y-.6555 Z-.001
+N467 Y-.6808 Z-.0009
+N468 Y-1.3346
+N469 Y-1.3564 Z-.0015
+N470 Y-1.5152 Z-.0076
+N471 Y-1.5277 Z-.0082
+N472 Y-1.7051 Z-.0219
+N473 Y-1.7114 Z-.0225
+N474 Y-1.8867 Z-.0429
+N475 Y-1.8909 Z-.0435
+N476 Y-2.247 Z-.0988
+N477 X2.75 F12.7
+N478 Y-1.8909 Z-.0435 F50.
+N479 Y-1.8867 Z-.0429
+N480 Y-1.7114 Z-.0225
+N481 Y-1.7051 Z-.0219
+N482 Y-1.5277 Z-.0082
+N483 Y-1.5152 Z-.0076
+N484 Y-1.3564 Z-.0015
+N485 Y-1.3346 Z-.0009
+N486 Y-.6808
+N487 Y-.6555 Z-.001
+N488 Y-.4783 Z-.0078
+N489 Y-.4657 Z-.0087
+N490 Y-.2927 Z-.0221
+N491 Y-.1147 Z-.0427
+N492 Y-.1084 Z-.0436
+N493 Y.247 Z-.0988
+N494 X2.85 F12.7
+N495 Y-.1084 Z-.0436 F50.
+N496 Y-.1147 Z-.0427
+N497 Y-.2927 Z-.0221
+N498 Y-.4657 Z-.0087
+N499 Y-.4783 Z-.0078
+N500 Y-.6555 Z-.001
+N501 Y-.6808 Z-.0009
+N502 Y-1.3346
+N503 Y-1.3564 Z-.0015
+N504 Y-1.5152 Z-.0076
+N505 Y-1.5277 Z-.0082
+N506 Y-1.7051 Z-.0219
+N507 Y-1.7114 Z-.0225
+N508 Y-1.8867 Z-.0429
+N509 Y-1.8909 Z-.0435
+N510 Y-2.247 Z-.0988
+N511 X2.95 F12.7
+N512 Y-1.8909 Z-.0435 F50.
+N513 Y-1.8867 Z-.0429
+N514 Y-1.7114 Z-.0225
+N515 Y-1.7051 Z-.0219
+N516 Y-1.5277 Z-.0082
+N517 Y-1.5152 Z-.0076
+N518 Y-1.3564 Z-.0015
+N519 Y-1.3346 Z-.0009
+N520 Y-.6808
+N521 Y-.6555 Z-.001
+N522 Y-.4783 Z-.0078
+N523 Y-.4657 Z-.0087
+N524 Y-.2927 Z-.0221
+N525 Y-.1147 Z-.0427
+N526 Y-.1084 Z-.0436
+N527 Y.247 Z-.0988
+N528 X2.9466 Y.2729 Z-.1029
+N529 X2.9366 Y.297 Z-.107
+N530 X2.9207 Y.3177 Z-.1111
+N531 X2.9 Y.3336 Z-.1151
+N532 X2.8759 Y.3436 Z-.1192
+N533 X2.85 Y.347 Z-.1233
+N534 X2.8285 Z-.1235
+N535 X2.8078 Z-.1176
+N536 X2.7897 Z-.1061
+N537 X2.7755 Z-.09
+N538 X2.7666 Z-.0704
+N539 X2.7635 Z-.0492
+N540 Z.9508
+N541 G00 Z2. M09
+N542 T04 M06 (#8 60 DEG
+CENTERDRILL)
+N543 S2000 M03
+N544 G00 G54 X.7126 Y-1.
+S2000 M03
+N545 G43 H04 Z1. M08
+
+N546 G81 G98 R.1 Z-.0568 F10.
+N547 X2.2874
+N548 G80 Z1. M09
+N549 T03 M06 (4.8MM JOBBER
+DRILL)
+N550 S900 M03
+N551 G00 G54 X.7126 Y-1. S900
+M03
+N552 G43 H03 Z.2 M08
+N553 G83 G99 R.2 Z-1.0967 Q.2
+F8.
+N554 X2.2874
+N555 G80 Z1. M09
+N556 T06 M06 (1/4 2 FLUTE CRB
+EM)
+N557 S4201 M03
+N558 G00 G54 X2.2596 Y-.9039
+S4201 M03
+N559 G43 H06 Z1. M08
+N560 G01 Z-.11 F1.3655
+N561 X2.3152 F10.9244
+N562 G02 X2.3831 Y-1.0289 R.1
+N563 G01 X2.1917
+N564 G03 X2.2535 Y-1.0941 R.1
+N565 G01 X2.3213
+N566 G03 X2.2535 Y-.9059 R-.1
+N567 X2.3213 Y-1.0941 R-.1
+N568 G00 Z1.
+N569 X2.2596 Y-.9039
+N570 Z.89
+N571 G01 Z-.3 F1.3655
+N572 X2.3152 F10.9244
+N573 G02 X2.3831 Y-1.0289 R.1
+N574 G01 X2.1917
+N575 G03 X2.2535 Y-1.0941 R.1
+N576 G01 X2.3213
+N577 G03 X2.2535 Y-.9059 R-.1
+N578 X2.3213 Y-1.0941 R-.1
+
+N579
+N580
+N581
+N582
+N583
+N584
+N585
+N586
+N587
+N588
+N589
+N590
+N591
+N592
+N593
+N594
+N595
+N596
+N597
+N598
+N599
+N600
+N601
+N602
+N603
+N604
+N605
+N606
+N607
+N608
+N609
+N610
+N611
+N612
+N613
+N614
+N615
+N616
+
+G00 Z1.
+Z5.
+X.6848 Y-.9039
+Z1.
+G01 Z-.11 F1.3655
+X.7404 F10.9244
+G02 X.8083 Y-1.0289 R.1
+G01 X.6169
+G03 X.6787 Y-1.0941 R.1
+G01 X.7465
+G03 X.6787 Y-.9059 R-.1
+X.7465 Y-1.0941 R.1
+G00 Z1.
+X.6848 Y-.9039
+Z.89
+G01 Z-.3 F1.3655
+X.7404 F10.9244
+G02 X.8083 Y-1.0289 R.1
+G01 X.6169
+G03 X.6787 Y-1.0941 R.1
+G01 X.7465
+G03 X.6787 Y-.9059 R-.1
+X.7465 Y-1.0941 R.1
+G00 Z1.
+Z5.
+X2.2596 Y-.9039
+Z1.
+G01 Z-.11 F1.3655
+X2.3152 F10.9244
+G02 X2.3831 Y-1.0289 R.1
+G01 X2.1917
+G03 X2.2535 Y-1.0941 R.1
+G01 X2.3213
+G03 X2.2535 Y-.9059 R-.1
+X2.3213 Y-1.0941 R-.1
+G00 Z1.
+X2.2596 Y-.9039
+Z.89
+
+35
+American Institute of Aeronautics and Astronautics
+
+N617
+N618
+N619
+N620
+N621
+N622
+N623
+N624
+N625
+N626
+N627
+N628
+N629
+N630
+N631
+N632
+N633
+N634
+N635
+N636
+N637
+N638
+N639
+N640
+N641
+N642
+N643
+N644
+N645
+N646
+N647
+N648
+N649
+N650
+N651
+N652
+%
+
+G01 Z-.3 F1.3655
+X2.3152 F10.9244
+G02 X2.3831 Y-1.0289 R.1
+G01 X2.1917
+G03 X2.2535 Y-1.0941 R.1
+G01 X2.3213
+G03 X2.2535 Y-.9059 R-.1
+X2.3213 Y-1.0941 R-.1
+G00 Z1.
+Z5.
+X.6848 Y-.9039
+Z1.
+G01 Z-.11 F1.3655
+X.7404 F10.9244
+G02 X.8083 Y-1.0289 R.1
+G01 X.6169
+G03 X.6787 Y-1.0941 R.1
+G01 X.7465
+G03 X.6787 Y-.9059 R-.1
+X.7465 Y-1.0941 R.1
+G00 Z1.
+X.6848 Y-.9039
+Z.89
+G01 Z-.3 F1.3655
+X.7404 F10.9244
+G02 X.8083 Y-1.0289 R.1
+G01 X.6169
+G03 X.6787 Y-1.0941 R.1
+G01 X.7465
+G03 X.6787 Y-.9059 R-.1
+X.7465 Y-1.0941 R.1
+G00 Z1.
+Z5. M09
+G91 G28 Z0
+G28 Y0
+M30
+
+Appendix D. Cost Breakdown
+
+Item Purchased
+
+Qty
+
+Price
+
+1000 mm Linear Motion Guide Rail (PTFE Sleeve Bearing)
+Linear Motion Sleeve Bearing Carriage
+PVC Bar 1" X 2" (price in 1' lengths)
+M4 Socket Head Cap Screw 30mm 18-8 Stainless (Qty 100)
+Stainless Steel Flat washers
+Primer
+Pipe Cement
+Anodized Al
+Multi-purpose AL
+Multi-purpose AL
+410 SS Screws
+316 Pan head
+AL Female Threaded Hex
+18-8 SS Female Threaded Round
+Swivel Leveling Mount
+316 SS Socket Head Cap Screw
+316 SS Pan Head
+Shipping and Tax
+SS flat Washer
+Steel tubing for Vacuum Chamber Rack
+
+4
+4
+8
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+4
+1
+1
+1
+1
+1
+1
+
+$280.00
+$204.44
+$74.40
+$9.15
+$6.45
+$5.16
+$5.30
+$3.60
+$23.00
+$16.02
+$7.65
+$9.83
+$4.68
+$11.92
+$3.30
+$4.23
+$7.98
+$66.95
+$2.43
+$195.00
+
+Total Cost $941.49
+
+36
+American Institute of Aeronautics and Astronautics
+
+Acknowledgments
+Jason M. Bertels thanks Dr. Kira Abercromby for her invaluable guidance during this project, and he thanks
+Cody Thompson for the assistance he offered during the manufacturing of the vacuum chamber components
+discussed in this report. Also, I am grateful for the help Jeff Maniglia offered me throughout my involvement with
+the railgun program at California Polytechnic State University.
+
+References
+1
+
+Bothwell, A. W., and Foster, D. J., “Low Cost Vacuum Chamber Design for Electromagnetic Railgun Operation,” Senior
+Project, Aerospace Engineering Department, California Polytechnic State University, CA, 2012.
+2
+
+Maniglia, J. J., “Design, Fabrication, and Testing of an EMR Gun Based Orbital Debris Impact Testing Platform,” M.S
+Thesis, Aerospace Engineering Department, California Polytechnic State University, San Luis Obispo, CA, 2013.
+3
+
+Marshall, A. C., “Modern Composite Basics,” Fourth Edition, Marshall Consulting, Walnut Creek, CA., 1994.
+
+4
+
+Dennis, N. T. M., and Heppell, T. A., “Vacuum System Design,” High Vacuum Series, edited by L. Holland, Chapman and
+Hall LTD, London, 1968.
+5
+Guthrie, A. (ed.), and Wakerling, R. K. (ed.), “Vacuum Equipment and Techniques, “National Nuclear Energy Series,
+Manhattan Project Technical Section, McGraw-Hill Book Compnay, Inc., 1949.
+
+37
+American Institute of Aeronautics and Astronautics
+
+

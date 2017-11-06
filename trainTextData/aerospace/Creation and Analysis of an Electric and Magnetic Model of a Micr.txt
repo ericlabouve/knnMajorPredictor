@@ -1,0 +1,792 @@
+Creation and Analysis of an Electric and Magnetic Model of a
+Micro Ion Thruster
+
+A Senior Project
+presented to
+The Faculty of the Aerospace Engineering Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+Of the Requirements for the Degree
+Bachelor of Science in Aerospace Engineering
+
+By
+Maxwell Bodnar
+June, 2013
+
+© 2013 Maxwell Bodnar
+
+Creation and Analysis of an Electric and Magnetic Model
+of a Micro Ion Thruster
+Maxwell Bodnar1
+California Polytechnic State University, San Luis Obispo
+This report explores the magnetic and electric fields within the Cal Poly Miniature
+Xenon Ion (MiXI) Thruster V3 in order to create a comprehensive electric and magnetic
+model of the plasma chamber to analyze and test the current thruster configurations and
+changes to the existing thruster. This model is used to analyze the operation and efficiency of
+the ion thruster and the plasma environment within the plasma chamber. This model
+explores the ionization and electron collision rates during operation of the thruster to
+measure the efficiency of the current thruster configuration, also determining the theoretical
+Isp and thrust of the ion thruster.
+This model was created from the design and validated against the results of the CP
+MiXI V3 thruster, designed and tested by David Knapp. Considering a test case of Knapp’s
+thruster, the model predicts primary electron impact probabilities at 37.15%, a mass
+utilization of 62.92%, an Isp of 2057 s, and a thrust of 1.09 mN. The values of mass
+utilization, Isp, and thrust are in error by 109.74%, 37.16%, and -9.07%, respectively, when
+compared to the test case [3]. Further refinements of this model and analysis tools will assist
+in creating a more efficient and optimized ion thruster.
+
+Nomenclature
+
+SCCM
+
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+
+2
+
+Area [m ]
+Magnetic Field [Tesla]
+Electric Field [Volts/meter]
+Current [Amperes]
+Length [meters]
+Mass [Kilogram]
+Mass flow rate [Kilogram/second]
+Plasma Density [particle/m3]
+Power [Watts]
+Larmor Radius [Meter]
+Standard Cubic Centimeters per Minute
+Temperature [Kelvin]
+Thrust [Newton]
+Voltage
+Velocity [meters/second]
+Debye Length [Meters]
+Efficiency
+Plasma Potential [Volts]
+Beam Half Angle Divergence [radians]
+Density [kg/m3]
+Ionization cross section [m2]
+
+_________________________________
+1
+Student, Aerospace Engineering Department, mbodnar@calpoly.edu.
+
+1
+American Institute of Aeronautics and Astronautics
+
+Subscripts
+a
+b
+c
+d
+e
+i
+p
+s
+0
+
+=
+=
+=
+=
+=
+=
+=
+=
+=
+
+Acceleration grid
+Beam
+Cathode
+Discharge
+Electron
+Ion
+Primary
+Screen grid
+Total
+
+Constants
+=
+=
+=
+=
+=
+=
+
+Fundamental charge
+Gravitational acceleration
+Boltzman’s Constant
+Electron mass
+Xenon particle mass
+Permittivity of Free Space
+
+1.602176487 x 10-19 C
+9.807 m/s2
+1.3806488 x 10-23 m2kg / s2K
+9.1093822 x 10-31 kg
+2.1960351 x 10-25 kg
+8.8541878 x 10-12 s4A2 / m3kg
+
+I. Introduction
+
+S
+
+PACE based electric propulsion systems provide many advantages over more traditional chemical propulsion
+systems in many regards, most import being propulsive efficiency. Less propellant is required to alter the
+trajectory of a spacecraft utilizing an electric propulsion system. Electric propulsion (EP) systems are used for orbit
+raising and station keeping on high power satellites as a substitute to traditional chemical propulsion systems. A
+subset of EP systems has been developed recently called micro ion thrusters, having a thrust in the range of 0.01 –
+10 mN while still maintaining high efficiency. Several universities and research labs are working to develop a flight
+capable micro ion thruster with the goal of using these smaller thrusters for attitude adjustment and control [1] [3].
+Several types of EP systems exist, but the two most developed technologies for flight application are gridded
+ion thrusters and Hall-effect thrusters. An ion thruster creates thrust by electrically accelerating ionized fuel particles
+away from the spacecraft via an electric potential field. Hall-effect thrusters achieve this by creating a quasi-static
+electron cloud that accelerates the ions while a gridded ion thruster accelerates the ions through a series of charged
+grids. This report discusses the design of a model for the Miniature Xenon Ion Thruster (MiXI), a gridded ion
+thruster 3 cm in diameter that has been designed and tested over the past few years [1].
+The micro ion thrusters, and all ion thrusters, perform by creating plasma within the thruster and ionizing a
+propellant, most commonly Xenon gas, and accelerating the electrically charged particles to create thrust [2]. One of
+the most common plasma generation techniques is to use a heated cathode filament to bombard the inert gas
+propellant with electrons, causing them to ionize. Electrons discharge from the cathode and are drawn to the walls of
+the ion thruster, the anode. Magnet fields are employed in this region, called the plasma discharge chamber, to turn
+the electrons, preventing them from immediately impacting the anode and increasing the change the electrons will
+impact with a neutral propellant particle. The ionized propellant is then accelerated out the thruster, accelerating the
+thruster and creating thrust via Newton’s third law. A diagram of an ion thruster showing some of the components
+and the steps of operation is shown in the figure below.
+
+2
+American Institute of Aeronautics and Astronautics
+
+Figure 1. Cutaway of an ion thruster depicting the components and steps of operation. [7].
+In 2005, Richard Wirz wrote his thesis involving the discharge plasma in small ion thrusters [1]. His design was
+the first of a small scope of small ion thrusters that exist and are being designed today. Major characteristics of his
+thruster it was three centimeters in diameter, had a three ring magnetic containment field design, and a coiled
+tungsten filament cathode (CTFC). His design was adapted from larger ion thrusters in an attempt to utilize the large
+designs for a much smaller system. He tested and varied different magnetic structures and other physical models in
+his research. Important to his research and study was the implementation of an advanced plasma discharge model
+that he developed for determining the most optimal physical and E&M configuration and geometry. This model
+accounts for the five major chamber design parameters: chamber geometry, magnetic field, discharge cathode,
+propellant feed, and ion extraction grid characteristics. The discharge model was used to create the first version of
+the miniature xenon ion thruster.
+In 2012, David Knapp used much of the work of Wirz in creating a micro ion thruster and attempted to
+implement a hollow tube cathode as the discharge cathode inside the ion thruster chamber [3]. He work centered on
+using the existing design from Wirz and adding the hollow cathode, building the thruster, and testing the new
+design. He obtained data relating to the efficiency, power, and thrust of this new thruster variant. His work also
+included using the current structure of the micro ion thruster and his attempt to optimize the magnetic fields to
+increase the primary ion collision and increase the plasma stability. While the implementation of the hollow cathode
+was successful in terms that he was able to create a working test apparatus with the hollow cathode, the efficiency of
+his thruster design was not to that of the micro ion thruster of Wirz that was designed with a CTFC. The attempt to
+resolve the limited lifespan of the CTFC with the purpose of creating a long duration and space worthy micro ion
+thruster ended up creating other inefficiencies in the workings of the micro ion thruster.
+A. Project Scope
+The purpose of this project and report is to analyze the equations with regards to plasma flow and ionization
+within the discharge chamber and to create a model of the electric and magnetic structure of the existing micro ion
+thruster. This model will be used to analyze the current design and to effect changes to the system. These changes
+are ones that are designed to increase the operational efficiency of the thruster, increasing the mass utilization of the
+propellant, creating a higher Isp thruster, and increasing the thrust while ideally lowering power requirements. In
+this report, the creating and verification of the model are presented with the goal of using this model for the eventual
+optimization of the micro ion thruster.
+
+3
+American Institute of Aeronautics and Astronautics
+
+In order to effect changes on the operation and design of an ion thruster, it is important to understand the design
+characteristics and plasma physics within an ion thruster. As the analysis of the plasma environment is very
+complex, several assumptions need to be made at this stage of design. The assumption that the plasma both inside
+and outside the discharge chamber is quasineutral will be utilized. Quasineutrality is essential for the current 0dimensional simplified analysis where it can be assumed that the plasma is of uniform density, temperature, and
+charge and that the ion and electron density is equal [2]. While these assumptions are not comprehensive and truly
+the case for this thruster, it provides a decent structure to the plasma characteristics for this analysis.
+
+II. Ion Thruster Design Considerations
+It is known an ion thruster produces thrust by acceleration charged ions within a plasma through grids out the
+rear of the spacecraft, thus accelerating the spacecraft. In order for this to occur, there must be ions and plasma
+formed within the discharge chamber. Fuel, Xenon or Argon gas, is injected into the discharge chamber as neutrally
+charged atoms where high energy electrons from the cathode impact and ionize the fuel atoms. The resultant ions
+can then be accelerated to produce thrust. The very important aspect to this process is the ionization of the fuel
+particles. In order to maximize thrust, it is desirable to have a high rate and percent of ionization. This is achieved
+through the creation and manipulation of electric and magnetic fields to confine the electrons so they have a higher
+probability of impacting the neutral particles with sufficient energy.
+To ionize a fuel particle, an electron emitted from the discharge cathode must impact with enough energy to
+ionize that atom. Without the presence of magnetic fields within the thruster, the electrons emitted from the cathode
+would immediately travel to the walls of the discharge chamber, the anode of this system. This would mean that the
+chance of ionization is very low as the mean free path of the electron is very low and its duration within the chamber
+very short. Before discussing the specifics of impact probabilities, it is necessary to understand a few values
+important to plasmas in general.
+A. Plasma Properties
+There are a four main parameters that can be used to describe a plasma: the plasma temperature, , plasma
+density, , plasma potential,
+, and the floating potential, . These four values are important to determine the
+behavior of the plasma and in evaluating how the plasma interacts with the ion thruster. A number of these values
+are not easy to define by the input conditions but can be experimentally determined once the thruster is assembled
+and tested. Another important value to understand is the Larmor radius, , the characteristic length over which the
+charges undergo cyclic motion within a magnetic field. In general, models used to describe the plasma behavior and
+characteristics can be modeled by fluid equations, representing the hydro magnetic formulation of the plasma.
+The electrons injected into the discharge chamber from the hollow cathode can be viewed as fluid particles
+filling the volume of the discharge chamber. Considering a magnetic field free region, the electrons will
+immediately travel to the anode walls. There will be a current created from the charged particles emitting from the
+cathode and travelling to the anode represented by [2]
+(1)
+where
+is the discharge current,
+is the electron density in the plasma, is the fundamental charge,
+is the
+emitted electron velocity (a function of the discharge cathode’s potential and related to the electron temperature),
+and
+is the loss area for the electrons. In order to minimize the electron loss, you want to minimize the discharge
+current. Decreasing the values for density or velocity means the electrons impacting fuel atoms will be less frequent
+and less energetic; therefore decreasing the loss area is one of the goals when designing an ion thruster. The loss
+area for the electrons can be manipulated by adding in a magnetic field and is defined by [2]
+
+(2)
+
+where
+is the magnetic field strength at the walls,
+is the mass of the electron, and
+is the length of the
+magnetic cusp. The area loss’s dependency of the magnetic cusp length is derived from the fact that the electrons
+spiral along the strong magnetic field lines emanating from the magnetic cusp. These values are used to determine
+the probability, , that an electron will make a collision with a fuel atom and not be lost directly to the anode when
+in the region of the high strength magnetic fields, represented by [2]
+4
+American Institute of Aeronautics and Astronautics
+
+(3)
+where
+is the neutral particle density,
+is the cross sectional area of collision, and
+is the volume of the
+discharge chamber. It is desirable to have a high probability of impact within the discharge chamber as more impacts
+create more charged ions. To increase the probability of impact, there are a few design variables within the ion
+thruster you can change, the most interesting of them being the magnetic field strength. The value represented in
+equation 2 is the magnetic field strength at the surface of the anode at the magnetic cusp. It is apparent that to get a
+high value of , you would desire a high value of
+at the anode walls. The other design variable that can be
+changed is the volume of the discharge chamber. With a larger volume, the probability of collision within the
+discharge chamber increases. This poses a problem for smaller ion thrusters as the volume to area ratio is much
+smaller than those of larger thrusters, NEXT or NSTAR, and leads to a lower probability of impact for MiXI.
+Design of the magnetic confinement of the electrons is key to the stable operation of the thruster and the
+ionization process. From the standpoint of impact probability, it would be desirable to increase the magnetic field
+strength as high as possible. This would prevent the emitted electrons from being lost to the anode and increase the
+probability of ionization. However, there are many other characteristics of the plasma and thruster operation that
+need to be considered. One such value is the plasma potential. Through experimentation and analysis, it has been
+determined that the plasma potential for stable plasma production within an ion thruster cannot be a negative value.
+If the plasma potential becomes negative, the ionization process breaks down and the plasma becomes unstable,
+rapidly re-associating and spontaneously changing the electron density inside the chamber. The plasma potential
+is described by the equation [2]
+
+(4)
+
+where
+is the electron temperature,
+is the ion mass,
+is the electron mass,
+is the screen area,
+is the
+transparency factor of the screen, is the discharge current, is the beam current,
+is the anode surface area,
+is the ion confinement factor for the Bohm current,
+is the primary electron density,
+is the primary electron
+velocity,
+is the plasma electron density, and
+is the ion acoustic velocity. For this analysis of stable plasma
+operation in a 0-dimensional plasma environment and assuming quasi-neutrality of the plasma, it is enough to
+understand how the plasma potential changes with the magnetic field strength. The quantity represented by
+is the
+hybrid anode area, a value similar to the primary electron loss area in that it has an inverse relation to magnetic field
+strength . By inspection, it becomes apparent that increasing will cause the potential to decrease. Increasing the
+magnetic strength at the cusps too greatly will cause the plasma to become unstable at the boundaries, negatively
+affecting the entirety of the ionization process and the stability of the plasma.
+Another important plasma characteristic to consider that is greatly affected by the magnetic field strength and
+shape is the plasma uniformity. When the fuel particles are eventually ionized, they will start to turn based upon the
+magnetic field within the ionization chamber. When they are accelerated through the electric grids, it is more
+effective to have a uniform ion distribution at the grid face. A magnetic field that is turning as the ions cross the
+grids will cause the ions to accelerate with a small radial component, decreasing the overall thrust. While the net
+radial acceleration results to zero, the overall acceleration vector is less than it could be if the magnetic field and
+plasma distribution at the grids were more uniform.
+B. Magnetic Structure Formulation
+Currently, the optimum design for the magnetic fields for ion thrusters uses permanent magnets in a ring-cusp
+structure [1]. Over the years, the design has improved from uniform fields using linear magnets to this ring cusp
+structure. This provides, within the plasma and discharge chamber, the areas of high magnetic field strength near the
+cusps (to improve probability of impact) and low enough magnetic field strength overall (to limit plasma potential).
+The following figure is from David Knapp’s thesis and is his rendition of the current magnetic field structure within
+the micro-ion thruster.
+
+5
+American Institute of Aeronautics and Astronautics
+
+Figure 2: Magnetic field design within a cylindrical ion thruster. This represents an axially symmetric
+model of the fields. The numbers provide a scale for size within the chamber, measured in mm. [3]
+The blue lines represent the magnetic field lines of equal strength. The higher density of the field lines also
+means a higher relative magnetic flux. From this image it should be apparent where the three distinct magnetic rings
+are located, one at the base and two along the walls.
+The magnetic fields created within the discharge chamber are generated through the use of permanent magnets.
+When choosing the permanent magnets to build into an ion thruster, it is important to consider the surface strength
+because of the impact on the ionization and potential, as mentioned before. It is also important to understand the
+thermal properties of the magnet and the thermal radiation from the plasma generation and how that heat can
+degrade the magnet, an area of future research. There are numerous aspects to choosing the permanent magnets
+cusps to take into consideration.
+Modeling the magnets can able to be completed through considering each magnet as a simple magnetic
+monopole. Using Maxwell’s equations and Laplace’s equations, the result for the magnetic potential,
+or , in
+terms of distance and angle from the vertical axis can be determined by
+(5)
+The values in the summation arise from the Legendre polynomials, with as the Legendre index. The value
+is
+the magnetic moments of the multipole expansion, is the radius from the magnet, and
+are the Legendre
+polynomial variables. This equation is able to be solved to explicitly determine the magnetic field for distance and
+angle.
+(6)
+
+6
+American Institute of Aeronautics and Astronautics
+
+The value
+is the dipole magnetic moment. This value is unique to the source of the magnetic field and takes
+various forms depending on the source of the field. For a permanent magnet,
+becomes
+(7)
+where
+is the volume of the magnet and
+is the magnetic perveance specification of the magnet, sometimes
+known as the residual induction. The perveance is a value specific to the material of the magnet and the quality and
+uniformity of the metal or ceramic. Considering real magnets and physical dimensions rather than the ideal dipole
+moment means there are some variations between what the equations and models will calculate and what are
+experimentally determined or measured. For computer analysis, ideal magnetic models are assumed, but it is always
+important to understand physical limitations of equations. Currently, the magnetic model analysis is calculated using
+a program called Finite Element Method Magnetics (FEMM). The operation of FEMM and the resultant electric and
+magnetic models will be discussed later.
+C. Single Particle Motion
+Understanding the magnetic fields within the discharge chamber allows for an understanding of the electron and
+ion motion within the thruster. Following the Lorentz equation
+(8)
+where is the force vector acting on the charged particle, is the fundamental charge (with appropriate sign) is
+the vector of the electric field, is the vector of the velocity, and is the vector of the magnetic field. The electron
+motion is governed almost explicitly through this equation. This exact motion of a particle understandably becomes
+more complex when accounting for external fields applied to the plasma and internal magnetic and electric fields
+generated from the moving particles and is highly dependent upon the location of the particle. In ion thrusters, the
+magnetic field effects dominate the electric field effects for most of the electron motion due to the electron’s very
+high velocity, with the electric field effects only dominating when very close to the screen grid. Using a very
+advanced model and an implicit particle-pushing algorithm, a projected path for a single ion was formulated by Dr.
+Wirz in this thesis research [1]. The electron motion, shown in the following figure, describes some very interesting
+effects and generalities of plasma formation within the chamber.
+The electron is created from the cathode at the left and initially travels to the right. Slight perturbances in the
+electron emission will vary the initial exit path slightly. As the electron travels to the far end of the ionization
+chamber, the electron will interact with the screen grid and bounce back into the chamber. The screen grid is
+charged to a higher potential than that of the cathode, more negative with respect to the plasma. This means that all
+the electrons that want to travel out of the thruster are reflected back into the chamber by the screen grid
+As the electron moves back towards the cathode side of the chamber, it will follow the magnetic field lines to
+the center of the magnetic ring at the base. As the electron moves into a region of stronger magnetic fields, the
+magnetic flux must remain constant. The particle will accelerate its orbital motion while the linear motion decreases,
+ultimately reversing its linear motion. This effect is known as magnetic mirroring and is visually apparent in the
+regions of Figure 2 where the electrons path is narrowed and travelling towards the magnetic cusps. This
+phenomenon is very important and the effect can be simplified and was displayed in equation 2; the high magnetic
+field strength attenuated the rate at which electrons will impact with the anode wall. The electron continues
+bouncing along through the chamber, reflecting away from the surfaces due to magnetic or electric effects, until it
+runs out of energy, ideally due to impacts with fuel particles, and succumbing to the attractive force to the anode
+walls and being absorbed. The electron will be absorbed in a region where the magnetic cusp exists as the attractive
+electric effect overcomes the magnetic mirroring effect.
+Because of the relative masses within the ionization chamber, the electrons move significantly faster than the
+neutral particles and the ions. For much of the analysis, it can be stated that the neutrals are not moving relative to
+the electrons and ionization occurs due to the electron motion.
+
+7
+American Institute of Aeronautics and Astronautics
+
+Figure 3: Single electron motion within the ionization chamber. The electron is always contained
+within the ionization chamber. Important areas to pay attention to are the regions near the magnetic
+cusps. [1]
+With an understanding of the process and some of the requirements for ionization of fuel particles within the
+discharge chamber, it is necessary to analyze the motion of the ions. All charged particles follow the Lorentz force,
+equation 8, but there are other forces that influence ion motion that are not important to electron motion. As
+mentioned before, the ion velocity is very slow by comparison to the electrons, thus the magnetic force from the
+Lorentz equation is not as significant. The static fields from the screen and accelerator grids pull the ions to the grids
+and out of the chamber. In addition to the Lorentz force, the ions experience forces due to the pressure gradient of
+the fuel particles and the plasma pressure due to collisions within the plasma. The equation describing the ion
+motion in the plasma becomes [2]
+(9)
+where is the ion mass,
+is the ion density,
+is the pressure gradient from the fuel input,
+is the collision
+frequency between evections and ions within the plasma,
+is the average thermal velocity of the electrons, and
+is the average thermal velocity of the ions. The first term on the right of the equation is the standard Lorentz force,
+the second term is considered the pressure gradient term, and the third term is the plasma pressure term and is
+governed by collisions within the plasma. The ions move slowly by comparison to the electrons, so the value of
+within the Lorentz force term becomes small. The pressure gradient from the fuel inlet is also negligible as
+the fuel being injected is very small and is it a near constant pressure within the discharge chamber. Equation 9 then
+becomes dominated by the plasma pressure term. The collision frequency and the velocities are directly related to
+the temperature/energy of the electrons and ions, which are based upon energy of the electrons emitted from the
+cathode and the resultant collisions with the ions [2]. However, the plasma pressure term needs to consider the
+summation of all collisions to determine ion motion as a whole. When considering impacts on all sides from random
+electron motion, the plasma pressure term will net to zero and cancel.
+The end result of the ion motion is much simpler than the electron motion and can be described qualitatively
+very simply. The electric field gradient from the cathode and the grid will make the positively charged ions travel
+towards the grid side of the thruster. The positively charged anode walls will compress the positively charged ions
+and group them towards the center axis of the thruster where the internal repulsive force from the ion density will
+stabilize the compression. Lastly, as alluded to by the previous image and described above, the electron collisions
+with the ions occur in a very random manner. This means that the directional vector sum of this term can be
+
+8
+American Institute of Aeronautics and Astronautics
+
+cancelled out for a first order analysis. The resultant ion motion can be described as an ionized cloud localized along
+the central axis moving slowly towards the grids, described by
+(10)
+There is a simplified quantities value that can be used as a first order estimation of the single particle motion
+within the plasma called the Larmor radius. The Larmor radius is generally used to represent the radius of circular
+motion of a charged particle moving in a uniform magnetic field. In this model, the Larmor radius can be used to
+estimate the characteristic length of the thruster to sufficiently trap the electrons while having the ions independent
+of the trapping effects of the magnetic field. Constraining the Larmor radius of the electrons to a less than the
+characteristic length of the thruster will mean the electrons will oscillate within the thruster. With the Larmor radius
+of the ions greater than the characteristic length of the thruster and the magnetic fields within, the ions are relatively
+unconstrained by the magnetic fields in their motion and will move based upon the equations formulated above. The
+Larmor radius for the electron can be calculated by [2]
+
+(11)
+
+Similarly, the Larmor radius of the ions can be calculated by [2]
+
+(12)
+
+D. Efficiency and Thrust
+With an understanding of how the ionization of the propellant occurs and the resultant ionized propellant
+motion, the last step is acceleration the charged particles and producing thrust. The ionized cloud reaches the screen
+grid, passes through the screen grid and is accelerated towards the acceleration grid.
+Once the positively charged ions reach the grids, the ions will be accelerated across a relatively high potential
+difference once they pass the screen grid. The difference can be on the order of 1.5 kV across the span of a few
+millimeters. In the NSTAR thruster, the grids accelerate the ions at a rate of 8.7x10 11 m/s2, reaching speeds of about
+35,000 m/s when passing the acceleration grid. That high propellant acceleration is what accelerates the spacecraft
+in the opposite direction, providing thrust to the spacecraft.
+There are very complicated fluid dynamics that are associated with this flow of the ions through the grids. Ion
+optics describes the area within plasma discharge models that deal with how the individual ions travel through the
+apertures of the grid and is at the core of Wirz’s PhD thesis [1]. Simplifying assumptions within the current model
+ignore the losses due to ions impacting the acceleration grid and assumes all ions that pass through the screen grid
+accelerate the spacecraft. With these assumptions, the thrust, , can be calculated as [2]
+(13)
+where is the beam current,
+is the beam potential, and is the half angle divergence of the beam exiting the
+thruster. This divergence value arises partially from ion optics and from a non uniform electric and magnetic field
+across the grids and is assumed to be zero for this analysis.
+A very important measure of efficiency of the thruster is the mass utilization of the propellant. During
+operation, if there is unionized fuel that escapes the thruster, that fuel is wasted and the performance of the thruster
+is lessened. Mass efficiency is calculated as [2]
+(14)
+where
+
+is the mass flow rate of the propellant into the thruster.
+
+9
+American Institute of Aeronautics and Astronautics
+
+The last measure of efficiency for this analysis is specific impulse, Isp, and can be calculated in two ways given
+by [2]
+
+(15)
+
+III. Model
+One of the goals of this research was to create a comprehensive magnetic and electric model from the existing
+design created by Wirz and Knapp. I was able to use the technical drawings, diagrams, and knowledge of the system
+to create a complete magnetic and electric model using FEMM. FEMM is an open source analysis tool that performs
+finite element analysis on permanent magnets, electromagnets, electrostatics, and electrodynamics systems [4]. It
+was created by Dr. David Meeker and provides an accurate model of magnetostatic and electrostatic field
+interactions for use in this research. The model was built by creating a .dxf file of the structure of the ion thruster
+and the location of the electrical and magnetic components. A .dxf file is a simplistic way to represent structures
+using points and curves and is used as a method of data transfer between solid modeling programs. The file in this
+case represents the physical structure of the thruster, including the ionization chamber, the cathode, screen and
+acceleration grids, the permanent magnets, and all the other components of the ion thruster important to this
+analysis.
+Once the physical system is described in FEMM, the material and magnetic characteristics needed to be
+specified. The structure is then assigned the material or material properties of the anode, cathode, grids, etc. The
+magnets and polarity direction are specified and assigned to their representative blocks in the model. A full
+representation of the axisymmetric model is shown in the figure below. The labels and colors are to provide a
+representation between the materials that make up the thruster. The anode wall and the main structure of the ion
+thruster is made of non conductive stainless steel, represented by the light blue regions. The magnets, shown in dark
+grey, are attached to the structure via ferrous steel, shown in green. A machinable ceramic MACOR, shown in
+purple, is used to attach and insulate the charged anode with the charged grids, shown in red, and to separate the
+cathode assembly from the rest of the thruster. The rest of the white space is empty space; the arc around the edge
+represents the asymptotic boundary of the analyzed space. The left edge is the centerline of the thruster about which
+this axisymmetric model is built.
+The permanent magnets used in the thruster model are those chosen in Knapp’s thesis [3]. They are Samarium
+Cobalt grade 27 magnets and were chosen since they provide the desired magnetic field strength while having a high
+resistivity to degradation from high heat sources, namely the plasma within the discharge chamber and the heat from
+the cathode assembly. The bottom magnet ring is aligned where the north pole is facing upwards, into the discharge
+chamber. The middle ring has the north pole facing away from the center, and the top ring has the north pole pointed
+inwards. The location and direction of the magnets were designed to create an even magnetic field distribution
+within the chamber while having a high enough magnetic field strength at the surface of the magnetic cusp. These
+are characteristics desirable for the performance and stability of the thruster. The one electromagnetic source in this
+model is the heater which consists of a coiled wire around the tungsten cathode. Knowing the material and the
+amperage of the heater, it is possible to model the heater as a low power electromagnet at the base of the thruster.
+As with this magnetic model, an electrostatic model was build based on the same design geometry. In the
+electrostatic model, the program is able to assign the blocks and boundaries potential values that would be generated
+from the power supplies. With this, it is possible to set the potential of the screen and acceleration grids, the anode,
+and the cathode and analyze the electrostatics of the ion thruster.
+
+10
+American Institute of Aeronautics and Astronautics
+
+Figure 4: FEMM model of the thruster structure colorized and annotated. Also shown are the placement
+and orientation of the permanent magnets.
+
+IV. Results and Verification
+After creating the model, FEMM will create a mesh within the geometry and solve the magnetostatic or
+electrostatic case for the entire thruster, inside and outside the discharge chamber. This provides the information
+necessary to analyze the ionization process and thruster parameters within the discharge chamber and also magnetic
+and electric effects outside the chamber. Many other models will not consider the attenuation and alterations that
+
+11
+American Institute of Aeronautics and Astronautics
+
+arise when including ferrous metals other than the magnets, some of which can have a serious impact on overall
+thruster performance.
+A. Magnetostatic Solution
+The magnetostatic solution as solved and displayed by FEMM is shown in the figure below. It is very apparent
+the location of the permanent magnets and the ferrous metals serving as the magnet mounting surfaces. The color
+within the thruster and walls represent the magnetic field strength while the lines represent the magnetic flux lines.
+
+Figure 5: Using the FEMM solver to display the magnetic field within the entire
+thruster.
+It is very interesting to see how the shape and concentration of the magnetic field changes within the ferrous
+brackets holding the permanent magnets. The field is guided through the higher relative permeability and
+conductivity metals than it is in air. This results in the concentration of the magnetic fields within the ferrous
+brackets, ultimately altering the field within the discharge chamber.
+In order to analyze the magnetic field effects on the plasma in the discharge chamber, it was necessary to export
+the magnetostatic results out of FEMM and into MatLab. FEMM has native support with LUA scripting, allowing
+for transference of data between FEMM and MatLab in this manner.
+The following figure is the magnetic strength of just the discharge chamber. As with the FEMM model, this
+figure represents the axisymmetric magnetic field within the thruster with the left edge being the centerline of the
+
+12
+American Institute of Aeronautics and Astronautics
+
+thruster, the right edge as the anode wall, and the top edge as the screen grid. The dimensions on the axes are in
+millimeters.
+
+Figure 6: The magnetic strength within the discharge chamber from all magnetic
+sources.
+It is apparent from this image that the high magnetic field strengths lie near the permanent magnets along the
+walls and base. These high strength regions are right at the magnetic cusps and are necessary in determining the
+primary electron loss area and probability of electron collision. The following graph is a plot of the magnetic field
+strength as a function of distance along the right edge, the anode wall. This shows how the magnetic field changes
+and clearly shows the spikes in strength right at the magnetic cusps. The non uniformity at the peaks is because of
+the ferrous brackets changing the way the magnetic field extends into the discharge chamber. The maximum
+magnetic field strength along the anode wall is 0.4043 Telsa (4043 Gauss).
+
+13
+American Institute of Aeronautics and Astronautics
+
+Figure 7: Magnetic field strength in Tesla along the right edge of the
+discharge chamber, the anode wall
+The following figure is the magnetic field strength along the bottom edge of the discharge chamber. It is
+apparent from the image that the very low magnetic strength in the center of the thruster, the region occupied by the
+cathode assembly and far away from the permanent magnets. It is desirable to have a low magnetic field strength at
+the cathode assembly to ensure uniform electron emission and to not affect electron motion within the cathode. The
+maximum magnetic field strength along the bottom edge wall is 0.2006 Telsa (2006 Gauss).
+
+Figure 8: Magnetic field strength in Tesla along the bottom edge of the discharge
+chamber, along the anode base and intersecting the cathode assembly
+
+14
+American Institute of Aeronautics and Astronautics
+
+The following figure is the magnetic field strength along the center of the discharge chamber, the centerline axis
+of the axisymmetric problem. The magnetic field strength is much smaller in comparison to the other two edges,
+being on the order of 0.01 Tesla (100 Gauss). As mentioned before, the important design consideration concerning
+the centerline magnetic field is to maintain a low and uniform magnetic field within the cathode. The non uniformity
+present can cause oscillations of the electrons within the cathode, leading to lower electron emission and decreased
+cathode life.
+
+Figure 9: Magnetic field strength in Tesla along the centerline of the discharge
+chamber
+The results of this model are very similar to that of the model used in Knapp’s thesis in terms of magnetic
+strength and field structure [3]. The maximum magnetic strength calculated at the wall in Knapp’s model was 3800
+Gauss, slightly lower than this models value of 4043 Gauss, an error of 6.39%. One possible reason for this is the
+fact that his model did not account for the alterations to the magnetic field due to the ferrous metal brackets holding
+the magnets in place. The shape of the centerline magnetic field strength is relatively consistent with Knapp’s model
+but the magnitudes are slightly different. The maximum strength along the centerline of this model was about 175
+Gauss compared to the maximum strength of about 150 Gauss in Knapp’s model, an error of 16.67%. Again, this
+small difference may be attributed to the consideration of the ferrous metal bracket.
+B. Electrostatic Solution
+The electrostatic solution of the thruster as solved by FEMM is displayed in the following figure. It is easy to
+see the high relative potential of the screen and acceleration grids as opposed to the anode wall or the cathode. The
+potentials and currents of the grids, anode, and cathode are chosen to be values that were used when testing the
+thruster. These values allow for a good comparison to Knapp’s operational parameters and will be used to verify the
+model in the next section [3].
+
+15
+American Institute of Aeronautics and Astronautics
+
+Figure 10: Electrostatic solution of the ion thruster as calculated by FEMM.
+
+It is apparent from the image how the shape of the electric potential is dominated by the screen potential and
+altered by the anode wall, curving off of the screen grid as though it were a plate capacitor while being pushed back
+by the potential of the anode wall. Similar with the magnetostatic solution it was important to export the potentials
+and electric fields out of FEMM and into MatLab for further analysis. The figures of the fields in MatLab are not
+displayed because they do not convey any more information than the FEMM output does in this case.
+C. Performance Characteristics
+With the magnetic field strength and direction known and the geometry of the thruster established, it is possible
+to now calculate some of the performance metrics described in previous sections. Namely, the probability of
+collision of primary electrons, the theoretical thrust, the percent mass utilization, and the specific impulse are the
+four properties analyzed within this research. Also calculated will be the Larmor radius of the electrons and ions to
+ensure they are less than and greater than the characteristic length of the thruster, respectively.
+The probability of electron collision is very important to consider for complete ionization of the fuel. Using the
+equations shown in section II and the magnetic and electric field outputs from FEMM, the probability of electron
+collision can be calculated. The magnetic and electric field values were determined at the magnetic cusps and the
+characteristic lengths of the cusps were determined. The electron velocity at the cusps can be calculated by the
+equation [2]
+16
+American Institute of Aeronautics and Astronautics
+
+(16)
+With the electron velocity and magnetic field at the cusps, the electron impact area
+can be calculated and
+inserted into the equation to calculate probability. The assumption of a neutral density value of 10 18 m-3 was used as
+this is a value within the neutral density range of thrusters of this size [2]. To actually calculate this value is often
+very complex and does vary within the discharge chamber. For the 0-dimensional assumption of this model, this
+neutral density value is sufficient. Considering the three magnetic cusps independently and summing their effects,
+the probability of primary electron collision for this configuration was determined to be 37.12%. Considering the
+equations, it is apparent that this value is highly dependent upon the magnetic field strength at the cusps. The
+magnetic and electric field strengths affect the electron velocity, with an increase in magnetic field strength
+increasing the electron velocity. Coupled with the direct attenuation to the impact area, increasing the magnetic field
+has a positive effect on the primary electron collision rate. The calculated value of collision probability has a 28.55% error to the calculated value of 52% in Knapp’s model [3]. As this value is highly dependent upon the
+strength at the magnetic field at the cusps both through the attenuation of the apparent cusp area and the electron
+velocity, the differences could possibly be attributed to the difference in magnetic field strengths between these two
+models.
+The second performance characteristic is that of mass utilization. This value is a function of beam current and
+mass flow rate of the propellant. The beam current is a non trivial value to calculate and is often measured through
+the use of a probe within the plasma, but can be estimated as 1/10 of the discharge current in larger ion thrusters [2].
+For smaller ion thrusters, the beam current becomes a smaller fraction of the discharge current. To ensure results
+along the lines of Knapp’s work, the discharge current is estimated at 1/20 that of the discharge current [3]. A
+contour plot of the percent mass utilization is shown in the figure below.
+
+Figure 11: Percent mass utilization as a function of beam current and propellant mass flow rate
+
+It is apparent from this figure that an increase in percent mass utilization can be achieved be increasing the
+beam current or decreasing the propellant mass flow rate. The mark on the graph represents a propellant mass flow
+rate of 0.55 sccm and a beam current of 0.025 A .These values are representative of one of the test cases of the
+17
+American Institute of Aeronautics and Astronautics
+
+thruster performed by Knapp. The percent mass utilization at this test point was 62.92%. This value has a 109.74%
+error to the experimental value of 30% calculated by Knapp for the test case. This value’s dependent upon the beam
+current means the error within this analysis may be from the assumptions necessary to make this calculation. With a
+more refined calculation of the beam current, a more accurate and consistent value for mass utilization can be found.
+The next parameter to analyze and measure of efficiency is the specific impulse, Isp, of the thruster. The Isp is
+directly related to the mass efficiency of the thruster and the beam voltage. Neglecting ion optics losses in the
+thruster, the beam voltage can be estimated by taking the difference in potentials between the screen and
+acceleration grids. The following figure represents the theoretical Isp value for varying beam potentials and varying
+mass utilizations.
+
+Figure 12: Theoretical Isp as a function of beam potential and percent mass utilization
+
+As can be seen from the figure, an increase in beam potential or an increase in percent mass utilization will
+increase the Isp of the thruster. For the previously calculated and the beam voltage of the same test case of 700 V,
+the theoretical Isp was calculated to be 2057.41 s. This value has a 37.16% error to the experimental value of 1500 s
+estimated in the test case. As the Isp is directly related to the percent mass utilization, previously stated errors in this
+number may be responsible for this difference.
+Another performance metric calculated was thrust generated. As shown in section II, thrust is a function of
+beam current and beam potential. To calculate this value, the same assumptions for the beam current and potential
+were applied. The following figure represents the thrust of the micro ion thruster for varying beam potentials and
+currents.
+As can be seen in the figure, increasing either the beam potential or current will increase the thrust of this micro
+ion thruster but at the cost of more power. For this test point that has been analyzed, the thrust was calculated to be
+1.09 mN. This value has a -9.07% error to the experimental value of 1.2 mN determined in the test case. As the
+thrust is directly related to the beam current, assumptions in the calculation of this number may be responsible for
+this difference.
+
+18
+American Institute of Aeronautics and Astronautics
+
+Figure 13: Thrust as a function of beam potential and beam current
+
+D. Verification
+Two other values were calculated to verify the operation and stable performance of the thruster, the electron and
+ion Larmor radius. The equation to calculate these values are shown in section II. The design requires that the
+Larmor radius of the electrons be less than the characteristic length of the thruster while the Larmor radius of the
+ions must be larger than the characteristic length of the thruster. The electron Larmor radius was calculated to be
+5.24 mm, which is less than the 35.5 mm characteristic length of the thruster. The ion Larmor radius was calculated
+to be 126.19 mm, which is greater than the 35.5 mm characteristic length of the thruster. These values are a simple
+method to verify the 0-dimensoinal assumptions that are made about the plasma.
+
+V. Conclusion
+The Cal Poly MiXI v3 is part of the first generation of micro ion thrusters designed to fill the 0.01-10 mN range
+of electric propulsion systems. This technology is relatively undeveloped compared to other larger ion thrusters,
+therefore the design and configuration of these thrusters is not well established or well refined. The goal of this
+project was to design a set of tools that can be used to better and optimize thrusters in this class. With the design of a
+thruster, the E&M structure can be modeled and analyzed and the performance characteristics of the thruster
+determined.
+The model and analysis tools created from this research are imperfect and still under development but do
+calculate reasonable performance and operational values this thruster. There are refinements that need to be made to
+accurately calculate thruster performance values and operational parameters. There were numerous assumptions that
+were made where the implications of said assumptions should be explored, ultimately removing some assumptions
+entirely to create a better and more accurate model. With a higher understanding of plasma physics and
+magnetohydrodynamics, more accurate plasma calculations can be created and used.
+With this and a further set of calculations of performance and plasma parameters, changes to the existing
+architecture can be made and the resulting operation analyzed. Ideally, with a full understanding of every aspect of
+the operation of the thruster, an optimization routine can be created to determine the optimal design of the E&M
+fields of the thruster, the fuel input, the physical structure, etc. for a desired performance. The goal of these
+19
+American Institute of Aeronautics and Astronautics
+
+alterations would be to increase primary electron collision rates and percent utilization, increasing the Isp and thrust,
+and reducing power consumption overall to make a more efficient and optimized flight ready micro ion thruster.
+
+VI. Future Work
+There are several areas of this project that require future work. Gaining a further understanding of the plasma
+physics and the ion motion of the plasma will allow for more precise and accurate calculations of performance
+parameters. Currently there are assumptions that limit the precision of the analysis that should be addressed. A more
+complete understanding of the plasma physics will allow for better calculations of the plasma density and
+temperature, the ion beam current and potential, and the ion optics associated with the plasma beam passing through
+the screen and acceleration grids.
+Important to future work on this project is the understanding of the thermal effects of the plasma on the
+permanent magnets. With the high heat required to discharge ions from the cathode and the internal heat of the
+plasma, the anode will heat up to significant temperatures and can potentially demagnetize the permanent magnets,
+rendering the thruster non operational. Changes to materials or the physical design of the structure may assist in the
+dissipation of heat, but these changes need to consider the effect on the operation and performance of the thruster.
+Another potential area of future work is the construction of a test apparatus that allows for easy but precise
+changes to the thruster in terms of the magnetic structure. Such a device would allow for actual testing of computer
+modeled and simulated scenarios.
+
+20
+American Institute of Aeronautics and Astronautics
+
+VII. References
+[1] Wirz, Richard E; “Discharge Plasma Processes of Ring-Cusp Ion Thrusters” California Institute of Technology,
+Pasadena, California, 2005
+[2] Goebel, Dan M.; Katz, Ira; “Fundamentals of Electric Propulsion” John Wiley & Sons, Hoboken, New Jersey,
+2008
+[3] Knapp, David W; “Development, Design, and Test of a Miniature Xenon Ion Thruster (MiXI)” Master’s Thesis;
+California State University San Luis Obispo, San Luis Obispo, California, 2012
+[4] D. Meeker, "Finite Element Method Magnetics: Version 4.2 User's Manual," 16 October 2010. [Online].
+<http://www.femm.info/Archives/doc/manual42.pdf>
+[5] R. D. Knight, Physics for Scientists and Engineers, San Francisco, CA: Pearson Education, Inc., 2004.
+[6] Ion Propulsion System Hot Fire Test for Deep Space 1, NASA/JPL.
+<http://dawn.jpl.nasa.gov/mission/ion_prop.asp>
+[7] Ion Propulsion, Glenn Research Center. <http://www.nasa.gov/centers/glenn/technology/Ion_Propulsion1.html>
+[8] Ion Thruster, Wikipedia. < http://en.wikipedia.org/wiki/Ion_thruster>
+
+21
+American Institute of Aeronautics and Astronautics
+
+

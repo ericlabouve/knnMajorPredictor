@@ -1,0 +1,697 @@
+Getting LA to Net Positive Competition for Innovation in Design
+Senior Project Report
+By: Alexander Lohr
+
+Introduction
+For my senior project I participated in the Getting LA to Net Positive Competition for Innovation in
+Design competition which is part of the living building challenge. The Living Building Challenge™ is a
+building certification program, advocacy tool and philosophy that define advanced measure of
+sustainability in the building environment1. The Challenge is comprised of seven performance categories
+called Petals: Place, Water, Energy, Health & Happiness, Materials, Equity and Beauty. Petals are
+subdivided into a total of twenty Imperatives, each of which focuses on a specific sphere of influence2.
+The competition is run by the Living Building Challenge Collaborative: Los Angeles.
+For the competition the class ARCH 351 has decided to do a redesign of the Olympic Village. Los Angeles
+will host the summer games in 2024 and already have a plan for their Olympic Village; the ARCH 351
+class hopes to accomplish an Olympic Village design that will better fit LA for the future as opposed to
+the current design which they feel only reflects the whims of the moment. I partnered with an
+architectural student named Sergio Sanchez and acted as his structural advisor for the project. For this
+project I researched green roof systems, offered structural input on the design of the structure, and
+created structural drawings with the structural calculations to support them.
+Goals
+I worked closely with Sergio Sanchez, an architecture student, to help him design a structurally sound
+building for the competition. My input was given to help shape his design and I designed the structural
+system around his evolving design. The project was submitted as a poster3 that uses visuals to describe
+how the project achieves the living Building Challenge guidelines for the competition.
+My partner and I designed an alternative Olympic Village transportation center for the summer games
+of 2024 that will be hosted in Los Angeles. The rest of the Olympic Village will be designed by the other
+architects in Sergio’s class but while the remainder of the class designed the residential, amphitheater,
+and recreation center I am designing the transit center with Sergio because of the unique structural
+challenges that his design creates by having a slanted green roof incorporated into the design.
+The rules for the project were that the building had to be between 30,000 and 50,000 SF (our building is
+43,800 SF), the project must meet the needs of the Olympic Village in the short term and the needs of
+the city Los Angeles in the long-term, and the project must align with the students master plan that the
+entire class came up with to address the living Building Challenge. This master plan includes solar panels
+for the roofs, a sloped site to collect water during storms [Figure 1], use of sustainable materials, and
+encouraging walkability through numerous walkways while limiting cars. The transit center building I
+worked on houses the standard ticket booth, restrooms, and info booth you would expect in the main
+transportation hub of the Olympic Village as well as a bike shop and Olympic exhibits to better fit the
+needs of the Olympic village and the master plan. The bike shop and the exhibits will benefit the
+Olympic Village in the short run and the community in the long run by helping to promote walkability (or
+bikeability in this case) during and after the Olympic games and the exhibits can function as art gallery’s
+after the games.
+
+1
+
+Appendix A: 2015 LBC LA Competition Guidelines
+Appendix B: Master Plan
+3
+Appendix C: Final board
+2
+
+Figure 1: water collecting system for the village from Appendix B: Master Plan
+
+Methodology
+While Sergio designed the floor plan I helped him with structural input on his designs and researched
+green roofs to find a type that would work for the structure. For the design calculations4 the focus was
+for the elements of the structure that would affect the visual design of the building. The prime concerns
+were the gravity and the seismic loads because this defined the beams, girders, columns and lateral
+system of the building and how it will look.
+Once I was given the floor plan I started with the load take off for the roof. For this we needed to decide
+on the material that the structure will be made out of and the type of green roof that will be used. After
+researching different types of green roof systems I presented the architect of the Optigreen system type
+“Pitcher Roof type P” [Figure 2]. The picture roof type P was chosen because it was a green roof system
+that does not come with a gravel strip and one that can support a slope. Because the roof already
+slopes into a collection point for collecting rainwater, as per the master plan, a gravel strip is not needed
+and because the roof is angled the green roof system needs to be able to support a slope.
+Next the material that the structure is going to be made out of needed to be agreed upon. Timber
+would have been ideal as we wanted the building to represent sustainable practices, to follow the
+master plan, but the loads that a green roof imposes upon the structure made timber unrealistic so steel
+was chosen because it is an efficient building material that would allow all the structural members to
+remain relatively small.
+
+4
+
+Appendix D: Design Calculations
+
+Figure 2: The chosen green roof detail
+
+The shape of the structure kept evolving over the entire course of the project from a simple box design
+to a more complicated angled design. The structure started off as a simple box design with a slanted
+roof [Figure 3] and over the course of its development was stretched out and in the west wall was
+angled [Figure 4] which meant I had to constantly update the beam design as the project evolved. This in
+turn made it difficult to design. To compensate for this I used spreadsheets to quickly update the design
+of the structural system to keep up with the architects changes. This allowed me to give quick feedback
+on the architect’s changes and quickly identify problems I need to solve. A couple of important issues
+that came up that I was able to solve this way were column placement and complications to the northsouth lateral system.
+
+Figure 3:
+
+Figure 4:
+
+Because the structure is partially buried underground the east west level system can be easily supported
+through hidden shear walls. The north-south system is more complicated because the architect wanted
+the west facing exterior wall to be made of glass with minimal supports. Because the architect wanted a
+glass exterior a compromise had to be made for the lateral system. Shear walls were out for the obvious
+reason that you can’t see through one and I reasoned that moment frames would not work because the
+columns and beams of the moment frame would prevent exterior from looking uniform which was
+important to the architect, this left brace frames which worked for Sergio [Figure 5].
+
+Figure 5: brace frames for the west facing glass wall
+
+Conclusion
+The unique opportunity I had with this project was that because I came on the project while the
+architect was still in the early stages of the project’s design I was able to directly influence said design.
+Instead of having a design handed to me, which I had to fit a structural system to, the architect and I
+worked together to come up with a design that took into consideration the structural systems that held
+it together. Of course neither of us got everything that we wanted but because we were always aware
+of each other’s needs we knew which sacrifices need to be made for the betterment of the project as a
+whole.
+The importance of communication between architect and engineer is of major importance. Sergio and I
+would meet at least once a week in person and throughout the week with text messages to make sure
+we’re both on task. We were also connected to the file sharing program Drop Box which was our
+primary method of transferring files back and forth between each other. This allowed us to always be
+up to date with what each other were doing. What the architect trying to accomplish and what the
+engineer’s needs are has to be understood by both the architect and engineer. Both of our needs are
+reflected on each other’s design, which is especially evident in how I laid out the columns affected
+Sergio’s room placement and how Sergio’s room placement affected how I was able to place the
+columns. How the architect design affects the structural system and vice versa, if not understood by
+both parties, could lead to misunderstandings and conflict. Therefore the ability to be flexible and adapt
+
+to changing needs of the architect is the most important skill I learned during this collaboration. The use
+of spreadsheets to quickly update design of structural systems to keep up with architect’s changes
+allowed me to give quick feedback on his design changes.
+
+Appendix
+
+Appendix A: 2015 LBC LA Competition Guidelines
+Appendix B: Master Plan
+Appendix C: Final board
+Appendix D: Design Calculations
+Appendix E: Senior Project Presentation
+
+Getting LA to Net Positive
+Competition for Innovation in Design
+
+“A Visionary Path to a Regenerative Future”
+“The Living Building Challenge . . . defines the most advanced measure of
+sustainability in the built environment possible today and acts to rapidly diminish
+the gap between current limits and the end-game positive solution we seek.”
+“Imagine a building designed and constructed to function as elegantly and
+efficiently as a flower: a building informed by its bioregion’s characteristics, and
+that generates all of its own energy with renewable resources, captures and
+treats all of its water, and operates efficiently and for maximum beauty.”
+Competition Guidelines
+Using one of the provided innovation categories, students are invited to develop a
+presentation poster using compelling visualizations to describe how their projects can
+achieve and transcend the Living Building Challenge.
+The poster should include graphics, text and explanatory information such that the
+topic is self-evident without the student’s verbal assistance. The poster title, along with
+the category, students’ names, degree program, and advisor/professor name should
+appear on the upper section of the board. A text description of the project no longer
+than 300 words should also be included on the poster.
+Registration Closes:
+
+October 16, 2015
+
+Poster Submissions Due:
+
+December 21, 2015
+
+Presentation & Awards:
+
+January 11, 2016
+
+Instructions for Submitting Posters:
+1. All materials should be submitted via email to: lbclacollaborative@gmail.com
+2. Posters should be 30” x 40” in a portrait orientation submitted as a PDF file less
+than 10mb
+3. You should receive a confirmation email following your submittal
+4. You cannot edit your submission once submitted
+
+2015 LBC-LA Student Competition
+
+Accepted Posters:
+Authors of accepted posters will be notified by 20 December 2015. Finalist shall be
+responsible for printing, mounting, and transporting their 30” x 40” posters on vertically
+formatted foam core to the final presentation. Teams will have the opportunity to
+present their poster and answer questions from a distinguished panel of jurors on 11
+January 2016 at Gensler Los Angeles, 500 S. Figueroa St. Los Angeles, CA 90071 from
+6pm to 8pm.
+
+Eligibility
+Contestants must be enrolled at a college or university and be able to attend the final
+presentations in Downtown Los Angeles on 11 January 2016. The competition is not
+limited to architecture but studies in agriculture, business administration, real estate
+development, urban planning, building science, material science, engineering, product
+design, public policy, historic preservation, environmental studies and more. Integrated
+teams are encouraged. Teams must be at least two (2) and no more than five (5)
+students and one (1) advisor / professor.
+
+Living Building Challenge – Los Angeles Collaborative
+
+Page 2 of 5
+
+2015 LBC-LA Student Competition
+
+Design Innovation
+Submissions must meet the requirements of all seven (7) Petals and applicable Imperatives
+outlined in the Living Building Challenge version 3.0 to create an architectural proposition within
+one mile of a Los Angeles Metro Rail Line. The Metro Line must be existing or currently under
+construction. Use a holistic and innovative approach to net-positive design that explores a
+paradigm shift within one of the typologies listed below.
+
+Teams must identify one typology that aligns with the project to determine which Imperatives
+apply:
+
+Renovation: This typology is for any project that does not form the substantial portion of a
+complete building reconstruction. Sample projects include single-floor tenant improvements,
+residential kitchen remodels or historic rehabilitations of a portion of a building.
+
+Landscape or Infrastructure (non-conditioned development): This typology is for any project
+that does not include a physical structure as part of its primary program, although open-air
+‘park-like’ structures, restrooms, amphitheaters and the like do fall into this category. Projects
+may be as diverse as roads, bridges, plazas, sports facilities or trails.
+
+Building: This typology is for any project that encompasses the construction of a roofed and
+walled structure created for permanent use – either new or existing.
+
+Neighborhood: This typology is for any project that contains multiple buildings in a continuous
+campus, neighborhood, district or village. Sample projects include university, college or
+corporate campuses; residential streets; business or industrial districts; or small villages and towns.
+Every project must select a Living Transect category from the following options:
+
+L4. General Urban Zone: This is comprised of light- to medium-density mixed-use development
+found in larger villages, small towns or at the edge of larger cities. (FAR of 0.5 – 1.49)
+
+L5. Urban Center Zone: This is comprised of a medium- to high-density mixed-use development
+found in small to mid-sized cities or in the first ‘ring’ of a larger city. (FAR of 1.5 – 2.99)
+
+L6. Urban Core Zone: This is comprised of high-to very high-density mixed use development
+found in large cities and metropolises. (FAR. ≥ 3.0)
+
+Other requirements include:
+•
+•
+•
+•
+•
+•
+
+Mandatory public transit tie-in.
+Link neighborhoods together using new or existing transportation systems (address
+car problem).
+Link economic centers and create a destination for future economic growth.
+Perform a climate and place analysis, site specific.
+Address natural resource availability in Southern California.
+Project must be within 1 mile of a new or currently under construction Los Angeles
+Metro Rail Line.
+
+Living Building Challenge – Los Angeles Collaborative
+
+Page 3 of 5
+
+2015 LBC-LA Student Competition
+
+Living Building Challenge – Los Angeles Collaborative
+
+Page 4 of 5
+
+2015 LBC-LA Student Competition
+
+Prizes
+1st: $2,500
+2nd: $1,000
+3rd: $500
+4th: $500
+5th: $500
+
+Jury
+The Innovation Awards are judged by an esteemed panel of key professionals from top
+architectural, engineering, institutional, analytical backgrounds and select members of the
+collaborative team. The judges’ identities are held in confidence until the awards are presented
+to avoid any potential influence that may occur prior to the selection of the winners.
+
+Criteria:
+Innovative/Creative: 20%
+Adhering to LBC Imperatives: 30%
+Viability/Practicality of Concept: 30%
+Collaboration: 20%
+
+Registration:
+Register at: www.eventbrite.com/e/getting-la-to-net-positive-tickets-18636501277
+Then email the following to lbclacollaborative@gmail.com:
+•
+•
+•
+•
+•
+•
+•
+
+Full Institution Name
+Team Name
+Contact Information for All Team Members (name, email, & major/degree)
+Team Manager
+Academic Advisor (name & email)
+How did you hear about us?
+Payment Information ($25 Registration Fee)
+
+Competition & LBC Resources
+http://living-future.org/
+http://living-future.org/lbc
+http://living-future.org/cascadia
+
+Questions
+Contact Jeffrey Landreth at: jeffrey.landreth@gmail.com
+
+Living Building Challenge – Los Angeles Collaborative
+
+Page 5 of 5
+
+Olympic Village Transportation Center
+Sergio Sanchez | Advisor: Alexander Lohr | Arch 351 Stacey White | Fall 2015
+
+This hub serves as a point of origin to the site, welcoming both locals and
+tourists alike. Within this transportation center visitors will be introduced to a
+brief history of the Olympic Games as well as a history of Los Angeles, the
+host of the 2024 Olympics in their own respective exhibit wing of the project.
+The main lobby space will be an introduction to the site, the synthesis of both
+cultures and traditions being introduced with the rest of the master plan.
+
+Bike Shop
+
+Restaurant
+
+LA Exhibit
+
+Olympics
+Exhibit
+
+Ticket Booth
+
+Info Booth
+
+Bookstore
+Convenience
+Store
+
+Bathrooms
+
+Siteplan: Circulation + Program Placement
+
+Village Exhibit
+
+Transportation Center Siteplan
+
+Bike Culture
+Asian, Latino, African American Culture
+Local Interaction
+
+Los Angeles
+
+Los Angeles Olympic Village
+
+Olympics
+Tourism
+Revenue
+
+Public Transit
+
+International Cultures
+
+Project Application
+
+Program Layout
+
+Exhibit + Waiting Area
+
+Floor 1 - Waiting Area + Exhibit
+Scale: 1/32” = 1’-0”
+
+Floor 2 - Restaurant + Bike Shop
+Scale: 1/32” = 1’-0”
+
+Floor 3 - Extra Seating + Repair Shop
+Scale: 1/32” = 1’-0”
+
+Appendix D: Design Calculations
+Sample Calculations for all beams between lines “D” and “E” (See Roof Framing Plan)
+First determine the loads and dimensions associated with the beams in question.
+
+
+Dimensions
+Tributary width: 16.5 ft
+Length of beam: 53.3 ft (with the roof slope taken into account)
+
+
+
+Loads (Load takeoff located on Senior Project Calculations Spreadsheet)
+Dead Load: 40 PSF
+Live Load: 100 PSF
+-
+
+Live Load Reduction
+Because the roof is meant to be walked on, I am using the basic uniform live load reduction
+instead of the roof live load reduction (IBC 2012 1607.10.1)
+
+Lr = reduced live load
+L0 = 100 PSF
+KLL = 4 (IBC 2012 T 1607.10.1)
+AT = 879.23 (taking into account the slope of the roof)
+Therefore Lr = 50.3 PSF
+-
+
+Distributed load: Wu
+Distributed load determined using LRFD based on ASCE/SEI section 2.3
+Assume self weight of the beam is 100 PLF
+
+D = 40 PSF
+Lr = 50.3
+Trib. Width = 16.5 ft
+Self weight = 100 PLF
+Therefore Wu = 2220 PLF
+
+
+
+Free Body Diagram for the Beam
+
+Wu =2220 PLF
+
+L = 53.3’
+59.1K
+Shear
+59.1K
+787.9K’
+Moment
+
+
+
+Largest Shear: 59.1K
+Largest Moment: 787.9K’
+
+Need to find the moment of inertia the beam needs to meet
+- Allowable deflection (IBC 2012 T 1604.3)
+
+Try W30X124 (AISC 2011 T3-2)
+ӨMn = 1530 K’ > 788.17 K’
+ӨVn = 530 K > 59.2 K
+I = 5360 in4 > 5211.6 in4
+Use W30X124 for all beams between lines “D” and “E”
+
+Sample Calculations for all Girders on line “E” (See Roof Framing Plan)
+First determine the loads and dimensions associated with the Girders in question.
+
+
+Dimensions
+Tributary width: 51 ft
+Length of girder: 25 ft (with the roof slope taken into account)
+
+
+
+Loads (Load takeoff located on Senior Project Calculations Spreadsheet)
+Live Load: 100 PSF
+-
+
+Live Load Reduction
+Because the roof is meant to be walked on, I am using the basic uniform live load reduction
+instead of the roof live load reduction (IBC 2012 1607.10.1)
+
+Lr = reduced live load
+L0 = 100 PSF
+KLL = 4 (IBC 2012 T 1607.10.1)
+AT = 1499.9 (taking into account the slope of the roof)
+Therefore Lr = 44.4 PSF
+-
+
+Self weight: Wself (Assume 100 PLF)
+Point Load: P = 2 X 59.1 = 118.2K
+
+
+
+Free Body Diagram for the Girder
+P = 118.2 K
+Wself =100 PLF (assume)
+
+L = 33’
+60.1K
+Shear
+60.1K
+988.8K’
+Moment
+
+
+
+Largest Shear: 50.1K
+Largest Moment: 501.5K’
+
+Need to find the moment of inertia the beam needs to meet
+- Allowable deflection (IBC 2012 T 1604.3)
+
+Try W30X90 (AISC 2011 T3-2)
+ӨMn = 1060 K’ > 788.17 K’
+ӨVn = 374 K > 59.2 K
+I = 3610 in4 > 3254 in4
+Use W30X90 for all beams for line “E”
+
+Sample Calculations for all Columns between lines “D” and “F” (See Roof Framing Plan)
+First determine the loads and dimensions associated with the Columns in question.
+
+
+Dimensions
+Tributary Area: 990 SF
+Length of Column: 32 ft (with the roof slope taken into account)
+
+
+
+Loads (Load takeoff located on Senior Project Calculations Spreadsheet)
+Dead Load: 55.43 PSF
+Live Load: 100 PSF
+-
+
+Live Load Reduction
+Because the roof is meant to be walked on, I am using the basic uniform live load reduction
+instead of the roof live load reduction (IBC 2012 1607.10.1)
+
+Lr = reduced live load
+L0 = 100 PSF
+KLL = 4 (IBC 2012 T 1607.10.1)
+AT = 990 (taking into account the slope of the roof)
+Therefore Lr = 48.8 PSF
+-
+
+Self weight: Wself (Assume 1600 PLF)
+Point Load: Pu:
+
+Pu = 143.2 lb
+
+
+Free Body Diagram for the Column
+Pu
+
+L
+
+
+
+Try W10X49
+- Nominal compressive strength: Pn (AISC 2011 E3-1)
+Pn = Ф * FCR * Ag
+Ф = .9 (AISC 2011 T4-22)
+R = 2.88 (AISC 2011 TT1-1)
+Ag = 14.4 (AISC 2011 TT1-1)
+
+Pn = 182.8 > 143.2
+Use W10X49 for all Columns between lines “D” and “F”
+
+Sample Calculations for Brace Frame (See Roof Framing Plan)
+First find the soil information from the USGS summary report
+
+Seismic Base Shear (ASCE 12.8-1):
+
+CS = Seismic response coefficient (ASCE 12.8.1.1)
+W = Seismic weight (ASCE 12.7.2)
+Seismic response coefficient (ASCE 12.8.1.1):
+
+SDS = 1.675 (USGS summary report)
+SD1 = .877 (USGS summary report)
+R = 6 (ASCE T 12.14-1)
+Ie = 1 (ASCE 11.5.1)
+
+W = 3679 K (Weight of Beams + Girders + Columns + Roof)
+= 1727.5 K
+Half of base shear goes to brace frame: 863.75 K
+Plug into RISE:
+
+Pu =297.8K
+Fy = 46KSI
+E = 29,000 KSI
+Try HSS 14 X 14 X ½ (AISC 2011 T4-4)
+Ф Pn = 609
+
+297.8 OK
+
+Roof Framing Plan
+
+Getting LA to Net
+Positive Competition
+for Innovation in
+Design
+Senior Project
+Engineer: Alexander Lohr
+Architect: Sergio Sanchez
+
+Submissions must meet the requirements of
+all seven (7) Petals and applicable Imperatives
+outlined in the Living Building Challenge
+version 3.0 to create an architectural
+proposition within one mile of a Los Angeles
+Metro Rail Line. The Metro Line must be
+existing or currently under construction.
+
+Criteria:
+Innovative/Creative: 20%
+Adhering to LBC Imperatives: 30%
+Viability/Practicality of Concept: 30%
+Collaboration: 20%
+
+Prizes
+1st: $2,500
+2nd: $1,000
+3rd: $500
+4th: $500
+5th: $500
+
+▪ Rejected by architect
+
+First Need Load Take
+Off
+Needed to select type of green roof to
+determine how it contributes to the
+dead load.
+▪ Roof slopes into ground
+so we don’t need the
+gravel strip
+
+▪ Can handle a slope up to
+35 degrees (Roof has an
+8 degree slope)
+
+Distributed Roof Load:
+•
+
+Green Roof
+
+•
+
+3” Rigid insulation
+
+4.5 PSF
+
+•
+
+Fire Proof.
+
+2 PSF
+
+•
+
+MEP
+
+4 PSF
+
+•
+
+Ceiling – suspended w/A CT
+
+2 PSF
+
+•
+
+MISC
+
+2.5 PSF
+
+•
+
+Total
+
+40 PSF
+
+•
+
+Roof Live Load:
+
+25 PSF
+
+100 PSF
+
+The Iterations
+The shape of the structure has
+evolved over the entire course of the
+project making it difficult to design.
+
+Solution: Spreadsheets
+▪ Use spreadsheets to quickly
+update design of structural
+systems to keep up with
+architect’s changes. Thus
+able to give quick feedback
+on his design changes.
+▪ Needs more columns
+▪ Can’t have entire wall made
+of glass
+
+Lateral System
+
+Architect wants Glass exterior:
+Shear walls
+Moment Frames
+Brace Frames
+
+Conclusion
+Importance of communication between architect and engineer
+• What is the Architect trying to accomplish
+• What are the engineer’s needs
+• How does the architect’s design affect the structural system
+The ability to be flexible and adapt to the changing needs of the architect
+
+

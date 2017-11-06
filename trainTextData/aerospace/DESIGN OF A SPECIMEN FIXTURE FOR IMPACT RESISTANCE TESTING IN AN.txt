@@ -1,0 +1,1202 @@
+DESIGN OF A SPECIMEN FIXTURE FOR IMPACT RESISTANCE TESTING IN AN
+INSTRON DYNATUP 8250 DROP WEIGHT IMPACT TESTER
+
+A Senior Project
+presented to
+the Faculty of the Aerospace Engineering Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree
+Bachelor of Science
+
+By
+Daniel Alejandro Barath
+March 2013
+
+© 2013 Daniel Alejandro Barath
+
+ 
+
+Abstract
+The purpose of this report is to outline the path and methods used to design a specimen fixture for
+the testing and analysis of fiber reinforced composites subjected to impact loading. This design is done in
+support of the California Polytechnic State University in San Luis Obispo Structures and Composites
+Laboratory. The design request was made at the request of Dr. Eltahry Elghandour to support the graduate
+students Kodi A. Rider and Y. Vanessa Wood in their master’s degree thesis projects.
+The design request involved the design of a specimen fixture compatible with the existing impact
+apparatus located in the laboratory. The apparatus is an Instron Dynatup 8250 HV Drop Weight Impact
+Testor. The design must adhere to the requirements of the testing standard ASTM D 7136 except as noted by
+Dr. Elghandour where the testing fixture was to be operated by a pneumatic clamping system.
+The specimen fixture was designed to be made of 6061-T6 aluminum alloy. Finite element analysis
+was used to determine the maximum impact load that the specimen fixture could safely withstand. According
+to the operator’s manual of the impact tester, the maximum impact load that the specimen fixture would need
+to withstand was 100 lb at a velocity of 6 m/s, which translates to a force of about 31000 lbf. After structural
+analysis using SolidWorks Simulation FEA, the highest impact load the specimen fixture design could
+withstand was 45000 lbf, at which point plastic deformation would begin to occur at the welds of the central
+core tubular support assembly. This load far exceeds the load as specified in the operator’s manual.
+The specimen fixture was then fabricated and assembled by myself and installed into the Dynatup
+8250 apparatus with the aid of Kodi A. Rider. The fixture was then tested using a ½ inch thick foam and
+carbon fiber sandwich plate at maximum velocity and showed no signs of plastic deformation or fracture
+failure.
+
+i
+
+ 
+
+Acknowledgements
+I wish to thank Dr. Eltahry Elghandour for being my senior project advisor and for choosing me to design
+and fabricate this piece of equipment for his laboratory. I sincerely hope that I made an asset and viable teaching
+tool for his future students. I also wish to thank Kodi A. Rider for his help in the procurement of parts and
+installation of the fixture assembly into the apparatus.
+I wish to thank my father, Daniel J. Barath, in the assistance of the fabrication of specimen fixture
+components. Without you, none of this would have been possible. I would also wish to thank Peter and Christina
+Serrano, Fiodor Filipov, Brinton Jones, and John K. Shaw who provided the moral support that kept this project
+moving.
+I also wish to thank the people of Martinek Manufacturing, who donated their time and efforts into the
+welding of the aluminum core support structure.
+
+ii
+
+ 
+
+Table of Contents
+Abstract ......................................................................................................................................................................... i
+Acknowledgement........................................................................................................................................................ii
+Table of Contents ....................................................................................................................................................... iii
+List of Tables ............................................................................................................................................................... iv
+List of Figures ............................................................................................................................................................. v
+List of Equations ......................................................................................................................................................... vi
+Nomenclature .............................................................................................................................................................vii
+1. Introduction .......................................................................................................................................................... 1
+1.1. Impact Resistance .......................................................................................................................................... 1
+1.2. Impact Resistance Testing Methods .............................................................................................................. 1
+1.3. Testing Standards ........................................................................................................................................... 3
+2. Customer Design Request .................................................................................................................................... 4
+3. Flowdown Requirements ..................................................................................................................................... 5
+3.1. Compatability With the Instron Dynatup 8250 Drop Weight Impact Tester ................................................. 5
+3.2. Compliance to ASTM D 7136 Standard Test Method for Measuring the Damage Resistance of a FiberReinforced Polymer Matrix Composite to a Drop-Weight Impact Event....................................................... 6
+3.3. Specimen Fixture Structural Material ............................................................................................................ 7
+3.4. Pneumatically Actuated Clamping System .................................................................................................... 8
+4. Fixture Design ....................................................................................................................................................... 9
+4.1. Design Considerations ................................................................................................................................... 9
+4.2. Specimen Fixture Component Design ......................................................................................................... 14
+4.2.1. Baseplate ............................................................................................................................................. 14
+4.2.2. Central Core Support ........................................................................................................................... 15
+4.2.3. Specimen Tabletop .............................................................................................................................. 17
+4.2.4. Clamp .................................................................................................................................................. 18
+4.2.5. Pneumatic Cylinder ............................................................................................................................. 19
+4.3. Assembled Specimen Fixture....................................................................................................................... 19
+5. Structural Analysis ............................................................................................................................................. 22
+5.1. Solid Model ................................................................................................................................................. 22
+5.2. Force and Boundary Conditions .................................................................................................................. 22
+5.3. Element Type and Mesh .............................................................................................................................. 24
+5.4. Results.......................................................................................................................................................... 25
+6. Final Prototype ................................................................................................................................................... 29
+7. Conclusion ........................................................................................................................................................... 32
+References .................................................................................................................................................................. 33
+Appendix .................................................................................................................................................................... 34
+Drawing Number A10001: Specimen Fixture Assembly ..................................................................................... 35
+Drawing Number A10002: Baseplate................................................................................................................... 36
+Drawing Number A10003: Core Support Assembly ............................................................................................ 37
+Drawing Number A10004: Specimen Tabletop ................................................................................................... 40
+Drawing Number A10005: Clamp Plate............................................................................................................... 41
+
+iii
+
+ 
+
+List of Tables
+Table 4.1 ...................................................................................................................................................................... 13
+
+iv
+
+ 
+
+List of Figures
+Figure 1.1: Charpy impact resistance test apparatus ...................................................................................................... 2
+Figure 1.2: Difference between Charpy and Izod impact resistance tests ..................................................................... 2
+Figure 1.3: Typical drop weight impact resistance test apparatus ................................................................................. 3
+Figure 3.1: Instron Dynatup 8250 HV Drop Weight Impact Tester .............................................................................. 5
+Figure 3.2: Floor plan of the Instron Dynatup 8250 HV Drop Weight Impact Tester Apparatus ................................. 6
+Figure 3.3: Specimen configuration as specified by the ASTM D 7136 testing standard ............................................. 7
+Figure 3.4: ASTM D 3763 clamping method ................................................................................................................ 8
+Figure 3.5: ASTM D 7136 clamping method ................................................................................................................ 8
+Figure 4.1: Layout of baseplate, pneumatic cylinders, and material specimen............................................................ 11
+Figure 4.2: Bimba 173-DX pneumatic cylinder .......................................................................................................... 11
+Figure 4.3: Baseplate solid model ............................................................................................................................... 14
+Figure 4.4: Core support flange ................................................................................................................................... 15
+Figure 4.5: Central core support tube .......................................................................................................................... 16
+Figure 4.6: Central core support welded assembly ...................................................................................................... 17
+Figure 4.7: Specimen table top. Bottom surface shown .............................................................................................. 17
+Figure 4.8: Clamp ........................................................................................................................................................ 18
+Figure 4.9: Pneumatic Cylinder ................................................................................................................................... 19
+Figure 4.10: Assembled specimen fixture shown with clamp extended. Pneumatic air fittings and 3/8-16 socket head
+cap screws omitted for clarity .................................................................................................................... 20
+Figure 4.11: Side view of the specimen fixture assembly ........................................................................................... 21
+Figure 5.1: Assembly used for FEA model ................................................................................................................. 22
+Figure 5.2: Bottom surface of baseplate showing boundary condition constraints on the mounting holes and on the
+entire bottom surface ................................................................................................................................. 23
+Figure 5.3: Impact reaction force distribution over contact surface of material specimen and specimen tabletop...... 24
+Figure 5.4: Tetrahedral parabolic element used in this finite element model .............................................................. 24
+Figure 5.5: FEA model mesh. Note high element density areas at the corners of the core support tube, weld bead
+corners, and at the cornes of the cutout on the specimen table top ............................................................ 25
+Figure 5.6: Von Mises stress plot for model loaded at 35000 lbf. Highest loads occur at the corners of the bottom
+weld bead and at the corners of the cutout on the specimen table top ....................................................... 26
+Figure 5.7: Displacement plot for model loaded at 35000 lbf. Plot also shows deformed shape of model ................. 26
+Figure 5.8: Factor of safety plot for model loaded at 35000 lbf .................................................................................. 27
+Figure 5.9: Factor of safety plot for model loaded to 45000 lbf .................................................................................. 28
+Figure 6.1: Final prototype assembly before installation into the Dynatup 8250 apparatus ........................................ 29
+Figure 6.2: Fixture apparatus as installed into the Dynatup 8250 apparatus ............................................................... 29
+Figure 6.3: Dynatup 8250 control panel ...................................................................................................................... 30
+Figure 6.4: Air flow diagram ....................................................................................................................................... 31
+
+v
+
+ 
+
+List of Equations
+Equation (4.1): Expression for upper piston surface area ............................................................................................ 10
+Equation (4.2): Expression for the force multiplier of all four cylinders..................................................................... 10
+Equation (4.3): Expression for clamping force ............................................................................................................ 10
+Equation (4.4): Kinematic equation for velocity ......................................................................................................... 12
+Equation (4.5): Expression for impact deceleration..................................................................................................... 13
+Equation (4.6): Newton’s Second Law to determine impact force .............................................................................. 13
+
+vi
+
+ 
+
+Nomenclature
+
+ 
+
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+
+acceleration/deceleration
+area
+total piston face area
+piston diameter
+piston shaft diameter
+clamping force
+impact force
+impactor mass
+clamping pressure
+impact velocity
+
+vii
+
+ 
+
+(ft/s2)
+(in2)
+(in2)
+(in)
+(in)
+(lbf)
+(lbf)
+(lb)
+(psi)
+(ft/s) 
+
+1.
+
+Introduction
+Fiber reinforced composite materials have revolutionized the aerospace and automobile industries due to
+their low density and high strength. These materials have revolutionized these industries by allowing designers
+to use light weight, high strength materials that increase efficiency and performance of vehicles. However, fiber
+reinforced materials are relatively new to engineering and the properties of these materials are still being
+developed. These properties are highly dependent on the composition and configuration of the fibers within the
+composite. Therefore, when new developments are made in composition and configuration, the mechanical
+properties of the composite material must be tested and validated for use within the industry. Testing methods
+must also be developed which are appropriate to the material and mechanical property being tested. For
+example, the tensile behavior of a material is tested by placing specimens of a material under tension and
+determining the stress/strain behavior. With these tests, engineers and scientists can have a reliable basis on
+which to produce designs, analyze those designs, and turn those designs into reliable and safe products for use
+within the public and private domain.
+1.1. Impact Resistance
+Impact resistance is an extremely important mechanical property measuring fracture toughness that
+must be determined and quantified for any type of structural material[1]. For example, a spacecraft must be
+designed to withstand impacts from micrometeorites and other space debris that it may encounter. The
+structure must be able to withstand these impacts in such a way to protect the internal payload from
+catastrophic damage due to impact and still remain structurally sound. This is especially important if the
+spacecraft has a human payload. Another example arises during the manufacture of spacecraft and aircraft
+vehicles. During manufacture, a technician may drop a tool onto a cured fiber reinforced surface causing
+damages to the material such as delamination of the fiber plies and/or tearing of the fibers themselves.
+Other impact event examples include bird strike to an aircraft structure during flight. In the automotive
+industry, these examples include impacts with other vehicles and debris thrown up from the road. Drop
+impact event testing addresses these potential events and quantifies them for design and analysis.
+1.2. Impact Resistance Testing Methods
+There are many types of impact testing methods. For example, one method is the Charpy Impact
+Test. In this testing method a pendulum hammer swings into a material specimen. The impact energy is
+
+1 
+
+ 
+
+determined by measuring the distance the
+hammer travels from fracturing the specimen
+until rest. This distance gives the impact energy
+absorbed during fracture of the material.
+Therefore a “V” notch of known configuration is
+cut into the material specimen to facilitate
+fracture of the specimen. A Charpy Impact
+Resistance Test Apparatus is shown in figure 1.1.
+Note the pendulum hammer on the left of the
+apparatus. Also there is a scale used to measure
+the swing angle after impact and fracture of the
+material specimen located in on the right of the
+apparatus. The material specimen is held as a
+Figure 1.1: Charpy impact resistance test
+apparatus.
+simply supported beam and the hammer strikes
+the middle of the beam between the supports of
+the beam. Another method is the Izod Impact
+Test. This test is similar to the Charpy method
+except that the material specimen is held as a
+cantilever beam. Figure 1.2 shows the difference
+between the Charpy and Izod methods. Note that
+Figure 1.2: Difference between Charpy and Izod
+the Charpy and Izod test methods both use beam impact resistance tests.
+type material specimens[2].
+The third type of test is the Drop Weight Impact Resistance Test. With the drop weight impact
+resistance test, a weight is dropped from a known height and allowed to accelerate under the force of
+gravity. The weight has a similar hammer on the striking end of it to that of the Charpy and Izod methods.
+The hammer comes down and strikes the material specimen causing some type of failure, whether it be
+fracture, cracking, plastic deformation, or purely elastic deformation. In the case of fiber reinforced
+
+2
+
+ 
+
+composite materials, delamination and/or tearing
+of fibers can occur as material failures. With the
+drop weight method, the weight is guided to the
+target material specimen by sliding through a
+tube or by sliding down guide rails. The
+acceleration of the impact weight can also be
+assisted by compressed air or springs to increase
+impact velocities above that with gravity alone.
+A typical drop weight apparatus is shown in
+figure 1.3. With this apparatus, the impact
+weight is drawn up to its release height by a
+chain where it is then released. Note how the
+apparatus has two guiderails on either side of the
+impact weight. The specimen is housed in the
+yellow box. The impact weight can have an
+accelerometer or load cell attached to it so that a
+Figure 1.3: Typical drop weight impact resistance
+time history of the impact force can be test apparatus.
+determined. This is important so that the
+behavior of the material during impact can be assessed.
+1.3. Testing Standards
+Depending on the type of material being tested, the method of testing, or the configuration of the
+material being tested, ASTM International has produced standards governing the method and analysis for
+many types of impact resistance tests. There are standards for both Carpy and Izod tests for metallic[2] and
+plastic materials[3][4]. For the case of drop weight impact testing there are standards plastics[5], and fiber
+reinforced composites[6]. With regard to the fiber reinforced composite materials, ASTM D7136 is of
+particular interest. This standard governs the configuration of the test sample, the proper type of impact
+device to use, and the proper configuration of clamp to hold the test specimen.
+
+ 
+
+ 
+3
+
+ 
+
+2.
+
+Customer Design Request
+The customer, the Cal Poly Aerospace Structures and Composites Laboratory, has requested the design,
+fabrication, and installation of a test fixture with which to hold a composite material specimen for drop weight
+impact resistance testing. The customer has placed the following requirements on the fixture:
+
+
+The fixture must be compatible with the Instron Dynatup 8250 Drop Weight Impact Tester located within
+the lab.
+
+
+
+The fixture must conform to the requirements of ASTM D 7136 Standard Test Method for Measuring the
+Damage of a Fiber-Reinforced Polymer Matrix Composite to a Drop-Weight Impact Event.
+
+
+
+The support structure must be made from 6061 aluminum.
+
+
+
+The fixture must use pneumatic cylinder with which to clamp the specimen to the fixture with a clamping
+device similar to that called out in ASTM D 3763 section 6.1.1.
+
+4
+
+ 
+
+3.
+
+Flowdown Requirements
+Each of the requirements laid out by the customer places its own set of flowdown requirements on the
+design of the fixture assembly. These flowdown requirements place restrictions on the configuration, materials,
+and method of the design of the fixture. Each customer requirement is addressed below.
+3.1. Compatibility with the Instron Dynatup 8250 Drop Weight Impact Tester
+The Dynatup 8250 apparatus is shown in
+figure 3.1. The model in the structures and
+composites laboratory has the high velocity
+option included. This means that this particular
+model has a pneumatic assist that can accelerate
+the impact
+
+device faster than with just
+
+gravitational
+
+acceleration
+
+if
+
+needed.
+
+This
+
+included option requires that the specimen
+fixture be designed to handle larger impact
+forces.
+Since the fixture must fit with in the
+tester, the fixture must not interfere with the
+working components of the tester. Therefore, the
+tester must fit between the slide rails of the Figure 3.1: Instron Dynatup 8250 HV Drop Weight
+Impact Tester
+aparatus and must use the allowed mounting
+points of the tester. The allowable workspace inside the tester is shown in figure 3.2. The available
+workspace inside the testing apparatus is a 14 inch square indicated in the figure by the shaded blue area.
+However, the space is actually limited by the two vertical guide rails. The diameter of each of the guide
+rails is .75 inch. The guide rails are indicated in the figure by green. Therefore, the actual area allowed for
+the specimen fixture to sit is a six inch wide strip in between the guide rails. The impact location is located
+in the center of the 14 inch square between the guide rails and is indicated in the figure by red.
+
+5
+
+ 
+
+Figure 3.2: Floor plan of the Instron Dynatup 8250 HV Drop Weight Impact Tester Apparatus.
+
+So the clamping site is accessible to an operator, the fixture must have a certain height so that the
+specimen can be easily installed and removed after testing. The floor of the workspace inside the Dynatup
+8250 is located 6 inches below the bottom of the door shown in figure 3.1. Therefore the specimen must
+be located at a height of 6 inches or higher.
+3.2. Compliance to ASTM D 7136 Standard Test Method for Measuring the Damage Resistance of a FiberReinforced Polymer Matrix Composite to a Drop-Weight Impact Event[6].
+The ASTM D 7136 standard imposes many flowdown requirements which affect the design of the
+fixture. The flowdown requirements are stated by the applicable section in the standard.
+
+
+Section 8.2.2 of the standard requires that the specimen be a 4 inch by 6 inch rectangle as shown
+in figure 3.3. Note the location of the impact is in the center of the rectangular specimen.
+
+6
+
+ 
+
+Figure 3.3: Specimen configuration as specified by the ASTM D 7136 testing standard.
+
+
+
+Section 7.2 of the standard requires that the exposed specimen surface underneath the specimen be
+a 3 inch by 5 inch rectangular area centered with respect to the specimen.
+
+
+
+Section 7.2 of the standard requires that the specimen be clamped to the surface of the support
+structure by a minimum of 200 lbf.
+
+
+
+Section 7.2 of the standard requires that the clamping apparatus contact the upper surface of the
+specimen using neoprene rubber 70-80 shore A.
+
+
+
+Section 7.2 of the standard requires that guide pins be placed on the support fixture in order to
+locate the specimen centrally over the 3 inch by 5 inch exposed area underneath the specimen.
+
+3.3. Specimen Fixture Structural Material
+The material requirement imposed by the customer states that the main structure shall be 6061
+aluminum. For maximum rigidity of the structure, all components of the fixture structure will be of the T6
+temper.
+7
+
+ 
+
+3.4. Pneumatically Actuated Clamping System
+This requirement imposes that pneumatic cylinders be used to actuate the clamping system of the
+fixture. The customer has specified a similar clamping method to that described in ASTM D 3763
+Standard Test Method for High Speed
+Puncture Properties of Plastics Using Load
+and Displacement Sensors. Section 6.1.1 of
+this standard specifies that two parallel rigid
+plates be used to clamp the specimen to the
+fixture[5]. Figure 3.4 shows an example of the
+ASTM D 3763 clamping method.
+This requirement conflicts with the
+method stated in ASTM D 7136 section 7.2
+where the specimen is to be clamped using
+toggle clamps, one at each corner of the
+Figure 3.4: ASTM D 3763 clamping method.
+
+specimen with a total clamping force of 200
+lbf. Figure 3.5 shows an example of the ASTM
+D 7136 clamping method. This conflict was
+discussed with the customer and the resolution
+was that the method of ASTM D 3763 section
+6.1.1 shall take precedence over that of ASTM
+D 7136 but the specimen configuration of
+ASTM D 7136 sections 7.2 and 8.2.2 shall
+
+Figure 3.5: ASTM D 7136 clamping method.
+
+take precedence over ASTM D 3763 section
+
+7.1. This means that two parallel rigid plates will be pneumatically actuated to hold down the 4 inch by 6
+inch rectangular specimen and that the plates will have the 3 inch by 5 inch cutouts as specified by ASTM
+D 7136. The clamping system shall have a minimum clamping force of 200 lbf[6].
+
+8
+
+ 
+
+4.
+
+Fixture Design
+The main requirements that drive the design of the specimen fixture are to be compatible with the Dynatup
+8250 apparatus, use a pneumatic clamp, and the specimen configuration as shown in figure 3.3.
+
+
+The requirement to be compatible with the Dynatup 8250 apparatus drives the overall dimensions. The
+length must be shorter than 14 inches. The width must be shorter than 6 inches to fit between the guide
+rails. The specimen must sit at a height of 6 inches or higher. All components of the specimen fixture
+must fit within this volume.
+
+
+
+Next, the pneumatic cylinders must produce a clamping force of at least 200 lbf.
+
+
+
+The fixture must hold the 4 inch by six inch test specimen.
+
+These are the three main driving requirements that drive the design of the specimen fixture. From these three
+requirements initial design considerations can be made.
+4.1. Design Considerations
+Beginning with the floor plan of the internal workspace of the Dynatup 8250 apparatus as shown
+in figure 3.2, the first component of the specimen fixture is considered: the fixture baseplate. The fixture
+baseplate will have the task of mounting to the Dynatup 8250 apparatus, hold the pneumatic cylinders, and
+serve as the main foundation of the fixture. Since the guide rails drive the width of fixture, care must be
+taken so that no part of the fixture makes contact with the guide rails during operation. Also it would be
+preferable that the fixture can be installed into the Dynatup 8250 apparatus with minimal or no assembly
+to facilitate installation taking place inside the apparatus enclosure. Therefore, all components must fit
+inside the 6 inch width between the guide rails with some clearance. A .125 inch clearance on either side
+of the fixture will mitigate the risk of contact between the guiderails and fixture and facilitate easy
+installation into the apparatus. This changes the available width of the workspace to 5.75 inches centered
+about the impact location. This width will contain the specimen 4 inch by 6 inch configuration.
+Next the pneumatic cylinders for the clamping system can be considered. The requirement is that
+the clamp holds the specimen with a minimum clamping force of 200 lbf. From the Dynatup 8250 user’s
+manual, the control system is capable of supplying a maximum air pressure of 95 psi. Therefore, the total
+piston face area required to produce the minimum clamping force if 200 lbf is 2.11 in2. Also, given the
+rectangular shape of the specimen configuration, four pneumatic cylinders, one placed at each corner of
+9
+
+ 
+
+the specimen, will be used to produce the total clamping force. Therefore, the minimum piston face area
+for each cylinder is .53 in2. However, it would be preferable to control the clamping force so that a smaller
+force could be used with delicate specimens with small impact loads and a larger clamping force could be
+used for large impact loads.  1.5 inch diameter bore cylinders were chosen to act as the clamp actuators.
+After careful research, the Bimba model 173-DX was chosen. The 173-DX is a double acting cylinder
+with a stroke of 3 inches. This means that there are two inlets for air pressure on the cylinder, one on each
+side of the piston allowing the piston to be actuated in both directions of motion. This will allow the
+Dynatup 8250 control to actuate both closing and opening of the clamp. The inside diameter of the
+cylinder is 1.5 inch and the shaft diameter is 7/16 inch. Then the force multiplier can be calculated by
+determining the area of the upper face of the piston. This is the side of the piston from which the shaft
+extends out of the cylinder to the clamping plate. Therefore the area of the upper side of the piston is then
+calculated from
+(4.1)
+
+4
+where
+
+is the upper piston face area,
+
+is the diameter of the piston, and
+
+is the diameter of the shaft.
+
+For the four cylinders the total area is then given by
+(4.2)
+
+4
+Equation (4.2) is then the force multiplier of the four pistons. The value of
+1.5	in
+
+. 4375	in
+
+for this system is then
+
+25.869	in
+
+then the total clamping force is given by
+(4.3)
+where
+
+is the total clamping force and
+
+is the pressure supplied to the pneumatic cylinders from the
+
+Dynatup 8250 control. From equation (4.3), it is determined that a supplied pressure of 31 psi is required
+to produce the 200 lbf clamping force. From the 95 psi maximum pressure supplied by the Dynatup 8250,
+the maximum clamping force is then 614 lbf. This range will be satisfactory for all impact masses and
+velocities.
+
+10
+
+ 
+
+Lastly, the specimen configuration of 4 inch by 6 inch rectangle requires that the specimen sit in
+the fixture with the 4 inch edge spanning the 5.75 width of the fixture and the 6 inch edge spanning the
+length of the fixture. Figure 4.1 shows how the baseplate, pneumatic cylinders, and material specimen are
+laid out in the Dynatup 8250 apparatus. Figure 4.2 shows the dimensional design of the Bimba 173-DX
+pneumatic pistons.
+
+Figure 4.1: Layout of baseplate, pneumatic cylinders, and material specimen.
+
+Figure 4.2: Bimba 173-DX pneumatic cylinder.
+The central core support can now be considered. The central core support will be produced from 4
+inch by 6 inch by .25 inch thickness 6061-T6 aluminum rectangular tube extrusion. This size was chosen
+11
+
+ 
+
+because it matches the specimen dimensions and its thickness was the largest commercially available. Two
+.5 thick flanges will be welded to either end of the rectangular tube extrusion with bolt holes allowing it to
+be mounted to the baseplate and to the specimen table. Since the pneumatic cylinders will fit between the
+baseplate and the specimen table, the central core support must be tall enough such that the cylinders will
+fit properly without any interference. From the design of the 173-DX cylinder, the required length is 6.63
+inches. Then rounding up to the nearest standard fraction giving clearance space, the assembled height of
+the central core support will be 6.75 inches. ¼-20 socket head cap screws will mount the central core
+support to the base plate and to the specimen table.
+The specimen table will be made of .75 inch thick 6061-T6 aluminum plate. It will have a 3 inch
+by 5 inch cutout underneath where the specimen will sit. Near each corner of the specimen, there will be a
+.5 inch diameter clearance holes for the shafts of the pneumatic cylinders to pass through. The thickness of
+the specimen table requires that the shafts be extended a length so that none stroke length of the clamp is
+lost. Therefore, the shafts have an extension of .37 inch to maintain the stroke length. This extension was
+chosen over the full thickness of the specimen table to ensure full closure of the clamp even without a
+specimen inside the clamp. Therefore the full stroke of the clamp becomes approximately 2.6 inches
+which fits within the customer preferred stroke range of 2.5 inch to 3 inch.
+The upper clamp plate will then be made from .375 inch thick 6061-T6 aluminum plate. This plate
+will also have a 3 inch by 5 in rectangular cutout above the specimen. Through this hole is where the
+impactor will run to impact the specimen. It will also have 7/16-20 threaded holes at each corner of where
+the specimen is located for the threaded ends of the shafts of the pneumatic cylinders. The shafts will then
+be locked using nuts from rotation due to vibration caused by impact.
+In order to produce a viable design that meets the main requirement of reliably holding a specimen
+for drop weight impact testing, the force imparted by the impactor to the specimen must be determined.
+This will be the assumed force that the fixture must endure during each impact test. To determine the
+assumed impact force, we begin with
+(4.4)
+
+12
+
+ 
+
+where
+
+is the impact velocity,
+
+is the deceleration of the impactor mass at impact, and
+
+is the impact
+
+time required to decelerate the impactor to zero. Then, setting equation (4.4) to zero and solving for the
+impact deceleration we have
+(4.5)
+Then, by Newton’s Second Law, we have
+(4.6)
+where
+
+is the impact force and
+
+is the impactor mass. Therefore, equation (4.6) gives us the expected
+
+impact force the fixture and specimen will see during impact. Then, this becomes the design requirement
+that the fixture must endure for testing with a suitable factor of safety to account for fatigue.
+Table 4.1: Energy and velocity table for the Dynatup 8250 HV.
+Crosshead
+Weight
+lbs (kg)
+
+Max. Drop
+Height
+in (cm)
+
+Max. Freefall
+Velocity
+ft/s (m/s)
+
+Max.
+Pneumatic
+Assist Velocity
+ft/s (m/s)
+
+Max Freefall
+Impact Energy
+ft-lbf (J)
+
+5.5 (2.5)
+
+46 (117)
+
+15.7 (4.8)
+
+44.6 (13.6)
+
+21 (28.5)
+
+Max.
+Pneumatic
+Assist Impact
+Energy
+ft-lbf (J)
+170 (230)
+
+10 (4.5)
+
+45 (114)
+
+15.5 (4.7)
+
+35.8 (10.9)
+
+37.3 (50.5)
+
+199 (270)
+
+25 (11.3)
+
+43 (109)
+
+15.2 (4.6)
+
+28.1 (8.5)
+
+89.6 (121.5)
+
+306 (415)
+
+50 (22.7)
+
+40 (102)
+
+14.6 (4.4)
+
+23.4 (7.1)
+
+165.5 (224)
+
+425 (576)
+
+75 (34.0)
+
+40 (102)
+
+14.6 (4.4)
+
+20.5 (6.2)
+
+248 (336)
+
+489 (663)
+
+100 (45.4)
+
+40 (102)
+
+14.6 (4.4)
+
+19.7 (6)
+
+331 (448)
+
+602 (816)
+
+To determine the highest impact load the highest mass will be used with its associated pneumatic
+assist velocity. Table 4.1 shows that the highest crosshead mass is 100 lb (45.4 kg) with an impact velocity
+of 19.7 ft/s (6 m/s)[7]. Using equation (4.6) with an assumed impact time of 2 milliseconds, we have
+45.4	kg 6 m⁄s
+0.002	s
+
+136200	N
+
+30620	lb
+
+Then, the force is increased to 35000 lbf to include a margin of safety. This will guarantee that the fixture
+can reliably withstand the strongest impact available with the Dynatup 8250.
+
+13
+
+ 
+
+4.2. Specimen Fixture Component Design
+Now that all of the design considerations have been made, each of the specimen fixture
+components can be designed.
+4.2.1. Baseplate
+The baseplate is the component that will mount the specimen fixture to the Dynatup 8250
+apparatus. It also serves as the mounting point for the pneumatic cylinders and as the foundation of
+the entire assembly. Figure 4.3 shows a solid model of the baseplate.
+
+Figure 4.3: Baseplate solid model.
+The baseplate is made from 6061-T6 aluminum plate. It is 5.75 inch wide by 12 inch long by .75
+inch thick. As shown in figure 4.3, there are 4 counterbored holes for 3/8-16 socket head cap screws.
+These are the screws that will mount the baseplate to the Dynatup 8250 apparatus. The through holes
+are sized with a normal clearance per ASME B18.3 to allow for small alignment adjustments so that
+as the specimen fixture is installed into the Dynatup 8250 apparatus, the impactor can be aligned to
+the proper location in the center of the 4 inch by 6 inch specimen. The through holes are
+counterbored so that the 3/8-16 socket head cap screw heads sit below the upper surface of the base
+plate.
+
+14
+
+ 
+
+There are 12 ¼-20 threaded holes placed as shown for ¼-20 socket head cap screws so that the
+central core support can be mounted to the base plate. These holes are blind holes and do not go
+through the base plate.
+There are four 49/64 through holes with 1.5 inch diameter countersinks for the mounting of the
+pneumatic cylinders. These holes are located as shown and do not interfere with the 3/8-16 socket
+head cap screws when the pneumatic cylinders are installed into the baseplate. The through hole
+diameter and counterbore design are driven by the design of the pneumatic cylinders as shown in
+figure 4.2. The cylinder is mounted to the baseplate using jam nuts supplied by the manufacturer.
+The jam nut is a ¾-16 thread with a 1.125 inch hex. Therefore, the diameter of the counterbore is
+chosen so that a standard 1.125 inch socket can fit into the counterbore to install and apply torque to
+the jam nut. The depth of the counterbore is also chosen so that the jam nut will make full contact
+with the threads on the pneumatic cylinder.
+4.2.2. Central Core Support
+The central core support is a 4 inch by 6 inch by .25 inch thickness 6061-T6 aluminum tube
+extrusion. There are two half inch thick 6061-T6 aluminum plates welded to each end of the
+extrusion to provide a place for ¼-20 socket head cap screws to mount to the base plate and to the
+specimen table top. The height of the central core support with the flanges welded on is 6.75 inches
+tall. Figures 4.4 through 4.6 show the flange, tube extrusion, and welded assembly respectively.
+
+Figure 4.4: Core support flange.
+15
+
+ 
+
+The core support flange is shown in figure 4.4. The flange is made from 5.75 inch by 8.5 inch by
+.5 inch thick 6061-T6 aluminum plate. The flange has 12 holes for ¼-20 socket head cap screws.
+These holes have a close fit per ASME B18.3 to aid in the location of the central core support to the
+baseplate and the specimen tabletop. For the central core support welded assembly, there are two of
+these identical flanges welded to either end of the rectangular tube extrusion. Note the 1/8 inch deep
+recess. This is to locate the rectangular tube extrusion to the flange for welding. Also at either corner
+of the core support flange is a .905 inch radius cutout. This is to provide clearance to the pneumatic
+cylinders at the final assembly stage.
+
+Figure 4.5: Central core support tube.
+
+Figure 4.5 shows the central core support tube. This tube is made from 4 inch by 6 inch by .25
+inch thick 6061-T6 aluminum tubular extrusion. The tube is 6 inches tall. When the flanges are
+welded to either end of the tube, the welded assembly will by a total of 6.75 inches tall.
+
+16
+
+ 
+
+Figure 4.6: Central core support welded assembly.
+Figure 4.6 shows the final welded central core support assembly. This final height of this assembly
+is 6.75 inches tall to accommodate the pneumatic cylinders to fit between the upper surface of the
+baseplate and the lower surface of the specimen table top. The final assembly is welded together
+using two 3/16 fillet welds as shown.
+4.2.3. Specimen Table Top
+The specimen table top is the component that holds the specimen during impact. The specimen
+table top is made from 5.75 inches by 10 inches by .75 inch thick 6061-T6 aluminum plate. Figure
+4.7 shows a solid model of the specimen table top.
+
+Figure 4.7: Specimen table top. Bottom surface shown.
+17
+
+ 
+
+The bottom surface of the specimen table top is show in the figure. There are 12 ¼-20 threaded
+holes so that the specimen table top can be mounted to the central core support. The threaded holes
+do not pass through to the upper surface of the table top so that neither the threaded holes nor the ¼20 socket head cap screws interfere with the upper surface or the 4 inch by 6 inch specimen sitting on
+the top surface. In the center of the table top, a 3 inch by 5 inch cutout is placed as specified by the
+requirements of ASTM D 7136. There are also four .575 clearance holes that pass through the
+specimen table top so that the rods of the pneumatic cylinders can pass through to actuate the clamp
+above the specimen table top. There are .75 inch diameter by .05 inch deep counterbores on the
+bottom side of the specimen table top so that the bottom surface does not interfere with the tops of
+the pneumatic cylinders.
+4.2.4. Clamp
+The clamp is made from a 5.75 inch by 10 inch by .375 inch thick 6061-T6 aluminum plate and is
+shown in figure 4.8. The clamp has four 7/16-20 threaded holes to accept the rods of the pneumatic
+
+Figure 4.8: Clamp
+cylinders. The rods of the cylinders will be threaded through the four threaded holes and secured in
+place with nuts to prevent rotation of the rods due to vibration of the fixture assembly during impact
+testing operations. In the center of the clamp there is a 3 inch by 5 inch cutout so that the clamp plate
+does not interfere with the dynamic response of the specimen during impact.
+18
+
+ 
+
+4.2.5. Pneumatic Cylinder
+The pneumatic cylinder is a Bimba model 173-DXEE0.37. This is a 1.5 inch bore by three inch
+stroke pneumatic cylinder with a double acting piston. This means that there are two pressure ports,
+one to extend the rod and the other to retract the rod. When the cylinder is in its extended condition,
+the clamp is open. When the cylinder is in its retracted condition, the clamp is closed and applying a
+clamping force to the specimen. The pneumatic cylinder used for the design of the specimen fixture
+is shown its closed condition in figure 4.9.
+
+Figure 4.9: Bimba 173-DXEE.037 pneumatic cylinder. Shown in closed condition.
+The pneumatic cylinder used in the design has a .375 inch extension to the rod length. This
+extension ensures that minimal stroke length is lost in the assembly as the rod is passed through the
+specimen table top and threaded into the clamp. The cylinder has two ¼ inch NPT pressure ports.
+The pressure port near the base extends the rod and the pressure port near the rod end retracts the rod.
+The ¾-16 threaded base mounts to the baseplate and the 7/16-20 mounts to the clamp.
+4.3. Assembled Specimen Fixture
+The complete assembled specimen fixture is shown in figure 4.10. The complete fixture consists
+of the following components: 1 ea. baseplate, 1 ea. central core support, 1 ea. specimen table top, 1 ea.
+
+19
+
+ 
+
+clamp, 4 ea. Bimba 173-DXEE0.37 pneumatic cylinders, 4 ea. 7/16-20 nuts, and 24 ea. ¼-20 socket head
+cap screws.
+
+Figure 4.10: Assembled specimen fixture shown with clamp extended. Pneumatic air fittings and
+3/8-16 socket head cap screws omitted for clarity.
+The assembled fixture is mounted to the Dynatup 8250 apparatus by the mounting points for the
+3/8-16 socket head cap screws as shown. These mounting points coincide with the threaded holes shown
+in figure 3.2. When installed into the Dynatup 8250 apparatus, the four 3/8-16 socket head cap screws are
+torqued to 160 in-lb to 185 in-lb. The ¼-20 socket head cap screws that hold the base plate and the
+specimen table top to the central core support are torqued to 40 in-lb to 50 in-lb. The 7/16-20 rod ends are
+threaded into the threaded holes in the clamp with minimal torque. The locking of the rod ends is done
+with the nuts and they are torqued to 400 in-lb to 650 in-lb.
+Figure 4.11 shows the fixture clamp full extension length of 2.87 inches. This extension will then
+allow a 2.75 inch thick specimen to be reliably clamped within the structure. The reason that a smaller
+specimen thickness is allowed rather than a thickness equal to the full extension length is to ensure that the
+fixture clamps the specimen with the expected force as calculated using equations (4.2) and (4.3). The
+specimen table top upper surface is 8.25 inches from the bottom surface of the fixture assembly. This
+
+20
+
+ 
+
+Figure 4.11: Side view of the specimen fixture assembly.
+allows the specimen table top to be located above the bottom threshold of the door to the workspace of the
+Dynatup 8250 apparatus.
+
+21
+
+ 
+
+5.
+
+Structural Analysis
+To validate the design for manufacture of the prototype and use in the laboratory, finite element analysis of
+
+a solid model assembly was performed using Dassault Systeme’s SolidWorks Simulation which runs using
+COSMOSM FEA software and algorithms. This software allows finite element analysis on three dimensional
+structures with multiple components.
+5.1. Solid Model
+The solid model used to perform the structural analysis included the baseplate, central core
+support, and specimen tabletop. Since the force acts downward only on the specimen, the clamp plate and
+pneumatic cylinders were omitted from the model. The solid model used in this analysis is shown in figure
+5.1.
+
+Figure 5.1: Assembly used for FEA model.
+5.2. Force and Boundary Conditions
+The boundary conditions used for the model constraints were dictated by the method in which the
+specimen fixture is to be mounted to the Dynatup 8250 apparatus. Therefore, the four counterbored holes
+for the 3/8-16 socket head cap screws were constrained for all six degrees of freedom. Also, since the
+
+22
+
+ 
+
+bottom surface of the baseplate is supported by the bottom floor surface of the inner workspace of the
+apparatus, the bottom surface of the baseplate was constrained for vertical movement. Figure 5.2 shows
+the constraints on the baseplate.
+
+Figure 5.2: Bottom surface of baseplate showing boundary condition constraints on the mounting
+holes and on the entire bottom surface.
+The loading condition on the specimen fixture was dictated by the specimen geometry and its
+placement on the specimen tabletop. Therefore the load is placed on a rectangular strip of surface around
+the 3 inch by 5 inch cutout. The rectangular strip represents the specimen in contact with the specimen
+tabletop. The load is a vertical downward 35000 lbf static load distributed around the cutout. This load
+represents the reaction force of the specimen during impact as discussed in section 4.1. Figure 5.3 shows
+the loading of the solid model. Note the material specimen boundary is a 4 inch by 6 inch rectangle located
+around the cutout. All of the impact reaction force is contained within this boundary.
+
+23
+
+ 
+
+Figure 5.3: Impact reaction force distribution over contact surface of material specimen and
+specimen tabletop.
+5.3. Element Type and Mesh
+The element type used for this FEA model is a
+10 node tetrahedral volumetric element. This element
+type uses parabolic deflection equations resulting in a
+linear stress element. This element was used for its
+higher accuracy in stress detection within the model.
+Figure 5.4 shows a schematic of a parabolic tetrahedral
+element. Note the ten nodes on the element; 4 nodes on
+the vertices of the tetrahedron and 6 nodes on the edges
+of the tetrahedron, one on the midpoint of each edge.
+
+Figure 5.4: Tetrahedral parabolic element
+used in this finite element model.
+
+The mesh used for the solid model included the three components as shown in figure 5.1. The
+components were bonded to each other to simulate the effect of the fasteners. This was done to simplify
+the model for calculation resources. Figure 5.5 shows the model mesh. Note the high element density on
+the edges of the core support tube, at the corners of the welds, and at the corners of the cutout on the
+
+24
+
+ 
+
+specimen tabletop. This was done to analyze the buckling effect on the central core support and to predict
+with higher accuracy any potential failure areas.
+
+Figure 5.5: FEA model mesh. Note high element density areas at the corners of the core support
+tube, weld bead corners, and at the cornes of the cutout on the specimen table top.
+5.4. Results
+At 35000 lbf static load as loaded in figure 5.3, the structure holds up. The highest stress
+concentrations are located at the corner of the core support tube at the weld bead. At this location is where
+failure due to buckling will be expected. Figure 5.6 shows a plot of the stresses on the model loaded to
+35000 lbf. The plot has been annotated to show where the highest stress load occurs. This happens at the
+corners of the core support tube at the welds. The stress predicted here is 26.6 ksi giving a factor of safety
+at these locations of 1.5. At the corners of the cutout on the specimen tabletop the stress load is 10.2 ksi.
+The maximum deflection predicted by the model is located at the midpoints of the long edge of the
+cutout on the specimen table. The maximum value located at these points is 5.725 thousandths of an inch.
+Figure 5.7 show a plot of the model displacements and show the deformed shape of the model under
+35000 lbf. Note how the core support tube has deformed under this load. The shape of is buckling mode is
+to expand outwards in its midsection. As mentioned above, the highest stress occurs at the tube
+corner/weld interface on the bottom flange. This is mirrored by the deflection shape. The reason why the
+high stress points occur here is because there is no cutout on the baseplate as there is on the specimen
+tabletop. Therefore, the specimen tabletop allows the core support to deform and take only compressive
+
+25
+
+ 
+
+Figure 5.6: Von Mises stress plot for model loaded at 35000 lbf. Highest loads occur at the
+corners of the bottom weld bead and at the corners of the cutout on the specimen table top.
+
+Figure 5.7: Displacement plot for model loaded at 35000 lbf. Plot also shows deformed shape of
+model.
+26
+
+ 
+
+loads while the more ridged baseplate causes the support tube to hold its shape causing high stress at the
+
+Figure 5.8: Factor of safety plot for model loaded at 35000 lbf.
+connection to the baseplate. Figure 5.8 shows a factor of safety plot of the model. This plot shows the
+areas of concern where the stress loads approach that of the yield strength. Note that the lowest factor of
+safety occurs at the points on the central core support where the tube is welded to the bottom core support
+flange.
+In an effort to determine the maximum load to cause immediate failure by permanent plastic
+deformation, the load on the structure was increased to 45000 lbf. Figure 5.9 shows that the points of
+failure are the same as indicated above with the 35000 lbf loading. Plastic deformation would begin to
+occur at these points and eventual crack formation to fracture would occur at these points. Fracture of the
+central core support tube would be the eventual location of these failures.
+
+27
+
+ 
+
+Figure 5.9: Factor of safety plot for model loaded to 45000 lbf.
+
+28
+
+ 
+
+6.
+
+Final Prototype
+The final prototype was constructed using all 6061-T6 aluminum machined as shown by the solid models
+shown in section 4.2. The pneumatic cylinders used were Bimba model 173-DXBWEE0.37. This model differs
+from the 173-DXEE0.37 in the fact that the 173-DXBWEE0.37 have protective bumpers inside the cylinder to
+protect the piston from slamming into the upper and lower surfaces of the inside of the cylinder. They also have
+wipers on the rod guide to wipe dust off of the rod as it slides back into the cylinder. These wipers protect the
+seals inside the rod guide from unnecessary wear.
+Figure 6.1 shows the fixture assembly before
+installing into the Dynatup 8250 apparatus. Note the
+red dust covers on the pneumatic cylinders. These
+protect the inside of the cylinders from foreign object
+contamination that could cause unnecessary wear to the
+cylinder liners. These dust covers were removed prior
+to installation into the Dynatup 8250 apparatus and
+replaced with ¼ inch NPT to 1/8 inch i.d. tube elbow
+fittings. These fittings are the connection to the Figure 6.1: Final prototype assembly before
+installation into the Dynatup 8250 apparatus.
+pneumatic cylinder from the pressure supply of the
+apparatus. Two fittings are required for each cylinder.
+Figure 6.2 shows the fixture assembly as installed
+in the Dynatup 8250 apparatus. Note the fittings
+installed into the pneumatic cylinder as shown in the
+bottom of the figure. The fittings are brass and are
+sealed using winds of Teflon sealing tape. The pressure
+lines are connected to the control box of the Dynatup Figure 6.2: Fixture apparatus as installed into the
+Dynatup 8250 apparatus.
+8250 apparatus.
+The control of the Dynatup 8250 apparatus supplies the apparatus with the air pressure to actuate the clamp
+fixture, release the impactor, and charge the pneumatic assist of the 8250 HV model. The control box regulates
+the inlet air pressure to 95 psi as mentioned in section 4.1. This is the maximum air pressure that can be used for
+29
+
+ 
+
+any of the apparatus components requiring air pressure for actuation. The control box then has a second
+regulator that regulates the air pressure that is supplied to the clamp system. Figure 6.3 shows the side of the
+control box that is located at the rear of the Dynatup 8250 apparatus. The control panel on the control box has
+
+Figure 6.3: Dynatup 8250 control panel.
+four pressure outlets labeled “A” through “D” as shown. These outlets supply the clamp system via the air lines
+that run to the inside of the apparatus workspace. Outlet “A” supplies air pressure to retract the clamp and outlet
+“D” supplies air pressure to extend the clamp. Outlet “B” is used to operate a retraction device for the ASTM D
+3763 clamping device as shown in figure 3.4. Since this feature is not needed for this clamping fixture, this
+outlet is capped off as shown so there is no air pressure lost during actuation of outlet “D”. Outlet “C” is not
+used. The control panel also has a clamp air pressure gage. This is the air pressure reading to apply to equation
+(4.3) to determine and set clamping pressure. The clamping air pressure is set using the knob of the air pressure
+30
+
+ 
+
+regulator as shown. The air pressure lines running from outlets “A” and “D” both run to “1 to 4” manifolds
+where the lines then run to the upper pressure inlets and lower pressure inlets as required. An airflow diagram is
+shown in figure 6.4. When the clamp closure circuit is actuated, the air pressure is supplied from outlet “A” as
+
+Figure 6.4: Air flow diagram.
+shown to the upper ports on the pneumatic cylinders. Any pressure below the piston is exhausted through the
+lower ports and out of outlet “D”. When the clamp opening circuit is actuated, air pressure is supplied from
+outlet “D” as shown to the lower ports on the pneumatic cylinders. Any pressure above the piston is exhausted
+through the upper ports and out of outlet “A”. Due to the safety feature of the Dynatup 8250 control system, the
+clamp open circuit is always actuated when the system is powered on. To actuate the clamp closure circuit the
+“ARM-CLAMP” panel button on the hand held control must be pressed and the apparatus door must be closed.
+The clamp closure circuit will not be active if one of these two criteria is not met.
+
+31
+
+ 
+
+7.
+
+Conclusion
+Section 5 shows that the model is validated for use up to the impact conditions as specified in section 4.1.
+The analysis of the model shows that the specimen fixture can take the maximum loads that the Dynatup 8250
+HV apparatus can apply. In the analysis, the fixture was loaded to 35000 lbf static reaction force of the
+specimen under impact and was shown to have a factor of safety under these conditions of 1.35. When the
+fixture was loaded to 45000 lbf static load, this is where failure would occur.
+The way in which failure would occur is by the buckling of the central core support. The location of the
+expected failure would be at the corners of the weld bead that joins the central core support tube to the lower
+central core support flange. Therefore it is expected that this is where fatigue failure would also occur. Since the
+amount of load required to cause immediate failure in this manner is much larger than that which could be
+applied by the Dynatup 8250 apparatus, fatigue failure is only a problem at the larger impactor masses.
+
+32
+
+ 
+
+References
+
+[1]
+
+Calister, William D. Materials Science and Engineering: An Introduction. 6th ed. Hoboken, NJ: John Wiley &
+Sons (2003)
+
+[2]
+
+“ASTM E 23: Standard Test Methods for Notched Bar Impact Testing of Metallic Materials.” ASTM
+International (2007)
+
+[3]
+
+“ASTM D 6110: Standard Test Method for Determining the Charpy Impact Resistance of Notched Specimens of
+Plastics.” ASTM International (2010)
+
+[4]
+
+“ASTM D 256: Standard Test Methods for Determining the Izod Pendulum Impact Resistance of Plastics.”
+ASTM International (2010)
+
+[5]
+
+“ASTM D 3763: Standard Test Method for High Speed Puncture Properties of Plastics Using Load and
+Displacement Sensors.” ASTM International (2010)
+
+[6]
+
+“ASTM D 7136: Standard Test Method for Measuring the Damage Resistance of a Fiber-Reinforced Polymer
+Matrix Composite to a Drop-Weight Impact Event.” ASTM International (2007)
+
+[7]
+
+Instron Corporation. Instron Dynatup 8250 Drop Weight Impact Tester Operator Instructions. USA: Instron
+Corporation (1999)
+
+33
+
+ 
+
+Appendix
+The following appendix includes the assembly and detail drawings of the specimen fixture and its related
+components. The first drawing, number A10001, is the assembly drawing of the specimen fixture. The next drawing,
+number A1002, is the detail drawing of the baseplate. The next drawing, number A10003, is a three page assembly
+and detail drawing of the core support assembly. The next drawing, number A10004, is a detail drawing of the
+specimen tabletop. The last drawing, number A10005, is a detail drawing of the clamp plate.
+All drawings were made in accordance with the requirements of ASME Y14.100.
+
+34
+
+ 
+
+35
+
+ 
+
+36
+
+ 
+
+37
+
+ 
+
+38
+
+ 
+
+39
+
+ 
+
+40
+
+ 
+
+41
+
+ 
+
+

@@ -1,0 +1,658 @@
+Design and Analysis of Reusable Nozzles for Cal Poly’s
+Hybrid Rocket Lab
+
+A Senior Project presented to the Faculty of the Aerospace Engineering Department California
+Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree
+Bachelor of Science
+By
+Cheyne Austin & Jose Vargas
+June, 2013
+
+© 2013 Cheyne Austin & Jose Vargas
+
+Design and Analysis of Reusable Nozzles for Cal Poly’s
+Hybrid Rocket Lab
+Cheyne Austin1 and Jose Vargas2
+Aerospace Engineering Department, California Polytechnic State University, San Luis Obispo, CA, 93405
+
+Two nozzles were designed and constructed for testing in the Cal Poly propulsion
+laboratory to explore which nozzle was the most capable in producing the most thrust. A 15
+degree and 30 degree converging-diverging nozzles were machined and tested. Theory suggest
+that a bell nozzle would be the most efficient since all of the gasses generated in the combustion
+chamber are directed and accelerated by the throat leave the nozzle traveling along the thrust
+axis. All of the momentum of the gasses are directed axially thus resulting in maximum thrust.
+Thrust should also be produced by the converging-diverging nozzle and the hole nozzle since
+due to the continuity equation a decreased area should result in an increase in velocity of the
+flow. From the experimental tests conducted it was found that the 15 and 30-degree
+converging-diverging nozzles resulted in an average of 1.47 and 1.57 lbf of thrust respectively.
+The nozzle that produced the most thrust was the 30 degree nozzle.
+
+A
+CD
+D
+F
+I
+Isp
+L
+M
+mV
+𝑚̇
+O/F
+P
+R
+r
+T
+t
+V
+A
+∆D
+∆W
+𝜌𝑓
+
+
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+
+amb
+dia
+e
+fuel
+f
+
+=
+=
+=
+=
+=
+
+1
+2
+
+Nomenclature
+Area (in2)
+Sonic Nozzle Discharge Coefficient
+Pipe Diameter (in)
+Force (lbf)
+Impulse (lbf second)
+Specific Impulse (sec)
+Fuel grain length (in)
+Mach number
+milliVolts
+Mass Flow Rate (slugs/sec)
+Oxygen to Fuel Mixture Ratio
+Pressure (psi)
+Pipe Radius (in)
+Average Fuel Regression Rate, Burn Rate (in/sec)
+Temperature (Rankine)
+Burn time (sec)
+Voltage (volts)
+Change in cross-sectional area of fuel grain core (in2)
+Average change in diameter of fuel grain core after burn (in)
+change in fuel grain weight
+Fuel grain density
+Specific Heat ratio
+Subscripts
+Ambient Conditions
+diameter
+Exit
+Fuel
+final
+
+Aerospace Engineering Undergrad, Aerospace Engineering Department, California Polytechnic State University, San Luis Obispo
+Aerospace Engineering Undergrad, Aerospace Engineering Department, California Polytechnic State University, San Luis Obispo
+
+i
+OX
+
+=
+=
+
+initial
+Oxygen
+
+I. Introduction
+YBRID rockets are rocket motor systems that use a solid fuel grain, and the other some type of liquid or gas as an
+Hoxidizer. A hybrid rocket uses propellants in two different states of matter - one solid and the other either gas or
+liquid. The Hybrid rocket concept can be traced back at least 75 years. Hybrid rockets exhibit advantages over both
+liquid rockets and solid rockets especially in terms of simplicity, safety, and cost. Because it is nearly impossible for
+the fuel and oxidizer to be mixed intimately (being different states of matter), hybrid rockets tend to fail more benignly
+than liquids or solids. Like liquid rockets and unlike solid rockets they can be shut down easily and are simply throttleable. The theoretical specific impulse, Isp, performance of hybrids is generally higher than solids and roughly
+equivalent to hydrocarbon-based liquids. Specific Impulses as high as the 400s have been measured in a hybrid rockets
+using metalized fuels. Hybrid systems are slightly more complex than solids, but the significant hazards of
+manufacturing, shipping and handling solids offset the system simplicity advantages.
+In its simplest form a hybrid rocket consists of a pressure vessel (tank) containing the liquid propellant, the
+combustion chamber containing the solid propellant, and a valve isolating the two. When thrust is desired, a suitable
+ignition source is introduced in the combustion chamber and the valve is opened. The liquid propellant (or gas) flows
+into the combustion chamber where it is vaporized and then reacts with the solid propellant. Combustion occurs in a
+boundary layer diffusion flame adjacent to the surface of the solid propellant. Generally the liquid propellant is the
+oxidizer and the solid propellant is the fuel because solid oxidizers are problematic and lower performing than liquid
+oxidizers. Furthermore, using a solid fuel such as HTPB or paraffin allows for the incorporation of high-energy fuel
+additives such as aluminum, lithium, or metal hydrides. Common oxidizers include gaseous or liquid oxygen or nitrous
+oxide. Common fuels include polymers such as polyethylene, cross-linked rubber such as HTPB or liquefying fuels
+such as paraffin.
+In order to generate additional thrust from firing hybrid rockets, nozzles are attached to the flow-exiting end
+of the fuel grain. These nozzles converge and/or diverge the flow into, through, and out of the nozzle in order to
+accelerate the flow and generate more thrust. There are many different shapes and types of nozzles out there, but for
+this project we are looking at 3 certain shapes of nozzles: a hole nozzle, a converging-diverging nozzle, and a bell
+nozzle. First, the hole nozzle has a conical converging section that will converge to a hole and the flow will exit out
+of the hole and expand freely into the atmosphere. This configuration should have the least amount of thrust of the
+three nozzle shapes being looked at because the exiting flow expands unbounded and the thrust vector is not kept in
+check horizontally. Second, the converging-diverging nozzle has a conical converging section down to the throat and
+then a conical diverging section where the flow will expand as much as allowed by the shape of the nozzle. This
+configuration should show more thrust than the hole nozzle because the exiting flow is bound and only allowed to
+expand at a certain angle, therefore keeping the thrust vector more horizontal out of this nozzle than the hole nozzle.
+Finally, the bell nozzle has a conical converging section down to the throat and a bell-shaped diverging section. This
+nozzle shape should show the most thrust out of the three configurations because the bell-shaped diverging section
+allows the flow to expand, and then corrects the flow expansion angle by redirecting the flow closer to the horizontal
+and changing the thrust vector to as close to horizontal out the back of the nozzle as possible.
+Another way to analyze which nozzle will provide more thrust is through the static thrust equation:
+𝐹 = 𝑚̇𝑉𝑒 + (𝑃𝑒 − 𝑃𝑎𝑚𝑏 )𝐴𝑒 (1)
+where T is the thrust, is the mass flow rate, 𝑉𝑒 is the flow exit velocity in the axial direction, 𝑃𝑒 is the pressure at the
+exit of the nozzle, 𝑃𝑎𝑚𝑏 is the ambient air pressure, and Ae is the exit area of the nozzle. For all 3 nozzle configurations
+we can assume that and 𝑃𝑎𝑚𝑏 are constant, 𝑉𝑒 was discussed previously as well as 𝐴𝑒 , and so the only variable is 𝑃,
+the exit pressure. The longer the expanding part of the nozzle is, the more the pressure drops getting closer and closer
+to the ambient pressure while assuming supersonic flow. By analyzing Eq. 1, maximum thrust can be achieved when
+the exit pressure is equal to the ambient pressure. So a longer expanding nozzle section is ideal. Therefore, the
+converging-diverging and bell nozzle will provide more thrust than the hole nozzle because of the expanding section
+dropping the pressure closer to ambient as well as the exit area being smallest. Also, the maximum exit velocity the
+hole nozzle can have is sonic, whereas the C-D and bell nozzles can go supersonic because of their expanding sections.
+The exit velocity in the axial direction for the bell nozzle will be greater than the C-D nozzle because it corrects the
+flow direction more than the conical diverging section in the C-D nozzle. Therefore, through analysis of the static
+
+thrust equation we can say that the order of the nozzles from highest to lowest in the amount of thrust provided should
+be the hole nozzle, C-D nozzle, then the bell nozzle.
+II.
+
+Procedure
+
+A. Apparatus
+This experiment is run with Cal Poly’s hybrid rocket setup as seen in Figure 1. The solid fuel for this experiment
+was a clear thermoplastic called polymethylmethacrylate (PMMA), often used as a lightweight or shatter-resistant
+alternative to glass known as Plexiglas. The chemical composition of this material is as shown:
+𝐶5 𝑂2 𝐻8
+As the oxidizer mixes with the fuel in the combustion process a balanced chemical equation results as followed below:
+𝐶5 𝑂2 𝐻8 + 6𝑂2 → 5𝐶𝑂2 + 𝐻2 𝑂
+
+Figure 1 Hybrid Rocket Setup1
+
+(a)
+
+(b)
+
+(c)
+
+Figure 2. (a) 15 Degree Nozzle (b) 30 Degree Nozzle (c) Hole nozzle
+
+The 15 and 30 degree converging-diverging nozzles had a throat-to-exit ratio of 0.55 and 0.32 respectively as seen in
+Figure 2. The hole nozzle was designed to an exit diameter of 0.25 inches with the same inlet diameter as the previous
+nozzles.
+B. Procedure
+Using LABVIEW a load cell was used to record the force data on the test stand as a voltage reading. Oxygen
+pressure and chamber pressure was recorded by hand during the run from pressure gauges. The sensor was first
+calibrated before the experiment was conducted. This was done by adding 1lb weights for a total weight of 5lbs in
+order to obtain a linearized curve to convert voltage readings from the experiment. The voltages from the pressure
+transducers were then routed to a National Instrument data acquisition unit, which converts analog voltages to digital
+data. The calibration data can be seen in Figure 3. The calibration data show 6 columns of data corresponding to
+
+Figure 3. Calibration data used to create a linear regression line that gave the corresponding
+force for a given voltage.
+
+millivolts associated with no load up to five pounds of weight. In order to calculate the trend line hat best reflects the
+calibration, the average of all the values for a particular weight reading was calculated. Each of those six points were
+used to calculate the line of best fit for the data obtained for three days. The line of best fit was found to be,
+𝐹𝑜𝑟𝑐𝑒 = 598.3457 ∗ 𝑉𝑜𝑙𝑡𝑎𝑔𝑒 − 11.5962
+𝐹𝑜𝑟𝑐𝑒 = 550.1235 ∗ 𝑉𝑜𝑙𝑡𝑎𝑔𝑒 − 11.2861
+𝐹𝑜𝑟𝑐𝑒 = 538.0518 ∗ 𝑉𝑜𝑙𝑡𝑎𝑔𝑒 − 11.0866
+
+Where the force is in lbf and the voltage is in millivolts. Three calibration lines were obtained since all runs were
+conducted through the course of three days. In order to acquire voltage readings for each run the load cell was
+calibrated for every day a hot fire was tested.
+Once calibration data was obtained every fuel grain and nozzle were then measured and recorded. The length
+of the fuel grain was measured to be 9.0 in with an inner and outer diameter of 0.496 and 2.07 inches respectively.
+The mass of the fuel grain before the experiment was 1.146 lbs. The nozzle dimensions were also measured and are
+shown above.
+Before running the experiment a leak test was performed in order to make sure that the oxidizer would not leak
+out of stand. A fuel grain with no hole drilled through the middle was installed into the test stand where compressed
+air was let into the system. The leak test was performed by determining from the sound of air exiting the test stand.
+Once the leak test was performed the actual fuel grain was lubricated on both ends and then installed into the test
+stand. Once test area was then cleared of combustible and loose material the propane tank was opened up and regulated
+to about 25 psig in order to accelerate the ignition process. The oxygen tank was then opened up and regulated to a
+pressure of 95 psig. The load cell black was then removed from the test stand and all personnel were cleared from the
+test cell. The system was then powered on and armed. The experiment was then run for about 45 second where the
+tank pressures and chamber pressures were recorded while the DAQ recorded the voltage readings from the load cell.
+The experiment was also conducted using a cold flow test where the hybrid rocket was not ignited. Once the test was
+completed the experiment was then redone using a hole nozzle. Finally the apparatus was uninstalled and data was
+exported and analyzed in MATLAB. In order to calculate the average regression rate change in area was calculated
+through the equation shown below:
+∆𝐴 =
+
+∆𝑤
+
+(1)
+
+𝜌𝑓 𝐿
+
+where ∆A is the change in cross-sectional area of the fuel grain core after the burn, ∆w is the change in fuel grain
+weight, L is the length of the fuel grain, and ρf is the density of the fuel grain. The initial area was found through the
+following equation:
+𝜋∗𝐷𝑖2
+
+𝐴𝑖 =
+
+4
+
+(2)
+
+where Di is the diameter of the fuel grain before firing. The final are is the calculated using the equation below.
+𝐴𝑓 = 𝐴𝑖 + ∆𝐴
+
+(3)
+
+where Af is the final area and ∆A is the change in cross-sectional area of the fuel grain. The final diameter is
+calculated using
+4𝐴𝑓 1/2
+)
+𝜋
+
+𝐷𝑓 = (
+
+(4)
+
+The change in diameter is calculated in order to find the average fuel regression rate as shown below.
+∆𝑑𝑖𝑎 = 𝐷𝑓 − 𝐷𝑖
+
+(5)
+
+The burn rate or average fuel regression rate was calculated using the following equation:
+𝑟=
+
+∆𝑑𝑖𝑎
+
+(6)
+
+𝑡𝑏
+
+where r is the burn rate, ∆𝑑𝑖𝑎 is the change in diameter found from equation (5), and tb is the burn time which is
+found by subtracting the final burn time from the initial burn time. The average fuel flow rate was then found using
+the following equation:
+𝑚̇𝐹𝑢𝑒𝑙 =
+
+∆𝑤
+𝑡𝑏
+
+(7)
+
+where 𝑡𝑏 is the burn time and ∆𝑤 is the change in fuel grain weight. A conversion factor of 32.2 was included in the
+weight calculations in order for the fuel flow rate to be in slugs/sec. The average oxygen mass flow rate was then
+calculated using
+𝑚̇𝑂𝑋 =
+
+𝐶𝐷 (𝑝0−𝑂2 +14.7)𝐴𝑡 𝛾
+√𝛾𝑅𝑇𝑂2
+
+(
+
+2
+𝛾+1
+
+(
+
+𝛾+1
+
+) 2(𝛾−1)
+
+)
+
+(8)
+
+where CD is the sonic nozzle discharge coefficient of 0.94, 𝑃0−𝑂2 is the oxygen pressure upstream from the sonic
+nozzle (assumed equal to stagnation pressure or tank pressure), 𝐴𝑡 is the sonic nozzle throat area, γ is the specific
+heat ratio of 1.395 at 77˚F, R is the universal gas constant of 48.291 ft-lbf/lbm-R, TO2 is the oxygen stagnation
+temperature which is assumed to be equal to ambient air temperature. The mixture ration can then be calculated
+using the following equation:
+𝑂
+𝐹
+
+=
+
+𝑚̇𝑂𝑋
+𝑚̇𝐹𝑢𝑒𝑙
+
+(9)
+
+where 𝑚̇𝑂𝑋 and 𝑚̇𝐹𝑢𝑒𝑙 were calculated from equations (7) and (8). The specific impulse of the rocket is then
+calculated with the following equation
+𝐼𝑠𝑝 =
+
+𝐹
+̇ 𝑂𝑋 +𝑚̇𝐹𝑢𝑒𝑙 )
+(𝑚
+
+(10)
+
+where F is the average thrust.
+
+III. Results
+Data was obtained throughout the length of three days for three nozzles. The load cell was calibrated every day
+and the following results were obtained. Figure 4 shows the force on the load cell produced by running the experiment
+with the oxygen supply at a pressure of 95psig for 45 seconds. The plot on the left shows all the data acquired for the
+first day of the 15 degree nozzle. As is seen in the figure, negative data was obtained for the experiment. Since negative
+
+Figure 4. Thrust of 15 Degree Nozzle for the First Day. Right Plot Shows Reduced Data
+
+thrust is not valid data and a systematic error, negative thrust point were removed. The values before the ignition
+switch was turned on were also removed to obtain an accurate burn time. The points where the load cell registered
+more than five pounds were also removed since the load cells is only able to acquire a maximum thrust of five pounds.
+Data obtained from the three days was averaged and resulted in an average thrust of 1.47 lbs for the 15 degree nozzle.
+Table 1 shows all of the parameters calculated for the 15 degree nozzle using the equations discussed in the previous
+section.
+
+Table 1. 15 Degree Nozzle Calculated Parameters
+
+15 Degree
+Nozzle
+Parameters
+Thrust
+Regression
+Rate, r
+
+Run 1
+
+Run 2
+
+Run 3
+
+Run 4
+
+Average
+
+1.5971
+
+1.9625
+
+1.086
+
+1.2476
+
+2.8005e-4
+
+2.8237e-4
+
+3.2088e-4
+
+2.922e-4
+
+𝒎̇𝒇𝒖𝒆𝒍
+
+8.736e-5
+
+8.8067e-5
+
+9.9225e-5
+
+9.0251e-5
+
+𝒎̇𝒐𝒙
+
+0.022324
+
+0.021647
+
+0.021667
+
+0.01392
+
+𝑶/𝑭
+𝑰𝒔𝒑
+
+255.5369
+2.2132
+
+245.7964
+2.8041
+
+218.3629
+1.5495
+
+154.2312
+2.8041
+
+1.47 lbs
+2.94e-4
+(in/sec)
+9.1e-5
+(slugs/sec)
+0.02
+(slugs/sec)
+218
+2.34 (sec)
+
+As seen in Table 1 the thrust produced for each run does vary by a tenth of a pound. It was noted in conducting
+the experiment that there was a minor inconsistency in the throat of the nozzle, which caused an angled exit flow as
+seen in the Figure 5. This inconsistency therefore caused the nozzle to not divert its full force axially to the load cell.
+
+Figure 5. 15 Degree Nozzle with an Angled Exit Velocity
+
+The second nozzle used for the experiment was the 30 degree nozzle. The thrust obtained for all of the data is
+shown below in Figure 6 and for the reduced data. The average thrust produced for this nozzle resulted in a 6.4%
+increase from the 15 degree nozzle with an average thrust of 1.57 lbs.
+
+Figure 6. Thrust of 30 Degree Nozzle for the First Day. Right Plot Shows Reduced Data
+
+The 30 degree nozzle was ran for four runs and all parameters calculated are shown in Table 2. It was also noted that
+the thrust throughout the different days varied greatly and could be attributed to the accuracy of the calibration. The
+two new nozzles machined for this project, 15-degrees and 30-degrees, are shown in Figure 7, from left to right
+respectively.
+
+Table 2. 30 Degree Nozzle Calculated Parameters
+
+30 Degree
+Nozzle
+Parameters
+Thrust
+Regression
+Rate, r
+
+Run 1
+
+Run 2
+
+Run 3
+
+Run 4
+
+Average
+
+1.733
+
+1.909
+
+1.3084
+
+1.3296
+
+2.877e-4
+
+2. 8481e-4
+
+2. 9815e-4
+
+2.8989e-4
+
+𝒎̇𝒇𝒖𝒆𝒍
+
+8.8895e-05
+
+8.8001e-05
+
+9.2105e-05
+
+8.9554e-05
+
+𝒎̇𝒐𝒙
+
+0.021647
+
+0.021525
+
+0.013933
+
+0.01377
+
+𝑶/𝑭
+𝑰𝒔𝒑
+
+243.5054
+2.4761
+
+245.9809
+2.7277
+
+151.2704
+2.8972
+
+155.5793
+2.9448
+
+1.57 lbs
+2.9e-4
+(in/sec)
+8.9e-5
+(slugs/sec)
+0.017
+(slugs/sec)
+199
+2.76 (sec)
+
+Figure 7. 15-Degree Nozzle (left) and 30-Degree Nozzle (right).
+
+The third nozzle used for the experiment was the hole nozzle. Unfortunately the hole nozzle designed for this
+project was not machined in time therefore a previously used hole nozzle was used instead as a comparison to the
+other two nozzles produced. The average thrust produced for this nozzle resulted was an average thrust of 1.46 lbs the
+lowest of the three nozzles, which was expected.
+Table 3. Hole Nozzle Calculated Parameters
+
+Hole Nozzle
+Parameters
+Thrust
+Regression
+Rate, r
+
+Run 1
+
+Run 2
+
+Run 3
+
+Average
+
+1.4574
+
+1.4062
+
+1.4991
+
+3.0093e-4
+
+3.0617e-4
+
+3.032e-4
+
+𝒎̇𝒇𝒖𝒆𝒍
+
+9.3057e-05
+
+9.4675e-05
+
+9.3741e-05
+
+𝒎̇𝒐𝒙
+
+0.013867
+
+0.01392
+
+0.013933
+
+𝑶/𝑭
+𝑰𝒔𝒑
+
+149.0143
+3.2423
+
+147.0248
+3.1162
+
+148.631
+3.3191
+
+1.46 lbs
+3.03e-4
+(in/sec)
+9.38e-5
+(slugs/sec)
+0.014
+(slugs/sec)
+148
+3.22 (sec)
+
+Since the hole nozzle was only conducted for three runs the resulting thrust was the lowest but only by 0.01 lbf of
+thrust. It did have the most consistent average thrust produced throughout each run. This can be attributed to the fact
+that the hole nozzle was conducted in one day whereas the 15 degree and 30 degree nozzles took two days.
+Inconsistencies in the thrust produced for the converging-diverging nozzle could be reduced in the future by allocating
+one day for just one nozzle.
+
+IV. Conclusion
+In this experiment, the thrusts for three different nozzles were observed, and specific impulses were calculated
+using the Cal Poly hybrid rocket lab test stand with a five-pound load cell. It was observed that changing to the new
+nozzles had a direct impact on increasing thrust. A larger diameter throat allowed for more oxidizer flow while still
+
+converging the flow, which increased the overall thrust. The ratio of inlet to outlet diameter of the new nozzles is
+directly related to the maximum exit velocity and thrust achieved. It is important to understand the assumptions,
+restrictions and errors of any measuring and calculation method used. Some possible human error could come from
+having to set the pressure on the oxidizer tank, which directly effects oxidizer flow rate, each time the nozzles were
+fired. Some other error in the data came from spikes in chamber pressure and thrust when some “crud” and pieces of
+the solid fuel grain got stuck in the nozzle before being incinerated and the nozzle opened to full flow again. Overall,
+the goals of this project were achieved in that new reusable nozzles with higher thrusts were designed and built and
+compared to the old nozzle using the LabView DAQ setup in the Cal Poly Propulsion Lab, while exploring hybrid
+rocket bell nozzle design.
+Appendix
+Error Analysis
+5lb Load Cell Resolution: 16 bits
+Resolution:
+0.5V/216 = 7.63 V per bit
+Acknowledgments
+We have taken efforts in this project. However, it would not have been possible without the kind support and help
+of many individuals and organizations. We would like to extend our sincere thanks to all of them. We are highly
+indebted to Cody Thompson and Daniel Wait for their guidance and constant supervision as well as for providing
+necessary information regarding the project and for their support in completing the project.
+
+References
+1
+Wait, D., “Hybrid Rocket California Polytechnic State University, San
+Luis Obispo, CA, 2011 (unpublished).
+
+

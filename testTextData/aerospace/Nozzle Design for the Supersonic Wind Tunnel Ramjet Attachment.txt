@@ -1,0 +1,1142 @@
+Nozzle Design for the Supersonic Wind Tunnel Ramjet Attachment
+
+A Senior Project
+presented to
+the Faculty of the Aerospace Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+Of the Requirements for the Degree
+Bachelor of Science
+
+by
+Andrew Michael Carter
+June, 2013
+
+*
+
+Aerospace Engineering Student, Aerospace Engineering, 1 Grand Avenue San Luis Obispo California 93407
+
+Nozzle Design for the Supersonic Wind Tunnel Ramjet
+Attachment
+Andrew Michael Carter
+California Polytechnic State University, San Luis Obispo, California, 93410
+
+This document outlines the concept, design, and manufacturing stages of the nozzle
+section to the Ramjet Attachment. This project is a subsidiary of the thesis, Baseline
+Performance of Ramjet Engine”, developed by Harrison Sykes. The nozzle geometry is
+based off of theoretical calculations using Isentropic and Rayleigh line flow relations for a
+two-dimensional cross section. The nozzle sees an inlet temperature of 953 degrees
+Fahrenheit, pressure of 28 psi, and a Mach number of 0.356 after the combustion chamber.
+The nozzle section is a two foot long converging diverging nozzle to choke and accelerate the
+flow to achieve an exit temperature of 597 degrees Fahrenheit, a pressure of 8.8 psi and a
+Mach number of 1.5. The thrust of the system is 139 pounds. The nozzle is made out of flat
+stainless steel type 304 plates jointed together to allow for variable change in the throat and
+exit areas to choke the flow and optimize performance.
+
+Nomenclature
+A
+A*
+a
+CP
+h
+f
+̇
+̇*
+P
+R
+
+u
+V
+w
+β
+θ
+
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+
+cross-sectional area,
+cross-sectional area of nozzle to choke the flow,
+speed of sound,
+coefficient of pressure
+Heat Capacity,
+height of cross section, in
+fuel air ratio, mass flow rate of fuel / mass flow rate of air
+Mach number,
+mass flow rate,
+mass flow rate of choked flow,
+pressure, psi
+gas constant,
+entropy,
+temperature, R
+velocity,
+velocity,
+width of cross section, in
+density,
+wave angle
+deflection angle
+ratio of specific heats
+
+=
+=
+=
+=
+=
+=
+=
+
+freestream
+stagnation conditions
+section 1, the inlet
+section 2, after initial shock
+section 3, combustion chamber
+section 4, after the combustion chamber at the nozzle face
+section 5, nozzle throat
+
+Subscripts
+∞
+o
+2
+3
+4
+5
+
+2
+American Institute of Aeronautics and Astronautics
+
+6
+amb
+cold
+hot
+n,1
+n,2
+STD
+
+=
+=
+=
+=
+=
+=
+=
+
+section 6, at the nozzle exit
+ambient atmospheric property
+signifies cold data, gas property before the inclusion of fuel and combustion
+signifies hot data, gas property after fuel and combustion
+normal component of initial Mach number
+normal component after initial shock
+standard atmospheric property
+
+II. Introduction
+
+I. T
+
+he following paper details the team project to build a ramjet engine per the thesis of graduate student Harrison
+Sykes, “Baseline Performance of Ramjet Engine”. The ramjet project is designed to be used for senior level labs
+and graduate level research. The working principle of the ramjet is to first decelerate high speed air flow to create
+high pressure and low speed, then mix and combust fuel, and finally expel hot air with burnt fuel out the
+converging-diverging nozzle. The ramjet engine in this work has a nominal operation point of Mach 3.3 for the inlet,
+a maximum static temperature of 953 Fahrenheit, and a maximum static pressure of 31.635psi.
+The ramjet engine is mounted to the exit nozzle of the Supersonic Wind Tunnel (SSWT). The duct area
+dimensions of the ramjet engine are 4.937 inches wide by 4.785 inches high to match the exit nozzle of the Super
+Sonic Wind Tunnel. The overall length of the ramjet engine is six feet long. The length is broken into three equal
+sections of two feet for the compressor, the combustor, and the nozzle, as shown below in Fig. 1.
+
+Figure 1. Ramjet engine diagram. The three sections of the ramjet are show, the Inlet, the Combustor, and
+the Nozzle. This report will focus on the Nozzle section.
+A. The Ramjet Attachment
+The Ramjet project is a combined effort of four people, a thesis and three senior projects directed by the
+Aerospace Engineering department at Cal Poly. Harrison Sykes is the project lead and has designed the Chassis,
+procedures, manufacturing, safety, and material analysis of the system. The entire system is split into three different
+parts, as seen in Fig. 1, each two feet long. The inlet design and fabrication is directed by Clinton Humphrey. The
+combustion chamber and flame holder is designed by Paul Stone for a senior project. Lastly the nozzle section is the
+focus of the senior project outlined by this report.
+This wind tunnel is used as a hands on education tool in labs for supersonic aerodynamic principles and flow
+properties at supersonic velocities. It has come under consideration to split the propulsion lab into an astronautics
+and an aeronautics section thus increasing the variety of labs needed for each section. The ramjet project will be
+placed in consideration to be a future lab for the aeronautics side of the department. This project is also designed to
+be easily modulated to add in new sections in the future. Also, the ramjet attachment is designed to variably change
+throughout the inlet, the combustion chamber and the nozzle to demonstrate and obtain optimal performance.
+A ramjet is a type of jet engine that uses the forward motion of the engine to compress the incoming air precombustion, rather than using a compressor, as seen in a typical air breathing jet engine.
+The inlet slows and compresses the high speed air before it passes through the combustor. Ramjet inlets utilize
+shock waves to slow and compress the flow to raise internal pressure.
+The combustor injects fuel into the flowing air, and then ignites it. Fuel pressure and fuel flow to the fuel injector
+must be high enough such that the necessary fuel to air ratio for stoichiometry is maintained. But fuel flow should
+not exceed the stoichiometric range or else the flow will be saturated with fuel to the point that the flow will not
+ignite. The fuel injector ideally atomizes the fuel flow such that fuel can better mix with the air flowing through the
+engine. A flame holder is used to maintain flame stability and can be as simple as a flat plate. The flame holder
+shelters the flame and improves fuel mixing by inducing turbulence into the flow.
+This report will discuss the design behind the nozzle and its modular capabilities.
+3
+American Institute of Aeronautics and Astronautics
+
+1.
+
+Fuel Choice
+The fuel of choice is the ever popular Jet A aircraft fuel. This is a kerosene based fuel that is used all over the
+world by nearly every aircraft. However, Jet B fuel is used instead in really cold climates.
+Aircraft fuel is chosen for its high energy content and combustion quality as well as its stability, lubricity,
+fluidity, etc. It has a high flash point and a low freezing point making it stable and safe in many types of
+environments. This fuel has a 18550 BTU/lbm (43.15 MJ/kg) specific energy.2
+The stoichiometric mixing ratio, the ratio of fuel mass to air mass, found by Harrison is equal to 1/14. With the
+limit from the fuel pump of 0.012 gallons per second, this results in a temperature that is far below the estimated
+value based on theoretical assumptions of engine optimal performance. The engine wants to run at as high a T 4, the
+temperature at the inlet to the nozzle, as possible in order to achieve the most efficient performance.
+The ramjet attachment will use Jet A aircraft fuel because it is the desired fuel to use for such applications. This
+fuel is also readily available within the department as it is used in many current student projects and labs.1
+B. Nozzle Concepts
+The area-velocity relation, shown in the analysis section, describes the effect of flow velocity from changing
+area through a nozzle3. Nozzle flow will either accelerate or decelerate based on increasing or decreasing area. The
+interesting aspect is that a converging section of a nozzle will accelerate flow that has a Mach number less than 1.
+However, when the flow is supersonic, the Mach greater than 1, the flow will decelerate from a converging section
+with the presence of shocks, the principle important in the Ramjet inlet section. A diverging section, area change
+increasing, will accelerate flow when the Mach number is greater than 1. This is due to the difference in pressure of
+supersonic flow where the flow wants to expand and will accelerate down the length of a diverging nozzle when
+supersonic. The tricky part to accelerate flow is to design a nozzle that will have the exact area ratio between the
+inlet to the nozzle and the throat related to the Mach number that will choke the flow. Choked flow is when the
+Mach number at the throat is equal to 1. Choking the flow is key to a converging-diverging nozzle, if the crosssectional area ratio is not right, the flow will not be choked and thus not accelerate down the diverging section of the
+nozzle.
+For the Ramjet engine, there needs to be supersonic acceleration of flow out the exit of the nozzle to obtain
+thrust. As discussed in the inlet section, the ramp will slow and compress the flow to subsonic velocity. The
+combustion chamber burns the air and increases velocity quite a bit, as seen in the table in Appendix II. The nozzle
+inlet is still subsonic, thus to achieve supersonic exit velocity the nozzle is designed as a converging-diverging
+nozzle. A converging nozzle, as shown in Fig. 2, will only serve to accelerate subsonic flow to a velocity that is still
+below Mach 1. A diverging nozzle, Fig. 3, will decelerate the subsonic flow.
+
+Figure 2. Converging Nozzle. This
+figure shows a converging only nozzle.
+
+Figure 3. Diverging Nozzle.
+This figure shows a diverging
+only nozzle.
+
+The design of the nozzle for the Ramjet attachment began by understanding that it had to be a convergingdiverging nozzle to obtain the proper performance and necessary supersonic exit flow velocity. Figure 4 shows
+common shapes of converging-diverging nozzles.
+
+4
+American Institute of Aeronautics and Astronautics
+
+Figure 4. Converging-Diverging Nozzles. This figure shows converging-diverging nozzles used as a basis for
+the design process. The image on the right is more simplistic and reasonable for the scope of this project.
+C. Objectives
+The nozzle design has been narrowed down to a converging-diverging nozzle. For the scope of this project and
+to increase simplicity during manufacturing the nozzle will incorporate flat panels on one side of the rectangular
+cross-section. This can be seen in the right image of Fig. 4. The objective of the nozzle section is to choke and
+accelerate the flow to achieve thrust. The following sections outline the design and fabrication of a nozzle that is
+similar to this image.
+III. Analysis
+Within the analysis portion of this document the methods of calculation are presented and discussed. This analysis
+portion outlines only the nozzle section using isentropic relations. The analysis portions of the other sections of the
+Ramjet are discussed in their respective reports. The nozzle section begins with the outputs of the combustion
+chamber.
+A. Ramjet Engine Analysis for the Nozzle Section
+Given the outputs from the combustion chamber, this section
+uses the following equations to close and finish the model of the
+Ramjet system. This section gives the final outputs of the system’s
+performance parameters: thrust, exit Mach, exit temperature and
+pressure. The inputs to the nozzle analysis section are: static
+temperature, T, stagnation temperature, To, static pressure, p,
+stagnation pressure, po, static density, , stagnation density,
+,
+Mach number, M, specific heat ratio after combustion,
+, gas
+constant after combustion, Rhot, mass flow rate of air, ̇ , inlet
+Figure 5. Location Along Nozzle. This
+velocity, V1, inlet pressure, p1, and the height and width of the wind
+figure shows the numbers used in the
+tunnel.
+analysis section to show location. 4 is the
+In this analysis section the numbers shown in Fig. 5 will signify
+nozzle inlet, 5 is the throat and 6 is the
+the performance parameter’s location along the nozzle.
+nozzle exit.
+As mentioned above, Eq. (1), from Anderson, describes the
+area-velocity relation used to explain flow through a converging-diverging nozzle.3
+(
+
+)
+
+(1)
+
+The area of the wind tunnel cross section is a rectangle, the product of the height and width. Using isentropic
+perfect gas relations, the throat area can be found with the equation,
+[
+
+(
+
+)]
+
+(
+
+)
+
+(2)
+
+The nozzle throat area can be easily calculated by the cross-sectional area by Eq. (2). This throat area is the area
+needed to choke the flow based on isentropic relations and perfect gas assumptions. The next calculations to show
+are the isentropic relations for temperature, pressure, and density in accordance with area change. The equation,
+5
+American Institute of Aeronautics and Astronautics
+
+(3)
+can be used at any of the 3 locations to find the stagnation to static temperature ratio given the Mach number. The
+similar equations for stagnation to static pressure and density are,
+(
+
+)
+
+(4)
+
+(
+
+)
+
+(5)
+
+Isentropic relations do not have any stagnation losses along the length of section. As such the stagnation
+temperature, pressure and density are constant throughout the nozzle. This is shown by the equations,
+(6)
+
+(7)
+
+(8)
+Combining Eqs. (3) through Eq. (8) can now calculate the static temperature, pressure, and density of the nozzle
+throat using the equations,
+
+⁄
+
+(9)
+
+⁄
+
+(10)
+
+⁄
+
+(11)
+
+The speed of sound at the throat is found using the equation,
+√
+
+(12)
+
+And then the mass flow rate of the air and fuel mix at the nozzle throat is found using,
+(13)
+The value of
+in Eq. (13) is the velocity of the flow at the throat because the flow is choked at the throat when the
+throat has an area of A*.
+After finding the parameters at the nozzle throat, isentropic relations can be used again to calculate the
+parameters at the end of the diverging section of the nozzle, the exit of the Ramjet. Knowing exit pressure, Eq. (10)
+6
+American Institute of Aeronautics and Astronautics
+
+can be used to solve for the Mach number at the exit of the nozzle. With the throat and exit Mach, Eq. (3) and Eq.
+(5) can be used to find the stagnation to static ratio at the exit of the nozzle. Then using Eq. (9) and Eq. (11),
+replacing the 4’s with 5’s and the 5’s with 6’s, the exit temperature and density can be found, respectively.
+Using the exit static temperature the speed of sound at the exit can be found using Eq. (12). Along with the exit
+Mach number and speed of sound, the exit velocity can be calculated using the equation,
+(14)
+Equation (2) can then be used to calculate the ratio of the exit area to the throat area knowing the exit Mach
+number. The exit area can now be found with the equation,
+(15)
+And now the mass flow rate at the exit can be found with the relation,
+(16)
+The coefficient of pressure at the exit, of ambient air, if found using the equation,
+(17)
+Knowing that the stagnation temperature and pressure at the exit are equal to the values at the inlet of the nozzle, the
+inputs to this section, the exit velocity can also be calculated using the equation,
+
+√
+
+(
+
+(
+
+)
+
+)
+
+(18)
+
+which is extremely close to the value found from Eq. (14) so the relations can be checked.
+The thrust of the engine can then be calculated with the exit pressure, area, mass flow rate and velocity using the
+equation,
+(
+
+)
+
+(19)
+
+The thrust equation shows that if the design is set to end at the atmosphere pressure then the right side of the
+equation is equal to zero.
+
+IV. Theoretical Results and Discussion
+The equations expressed in the analysis section are laid out into a Matlab code and used to calculate the
+theoretical results of the system. Imbedded within the code are constants that are used to counteract the theoretical
+properties and add in the uncertainties and efficiency losses from the ramjet engine. For example, the combustion of
+the fuel is only 50% efficient and the fuel flow capabilities are far lower then what was initially inferred.
+The full table with all the parameters of the Ramjet is in Appendix II. The maximum temperature seen by the
+system is at the inlet to the nozzle at 953 degrees Fahrenheit. The stagnation properties are constant along the length
+of the nozzle. The stations are the same as the locations in the analysis section and Fig. 5. The nozzle accelerates the
+flow to a Mach number of 1.5 and cools to an exhaust temperature of 600 degrees Fahrenheit at the exit of the
+Ramjet.
+In Appendix I are the plots created through Matlab that show the performance parameters at each station of the
+Ramjet. These are the values that are placed into Table 1.
+These are all theoretical values and have not been tested. The project ran out of time and future work will be on
+comparing theoretical values to experimental values for temperature and pressure as well as Mach number to check
+theoretical assumptions and calculations. One of the main reasons to test the theoretical values will be to measure
+7
+American Institute of Aeronautics and Astronautics
+
+the output of the fuel system when the Ramjet ignites and compare to the estimated values for fuel flow in the
+engine.
+Table 1. Nozzle Performance Parameters. This table outlines the input values that are the inlet to the nozzle section and the
+values at the throat and exit of the nozzle. These values are calculated using the equations in the analysis section.
+
+Static
+Pressure
+(psi)
+
+Static
+Density
+(slugs/ft3)
+
+Stagnation
+temperature
+(°F)
+
+Stagnation
+Pressure
+(psi)
+
+Stagnation
+Density
+(slugs/ft3)
+
+Mass
+Flow
+Rate
+(slugs/sec)
+
+Station
+
+Description
+
+Mach
+
+Static
+Temperature
+(°F)
+
+4
+
+Nozzle Inlet
+Nozzle
+Throat
+Ramjet Exit
+
+0.356
+
+953.01
+
+28.44
+
+0.00179
+
+982.59
+
+30.92
+
+0.0018
+
+0.1855
+
+1.000
+
+778.32
+
+16.71
+
+0.00120
+
+982.59
+
+30.92
+
+0.0018
+
+0.1855
+
+1.488
+
+596.84
+
+8.82
+
+0.00074
+
+982.59
+
+30.92
+
+0.0018
+
+0.1855
+
+5
+6
+
+Using the Eq. (2) and Eq. (15) the throat and exit area can be calculated. These values come out to be 13.4 in 2
+and 23.6 in2. Dividing by the width of the system solves for the height difference between the nozzle ramps and
+the top of the test cross-section. The throat is 2.72 inches from the top and the exit is flush with the bottom at
+4.785 inches.
+
+Figure 6. Nozzle Throat and Exit Height. This figure shows a
+side view displaying the displacement of the throat and the exit from
+the top of the cross-section.
+
+V. Apparatus and Procedures
+The nozzle section is a 2 foot long section specifically for the nozzle portion of the Ramjet. The inlet and the
+combustion chamber each have a 2 foot long section as well. Figure 1 shows a simple side view of the entire
+assembly. The introduction section above discusses the basic dimensions critical to the nozzle design.
+A. Apparatus
+The Ramjet will be an attachment placed
+upon the supersonic wind tunnel. Figure 7
+shows a more detailed view of the final
+assembly designed by Harrison Sykes. This
+assembly will be placed right into the
+supersonic wind tunnel.
+The project has not gotten to the point
+where the chassis is completely machined
+and assembled, but Fig. 7 depicts how it
+will look.
+Figure 8 shows the schematic of the
+supersonic wind tunnel with the location of
+the valves. The Converging Diverging
+Nozzle section is going to be replaced with
+
+Figure 7. Ramjet Attachment Isometric View. This figure shows
+a detailed view of the full assembly.
+
+8
+American Institute of Aeronautics and Astronautics
+
+the Ramjet attachment.
+
+Figure 8. Schematic of the Supersonic Wind Tunnel
+System. This figure shows the full schematic of the
+supersonic wind tunnel including all valves and location of
+the valves in the system. The safe room is not shown, but it is
+located on the left side of this schematic.
+
+B. Material Choice for Assembly
+The material choice for the ramjet assembly
+differs throughout the length of the assembly. In
+order to stay with safety considerations for
+temperatures the system may see, with
+stagnation temperatures nearing 167 and 2200
+Rankine, the metal must be able to meet the
+temperature limits. The high speed supersonic
+flow from the wind tunnel enters as a measly
+167 Rankine, or -292.67 degrees Fahrenheit. Do
+to the limitations of the fuel flow as presented in
+Harrison’s thesis, the maximum temperature
+only reaches 1413 Rankine, or 953 degrees
+Fahrenheit. The area in front of the combustion
+chamber will see very low temperatures due to
+the high velocity air flow. The temperatures after
+the combustion chamber may see very high
+temperatures. The material however must meet
+high temperature regulations to keep the
+necessary factor of safety.1
+For the Inlet, the material chosen is cold
+rolled steel to meet high internal pressure
+requirements. For the combustion chamber and
+the nozzle the material is stainless steel type 304.
+Stainless steel type 304 can withstand
+temperatures up to 2500 degrees Fahrenheit
+(2960 Rankine).4
+
+C. Nozzle Design and Manufacturing
+The design for the nozzle came about with
+the need to keep the Ramjet analysis and the
+manufacturing simple. The Ramjet engine is
+designed as a two-dimensional cross section of an engine. This is due to the fact that the project is based off of a
+baseline performance analyzing basic flow characteristics. With the importance of keeping the project simple, the
+nozzle is designed with flat plates as the ramp instead of a curved area change as seen in most high-end nozzles,
+such as the left image of Fig. 4. Also similar to Fig. 4 and shown in Fig. 9, the nozzle is changing area only on one
+side of the cross-section. This keeps it simple and eliminates any possible unnecessary, unforeseeable errors.
+As discussed in the material selection section, the nozzle is made entirely of stainless steel type 304. This is due
+to the high temperatures and possible high pressures seen in this section. The ramps are also solid 0.5 inch stainless
+steel to give a very strong and rigid support.
+
+Figure 9. Nozzle Assembly. This figure shows an isometric view on the left and a side view of the nozzle assembly on
+the right.
+Figure 10 shows the variability the nozzle is capable of. Image c in Fig. 10 is the optimal geometry based on the
+theoretical calculations to choke the flow. From experience it is wildly known that experimental values always have
+9
+American Institute of Aeronautics and Astronautics
+
+some form of error to them, as such the calculated height needed to choke the flow may be off. As such, the
+variability ensures that if the flow is not choked, then the height can be maneuvered.
+The important parameters needed to
+design the nozzle section are the cross
+sectional area for the throat and the exit of
+the nozzle. The cross sectional area is used to
+derive the height different between the top of
+the Ramjet test section and the throat or exit
+of the nozzle. This is shown above in Fig. 6
+and calculated in the theoretical results and
+discussion section.
+The diverging plate of the ramp is held
+into place via two axes by a rod end. The rod
+end is held into its vertical and horizontal
+position by being tightened with a hex nut on
+the top of the plate and on the bottom of the
+plate.
+The SolidWorks engineering drawings
+are located in Appendix III along with each
+images of each part to show clarity and
+greater definition.
+Manufacturing was conducted in the
+machine shop Mustang ’60 as well as the
+Aerospace machine shop near the subsonic
+wind tunnel. Three stainless steel type 304
+plates were ordered from Online Metals precut to a relatively close length. This metal is
+selected as it can withstand temperatures up
+to 2500 degrees Fahrenheit.4 A horizontal
+band saw was used to cut the slabs to length.
+A simple mill as shown in Fig. 11 was
+Figure 10. Nozzle Variability. This figure shows 3 views of the
+used to face and cut slots into the plates. A
+variability in the throat and exit area of the nozzle. The image on
+tool of 7/16” was used to face at a spindle
+the top is fully closed with no change from throat to exit. The
+speed of 612 rpm. A drill press was used to
+middle image shows that the nozzle can decrease throat area
+drill 1/4 inch holes in the plates at a speed of
+quite a bit. The bottom image shows the optimal location as
+375 rpm. Stainless steel is a very tough
+calculated in the theoretical results and discussion section.
+material to machine, thus small cuts using a
+lot of coolant were necessary. Figure 11 also
+shows a Makita grinder used to take off material and shape the plates.
+A detailed showing of the holes and slots to be cut are shown in the engineering drawings in the Appendix.
+
+Figure 11. Mill and Grinder Instruments. This figure shows a picture of the mill used to face the plates
+and cut slots and a grinder used to shape the plates.
+10
+American Institute of Aeronautics and Astronautics
+
+D. Procedure
+The procedure of the experiment conducted has been drafted by Harrison Sykes in his thesis. The project did not
+get far enough to undergo any testing and any procedure requirements for running the Ramjet attachment. The
+procedure is referenced in Harrison Sykes’ thesis.
+The nozzle attachment is mounted in the 3rd 2 foot section of the Ramjet. It is bolted into the section and tied
+down. The ramps are held in place via a full threaded rod end that is mounted onto the second ramp, the diverging
+section of the nozzle. This creates a two dimensional lock on the ramp only allowing vertical movement. The
+vertical movement also changes the angles of the ramp. The main reason for having this variability in the nozzle
+ramps is to ensure that the flow is choked at the throat. This allows for small changes in the throat height changing
+the throat area to optimize the performance. The exit area can also change to allow for desired changes in
+performance of the Ramjet.
+As shown in Fig. 10 the ramps are hinged together by a ¼” rod that runs between each slab. These must be
+placed into the slabs before assembling the nozzle into the Ramjet. Two ½” nuts secure the rod end in place to the
+bottom plate as shown in Fig. 10 as well. This design is also capable of being modular. It can be easily swapped for
+another nozzle design in the Ramjet chassis for future lab use.
+The primary procedure may be referred to in Harrison Sykes’ paper. The nozzle is mounted per the operator’s
+choosing and secured base plates of the Ramjet.
+After sealing up the ramjet, Sykes discusses the formal procedure to running the ramjet. The first step is to
+analyze the Ramjet performance without anything inside, just plain straight plates, as a dry run. This is to get a
+feeling for the supersonic wind tunnel and a check to make sure it is all working as planned. Upon further
+preparations, the next step is to do a dry run with the inlet, combustion chamber and nozzle all assembled inside the
+Ramjet. Another dry run is conducted to make sure the flow is compressed via the inlet and the Ramjet follows the
+theoretical calculations of a dry run, no fuel flow. With further preparation and safety procedures outlined by Sykes,
+the Ramjet will be ready to conduct a full test. This begins with running the supersonic wind tunnel without fuel at
+first to let the flow stabilize. Once the flow is stable, fuel would then be injected and ignited, and run for a short
+duration. The fuel pump would then be shut off, while the wind tunnel remains running to rapidly cool and flush the
+system. Refer to Sykes’ report for further detail into the procedures and safety measures.
+
+VI. Results and Discussion
+The project did not get to the point where testing and analysis was conducted. The testing will be done by Sykes
+as future work. The fuel injector test was conducted and is reported in the report, “Ramjet Combustion Chamber”.
+The theoretical numbers are displayed in Table 1 and in the table in Appendix I. These theoretical calculations will
+be checked with experimental data in future testing of the Ramjet.
+
+VII. Conclusion
+The nozzle design is a sub-project to Harrison Sykes thesis. Through historical research, simplistic solutions and
+theoretical calculations a basic two-dimensional nozzle was designed and developed for the Ramjet attachment to
+the supersonic wind tunnel. The nozzle section will see a maximum temperature, at the nozzle inlet, of 953 degree
+Fahrenheit and a pressure of 28 psi. The converging diverging nozzle is a modular design to allow the flow to choke
+and accelerate to optimize performance and achieve thrust. The theoretical exit Mach number is 1.45 and creates a
+thrust of 139 pounds.
+Due to time constraints for project funding and material shipments, the project became far behind schedule.
+Improvements could have been taken upon the fact that machining and fabrication should have started earlier, right
+when the parts and material arrived. The lab technician was very busy with several other projects so all the
+machining responsibility fell on us. As a result we quickly obtained a very good background into drilling and
+tapping holes, milling, grinding and sawing material. The stainless steel is a very tough material to machine so this
+served to teach us about proper spindle speeds, feed speeds, and depth of cut. Another thing we learned was how
+difficult it is to machine certain cuts and that our design needs to also consider how the material will be machined.
+As a result one of the major achievements from this project was to learn all about manufacturing techniques.
+Another thing that was learned was that machining the parts takes a considerable amount of time. An
+improvement to the project would to have allocated a lot more time for machining the parts and fabricating the
+chassis. Another improvement to the project would have been to start earlier with the safety committee because it
+took several weeks to get approved and then several more weeks to get approval for funding on the project.
+Future work on this project will include continued work on machining all the parts, assembling the Ramjet, and
+the testing phases to check theoretical calculations to experimental data. Completing fabrication is big step that
+11
+American Institute of Aeronautics and Astronautics
+
+needs to be completed as soon as possible. Experimental data will also show how the system actually reacts and as
+such, efficiency numbers can be added into the theoretical data to improve the engine model.
+This project taught a lot about machining different materials as well as the physical capabilities of each material.
+Similar to the business world, projects such as this have many setbacks and take a lot more time than originally
+planned. Overall I have learned a lot from this project, incorporating aerodynamic principles from lectures such as
+shock analysis, Rayleigh line flow, and isentropic relations and adding in machining techniques and manufacturing
+assemblies. The nozzle section can be taken out, manipulated and swapped for future designs as well. The future of
+this project is that the Ramjet will be finished as part of the thesis and used as a future lab for the Aerospace
+department lectures.
+
+12
+American Institute of Aeronautics and Astronautics
+
+Appendix I: Figures
+
+13
+American Institute of Aeronautics and Astronautics
+
+Appendix II: Tables
+
+Station
+
+Description
+
+Mach
+
+Static
+Temperature
+(°F)
+
+Static
+Pressure
+(psi)
+
+Static
+Density
+(slugs/ft3)
+
+Stagnation
+temperature
+(°F)
+
+Stagnation
+Pressure
+(psi)
+
+Stagnation
+Density
+(slugs/ft3)
+
+Mass Flow
+Rate
+(slugs/sec)
+
+0
+
+Inlet
+
+3.302
+
+-293.03
+
+1.05
+
+0.00053
+
+70.33
+
+60.00
+
+0.0095
+
+0.1805
+
+1
+
+Inlet Throat
+Combustion
+Chamber
+inlet
+Combustion
+
+0.535
+
+41.65
+
+26.71
+
+0.00447
+
+70.33
+
+32.45
+
+0.0051
+
+0.1805
+
+0.194
+
+66.37
+
+31.61
+
+0.00504
+
+70.33
+
+32.45
+
+0.0051
+
+0.1805
+
+0.196
+
+67.01
+
+31.63
+
+0.00533
+
+70.33
+
+32.45
+
+0.0051
+
+0.1855
+
+Nozzle Inlet
+Nozzle
+Throat
+Ramjet Exit
+
+0.356
+
+953.01
+
+28.44
+
+0.00179
+
+982.59
+
+30.92
+
+0.0018
+
+0.1855
+
+1.000
+
+778.32
+
+16.71
+
+0.00120
+
+982.59
+
+30.92
+
+0.0018
+
+0.1855
+
+1.488
+
+596.84
+
+8.82
+
+0.00074
+
+982.59
+
+30.92
+
+0.0018
+
+0.1855
+
+2
+3
+4
+5
+6
+
+Appendix III: Parts Pictures and Drawings
+
+14
+American Institute of Aeronautics and Astronautics
+
+Figure 15. Nozzle Assembly. This figure shows an isometric view of the nozzle with numbers for each plate. 1 is
+the generic base plate shown in Fig. 16. 2 is the first plate of the ramp shown in Fig. 17. 3 is the converging
+plate of the ramp shown in Fig. 18. 4 is the diverging plate of the ramp shown in Fig. 19.
+
+Figure 16. Generic Bottom Plate (Number 1). This figure shows a 3 view of the generic bottom plate with holes to hold
+the first ramp in place and a slot where the rod end will fall into. This is a common plate used throughout the Ramjet and
+did not need a drawing.
+
+Figure 17. First Plate (Number 2). This figure shows a 3 view of the first plate that starts the ramp and connects the
+converging plate.
+
+15
+American Institute of Aeronautics and Astronautics
+
+Figure 18. Converging Plate (Number 3). This figure shows a 3 view of the converging plate of the ramp in the
+nozzle section.
+
+Figure 19. Diverging Plate (Number 4). This figure shows a 3 view of the diverging plate of the ramp in the
+nozzle section.
+
+16
+American Institute of Aeronautics and Astronautics
+
+17
+American Institute of Aeronautics and Astronautics
+
+18
+American Institute of Aeronautics and Astronautics
+
+Appendix IV: Matlab Code
+% Andrew Carter
+% Senior Project
+% 12/30/12
+% As a part of the Ramjet Attachment to the supersonic wind tunnel at Cal
+% Poly - Thesis Project by Harrison Sykes
+function [thrust,x5,x6,xe,Astar,T6,Te,T06,T0e,p6,pe,p06,p0e,rho6,rhoe,...
+rho06,rho0e,mdotaf6,mdotafe,Me,height_throat,Ae,height_e] = RamNozzle(inputs)
+T5 = inputs(1); T05 = inputs(2); p5 = inputs(3); p05 = inputs(4);
+rho5 = inputs(5); rho05 = inputs(6); M5 = inputs(7); gamma_ic = inputs(8);
+height = inputs(9); width = inputs(10); R_ic = inputs(11); mdota = inputs(12);
+V_i = inputs(13); pi = inputs(14);
+% main ramjet code is RAMphysAPPcode which contains the engine steps:
+% inlet with a ramp (oblique and normal shock to compress and
+%
+slow the flow)
+%
+With the functions of:
+%
+IsentropicA (isentropic area change for the supersonic wind
+%
+tunnels throat and end (test area) )
+%
+IsentropicPerfGas
+19
+American Institute of Aeronautics and Astronautics
+
+%
+%
+%
+%
+%
+%
+%
+%
+
+obliqueshockfunct (includes normal shock for 0 degree slope
+Inlet combustor
+isentropic area change
+fuel mix location
+IsentropicGAMMA (gamma and gas constants change)
+combustion chamber
+RayleighLineFlow - addition of heat and combustion increases Mach
+and temperature drastically
+
+%% nozzle
+% Nozzle inlet, to choke the flow after the combustor
+[~, ~, ~, A_Astar] = IsentropicPerfGas(M5, gamma_ic);
+A5 = height*width;
+Astar = A5/A_Astar;
+[T6_T5, T06_T05, p6_p5, p06_p05, rho6_rho5, rho06_rho05, M6] = ...
+IsentropicA(M5, gamma_ic, A5, Astar);
+T6 = T5*T6_T5;
+T06 = T05*T06_T05;
+p6 = p5*p6_p5;
+p06 = p05*p06_p05;
+rho6 = rho5*rho6_rho5;
+rho06 = rho05*rho06_rho05;
+a6 = sqrt(gamma_ic*R_ic*T6);
+mdotaf6 = rho6*Astar*a6; % slugs/sec
+%% Known Exit Area - susceptible to change
+% p6 = 16*144;
+% Ae = height*width;
+% Ae = .1605;
+% [Te_T6, T0e_T06, pe_p6, p0e_p06, rhoe_rho6, rho0e_rho06, Me] = ...
+% IsentropicA(1, gamma_ic, Astar, Ae);
+%
+% pe = pe_p6*p6; % pexit
+% pamb = 14.7*144;
+%% Known exit pressure
+% known exit pressure where the exit pressure is equal to the ambient
+% pressure due to the desired nozzle design geometry
+% p6 = 17 * 144;
+pe = 14.7 * 144;
+% ambient pressure
+% pe = pi;
+[Te_T6, T0e_T06, Ae_Astar, p0e_p06, rhoe_rho6, rho0e_rho06, Me] = ...
+IsentropicP(M6, gamma_ic, p6, .4*pe);
+Ae = Astar*Ae_Astar
+pamb = pe;
+%% Exit Parameters
+rhoe = rho6*rhoe_rho6;
+rho0e = rho0e_rho06*rho06;
+Te = Te_T6*T6;
+T0e = T0e_T06*T06;
+p0e = p0e_p06*p06;
+ae = sqrt(gamma_ic*R_ic*Te);
+20
+American Institute of Aeronautics and Astronautics
+
+Ve = Me*ae;
+mdotafe = rhoe*Ae*Ve; % slugs/sec
+%% nozzle lengths
+angle_in = 15;
+% these angles were chosen from Huzel & Huang Modern
+% engineering for design of liquid-propellant rocket engines
+anglee = 10;
+%
+height_throat = height - Astar/width;
+in_length = (height_throat+.5/12)/tand(angle_in);
+height_e = height - Ae/width;
+e_length = (height_throat-height_e)/tand(anglee);
+xe = 6;
+x6 = xe - e_length;
+x5 = x6 - in_length;
+%% Thrust
+thrust = mdotafe*Ve - mdota*V_i + (pe - pamb)*Ae
+%% Output variables needed
+heightstar = 12*height - 12*Astar/width
+heightend = 12*height - 12*Ae/width
+in_length = (heightstar+.5)/tand(angle_in)
+e_length = (heightstar - heightend)/tand(anglee)
+in_plate = sqrt(in_length^2 + (.5+heightstar)^2)
+e_plate.shortexpansion = sqrt(e_length^2 + (heightstar-heightend)^2);
+e_plate.fullexpansion = sqrt(e_length^2 + (heightstar)^2)
+Ve
+end
+Isentropic Relations: function of area change (Harrison Sykes)
+% Harrison Sykes
+% IsentropicA function % This function calculates the conditions at the end of a duct subject
+% to area change using Isentropic Flow relations.
+function [T2_T1, T02_T01, P2_P1, P02_P01, Rho2_Rho1, Rho02_Rho01, M2] = ...
+IsentropicA(M1, gamma, A1, A2)
+[T01_T1, P01_P1, Rho01_Rho1, A1_Astar] = IsentropicPerfGas(M1, gamma);
+A2_AstarReq = A1_Astar*A2/A1;
+M2fun = @(M2) AstarIsentropic(M2, gamma, A2_AstarReq);
+if M1 < 1
+M2 = fzero(M2fun, [0.001, 1]);
+else % M1 > 1
+M2 = fzero(M2fun, [1, 500]);
+end
+[T02_T2, P02_P2, Rho02_Rho2, A2_Astar] = IsentropicPerfGas(M2, gamma);
+21
+American Institute of Aeronautics and Astronautics
+
+if (A2_AstarReq - A2_Astar)^2 > 10^-4
+error('Fzero did not converge')
+end
+P02_P01 = 1; % isentropic flow means stagnation pressure is constant
+T02_T01 = 1; % isentropic flow means stagnation pressure is constant
+Rho02_Rho01 = 1; % isentropic flow means stagnation density is constant
+P2_P1 = P01_P1/P02_P2;
+T2_T1 = T01_T1/T02_T2;
+Rho2_Rho1 = Rho01_Rho1/Rho02_Rho2;
+% M2_M1 = M2/M1;
+function [zero] = AstarIsentropic(M,gamma,A2_Astartest)
+% Define a function to use with fzero.
+% It just uses the IsentropicPerfGas function to output the A/A* value
+% for a given variable Mach number M.
+[~,~,~,A2_Astar] = IsentropicPerfGas(M, gamma);
+zero = A2_Astar - A2_Astartest;
+Isentropic Relations: function of required exit pressure (Harrison Sykes)
+% Harrison Sykes
+% IsentropicP function % This function calculates the conditions at the end of a duct subject
+% to area change using Isentropic Flow relations. This function solves
+% for the area change when the pressure change is known.
+function [T2_T1, T02_T01, A2_A1, P02_P01, Rho2_Rho1, Rho02_Rho01, M2] = ...
+IsentropicP(M1, gamma, P1, P2)
+[T01_T1, P01_P1, Rho01_Rho1, A1_Astar] = IsentropicPerfGas(M1, gamma);
+P02_P2req = P01_P1*P1/P2; %P01 = P02 as isentropic flow
+M2fun = @(M2) AstarIsentropic(M2, gamma, P02_P2req);
+% M2 = fzero(M2fun, [1, 10]);
+if M1 < 1
+M2 = fzero(M2fun, [0.001, 1]);
+else %M1 > 1
+M2 = fzero(M2fun, [1, 5]);
+end
+[T02_T2, P02_P2, Rho02_Rho2, A2_Astar] = IsentropicPerfGas(M2, gamma);
+if (P02_P2req - P02_P2)^2 > 10^-4
+error('Fzero did not converge')
+end
+P02_P01 = 1; % isentropic flow means stagnation pressure is constant
+T02_T01 = 1; % isentropic flow means stagnation temperature is constant
+Rho02_Rho01 = 1; % isentropic flow means stagnation density is constant
+A2_A1 = A2_Astar/A1_Astar;
+T2_T1 = T01_T1/T02_T2;
+Rho2_Rho1 = Rho01_Rho1/Rho02_Rho2;
+% M2_M1 = M2/M1;
+function [zero] = AstarIsentropic(M,gamma,P02_P2test)
+% Define a function to use with fzero.
+22
+American Institute of Aeronautics and Astronautics
+
+% It just uses the IsentropicPerfGas function to output the A/A* value
+% for a given variable Mach number M.
+[~,P02_P2,~,~] = IsentropicPerfGas(M, gamma);
+zero = P02_P2 - P02_P2test;
+
+Acknowledgements
+This research was carried out in the supersonic wind tunnel experimental laboratory at California Polytechnic
+State University, San Luis Obispo, California.
+This project was a subset to the Master’s Thesis project by Harrison Sykes
+Senior Project Advisor: Daniel Wait, Professor Aerospace Engineering, Cal Poly San Luis Obispo
+Project Manager: Harrison Sykes
+
+References
+1
+
+Sykes, Harrison. “Baseline Performance of Ramjet Engine”. 2013. Aerospace Engineering Department, Thesis.
+Aviation Fuels Technical Review. Chevron Global Aviation. 2006 Chevron Corporation.
+3
+Anderson, John D. “Fundamentals of Aerodynamics”. Fifth Edition. McGraw-Hill Companies publishing, 2011.
+4
+304/304L Stainless Steel Product Data Sheet. AK Steel. August 1, 2007. AK Steel Corporation.
+http://www.aksteel.com/pdf/markets_products/stainless/austenitic/304_304L_Data_Sheet.pdf
+2
+
+23
+American Institute of Aeronautics and Astronautics
+
+

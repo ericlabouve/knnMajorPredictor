@@ -1,0 +1,1866 @@
+California Polytechnic State University, San Luis Obispo
+
+The Atascadero Printery
+Prepared for: The Printery Foundation
+
+Prepared by: Kaylee Efstathiu, Jami Hahn, Tyler Pizarro,
+Elizabeth Townsend, Mark Luzi
+8, May 2017
+
+Preface
+
+FIGURE 1A
+
+The Building:
+
+The Atascadero Printery is a historic city building built in Atascadero, California. The building
+was damaged heavily during the San Simeon earthquake in 2003 and has since been
+abandoned. Recently, the Printery Foundation was established in hopes of preserving,
+purchasing and renovating the building for future generations.
+
+FIRST FLOOR
+
+SECOND FLOOR
+
+The Project:
+We have put together a proposition for bringing a new life to the building. This proposition
+includes evaluating the existing structure, proposing solutions to fix structural issues and
+creating a new layout of use for the building. Our work would provide the Printery Foundation
+material to use for fundraising purposes. Through this project, the hope is to illustrate to the
+people of Atascadero how important this building is to the community and to maintaining the
+history of the central coast.
+1|Page
+
+Table of Contents
+Preface --------------------------------------------------------------------------------------------------------- 1
+The Building: -------------------------------------------------------------------------------------------- 1
+The Project: ---------------------------------------------------------------------------------------------- 1
+Introduction --------------------------------------------------------------------------------------------------- 3
+Dedicated To -------------------------------------------------------------------------------------------- 3
+Who We Are --------------------------------------------------------------------------------------------- 3
+History --------------------------------------------------------------------------------------------------------- 4
+How We Got Involved --------------------------------------------------------------------------------------- 5
+Our Proposal -------------------------------------------------------------------------------------------------- 6
+Architectural Site --------------------------------------------------------------------------------------- 6
+Architectural Program --------------------------------------------------------------------------------- 6
+Structural Evaluation Criteria ------------------------------------------------------------------------ 7
+Structural Evaluation Results ------------------------------------------------------------------------- 7
+Structural Recommendations ------------------------------------------------------------------------- 9
+Conclusion -------------------------------------------------------------------------------------------------- 11
+The Building’s Future -------------------------------------------------------------------------------- 11
+Awareness --------------------------------------------------------------------------------------------- 11
+References -------------------------------------------------------------------------------------------------- 12
+
+2|Page
+
+Introduction
+Dedicated To
+Our advisors
+ARCE- Jill Nelson, SE, PMP, LEED AP – Associate Professor
+ARCH- Dale Clifford, AR, LEED AP – Assistant Professor
+The Printery Foundation | http://www.atascaderoprintery.org/
+Karen McNamara – President
+Chuck Dunlap - First Vice President
+Jenny Kim - Second Vice President
+Nicholas Mattson - Treasurer
+Kat Dunlap - Secretary
+Amber Long - Member, Architectural Historian
+Others:
+Lee Engelmeier, PE - Principal at Smith Structural Group, LLP
+Brent Nuttall, SE - Full Professor
+Kelle Brooks, AR, LEED AP - Lecturer
+
+Who We Are
+ARCE:
+Kaylee Efstathiu, 4th year
+Jami Hahn, 4th year
+Tyler Pizarro, 4th year
+ARCH:
+Elizabeth Townsend, 4th year
+Mark Luzi, 4th year
+
+3|Page
+
+History
+This project strives to save and
+revitalize one of Atascadero’s
+oldest buildings, The Printery,
+by transforming this damaged
+and abandoned structure into
+an epicenter of education and
+culture for the community. At
+just over one hundred years old,
+built in 1912, this building has
+taken on multiple programmatic
+roles within the city throughout
+its history, including a Women's
+Printery, junior college and a
+Masonic Lodge. Its functionality
+was cut short however, during FIGURE 1B
+the San Simeon earthquake in
+2003 when it became unsafe to occupy due to structural damage. Plans were made to abandon
+the site and auction off the land, but were reversed in hopes that The Printery Foundation, a
+nonprofit group dedicated to the preservation of the landmark, could find a suitable strategy
+for the redevelopment of the site and building. In recent years, vandals and natural processes
+have defaced the building. The Printery Foundation has held clean up days and fundraising
+events in hopes of preserving, purchasing and renovating the building for future generations.
+From the construction of the building, there have been multiple uses and owners. The first
+owner, E.G. Lewis along with his brother George B. Lewis, used the building as a Women’s
+Printery producing the paper known as The Illustrated Review and later the Atascadero News
+until the building was sold until the mid-1920’s. It was sold to Frank Moran to serve as the
+southern satellite campus for an exclusive boy’s prep school. In 1950, it was purchased by the
+Masonic Temple Association and served as the meeting place for the Atascadero Masonic
+Lodge into the 21st century. In 1994, the building was given to the City of Atascadero. The 2003
+San Simeon Earthquake caused a significant amount of damage and due to a lack of finances
+to bring the building up to code, the city returned the building to the Masons in 2005. The
+building eventually ended up in the hands of former North County developer Kelly Gearhart.
+Gearhart was convicted in May 2014 of fraud and the building was put up for auction by the
+City of Atascadero. The building has since been removed from auction and The Printery
+Foundation has been raising money to buy, restore, and repurpose the building.
+Being over one hundred years old, the building is eligible for listing on the National Register.
+This allows the building to be protected under the standards for the Treatment of Historic
+Properties from the National Park Service, which oversees the treatment of cultural resources.
+According to Amber Long, a member of the Printery Foundation and an Architectural
+Historian, the building has not been approved for listing because of problems over ownership
+of the building. It is the hope of the Foundation to obtain ownership of the building and have
+it listed on the National Register.
+
+4|Page
+
+How We Got Involved
+California Polytechnic State University (Cal Poly) is a public university located in San Luis
+Obispo, California. At Cal Poly, the Architectural Engineering (ARCE) department is an entity
+within the College of Architecture and Environmental Design. Students within in the ARCE
+program need to complete an interdisciplinary senior project as part of their curriculum.
+As a senior in need of a senior project, Kaylee Efstathiu went to associate professor Jill Nelson
+in hopes of receiving an idea for a project that would be interesting and insightful. Jill Nelson
+had the perfect project in mind, a project involving an existing building in Atascadero that
+was in need of a lot of TLC and a group of students to come up with a new life for the building.
+This was exactly the type of project Kaylee Efstathiu had been hoping for because it involved
+working on an already constructed building and helping the local community. Project idea in
+hand, Kaylee Efstathiu reached out to fellow architectural engineering students Jami Hahn and
+Tyler Pizarro, as well as Architecture students Elizabeth Townsend and Mark Luzi, who all
+were equally interested in the project and the team was formed.
+Once our team was established, we met with members of The Printery Foundation to find out
+their hopes for the building. At this meeting, we were tasked with developing a design that
+blends the landmark’s past with the city’s contemporary needs. This design would make a
+special effort to respect the site's historical patrimony. In order to complete this design, the
+building needed to be seismically retrofitted. Choosing to retrofit rather than redevelop
+fulfills defines the design as a necessary action as opposed to a desire for additional built
+space. Through design, this project can become an example of how preservation can benefit
+a community and solidify the ideas of the past in our modern society.
+Cal Poly's Architectural Engineering department strives to find projects locally that help the
+community in some way. This project will help the Printery Foundation with their efforts in
+presenting this building to the community for fundraising by illustrating how this building is
+not just important to the local community but to maintaining the history of the central coast as
+well. As a team, it was our hope for the project to be a benefit to the Foundation as they move
+forward in their goal of purchasing, renovating and repurposing this iconic building.
+
+5|Page
+
+Our Proposal
+Architectural Site
+
+1
+
+The site is located in the center of Atascadero,
+California on the border between residential
+neighborhoods and natural landscape (1). Adjacent to
+various locally beneficial projects, City Hall (2) and
+3
+Atascadero Middle School (3) among them, The
+Printery serves as an important link between the
+community and these institutions. The building and the
+land associated with it will be designed to respect
+2
+existing conditions while giving new use to the land
+furthering this connection. On the northern side of the
+pre-existing building stands a gymnasium, an addition SITE MAP
+to the original building, which will be removed in the
+future (see sheet A2 for location of the gymnasium). The goal of this project will be to bring
+back the original shell of the building and allow for additions in the future.
+
+Architectural Program
+The program of the project will be centered on creating usable space for the community,
+which in turn will foster art, technology education, and historical appreciation. Although the
+focus is on restoring the building, the program will be distributed between the existing
+structure and the surrounding outdoor space. With the gymnasium removed from the site, a
+plot of land will be left open for an addition of the Printery Foundation’s choosing in the future.
+The remainder of the site will be developed to add parking for building, community gardens,
+event spaces, and barbecue pits as shown on sheet A3 of appendix A.
+The interior of the building will be developed to have an open floor plan highlighting the
+original structure. Using the symmetry of the building and the layout of the windows, a grid
+system was developed to create new spaces throughout the building (see sheet A4-A6 for a
+more detailed description of how this was accomplished). The new spaces created with this
+grid system feature public spaces on the ground floor including a community kitchen, café,
+educational workspace, gallery, and event space. Private spaces including office facilities,
+and gathering areas will be located on the second floor to address security. The addition of
+these spaces created a need for additional accessibility to the building which will be added
+to the building in the needed locations while preserving the original entryway (see sheet A4
+for locations of access points). To keep the open layout floor plan the creation of modular
+partitions was added. The goal of the partitions will be to create the spaces mentioned above
+and not intervene with the existing structure. A more detailed description of the modular
+partitions can be found on sheets A8-A10 of Appendix A. In addition to creating a community
+epicenter, these elements will act as an attractor for outside visitors, and enhance the
+surrounding area.
+
+6|Page
+
+Structural Evaluation Criteria
+In order to seismically retrofit the building, the structure’s existing conditions need to be
+evaluated. The criteria of this evaluation is based on ASCE 41: Seismic Evaluation and Retrofit
+of existing Buildings.
+For a retrofit of an existing building there are a number of structural and non-structural
+components that need to be evaluated. The benchmark code (IBC 2000) for unreinforced
+masonry buildings was established in 2000. The Printery was built in 1912 so it is not
+considered a benchmark building. This means that the building needs to be evaluated under
+certain criteria. The building also has a high level of seismicity based off of the United States
+Geological Survey report. It is a risk category II structure which is a risk category that
+encompasses most commercial buildings. Because of this, the building requires a tier 1
+evaluation to comply with the requirements of ASCE 41. A tier 1 evaluation is based on existing
+construction documentation yet subject to the findings of on-site investigations. Our
+evaluation was based off of two site visits in winter 2016 and the original construction
+documents from 1912 that were obtained through the city of Atascadero. This evaluation is
+considered to be level 3-C. Level 3-C is an evaluation that allows life safety performance of
+both structural and non-structural elements. Life safety structural performance is a
+performance level of the building system that allows for the safe exiting of building occupants.
+This performance level does not guarantee continued occupancy before repair.
+
+Structural Evaluation Results
+The Atascadero Printery is an unreinforced masonry (URM) building. It is comprised of two
+different parts. There is the main building and the pool room. The pool room is located north
+of the main building and it is only one story with a wooden roof. The main building is two
+stories. The second level has a concrete slab that is at the same level as the wooden roof in
+the pool room. The roof level of the main building is another wooden roof. In a structure, the
+gravity system resists gravity (vertical) loads and the lateral (horizontal) system resists
+seismic loads. The gravity system in the Printery is comprised of wooden and steel trusses,
+concrete slabs, URM bearing walls, and concrete columns. The lateral system is made up
+entirely of URM walls that receive seismic loads from concrete and wooden diaphragms. A
+diaphragm is horizontal element that can be flat or sloped to transferring lateral loads. For the
+goal of this project, there was a focus on the lateral system of the structure due to seismic
+loading.
+The building has various notable structural
+deficiencies. All of these deficiencies
+involve the capacity of the unreinforced
+masonry walls and the connections to them.
+The load path, or how the load from an
+element travels through the building, is
+insufficient in various places involving
+connections to the URM walls. There are no
+existing wall anchors attaching the URM
+walls to the wooden diaphragms. The steel FIGURE 2 – POOL ROOM TRUSS CONNECTION
+7|Page
+
+trusses also lack a sufficient connection because they are embed into the URM in some places.
+This is a problem because the seismic load of the URM walls will be concentrated on these
+truss connections in a seismic event. This could have been what caused the structural damage
+seen in figure 2.
+
+Pool
+Room
+
+Main
+
+N
+
+N
+
+Building
+
+FIGURE 3 – 1ST FLOOR SLENDER WALLS
+
+FIGURE 4 – 2ND FLOOR SLENDER WALLS
+
+The structural capacity of the URM walls is inadequate in some areas of the building. The nineinch thick walls on the 1st floor and the thirteen inch walls on the 2nd floor (shown in figures
+3 and 4 as the dark black lines) do not meet the height to thickness ratio requirements of ASCE
+41. This means that the walls are too slender and would likely fail under out of plane seismic
+loads. An out of plane seismic load is the load caused by the weight of the wall itself.
+As for in plane seismic loads (loads that are applied along the walls), most of the walls have
+an adequate capacity with the exception of the walls in the plan north and south direction on
+the first floor shown in figure 5 as the darkened black lines. The estimated capacity of the URM
+walls was calculated to be less than the seismic demand (load expected in a seismic event).
+
+Pool
+Room
+
+Main
+
+N
+
+Building
+
+FIGURE 5 - INADEQUATE WALLS FOR IN PLANE SEISMIC LOAD (1ST FLOOR)
+This inadequacy can be the reason for shear failure in the walls during a seismic event. Shear
+failure in URM is when there is cracking and sliding with the mortar joints of the walls due to
+load that is applied along the walls.
+The outer layer of brick on the building is considered a veneer layer. This veneer layer is
+hazardous as the brick can fall off the walls during an earthquake.
+
+8|Page
+
+The existing diaphragm sheathing panels are inadequate for the pool room roof and the main
+building second floor roof. The aspect ratio, comparing the length to the width for unblocked
+diaphragms at the second floor roof is also inadequate.
+
+Structural Recommendations
+The proposed structural recommendations include the addition of strongback columns,
+shotcrete walls, wall anchors, veneer anchors, and new layers of sheathing throughout the
+building.
+We recommend installing strongback columns along all of the walls on the second floor as
+well as the nine inch thick walls on the first floor of the building (see appendix S sheets S1 and
+S2 for locations and connection details). Strongback columns are used to brace the walls
+reducing the potential for out of plane failure. The span of the URM would be deceased to the
+maximum spacing of the strongbacks which is six feet. In order to transfer the URM load to the
+diaphragm at the stairwell, another horizontal member would need to be added. The layout
+and construction details can be found in appendix S sheet S6. The columns would be
+connected to the walls via epoxy anchors on the second floor (Figure 6). This solution
+maintains the exterior look of the building. On the first floor the connection would be an
+anchorage design that penetrates the wall and connects to a plate on the opposite side (Figure
+7). The columns would connect to concrete diaphragms using a steel plate and Simpson Titan
+screws. At wooden diaphragm connections, there would be a steel plate connected to a
+wooden block that then transfers load into the rafters. The strongbacks are designed as
+square hollow steel sections that extend four inches from the walls on the second floor and
+five inches from the walls on the first floor. This design conserves floor space and mimics the
+architectural partition wall column additions.
+
+Anchors
+Existing
+wall
+
+Existing
+wall
+Pool
+Room
+
+New
+columns
+Main
+
+FIGURE 6 –
+
+FIGURE 7 –
+
+EPOXY ANCHORS
+
+PLATED ANCHOR
+
+N
+
+Building
+
+FIGURE 8 – SHOTCRETE WALL LOCATIONS
+(1ST FLOOR)
+
+To increase the capacity of the plan north/south walls for in plane shear load, we looked at the
+three common retrofits; shotcrete, brace frames and moment frames. After looking at the
+benefits of the three, we would recommend installing shotcrete walls to the locations called
+out as the black walls in figure 8. The shotcrete walls would be the best system to work around
+the windows and doors located frequently on these walls (see appendix S sheet S1 for a more
+detailed view). If a system of brace frames was used, the windows and doors would be
+blocked. Similarly, if a moment frame system was used, the URM walls would fail before the
+9|Page
+
+moment frame would feel any load. In the main
+building, the shotcrete walls would be
+connected to the concrete diaphragms with a
+Pool
+steel angle and titan screws. This connection
+Room
+N
+would be unobtrusive on the wall while
+transferring the in plane forces from the
+diaphragm to the ground. Similarly, this
+Main
+Building
+connection would be used in the poolroom to
+connect the shotcrete wall to the concrete floor.
+The connection to the roof timber diaphragm
+FIGURE 9 – WALL ANCHORAGE LOCATIONS needed a different connection, because the in
+(1ST FLOOR)
+plane and out of plane forces would need to be
+transferred from the diaphragm. This was
+accomplished using a Simpson Strong Tie anchor that has the ability to transfer both in plane
+and out of plane loads.
+We recommend installing similar wall anchors to URM walls that
+connect to a wood diaphragm. This situation occurs at the roof
+level in the pool room and the roof level in the main building.
+The strongbacks and shotcrete walls would already have these
+connections if installed. Given that the shotcrete walls and
+strongbacks are installed, anchors are still required on the plan
+north wall of the pool room in Figure 9 labeled as darkened
+black lines. Anchorage details can be found in appendix S,
+sheets S7 and S8.
+With the addition of the shotcrete walls in the pool room, we
+recommend connecting the pool room into the main building.
+Currently, the pool room walls are falling away from the main
+building (Figure 10). To solve this, a connection from the
+shotcrete walls into the URM of the main building is required.
+The connection would include rebar from the shotcrete through
+the URM, and then connected to the concrete diaphragm with
+the use of a metal plate and anchors to transfer the load into the FIGURE 10 – SEPARATION
+diaphragm (see appendix S sheet S8).
+AT WALL CONNECTION
+Spira-lok anchor installation is recommended to tie back the veneer layer of the URM walls.
+These anchors are drilled through the veneer layer into the inner layers of the URM
+connecting the two. These anchors would be installed every four square feet as shown in the
+details in appendix S sheet S6.
+We recommend adding a layer of sheathing to all wooden diaphragms. In addition,
+blocking between rafters will also need to be added to accommodate the seismic demands
+and the aspect ratio requirement for diaphragms in the NDS. The sheathing design details
+can be found in appendix S sheets S1 and S2.
+
+10 | P a g e
+
+Conclusion
+The Building’s Future
+This proposal creates documentation for the Printery Foundation to use in their efforts to
+preserve, purchase and renovate the building. Our proposal offers suggestions for a new
+program, creating a multi-use building to meet the needs of the community including a
+community kitchen, café, educational workspace, gallery, event space, offices and gathering
+spaces. We have also provided suggestions for retrofitting the building to allow for life safety
+performance of both structural and non-structural elements. The elements suggested in the
+retrofit would minimize changes to the existing structure to ensure the character of the
+building remains intact.
+
+Awareness
+We see this proposal being used by the Foundation in upcoming events as a way to illustrate
+to the community how beneficial this building could be to the community if restored. It is our
+hope that by showing our interests, as students, that the community will also see the
+importance of restoring this historic part of the central coast into a useable building for every
+member of the Atascadero community.
+
+11 | P a g e
+
+References
+Allan, Lon. “The Printery History.” Atascadero Printery,
+http://www.atascaderoprintery.org/2017/02/03/printery-history-by-lon-allan/.
+Accessed 23 April 2017.
+Figure 1a & 1b: Printery Foundation. n.a. 2016. n.a. Atascadero Printery.
+http://www.atascaderoprintery.org/2017/02/03/printery-history-by-lon-allan/
+Fountain, Matt. “Atascadero Printery taken off the auction block- for now.” The Tribune
+http://www.sanluisobispo.com/news/local/article77097657.html. Accessed 23 April
+2017. Accessed 23 April 2017.
+
+12 | P a g e
+
+Appendix A
+Architectural Drawings
+
+13 | P a g e
+
+EXISTING SITE PLAN
+in a residential
+
+Atascadero,
+California, the Printery
+Building is set upon
+a
+fairly
+empty
+lot,
+of
+
+surrounded
+
+by
+
+various
+
+parks, a middle school,
+and city hall.
+
+the pre-existing building
+a
+
+gymnasium
+
+and karate studio,
+ons
+
+to
+
+the
+
+construction.
+
+add
+
+historic
+
+The
+
+goal
+
+of this retrofit is to bring
+back the original shell of
+the building and plan for
+future additions to the
+site.
+
+MARK LUZI
+ELIZABETH TOWNSEND
+CAL POLY | WINTER 17
+
+Currently,
+
+on the northern side of
+stands
+
+M&E
+
+ATASCADERO, CA 93422
+
+area
+
+ATASCADERO PRINTERY
+
+Located
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+1” = 150’
+
+A1
+
+DEMOLITION PLAN
+
+both
+
+damaged
+
+and
+
+repair in the
+earthquake,
+
+beyond
+
+San Simeon
+will
+
+be
+
+removed and potentially
+replaced by a performing
+arts center.
+
+The
+
+salvageable and will be
+restored and reused in
+
+Printery.
+
+MARK LUZI
+ELIZABETH TOWNSEND
+CAL POLY | WINTER 17
+
+wood
+
+floor from the gym is
+
+the
+
+M&E
+
+ATASCADERO, CA 93422
+
+gymnasium
+
+karate studio additions,
+
+ATASCADERO PRINTERY
+
+The
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+1” = 150’
+Demolish
+Preserve
+
+A2
+
+NEW SITE PLAN
+The original layout of the
+building was restored,
+creating a symmetrical T
+Shape on the property. In
+order
+
+to
+
+accommodate
+
+the potential new theater
+on
+
+site,
+
+the
+
+a
+
+place
+
+M&E
+MARK LUZI
+ELIZABETH TOWNSEND
+CAL POLY | WINTER 17
+
+to
+
+be
+
+later
+
+Using
+
+the
+
+developed.
+remainder
+
+the
+
+site,
+
+on
+
+parking
+
+was
+
+added
+
+of
+
+street
+to
+
+the front of the building
+with a smaller scale lot
+added
+side.
+
+on
+
+Keeping
+
+community
+
+the
+
+north
+
+in mind the
+aspects
+
+of
+
+the program, community
+gardens,
+
+event
+
+spaces,
+
+and barbecue pits were
+added to the landscape.
+
+ATASCADERO, CA 93422
+
+north side of the building
+
+ATASCADERO PRINTERY
+
+holder was added to the
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+1” = 150’
+
+A3
+
+EXISTING SITE PLAN
+
+M&E
+
+original
+
+building is made up of a
+masonry exterior wall with
+minimal interior structural
+
+The
+
+MARK LUZI
+
+overall scheme
+
+ELIZABETH TOWNSEND
+
+relies on an open floor plan.
+
+CAL POLY | WINTER 17
+
+2 | Symmetry - With a strong
+existing symmetry, the first
+step in this intervention was
+to further the symmetrical
+qualities
+
+by
+
+designing
+
+additional permanent walls
+around the central lobby
+core.
+
+3 | Program - An
+
+overall
+
+program was devised with
+a
+
+focus
+
+spaces.
+
+on
+
+The
+
+multipurpose
+
+majority of the
+
+public spaces are located on
+the first floor to provide
+easy access while the private
+spaces are located on the
+second
+
+floor
+
+to
+
+1 | Base
+
+2 | Symmetry
+
+3 | Program
+
+address
+
+security.
+
+4 | Grid - Emphasizing
+
+the
+
+symmetry created, a grid was
+overlaid onto the space.
+
+The
+
+grid is based on the window
+layout of the building and
+provides an opportunity for
+flexibility.
+
+5 | Modular Partitions - To
+create the most space with
+the
+
+intervention,
+
+least
+
+modular
+
+partition
+
+is
+
+throughout
+
+used
+
+building.
+
+These
+
+feature
+
+a
+
+system
+the
+
+ATASCADERO, CA 93422
+
+walls.
+
+ATASCADERO PRINTERY
+
+1 | Base - The
+
+walls
+
+DESIGN DEVELOPMENT
+
+interchangeable
+
+parts to allow adaptability.
+
+NOT FOR CONSTRUCTION
+
+6 | Egress + Accessibility To
+
+preserve the entryway,
+
+the
+
+approach
+
+untouched.
+
+was
+
+Ramps
+
+left
+were
+
+added on the north and
+east sides
+stairs
+
+for
+
+were
+
+ADA. Fire
+
+added
+
+with an elevator.
+
+along
+
+4 | Grid
+
+5 | Modular Partitions
+
+6 | Accessibility + Egress
+
+A4
+
+FIRST FLOOR PLAN
+
+M&E
+
+1 | Lobby
+2 | Kitchen
+3 | Cafe
+4 | Event Space
+5 | Gallery
+6 | Maker Space
+7 | Future Theater
+
+MARK LUZI
+ELIZABETH TOWNSEND
+
+4
+
+2
+
+A10
+
+5
+1
+A7
+
+2
+
+1
+
+A11
+
+3
+
+1
+
+6
+
+ATASCADERO, CA 93422
+
+7
+
+ATASCADERO PRINTERY
+
+CAL POLY | WINTER 17
+
+2
+A7
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+1” = 16’
+Existing Construction
+New Construction
+
+A5
+
+SECOND FLOOR
+PLAN
+
+M&E
+
+1 | Common Space
+2 | Office
+3 | Formal Meeting Area
+4 | Casual Meeting Area
+5 | Break Room
+6 | Storage
+7 | Game Area
+
+MARK LUZI
+ELIZABETH TOWNSEND
+
+2
+
+1
+A7
+
+1
+
+2
+
+4
+
+3
+
+1
+
+A13
+
+A10
+
+1
+
+A12
+
+7
+5
+
+ATASCADERO, CA 93422
+
+6
+
+ATASCADERO PRINTERY
+
+CAL POLY | WINTER 17
+
+2
+A7
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+1” = 16’
+Existing Construction
+New Construction
+
+A6
+
+cut through one of
+
+the main symmetrical axes
+of the building.
+
+Spaces
+shown include the office,
+community meeting area,
+makerspace, lobby, cafe
+and kitchen.
+
+2 | TRANSVERSE
+SECTION
+A
+
+cut through the east
+
+of the building.
+Spaces shown include the
+end
+
+community meeting area
+and
+
+makerspace,
+
+with
+
+the event space shown in
+elevation.
+
+M&E
+MARK LUZI
+ELIZABETH TOWNSEND
+CAL POLY | WINTER 17
+
+ATASCADERO, CA 93422
+
+A
+
+ATASCADERO PRINTERY
+
+1 | LONGITUDINAL
+SECTION
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+1” = 16’
+1” = 8’
+
+A7
+
+MODULAR
+PARTITIONS
+
+4’-6”
+the
+
+walls
+
+1”
+
+are
+
+4’-4”
+
+2’-1”
+1” 1”
+
+1’-11”
+
+1”
+
+4’-4”
+
+constructed of custom
+
+ELIZABETH TOWNSEND
+
+off of the building’s grid
+
+CAL POLY | WINTER 17
+
+so that they do not touch
+
+preserving
+
+the original shell.
+
+3’-10”
+
+thus
+
+or
+
+3’-10”
+
+ceilings
+
+walls
+
+4’-0”
+
+existing
+
+PARTITION SIZING
+Partition
+
+dimensions
+
+Frames
+
+between
+
+to
+
+fit
+
+gridlines
+
+with
+
+occasional
+
+anchoring
+
+bars for stability, making
+for
+
+easy
+
+set
+
+up
+
+and
+
+2’-0”
+
+dimensioned
+
+are
+
+1’-10”
+
+overlaid on the existing
+
+1’-10”
+
+1” 1”
+
+are based on the grid
+building.
+
+1”
+
+interchangeability.
+
+1
+
+A10
+
+MODULAR OPTIONS
+In
+
+order
+
+flexible
+
+to
+
+create
+
+and
+
+a
+
+dynamic
+
+system,
+
+partition
+
+the
+
+design of each frame and
+infill
+
+The
+
+piece
+
+is
+
+modular.
+
+frames are designed
+
+to create a variety of
+combinations,
+
+possible
+allowing
+
+the
+
+user
+
+the
+
+based
+
+on
+
+programmatic
+
+needs.
+
+Six
+
+unique infill
+
+pieces
+
+are
+
+modules,
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+to
+
+construct
+
+provide
+
+M&E
+MARK LUZI
+
+modular partitions based
+
+any
+
+1’-11”
+
+ATASCADERO, CA 93422
+
+interior
+
+of
+
+ATASCADERO PRINTERY
+
+majority
+
+1”
+
+The
+
+partition
+
+offered
+
+to
+
+attachment
+privacy,
+
+overall adaptability.
+
+and
+
+A8
+
+1 | PARTITION
+ASSEMBLY
+partitions
+to
+
+connect
+
+together with simple nut
+and
+
+bolt
+
+making
+
+each
+
+ELIZABETH TOWNSEND
+
+partition
+
+CAL POLY | WINTER 17
+
+rearrangeable.
+
+easily
+
+Each
+
+MARK LUZI
+
+connections,
+
+frame
+
+the
+
+held
+
+in
+
+easily
+
+as
+
+well,
+
+infill
+
+panels
+
+customizable
+with
+
+is
+
+by
+
+simple
+
+2
+
+A9
+
+to
+
+remove brackets that are
+designed to adapt to any
+number or thickness of
+panels.
+
+3
+
+A9
+
+2
+
+A9
+
+CONNECTION
+DETAILS
+2 | Anchor bar to floor
+3 | Bracket to frame
+4 | Frame to Frame
+
+ATASCADERO, CA 93422
+
+designed
+
+M&E
+
+are
+
+ATASCADERO PRINTERY
+
+The
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+Anchor Bar to Floor
+
+Bracket to Frame
+
+Frame to Frame
+
+A9
+
+1 | MATERIALITY
+The
+
+infill
+
+panels
+
+M&E
+
+are
+
+available in six materials
+and
+
+patterns
+
+to
+
+add
+
+another level of usability
+to each partition.
+
+MARK LUZI
+
+Each
+
+ELIZABETH TOWNSEND
+
+frame has the ability to
+hold
+
+three
+
+layers
+
+CAL POLY | WINTER 17
+
+of
+
+Oak Wood
+2 | VISUALIZATION
+Render
+
+of
+
+a
+
+sample
+
+partition with materiality.
+
+Oak Wood Lattice
+
+Plexiglass
+
+Frosted Plexiglass
+
+Aluminum
+
+Aluminum Lattice
+
+ATASCADERO, CA 93422
+
+or privacy customization.
+
+ATASCADERO PRINTERY
+
+infill panels for program
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+A10
+
+M&E
+MARK LUZI
+ELIZABETH TOWNSEND
+
+ATASCADERO, CA 93422
+
+ATASCADERO PRINTERY
+
+CAL POLY | WINTER 17
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+A11
+
+M&E
+MARK LUZI
+ELIZABETH TOWNSEND
+
+ATASCADERO, CA 93422
+
+ATASCADERO PRINTERY
+
+CAL POLY | WINTER 17
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+A12
+
+M&E
+MARK LUZI
+ELIZABETH TOWNSEND
+
+ATASCADERO, CA 93422
+
+ATASCADERO PRINTERY
+
+CAL POLY | WINTER 17
+
+DESIGN DEVELOPMENT
+NOT FOR CONSTRUCTION
+
+A13
+
+Appendix S
+Structural Drawings
+
+14 | P a g e
+
+5" CONC SLAB (E)
+2ND FLOOR
+15'-0"
+
+A
+
+(6) 3/16" DIAM TITEN SCREWS (N)
+A-A
+
+5' - 0"
+
+5 1/2"X9"X1/4" THK STEEL PLATEA-A
+(N)
+
+9" URM (E)
+HSS5X5X5/16 (N)
+
+1/2" DIAM AB (N)
+
+5' - 0"
+
+4"X4"X1/4"THK STEEL PLATE (N)
+
+A
+
+ATASCADERO, CA 93422
+
+1/8 (N)
+
+ATASCADERO PRINTERY
+
+TYP
+0' - 1"
+
+EQ
+TYP
+0' - 1"
+
+EQ
+
+5' - 0"
+
+A
+
+TYLER PIZARRO
+KAYLEE ISTHAFISU
+JAMI HAHN
+CAL POLY
+WINTER 2017
+
+A
+DETAILS
+
+1ST FLOOR
+0'-0"
+SCALE:
+
+TYP STRONGBACK ELEVATION @ 1ST
+FLR
+1
+1/2" = 1'-0"
+
+1/2" = 1'-0"
+
+S4
+
+4X8 BLOCK (N)
+
+HSS4X4X5/16 (N)
+
+13" THK URM (E)
+
+3/4" ANCHOR BOLTS
+@ 2'O.C. (N)
+
+6"X8"X1/4" THK STEEL PLATE (N)
+1/8 (N)
+
+TYP
+0' - 1"
+
+(8) 3/8" DIAM LAG SCREWS (N)
+SIMPSON A35 TYP (N)
+
+2' - 0"
+A-A
+
+TYP
+0' - 1"
+
+EQ
+
+EQ
+
+TYP
+0' - 1"
+
+1/8 (N)
+(6) 3/16" DIAM TITEN SCREWS
+
+4 1/2"X8"X1/4" THK STEEL PLATE
+B-B
+
+0' - 1"
+TYP
+22.50°
+TYP
+
+B
+
+2ND FLOOR
+15'-0"
+
+B
+
+5" CONCETE SLAB (E)
+
+NOTES:
+1. ANCHOR BOLTS TO BE
+INSTALLED PER ESR-1772
+
+17" THK URM (E)
+
+DETAILS
+
+SCALE:
+
+TYP STRONGBACK ELEVATION 2ND
+FLOOR
+1
+1/2" = 1'-0"
+
+ATASCADERO, CA 93422
+
+A
+
+TYP
+0' - 1"
+
+27'-3"
+
+2X6 BRIDGING (E)
+
+TYLER PIZARRO
+KAYLEE EFSTATHIU
+JAMI HAHN
+CAL POLY
+WINTER 2017
+
+ATASCADERO PRINTERY
+
+A
+
+TYP
+0' - 1"
+
+ROOF LEVEL
+
+1 1/4" SHEATHING (E)
+2X8 RAFTER (E)
+
+1/2" = 1'-0"
+
+S5
+
+2' - 0"
+
+13" URM (E)
+
+17" URM (E)
+
+A
+
+A-A
+
+VENEER ANCHORS
+3/4" = 1'-0"
+
+13" URM (E)
+
+A
+
+4" CONC FILL (E)
+
+17" URM (E)
+
+A
+
+HSS4X4X5/16 (N)
+0' - 1"
+0' - 1"
+TYP
+TYP
+(4) 3/16" DIAM TITEN SCREWS (N)
+
+0' - 1"
+TYP
+
+1
+
+ATASCADERO PRINTERY
+
+2' - 0"
+
+5" CONC SLAB (E)
+
+5" CONC SLAB (E)
+4"X7"X1/4"THK STEEL PLATE (N)
+1/8 (N)
+
+TYP STAIRWELL STRONGBACK
+CONNECTION
+2
+3/4" = 1'-0"
+
+NOTE:
+BLOK-LOK SPIRA-LOK
+ANCHORS TO BE APPLIED TO
+ALL EXTERIOR URM EXTERIOR
+FACES EVERY 4 SQUARE FEET
+AS SHOWN. INSTALL PER
+BLOK-LOK REQUIREMENTS.
+
+TYLER PIZARRO
+KAYLEE EFSTATHIU
+JAMI HAHN
+CAL POLY
+WINTER 2017
+
+ATASCADERO, CA 93422
+
+2' - 0"
+A
+
+2' - 0"
+
+8MM SPIRA-LOK ANCHORS TYP (N)
+TYP
+0' - 3 5/8"
+MIN EMBED
+
+3/16 (N)
+
+DETAILS
+
+A-A
+SCALE:
+
+3/4" = 1'-0"
+
+S6
+
+13" URM (E)
+
+5/32 DIA TITEN SCREW @ 3 O.C. (N)
+SHOTCRETE WALL (N)
+
+0' - 5"
+
+1
+
+17" URM (E)
+
+SHOTCRETE WALL TO FLOOR SLAB CONNECTION
+3" = 1'-0"
+0' - 5"
+
+17" URM (E)
+SHOTCRETE WALL (N)
+5/32 DIA TITEN SCREW @ 3 O.C. (N)
+
+ATASCADERO, CA 93422
+
+L2X2X1/4 (N)
+
+ATASCADERO PRINTERY
+
+0' - 5"
+
+1 1/2" MIN
+
+1 1/2" MIN
+
+CONCRETE SLAB (E)
+
+TYLER PIZARRO
+KAYLEE ISTHAFISU
+JAMI HAHN
+CAL POLY
+WINTER 2017
+
+L2X2X1/4 (N)
+CONCRETE SLAB (E)
+
+0' - 5"
+
+DETAILS
+
+SHOTCRETE WALL TO FOUNDATION CONNECTION
+2
+3" = 1'-0"
+
+SCALE:
+
+3" = 1'-0"
+
+S7
+
+# 7 (N)
+13" URM (E)
+TYLER PIZARRO
+KAYLEE ISTHAFISU
+JAMI HAHN
+CAL POLY
+WINTER 2017
+
+CONCRETE SLAB (E)
+1 1/8" DIA ANCHOR BOLT (N)
+L8X8X1/2 (N)
+
+3/4" (N)
+17" URM (E)
+SHOTCRETE WALL (N)
+
+1
+
+SHOTCRETE WALL TO MAIN BUILDING CONNECTION
+3/4" = 1'-0"
+
+SIMPSON VGT ONE SIDE
+EA. RAFTER CENTERED
+IN SHOTCRETE WALL (N)
+
+3X10 RAFTER @ 3' O.C. (E)
+
+3X10 RAFTER @ 3' O.C. (E)
+
+5" SHOTCRETE WALL (N)
+
+SIMPSON LGT2 EA. RAFTER (N)
+13" URM (E)
+
+ATASCADERO, CA 93422
+
+5"
+2 - 1/4" THICK SHAPED
+STEEL PLATES (N)
+
+ATASCADERO PRINTERY
+
+10" TYP.
+
+3" TYP.
+
+4' 5" MIN. TYP.
+
+DETAILS
+
+SCALE:
+
+2
+
+SHOTCRETE WALL TO ROOF CONNECTION
+3/4" = 1'-0"
+
+3
+
+WALL ANCHOR
+3/4" = 1'-0"
+
+3/4" = 1'-0"
+
+S8
+
+

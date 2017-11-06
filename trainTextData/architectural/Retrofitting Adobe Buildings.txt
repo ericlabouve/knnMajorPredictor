@@ -1,0 +1,952 @@
+Retrofitting Adobe Buildings
+Senior Project
+Arce 453/460
+
+Jessica Ellis
+Ashley Gaur
+June 11, 2016
+
+A Senior Project presented to the faculty of California Polytechnic State University, San Luis
+Obispo, as partial fulfillment of the requirements for the Degree of Bachelor of Science in
+Architectural Engineering.
+
+Page |2
+
+Table of Contents
+List of Figures .................................................................................................................................... 3
+List of Tables .................................................................................................................................... 4
+Disclaimer .......................................................................................................................................... 5
+Acknowledgments ............................................................................................................................. 5
+
+I. INTRODUCTION ............................................................................................................6
+Background on Nepal ........................................................................................................................ 6
+Nepal Building Code ......................................................................................................................... 7
+Background on the Earthquake in Nepal .......................................................................................... 7
+Characteristics of Adobe Buildings .................................................................................................. 8
+Overview ........................................................................................................................................... 10
+Dominic Dowling’s Research ........................................................................................................... 11
+Chicken Wire Mesh - Peru ................................................................................................................ 12
+
+II. ADOBE BRICKS ............................................................................................................14
+Sieve Analysis of Soil ....................................................................................................................... 14
+Compressive Strength of Adobe Bricks ........................................................................................... 15
+Constructing Adobe Bricks ............................................................................................................... 16
+
+III. ADOBE BRICK WALL ...............................................................................................19
+Testing Mortar Strength ..................................................................................................................... 19
+Building the Wall .............................................................................................................................. 20
+Expectations and Predictions ............................................................................................................. 22
+Testing the Wall ................................................................................................................................ 23
+
+IV. RETROFITTING ..........................................................................................................26
+Tensile Strength of Bamboo ............................................................................................................. 26
+Flexural Strength of Bamboo ............................................................................................................ 28
+Designing Retrofit of the Wall ........................................................................................................... 29
+Expectations and Predictions ............................................................................................................. 31
+Applying the Retrofit to the Wall ..................................................................................................... 31
+Testing the Retrofitted Wall .............................................................................................................. 31
+
+V. DISCUSSION OF RESULTS ........................................................................................ 33
+Conclusion ........................................................................................................................................ 33
+Further Research Suggestions ........................................................................................................... 34
+Global Impact of Design ................................................................................................................... 35
+
+VI. APPENDICES/WORKS CITED .................................................................................36
+
+Page |3
+
+List of Figures
+Figure 1 – Homes in a Rural Village in Nepal
+Figure 2 - Map of Nepal
+Figure 3 - Map of Death Tolls in Nepal
+Figure 4 - Adobe Building after the Earthquake
+Figure 5 - Map of Seismic Zones in Nepal
+Figure 6 - Current Living Conditions in Nepal
+Figure 7 - Proposed Retrofit Scheme - Section
+Figure 8 - Proposed Retrofit Scheme - Elevation
+Figure 9 - Bamboo Reinforcement Full Scale Testing
+Figure 10 - Bamboo Reinforcement Full Scale Testing - Elevation
+Figure 11 - Drilling into Adobe Wall
+Figure 12 - Adobe Wall in Peru - Pre- Retrofit
+Figure 13 - Retrofitting Adobe Wall in Peru
+Figure 14 - Sieve Analysis of Soil
+Figure 15 - Cylinder Testing
+Figure 16 – Results of Cylinder Testing
+Figure 17 - Cylinders Two and Three
+Figure 18 – Results of Testing Cylinders
+Figure 19 – Layout of Adobe Brick Wall
+Figure 20 - Adobe Brick Formwork
+Figure 21 - Clay Bricks - Attempt One
+Figure 22 - Clay Bricks - Attempt Two
+Figure 23 - Adobe Bricks in Formwork
+Figure 24 - Flexural Beam Test - Attempt One
+Figure 25 - Flexural Beam Test Set-Up
+Figure 26 – Results of Flexural Beam Test
+Figure 27 - Construction of the Adobe Wall
+Figure 28 – Adobe Wall Test Set-up – Side View
+Figure 29 - Adobe Wall Load Cell and Ram
+Figure 30 - Force v. Displacement Graph - Push One
+Figure 31 - Force v. Displacement Graph - Push 2/3/4
+Figure 32 - Bamboo Specimen
+Figure 33 - Construction Bamboo Dog-Bone Specimen
+Figure 34 - Bamboo Tensile Testing
+Figure 35 - Results of Bamboo Tensile Testing
+Figure 36 – Stress v. Strain for Bamboo Tensile Testing
+Figure 37 - Bamboo Flexure Test Set-Up
+Figure 38 – Results of Bamboo Flexure Test
+Figure 39 - IEBC Wall Slenderness Table
+Figure 40 - Force v. Displacement Graph of Retrofitted Wall Test
+Figure 41 - Diaphragm - Wall Retrofit Connection
+
+Page |4
+
+List of Tables
+Table 1 - Common Building Types in Nepal
+Table 2 - Possible Reinforcement Options for Adobe Buildings
+Table 3 - Sieve Analysis Results
+Table 4 - Compressive Strength of Adobe Bricks
+Table 5 - Flexural Beam Test Results
+Table 6 - Bamboo Tensile Test Results
+
+Page |5
+
+DISCLAIMER:
+This project is the result of a student assignment, and has been graded and accepted as fulfillment of the
+course requirements. Acceptance does not imply technical accuracy, reliability, or expertise. Any use of
+information contained in this report is done at the risk of the user. These risks may or may not include
+catastrophic failure of the device or infringement of patent or copyright laws. California Polytechnic State
+University San Luis Obispo, and its staff, and the authors of this report cannot be held liable for any
+misuse of this project and its contents.
+
+ACKNOWLEDGMENTS:
+This report would not be possible without the support of the following individuals:
+Professor James Mwangi for being the project advisor
+Technician Ray Ward for construction and test set-up
+
+Page |6
+
+I.
+
+INTRODUCTION
+
+Background on Nepal
+Nepal is located in Asia, landlocked between China and India. Not only is Nepal located between the two
+countries, it is also an embodiment of the two cultures. The total population of Nepal is approximately
+27,474,000 individuals, 741,000 of which live in the capital Kathmandu.
+
+Figure 1: Homes in a rural village in Nepal
+
+Figure 2: Map of Nepal
+
+In retrospect, half of the population of Nepal lives on the equivalent of one dollar per person in one day.
+This in itself illustrates the difficulty to provide the country with adequate construction materials and
+labor. The beauty of the country in unparalleled. The home of Mt. Everest and bordering the Himalayas,
+Nepal is disadvantaged by location. With some of the most rural areas secluded within the mountains, it
+becomes rather difficult to transport materials and aid. Due to its financial circumstances as a whole,
+Nepal relies on building codes formulated in India as a reference on construction. However with lack of
+firm building requirements and revenue, the country is unable to effectively prepare for disasters that may
+occur.
+
+Page |7
+
+Nepal Building Code
+Unlike in the United States where building codes are altered every couple of years, the only available
+Nepal Building Code was written 20 years ago. It was drafted by a team of engineers headed by Richard
+Sharpe, an earthquake engineer professional from New Zealand. Since New Zealand shares Nepal’s high
+seismic zone and overwhelming mountainous landscape, the building code reflected these similarities.
+However, the primary cause of the destruction of the structures was the lack of implementation of the
+building code. Only three of the fifty-eight municipalities in Nepal had enforced the codes, hindering any
+possible advancement. With more than ninety-eight percent of structures in Nepal built by owners, the
+designs lacked attention to proper engineering and focused more on local craft advice.
+
+Background on the Earthquake in Nepal
+On April 25, 2015 a 7.8 magnitude earthquake hit Nepal. The event claimed the lives of around nine
+thousand individuals and injured more than twenty-one thousand. A seismic event of this intensity would
+unquestionably cause excessive damage, however with the poor structural conditions of the buildings in
+Nepal the damage was greatly amplified. One year later, repairs are still gradually occurring. With the
+amount of damage that occurred, building repair was distinguished by priority. Homes in rural areas have
+been deferred and funding has favored schools and hospitals.
+
+Figure 3: Map of Death Tolls in Nepal
+
+Figure 4: Adobe building after the earthquake
+
+Page |8
+Kathmandu, one of the more affected areas of Nepal, due to its high seismic location, consists of the some
+of the country’s most impoverished residents. In Kathmandu, the type of buildings most demolished by
+this event were brick and wood homes. In rural areas the brick homes usually consist of adobe
+unreinforced brick, a type of building material that has become almost obsolete in the United States.
+With little funding from the government and the demand and price for building materials constantly
+increasing, many individuals currently live in temporary homes made of tarps and metal. A second
+earthquake hit Nepal on May 14, 2015 causing even more destruction and distraught amongst the
+residents.
+
+Figure 5: Map of seismic zones in Nepal
+
+Figure 6: Current living conditions in Nepal
+
+Characteristics of Adobe Buildings
+The use of adobe as a building material is more common in areas of limited materials and funding. This
+can be attributed to the fact that such structures are easily constructible because of the abundance of
+material (soil) and cheap labor (self-construction). Rural areas in Nepal also fall under this category,
+using adobe for it’s thermal and acoustic properties. In wealthier parts of Nepal (shown in Table 1)
+construction is occasionally completed with adobe as well. However, these structures consist of kiln fired
+
+Page |9
+
+Table 1
+Common Building Types in Nepal
+
+adobe instead of sun dried (found in rural areas) allowing for higher compressive strength in the brick.
+Adobe bricks usually have approximately 50 - 300 psi which is very low compared to the 625 - 2500 psi
+of concrete. This comparison itself, illustrates some of the weaknesses of adobe. Unreinforced concrete
+performs poorly in seismic events due to its brittle nature and inability to provide sufficient tensile
+strength. Similar to concrete, adobe is brittle and rather heavy. However, it is weaker than concrete in
+compression and does not provide any resistance to tension forces. During seismic events, adobe is prone
+to severe cracking in the walls and disconnection between the diaphragm and wall due to poorly designed
+connections.
+
+P a g e | 10
+
+Overview
+The purpose of this project is to find an economical approach to rehabilitate adobe buildings that are
+found in the impoverished villages of Nepal. Due to the significant earthquake Nepal had experienced in
+2015, a lot of structures in rural Nepal have yet to be repaired. In an EERI report from Table 2 , the
+committee put together a summary of the effectiveness of various types of reinforcement.
+
+Table 2
+Possible Reinforcement Options for Adobe Buildings
+
+In order to not only provide cost-effective but also substantial seismic improvements to these houses, the
+scope of this testing will be limited to materials easily accessible in these secluded areas. Therefore, an
+adobe wall will be built and tested for out of plane loads. The same wall will then be retrofitted with
+bamboo spaced at 18” o.c. tied on either side, attached with plastic rope threaded through the wall (shown
+in Figure 7). Chicken wire mesh will then be placed across the wall to minimize further cracking in the
+wall. Referring once again to Figure 7 and 8, it shows that the bamboo reinforcement and wire mesh will
+be low in cost, but is assumed to provide high seismic safety. Once the retrofit is completed, the wall will
+be tested once more to determine whether the materials strengthened its load capacity.
+
+P a g e | 11
+
+Figure 7: Proposed retrofit scheme Section
+
+Figure 8: Proposed retrofit scheme Elevation
+
+Dominic Dowling’s Research
+At the University of Technology in Sydney, Australia Dominic Dowling attempted to create a simple and
+affordable retrofit scheme attainable by individuals in underprivileged communities in Asia, the Middle
+East, and Latin America. The scheme utilized the use of bamboo to provide the currently lacking tension
+reinforcement to the structure. The institute tested and retested multiple schemes of retrofits until the
+following came to considered, “QuakeSafe Adobe.” Using the research by Dominic Dowling, this project
+utilizes a similar scheme but incorporates the use of chicken wire mesh to help decrease cracking.
+
+Figure 9: Bamboo reinforcement full scale testing
+
+Figure 10: Bamboo reinforcement full scale testing Elevation
+
+P a g e | 12
+Dowling’s purpose of this project was to improve seismic performance of a building for new construction.
+The retrofit was supposed to produce more of a “Life-Safety” response during a seismic event, in order
+for the occupants to have ample time to evacuate the structure. This project differs in this respect because
+it is determining the use of bamboo reinforcement as a retrofit of a structure post-earthquake.
+
+Figure 11: Drilling into Adobe wall
+
+Figure 12: Adobe wall in Peru – Pre-Retrofit
+
+A minor difference between Dowling’s research and the investigation of this project is that Dowling
+focused on El Salvador. He tested the scheme using wire and power tools: two luxuries not easily
+attainable in more secluded areas of Nepal. With these limitations, it become difficult to provide
+proficient affixation of the bamboo to the wall. As shown in Figure 12 above, the placement of the bricks
+differ from Nepal. In Nepal there is a consistent alternation of the orientation of the brick to provide more
+structural capacity. Although it is not confirmed, it can be concluded from the pictures obtained that the
+bricks used in construction were kiln-fired instead of sun-dried. Overall the concept of the retrofit is
+similar, however this project delves into concentrating on materials and construction tactics developed
+mainly in rural areas of Nepal.
+
+Chicken Wire Mesh - Peru
+Testing was completed in Peru to understand the possibility of utilizing Chicken Wire Mesh as a retrofit
+for existing adobe structures. The result of the research was that external placement of the mesh as wide
+strips nailed to the walls using metallic bottle caps. The chicken wire mesh is placed both vertically and
+
+P a g e | 13
+horizontally and then concealed with mud and mortar. It was concluded that the homes that were
+retrofitted with this technique did not sustain severe damage from the 2001 Earthquake in Peru.
+
+Figure 13: Retrofitting Adobe wall in Peru
+
+This project will utilize a similar tactic to the one mentioned previously. The figure above illustrates
+chicken wire mesh placed at corners of the building, acting like beams and columns. However since the
+scope of this project focuses more so on out-of-plane forces on a singular wall, the mesh will be placed
+across the entirety of the wall to act more as confinement. Unfortunately, the research done in Peru was
+also based on fired adobe bricks that are stabilized with cement. Although the bricks are majorly
+composed of soil, the compressive strengths of the sun-dried bricks compared to the fired bricks would
+undeniably differ.
+
+P a g e | 14
+
+II. ADOBE BRICKS
+Sieve Analysis of Soil
+Research concerning the most effective type of soil showed that sand should be the dominating soil type
+(70%). Silt and sand should make up the remaining 30% of the soil, with clay ranging from 10-15%.
+Performing a sieve analysis (as shown in Figure 14 ) on the soil obtained for the project, the resulting
+ratios noted in Table 3 below.
+
+Table 3 – Sieve Analysis Results
+
+Percentage of Soil
+Soil Type
+Sand
+
+80%
+
+Clay
+
+12%
+
+Silt
+
+8%
+
+Figure 14: Sieve analysis of soil
+
+Although the soil content was not exactly the same as what was “recommended” in Nepal, it was
+comparable to adobe brick ratios common elsewhere in the world. Due to this fact, this soil was used in
+the construction of the bricks for this project.
+
+P a g e | 15
+
+Compressive Strength of Adobe Bricks
+Testing the compressive strength of the adobe bricks was done by creating a cylinder consisting of the
+same soil consistency as the bricks. Once the cylinder had dried completely, the Forney Compressive
+Machine was used to test its strength.
+
+Figure 15: Cylinder testing
+
+Figure 16: Results of Cylinder testing
+
+Table 4 - Compressive Strength of Adobe Bricks
+Cylinder Number
+
+Maximum Axial Load
+
+Compressive Strength
+
+1
+
+3000 lbs.
+
+106.0 psi
+
+2 (smaller cylinder)
+
+170 lbs.
+
+70.5 psi
+
+3 (smaller cylinder)
+
+177 lbs.
+
+73.7
+
+Since the testing machinery for the first cylinder is used for concrete (which withstands substantially
+more load than mud bricks), the remaining two cylinders had a slightly different set-up. The new
+
+P a g e | 16
+cylinders were 4” tall and used in the Tinius Olsen Machine in an attempt to produce more accurate
+results.
+
+Figure 17: Cylinders Two and Three
+
+Figure 18: Results of testing cylinders
+
+According to a research paper from Thailand, the compressive strength of adobe bricks (with rice husk) is
+approximately 280 psi. Considering that the bricks pertaining to this project did not consist of any
+material other than mud, it is understandable why the bricks had a much lower compressive strength.
+
+Constructing Adobe Bricks
+When researching the possibility of purchasing adobe bricks in the United States, it was
+determined that the type of brick used in Nepal construction was much weaker than any found in the area.
+Much of the adobe produced in the United States is manufactured to perform better structurally by adding
+portland cement or through kiln-drying. Since the objective of this project is to focus primarily on aiding
+in retrofits for underprivileged areas of the country the bricks were required to be sun-dried and not
+cement- stabilized. Therefore, it was necessary to produce the bricks manually by building formwork.
+The brick sizes were determined to be 4.5”x 9” x 2.5” (representative of the dimensions shown in
+centimeters in Figure 19) to imitate those found in Nepal. Since the wall is constructed with courses
+
+P a g e | 17
+alternating direction as shown in Figure 19 below, the length of one brick is equal to the width of two
+bricks.
+
+Figure 19: Layout of adobe brick
+wall
+
+Figure 20: Adobe brick formwork
+
+With the formwork completed, it was necessary to begin constructing the bricks. Unfortunately, on the
+first attempt at creating the bricks, the soil had consisted of too much clay. Attempting to compact the
+clay soil into the formwork was difficult and laborious, resulting in bricks that were cracked and
+structurally incapable of withstanding much load.
+
+Figure 21: Clay Bricks – Attempt One
+
+Figure 22: Clay Bricks – Attempt Two
+
+Since the clay bricks were prone to break apart, it was decided to utilize a soil mixture consisting of less
+clay and more sand and silt, which led to the use of soil used in the sieve analysis.
+
+P a g e | 18
+
+Figure 23: Adobe bricks in formwork
+
+The final brick mixture consisted of more sand and silt and much less clay, allowing for better workability
+with the compound. The final result was comparable to bricks produced in Nepal.
+
+P a g e | 19
+
+III. ADOBE BRICK WALL
+Testing Mortar Strength
+In order to obtain the tensile strength of the mortar, a flexural test was performed on small beams made of
+adobe. At first, we created a 24” beam made of the same mixture as the beams. However, after a day of
+drying they had cracked in the formwork preventing testing from occurring (shown in Figure 24) . This is
+assumed to be due to the fact that the mixture was incapable of maintaining adequate cohesion for that
+amount of length. It became understandable why the bricks were made to be 4.5” x 9” and not any larger.
+
+Figure 24: Flexural beam test – Attempt One
+
+Since the option of crushing the two foot beam was no longer feasible, the beams were reconstructed at a
+smaller scale and tested on the Tinius Olsen machine. Two beams were formed (as shown in Figure 25)
+and left to dry for a week prior to testing. The results of the testing were used to find the Modulus of
+Rupture which would indirectly be utilized in calculating the mortar strength of the adobe wall.
+
+P a g e | 20
+
+Figure 25: Flexural beam test set-up
+
+Figure 26: Results of flexural beam test
+
+Table 5 - Flexural Beam Test Results
+Beam Number
+
+Maximum Load
+
+1
+
+30.2 lbs.
+
+2
+
+26.4 lbs.
+
+From the results shown above in Table 5 above, using the equation shown below:
+𝜎=
+
+𝐹∗𝐿
+4∗𝑍
+
+The average modulus of rupture is therefore calculated as 0.0520 psi.
+From this test there was more tensile capacity in the mortar than originally expected, and each foot of
+joint is expected to provide 52.4 pounds of tensile strength.
+
+Building the Wall
+Once all four hundred bricks were sufficiently dry, the next step was to build the wall. Since the bricks
+were completely handmade in formwork, there was quite a bit of variation in the size and structure of the
+building materials. This became problematic once building commenced. It became slightly difficult to
+maintain a uniform row of bricks with the range of sizes that resulted. Through the building of the wall, it
+
+P a g e | 21
+was apparent that some bricks were very weak and could begin breaking apart at the slightest touch. This
+realization caused some weariness when predicting the amount of load the wall could sustain.
+The wall was built within an 11” wide flange beam bolted to the ground. This provided fixity to the base
+of the wall and allowed for more accurate results. This fixity imitates the foundation of the wall, creating
+a simply supported beam that does not rotate at the base.
+Although the height to length ratio of a wall should be around 2:1, according to Building Code
+Requirements and Specifications for Masonry Structures, due to the limited bricks that were made this
+ratio was not met. Instead the ratio came out to be around 1.7:1 instead of 2:1. With the entirety of the
+wall made from hand, a new appreciation came about for the laborers in Nepal. With construction passed
+down over generations, the adobe walls in Nepal are much more aesthetically pleasing and the techniques
+perfected.
+
+Figure 27: Construction of the adobe wall
+
+One main structural component that was discovered concerning the adobe walls are the use of alternating
+brick orientation. The header bricks are known to have more structural ability, differentiating a bearing
+wall from aesthetic veneer. This is due to the fact that the orientation of the header bricks provides a
+connection between the two wythes of the walls. This connection allows force to flow throughout both
+wythes simultaneously, instead of causing one to accumulate more force than the other. When the wall
+
+P a g e | 22
+consists of multiple wythes without alternating patterns of the bricks, the cracking of the wall during a
+seismic event causes immediate separation of the components.
+
+Expectations and Predictions
+Based on the calculations preformed on Appendix page 9 the moment capacity of the each foot of the wall
+would be 149 pound-feet. This would lead to a maximum push force from the ram in the proposed test set
+up to be 783 pounds. For the first test with the top unrestrained, the maximum demand moment would be
+expected at the base of the wall, and this is where failure due to tension in the mortar is expected to occur.
+For the second test set up with both ends restrained, the maximum demand moment is expected towards
+mid-height of the wall. This is based off of both ends being more similar to pin connection. Mortar failure
+due to tension is expected at mid-height for this setup.
+
+P a g e | 23
+
+Testing the Wall
+In order to test the unreinforced, and then retrofitted, wall it was required to form a set up that would
+create out of plane bending in the wall. It was also decided that the test setup should try to mimic a
+uniform load across the height of the wall rather than a single point load at any location on the wall. In
+order to accomplish this timber frame was created that would be situated between the wall and the
+hydraulic ram providing the load. An 80 pound channel beam was also placed on the top of the wall in
+order to provide an axial dead load, as well as a location to provide fixity at the top of the wall. The setup
+is demonstrated in the Figure 28 below.
+
+Figure 28: Adobe wall test set-up – Side View
+
+Figure 29: Adobe wall load cell and
+ram
+
+Using the above mentioned test setup the unreinforced wall was tested with two different end conditions.
+The first condition was having the top of the wall completely unrestrained, so the wall acted like a vertical
+cantilevered beam. It is estimated that this condition is comparable to when diaphragm conditions are
+inadequate, and this would demonstrate behavior should the connections fail completely during a seismic
+event. It was decided that this was a necessary condition to test because it was found in previous research
+that diaphragm-wall connection failure is a common failure condition in adobe houses in Nepal. During
+the test the wall had a load applied through the timber frame, and the deflection at mid-height of the wall
+
+P a g e | 24
+was recorded. From this data a Force versus Displacement curve was found, which can be seen in Figure
+30. The failure observed at the maximum force of 227 pounds was tension failure in the mortar on the
+tension face (the side of the wall the load was being applied) at the base of the wall. This was expected, as
+the highest flexural demand occurs at the fixed base of cantilevers.
+
+Push 1 - Force Vs. Displacement
+No Restriction at Top
+250
+
+Out of Plane Force (lbs.)
+
+200
+
+-0.5
+
+150
+100
+50
+0
+-50
+
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+Deflection (inches)
+Figure 30: Force v. Displacement Graph – Push One
+
+The second test condition was with the top of the wall restrained. The connection was not quite a fixed
+connection, but had much more fixity than a pin connection. In order to achieve this, the channel beam
+that had been placed on the top of the adobe wall was connected back to the steel frame that was
+supporting the ram. This prevented displacement at the top of the wall, which led to a higher maximum
+force capability of 350 pounds, and a smaller maximum displacement of 0.66 inches. The change in end
+conditions also led to failure occurring in a different location. For this test, failure was observed again
+from mortar tension failure, but located at the top of the wall two courses below the connection. This can
+also be expected, as the two end connections act similarly to fixed connections, and the maximum flexural
+demand of a fixed-fixed specimen occurs at the two ends.
+
+P a g e | 25
+
+Figure 31: Force v. Displacement Graph – Push 2/3/4
+
+For both of the force displacement curves shown, the several locations that appear to be loops are
+locations on brief unloading as the test was being performed. There was also a distance of 0.5 inches
+between the frame and the wall before loading, and so all of the displacements shown are 0.5 inches less
+for the wall.
+
+P a g e | 26
+
+IV. RETROFITTING
+Tensile Strength of Bamboo
+Bamboo is quite abundant in Nepal and commonly used for construction applications. A majority of the
+diaphragms of houses are constructed using a mixture of bamboo and mud. Unfortunately finding bamboo
+that grows solely in Nepal was difficult to obtain in the Central Coast. Instead, the bamboo used for the
+research was Phyllostachys Bissetiiwhich which is commonly found in China. To understand the material
+properties of the bamboo, tensile testing was completed with the Tinius Olsen Machine. The bamboo was
+carved to force fracture in the middle of the specimen.
+
+Figure 32: Bamboo Specimen
+
+Figure 33: Construction of bamboo dog-bone specimen
+
+Since bamboo is thick and rounded, it was nearly impossible to create a flattened specimen to test. This
+caused the bamboo to crack slightly below the clamps in an attempt to flatten out the midsection of the
+specimen. The capacity of the bamboo declines as this process ensues and then once again quickly
+increases. This caused for some unusual peaks on the force v displacement plot. However, despite these
+complications the maximum allowable tension load of the bamboo resulted to be around 720 lbs.
+
+P a g e | 27
+
+Figure 34: Bamboo tensile testing
+
+Figure 35: Results of bamboo tensile testing
+
+Based on the data obtained from the Tinius Olsen Machine, which provided a force versus displacement
+relationship, Stress versus Strain curves were created (Figure 36). From these curves the Modulus of
+Elasticity, tensile yield strength, and ultimate yield strength of each specimen was found. These values
+can be seen in Table 6 below.
+
+Figure 36: Stress v. Strain Graph for Bamboo Tensile Testing
+
+P a g e | 28
+Table 6 - Bamboo Tensile Test Results
+
+Specimen Number
+
+Tensile Yield
+Strength
+(ksi)
+
+Tensile Ultimate
+Strength (ksi)
+
+Modulus of
+Elasticity
+(ksi)
+
+1
+
+865.5
+
+1769.6
+
+N/A
+
+2
+
+26.6
+
+93.3
+
+643.3
+
+3
+
+42.6
+
+92.6
+
+712.8
+
+4
+
+28.8
+
+92.5
+
+609.0
+
+Average
+
+32.7
+
+92.8
+
+655.1
+
+In order to determine the average tensile yield strength, ultimate yield strength, and modulus of elasticity
+the average values of the specimens was used. However, because the values of specimen one proved to be
+extreme outliers when compared to the other three specimens it was decided to not include these values
+when determining the averages. The ultimate yield stress found for the bamboo was 92.8 ksi, and the
+modulus of elasticity found was 655.1 ksi.. When compared to values found from previous testing (Table
+6 above) these values are much lower than expected. This is most likely due to the premature cracking of
+the specimens as the clamps were flattening out the ends.
+
+Flexural Strength of Bamboo
+The ultimate flexural strength of the bamboo used for the retrofit was found using the testing set up
+shown in Figures 37 and 38 shown below. The testing specimens were placed so that they had a set span
+and were pinned at both ends. A load was then applied using the Tinius Olsen machine at midspan until
+rupture. Using this data the maximum bending stress for the bamboo, base off of the maximum tension
+stress, was found to be 1349.6 psi. This then led to a maximum moment capacity of 630 pound-inches
+(52.5 pound-feet).The calculations for this can be found on Appendix page 6 and 7.
+
+P a g e | 29
+
+Figure 37: Bamboo Flexure Test Set-Up
+
+Figure 38: Results of Bamboo Flexure Test
+
+Designing Retrofit of the Wall
+As with unreinforced masonry walls, a height to thickness ratio becomes an integral part of determining
+the structural capability of the component. Assuming that the rural villages are located in a highly seismic
+zone, the maximum height to thickness ratio for Adobe walls is about eight. With the wall that was built
+for testing purposes, this ratio was taken as 9.33 which is larger than the maximum height to thickness of
+8 for one-story adobe or stone walls from the Figure 39 below.
+
+Figure 39: IEBC Wall Slenderness Table
+
+Due to the fact that the maximum height to thickness ratio was exceeded, vertical bracing for out of plane
+loading was required. To do this the guidelines laid forth in the IEBC Appendix A Chapter A1 were
+followed, more specifically section A113 for wall anchorage and bracing. Because of the construction
+techniques typical of rural areas of Nepal, as seen earlier in this report, there are no veneer layers of the
+wall. This means that the entire wall acts as a structural wall and there is no need for veneer anchors.
+
+P a g e | 30
+For the retrofit, bamboo stalks are used as the vertical bracing, this is a similar system as using HSS tubes
+for vertical bracing commonly used for unreinforced masonry retrofits in the United States. To determine
+the expected demand on the unreinforced wall, calculations were performed following the requirements
+for wall anchors, in IEBC A1131.1. The calculations for this were based on a one foot wide section of the
+wall, and yielded a demand moment of 7408 pound-inches (617 pound-feet) for a wall pinned at both
+ends, and 29635 pound-inches (2469 pound-feet) for a wall fixed at one end and free at the other.
+
+The twine that is connecting the two stalks of bamboo on either side of the wall would act as wall
+anchors. From the calculations that can be seen on Appendix pages 4 and 5 the flexural demand on each
+of the bamboo stalks, placed at 18 inches on center as seen in the Figure 8 in the overview section of this
+report, would be larger than the demand moment of one foot of wall. This was then compared to the
+experimental flexural capacity of the bamboo of 630 pound-inches for each stalk of bamboo. Based on
+the aforementioned calculations it was determined that the added bamboo would not provide adequate
+flexural/tension reinforcement to the wall for out of plane bending. This led to the necessity of adding
+chicken wire mesh, which would increase the tension capacity of the wall as well as provide confinement.
+
+The tensile capacity of the chicken wire was based off of a manufacturer’s website as 38 kg/m^2. Based
+on this it was determined that the tensile capacity of the chicken wire per every foot of wall would be 52
+pounds. Adding this to the assumed compressive capacity of the cross section as well as the experimental
+tensile capacity of the mortar, the wall was adequate for out of plane loading based on the provisions in
+IEBC.
+
+P a g e | 31
+
+Expectations and Predictions
+From the calculations it was found that adding bamboo and chicken wire mesh to the unreinforced adobe
+wall would increase the flexural capacity of the wall by a multiple of 3.5. This would lead to a maximum
+push force from the ram of 2975 pounds. Failure is expected in similar locations as in the unreinforced
+wall, with the addition of the chicken wire mesh yielding.
+
+Applying the Retrofit to the Wall
+The application of the retrofitting scheme to the wall was based on the calculations shown previously.
+The chicken wire mesh was wrapped around the entire wall and attached using a staple gun. It was
+recognized that staple guns may not be available in Nepal, however comparable connections items may be
+used such as hammering metal bottle caps instead of staples or small pieces of wire. It would also be
+possible to apply the chicken wire and cover it completely with more mud or mortar. After the chicken
+wire mesh was applied, holes were punched through the wall using a metal dowel and a hammer through
+some of the mortar joints. Bamboo stalks were then placed along these holes and secured using twine.
+Unfortunately, due to the testing setup, bamboo was only applied on the face of the wall without the
+loading device. This was because the frame applying the load needed to push against a flat surface, which
+would have been unachievable with bamboo there.
+
+Testing the Retrofitted Wall
+The testing setup used for testing the retrofitted wall was the same as the setup used for the unreinforced
+wall. This included the timber frame and hydraulic ram. The top of the wall was also completely
+restrained, and was never tested as a cantilever. This is because of the belief that should the retrofit be
+applied to a full house, the bamboo and chicken wire would connect to the diaphragm. This additional
+connection would provide a more adequate connection that would be able to sustain the out of plane
+loading of the wall during a seismic event.
+
+P a g e | 32
+During the testing the ram applied force to the wood frame and then to the wall. Similar behavior to the
+second unreinforced masonry test was observed, though a higher maximum load (450 pounds) was
+achieved. This can mostly likely be completely attributed to any confinement that the chicken wire mesh
+provided to the adobe. The force-displacement curve seen in Figure 40 below that was created based on
+data from this testing indicates that there was an increase in maximum allowable force. Because the
+bamboo was not placed on both sides of the wall, it is thought that the bamboo did not add any significant
+bending or tension capacity to the wall. The failure that was observed during loading was at the same
+location as during the last test. This was again a tension failure of the mortar near the end condition at the
+top of the wall. Unfortunately, this is thought to be caused by the fact that the chicken wire mesh was not
+able to be wrapped around the very top of the wall due to the placement of the steel channel beam.
+The maximum predicted loads were not able to be obtained for both the unreinforced testing and the
+retrofit due to the test set up acting more as a fixed-fixed connection rather than a pin-pined. This led to
+the maximum moments being at the top and bottom of the wall. This would explain the mortar failure
+seen in the top courses of the wall.
+
+Figure 40: Force v. Displacement Graph of Retrofitted Wall Test
+
+P a g e | 33
+
+V. DISCUSSION OF RESULTS
+Conclusion
+With the initial goal of the project focusing on finding a retrofit that was easily implementable and
+constructible, the proposed solution that was illustrated above proved to be successful. Not only did it
+double the load capacity of the wall (compared to the cantilevered wall) after already sustaining damage,
+it also decreased its susceptibility to more serious damage. Although the retrofit scheme was negatively
+affected by the test set-up, in that the bamboo was unable to be activated in the testing and the chicken
+wire mesh was not attached to the part of the wall (top) that achieved extreme mortar failure first, the
+results still supported the initial claim.
+
+The lack of bamboo on either side of the wall had caused the bamboo to act in sync with the wall instead
+of counteracting the force. This forced the conclusion that the bamboo did not partake in increasing the
+load capacity of the wall, but instead a majority of the influence was from the wire mesh. The wire mesh
+significantly increased the capacity of the wall because it was able to confine the wall, allowing the
+mortar joints to stay together for a longer period of time. Unfortunately in a full scale adobe house, the
+wire mesh would not be wrapped around the entirety of the structure and the mesh does not act as one
+cohesive group. To accommodate these realizations, the wire mesh would need to be attached through the
+wall in order to engage both sides of the confinement.
+
+Overall even with the complications that had occurred, the scheme showed immense promise for helping
+Nepal’s more impoverished areas with both retrofit and new construction. With minimal training, the
+implementation of this design in adobe buildings could greatly decrease the amount of damage the
+country may experience in future seismic events.
+
+P a g e | 34
+
+Further Research Suggestions
+The research completed for this project was a superficial attempt at retrofitting adobe buildings. With the
+limited time frame of the research, the scope was narrowed down. Initially the goal was to create better
+diaphragm connections between the wall and the floor in order to help with out-of-plane loading.
+However, that would require the construction of a full scale adobe building which was not feasible at the
+time. Figure 41 shown below illustrates the initial design for the bamboo to diaphragm connection.
+
+Figure 41: Diaphragm – Wall Retrofit Connection schematic
+
+With all research, multiple trials are necessary to decrease the likelihood of human error in results. The
+limited time frame also impacted the number of walls that were built, simply because the setup (brickmaking) prior to testing had extinguished a majority of the course of the project. A few of the suggestions
+for further investigation on this retrofit scheme would be constructing and testing a separate wall
+reinforced with bamboo, and another with chicken wire mesh. It would also be interesting to build one
+wall with the scheme as a new construction option.
+
+P a g e | 35
+
+Global Impact of Design
+With Nepal in as much disarray as it was when the earthquake hit, the use of the retrofit scheme could
+help the rural areas move away from houses made of tarp and sheet metal and move back to building with
+four walls. This retrofit scheme could also be used in new construction, allowing the structures to have
+less damage in the future if a seismic event were to occur. Lastly, this could also be implemented in other
+countries that have buildings prominently made of adobe. The use of this retrofit scheme would not only
+decrease the amount of structural damage, but could also greatly decrease fatalities in the future.
+
+P a g e | 36
+
+Appendix
+
+Page 1
+
+EXTERNAL BAMBOO REINFORCEMENT
+
+on Adobe Buildings
+We are proposing the use of bamboo as an external reinforcement that would be used in either retrofitting or for new
+construction. In many rural buildings the use of unreinforced adobe are susceptible to damages during a seismic
+event. The most recent earthquake in Nepal had resulted in the separation of the building diaphragm from the adobe
+wall, as well as major cracking throughout the structure. The intention of this design would be to address these
+concerns through the use of bamboo, chicken wire mesh, and ties.
+
+http://www.bath.ac.uk/ace/research/cicm/news-and-events/files/jones.pdf
+
+The pictures above show the orientation of the bamboo (used for external reinforcement) as a means to decrease cracking
+of the wall and out of plane bending. The following application was used as research into seismic strengthening of adobe
+structures, ultimately used in El Salvador and India. The system above uses chicken wire mesh internally, with polypropylene
+ties woven through the wall in order to allow for an attachment to the bamboo. The ring beam, lastly, placed on top of the wall
+attaches the bamboo on either side. The research was based on improving new construction practices, while the purpose of
+this project would be to adapt these ideas for existing structures.
+http://www.world-housing.net/wp-content/uploads/2011/06/Adobe_Tutorial.pdf
+
+Page 2
+The ring beam, however, would not be a feasible option for retrofitting buildings but would be used more for new
+construction. The beams in the pictures on the previous page were made of timber, which would be replaced with
+bamboo because it is easily aquired throughout Nepal.
+
+http://www.builtconstructions.in/OnlineMagazine/Builtconstructions/Pages/Earthquake-Resistant-Construction-of-Adobe-Buildings-0300.aspx
+Wire
+
+Bamboo
+
+Ties
+
+Adobe
+Wall
+
+Ring Beam made of Bamboo would be placed on top of wall (in new construction)
+
+In order to place the vertical bamboo reinforcment
+on the exterior of the walls it will be necessary to drill
+through the adobe and connect the bamboo on the exterior and interior of the wall. Steel wire or string (material is dependent on availability) will be used to create
+this connection and further testing will be required to
+determine which material is adequate, both for resisting seismic motion as well as its durability.
+
+Plan View of Unreinforced Adobe Wall with External
+Bamboo Reinforcement
+
+Page 3
+For the retrofit option, and as a replacement for the ring beam, we propose adding wire mesh (or chicken wire) to
+specific locations on the adobe walls. These locations would mainly be located at the corners and boundary edges of the walls. Adding wire mesh has shown to be beneficial in testing done in Peru, and performed well during
+seismic events that had occured soon after.
+http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=EAF691954277C326B275DE71A6BF4927?doi=10.1.1.495.7361&rep=rep1&type=pdf
+
+http://www.world-housing.net/wp-content/uploads/2011/06/Adobe_Tutorial.pdf
+Tie Between
+Diaphragm
+Bamboo and
+Vertical Bamboo
+
+Adobe Wall
+External Bamboo
+Tie through wall
+
+Tie through wall
+
+Horizontal
+Diaphragm
+Bamboo
+
+Adobe Wall
+
+Detail : Wall/Diaphragm/Bamboo Connection NTS
+The proposed method is to connect the bamboo sticks on the underside of the diaphragm to the external bamboo
+reinforcement. Holes will be drilled in both the horizontal and vertical bamboo members and string or wire will be
+threaded through these holes (detailed above.) This would also require further testing to ensure the connection’s
+strength and durability, as well as if it affects the bamboo’s material properties. The design will ensure that the flooriwill work as an efficient diaphraghm during seismic events.
+
+Page 4
+
+Page 5
+
+Page 6
+
+Page 7
+
+Page 8
+
+Page 9
+
+Page 10
+
+Page 11
+
+Page 12
+
+Page 13
+
+Page 14
+
+P a g e | 15
+37
+
+Works Cited
+"Appendix A Chapter A1." International Existing Building Code 2012: IEBC. Country Club Hills, IL:
+International Code Council, 2011. N. pag. Print.
+"Hexagonal Wire Mesh Made of Galvanized, Stainless Steel and PVC Wire."Hexagonal Wire Mesh or
+Netting Supplier, Catalog and Info. N.p., n.d. Web. 07 June 2016.
+2012 International Building Code. Country Club Hills, IL: ICC, 2011. Print.
+Blondet, Marcial, Gladys Villa Garcia, Svetlana Brzev, and Alvaro Rubinos. "Earthquake-Resistant
+Construction of Adobe Buildings: A Tutorial." (n.d.): n. pag. Web.
+Brandow, Gregg E., Chukwuma G. Ekwueme, and Gary C. Hart. 2009 Design of Reinforced Masonry
+Structures. Citrus Heights, CA: Concrete Masonry Association of California and Nevada, 2011.
+Print.
+Building Code Requirements and Specifications for Masonry Structures: Containing ; Building Code
+Requirements for Masonry Structures (TMS 402-08/ACI 530-08/ASCE 5-08) ; Specification for
+Masonry Structures (TMS 602-06/ACI 530.1-08/ASCE 6-08): And Companion Commentaries.
+Boulder, Colo: Masonry Society, 2008. Print.
+Jones, Stephen, and Dominic Dowling, PhD. "Seismic Strengthening of Adobe Buildings: Linking
+Research and Application." QuakeSafe Adobe (n.d.): n. pag. Web.
+Rai, Durgesh C., Vaibhav Singhal, Bhushan Raj S., and S. Lalit Sagar. "Reconnaissance of the Effects of
+the M7.8 Gorkha (Nepal) Earthquake of April 25, 2015." Geomatics, Natural Hazards and
+Risk 7.1 (2015): 1-17. Web.
+Seismic Evaluation and Retrofit of Existing Buildings: ASCE/SEI 41-13. N.p.: American Society of Civil
+Engineers, 2013. Print.
+
+

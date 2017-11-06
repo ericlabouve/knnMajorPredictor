@@ -1,0 +1,974 @@
+Fin Flutter Analysis
+Richard Bauer and Austin Hardman
+California Polytechnic State University: San Luis Obispo, San Luis Obispo, California, 93401
+
+This report summarizes the experimental process executed to study fin flutter
+characteristics. The experiment analyzed the influence of the relationship between
+structural dynamics and aerodynamics on flutter characteristics. Theoretical
+models were created in PATRAN/NASTRAN and FinSim for comparison to
+experimental results and to set the envelope of the physical experiments. The
+theoretical analysis predicted the occurrence of flutter near Mach 1 or Mach 5. The
+physical model was constructed of solid aluminum with machined holes for the
+inertial sensors. Two test runs were completed to collect data on the displacement of
+the fin in the supersonic wind tunnel. Additionally, the tests sought to identify any
+evidence of flutter as determined by the theorized model. The results showed
+evidence of both bending and twisting in the fin.
+
+Nomenclature
+A
+A*
+M
+P
+P0
+Ɣ
+
+=
+=
+=
+=
+=
+=
+
+area of the test section
+throat area
+Mach number
+pressure
+static pressure
+specific heat ratio
+
+Contents
+Fin Flutter Senior Project .......................................................................................................................... 1
+I.
+
+Introduction ................................................................................................................................. 3
+
+II.
+
+Airfoil and Wing Selection ........................................................................................................... 3
+
+III.
+
+Theoretical Analysis .................................................................................................................... 4
+
+IV.
+
+Experimental Testing ................................................................................................................... 6
+
+A.
+
+Accelerometer Throughput Test ....................................................................................... 6
+
+B.
+
+Accelerometer Locations ................................................................................................. 9
+
+C.
+
+Experiment Set-up ......................................................................................................... 10
+
+D.
+
+Procedure ...................................................................................................................... 11
+
+E.
+
+Tunnel Mach Number .................................................................................................... 12
+
+V.
+
+Results ....................................................................................................................................... 13
+
+A.
+
+SSWT Testing ............................................................................................................... 13
+
+B.
+
+Displacement Visualizations .......................................................................................... 16
+
+VI.
+
+Future Work .............................................................................................................................. 18
+
+VII.
+
+Conclusion................................................................................................................................. 20
+
+References.............................................................................................................................................. 21
+
+Figures
+Figure 1. Wing Geometry with Applied Root Boundary Conditions. .......................................................... 5
+Figure 2. Displacement Results of the First Normal Mode. ........................................................................ 6
+Figure 3. Accelerometer Throughput Test. ................................................................................................ 8
+Figure 4. Selection of Calibration. ............................................................................................................. 9
+Figure 5. Experiment Model. .................................................................................................................. 10
+Figure 6. Accelerometer Locations. ......................................................................................................... 10
+Figure 7. Fin in the Test Section.............................................................................................................. 11
+Figure 8. Quick Disconnect Interface. .................................................................................................... 11
+Figure 9. DAQ Wiring. ........................................................................................................................... 11
+Figure 10. SSWT Run Number 1. ........................................................................................................... 13
+Figure 11. SSWT Run Number 2. ........................................................................................................... 13
+Figure 12. Relative Displacement Run 1.................................................................................................. 14
+Figure 13. Relative Displacement Run 2.................................................................................................. 15
+Figure 14. Fin Displacement Over Time. ................................................................................................. 17
+Figure 15. Image of the Fin After Run 2. ................................................................................................. 18
+Figure 16. Highlighted portion of Figure 16. ........................................................................................... 18
+Figure 17. Detached Accelerometers ....................................................................................................... 19
+
+Tables
+Table 1. Frequency Values for the Structural Normal Modes. .................................................................... 5
+Table 2. USB DAQ Characteristics. .......................................................................................................... 7
+Table 3. Accelerometer Characteristics. .................................................................................................... 7
+Table 4. Area Ratio Equation Numbers to Solve for Mach Number. ........................................................ 12
+
+I.
+
+Introduction
+
+Flying structures demand light materials capable of withstanding strong aerodynamic loads
+present during flight. Aeroelasticity is the interaction of inertial, aerodynamic, and elastic forces of flight
+vehicles.¹ Flutter is an aeroelastic instability commonly seen in wings, tails, rotor blades and control
+surfaces of aircraft, as well as rocket fins. The phenomenon occurs when aerodynamic loads cause
+deformation of the body, which in turn creates a reaction by the structure, initiating an oscillatory motion.
+Under deformation, the aerodynamics of the wing change, which results in the body absorbing energy from
+the airflow and the amplitudes of the oscillations may increase to the level of fracture or instability.
+Although all flutter follows the basic pattern of inertial, aerodynamic, and elastic interaction, the
+exact causes and effects may vary. There are several types of flutter for aircraft and variations specific to
+rockets and missiles. Aircraft may experience panel flutter, galloping flutter, stall flutter, limit cycle
+oscillations (LCO), and propeller whirl flutter. Examples of flutter problems for missiles include skin
+flutter, flutter of automatic controls or servomechanics, and flutter of short wings with ram-jets or external
+stores.²
+The type of flutter being investigated in this work is wing bending-torsion flutter. Aerodynamic
+fluctuations of the supersonic region create an inertial offset in the wing. The structural responses of the
+wing have a phase difference between bending and torsion, preventing the reactions from dampening each
+other out.³ Flutter velocity is the airspeed where the structure oscillates in an unstable harmonic motion. Cal
+Poly’s supersonic wind tunnel was utilized to validate the flutter velocity from modeling in PATRAN and
+FinSim analyses.
+Flutter testing has become an integral part of the design process to ensure survivability. This
+project aims to develop the basis of an investigation of the phenomenon and encourages future exploration.
+Flutter can cause vehicle structures to fail, and is an important element of the flight envelope to investigate.
+
+II.
+
+Airfoil and Wing Selection
+
+Contrary to standard aircraft, the experimental wing used in this work needed to be designed to
+flutter. Research was completed to identify wings previously shown to flutter and alterations that affect
+flutter velocity, such as sweep and camber. The initial choice was the F-16 wing due to its historical
+
+connection with flutter characteristics. However, further investigation revealed the flutter instability occurs
+in the wing due to hanging loads, especially the wingtip Sidewinder. The F-16 wing was not chosen due to
+the complexity and safety risks of creating a wing with detachable pieces for the supersonic wind tunnel
+tests. Further research provided a wing proven to flutter without additions to the basic geometry.
+A NASA research video documented flutter tests for the X-15 horizontal stabilator. The video
+illustrated the potential for the stabilator to flutter during wind tunnel testing. The airfoil on the X-15 was a
+customized model and the coordinates were unobtainable for modeling. Similar airfoils were plotted on top
+of an image of the original NACA 66005 in order to choose a new geometry. The sweep and lack of
+camber present in the X-15 stabilator favorably reduced the flutter velocity towards the regime predicted
+for the supersonic wind tunnel. Airfoil coordinate data was selected from the UICI database for the NACA
+66206 airfoil.
+The model was further modified for manufacturing constraints and integration of the sensors. The
+root thickness was increased for the two AN-632 bolts used to fasten the wing to the test stand. Similarly,
+the wingtip thickness was expanded to contain the MMA2301KEG-ND accelerometers. Therefore, the final
+wing has a NACA 66212 for the root and a NACA 66215 at the wingtip.
+
+III.
+
+Theoretical Analysis
+
+NASTRAN and PATRAN were the primary finite element analysis (FEA) software used in the
+theoretical development of the wing. Additionally, FinSim was used for confirmation of results and
+identification of the required flutter velocity. PATRAN is a program that allows the user to analyze a
+geometry created internally or imported from outside programs, such as SolidWorks. The analysis tools
+include the ability to set boundary conditions, initial and final load sets, material properties, aerodynamic
+forces and properties. NASTRAN is an FEA program that takes the data produced by PATRAN and solves
+for the desired outputs. For this experiment, the desired outputs were the normal modes of the wing as well
+as the flutter speed. For the purposes of this experiment, a 2-D model was used with similar geometric
+characteristics related to the X-15 horizontal stabilator. Figure 1 shows the 3-D model created in PATRAN
+with the boundary conditions applied. The AN-632 bolts are represented as rigid connection boundary
+conditions, while the rest of the model represents a semi-rigid connection. The semi-rigid connection
+prevents linear movement in all directions, but allows for bending and torsional flexing.
+
+Figure 1. Wing Geometry with Applied Root Boundary Conditions.
+
+The first step in the analysis process was to calculate the structural nodes, which was completed
+using NASTRAN. After setting the boundary conditions on the model, as shown in Figure 1, the
+NASTRAN analysis solution was set to normal modes in order to analyze the structure to calculate its
+normal modes. Table 1 shows the values for the frequencies where the normal modes occur.
+Table 1. Frequency Values for the Structural Normal Modes.
+
+Normal Mode
+
+Frequency
+
+Mode 1
+
+1189 Hz
+
+Mode 2
+
+3390 Hz
+
+Mode 3
+
+5522 Hz
+
+Although the results do seem high, it was assumed that the material being used was made out of
+aluminum, which at the time of the analysis sufficed. Changing the material to be more ductile will
+drastically reduce these numbers. Note that these numbers are the normal modes of the structure, and not
+necessarily the frequency at which the structure will flutter. Although PATRAN/NASTRAN has the
+capability to do aero-elastic analysis, the analysis was not able to be done in the allotted time. The flutter
+software, FinSim, was used in conjunction with the NASTRAN findings. It confirmed the normal modes of
+the structure as well as produced an estimation of the divergence velocity and flutter frequency.
+The next step component was the displacement that was caused by the normal modes. This was
+important to calculate since if the displacement was high enough to fracture the fin, then a different
+material had to be chosen. As stated previously, the chosen material was aluminum, which has an average
+
+ductile material property. Once again, changing the material to be more ductile will drastically increase the
+deflection of the fin.
+The original goal of the project was to create an FEA model and subject it to an aeroelastic
+analysis in PATRAN in order to figure out the divergence velocity, as well as determine the frequency in
+which the fin would flutter. The normal modes of the fin were discovered using the software. Although this
+validation was not able to be completed, the model could be verified by placing the fin on a shake table to
+match the normal modes produced by PATRAN. Figure 2 shows the results of the first normal mode. The
+units are in inches; however, there is a scaling factor of 0.1 that is not shown in the figure. This scaling
+factor means that the actual displacement of the fin would be closer to 0.986 inches and not the 9.86 result
+that is currently shown.
+
+Figure 2. Displacement Results of the First
+Normal Mode.
+
+IV.
+
+Experimental Testing
+
+A. Accelerometer Throughput Test
+To measure the displacement of the fin while it was running in the tunnel, 1-D accelerometers
+were connected to four distinct points on the fin. The accelerometers needed to have a high sample rate due
+to the high frequency in which the fin was expected to vibrate. Furthermore, the accelerometers needed to
+survive the supersonic environment. Performance compromises were made in selecting the
+
+MMA2301KEG-ND accelerometer. Other accelerometers with higher performance capabilities were
+purchased and tested for use in the experiment. Several factors eliminated the other accelerometer options.
+For example, the Analog Device ADXL326 3-D sensor was desired for its small size (4 x 4 mm), increased
+sensitivity (~60 mV/g), and faster sample rate (550 samples/sec). However, it was eliminated because the
+team could not securely solder the wire leads, breaking the connections through handling the wired
+accelerometer alone.
+A National Instruments Data Acquisition (DAQ) module was used for the testing purposes. The
+key specifications of the DAQ are shown in Table 2. The DAQ was selected due to its high accuracy and
+rather high sample rate. Furthermore, the DAQ is available in the Cal Poly laboratories and the team is
+familiar with its use from previous laboratory experiments. A Freescale Semiconductor Low G
+Micromachined Accelerometer was also used for testing. The specific model is the MMA2301KEG-ND
+accelerometer from Digikey. Its key specifications are shown in Table 3.
+Table 2. USB DAQ Characteristics. Operating limitations of the DAQ.
+
+Component
+
+A-D Resolution
+
+Sample Rate
+
+Min Voltage
+Range Accuracy
+
+Max Voltage
+Range Accuracy
+
+NI USB-6211 Data
+Acquisition Module
+
+16-bit
+
+250kS/s
+
+0.088mV
+
+2.69 mV
+
+Table 3. Accelerometer Characteristics. Operating limitations of the accelerometers.
+
+Component
+
+Operating Characteristics
+Min
+
+Typical
+
+Max
+
+Units
+
+Sensitivity
+
+693.8
+
+750
+
+806.3
+
+mV/g
+
+Operating
+Voltage
+
+4.75
+
+5
+
+5.25
+
+V
+
+Acceleration
+Limits
+
+-2.5
+
+--
+
+2.5
+
+g
+
+FS MMA2301KEG-
+
+ND Accelerometer
+
+The accelerometers were tested before being included in the experiment. The throughput test
+increased the team’s familiarity with the accelerometers and allowed for the successful setup of the
+LabView software. Figure 3 shows the data for the entire calibration test. Figure 4 is zoomed in section of
+the previous figure. During the test, the accelerometers were mounted to a stationary platform and hooked
+
+onto a spring mechanism. The spring was displaced and the platform oscillated up and down. Figure 3
+displays the entire test data. Instances of the platform being held stationary can be seen, as well as time
+periods where the platform moved on the spring mechanism. Figure 4 highlights an oscillatory motion
+section from the accelerometer calibration. The throughput test showed that the sample frequency was also
+affected by the LabView software. Despite the hardware specifications listing high sample rates for the
+accelerometers and DAQ module, the bottleneck seemed to be LabView, which decreased the data
+collection rate down to 36 samples per second.
+Acclerometer Calibration
+3
+2
+
+Displacement (ft)
+
+1
+0
+-1
+-2
+-3
+-4
+-5
+0
+
+50
+
+100
+
+150
+
+200
+Time (s)
+
+250
+
+300
+
+350
+
+400
+
+Figure 3. Accelerometer Throughput Test. The accelerometers and the LabView software underwent a throughput
+test before entry into the wind tunnel. In this test, the accelerometer was placed on a spring mechanism and allowed to
+oscillate. Additionally, the mechanism was tapped with a hammer to create very short period vibrations.
+
+Acclerometer Calibration
+1.5
+
+Displacement (ft)
+
+1
+0.5
+0
+-0.5
+-1
+-1.5
+202
+
+204
+
+206
+
+208
+
+210
+212
+Time (s)
+
+214
+
+216
+
+218
+
+220
+
+Figure 4. Selection of Calibration. This section of data highlights an oscillatory motion section of the accelerometer
+calibration.
+
+B. Accelerometer Locations
+The Cal Poly Supersonic Wind Tunnel (SSWT) was used for experimental testing. The fin was
+theoretically calculated using FinSim to flutter in the transonic region and at approximately Mach 5.
+However, the supersonic wind tunnel was configured to achieve an airflow speed of approximately Mach
+3.3. The difference between the ideal test speed and the test conditions was an area of concern going into
+the test. Accelerometers were used to collect acceleration data on the fin’s movement and placed in four
+distinct locations on the fin. Accelerometer one was located at the very top, where the displacement from
+the flutter was predicted to be the largest magnitude. Two accelerometers were placed towards the middle
+along the same chord line. The overall translational displacement was expected to be the same, but
+differences in movement were indicative of torsional displacement. The fourth accelerometer was placed
+near the root as a reference for noise in the data. Figure 5 shows how the accelerometers were mounted in
+the actual fin. Figure 6 shows the layout of the accelerometers and their respective numbers.
+
+Figure 5. Experiment Model. View of the actual model wing.
+
+Figure 6. Accelerometer Locations. Locations of the accelerometers in the fin.
+
+A channel was created in the middle of the fin to feed the wires through. A total of 12 wires ran though
+the fin. Each accelerometer required one wire for the input voltage, the output voltage, and the ground. The
+output voltage is the signal and converted in the LabView software to acceleration.
+C. Experiment Set-up
+The three wires (signal, power, and ground) were soldered to the accelerometers. Next, the
+accelerometers were secured in the fin using Mortite caulking putty. The putty was non-conductive and
+could be smoothed over the accelerometer to match the original airfoil’s shape. The wires were fed through
+the central channel and out through a hole in the center of the fixture plate. The fixture plate was attached
+to the top of the SSWT test section, securing the fin in place, as shown in Figure 7.
+
+Figure 7. Fin in the Test Section. A view of the fin in the test section from behind the trailing edge.
+
+External to the test section, the wires were attached to shielded cabling. The connection was made
+using a quick disconnect interface. The shielded wires were then connected to a DAQ located in the control
+room. The DAQ was then connected to a computer, also located in the control room. Figure 8 shows the
+quick disconnect used as the interface between the wires coming from the fin and the shielded wires that
+went from the interface to the DAQ. Figure 9 shows the wiring of the DAQ used for the experiment.
+
+Figure 8. Quick Disconnect Interface. The
+connection between the accelerometer wires and the
+shielded cable.
+
+Figure 9. DAQ Wiring. The wiring from the shielded
+cable to the DAQ.
+
+D. Procedure
+The test procedure followed closely to that of the supersonic wind tunnel operation safety plan.
+All of the necessary safety precautions were taken prior to running the tunnel. When the pre-run checklist
+
+was complete, the manual valve of the tunnel was opened. The software operator in the control room
+initiated the collection of data through LabView. Next, the electro-pneumatic valve was opened via an
+electronic switch inside the control room, removing the final seal and allowing the tank pressure to push
+through the wind tunnel. After approximately 10 seconds, the electro-pneumatic valve was closed again,
+via the switch in the control room. This stopped the airflow into the tunnel. The software operator stopped
+the program and saved the data file. After it was confirmed that the tunnel was off, the manual valve was
+closed. The post-run checklist was then completed to ensure that the tunnel was shut off correctly, and that
+it was safe to work around.
+E. Tunnel Mach Number
+In order to determine at what speed the fin fluttered the most, it was necessary to figure out the
+Mach number in the test section throughout the course of the test run. Normally, pressure transducers are
+placed upstream and downstream of the wind tunnel, and the pressure ratio between the two is used to
+calculate the Mach number. From there the pressure ratio Mach number equation can be used to find the
+resulting Mach number. However, due to the oblique shocks coming off of the fin that were hitting the
+downstream pitot tube, the resulting pressure readings were incorrect for calculating the tunnel’s airspeed.
+Thus, the area ratio Mach number equation was used. The area ratio equation is based on the areas of the
+test section and throat and is not affected by the oblique shocks coming from the fin. Equation 1 shows the
+pressure ratio equation and Equation 2 shows the area ratio equation. Table 4 shows the various numbers
+used to calculate the Mach number, as well as the calculated Mach number affecting the fin.
+(1)
+
+(2)
+
+Table 4. Area Ratio Equation Numbers to Solve for Mach Number.
+
+Test Section Area
+23.6 in2
+
+Throat Area
+4.18 in2
+
+Specific Heat Ratio
+1.4
+
+Mach Number
+3.31
+
+V.
+
+Results
+
+A. SSWT Testing
+In order to validate the analytical predictions mentioned above, several tests were run in the
+aforementioned Cal Poly Supersonic Wind Tunnel. Acceleration data was collected and integrated into
+position data. The results of the two experimental SSWT runs are shown below in Figure 10 and Figure 11.
+It is important to note that the data is not shown from time equal to zero. As mentioned in the procedure,
+lag time occurs before the initiation of the data collection and the initiation of the tunnel. Therefore, the
+figures only display the period of time when the tunnel was operating.
+Bending Displacement vs. Time (Run1)
+0.15
+
+Bending Displacement (ft)
+
+0.1
+0.05
+0
+-0.05
+-0.1
+-0.15
+
+Accel
+Accel
+Accel
+Accel
+
+-0.2
+-0.25
+
+10
+
+12
+
+14
+
+16
+Time (s)
+
+18
+
+20
+
+1
+2
+3
+4
+
+22
+
+Figure 10. SSWT Run Number 1.
+Bending Displacement vs. Time (Run2)
+
+Bending Displacement (ft)
+
+0.1
+
+0.05
+
+0
+
+-0.05
+
+Accel
+Accel
+Accel
+Accel
+
+-0.1
+
+-0.15
+
+3
+
+4
+
+5
+
+6
+Time (s)
+
+Figure 11. SSWT Run Number 2.
+
+7
+
+8
+
+9
+
+1
+2
+3
+4
+
+In both experimental runs, an offset position occurred. The data shifts towards an offset value and
+oscillates around that displacement measurement. Run 1 settled around downward deflection of 0.1 feet.
+Run 2 settled around an upward deflection of 0.05 feet. This offset did not make physical sense, so steps
+were taken to eliminate its evidence in the data. Accelerometer four is located near the support bolts in the
+fin, and little to no movement was projected for this area of the fin. Any movement read by the fourth
+accelerometer was therefore considered to be noise. The vibration of the tunnel during operation and
+external electrical interference are two possible causes of noise in the data. Accelerometer four’s data was
+used in post processing as a reference for noise to improve the accuracy of all of the data. Data from
+accelerometers one, two and three were adjusted to be relative to accelerometer four. This nominalized data
+output is show in Figure 12 and Figure 13 for Run 1 and Run2, respectively.
+Relative Bending Displacement vs. Time (Run1)
+
+Relative Bending Displacement (ft)
+
+0.15
+
+0.1
+
+0.05
+
+0
+
+-0.05
+
+-0.1
+
+Accel 1
+Accel 2
+Accel 3
+10
+
+12
+
+14
+
+16
+Time (s)
+
+18
+
+Figure 12. Relative Displacement Run 1.
+
+20
+
+22
+
+Relative Bending Displacement vs. Time (Run2)
+0.1
+
+Relative Bending Displacement (ft)
+
+0.08
+0.06
+0.04
+0.02
+0
+-0.02
+-0.04
+-0.06
+Accel 1
+Accel 2
+Accel 3
+
+-0.08
+-0.1
+
+3
+
+4
+
+5
+
+6
+Time (s)
+
+7
+
+8
+
+9
+
+Figure 13. Relative Displacement Run 2.
+
+Several aspects within the plots are important. Accelerometer 1, the wingtip sensor, underwent the
+greatest deflection in both trials. Accelerometer 2, the aft accelerometer, experienced greater bending than
+accelerometer 3, indicating twist in the wing. The data is similar to the trend of increased bending that was
+predicted in the theoretical analysis. This identification also follows basic beam bending theory. However,
+caution must be taken in considering the results. The sample rate achieved by the data acquisition system is
+much lower than the predicted frequency of oscillations in the theoretical analysis. Additionally,
+referencing the data to the fourth accelerometer compounds any possible errors in the data measurements.
+Improvements for these shortcomings in the data analysis are discussed later in the report.
+Bending-torsion flutter is the focus of this experiment. Regarding Figure 13, bending occurs
+around the 3.5 to 4 second time period after the initial shockwave from the tunnel has passed. In the same
+time period, accelerometer two moves significantly farther than accelerometer three, indicating torsion.
+Both the bending and torsion continue in an oscillatory pattern from the 4.5 to 7.5 second time period in the
+plot, failing to dampen each other out.
+All three accelerometers are shown to displace at eight seconds. At this point, the data illustrates a
+displacement pattern similar to the dynamics of flutter. Once again, caution must be taken when
+considering this result due to the inaccuracies of the data measurement system. The stiffness of the wing
+resists the displacement shown at the eight second mark, pulling the wing back towards its neutral position.
+Assuming the dynamics of flutter were captured accurately, the response bend absorbed additional energy
+
+from the airflow causing the wing to twist, as seen in the 8.5 second mark of Figure 13. The extra energy
+produces the next wing bend, back towards the positive direction, with a greater tip deflection than the
+previous positive displacement. Another example of this occurrence is shown in Figure 12 around the 13
+second time period.
+Assuming the displacements were properly captured, and despite the fin movement dampening out
+in the next oscillation, this is a brief example of the dangers of fin flutter. Offset bending and torsion
+responses within the wing, allow for additional energy absorption from the airflow, amplifying the
+movement of the wing. In true bending-torsion flutter, the offset responses and wing movement would
+continue, risking damage to the structure and failure of the aircraft.
+B. Displacement Visualizations
+The large spike in movement, located around three seconds in run number two, has been simulated
+in Figure 14. The data was animated in a Matlab plot to visualize the movement of the fin. Figure 14 is
+included below as a representative sample of the animated plot. The period of time in the data is selected
+due to the large displacement values in order to easily communicate the concept of the animation.
+The blue line is representative of the fin based on accelerometers one, three and four, while the red
+line is representative of the fin utilizing accelerometers one, two and four. Accelerometers two and three
+are located the same distance along the span, varying in distance along the chord. Differences in the
+movement between these accelerometers are suggestive of twist occurring in the wing. Therefore, the
+difference between the red and blue lines is indicative of the amount of twist in the wing.
+
+Fin Displacement Over Time: 2.88 sec
+
+2.5
+2
+1.5
+1
+0.5
+0.1
+
+2
+1.5
+1
+0.5
+0
+-0.1
+
+2.5
+2
+1.5
+1
+0.5
+0
+-0.1
+
+-0.05
+0
+0.05
+Bending Displacement
+
+0.1
+
+Accelerometer Location Along Fin
+
+Accelerometer Location Along Fin
+
+2
+1.5
+1
+0.5
+0
+-0.1
+
+2.5
+2
+1.5
+1
+0.5
+0
+-0.1
+
+-0.05
+0
+0.05
+Bending Displacement
+
+2
+1.5
+1
+0.5
+0.1
+
+0.1
+
+2.5
+2
+1.5
+1
+0.5
+-0.05
+0
+0.05
+Bending Displacement
+
+0.1
+
+2.5
+2
+1.5
+1
+0.5
+0
+-0.1
+
+-0.05
+0
+0.05
+Bending Displacement
+
+0.1
+
+Fin Displacement Over Time: 3.27 sec
+
+3
+
+0
+-0.1
+
+-0.05
+0
+0.05
+Bending Displacement
+
+3
+
+Fin Displacement Over Time: 3.18 sec
+
+2.5
+
+-0.05
+0
+0.05
+Bending Displacement
+
+2.5
+
+Fin Displacement Over Time: 3.06 sec
+
+3
+
+Fin Displacement Over Time: 3.12 sec
+3
+
+0
+-0.1
+
+0.1
+
+3
+
+Fin Displacement Over Time: 3.03 sec
+
+3
+
+Accelerometer Location Along Fin
+
+Accelerometer Location Along Fin
+
+Fin Displacement Over Time: 2.97 sec
+
+-0.05
+0
+0.05
+Bending Displacement
+
+Accelerometer Location Along Fin
+
+-0.05
+0
+0.05
+Bending Displacement
+
+2.5
+
+Accelerometer Location Along Fin
+
+0
+-0.1
+
+Fin Displacement Over Time: 2.91 sec
+
+3
+
+Accelerometer Location Along Fin
+
+Accelerometer Location Along Fin
+
+Accelerometer Location Along Fin
+
+Fin Displacement Over Time: 2.85 sec
+3
+
+0.1
+
+3
+2.5
+2
+1.5
+1
+0.5
+0
+-0.1
+
+-0.05
+0
+0.05
+Bending Displacement
+
+0.1
+
+Figure 14. Fin Displacement Over Time.
+
+Flutter movement is suggested beyond the quantitative analyses. Figure 15 shows that the fin
+moved during the experiment. Shown more clearly in Figure 16, the fin moved during the test runs, digging
+into the metal base plate. Figure 16 shows a zoomed-in look at the raised surface caused by the fin’s
+movement.
+
+Figure 15. Image of the Fin After Run 2.
+
+Figure 16. Highlighted portion of Figure 15.
+
+VI.
+
+Future Work
+
+This project is the ground work for future projects. It is the hope of this team that future students
+will continue the current progress. There are many areas in the project with room for improvement. The
+first improvement is utilizing better equipment to obtain more accurate results. Smaller sensors decrease
+their effect on the structural integrity and dynamics of the test wing. The team was unable to implement the
+
+ADXL326 3-D accelerometer; however, future projects will hopefully devise a better soldering method to
+employ the 3-D sensor. The wing used in this experiment was overly customized to fit the dimensions of
+the wind tunnel, while being thick enough to house the accelerometers. Although the wing was shown to
+flutter in experimental NASA videos, it is the team’s belief that the wing was too modified from the one
+shown in the video to achieve flutter in the experiment’s conditions.
+A second improvement is to securely mount the accelerometers into the test wing. The team relied
+on caulking putty to secure the accelerometers in the fin and provide a level surface with the wing.
+However, the high speeds of the test condition eventually stripped the putty away. Accelerometer three was
+completely lost and accelerometer four became partially detached. The use of epoxy to secure the
+accelerometers is suggested as a solution for future projects.
+
+Figure 17. Detached Accelerometers. In the final trial, two accelerometers detached from the wing and negated the
+data for the trial.
+
+Third, a better data acquisition setup is required to improve the accuracy of the experiment. Since
+the software model predicted displacement frequencies from 1000 to 5000 Hz, a high rate system is
+required. The current setup only achieved a data collection rate of 36 samples per second. Therefore, the
+current setup did not obtain enough data points to model the movement of the fin with a high resolution.
+
+A final improvement is variability in the tunnel’s speed. The theoretical calculations predicted
+airflow speeds that the supersonic wind tunnel could not achieve in its current state. Being able to modify
+the tunnel’s configuration to achieve the required test airspeed will improve the results for future projects.
+VII.
+
+Conclusion
+
+The project yielded mixed results, with several areas for improvement for future projects. The data
+showed bending trends that at least agreed with the theoretical trends. Furthermore, the accelerometers
+located on the same chord line showed distinct movements, suggesting twist occurring in the wing.
+However, the increased bending deflections caused by the extra absorption of energy were only briefly
+exhibited, and dampened out unlike true flutter. These identifications are qualified within the limitations of
+the data acquisition setup. The DAQ system was incapable of capturing the displacements with a high
+enough resolution for confident results. Improving this system through smaller, higher performance
+accelerometers is the primary improvement for future projects. Adapting the wing model to fit the tunnel’s
+dimensions and the larger accelerometers is the paramount reason for the lack of success in the project.
+Nonetheless, there is room for improvement to mitigate these issues for future projects to achieve more
+accurate results. Flutter remains an important element of a flight test envelope, requiring continued
+research.
+
+References
+¹Bae, J. S., and Lee, I., “Limit Cycle Oscillation of Missile Control Fin with Structural NonLinearity,” Journal of Sound and Vibration, January 2003.
+²Martin, D. J., “Summary of Flutter Experiences as a Guide to the Preliminary Design of Lifting
+Surfaces on Missiles,” National Advisory Committee for Aeronautics, February 1958.
+³Megson, T. H. G., Aircraft Structures for Engineering Students, 4th ed., Elsevier Ltd., Oxford,
+2007.
+
+

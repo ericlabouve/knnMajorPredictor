@@ -1,0 +1,588 @@
+MANO
+DE LA
+AMISTAD
+A THIN SHELL CONCRETE STRUCTURE DESIGNED FOR THE PEOPLE OF HAVANA, CUBA
+
+PETER ASTER, MARTA BLACHOWICZ-SCOTT, AARON COOK,
+ALEX ERLER, ELIZABETH TOWNSEND, GER YANG
+ARCH 453-02 // ED SALIKLIS + ANSGAR KILLING
+CAL POLY // SPRING 2017
+
+TABLE OF CONTENTS
+DESIGN DEVELOPMENT
+
+3
+
+STRUCTURAL CONSIDERATIONS
+
+9
+
+LARGE SCALE CONSTRUCTIBILITY
+
+13
+
+SMALL SCALE REALIZATION
+
+16
+
+REFLECTION
+
+25
+2
+
+DESIGN
+DEVELOPMENT
+
+3
+
+INSPIRATION
+In designing a thin shell structure
+to cover the performance space
+on Tribuna Anti Imperialista
+Jose Marti, in Havana, Cuba,
+we developed a heavily symbolic
+concept and further abstracted it
+to reach our design. Basing the
+concept on the quote to the right
+by Obama about US and Cuba
+relations, we wanted our design
+to be representative of a hand
+that works to adjoin the plaza to
+the US Embassy which is directly
+west of the site. The “wrist” portion
+adds an asymmetric element, while
+the fingers provide a backdrop
+to the performers as well as a view
+through to the US Embassy and
+Cuban flag monument behind the
+space. The layering of two shell
+structures helps to abstract the
+hand like form, particularly in planview, and reinforces the symbolic
+aspect of the two countries coming
+together. Interest is also added via
+an oculus in the bottom structure
+that depending on the viewer’s
+angle, provides images of the sky,
+upper shell, or both simultaneously.
+
+“WE EXTEND A HAND
+OF FRIENDSHIP TO THE
+CUBAN PEOPLE... THE
+CUBAN PEOPLE MUST
+KNOW THAT THEY HAVE A
+FRIEND AND PARTNER IN
+THE UNITED STATES OF
+AMERICA”
+			-BARACK OBAMA, 2016
+4
+
+THE SITE
+HAVANA, CUBA // TRIBUNA ANTI IMPERIALISTA JOSE MARTI
+•	 To the East of US Embassy
+•	 Directly adjacent to flag memorial for Cuban victims of terrorism
+•	 Activist platform turned concert venue
+•	 Jose Marti statue points directly up the plaza to the stage
+•	 Existing buildings and plaza mosaic limit ground connection around the stage
+
+20’
+10’	
+
+50’
+
+S
+
+Y
+
+US
+
+E M BAS
+
+HAV
+ANA
+
+ON
+
+U M E NT
+
+F L AG
+
+M
+
+BAY
+
+MAL
+
+ECO
+
+N
+
+JOS
+
+M
+
+A R T I STAT U
+
+E
+
+E
+
+CALZAD
+A
+
+CA
+LL
+E
+M
+
+11
+
+LE
+
+13
+
+CALZ
+
+ADA
+
+E
+N
+
+L
+CA
+
+LL
+
+LE
+
+CA
+
+L
+CA
+
+5
+
+FORM FINDING // 2D
+ABSTRACTION PROCESS
+
+CONCEPT
+
+ABSTRACTION
+
+DIVISION
+
+STRUCTURAL EDITS
+
+FINAL PRODUCT
+
+116’
+
+170’
+
+A
+
+34’
+30’
+
+0’
+
+SECTION A
+
+PLAN
+
+6
+
+FORM FINDING // 3D
+PROCESS MODELS
+
+CONCEPT
+
+TRIPOD
+
+ABSTRACTION
+
+HANGING CHAIN
+
+HANGING CLOTH MODEL
+
+7
+
+OCULUS AND LIGHTING
+
+OUR THINNED OCULUS EDGE
+
+OCULUS UPLIGHTING
+
+LEG UPLIGHTING
+
+The inspiration for having one oculus below a solid shell comes from the work of James Turrell. By
+coloring the bottom face of the upper shell and thinning out the edge conditions on the oculus,
+it gives the viewer directly under it the illusion of 2D space instead of 3D. This intertwines with
+our design concept of two entities blending harmoniously, as the flattening essentially turns the
+two shells into one. Lighting around the oculus on the top of the shell creates the same effect
+at night if viewed from below, while also emphasizing that the two shells cross through each other.
+
+8
+
+STRUCTURAL
+CONSIDERATIONS
+
+9
+
+SAP MODELING
+With a shape as complex as this,
+the best way to analyze was through
+the use of SAP. SAP allowed us to
+iterate until we found the optimal
+shell thickness of four inches.
+With the upper shell measuring 76’x
+170’, and the lower shell measuring
+66’ x 116’, the shell’s surface area
+equals roughly 9155 square feet.
+Using this information we concluded
+our shell weighs around 440
+kips. The maximum stress values
+and the maximum thrust values were
+both found in the upper shell, which
+makes sense as it spans further than
+the lower shell. More specific stress
+analysis results include:
+
+AL
+
+BU
+
+BL
+
+CU
+500 PSI
+
+AU
+
+-980 PSI
+
+CL
+
+STRESSES
+AL
+BU
+
+BU
+
+BL
+
+•	 Max stress (leg au) = -2843 psi
+•	 Max thrust (leg au) = 100 kips
+•	 Max deflection = 1.24”
+
+CU
+
+AU
+
+A buckling analysis was also done,
+and revealed a buckling factor of
+3.236, meaning the shell would
+have to be over 3 times its
+existing weight before buckling
+anywhere.
+
+-2700 PSI
+
+1.17 IN
+
+CL
+0 IN
+
+BUCKLING
+
+10
+
+SAP MODELING // INTERSECTION
+BU
+
+AL
+
+BL
+
+CU
+AU
+
+500 PSI
+
+-980 PSI
+
+CL
+
+-2700 PSI
+
+STRESSES
+
+One obvious spot of interest in our design is the point where the two shells overlap and cross through one
+another. SAP was especially helpful in proving that this design choice was not too much of a structural issue.
+There was an inherent stress “hot spot” of -1319 psi at this location, and the compressive force at this
+point was 11.5 kips, but neither of these numbers were large enough to denote structural failure, and thus we
+were confident in our decision to overlap the shells.
+
+11
+
+THRUST CONTAINMENT
+THRUST FORCE APPLIED TO FOOTING AT 45O ANGLE
+
+#10 REBAR DEVELOPED INTO SHELL AND FOOTING
+
+FRICTION FORCE
+
+FOOTING KEY FOR INCREASED SOIL BEARING FORCE
+SOIL BEARING FORCE
+
+Our structure has up to 100 kips of thrust forces coming down at a forty-five degree angle into the ground.
+To contain these forces, individual foundations are needed, as they will be minimally invasive in order
+to preserve the existing ground pattern. They will have keys at varying depths to increase the soil bearing
+force in the direction against the thrust forces. The shell will elegantly widen from four inches to two feet thick
+near the footing and connect to the foundation with steel reinforcing. Each leg will be buried one foot under
+the soil before tying into the poured in place foundation.
+
+12
+
+LARGE SCALE
+CONSTRUCTIBILITY
+
+13
+
+LARGE SCALE CONSTRUCTION
+With the addition of the second shell,
+more emphasis had to be put on how
+construction would be possible. We
+started with two options feasible on
+their own, but in the end decided
+on a hybrid between the two that
+could easily translate into small scale
+construction as well. Our concept
+combines a typical and more creative
+strategy that somewhat resembles
+standard construction methods
+for multilevel concrete elevated
+decks. First, we will form and
+shore the underside of the lower
+shell, using typical curved wooden
+formwork and metal scaffolding for
+support. This shell will be poured.
+While the concrete is in the process
+of curing, we will construct the
+formwork for the upper shell out
+of scaffolding and custom cut foam
+blocks, resting the upper formwork
+on the lower shell when necessary.
+We will not remove any shoring
+until both shells have cured and
+the concrete has reached design
+strength. Once cured, all shoring and
+formwork can be removed, beginning
+with the top shell.
+
+125’
+OPTION 1: CURVED WOOD BOARDS WITH
+CANTILEVERED SYSTEM FOR
+CROSS-OVER AREA
+
+125’
+OPTION 2: CUSTOM CUT FOAM BLOCKS AND
+METAL SCAFFOLDING THROUGH LOWER
+SHELL
+14
+
+LARGE SCALE CONSTRUCTION
+POUR TOP SHELL
+
+(OPTION TWO)
+
+PLACE CUSTOM FOAM FORMS
+
+(OPTION TWO)
+
+CONSTRUCT TOP SHELL SCAFFOLDING
+
+(OPTION TWO)
+
+POUR BOTTOM SHELL, LET CURE, SHORE
+
+(OPTION ONE)
+
+CONSTRUCT BOTTOM SHELL WOOD FORMS
+AND SCAFFOLDING
+
+(OPTION ONE)
+
+15
+
+SMALL SCALE
+REALIZATION
+
+16
+
+POTENTIAL MODEL ANALYSIS
+5000 PSI
+
+2300 PSI
+
+0 PSI
+
+MODEL WITH SUPPORT
+
+50000 PSI
+
+23000 PSI
+
+0 PSI
+
+MODEL WITH CANTILEVER
+
+Our original idea was to construct the entirety of our design on our 9’ x 5’ frame, however it was encouraged
+that we only construct a section, as building the entire design would be beneficial to our understanding of the
+project, but it would be an inefficient use of the frame. Knowing that meant part of our design would have
+to cantilever and introduce tension into a compression only structure, we decided to test the portion
+we wanted to build at full scale in SAP. The shell was tested to see force intensities both with and without a
+shoring support in order to determine how to treat the upper cantilevered portion after pouring.
+
+17
+
+FORMWORK CONSTRUCTION
+
+MODELED PORTION
+9’
+
+5’
+
+Modeling our project proved to be
+quite the task. Our first challenge
+was providing a smooth doubly
+curved surface on both shells. We
+accomplished this with a waffle grid
+formwork, developed by putting
+our Rhino model into Autodesk Slicer
+for Fusion 360. In order to make this
+rigid enough and solid enough to
+pour concrete on, newspaper and
+spray insulation were used to fill
+the voids. After cutting enough foam
+off to get down to the cardboard and
+get the curved shape of our shell,
+we were still left with a very porous
+surface, and therefore ended up
+putting a layer of plaster over the
+whole form. This was repeated for
+the upper shell’s formwork. Once the
+first shell was poured, we excavated
+part of its formwork to get the crossthrough effect we wanted. Foam
+blocks and curved rebar were
+employed to help reinforce and
+ensure a continuous pour through
+the bottom shell. Even though the
+design was challenging in form, the
+meticulous thought that went into the
+formwork ensured our success.
+
+18
+
+LOWER SHELL CONSTRUCTION
+
+ASSEMBLE
+WAFFLE
+
+SECURE
+FORMWORK
+
+SPRAY FOAM AND
+CUT SMOOTH
+
+CUT AND LAY
+WIRE MESH
+
+PLASTER LAYER
+OVER FOAM
+
+POUR AND SMOOTH
+CONCRETE
+
+19
+
+UPPER SHELL CONSTRUCTION
+
+ASSEMBLE
+WAFFLE
+
+BUILD BOTTOM
+FORMWORK
+
+SPRAY FOAM AND
+CUT SMOOTH
+
+BEND AND LAY
+REBAR
+
+PLASTER LAYER
+OVER FOAM
+
+POUR AND SMOOTH
+CONCRETE
+
+20
+
+FINAL PRODUCT // DAY
+
+21
+
+FINAL PRODUCT // DAY
+
+22
+
+FINAL PRODUCT // NIGHT
+
+23
+
+FINAL PRODUCT // NIGHT
+
+24
+
+REFLECTION
+
+25
+
+	
+Despite being different majors, our whole group certainly found this studio a unique, but worthwhile
+experience. We definitely believe that Ed’s mantra of “you can’t tell who’s an architect and who’s an ARCE”
+was especially applicable to our team, as we balanced all responsibilities between the two disciplines, and
+never found ourselves having a disconnect between the design and its structural feasibility or placing more
+importance on one discipline’s contribution than the other like is typical of the professional world.
+	
+Some of our biggest challenges this quarter did not come from our team dynamic, which was essentially
+perfect as far as team projects go, but from multiple outside influences that were skeptical of our design choices
+and worried for our success later on in the quarter. In retrospect, we are extremely happy of our choice to stick
+by our design and see it through until the end despite the possibilities of failure, because it shows just how
+much can be accomplished when different fields work together. That being said, I think this was also a valuable
+experience for each discipline to see what skills the other uses on a regular basis and how to combine them into
+a successful project, since we’re usually only exposed to the other group’s curriculum once or twice throughout
+our education.
+	
+With how complicated our design was, looking back there are definitely some things we would have
+done differently, despite how successful we were in designing and constructing our double shell structure. The
+first thing we would have done differently was to start with a hanging cloth model, or multiple, instead of relying
+on tripods and Rhino’s patching tool to give us our vertical form. This would streamline our design process,
+and work as a more convincing visual aid for critiques. Additionally, digitizing the cloth model we ended up
+with ensured our success when modeling with SAP - if we had relied solely on tripods and Rhino, our shape
+would probably not have been completely funicular. The next learning curve we had was while constructing our
+formwork, but wasn’t so much a problem as a means to be efficient and save materials. If we were to do the
+project again, we would minimize spray foam infill in the waffle by adding square supports close to the top of the
+waffle, much like we tried to do with the upper shell’s waffle. The place we learned the most though, was after
+the actual construction in the revealing of the shell, since none of us had worked with concrete in this manner
+before. While our formwork slipped out nearly effortlessly, all of us were a little shocked with the surface quality
+on the inside. Given how many spots had air pockets that showed part of the reinforcing mesh, we deducted
+that in the future, a concrete with an even lower slump should be mixed in order to get through to the formwork’s
+surface. To further perfect the surface quality, we should have used a plastic tarp over our plaster layer to get the
+extremely smooth surface other groups had. Even with these all these things we would change for next time, we
+still feel this was an extremely successful project and something we can be proud of!
+
+26
+
+27
+
+

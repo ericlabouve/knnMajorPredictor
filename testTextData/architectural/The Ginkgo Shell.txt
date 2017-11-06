@@ -1,0 +1,778 @@
+The Ginkgo Shell
+Mark Luzi | Karla Santos | Josh Cannon | Erika Davis | Nora Villanueva
+California Polytechnic State University | ARCH 453 ARCE 415 | Spring 2017
+Instructors: Ansgar Killing + Ed Saliklis
+
+Dieses Baums Blatt, der von Osten
+Meinem Garten anvertraut,
+Giebt geheimen Sinn zu kosten,
+Wie’s den Wissenden erbaut,
+
+In my garden’s care and favour
+From the East this tree’s leaf shows
+Secret sense for us to savour
+And uplifts the one who knows.
+
+Ist es Ein lebendig Wesen,
+Das sich in sich selbst getrennt?
+Sind es zwei, die sich erlesen,
+Daß man sie als Eines kennt?
+
+Is it but one being single
+Which as same itself divides?
+Are there two which choose to mingle
+So that each as one now hides?
+
+Solche Frage zu erwidern,
+Fand ich wohl den rechten Sinn,
+Fühlst du nicht an meinen Liedern,
+Daß ich Eins und doppelt bin?
+
+As the answer to such question
+I have found a sense that’s true:
+Is it not my songs’ suggestion
+That I’m one and also two?
+Gingo Biloba
+Johann Wolfgan von Goethe
+
+i
+
+Table of Contents
+Shell Design
+
+01 - 07
+
+Overall Design
+Design Considerations
+Detail | Oculus
+Detail | Lighting
+Study Models Process
+Digitizing
+
+Shell Analysis
+
+09 - 13
+
+SAP Analysis
+Thrust Containment
+Construction Precedents
+Large Scale Constructibility
+
+Shell Realization
+
+15 - 25
+
+Prototyping
+Unroll
+Formwork Process
+Formwork Photos
+Pouring Process
+Final Product
+Shell Lighting
+ii
+
+iii
+
+Shell Design
+
+Overall Design
+
+Design Considerations
+
+The overall concept for
+this outdoor concrete
+shell structure, located
+in Furstliche Park in
+Inzigkofen,
+Germany,
+is derived from an
+abstracted ginkgo leaf.
+Drawing on inspiration
+from a poem about the
+two parts of the ginkgo
+leaf
+becoming
+one,
+we took the approach
+of
+combining
+both
+the natural and built
+environment into one
+cohesive piece.
+
+02
+
+70’
+
+Section A
+A
+
+Da
+
+nu
+
+be
+
+Ri
+
+ve
+r
+
+95’
+
+To connect the two, it
+was imperative that we
+place the shell on the site
+as to have the smallest
+impact. With a small
+portion of the overall site
+used, the unoccupied
+space further enhances
+the natural environment.
+Creating a literal design
+connection between the
+land and water, one of
+the four allowed legs falls
+within the Danube River.
+
+Site Access
+
+Dan
+
+ube
+
+Riv
+er
+
+B
+
+Site Plan
+
+Section B
+
+The purpose of the
+structure is to highlight
+the surrounding views
+and landscape through
+the use of large openings.
+Providing direct sight
+lines to both the forest
+and a historical carving,
+each side of the shell
+provides a frame to the
+outside world. To further
+this experience, the
+entrance of the structure
+is low, blocking one’s line
+of sight until they enter
+the space.
+Choosing to design the
+structure with an overall
+max height close to the
+river, visitors transition
+from nature to the built
+environment while also
+experiencing the “lifting”
+of the shell, contributing
+to a lightweight feel. The
+oculus is also placed at
+the peak of the structure
+to further minimize the
+presence of the shell,
+opening it up to the sky.
+
+03
+
+Detail | Oculus
+
+Detail | Lighting
+
+The
+oculus
+design
+for the structure is a
+further abstraction of
+the overall form. Taking
+into consideration the
+large openings on the
+sides of the shell, the
+oculus is meant to act
+as a way point, drawing
+the viewer into the
+space and towards the
+river. Along with this, the
+oculus shadow moves
+throughout the day,
+highlighting the views of
+the site as they become
+illuminated.
+In an attempt to link the
+ground and the sky, the
+edge of the oculus is
+chamfered, creating a
+sharp edge frame. This
+edge condition blurs the
+distance between the
+built structure and what
+is in view, flattening the
+sense of space. The
+top edge is offset as to
+hide the connection and
+provide a smooth corner.
+
+04
+
+During the day, the
+main light source is the
+sun. Asides from being
+lit throughout most
+of the day, the oculus,
+as mentioned before,
+creates an experience
+for the visitors as the
+light moves through the
+space.
+
+Night Render
+
+Oculus Render
+
+7 am
+
+10 am
+
+2 pm
+
+5 pm
+
+Edge Condition
+
+Artificial Light
+
+Lighting Section
+
+At night, the main light
+source exists under the
+river, shining up through
+the water and onto the
+surface of the structure.
+This lighting technique
+will project the water’s
+movement and shadow
+onto
+the
+concrete.
+Casting a texture onto
+an otherwise smooth
+surface will create a
+dynamic
+relationship
+between the structure
+and its surroundings.
+With the use of only one
+light source, users will
+be drawn to the water’s
+edge and away from the
+dark.
+
+05
+
+Study Model Process
+To begin modeling the
+shell structure, we used
+two tripods (an exercise
+done with GeoGebra)
+with one similar strut,
+creating a four-legged
+funicular structure. With
+the computer program
+at our disposal, we
+attempted to create a
+“quadpod”,
+however
+the method was not
+working and this model
+demonstrates a free
+hand attempt.
+The second model was
+created with the idea of
+two tripods combined.
+Using the computer
+model,
+analyzed
+to
+be funicular, we were
+able to measure the
+length of each segment
+and assemble using
+basswood. We then
+paper-mached a wire
+mesh form on top of
+the tripods, however it
+was hard to match the
+supporting structure.
+
+06
+
+Digitizing
+
+Free Hand Model
+
+Tripod Model
+
+Hanging Cloth Model
+
+Moving
+away
+from
+the
+tripod
+analysis,
+we chose to create a
+hanging cloth model
+instead. The concept
+behind this model is that
+a cloth, when hung, is
+experiencing only tensile
+forces. When “frozen”
+in place and flipped,
+the fabric becomes
+a compression only
+structure. To achieve
+this, we dipped the cloth
+in plaster as it was hung.
+
+Digitzed Model
+
+Once we had a working
+model, the challenge
+became
+transitioning
+from a physical to a
+digital model. It was
+important to carry over
+the exact model as we
+proved it was funicular
+in its physical form. To
+do so, we used a 3d
+digitizer tool, which
+creates a series of
+points along the surface
+of the physical model and
+imports them to rhino.
+
+07
+
+Shell Analysis
+
+SAP Analysis
+Transitioning from the
+hanging cloth model to
+a rhino model, SAP was
+used to confirm that the
+shell was both funicular
+(compression only) and
+capable of withstanding
+forces. Upon analysis,
+the shell was found to
+have an area of tensile
+forces, however this is
+due to inaccuracies in
+the digitizing process
+and was not seen as an
+issue.
+
+Thrust Containment
+B
+
+A
+
+B
+
+A
+C
+
+C
+
+Thrust A,B,C
+
+Shell Span = 95’ x 70’
+Overall Thickness = 2 in.
+Surface Area = 2328 ft2
+Overall Weight = 68 k
+Shell Deflection = 0.65 in
+Worst Stresses = 650 psi
+Average Stress = 60 psi
+
+900 psi
+
+0.39 k-ft
+
+0 psi
+
+0 k-ft
+
+Worst Bending = 0.7 k-ft
+Thrust at A = 17k
+Thrust at B = 17 k
+Thrust at C = 17 k
+Thrust at D = 37 k
+
+10
+
+D
+
+-900 psi
+
+Stress Analysis
+
+D
+
+-0.39 k-ft
+
+Bending Analysis
+
+Thrust D
+
+The primary method of
+thrust containment for all
+three land connections is
+a spread footing with
+an angled top surface at
+each point on contact.
+This slope will allow the
+foundation to better
+receive the struts coming
+in at an angle. The blocks
+on land are hidden
+underground as to not
+disturb the simplistic and
+natural feel of the shell.
+The foundation in the
+river will be visible as the
+water level fluctuates.
+With this in mind, the
+connection between the
+shell and footing is made
+seamless, following the
+curve of the shell. This
+sculptural footing blurs
+the line between support
+and structure, however it
+is designed to become
+a pile once it hits the
+riverbed, counteracting
+the poor soil conditions
+of the river.
+
+11
+
+Construction Precedents
+The first precedent study
+done to legitimize the
+full scale construction
+process was the LAM
+Pavilion in Lille, France.
+Although this structure is
+not a concrete shell, this
+project was chosen to
+demonstrate the amount
+of customization within
+inflatable structures. This
+structure in particular
+spans about 100 feet
+and the interior of the
+material is inflated.
+The second precedent
+study was focused on
+finding a real life example
+of inflatable formwork.
+Binishells is a company
+which specializes in
+custom inflatables used
+in creating formwork.
+With a variety of systems
+used for construction,
+this method allows for
+unique concrete forms
+with minimal overall
+material needed to form
+the structure.
+
+12
+
+Large Scale Construction
+
+LAM Pavilion
+
+Footings
+
+Anchor
+
+Shell Construction
+
+Inflate
+
+Reinforce
+
+Binishell System 4
+
+Pour
+
+Deflate
+
+Given the isolated and
+dense nature of the
+project’s site, the ability
+to transport standard
+construction materials is
+limited. With an access
+point located 400 feet
+way, it is important to
+consider the feasibility
+of construction. With an
+emphasis on low impact
+and material usage, the
+decision to use inflatable
+formwork was made.
+In terms of large scale
+construction
+process,
+the formwork for the
+footings would be built
+first, with an edge beam
+placed between. This
+beam would serve an
+anchoring point for the
+inflatable form. Once
+sealed and connected,
+the form would be
+inflated, making sure
+to keep a constant air
+pressure. Once inflated,
+the desired form is made
+using Shotcrete.
+
+13
+
+Shell Realization
+
+Prototyping
+The main goal of the
+prototyping
+process
+was to create quick
+and simple models that
+highlighted the positive
+and negative effects of
+using certain materials
+and methods to create
+an inflatable. Listed
+below are the takeaways from the series of
+models which led to the
+final construction.
+
+Unroll
+
+Prototype 1
+
+Opening
+
+Seam
+
+Edge
+
+3d Shell
+
+UnrollSrf
+
+Plastic base cover
+seals the frame.
+Straw fails to hold
+air pressure.
+Taped seams create
+air leaks.
+
+Process (double curved)
+
+Prototype 2
+
+Opening
+
+Seam
+
+Edge
+
+Mesh
+
+Outline
+
+[3] Mesh to NURBS
+[4] UnrollSrf
+
+Ironing the seams
+creates air tight seal.
+
+16
+
+[1] 3d surface
+[2] Surface to Mesh
+
+Bike wheel nozzle
+holds air pressure.
+
+Connection of side
+pieces affects form.
+
+In order to ensure that
+the inflatable takes the
+desired shape of our
+shell, we needed to cut
+a piece of plastic to the
+exact flattened shape
+of the form. To do this,
+we used a tool in Rhino
+called UnrollSrf which
+takes a 3d form and
+instead of projecting
+it onto a flat surface, it
+“unrolls” the surface into
+a flat 3d shape, taking
+into account the length
+needed for curvature.
+
+[5] Polyline
+
+Inflated Form
+
+NURBS
+
+Print
+
+[6] Print File
+
+17
+
+Formwork Process
+
+Formwork Photos
+
+1 | Iron
+
+4 | Guides
+
+2 | Slime
+
+5 | Oculus
+
+[5]
+[4]
+[3]
+[1]
+[2]
+[6]
+Process Diagram
+
+18
+
+3 | Inflate
+
+6 | Thrust
+
+Once
+the
+unrolled
+surface was printed,
+traced, and cut out of
+painters tarp, the next
+step was to create the
+side pieces. For an easier
+attachment,
+although
+the overall shape of the
+side pieces has no real
+effect on the final form,
+the side curves were
+traced from the top form
+and extended. With the
+pieces cut, the top form
+was then ironed to the
+base at all 4 legs. From
+there the side pieces
+were ironed to the main
+form. To create an air
+tight system, we poured
+Slime into the form to
+plug any holes.
+Once inflated, using the
+bike nozzle and an air
+compressor, we were able
+to attach “guides” made
+of weatherstripping and
+cardboard. To attach the
+shell to the frame we
+created 2x4 supports.
+
+19
+
+Pouring Process
+
+Inflated structure
+@30 psi
+
+20
+
+First layer of concrete
+
+Reinforcement layer |
+stucco mesh
+
+Second layer of concrete
+
+Decentering process |
+deflation
+
+21
+
+Final Product
+
+22
+
+Shell Lighting
+
+23
+
+Reflection
+This quarter introduced us to different ways of designing and analyzing a compressive, funicular, thin shell
+concrete structure. Our project brief asked for a low impact concrete shell structure located in a natural area
+in Germany that limited our design to four points of contact to the ground, a challenge that differed from our
+peers. We began with mathematical models, which served as an initial design method, but through different
+study models found that the hanging cloth model produced the best design and the most funicular shape
+as well. It produced the best results in terms of form, as well as structural analysis while consistent with our
+initial design concept. Our challenge came when it came time to decide the best method to construct the shell.
+There were arguments between the group between a common construction method and a construction
+method that was unknown and lacked enough precedents, but proven to be feasible. Ultimately, we decided
+on pursuing the challenge of creating an inflatable formwork with the risk that it may fail. We had one week
+to research and create the formwork. After multiple prototypes and models, we successfully ironed together
+painter’s tarp with tape and cardboard reinforcement to create our custom inflatable formwork. We were
+able to maintain a constant air pressure to keep the formwork inflated, poured the concrete, and removed
+the formwork after seven days of curing. The project proved to have been worth the hard work and effort
+in the end. Our group was able to demonstrate that inflatable formwork was more than achievable, it was
+efficient in the time it took to construct and remove the formwork, and also produced a smooth interior
+surface in our shell.
+Although there were challenges in our design and construction process within the group, as well as outside
+the group, the final results proved the obstacles to have been worth the effort. We were able to produce
+results that most of our peers did not expect and rid them of their skepticism. Looking back, there were
+a few things we could have done that may have helped us in this project. If we had decided earlier in the
+quarter to build an inflatable formwork, we might have had more research, time, and practice to produce
+better results. We might also have been better prepared with the supplies and tools we needed, as we
+constantly improvised on what materials might have worked best. We hope that challenging ourselves to
+pursue something outside of our comfort zone will serve as an example to future students who wish to
+explore inflatable formworks or those who wish to approach a problem different from everyone else.
+
+24
+
+25
+
+

@@ -1,0 +1,1216 @@
+California Polytechnic State University
+San Luis Obispo, California
+Aerospace Engineering Department
+
+AERO 463/464 – Senior Project
+Winter-Spring-Fall 2013
+
+Light Curve Generation for
+Satellites in Geostationary Orbits
+
+Kimberly Andersen
+
+November 6, 2013
+
+List of Contents
+Table of Contents
+Title Page
+Table of Contents
+List of Figures
+List of Tables
+Acknowledgements
+Abstract
+Nomenclature
+I.
+Introduction
+II.
+Observation Run
+A. Observation Preparation
+B. Telescope Set-Up Procedure
+C. Data Collection
+1. Calibration Data
+2. Science Data
+D. Telescope Shut-Down Procedure
+III.
+Data Reduction and Photometry
+A. *.FIT to *.fits images
+B. Calibration
+C. Photometry
+IV.
+Results
+V.
+Future Work
+VI.
+Conclusion
+Appendix A: Detailed List of Components and Software Used while Observing
+Appendix B: Epar Settings
+Appendix C: Matlab Code
+References
+
+i
+ii
+ii
+iii
+iii
+1
+1
+1
+1
+2
+2
+4
+4
+4
+5
+6
+7
+7
+7
+8
+10
+10
+11
+12
+16
+19
+
+List of Figures
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+
+Pre and Post images of a 3le text file when using "remove.m" in MATLAB
+Images of the Cal Poly Observatory
+Bias, Dark, and Flat Images
+Science Images – pre and post reduction
+Satellite Light Curves
+Satellite Light Curves without Clouds
+Overlapping Satellite Light Curves
+
+ii
+
+2
+3
+5
+6
+8
+9
+9
+
+List of Tables
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+
+List of Components used for Observation
+List of Software used for Observation or Reduction
+Epar Rfits Settings
+Epar Zero, Epar Dark, and Epar Flat Settings
+Epar Ccdproc Settings
+Epar Datapars Settings
+Epar Centerpars Settings
+Epar Photpars Settings
+Epar Fitskypars Settings
+Epar Phot Settings
+Epar Txdump Settings
+
+11
+11
+12
+12
+13
+14
+14
+14
+15
+15
+15
+
+Acknowledgements
+This research was carried out in the Cal Poly Observatory at California Polytechnic State University, in
+San Luis Obispo, California. Thanks to the Cal Poly Physics Department for access to the observatory,
+software, and computer labs.
+Advisors:
+Dr. Kira Abercromby, Cal Poly San Luis Obispo
+Dr. David Mitchell, Cal Poly San Luis Obispo
+Observatory Partner:
+Brock Schmalzel, Masters Student, Cal Poly San Luis Obispo
+
+iii
+
+Light Curve Generation for
+Satellites in Geostationary Orbits
+Kimberly S. Andersen,*
+California Polytechnic State University, San Luis Obispo, California, 93407
+
+This research were conducted at California Polytechnic State University San Luis Obispo
+throughout the Winter, Spring, and Fall quarters of 2013. The data presented in this paper
+was taken on the night of October 20, 2013 at the Cal Poly San Luis Obispo Astronomical
+Observatory and was reduced using IRAF software available on campus. This report
+describes the results of an observation of two bright XM geostationary satellites and the
+steps taken to get to those results. The average magnitude values of the XM-1 and XM-2
+satellites were 13.753±0.007 and 14.015±0.007 respectively. The magnitude varied an average
+of 0.1 magnitues around the average magnitude value.
+
+Nomenclature
+3le
+CCD
+FWHM
+LEO
+GEO
+IRAF
+tle
+
+=
+=
+=
+=
+=
+=
+=
+
+three line element data
+Charged Coupled Device
+Full Width at Half Max
+Low Earth Orbit
+Geostationary Earth Orbit
+Image Reduction and Analysis Facility
+two line element data
+
+I. Introduction
+
+O
+
+rbital debris is becoming a larger problem in space because there is no effective method for collecting debris,
+only regulations to control the number of uncontrolled objects. The first step to collecting debris would be to
+study it to determine its orbit, attitude, and tumble/spin rates to prepare for future missions that might possibly
+attempt to capture this debris or rendezvous with it1. The research presented in this paper will be expanded to find
+the tumble rates of used rocket bodies in Geostationary Transfer Orbits (GTO) or in GEO graveyard orbits.
+The data that has been collected and analyzed so far is of two bright geostationary satellites8,9, XM-1 and XM-2
+which are radio broadcast satellites that provide listeners with 100 different music channels10,11. These two satellites
+are withing a few arc minutes of each other in the night sky, and were therefore captured together in a series of
+images acquired using the Cal Poly 12” Meade telescope and SBIG CCD camera. More information about the
+componets and software used for this research can be found in the appendix in Tables 1 and 2. This data was
+photometrically reduced using IRAF software to yield light curve plots that can be seen in the results section.
+This report details the method and steps that were taken to yield the results of the project. It will also detail
+future work that is necessary to extend this process to the task of finding the tumble rate of rocket bodies.
+
+II. Observation Run
+Each observation run consisted of several parts: preparation, setup, data collection, and shut-down. The
+preparation involves chosing satellites and finding their coordinates, the set-up portion describes what must be done
+before the telescope is used, the data collection section describes the steps taken during observation to acquire
+images of the target(s), and the shut-down section describes what must be done to ensure the telescope and other
+
+*
+
+Student, Aerospace Engineering, Cal Poly San Luis Obispo.
+1
+
+equipment is protected in between observations and will remain in good operational condition. Each section also
+details any problems that may have occurred during that step so that the solution is documented for further use.
+A. Observation Preparation
+Space-track.org was used to generate lists of "3le" data to be used while observing. The two XM satellites were
+found on the space-track.org pre-made satellite list entitled "brightgeo". Geostationary satellites were chosen over
+LEO satellites because they move slower relative to the stars and are easier to capture with a telescope. Satellites
+were chosen for the first test objects because satellites still in operation would have more accurate tle data because
+they employ orbital maneuvers to remain in the same orbit, and therefore would be easier to find with a telescope
+even if the tle data was a few days old. Finally, bright satellites (as opposed to dim ones) made great first targets
+because they were easy to spot in the images!
+Space-track.org can be used to query a satellite catelog for rocket bodies by searching for the "R/B" in the object
+name, and orbital elements can be specified such that the rocket body is in the desired orbit. Once a few desired
+objects have been chosen, space-track.org can be used to create a lists of specified satellites that can be accessed and
+updated just like the pre-made lists of satellites. Space-track was then used to generate a 3le text file with the
+selected list of satellites.
+Finally, once a 3le list of objects has been saved as a text file, the file was slightly modified. The MATLAB
+script remove.m was used to remove the zeros (0) and the rocket body designation (R/B) from the name line of the
+3le file such that only the object name was left. The script also gets the Norad object number from the second line of
+the 3le and adds it in parenthesis to the end of the name line of the 3le. The reason for this modification will be
+addressed later in the observation section. An example of the 3le text file with sample rocket bodies can be seen in
+Fig. 1.
+
+Figure 1. Pre and Post images of a 3le text file when using "remove.m" in MATLAB. The left image is the
+standard format of the Space-track 3le file from the website. In this image, four rocket bodies are listed and two
+have the same name. This is confusing! Therefore, in the right image, not only are the zeros and R/B no longer
+present, but the Norad ID numbers are present such that the two SL-12 rocket bodies can be distinguished.
+B. Telescope Set-Up Procedure
+Before anything else can be done, light pollution must be minimized. This is very important because rocket body
+targets are very dim, and any light pollution can be detrimental to the observation. Because the Cal Poly campus is
+well lit at night to give a feeling of safety to its students, it is impossible to get rid of all light pollution, but there are
+some steps that can be taken to minimize it. Because the telescope resides in between two buildings, classrooms line
+either side to the North and South. When classrooms are not in use the lights can be turned off, however, if
+classrooms are being used then the blinds can be closed. There are also two outside lights that can be covered with
+very expensive light covers (cardboard boxes) placed over them by a very complicated mechanism (a two-yard
+stick) so that this little bit of extra light is minimized.
+Placing boxes over the lights to observe drew campus police and custodians to the area while observations were
+taking place, and the boxes were found in a dumpster at the end of one particular night of observing. The next time,
+the boxes were nowhere to be found after observing! Even more recently than that, a message from the police was
+distributed throught the observational astronomy professor to the students using the observatory that boxes were not
+to be placed over the lights anymore because covering lights was deemed a safety hazard. Luckily bright targets
+were being observed so far and not having the boxes out was not an issue. In the end, the boxes probably don't
+remove a significant amount of light pollution when compared to the remainder of lights on campus, and the boxes
+will probably not be used in the future.
+
+2
+
+Once the light pollution has been minimized (closing classroom blinds, NOT putting boxes on lights, etc.) the
+computer in the observatory needs to be turned on, and this set up information is taken from the set up procedures
+written by Dr. David Mitchell3. The power strip on the wall needs to be turned on to give power to the dome, and
+then the dome is opened through use of DDW Dome software installed on the observatory computer. If the targets
+for the night are high in the sky, then the windbreak on the dome is not connected (meaning the windbreak will
+block the view near the horizon) when the dome slit is opened. If the targets are close to the horizon, the windbreak
+on the dome must be open to allow for these low targets to be visible. If the windbreak is attached to the dome slit
+before it is opened, then the windbreak will recede upwards with the dome slit when opened, and block high
+elevation observations and is shown in Fig. 2.
+Once the dome is opened, the telescope can then be uncovered. The telescope must be uncovered after the dome
+is opened to prevent excessive dust from falling on the telescope while the dome door is opening. The SkyX
+program is started on the observatory computer, then the telescope is turned on and quickly connected to The SkyX
+which is how the slewing and pointing of the telescope are controlled. Lens caps must be removed from the main
+section of the telescope and from the finder scope on the side of the main telescope body. The CCD camera power
+and focus controller power are turned on, and the camera software on the observatory computer is started, and the
+camera is connected. The program generates an error that the focuser cannot be connected, but this error is incorrect
+as the focuser actually does connect to the computer automatically when the camera connects. Once the camera is
+connected, temperature control is turned on and the temperature of the CCD is reduced to -5°C. Finally, in the
+camera software, the autosave option is turned on so that all images taken during the night are automatically saved
+with a specified prefix into a specified folder for later use.
+
+Figure 2. Images of the Cal Poly Observatory. Left: Dome shut. Center: Dome open with windbreak up. Right:
+Dome open with windbreak down.The placement of the windbreak can allow for low altitude observations or high
+altitude observations.
+Finally, it would be nice if the opening in the dome aligned with where the telescope is pointing, therefore in the
+Dome software window, the observer can check the button that says "slave to telescope" and the dome will update
+its position using data from The SkyX (assuming The SkyX knows where the telescope is). For a few days, the
+dome stopped working and could not tell that it was moving when commanded to move, and could not follow the
+telescope as a result. Therefore, it could not keep track of where it was, could not be slaved to the telescope, and had
+to be commanded manually. There are dome controls mounted on the wall near the dome home position that allow
+the observer to open or close the dome slit, as well as rotate the dome CW or CCW. If The SkyX does not know
+where the telescope is, the dome will still slave to where the SkyX thinks the telescope is. If the pointing of the
+telescope is so far off that the dome slit does not align with the telescope, the dome must be unslaved to the
+telescope and adjusted manually until the telescope is properly aligned and synced.
+Once it gets dark, the telescope must be aligned and focused. Alignment consists of pointing at a bright star, and
+making sure it is in the center of an image when The SkyX thinks it is pointing at that star. The telescope constantly
+tracks at the rate the stars are moving, so whenever the telescope is disconnected/reconnected the tracking slightly
+misaligns the pointing. The telescope must be moved until the bright star is in the center of the field of view of the
+camera, and then The SkyX can be synced with that star so that the computer knows where the telescope is pointing.
+Focusing the telescope is best done with a star close to magnitude six in brightness and camera exposures of three
+3
+
+seconds. Images of the same star are taken over and over while the focus is adjusted until a maximum brighness is
+reached. An in focus star takes up less pixels on the CCD than an out of focus star, therefore all the light is
+concentrated in a smaller area yielding higher brightness values. However, due to fluxuations in the atmosphere, the
+graph of the star brightness over time can not always be trusted. A solution to this is to take several images before
+adjusting the focus again and to average the brightness at that value, or to examine the star in the image by eye and
+use the focus value that makes the star as small and round as possible.
+C. Data Collection
+Data collection is split into several different parts, collection of calibration data and science data. Calibration
+data is composed of bias imges, dark images, and flat images. Science data is the term given to the images of the
+target(s) being observed for the night because those are the main images from which the scientific discovery comes
+from!
+1. Calibration Data
+Bias images are zero second exposures that are taken to eliminate noise added by the camera and are also known
+as "zeros". It is expected that if the camera collects photons for zero seconds, it would output that zero photons hit
+the detector, but in fact it displays that some positive bias number of photons hit the detector. For this reason, a bias
+image is subtracted from each dark, flat, and science image as the first step in data reduction.
+Dark images are images that help eliminate thermal noise generated by the camera. Thermal noise is reduced by
+cooling the CCD to -5°C but this does not get rid of all the thermal noise. Darks are taken with an exposure time
+equivalent to the science data images, but the shutter remains closed. The thermal noise dark images eliminate is
+proportional to the length of the exposure. For excessively long exposure times, dark images can be scaled, but for
+this project that was not necessary. A dark image is then subtracted from each of the flat and science images as the
+second step in data reduction.
+Flat field images are taken of the sky just after sunset or just before sunrise. The idea behind the flat field image
+is to evenly illuminate the CCD camera to see what the pixel response is for the camera. The camera response is
+likely not flat, meaning that for the same amount of photons, one pixel might output a higher brightness value than
+another pixel. Once the flat field image is obtained, then the relative scales of each pixel are known. If a science
+image is divided by the flat field image, then the variations in the camera response for the image will be removed,
+and the new brightness values will be standardized across the entire image. The camera response is not just different
+for different pixels however, but it is also different for different filters. If data is taken in more than one filter then
+more then one set of flat field images needs to be taken. The final step in data reduction is to divide all appropriate
+science images by a normalized flat field image of the same filter.
+About eight to twelve pictures are taken for each type of calibration image, and each set is combined to create
+what are referred to as masterbias, masterdark, and masterflat files. Bias images are combined using an average, but
+darks and flats are combined using a median. The master files for this data set can be seen in Fig. 3.
+2. Science Data
+The science data is the group of pictures that were taken of the target of the observation run. In this paper, the
+two targets were XM radio satellites 1 and 2, which have Norad ID numbers of 26761 and 26724 respectively. They
+are within a few arc minutes of each other which is why they were able to be captured in the same images
+throughout the night. The 3le text files that were prepared for the observation can be uploaded directly into The
+SkyX program using Insert>Satellites and then choosing From File and browsing to locate the appropriate text file.
+This is also where the remove script comes in handy, because if 3le files are used, The SkyX will display the first
+line of each object on the star globe next to the object. This means the object name and its Norad number are
+displayed on the SkyX main window, where they can be clicked on and then slewed to with the telescope. The path
+of the satellite is also shown on the star globe so its movement relative to the stars can be predicted for a user
+defined number of minutes. If a tle text file is used, there are no name lines in the file, and The SkyX will display the
+first line of the tle which is not as convenient for the user.
+Once the user has slewed to the location of the satellite with the telescope, it can still be a challenge to find the
+satellite. The tle's are not perfectly accurate, and as a result, the object will likely NOT be exactly where The SkyX
+says it is. From trial and error, I have found the satellite to pass through a given location a few minutes behind when
+it was supposed to pass through the field. Therefore, the radial error is not very large because the satellite follows
+the predicted path fairly well, however, the along-track error can be off by several minutes causing the satellite to
+appear "late." Once the target has been captured in the camera, it is easy to follow it manually with the telescope.
+Because geostationary satellites were being observed, several pictures can be taken before the targets left the field of
+4
+
+view of the CCD. The field of view is displayed as a purple box on the main window in The SkyX, so once the
+satellites are no longer in the image, the telescope can be slewed along the predicted path lines in the direction the
+satellites were moving, and are easily recaptured in another set of several images. The SkyX program itself is
+
+Figure 3. Bias, Dark, and Flat Images. These
+images from top left, to top right, to bottom left
+are the masterbias, masterdark, and masterflat
+images respectively and correspond to the data
+presented in this paper. The bias and dark images
+are taken with a closed shutter, therefore nothing
+is visible in them except a few columns of bright
+pixels in the bias image. The flat field image
+shows the pixel response of the camera, which is
+high (bright) in the center, and low (dark) in the
+corners.
+
+capable of setting track rates equivalent to that of the satellite, however, the telescope mount being used is not
+capable of understanding track rate commands from the computer, therefore I am limited to manually slewing the
+telescope every few images. A raw science image can be seen in Fig. 4 as well as the same science image after data
+reduction has been performed.
+A final note about taking science images: using the Cal Poly Observatory gives the user the option to remote
+observe from inside the neighboring science building. There is a computer inside that allows the observer to remote
+log in to the observatory computer and allows the user the ability to do almost everything that was possible in the
+dome. This serves two purposes: it enables the lights in the observatory dome (including the computer monitors) to
+be turned off to reduce light pollution, and it helps keep the observer warm because they don't have to spend the
+night outside in a room with a hole in the ceiling. Limitations to this method of observing include not being able to
+restart The SkyX if the program freezes and has to be restarted, also, the dome cannot be controlled from inside the
+science building. Normally The SkyX does not have to be restarted, and the dome is controlled by software and can
+track the telescope, but recently the dome has been having problems so if observing from inside, it must be checked
+up on every 20 to 30 minutes to ensure it is pointing in the same direction as the telescope. When done observing
+from the science building, the remote log in window is terminated, and the computer is logged off before going back
+to the dome.
+D. Telescope Shut-Down Procedure
+Once all data has been collected for the night (or whenever the weather stops cooperating) the telescope is
+parked in its home position, then be disconnected from The SkyX and switched off. Once covers for the main lens
+and for the finder scope are replaced on the telescope, the tarp is put over the top of the telescope to protect it from
+dust. The camera (and focuser) are disconnected from the camera software, and then each are powered off. The
+dome must be slewed to its home position using the manual controls on the wall because the DDW software has
+problems getting to the home position. Only once in the home position can the dome be closed! After making sure
+all data and images for the night have been saved, a file transfer window is opened7 and image data is transferred to
+a computer named "planet" which is the computer that can run IRAF software for data reduction. Finally, the
+5
+
+observatory computer is shut down and the main power switch on the wall for dome power is turned off. Once the
+observatory is locked up it is time to go home and go to sleep!
+
+Figure 4. Science Images – pre and post reduction. The image on the top is the raw science image that was
+taken with the CCD camera at the time of observation. The bottom image is the post reduction image. One
+noticible improvement is the vertical lines of bright pixels that were seen in the bias image in Fig. 3 dissappear
+after data reduction. The background sky in the post reduction image also looks much more uniform than in the
+pre-reduction image.
+
+III. Data Reduction and Photometry
+There are two main steps to data reduction, calibration of images, and photometry. Data reduction 4 is remotely
+performed on the "planet" computer by opening a terminal somewhere and using ssh to log into the user account on
+the host planet computer. The first few easy steps are listed in the first subsection, then the calibration process is
+discussed. Photometry6 is also performed on the planet computer and is discussed last in this section.
+
+6
+
+A. *.FIT to *.fits images
+Once an IRAF login file has been made, the raw CCD files (*.FIT) need to be converted to the file type used by
+the IRAF software package (*.fits). This is very simply done using the rfits command found in the dataio package of
+IRAF. Using the command epar rfits allows the user to adjust the rfits parameters before calling rfits to do the file
+type conversion. The rfits parameters used are listed in Table 3. The image prefix is the prefix for the new *.fits files
+and does not have to match the prefix on the *.FIT files.
+One unforseen benefit to what seems like such a simple process is that it forces the user to make a copy of all the
+raw observation data before doing any data reduction. This way, if the data reduction process is messed up in some
+way, the *.fits images can be deleted, and the process can begin again using the raw *.FIT files.
+B. Calibration
+The ds9 program (which must be started outside of IRAF) is used to view images throughout this process. Then
+log into iraf and get to the right IRAF package following the directories: noao, imred, ccdred, setinstrument, and
+then typing "cp" for Cal Poly. Calibration of the science images then has several steps for each type of calibration
+image (bias, dark, and flat). The steps for bias calibration will be described in detail, and the steps for darks and
+flats follow the same structure and only the differences will be noted.
+Step One is to view all the bias images in ds9 to ensure they all look normal and that nothing is obviously wrong
+with any of them. Any bad images should be deleted! Then, adjust the settings for the zero command (epar zero, or
+epar dark or epar flat as appropriate) using the values in the zero column of Table 4 (the other two columns are for
+darks and flats respectively). To combine the bias images, run the zero command (or dark or flat command as
+appropriate). Once IRAF has finished making the masterbias image, view the image in ds9 before continuing to
+ensure it looks ok. Next, edit the parameters of the ccdproc command (epar ccdproc) using the values in the zero
+column of Table 5 (or the dark or flat column as appropriate). Once this is complete, run the ccdproc command
+which will subtract the masterbias image from the dark, flat, and science images.
+That entire paragraph of steps should be repeated two more times for the dark images and for the flat images. At
+the end of the dark stage, the ccdproc command will subtract the masterdark image from the flat and science images,
+and at the end of the flat stage it will divide the science images by the normalized masterflat image. If more than one
+different filter was used during observation, then more than one set of flats should have been taken, and the flat
+reduction process will need to be completed multiple times for each filter used. In this data set, only the Clear filter
+was used.
+C. Photometry
+The first step of the photometry process is to find the standard deviation of the sky background counts and the
+FWHM of the stars. In an ssh terminal connected to planet, ds9 needs to be open and IRAF needs to be in the
+images, tv package. Load a reduced science image into ds9 and ensure there are a few stars in the image. Use the
+command imexamine in IRAF and then click back to the image in the ds9. Move the mouse around the sky
+background and hit "m" a few times (no clicking required), and the standard deviation of the sky background will
+appear in the IRAF terminal window! Finding the FWHM is also just as easy, but move the mouse over a star and
+press "a" instead of "m." The average of the values under "Enclosed", "Moffat", and "Direct" will yield the FWHM
+of the star. To exit imexamine press "q".
+Once those numbers are obtained, they are used to update the settings of five different parameter files located in
+the noao, digiphot, apphot package of IRAF. These parameter files are accessed by typing epar datapars, epar
+centerpars, epar photpars, epar fitskypars, and epar phot in succession. The first four need to be updated for
+photometry in general, the phot parameter file only needs to be updated if photometry is going to be done manually
+which was the case for the data set presented here. The settings used in each of these parameter files can be found in
+Tables 6-10 in the appendix.
+The actual photometry can now be performed! Load the first image in ds9, then type phot image001.fits in the
+IRAF terminal with the image name that matches the image loaded in ds9. Then in the ds9 window, hold the mouse
+over each object you want to do photometry on, and press the space bar. When finished, hit q, load the next image
+into ds9, type phot image002.fits in the IRAF terminal, and hit the space bar over the targets in the same order.
+Continue this process until all images have been done. IRAF will create *.fits.mag.1 files for each image you
+perform photometry on.
+The mag files are not the easiest to find things in because there is a lot of data dumped into each file, so the
+txdump command2 was used to extract the desired information out of each file and dump it into a more useful format
+(text document). The txdump command is located in noao, digiphot, ptools, the parameters can be edited using the
+command epar txdump, and the settings5 used for this parameter file are listed in Table 11 which can be found in the
+7
+
+appendix. Once the parameters are correct, the command textdump > data.txt was used to create a text file that
+includes the parameters listed in the "fields" section of the parameter file. A data transfer window 7 was used to copy
+this file from the planet computer to my personal computer, and the MATLAB script plot_mag.m (which can be
+found in the appendix) was used to read the data and make light curves.
+
+IV. Results
+The light curve for both XM satellites can be seen in Fig. 5. Clouds rolled in after about twenty minutes of data
+collection and the effect of the clouds can be clearly seen as the magnitude dims severly. If only the first twenty
+minutes of data collection is analyzed, the results can be seen in Fig. 6 and the average magnitude of each satellite is
+shown.
+
+Figure 5. Satellite Light Curves. A light curve is a plot of the magnitude of an object over time. In this case, the
+objects are two satellites, and the only reason there is a curve in the plot is because clouds disrupted
+observations, and the brightness of the two satellites decreased as cloud thickness increased as expected. The
+beginning of the plot before the clouds arrived is relatively flat.
+Looking at the first twenty minutes of data, the magnitude fluxuates around the average without any large
+variations in brightness. These minor fluxuations are of about 0.2 magnitudes and are likely due to atmospheric
+variations. This suggests that in the future I will need to include comparison stars when I perform photometry for the
+satellites. If the blue light curve is shifted brighter by the difference of the average magnitude, the result can be seen
+in Fig. 7. It becomes more obvious that many of the minor fluxuations are the same for both satellites, further
+suggesting that the atmosphere is the common source of this noise, and that a comparison star would help to
+eliminate some of the atmospheric variations in the final data.
+Aside from the minor fluxuations due to the atmosphere, the absense of large fluxuations in brightness would
+suggest that the satellites are not tumbling, which seems reasonable given that these two satellites are likely in a
+fixed orientation relative to the Earth. In twenty minutes, I would not expect the sun-satellite-telescope angle to
+change very drastically, which also would predict the brightness to remain relatively constant over this short amount
+of time.
+
+8
+
+Figure 6. Satellite Light Curves without Clouds. This image shows the first twenty minutes of data collected
+and is the same data as in Fig. 5. The average brightness for the shown points is shown as a dashed line in the
+corresponding color for each satellite.
+
+Figure 7. Overlapping Satellite Light Curves. In this image, the light curves are plotted as lines instead of
+individual data points to better view trends. Also, the difference in average magnitude of the two satellites was
+added to the magnitude of the XM-2 satellite such that the light curves overlap. By examining the overlap
+similarities between the two curves, it is clear that some of the variations in brightness are due to the atmosphere
+because the variations are the same for both satellites.
+
+9
+
+V. Future Work
+It is already planned to extend this research to the observation of rocket bodies, not just bright satellites. The
+rocket bodies will likely be in near geo orbits while being observed because GEO orbit objects move slower relative
+to the stars and would be easier to target with the telescope. The rocket bodies will likely be dimmer than the bright
+geo satellites, which might pose a problem because the exposures need to be kept short so the satellites appear as
+circles in the images for photometry to work. If longer exposures are needed to capture the rocket bodies, some other
+photometry method might need to be worked with to allow the user to specify an elliptical shape around the object
+streak.
+The next thing that needs to be worked on when expanding this research to rocket bodies is to look into how to
+eliminate the effects of the atmosphere on the light curve. This would be simple if the target was near a star of
+approximately the same magnitude throughout the night, but objects in orbit move relative to the stars, so having a
+comparison star would require having multiple comparison stars throughout the night. On the other hand, if a rocket
+body changes several magnitudes in brightness over the period of its tumble, then the small atmospheric variations
+of about 0.2 magnitudes will be neglible, and the overall period can be determined without using comparison stars.
+Finding a more automated way of tracking the satellite would also be great if possible. Currently, images are
+being taken of the satellites as they pass by, then the telescope is moved over slightly, and more images are taken.
+There might not be a simple solution to this problem but it would be worth looking into.
+A more automated way to do photometry would be just as nice (if not better) than an automated way to track the
+satellite with the telescope. There is currently some software other than IRAF made specifically for satellites that
+may help with the photometry process and this software will definitely be experimented with.
+Finally, a way to find out if a target is visible before going to the observatory will be found. There have already
+MATLAB codes and programs in STK written to do just this process, but none have been looked into or used as of
+now.
+
+VI. Conclusion
+The Cal Poly Observatory is capable of observing bright satellites in geostationary orbits, and light curves can be
+found using IRAF software from those images. Much more work is needed for this research to be expanded to
+finding the tumble rates of rocket bodies in similar orbits, but it is a large step in the right direction after having
+taken many steps in dead-end directions.
+The satellites observed and presented in this paper were likely not tumbling as their magnitudes stayed at about
+the same level during the twenty minutes of observation. Comparison of similarities between the two light curves
+leads to the conclusion that most of the fluxuations in the light curves were due to the atmospheric variations, and
+that comparison stars may be necessary in the future.
+
+10
+
+Appendix A: Detailed List of Components and Software Used while Observing
+The components used to collect observation images are shown below in Table 1, and the software used for
+collection or reduction of data are shown below in Table 2.
+
+Component
+Telescope
+CCD Camera
+Focuser
+
+Focal Reducer
+Dome
+
+Software
+MATLAB
+IRAF
+The SkyX
+CCD Soft
+DDW
+SAOImage ds9
+
+Table 1. List of Componets used for Observation.
+Brand
+Model #
+Serial #
+Notes
+Meade 12"
+LX200
+A118931
+SBIG Astronomical
+ST-10XME
+061100506
+SBIG = Santa Barbara
+Instruments
+Instrument Group
+Temperature
+US Patent No. 6,327,081
+Compensating Focuser
+(TCF-S)
+Celestron
+94175
+f/6.3
+Reducer/Corrector
+Digital Dome Works
+4
+8008
+
+Table 2. List Software used for Observation or Reduction.
+Version
+Release Date
+Notes
+7.8.0.347
+February 12, 2009
+R2009a Student Version
+Revision 2.16
+May 24, 2012
+Image Reduction and Analysis Facility.
+Pro
+Licensed to "Cal Poly Physics"
+Serial No. D031-1B22618B
+5.00.210
+2011
+Copyright by Software Bisque
+5.2
+Revision Dec. 2, 2008
+Copyright 1998 by Technical Innovations
+7.2
+April 15, 2013
+
+11
+
+Appendix B: Epar Settings
+Table 3. Epar Rfits Settings
+fits_fil
+*.FIT
+file_lis
+iraf_fil
+<image prefix>
+make_im
+yes
+long-he
+no
+short_h
+yes
+datatyp
+blank
+0
+scale
+yes
+oldiraf
+no
+offset
+0
+Table 4. Epar Zero, Epar Dark, and Epar Flat Settings
+epar
+zero
+dark
+flat
+Input
+*.fits
+*.fits
+*.fits
+Output
+masterbias
+masterdark
+masterflat
+Combine
+average
+median
+median
+Reject
+minmax
+minmax
+avsigclip
+Ccdtype
+zero
+dark
+flat
+Process
+no
+yes
+yes
+Subsets
+n/a
+n/a
+yes
+Delete
+no
+no
+no
+Clobber
+no
+no
+no
+Scale
+none
+exposure
+mode or median
+Statsec
+[700:1400,400:1100]
+Nlow
+0
+0
+1
+Nhigh
+1
+1
+1
+Nkeep
+1
+1
+1
+Mclip
+yes
+yes
+yes
+Lsigma
+3
+3
+3
+Hsigma
+3
+3
+3
+Rdnoise
+8.8
+8.8
+8.8
+Gain
+1.3
+1.3
+n/a
+
+12
+
+ccdproc
+Images
+Output
+Ccdtype
+Max_cac
+Noproc
+
+Table 5. Epar Ccdproc Settings
+zero
+dark
+flat
+*.fits
+*.fits
+*.fits
+
+0
+no
+
+0
+no
+
+0
+no
+
+Fixpix
+Oversca
+Trim
+Zerocor
+Darkcor
+Flatcar
+Illumco
+Fringec
+Readcor
+Scancor
+
+no
+no
+no
+yes
+no
+no
+no
+no
+no
+no
+
+no
+no
+no
+no
+yes
+no
+no
+no
+no
+no
+
+no
+no
+no
+no
+no
+yes
+no
+no
+no
+No
+
+Readaxi
+Fixfile
+Biassec
+trimsec
+Zero
+Dark
+Flat
+Illum
+Fringe
+Minrepl
+Scantyp
+Nscan
+
+line
+
+line
+
+line
+
+1
+shortscan
+1
+
+1
+shortscan
+1
+
+1
+shortscan
+1
+
+Interac
+Functio
+Order
+Sample
+Naverag
+Niterat
+
+no
+legendre
+1
+*
+1
+1
+
+no
+legendre
+1
+*
+1
+1
+
+no
+legendre
+1
+*
+1
+1
+
+masterbias
+masterdark
+masterflatClear
+
+13
+
+Scale
+Fwhmpsf
+Emissio
+Sigma
+Datamin
+Datamax
+Noise
+Ccdread
+Gain
+Readnoi
+Epadu
+Exposur
+Airmass
+Filter
+Obstime
+Itime
+Xairmass
+Ifilter
+Otime
+
+Table 6. Epar Datapars Settings
+1
+<FWHM>
+* found using the "a" key with imexamine
+yes
+<std dev of sky>
+* found using the "m" key with imexamine
+0
+60000
+poisson
+EGAIN
+8.8
+1.3
+EXPTIME
+FILTER
+TIME-OBS
+INDEF
+INDEF
+INDEF
+INDEF
+Table 7. Epar Centerpars Settings
+Calgori
+centroid
+Cbox
+10
+Cthresh
+0
+Minsnra
+1
+Cmaxite
+10
+Maxshif
+261
+Clean
+no
+Rclean
+1
+Rclip
+2
+Kclean
+3
+Mkcente
+yes
+Table 8. Epar Photpars Settings
+Weighti
+constant
+Apertur
+7
+Zmag
+25
+Mkapert
+yes
+
+14
+
+Table 9. Epar Fitskypars Settings
+Salgori
+centroid
+Annulus
+20
+Dannulu
+5
+Skyvalu
+0
+Smaxite
+10
+Sloclip
+0
+Shiclip
+0
+Snrejec
+50
+Sloreje
+3
+Shireje
+3
+Khist
+3
+Binsize
+0.1
+Smooth
+no
+Rgrow
+0
+Mksky
+yes
+Table 10. Epar Phot Settings
+Image
+Skyfile
+Coords
+Output
+default
+Plotfil
+Datapar
+Centerp
+Fitskyp
+Photpar
+Interac
+yes
+Radplot
+no
+Icomman
+Gcomman
+Wcsin
+)_.wcsin
+Wcsout
+)_.wcsout
+Cache
+)_.cache
+Verify
+)_.verify
+Update
+)_.update
+Verbose
+)_.verbose
+Graphic
+)_.graphics
+Display
+)_.display
+
+Textfile
+Fields
+Expr
+Headers
+Paramet
+
+Table 11. Epar Txdump Settings
+*.mag.1
+IMAGE, ID, XCENTER, YCENTER, OTIME, MAG, MERR
+yes
+no
+yes
+
+15
+
+Appendix C: Matlab Code
+remove.m
+%
+%
+%
+%
+
+Kimi Andersen
+Senior Project
+April 3, 2013
+Updated November 4, 2013
+
+% remove the 0 and the R/B from the first line of a 3le
+% this code also adds the satellite number to end of the first line
+format compact
+close all
+clear
+clc
+file_x =fopen('Rockets_3le.txt','r');
+file_z =fopen('rocket_body_names.txt','w+');
+a = 1;
+count = 0;
+while a ~= -1
+count = count + 1;
+a=fgetl(file_x);
+if a == -1
+fprintf(file_z,'%s\r\n',hold_a); % print the last line of the file
+break
+end
+token = strtok(a,'');
+if str2num(token(1)) == 0;
+% redefine a without the zero and R/B
+a = strrep(a,'0 ','');
+a = strrep(a,' R/B','');
+end
+if str2num(token(1)) == 1;
+% get the norad number to add to the rocket name
+num = [' (',token(3),token(4),token(5),token(6),token(7),')'];
+end
+if count > 1
+print_a = [hold_a,num]; % add norad number to rocket name
+if str2num(token(1)) == 1;
+fprintf(file_z,'%s\r\n',print_a); % print first line with norad #
+else
+fprintf(file_z,'%s\r\n',hold_a); % print lines 1 & 2 w/o norad #
+end
+end
+hold_a = a; % save line data to print next loop
+end
+fclose(file_x);
+fclose(file_z);
+
+16
+
+plot_mag.m
+%% Kimi Andersen
+% Senior Project
+% November 3, 2013
+% Updated November 5, 2013
+format compact
+close all
+clear
+clc
+[image_n,id,xc,yc,otime,mag,merr] = ...
+textread('data2.txt','%s %f %f %f %s %f %f');
+% time is a string (02:15:34.834)
+% make it a number
+timeobs = zeros(1,length(otime));
+for i = 1:length(otime)
+time = char(otime(i));
+t = strtok(time,'');
+hour = str2num(t(1:2));
+minute = str2num(t(4:5));
+second = str2num(t(7:12));
+timeobs(i) = hour + minute/60 + second/3600;
+end
+% separate the two different objects by ID number
+e1 = find(id == 1);
+e2 = find(id == 2);
+% get x axis time vector and start it at 0 minutes
+timeobs1 = (timeobs(e1)-timeobs(e1(1)))*60; % minutes
+timeobs2 = (timeobs(e2)-timeobs(e2(1)))*60; % minutes
+% flip magnitudes so larger negative numbers (smaller #s) are dimmer
+mag1 = -mag(e1);
+mag2 = -mag(e2);
+% plot of all data
+figure
+hold all
+plot(timeobs1,mag1,'r*')
+plot(timeobs2,mag2,'b*')
+xlabel('time (minutes)')
+ylabel('Magnitude')
+title('Satellite Light Curve')
+legend('XM-1 (26761)','XM-2 (26724)')
+set(legend,'Position',[0.206 0.3032 0.2393 0.1]);
+set(gca,'YTick',-16.5:.5:-13) % rename y axis points as positive numbers
+set(gca,'YTickLabel',{'16.5','16','15.5','15','14.5','14','13.5','13'})
+% remove the end bit of data that had clouds
+f1 = find(timeobs1 <= 20);
+f2 = find(timeobs2 <= 20);
+% calculate the average brightness
+avg1 = dot(mag1(f1),ones(length(f1),1))/length(f1);
+avg2 = dot(mag2(f2),ones(length(f2),1))/length(f2);
+vari1 = sum(abs(mag1(f1)-avg1))/length(mag1(f1));
+vari2 = sum(abs(mag2(f2)-avg2))/length(mag2(f2));
+17
+
+% plot data before clouds arrived
+figure
+hold all
+plot(timeobs1(f1),mag1(f1),'r*')
+plot(timeobs2(f2),mag2(f2),'b*')
+plot([0 20],[avg1 avg1],'r--')
+plot([0 20],[avg2 avg2],'b--')
+xlabel('time (minutes)')
+ylabel('Magnitude')
+title('Satellite Light Curve')
+legend('XM-1 (26761)','XM-2 (26724)')
+set(legend,'Position',[0.1381 0.1318 0.2393 0.1]);
+set(gca,'YTick',-14.4:.1:-13.4) % rename y axis points as positive numbers
+set(gca,'YTickLabel',{'14.4','14.3','14.2','14.1','14','13.9','13.8',...
+'13.7','13.6','13.5','13.4'})
+% find when both rockets were found in the same image
+count = 1;
+h = zeros(1,length(image_n));
+for i = 1:length(image_n)-1
+if strcmp(image_n(i),image_n(i+1)) == 1
+h(count:count+1) = [i i+1];
+count = count + 2;
+end
+end
+j = h(h>0); % index values where both rockets are in the image
+% make new id, time, and mag variables
+id4 = id(j);
+timeobs4 = timeobs(j);
+mag4 = mag(j);
+% separate the two different objects by ID number
+e3 = find(id4 == 1);
+e4 = find(id4 == 2);
+% get x axis time vector and start it at 0 minutes
+timeobs5 = (timeobs4(e3)-timeobs4(e4(1)))*60; % minutes
+% flip magnitudes so larger negative numbers (smaller #s) are dimmer
+mag1 = -mag4(e3);
+mag2 = -mag4(e4);
+% remove the end bit of data that had clouds
+f6 = find(timeobs5 <= 20);
+timeobs6 = timeobs5(f6);
+figure
+hold all
+plot(timeobs6,mag1(f6),'r')
+plot(timeobs6,mag2(f6)+(avg1-avg2),'b')
+xlabel('time (minutes)')
+ylabel('Magnitude')
+title('Shifted Satellite Light Curves')
+legend('XM-1 (26761)','XM-2 (26724) + \Deltamag_1_2')
+set(legend,'Position',[0.1666 0.7807 0.35 0.1167]);
+set(gca,'YTick',-14.2:.1:-13.3) % rename y axis points as positive numbers
+set(gca,'YTickLabel',{'14.2','14.1','14','13.9','13.8',...
+'13.7','13.6','13.5','13.4','13.3'})
+
+18
+
+References
+1
+
+Cowardin, H., G. Ojakangas, M. Mulrooney, S. Lederer, and J. C. Liou. Optical Signature Analysis of Tumbling Rocket Bodies
+via Laboratory Measurements. Tech. Print.
+2
+Massey, Phillip and Davis, Lindsey E. “A User's Guide to Stellar CCD Photometry with IRAF.” Print April 15, 1992.
+3
+Mitchell, David. “Instructions for CCD Observing at the Cal Poly Observatory.” California Polytechnic State University San
+Luis Obispo, Print 2011.
+4
+Mitchell, David. “Lab 4: Guide to Data Reduction in IRAF.” California Polytechnic State University San Luis Obispo, Print
+2011.
+5
+Mitchell, David. “Txdump.” California Polytechnic State University San Luis Obispo, Print 2011.
+6
+Mitchell, David. “Photometry Guide for IRAF.” California Polytechnic State University San Luis Obispo, Print 2011.
+7
+Mitchell, David. “WINSCP instructions.” California Polytechnic State University San Luis Obispo, Print 2013.
+8
+"Real Time Satellite Tracking." XM-1 Satellite Details NORAD 26761. ITPROSTAR, n.d. Web. 03 Nov. 2013.
+<http://www.n2yo.com/satellite/?s=26761>.
+9
+" Real Time Satellite Tracking." XM-2 Satellite Details NORAD 26724. ITPROSTAR, n.d. Web. 03 Nov. 2013.
+<http://www.n2yo.com/satellite/?s=26724>.
+10
+"XM-1." National Space Science Data Center Master Catalog. Ed. E. Bell. National Aeronautics and Space Administration, 16
+Aug. 2013. Web. 3 Nov. 2013. <http://nssdc.gsfc.nasa.gov/nmc/masterCatalog.do?sc=2001-018A>.
+11
+"XM-2." National Space Science Data Center Master Catalog. Ed. E. Bell. National Aeronautics and Space Administration, 16
+Aug. 2013. Web. 3 Nov. 2013. <http://nssdc.gsfc.nasa.gov/nmc/masterCatalog.do?sc=2001-012A>.
+
+19
+
+

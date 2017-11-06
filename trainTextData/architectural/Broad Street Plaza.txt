@@ -1,0 +1,2123 @@
+Broad Street Plaza Architectural and Structural Design
+
+A Senior Project
+Presented to:
+Faculty of the Architecture and Architectural Engineering Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+Of the Requirements for the Degree
+Bachelor of Science
+
+By
+Madison Busby and Jenny Nguyen
+June, 2015
+
+© Madison Busby & Jenny Nguyen
+
+2115 BROAD ST
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+LETTER TO CLIENT EXECUTIVE SUMMARY.......................................................................................... 4
+PROJECT GOALS ............................................................................................................................................... 5
+SITE ANALYSIS ............................................................................................................................................... 6-9
+PROGRAM SUMMARY................................................................................................................................ 10
+SITE PLAN | CIRCULATION ......................................................................................................................... 11
+FLOOR PLANS .......................................................................................................................................... 12-14
+SECTION A-A ..................................................................................................................................................... 15
+SECTION B-B ..................................................................................................................................................... 16
+RESIDENTIAL ROOF GARDEN VIEW...................................................................................................... 17
+INNER COURTYARD VIEW......................................................................................................................... 18
+OUTDOOR PATIO DINING VIEW .............................................................................................................. 19
+GRAVITY SYSTEM .................................................................................................................................. 20-21
+LATERAL SYSTEM .................................................................................................................................. 22-23
+PARKING SYSTEM ................................................................................................................................. 24-25
+FOUNDATION SYSTEM ........................................................................................................................ 26-27
+.. 28
+
+TABLE OF CONTENTS
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+3
+
+DEAR MS. WHITE,
+	
+THANK YOU FOR GIVING US THE OPPORTUNITY TO EXPRESS
+OUR CREATIVITY THROUGH THE DESIGN OF THIS PROJECT. IT HAS
+BEEN A PLEASURE CREATING A PROJECT FOR THE UNIQUE LITTLE
+CITY OF SAN LUIS OBISPO THAT WILL BRING THE COMMUNITY TOGETHER AS WELL AS CREATE AN ECLETIC ENVIRONMENT THAT WILL
+BORDELINE MULTIPLE DIFFERENT PORTIONS OF THIS CITY.
+	
+JEMA ARCHITECTS IS A FIRM CONSISTING OF ONE FOURTH YEAR
+ARCHITECTURAL ENGINEERING STUDENT AND ONE FOURTH YEAR
+ARCHITECTURAL STUDENT FROM CALIFORNIA POLYTECHNIC STATE
+UNIVERSITY, SAN LUIS OBISPO.
+	
+WE ARE HAPPY TO PRESENT THE OUTCOME OF OUR INTEGRATED DESIGN PROCESS PRESENTED WITHIN THIS PROJECT. IN THIS
+PACKAGE, YOU WILL FIND IMAGES DEPCITING BOTH DESIGNS FOLLOWED BY A BRIEF DESCRIPTION OF OUR INTENT. OUR DESIGN INCLUDES RESIDENTIAL PROGRAMS, COMMERCIAL AREAS, OFFICES,
+AND A SHARED COMMUNITY CENTER. WE HOPE THESE DESIGNS
+MEET YOUR EXPECTATIONS; AND IF THEY DO NOT, WE ARE MORE
+THAN HAPPY TO COLLABORATIVELY RE-DESIGN FOR YOUR BEST INTEREST.
+	CHEERS!
+	
+JEMA ARCHITECTS
+	
+{JENNY & MADISON}
+
+	
+THE MAJOR FOCUS OF THIS DESIGN WAS TO CREATE AN ENVIRONMENT THAT WILL BRING THE COMMUNITY TOGETHER WHILE
+STILL GIVING THE RESIDENTIAL SPACE ITS PRIVACY. THIS WAS ACCOMPLISHED BY CREATING AN OUTLET FOR PEDESTRIANS AND BIKERS THROUGH THE OPEN COURTYARD. WITHIN THIS COURTYARD
+ARE SHARED OPEN SPACES AND GARDENS. WE ALSO KEPT THE RESIDENTIAL UNITS CLOSER TO BRANCH STREET AND TUCKED NORTH
+ABOVE THE RESTAURANTS ON THE SECOND FLOOR. THESE NATURAL
+URBAN SPACES ARE INTERTWINED WITH THE PROGRAMS SUCH
+THAT THEY CREATE A CONNECTED ATMOSPHERE WITH THE BUILDINGS
+	
+OUR PROGRAM PROMOTES HEALTHY LIVING BY PROVIDING BIKE
+RACKS, EASY ACCESS TO WALKWAYS, LIMITED PARKING, AND ON
+SITE LOCAL PRODUCE MARKET. ALL PARKING ARE HIDDEN UNDERGROUND AND COMPLETE MECHANICAL.
+	
+IN ORDER TO WORK THE THE SURROUNDINGS, ALL OF OUR
+BUILDINGS ARE UNDER THE 35’ MAXIMUM CONSTRAINED BY THE
+CITY CODES. AN UNDULATED FACADE AND WOOD CONSTRUCTION
+ALLOWS THE APARTMENTS TO BLEND INTO THE REST OF BRANCH
+STREET. WE DEALTH WITH THE SITE SLOPE BY CREATING DIFFERENT
+STEPS FOR DIFFERENT SITE USES. OUR PROGRAM PUSHES DENSITY,
+BUT ALL WITHIN REASON.
+
+LETTER TO CLIENT | EXECUTIVE SUMMARY
+4
+
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+CLIENT GOALS | DESIGN APPROACH
+PROGRAMATIC BREAKDOWN:
+(5)	ONE BEDROOM
+(3)	TWO BEDROOM
+(3)	THREE BEDROOM
+(8)	STUDIO UNITS
+(3)	OFFICES
+(2)	RESTAURANTS
+(1)	CAFE
+(1)	MARKET
+(1) RESIDENTIAL MECHANICAL PARKING
+(1) COMMERCIAL MECHANICAL PARKING
+
+- ALLOW FOR BOTH RESIDENTIAL AND COMMERCIAL
+PROGRAMS TO COEXIST WITHOUT INTRUDING ONTO
+ONE ANOTHER (EXCLUDING THE SHARED COURTYARD)
+- CREATE A PLACE OF REFUGE WHERE PEDESTRIANS
+AND BIKERS CAN ESCAPE FROM THE BUSY BROAD
+STREET TRAFFIC
+- INCORPORATE SUSTAINABLE ELEMENTS WITH EACH
+USE (ROOFTOP GARDEN, LOCAL FARMER’S MARKET)
+
+PROJECT GOALS | DESIGN APPROACH
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+5
+
+South Broad Street Cultural Context
+SOUTH BROAD STREET
+			CULTURAL CONTEXT
+
+source:
+Rick Engineering
+SOURCE: RICK
+ENGINEERING
+(SLO
+South BROAD
+Broad Street
+AreaAREA
+Plan) PLAN
+SLO
+SOUTH
+STREET
+
+IS LOCATED
+WITHIN
+SOUTH
+STREET AREA
+NEIGHBORHOOD,
+WHICH
+TheTHE
+site SITE
+is located
+within the
+South THE
+Broad
+Street BROAD
+Area neighborhood,
+which
+is bounded by High
+Street,
+IS
+BOUNDED
+BY
+HIGH
+STREET,
+UNION
+PACIFIC
+RAILROAF,
+ORCUTT
+ROAD,
+AND
+BROAD
+Union Pacific Railroad, Orcutt Road, and Broad Street on the four cardinal directions, respectively.
+STREET
+ONcentery
+THE FOUR
+CARDINAL
+DIRECTIONS, is
+RESPECTIVELY.
+LOCATED
+THE CENTER
+Located
+in the
+of the
+city, this neighborhood
+adjacent to Highway
+101, IN
+Downtown
+San Luis
+OF THE
+THIS
+NEIGHBORHOOD
+ISLittle
+ADJACENT
+Obispo,
+theCITY,
+Historic
+Railroad
+District, and
+Italy. TO HIGHWAY 101, DOWNTOWN SLO,
+THE HISTORIC RAILROAD DISTRICT, AND LITTLE ITALY.
+Not only was the southerneast portion of the city one of the oldest residential neighborhoods, it was
+SINCE
+IS A MAIN TRANSPORTATION
+RUNSItaly).
+CONTINonce
+homeBROAD
+to manySTREET
+Italian-Americans
+and railroad workersCORRIDOR
+(hence the THAT
+name Little
+Many of the
+UOUSLY
+FROM
+DOWNTOWN
+SLO
+DOWN
+SOUTH
+TOWARDS
+ARROYO
+GRANDE,
+PISoriginal dwellings remain, but renovations in the past century has increased the number of commercial,
+MO
+BEACH, waste
+AND GROVER
+THEauto
+AREA
+IS CLOSE
+TO MANY
+SHOPPING
+light
+industrial,
+recycling,BEACH,
+auto sales,
+repair,
+and other
+uses and
+businesses.STORES,
+SCHOOLS, EMPLOYMENT CENTERS, AND MAJOR TRANSPORTATION FACILITIES LIKE PUBLICBroad
+TRANSIT
+THEtransportation
+COUNTY REGIONAL
+AMTRAK
+STATIONSSan Luis
+Since
+StreetSTOPS,
+is a main
+corridorAIRPORT,
+that runs AND
+continuously
+to TRAIN
+from Downtown
+Obispo down south to Arroyo Grande, Pismo Beach, and Grover Beach, the area is close to many shopping stores (and plazas), schools, employment centers, and major transportation facilities like public
+transit stops, the county regional airport, and Amtrak Train Station.
+
+SITE ANALYSIS
+
+THISdesign
+AREA allows
+CURRENTLY
+VARIOUS
+TYPES high
+OF BUILDINGS
+PROGRAMS.
+ALONG
+The street
+for highHOUSES
+traffic volumes,
+relatively
+speeds, andAND
+continuous,
+uncontrolled
+WITH
+THE
+MIXED-DENSITY
+RESIDENTIAL,
+SMALLfor
+SCALE
+RETAIL
+AND RESTAURANTS,
+THERE
+left turns
+into
+streets
+and driveways,
+making it difficult
+residents
+to access
+businesses, adjacent
+neighARE
+PLENTY
+OF
+MANUFACTURING
+AND
+INDUSTRIAL
+SERVICES
+ALONG
+THE
+STREET,
+INborhoods, schools, parks, and public transit that is present in the area. Traffic volumes on Broad Street,
+PARTS
+WERE
+DEVELOPED
+THE IMPERIAL
+ADDITION
+(1888).
+up to CLUDING
+29,100 vehicles
+perTHAT
+day in
+2010,ORIGINALLY
+discourage most,
+if not all,INpedestrians
+and bicyclists
+from
+crossOVER
+TIME,
+CHANGEDsidewalks,
+AND NON-RESIDENTIAL
+APPEARED
+WHILE
+MOST
+OF
+ing the
+streets.
+TheZONING
+lack of continuous
+street trees, and USES
+crosswalks
+does not
+facilitate
+for an
+OLD NEIGHBORHOOD
+WAS DEMOLISHED. THE FEW REMAINING HOMES FROM THAT
+activeTHE
+pedestrian
+community.
+PERIOD IS LOCATED BETWEEN HUMBERT AVENUE AND WOODBRIDVE STREET.
+This area currently houses various types of buildings and programs. Along with the mixed-density resIN 2012,
+THE retail
+SOUTH
+STREET
+AREA
+HAS BEEN
+DESCRIBED and
+AS Aindustrial
+NEIGHBORHOOD
+idential,
+small-scale
+andBROAD
+restaurants,
+there
+are plenty
+of manufacturing
+services
+WITH
+FUNKY,
+DIVERSE,
+AND/OR
+DILAPIDATED
+CULTURE
+DUE(1888).
+TO THEThe
+MIX
+alongIN
+theTRANSITION
+street, including
+parts
+that were
+originally
+developed
+in the Imperial
+Addition
+OF OLDER
+COMMERCIAL
+AND
+RESIDENTIAL
+BUILDINGS,
+LACK
+PUBLIC
+FACILITIES,
+AND
+neighborhood
+originally
+consisted
+of railroad
+workers’
+small houses
+withOF
+simple
+designs.
+Over time,
+UNDERUTILIZED
+zoning changed and non-residential uses
+appeared whilePROPERTIES.
+most of the old neighborhood was demolished.
+The few remaining homes from that period is located between Humbert Avenue and Woodbridge Street.
+
+In 2012, the South Broad Street area has been described as a neighborhood in transition with funky,
+Although the area offers quite diverse programming and adjacencies to different parts of the city, it is not diverse, and/or dilapidated culture due to the mix of older commercial and residential buildings, lack of
+6
+JENNY NGUYEN | MADISON BUSBY		
+2115 BROAD STREET | SAN LUIS OBISPO		
+ARCH 453 | ARCE 415		
+WHITE | NUTALL
+public facilities, and underutilized properties.
+in an ideal situation to promote any real connection.
+
+Site Analysis_Transportation
+bike friendly road
+bike trail
+
+train station
+
+bus lines
+
+pedestrian crossing
+
+Increase the percentage of all trips made by bicycle within San Luis Obispo. Establish
+and maintain an integrated system of bikeways and parking facilities that enables safe
+and convenient bicycling, with an emphasis on travel to employment centers, commercial districts, schools and recreational destinations.
+Advocate bicycling as a way of addressing climate change, preserving clean air, reducing traffic congestion and noise, conserving land and energy resources, and promoting
+good health.
+Develop financial partnerships with other organizations when the resultant bicycle facilities or activities provide significant benefits to San Luis Obispo residents.
+
+SITE ANALYSIS
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+7
+
+SUN SHADING CHART WINTER - SPRING
+
+AVERAGE TEMPERATURE
+Jan
+
+Feb
+
+March
+
+Apr
+
+May
+
+Jun
+
+July
+
+Aug
+
+Sep
+
+Oct
+
+Nov
+
+Dec
+
+Average High °F
+
+64
+
+64
+
+65
+
+69
+
+72
+
+75
+
+77
+
+80
+
+79
+
+76
+
+70
+
+64
+
+Average Low °F
+
+41
+
+42
+
+44
+
+45
+
+48
+
+51
+
+54
+
+55
+
+54
+
+49
+
+44
+
+40
+
+Average Precipitation
+inches
+
+3.66
+
+3.66
+
+3.19
+
+1.1
+
+0.39
+
+0.08
+
+0.04
+
+0.04
+
+0.2
+
+0.87
+
+1.73
+
+4.06
+
+SUN SHADING CHART SUMMER - FALL
+
+AVERAGE WIND VELOCITY
+
+WIND ROSE
+
+AVERAGE TEMPERATURE
+
+CLIMATE ANALYSIS
+SAN LUIS OBISPO, CA
+
+PSYCHROMETRIC CHART
+
+(WITHOUT STRATEGIES)
+
+Most of the wind direction is
+W - NW throughout the
+year.
+
+SUN PATH + WIND + NOISE
+
+During Fall and Winter the
+wind also has a E - SE direction
+PREVAILING WIND
+
+SLO is sunny most of the
+year.
+some strategies:
+PSYCHROMETRIC CHART
+
+STREET NOISE
+
+Passive solar heating
+Entrance of winter light
+Summer shading
+Natural Ventilation
+
+(WITH STRATEGIES)
+
+JUNE SUN PATH
+
+Precipitation in San
+Luis Obispo is higher
+during winter and
+early spring.
+Most of the noise
+comes from Broad
+street.
+
+SITE ANALYSIS
+8
+
+JENNY NGUYEN | MADISON BUSBY		
+
+MARCH SUN PATH
+
+JUNE SUN PATH
+
+DECEMBER SUN PATH
+
+N
+
+MARCH SUN PATH
+DECEMBER SUN PATH
+FALL - WINTER WIND
+
+Graphs taken from ClimateConsultant 6.0
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+!
+
+!
+
+O
+RO
+BR
+B
+
+2115 Broad St
+
+¬
+«
+5
+5
+
+!
+
+D
+AD
+A
+AR
+A
+RA
+A
+
+!
+
+O
+MO
+M
+
+Land Use Designation
+Neighborhood Commercial|C-N
+!
+
+SAN
+SA
+NTA
+TA B
+BA
+AR
+RB
+B
+
+!
+
+Terrace
+Terrace
+Zoning Regulations
+Hill
+Hill
+
+!
+
+Density
+Average Cross-Slope
+
+!
+
+!
+
+!
+
+¬
+«
+15
+15
+
+SOUTH
+SOUT
+H
+
+JJO
+OH
+H
+
+6
+6
+
+Live/work Units
+
+2 spaces per unit
+Same as Multi-family
+! 1 per
+! studio apartment, 1-1/2 for first bedroom plus 1/2 for each additional
+Multi-family
+bedroom in a unit, plus 1 for each five units in developments of more than five
+units
+Bakery, retail
+One space per 200 ft2 gross floor area
+Two spaces for employee parking, plus one space per 500 sq.ft of gross floor
+Convenience store
+area and a minimum of five bicycle parking spaces
+2
+2
+Retail ≤2000 ft
+One space
+floor area
+! per 300
+! ft gross
+!
+Bicycles,
+retailSetback Lines
+One space per 500 ft2 gross floor area
+Building
+One space per 60 sq. ft. customer use area, plus one space per 100 sq. ft.
+Broad Street
+Restaurant
+food preparation. Walls, halls, restrooms, and dead storage areas do not count
+as either customer
+use orSt
+food preparation floor area
+40ft from centerline
+of Broad
+Office - Accessory
+As required for principal use
+Office - Business
+One space per 300 ft2 gross floor area
+
+NS
+N
+SO
+ON
+NMixed-use
+
+!
+
+3
+3
+
+!
+
+¬
+«
+
+¬
+«
+
+Density Bonus
+(low/moderate-income housing)
+
+!
+
+!
+
+O
+PO
+P
+NII
+N
+
+!
+
+!
+
+!
+
+40%
+
+!
+
+!
+
+!
+
+!
+
+!
+
+ELL
+E
+
+UR
+U
+R
+
+!
+
+* Requirements apply to uses that require 10 or more vehicle parking spaces. When less than ½ space is
+calculated, one space is required
+** “Short-Term” bicycle parking is used by visitors to multi-family housing and by patrons of commercial
+uses. Bicycle racks are used to satisfy this need
+*** “Long-Term” bicycle parking is used by employees of commercial uses and by residents. Fully enclosed lockers are used to satisfy this need. Lockable rooms reserved for bicycle storage and secured
+parking areas managed by attendants are other acceptable forms. Bicycles shall be parked vertically or horOrcutt
+SP
+izontally with at least theOrcutt
+rear tireSP
+resting at floor level. Additionally, bicycle lockers or interior space within
+each dwelling or accessory structure have to be provided for the storage of at least two bicycles per unit
+!
+
+D
+D
+
+!
+
+A
+OA
+RO
+BR
+B
+
+Office - Accessory
+Office - Business
+
+50%
+
+TTTT !
+
+PRADO
+PRA
+DO
+
+Restaurant
+
+15%
+
+U
+CU
+RC
+OR
+O
+!
+
+Retail ≤2000 ft2
+Bicycles, retail
+
+Minimum long-term bicycle
+spaces***
+
+!
+
+Convenience store
+
+Minimum short-term
+bicycle spaces**
+
+!
+
+Bakery, retail
+
+C-N
+
+Spaces as a percentage of required
+auto spaces*
+!
+
+Multi-family
+
+2 spaces per unit
+Same as Multi-family
+1 per studio apartment, 1-1/2 for first bedroom plus 1/2 for each additional
+bedroom in a unit, plus 1 for each five units in developments of more than five
+units
+One space per 200 ft2 gross floor area
+Two spaces for employee parking, plus one space per 500 sq.ft of gross floor
+Margarita
+Margarita
+SP parking spaces
+SP
+area and a minimum
+of five bicycle
+One space per 300 ft2 gross floor area
+One space per 500 ft2 gross floor area
+One space per 60 sq. ft. customer use area, plus one space per 100 sq. ft.
+food preparation. Walls, halls, restrooms, and dead storage areas do not count
+as either customer use or food preparation floor area
+As required for principal use
+One space per 300 ft2 gross floor area
+
+!
+
+Live/work Units
+Mixed-use
+
+!
+
+Bicycle Parking
+
+!
+
+ORCUTT
+ORCUTT
+
+Parking
+
+!
+
+LLA
+A
+
+!
+
+12 density units/net acre
+
+!
+
+Development Standards
+Maximum Heigh: 35 feet
+Maximum Coverage: 75%
+Maximum floor area to site ratio: 2.0
+
+!
+
+Occupancy Standards|C-N
+South Street
+South
+Street25Hills
+Hills
+max population density/net acre
+
+!
+
+Spaces as a percentage of required
+auto spaces*
+
+Minimum short-term
+bicycle spaces**
+
+Minimum long-term bicycle
+spaces***
+
+15%
+
+50%
+
+40%
+
+!
+
+!
+
+!
+
+!
+
+¬
+«
+12
+12
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+9
+
+!
+
+TANK FARM
+TANK
+FARM
+
+!
+
+!
+
+JENNY NGUYEN | MADISON BUSBY		
+
+FARM
+TANK FARM
+TANK
+
+!
+
+!
+
+C-N
+
+!
+
+!
+
+SITE ANALYSIS
+
+!
+
+R
+OR
+O
+
+!
+
+PROGRAM SUMMARY
+10
+
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+A-A
+
+B-B
+
+SITE PLAN | CIRCULATION
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+11
+
+GROUND LEVEL
+12
+
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+SECOND LEVEL
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+13
+
+THIRD LEVEL
+14
+
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+0’
+
+30’
+15’
+
+45’
+
+SECTION A-A
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+15
+
+0’
+
+30’
+15’
+
+45’
+
+SECTION B-B
+16
+
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+RESIDENTIAL ROOF GARDEN
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+17
+
+MID-LEVEL COURTYARD
+18
+
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+OUTDOOR PATIO DINING
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+19
+
+STEEL
+
+WOOD
+
+STEEL FRAMING WILL BE USED FOR COMMERCIAL AND OFFICE SPACE. IT WILL HAVE WIDE
+FLANGE BEAMS, GIRDERS, AND COLUMNS WITH
+BOLTS AND PLATES FOR CONNECTION
+
+WOOD FRAMING WILL BE USED FOR RESIDENTIAL AND OFFICE SPACE. IT WILL CONSIST OF A
+LIGHT FRAM WOOD SYSTEM WITH TJI JOISTS.
+COLLECTORS AND BEAMS (IF NEEDED) WILL BE
+PSL. BEARING WALLS WILL CARRY THE ROOF
+AND FLOOR LOADS.
+WOOD FRAMING WAS CHOSEN FOR RESIDENTIAL, OFFICES, AND SMALLER COMMERCIAL
+BUILDINGS BECAUSE IT IS THE MOST COST EFFECTIVE.
+
+THERE WILL BE VERCO STEEL DECKING TOPPED
+WITH A 3” LIGHT WEIGHT CONCRETE SLAB
+WHICH WILL PROVIDE A SOUND/FIRE BARRIER.
+ALTHOUGH STEEL IS MORE EXPENSIVE AND
+REQUIRES SPECIAL SKILLS TO INSTALL, IT WILL
+ONLY BE USED FOR A SMALL PORTION OF THE
+PROJECT AND IS IMPORTANT FOR ACHIEVING
+THE DESIRED ARCHITECTURAL STYLE.
+A LARGE PORTION OF STEEL IS REUSED AFTER A
+BUILDING IS TORN DOWN, MAKING IT SUSTAINABLE
+
+YELLOW - WOOD
+GREEN - STEEL
+CONCRETE
+CONCRETE WAS THE OBVIOUS CHOICE IN
+GRAVITY SYSTEM BECAUSE IT WILL BE UNDERGROUND, AND THE COLUMNS WILL BE
+HOLDING UP AND HELD UP BY LARGE CONCRETE SLABS. SO CONSTRUCTABILITY AND
+STRENGTH WISE IT IS THE ONLY MATERIAL
+THAT MAKES SENSE.
+
+ESPECIALLY FOR RESIDENTIAL, WOOD CONSTRUCTION IS ALSO THE ‘WARMEST’ MATERIAL
+COMPARED TO STEEL AND CONCRETE.
+TIMBER IS ALSO THE BEST MATERIAL CONSTRUCTABILITY WISE. THEREFORE THERE WILL
+BE PLENTY OF WORKERS CAPABLE OF COMPLETING THIS PORTION OF THE PROJECT WITH
+LITTLE INSTRUCTION WHILE STILL PRODUCING
+QUALITY WORK. WOOD CAN ALSO BE REUSED,
+MAKING IT SUSTAINABLE
+
+CMU
+CMU BEARING WALLS WILL BE PAIRED WITH
+BOTH WOOD AND STEEL GRAVITY SYSTEMS
+WHERE THEY ARE ALREADY BEING USED FOR
+LATERAL SYSTEM
+
+GRAVITY SYSTEM
+20
+
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+CONFIGURATION
+
+SIZING
+
+THE GRAVITY SYSTEMS WERE CONFIGURED BASED ON SPAN, POTENTIAL USE OF SPACE, AND SURROUNDING STRUCTURE.
+
+A TYPICAL TJI JOIST (TJI 230 14”) IS USED FOR ALL THE RESIDENTIAL AND OFFICE SPACES UNLESS NOTED OTHERWISE. SIMPSON ITS
+HANGERS WILL SUPPORT JOISTS. WHEN COLUMNS ARE NEEDED, A
+HSS 4X4X1/4 STEEL COLUMN WILL BE USED
+
+FORE THE RESIDENTIAL, BECAUSE THE INTERIOR AREAS ARE SO
+SMALL, BEARING WALLS WILL BE ON THE EXTERIOR OF EACH UNIT.
+THE TJI JOISTS WILL SPAN IN THE SHORTEST DIRECTION. FOR OFFIC- IN THE COMMERCIAL BUILDING, STEEL GIRDERS ARE W14X61 AND
+ES, THERE WILL NEED TO BE A COUPLE COLUMNS ON THE LOWER BEAMS ARE W14X34 WHILE COLUMNS ARE W8X31
+FLOOR, WHICH THEN REQUIRES PSL BEAMS IN THE SHORTER DIRECTION, AND TJI JOISTS SPANNING THE LONGER DIRECITON. THIS IS TO
+REDUCE THE CEILING HEIGHT AS MUCH AS POSSIBLE.
+THE INTERIOR COLUMNS LINE UP WITH THE BEARING WALLS ABOVE
+TO REDUCE LOADING ON THE BEAMS AND GIRDERS. AGAIN, TO
+REDUCE CEILING HEIGHT, BEAMS WILL SPAN THE LONGER DIRECTIONS WHILE GIRDERS IN THE SHORTER DIRECTION. CMU BEARING
+WALLS ARE USED WHERE OPENINGS ARE NOT NEEDED
+
+GRAVITY SYSTEM
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+21
+
+TIMBER SHEAR WALL (RED)
+WOOD SHEAR WALLS INCLUDE 2X6 STUDS
+SPACED 16” O.C. WITH STRUCTURAL PLYWOOD
+SHEATHING WITH NAILING SPACED ACCORDING
+TO THE STRENGTH THAT IS NEEDED, STILL USING THE SAME 10D NAILS. AT EACH END OF EVERY SHEARWALL, THERE WILL BE HDU2 HOLD
+DOWNS
+TIMBER SHEAR WALLS WILL BE USED IN ALL
+LIGHT FRAMED TIMBER BUILDINGS THAT ARE
+NOT IN NEED OF LARGE OPENINGS. BEARINGS
+WALLS WILL BE USED AT THE GRAVITY SYSTEM
+FOR MOST OF THE WOOD FRAMED BUILDINGS
+AND CAN DOUBLE AS SHEAR WALLS. OTHER OPTIONS WOULD BE MASONRY SHEAR WALLS, BUT
+WHEN THE LOAD IS NOT TOO HIGH AND WITH
+SMALLER OPENINGS.
+
+MASONRY SHEAR WALL (BLUE)
+MASONRY SHEAR WALLS WILL WORK WITH WOOD STRUCTURES TO CREATE A MORE SPACE EFFICIENT SHEAR WALL. BECAUSE THEY HAVE MORE
+STRENGTH PER FOOT, WE WOULD BE ABLE TO USE LESS WALL AND
+HAEV MORE OPENINGS. IT IS MADE UP OF 8” CMU WHICH IS REINFORCED
+BASED ON MINIMUM REQUIREMENTS AND CALCULATIONS
+MASONRY SHEAR WALLS WILL BE USED WHEN TIMBER SHEAR WALLS
+ARE TOO LARGE, NOT STRONG ENOUGH, OR A COMBINATION OF THE TWO.
+MASONRY SHEAR WALLS HAVE A LOT OF STRENGTH COMPARED TO THE
+WEIGHT CONSTUCTION, ALLOWING THEM TO BE SMALLER IN WIDTH.
+THEY ALSO CAN BE ASTHETICALLY PLEASING, ESPECIALLY IN SLO AREA
+
+LATERAL SYSTEM
+22
+
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+CONFIGURATION
+THE LATERAL SYSTEM WAS CONFIGURED BASED ON CENTER OF
+MASS AND RIGIDITY, OPENINGS, ASTHETICS, AND WALL SPANS.
+THE WOOD SHEARWALLS WERE PLACED WHERE THE WALL WOULD
+BE CONTINUOUS HORIZONTALLY AND VERTICALLY TO TRY AND AVOID
+EXCESS DRAG AND LOAD TRANSFER BEAMS. FOR THE RESIDENTIAL
+ABOVE THE COMMERCIAL AREA, THE SHEARWALLS LINE UP WITH
+SYSTEMS BELOW WHEN POSSIBLE. EXTERIOR SHEAR WALLS WILL
+NEED TO BE ADJUSTED BASED ON FINAL WINDOW AND DOOR
+PLACEMENTS
+CMU SHEARWALLS ARE PLACED ALONG THE LOWER PORTION OF THE
+COMMERCIAL AND OFFICE BUILDING IN ORDER TO ALLOW LARGER
+OPENINGS. WE ARE PLANNING ON HAVING LARGE WINDOWS AND A
+GARAGE DOOR, AND THE CMU WALLS BEING MORE COMPACT WILL
+PROVIDE THE SPACE TO ACOOMODATE THAT
+
+SIZING
+BLDG 1
+	
+NEED 76’ OF WOOD SHEAR			
+	
+WALL IN EACH DIRECTION
+	
+NEED 93’ OF MASONRY 			
+	
+SHEAR WALL IN EACH DIRECTION
+BLDG 2
+	
+NEED 56’ OF WOOD SHEAR			
+	
+WALL IN EACH DIRECTION
+	
+NEED 44’ OF MASONRY SHEAR		
+	
+WALL IN EACH DIRECTION
+BLDG 3
+	
+NEED 130’ OF WOOD SHEAR		
+	
+WALL IN EACH DIRECTION
+
+LATERAL SYSTEM
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+23
+
+THE PARKING GARAGE WILL BE A REINFORCED TWO WAY CONCRETE STRUCTURE
+THE CONCRETE WILL BE REGULAR WEIGHT
+WITH A STRENGTH OF 4KSI WITH 60KSI REBAR FOR SHEAR AND TENSION REINFORCEMENT. A BASIC REPRESENTATION OF THE
+STRUTURAL LAYOUT IS SHOWN IN FIGURE 1.
+THE PARKING IS UNDERGROUND, MAKIGN
+THE WALLS BEARING WALLS THAT WILL
+NEED TO SUPPORT THE SURROUNDING SOIL.
+USERS WILL PARK THEIR CAR INTO A GARAGE LIKE FEATURE ABOVE GRADE; ONCE
+THEY HAVE ENTERED THEIR INFORMATION,
+THE CAR WILL BE PARKED COMPLETELY MECHANICALLY. THERE WILL BE TWO ELEVATORS AT EACH ENTRANCE SO PEOPLE CAN
+ENTER/EXIT WITH EAST. A SMALL STRUCTURE WILL HID THE MECHANICAL SYSTEM.
+ONE WILL PARK THEIR CAR BY PULLING IN
+TO A STRCTURE SIMILAR TO FIGURE 2, AND
+WILL THEN LEAVE THEIR CAR AND RECEIVE A
+PARKING SLIP. THE CAR WILL THEN BE LOWERED INTO THE SYSTEM SHOWN IN FIGURE
+3. ONCE THEY WANT TO RETRIEVE THE CAR,
+THEY WILL NEED TO RE-ENTER THE SLIP AND
+THE CAR RETURNS TO THE STRUCTURE IN
+FIGURE 2.
+
+IN THIS FULLY SELF PARKING SYSTEM, EACH
+SPOT IS 7’0” by 18’-0” AND TWO LAYERS OF
+PARKING IS JUST UNDER 14’ IN HEIGHT
+
+PARKING SYSTEM
+24
+
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+PARKING PLAN SHOWING
+MECHANICAL SYSTEMS,
+ENTRANCES, AND COLUMNS
+
+PARKING PLAN SHOWING
+COLUMN SPACING AND
+ABOVE BUILDINGS
+
+THE PARKING SYSTEM WAS SEPARATED INTO RESIDENTIAL AND COMMERCIAL TO TRY AND FACILITATE TRAFFICE AND KEEP THE RESIDENTIAL FEELING MORE PRIVATE.
+THE COLUMNS IN THE COMMERCIAL PARKING ARE 18”X18” AND LINE UP
+WITH THE COLUMNS FROM THE STEEL STRUCTURE ABOVE, AND ALL THE
+OTHER PARKING COLUMNS ARE SPACED TO ALLOW THE MECHANICAL
+PARKING.
+RESIDENTIAL PARKING SPOTS NEEDED: 28
+COMMERCIAL PARKING SPOTS NEEDED: 64
+TOTAL REQUIRED: 92
+RESIDENTIAL PARKING SPOTS PROVIDED: 48
+COMMERCIAL PARKING SPOTS PROVIDED: 44
+TOTAL PROVIDED: 92
+
+PARKING SYSTEM
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+25
+
+SELECTION
+
+DESCRIPTION
+
+THE EXPANDING AND CONTRACTING NATURE
+OF THE CLAY SOIL ON THE SITE REMOVES
+PAD FOOTINGS AS AN OPTION FOR THE PROJECT. A QUICK CALCULATION CONCLUDED
+THAT THE PAD FOOTINGS WOULD BE SO
+LARGE BASED ON THE SITES POOR SOIL BEARING STRENGTH, THE PAD FOOTINGS WOULD
+NEARLY BE A MAT FOOTING.
+PILES COULD WORK, BUT THEY WOULD HAVE
+TO BE PRE DRILLED BECAUSE DRIVEN PILES
+CAUSE LOUND NOISES AND HEAVY VIBRATIONS THAT MAY DISRUPT SURROUNDING
+HOMES AND BUSINESSES.
+BECAUSE THE SITE MAY HAVE AN UNDERGROUND WATER TABLE, DRILLING MAY ALSO
+BE AN ISSUE BECAUSE THE WATER MAY FILL
+THE HOLE, REQUIRING MORE EUIPMENT AND
+LABOR.
+THIS LEAVES MAT FOUNDATIONS , WHICH
+WILL REQUIRE EXCAVATION FOR THE UNGERDROUND PARKING AS WELL AS THE LEVELING OF THE SITE. THE MAT FOUNDTION
+WILL REISIST WATER PRESSURE IN THE SOIL
+WHILE ALSO BEING RELATIVELY SIMPLE/
+CONSISTANT TO INSTALL.
+
+A MAT FOUNDATION IS A FOUNDATION SYSTEM
+THAT COVERS THE ENTIRE FOOTPRINT OF THE
+PROJECT RATHER THAN JUST BEING UNDER INDIVIDUAL COLUMNS. THE MAT FOUNDATION WILL
+HAVE 60 KSI STEEL REINFORCEMENT AND WILL BE
+AT LEAST ONE FOOT IN DEPTH.
+WHERE THERE IS UNDERGROUND PARKING, THE
+FOUNDATION WILL SERVE AS A FLOOR SLAB FOR
+THE PARKING GARAGE, AND THE ROOF OF THE GARAGE WILL CONTINUE WITH THE ON GRADE MAT
+FOUNDATION.
+LIKE THE REST OF THE PARKING SYSTEM, THE
+FOUNDATION WILL USE 4 KSI REGULAR WEIGHT
+CONCRETE.
+SIMILAR TO A PAD FOOTING, MAT FOUNDATIONS
+TAKE THE POINT LOADS FROM INDIVIDUAL COLUMNS AND SPREAD THEM OUT IN ORDER TO NOT
+PUT TOO MUCH PRESSURE ON THE SOIL, AS IN THE
+DIGRAM BELOW. MAT FOOTINGS CAN BE SEEN AS
+PAD FOOTINGS THAT HAVE BEEN CONNECTED.
+IF THE DEPTH OF THE TOP SLAB IS NOT ENOUGH
+TO RESIST PUNCHING SHEAR, EXTRA DEPTH AND
+OR REINFORCEMENT WILL BE ADDED AROUND THE
+COLUMN TO SLAB CONNECTION.
+
+FOUNDATION SYSTEM
+26
+
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+CONFIGURATION
+THE FOUNDATION SYSTEM WAS COMPLICATED BY
+POOR SOIL BEARING PRESSURE, UNDERGROUND
+PARKING, AND A SLOPED SITE.
+THE TWO PARKING GARAGES ENTRANCES ARE LEVEL
+WITH THE STREET, MAKING THEM 8’ APART IN DEPTH.
+THE ROOF OF THE GARAGES SERVES AS A FOUNDATION FOR THE BUILDING ABOVE. TO TRY AND SOFTEN
+THE GRADE CHANGE BETWEEN BUILDINGS ON OPPOSITE SIDES OF THE SITE, THE RESIDENTIAL COMMUNITY
+CENTER WILL BE IN BETWEEN THE TWO, ALONG WITH
+THE LANDSCAPE IN FRONT OF IT (SHOWN IN YELLOW).
+MAT FOUNDATION
+THE FOUNDATION THICKNESS IS BASED OFF OF
+PUNCHING SHEAR FROM THE COLUMNS THAT FRAME
+INTO IT. TO FIND THIS, I TOOK THE COLUMN WITH THE
+MOST WEIGHT FROM EACH MAT TO FIND A THINKNESS FOR EACH INDIVIDUAL MAT. THIS WILL HOPEFULLY AVOID HAVING UNNEEDED CONCRETE. THE THICKNESS NEEDED WAS 15”.
+PARKING CEILING/SLAB
+THE CEILING OF THE PARKING STRUCTURE DOUBLES
+AT A FLOOR FOOR INDOOR AND OUTDOOR SPACES.
+IT WILL BE A TWO WAT SLAB WITH 18” CONCRETE
+COLUMNS SPACED AT 21’ SUPPORTING IT. ASSUMING
+A SLAB OF 12” WILL SUPPORT THE DEAD AND LIVE
+LOAD FROM THE BUILDINGS ABOVE MEANS I DO NOT
+NEED TO DO EXTRA CHECKS FOR A-TYPICAL COLUMNS
+AND BEARING WALLS THAT IT SUPPORTS. THE ROOF
+SLAB WILL BE 12”.
+
+FOUNDATION SYSTEM
+JENNY NGUYEN | MADISON BUSBY		
+
+2115 BROAD STREET | SAN LUIS OBISPO		
+
+ARCH 453 | ARCE 415		
+
+WHITE | NUTALL
+
+27
+
+2115 BROAD ST
+
+THE SOUTH BROAD STREET AREA HAS BEEN DESCRIBED AS A
+NEIGHBORHOOD IN TRANSITION WITH FUNKY, DIVERSE, AND/OR
+DILAPIDATED CULTURE DUE TO THE MIX OF OLDER COMMERCIAL
+AND RESIDENTIAL BUILDINGS AND UNDERUTILIZED PROPERTIES.
+IN ORDER TO CREATE AN ENVIRONMENT IN WHICH PEOPLE FELT
+SAFE FROM THE BUSY BROAD STREET TRAFFIC AS WELL AS BELONGING TO THE ECLECTIC ENVIRONMENT OF SAN LUIS OBISPO,
+RESIDENTIAL AND COMMERCIAL USES ARE CONNECTED BY A
+COMMON COURTYARD THE ENCOURAGES CROSS CIRCULATION
+BETWEEN BOTH SIDES. OUTDOOR PATIO DINING AREAS AND A
+SMALL PERFORMANCE STAGE ALLOWS FOR AN OPPORTUNITY TO
+CONNECT WITH THE SITE AND RETAIN VISITORS. GROUND LEVEL
+MARKET OPENS INTO IN THE COURTYARD TO BECOME A FARMER’S MARKET FOR THE RESTAURANTS AND LOCAL RESIDENTS.
+
+SITE PLAN
+
+(5) ONE BEDROOM
+(3) TWO BEDROOM
+(3) THREE BEDROOM
+(8) STUDIO UNITS
+(3) OFFICES
+(2) RESTAURANTS
+(1) CAFE
+(1) MARKET
+(1) RESIDENTIAL MECHANICAL PARKING
+(1) COMMERCIAL MECHANICAL PARKING
+
+A-A
+
+B-B
+
+PROGRAM AXONOMETRIC
+
+CIRCULATION
+
+BRANCH STREET - RESIDENTIAL
+
+INNER COURTYARD
+
+OUTDOOR DINING PATIO
+SEPARATE MECHANICAL PARKING
+AVAILABLE FOR BOTH RESIDENTIAL
+AND COMMERCIAL PURPOSES.
+RESIDENTIAL UNITS ARE ALONG
+BRANCH STREET AND ABOVE
+RESTAURANTS; OFFICES ARE ABOVE
+THE MARKETPLACE OVERLOOKING
+THE OUTDOOR DINING PATIO
+30’
+
+0’
+15’
+
+45’
+
+SECTION A-A
+
+SECTION B-B
+JENNY NGUYEN
+ARCH 453
+
+|
+|
+
+MADISON BUSBY
+ARCE 415
+
+2115 BROAD STREET
+STACEY WHITE
+
+|
+|
+
+SAN LUIS OBISPO
+BRENT NUTALL
+
+FINAL REVIEW
+
+GRAV I T Y
+WOOD FRAMING DESCRIPTION
+STEEL FRAMING SELECTION (GREEN)
+
+Wood framing will be used for a majority of the site. It will consist of a light frame wood system with TJI
+joists. Joists will be spaced between 16” and 24” and topped with a plywood sheathing diaphragm.
+Collectors and beams (if needed) will be PSL.
+Bearing walls will be made up of 2X6 sawn lumber spaced at 16” with plywood sheathing, base plates,
+and double top plates. Connections will be made with 10d nails for sheathing and 16d otherwise, and
+Simpson connections for beam to wall.
+
+WOOD FRAMING (YELLOW)
+
+STEEL FRAMING DESCRIPTION
+Steel framing will be used for commercial and office space. It will have wide flange beams, girders, and
+columns with bolts and plates for connections. Wide flanges will be A992 50 ksi steel.
+There will be Verco Steel decking topped with a 3” light weight concrete slab which will provide a
+sound/fire barrier.
+Example of Steel Framing
+
+Example of TJI Framing
+
+FIRST FLOOR FRAMING
+
+SECOND FLOOR FRAMING
+
+THIRD FLOOR FRAMING
+
+LAT E R A L
+
+TIMBER SHEAR WALL DESCRIPTION
+Wood shear walls will include 2X6 studs spaced 16” o.c. with structural plywood sheathing and 4” nailing, still using the same 10d
+nails. At each end of every shearwall, there will be HDU2 hold
+downs.
+MASONRY SHEAR WALL DESCRIPTION
+
+SHEARWALL PLACEMENT
+
+Masonry shear walls will work with wood/steel structures to create a
+more space-efficient shearwall. Because they have more strength
+per foot, we would be able to use less wall and have more openings than a wood shearwall. It is made up of 8” CMU which is reinforced based on minimum reqirements and calculations.
+
+PARKING
+Parking Plan showing column
+soacing, and above buildings
+
+Parking Plan showing machinical
+system and columns
+
+18” CONCRETE
+COLUMNS
+RESIDENTIAL PARKING SPOTS NEEDED: 28
+COMMERCIAL PARKING SPOTS NEEDED: 64
+TOTAL REQUIRED: 92
+RESIDENTIAL PARKING SPOTS PROVIDED: 48
+COMMERCIAL PARKING SPOTS PROVIDED: 44
+TOTAL PROVIDED: 92
+
+Parking Elevation
+
+The parking system was separated into residential
+and commercial to try and facilitate traffic and
+keep the residential feeling more private.
+The driver pulls into a residential garage like structure and leaves the car. They then either take a
+ticket or enter a pin (for residential) and the car will
+be lowered and parked mechanically. Once below the ground, the car is led down the middle isle
+and parked on either side and on one of two levels. The entrances are two cars wide to allow two
+cars to enter/exit at the same time.
+The columns in the comercial parking are spaced
+to allow two or three spots to be uninterupted.
+The parking is underground, making the walls bearing walls that will need to support the surrounding
+soil.
+
+FO U N DAT I O N
+
+FOUNDATION DESCRIPTION
+A mat foundation is a foundation system that covers the entire footprint of the project rather
+than just being under individual columns. The mat foundation will have 60 ksi steel reinforcement (similar to Figure 1) and will be at least one foot in depth.
+Where there is underground parking, the foundation will serve as a floor slab for the parking
+garage, and the roof of the garage will continue with the on grade mat foundation.
+Like the rest of the parking system, the foundation will use 4 ksi regular weight concrete.
+Similar to a pad footing, mat foundations take the point loads from individual columns and
+spread them out in order to not put too much pressure on the soil, as in the digram above.
+Mat footings can be seen as pad footings that have been connected.
+
+JENNY NGUYEN
+ARCH 453
+
+|
+
+MADISON BUSBY
+|
+ARCE 415
+
+2115 BROAD STREET
+STACEY WHITE |
+
+|
+SAN LUIS OBISPO
+BRENT NUTALL
+
+FINAL REVIEW
+
+BROAD STREET PLAZA
+STRUCTURAL DOCUMENTS
+ARCHITECTS AND ENGINEERS
+MADISON BUSBY + JENNIFER NGUYEN
+
+(DESCRIPTION)
+						
+
+GRAVITY SYSTEM
+
+WOOD
+
+							
+
+Wood framing will be used for residential and office
+space. It will consist of a light frame wood system with
+TJI joists. Joists will be spaced between 16” and 24”
+and topped with a plywood sheathing diaphragm.
+Collectors and beams (if needed) will be PSL.
+
+STEEL
+
+Steel framing will be used for commercial and office
+space. It will have wide flange beams, girders, and
+columns with bolts and plates for connections. Wide
+flanges will be A992 50 ksi steel.
+
+Bearing walls made up of 2X6 sawn lumber spaced at
+16” with plywood sheathing, base plates, and double
+top plates. Connections will be made with 10d nails for
+sheathing and 16d otherwise, and Simpson connections for beam to wall.
+
+GREEN - STEEL
+YELLOW - WOOD
+
+CONCRETE
+
+There will be Verco Steel decking topped with a 3”
+light weight concrete slab which will provide a sound/
+fire barrier.
+
+Reinforced concrete will be used for the
+underground parking and for the foundation of
+the building.
+CMU
+CMU bearing walls will be paired with both
+wood and steel gravity systems where they are
+already being used for the lateral system
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+1
+
+(SELECTION)
+
+GRAVITY SYSTEM
+
+STEEL FRAMING
+
+WOOD FRAMING
+
+PARKING - CONCRETE
+
+Steel framing will be used in the larger commerical
+buildings which require long spans and an architectural
+desire for a more industrial feel. Steel will also allow for
+larger and more open indoor to outdoor flow, which is
+an important component of our courtyard. The beam
+spans are ~30’, and the girder spans are ~ 25’ which
+would be possible with wood, but would require a
+much larger structural system , or possibly wood trusses.
+
+Wood framing was chosen for residential, offices, and
+smaller commercial buildings because it is the most
+cost effective. For an example building (shown below)
+the cost of structrual elements for a steel building were
+43% higher than those of a wood framed building.
+
+Concrete was the obvious choice for the parking gravity system because it will be underground, and the columns will be holding up and held up by large concrete
+slabs. So constructibilty and strength wise it is the only
+material that makes sense.
+
+Especially for residential, wood construction is also the
+most “warmest” material, unlike the industrial feel of
+steel and concrete. Some of the wood will be exposed
+to give this effect.
+
+Concrete is not very reusable in general, but it can absorb heat during the day and release it at night, possibly being a sustainable heat source.
+
+Although steel is more expensive and requires special
+skills to install, it will only be used for a small portion of
+the project and is imopartant for achieving the desired
+architectural style.
+Steel is also less flamable, which may benefit the the
+industrial kitchen to residential connection. In addition,
+a large portion of steel is reused after a building a torn
+down, making it sustainable.
+
+Timber is also the best material construcability wise.
+Therefore there will be plenty of workers capable of
+completing this portion of the project with little instruction while still producing quality work. Wood can also
+be reused, making it sustainable.
+A small amount of heavy/engineered lumber will be
+used for larger spans/architectural appeal in the residential common area.
+
+Total 			
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+Concrete also is the most sturdy of the materials, which
+will help prevent vibrations from the machanical parking. This is important because it is the foundation of
+every other building.
+
+$ 10,580
+
+$ 7,372
+
+2
+
+TIMBER SHEAR WALL (RED)
+Wood shear walls will include 2X6 studs spaced 16” o.c. with
+structural plywood sheathing with nailing spaced according
+to the strength that is needed, still using the same 10d nails. At
+each end of every shearwall, there will be HDU2 hold downs.
+
+(DESCRIPTION)
+
+LATERAL SYSTEM
+
+MASONRY SHEAR WALL (BLUE)
+Masonry shear walls will work with wood structures to create
+a more space-efficient shearwall. Because they have more
+strength per foot, we would be able to use less wall and have
+more openings. It is made up of 8” CMU which is reinforced
+based on minimum reqirements and calculations.
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+3
+
+(SELECTION)
+
+LATERAL SYSTEM
+
+TIMBER SHEAR WALL
+Timber shear walls will be used in all light framed timber buildings that are not in need of large openings.
+Bearing walls, which will be used as the gravity system
+for most of the wood framed buildings, can double as
+shear walls. The other option would be masonry shear
+walls, but when the loading is not too high and there
+are only smaller openings, wood shear walls are the
+best looking, easiest to build, and the most cost effective. I could have also chosen to use cold formed steel
+instead of wood, but price and popularity in the area
+made wood my top choice.
+
+The image below shows the three stories of lateral system layered to show
+how they line up vertically and horizontally.
+
+MASONRY SHEAR WALL
+Masonry shear walls will be used when timber shear
+walls are too large, not strong enough, or a combination of the two. Masonry shear walls have a lot of
+strength compared to the weight of wood construction, allowing them to be smaller in width. They also
+can be asthetically pleasing, especially in the area.
+Masonry shearwalls were also chosen for the steel construction in place of braced frames or moment frames
+because of cost, asthetics, and continuity through the
+site.
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+4
+
+(DESCRIPTION)
+
+FOUNDATION SYSTEM
+
+Foundation System
+A mat foundation is a foundation system that
+covers the entire footprint of the project rather
+than just being under individual columns. The
+mat foundation will have 60 ksi steel reinforcement and will be at least one foot in depth.
+Where there is underground parking, the foundation will serve as a floor slab for the parking
+garage, and the roof of the garage will continue with the on grade mat foundation.
+
+Similar to a pad footing, mat foundations take
+the point loads from individual columns and
+spread them out in order to not put too much
+pressure on the soil, as in the digram below.
+Mat footings can be seen as pad footings that
+have been connected.
+If the depth of the top slab is not enough to
+resist punching shear, extra depth and or reinforcement will be added around the column to
+slab connection.
+
+Like the rest of the parking system, the foundation will use 4 ksi regular weight concrete.
+Similar to a pad footing, mat foundations take
+the point loads from individual columns and
+spread them out in order to not put too much
+pressure on the soil, as in the digram below.
+Mat footings can be seen as pad footings that
+have been connected.
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+5
+
+(SELECTION)
+
+FOUNDATION SYSTEM
+
+The expanding and contracting nature of the clayey
+soil on the site removes pad footings as an option for
+the project. Besides that, a quick calculation concluded that the pad footings would be so large based on
+the sites poor soil bearing strength, the pad footings
+would nearly be a mat footing.
+Piles could work, but they would have to be pre drilled
+because driven piles cause lound noises and heavy vibrations that may disrupt surrounding homes and businesses.
+
+PILES					PAD FOOTING				MAT FOUNDATION
+
+Because the site may have an underground water
+table, drilling may also be an issue because the water
+may fill the hole, requiring more euipment and labor.
+
+REET
+
+ST
+D
+A
+O
+BR
+
+This leaves mat foundations , which will require excavation for the ungerdround parking as well as the leveling
+of the site. The mat foundtion will reisist water pressure
+in the soil while also being relitively simple/consistant to
+install.
+
+BR
+
+AN
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+CH
+
+ST
+
+RE
+
+ET
+
+6
+
+(DESCRIPTION)
+The parking garage will be a reinforced concrete
+structure with a two way system. The concrete willl
+be regular weight with a strength of 4 ksi with 60 ksi
+rebar for shear and tension reinforcement. A basic
+representation of the structural layout is shown in
+Figure 1.
+
+The parking is underground, making the walls bearing walls that will need to support the surrounding
+soil.
+
+PARKING SYSTEM
+
+Figure 1
+
+Users will park their car into a garage-like feature
+above grade, and once they have entered their
+information, the car will be parked completely
+mechanically. There will be two elevators at each
+entance so people can enter/exit with ease.
+A small structure will hide the mechanical system.
+One will park their car by pulling into a structure
+similar to Figure 2, and will then leave thier car and
+recieve a parking slip. Their car will then be lowered
+into the system shown in Figure 3. Once they want
+to retrieve thier car, they re enter the slip and the
+car returns to the structure in Figure 2.
+
+Figure 2
+
+RED - MAT FOUNDATION
+
+Figure 3
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+7
+
+(CONFIGURATION)
+
+GRAVITY SYSTEM
+
+The gravity systems were configured based on span, potential use of space, and
+surrounding structure.
+For the residential, because the interior areas are so small, bearing walls will be
+on the exterior of each unit. The TJI joists will span in which ever direction is the
+shortest. For the offices, there will need to be a couple columns on the lower floor,
+which then requires PSL beams in the shorter direction, and TJI joist spanning the
+longer direction. This is to reduce the ceiling height as much as possible.
+For the commercial buildings there are columns spaced ~15’ so that the braced
+frames are mort efficient. The interior columns line up with the bearing walls above
+to reduce loading on beams and girders. Again, to reduce ceiling height, the
+beams will span in the longer direction while the girders span the shorter span.
+The CMU/concrete is being used only for the elevator, parking structure, and bearing walls.
+Extra beams to
+support bearing
+wall
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+8
+
+(SIZING)
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+GRAVITY SYSTEM
+
+9
+
+(SIZING)
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+GRAVITY SYSTEM
+
+10
+
+(CONFIGURATION)
+
+LATERAL SYSTEM
+
+The lateral system was configured based on center of mass/rigidity, openings,
+asthetics, and span of wall.
+The wood shearwalls were placed where the wall would be continuous horizontally and vertically to try and avoid exess drag and load transfer beams. For
+the residential above the commercial area, the shearwalls line up with systems
+below when possible. Exterior shearwalls will need to be adjusted based on
+final window/door placement.
+CMU shearwalls are placed along the lower portion of the commercial/office
+building in order to allow for larger openings. We are planning on having large
+windows and a garage door, and the CMU walls being more compact will provide the space for that.
+MASONRY SHEARWALL
+TIMBER SHEARWALL
+
+FIRST FLOOR								SECOND FLOOR 								THIRD FLOOR
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+11
+
+(SIZING)
+
+LATERAL SYSTEM
+RESIDENTIAL ABOVE
+COMMERCIAL
+
+COM RESAURANT
+COM MARKET
+
+RESIDENTIAL
+BUILDING
+
+OFFICE
+SPACE
+
+RESIDENTIAL
+BUILDING
+
+RESIDENTIAL BUILDING 			
+
+RESIDENTIAL
+BUILDING
+
+130’ WOOD SW E.W.
+
+RESIDENTIAL ABOVE COMMERCIAL 	 76’ WOOD SW E.W.
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+OFFICE SPACE				
+
+56’ WOOD SW E.W.
+
+COMMERCIAL - MARKET			
+
+44’ MASNORY SW E.W.
+
+COMMERCIAL - RESAURANT 		
+
+93’ MASONRY SW E.W.
+
+12
+
+(CONFIGURATION)
+
+FOUNDATION SYSTEM
+
+The foundation system was complicated by poor soil bearing pressure, underground parking, and a sloped site.
+The two parking garages entrances are level with the street, making them 8’ apart in depth. The roof of the garages serves as a
+foundation for the building above. To try and soften the grade
+change between buildings on opposite sides of the site, the residential community center (yellow) will be in between the two,
+along with the landscape in front of it. Where parking can not be
+the building foundation, a mat foundation will take shape of the
+footprint of the building (purple and blue). The parking garages
+will also have thier own mat foundations (pink and maroon).
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+13
+
+(CONFIGURATION)
+
+PARKING SYSTEM
+
+The parking system was separated into residential and commercial to try and
+facilitate traffic and keep the residential feeling more private.
+The parking system is two layers of cars, each 7’ tall and 7’ wide. Bcause of this
+sizing, the columns were spaced at either 21’ or 14’ so as not to obstruct any
+openings.
+The parking was meant to line up underneith buildings in order to reduce foundation area (parking ceiling could double as building foundation), but this was
+compromised in order to push the parking closer to the street to avoid wasting
+space.
+The driver pulls into a residential garage like structure and leaves the car. They
+then either take a ticket or enter a pin (for residential) and the car will be lowered and parked mechanically. Once below the ground, the car is led down the
+middle isle and parked on either side and on one of the two levels. The entrances are two cars wide to allow one car to enter/exit at the same time.
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+14
+
+MAT FOUNDATION
+
+(SIZING)
+
+FOUNDATION SYSTEM
+
+The foundation thickness is based off of punching shear from the columns that
+frame into it. To find this, I took the column with the most weight from each mat
+to find a thinkness for each individual mat. This will hopefully avoid having unneeded concrete.
+PARKING CEILING/SLAB
+The ceiling of the parking structure doubles at a floor foor indoor and outdoor
+spaces. It will be a two wat slab with 18” concrete columns spaced at 21’ supporting it. Assuming a slab of 12” will support the dead and live load from the
+buildings above means I do not need to do extra checks for a-typical columns
+and bearing walls that it supports.
+
+Madison Busby . ARCE415 . P2 . Spring 2016
+
+15
+
+
