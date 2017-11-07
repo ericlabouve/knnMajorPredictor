@@ -1,0 +1,2514 @@
+i
+
+VORTEXING OFF A COMMON
+SUCTION HEADER
+FINAL DESIGN REVIEW
+
+Anderson Lin
+
+Sponsor
+AXLe@pge.com
+
+Adviser
+Prof. Eileen Rossman
+erossman@calpoly.edu
+Team Vortex
+Brett Langlois
+blangloi@calpoly.edu
+Brian Greenberg
+bhgreenb@calpoly.edu
+Ryan Caceres
+rcaceres@calpoly.edu
+
+California Polytechnic State University
+San Luis Obispo, CA
+June 5, 2017
+
+ii
+Statement of Disclaimer
+Since this project is a result of a class assignment, it has been graded and accepted as fulfillment
+of the course requirements. Acceptance does not imply technical accuracy or reliability. Any use
+of information in this report is done at the risk of the user. These risks may include catastrophic
+failure of the device or infringement of patent or copyright laws. California Polytechnic State
+University at San Luis Obispo and its staff cannot be held liable for any use or misuse of the
+project.
+
+i
+
+TABLE OF CONTENTS
+List of Figures ................................................................................................................................ iv
+List of Tables .................................................................................................................................. v
+List of Nomenclature ..................................................................................................................... vi
+Abstract ........................................................................................................................................... 1
+1
+
+Introduction ............................................................................................................................. 1
+1.1
+
+2
+
+3
+
+4
+
+About the Project .............................................................................................................. 1
+
+Background .............................................................................................................................. 3
+2.1
+
+Motivation ........................................................................................................................ 3
+
+2.2
+
+Background Research ....................................................................................................... 4
+
+2.3
+
+History and Definition of Vortices ................................................................................... 5
+
+2.4
+
+Previous Experiments....................................................................................................... 5
+
+2.4.1
+
+Case 1 ........................................................................................................................ 5
+
+2.4.2
+
+Case 2 ........................................................................................................................ 6
+
+Objectives ................................................................................................................................ 8
+3.1
+
+Statement .......................................................................................................................... 8
+
+3.2
+
+Specifications ................................................................................................................... 8
+
+Design Development ............................................................................................................. 10
+4.1
+
+Concept Generation ........................................................................................................ 11
+
+4.1.1
+
+Measuring Water Depth .......................................................................................... 11
+
+4.1.2
+
+Changing the Offtake Angle ................................................................................... 12
+
+4.1.3
+
+Measuring the Flowrate in the Main and Branch Lines .......................................... 13
+
+4.1.4
+
+Creating Flow Through Piping System................................................................... 14
+
+4.1.5
+
+Creating a Bubble Inside Main Line ....................................................................... 14
+
+4.2
+
+Idea Selection ................................................................................................................. 14
+
+4.2.1
+
+Evaluating Water Depth Measuring Devices .......................................................... 15
+
+4.2.1.1
+
+Directly Marking the Tube - Datum ................................................................ 15
+
+4.2.1.2
+
+U-Tube Measuring........................................................................................... 15
+
+4.2.1.3
+
+Floating Transducer ......................................................................................... 15
+
+4.2.2
+4.2.2.1
+
+Evaluating Means of Changing the Offtake Angle ................................................. 15
+8 Bolt Flange - Datum ..................................................................................... 15
+
+ii
+4.2.2.2
+
+Threaded Union ............................................................................................... 15
+
+4.2.2.3
+
+Flexible Tube ................................................................................................... 15
+
+4.2.3
+
+Evaluating Flowrate Measurement Solutions ......................................................... 16
+
+4.2.3.1
+
+Pitot-static tube – Datum ................................................................................. 16
+
+4.2.3.2
+
+Turbine Flowmeter .......................................................................................... 16
+
+4.2.3.3
+
+Ultrasonic Flowmeter ...................................................................................... 16
+
+4.2.4
+
+Evaluating Means of Creating Flow ....................................................................... 16
+
+4.2.4.1
+
+Pump – Datum ................................................................................................. 16
+
+4.2.4.2
+
+Gravity ............................................................................................................. 16
+
+4.2.4.3
+
+Siphon .............................................................................................................. 16
+
+4.2.5
+4.2.5.1
+
+Air Compressor – Datum ................................................................................. 17
+
+4.2.5.2
+
+Bike Air Pump ................................................................................................. 17
+
+4.2.5.3
+
+Open Channel to Atmosphere.......................................................................... 17
+
+4.2.5.4
+
+Air Blower ....................................................................................................... 17
+
+4.2.6
+
+Forming Concepts ................................................................................................... 17
+
+4.2.7
+
+Initial Concept ......................................................................................................... 19
+
+4.3
+5
+
+Evaluating Bubble Formation Solutions ................................................................. 17
+
+Original Design Changes ............................................................................................... 22
+
+Final Design ........................................................................................................................... 23
+5.1
+
+Material Selection .......................................................................................................... 24
+
+5.2
+
+Safety Considerations ..................................................................................................... 25
+
+5.3
+
+Maintenance & Repair Considerations .......................................................................... 25
+
+5.4
+
+Engineering Validation & Analysis ............................................................................... 26
+
+5.4.1
+
+Simulating a Boric Acid Solution ........................................................................... 26
+
+5.4.2
+
+Determining Flowrate Ratio ................................................................................... 26
+
+5.4.3
+
+Determining Bubble Stability ................................................................................. 28
+
+5.4.3.1
+
+Breakup Due to Velocity Gradient .................................................................. 29
+
+5.4.3.2
+
+Breakup Due to Turbulent Flow ...................................................................... 29
+
+5.4.4
+
+Entrance Length Analysis ....................................................................................... 29
+
+5.4.5
+
+Pump Selection Analysis ........................................................................................ 29
+
+5.4.6
+
+Scaffolding Analysis ............................................................................................... 32
+
+5.4.7
+
+Air Compressor Analysis ........................................................................................ 34
+
+iii
+6
+
+7
+
+8
+
+9
+
+Product Realization................................................................................................................ 35
+6.1
+
+Purchasing & Ordering Parts.......................................................................................... 35
+
+6.2
+
+Scaffolding Assembly .................................................................................................... 35
+
+6.3
+
+Manufacturing Various Length Pipes (Drawing Nos. PIPE6IN-XX and PIPE4IN-XX)
+35
+
+6.4
+
+Manufacturing Test Section Assembly (Drawing NO. A2) ........................................... 36
+
+6.5
+
+Manufacturing Modified Tank (Drawing No. M1-TANK) .......................................... 37
+
+6.6
+
+Manufacturing Orifice Plate ........................................................................................... 38
+
+6.7
+
+Assembling the Compressed Air Hose Line .................................................................. 39
+
+6.8
+
+Creating Water Level Measurement Device .................................................................. 39
+
+6.9
+
+Assembling Wiring ........................................................................................................ 40
+
+6.10
+
+Total Assembly (Drawing No. A1) ................................................................................ 41
+
+6.11
+
+Overall Prototype ........................................................................................................... 43
+
+Design Verification & Testing .............................................................................................. 45
+7.1
+
+Orifice Plate Calibration................................................................................................. 45
+
+7.2
+
+Design Alterations .......................................................................................................... 46
+
+7.3
+
+Testing Complications.................................................................................................... 46
+
+7.4
+
+Testing Results ............................................................................................................... 46
+
+Conclusion & Recommendations .......................................................................................... 47
+8.1
+
+Unions Vs Flanges ......................................................................................................... 47
+
+8.2
+
+Use Bulkhead Fittings on Tank ...................................................................................... 47
+
+8.3
+
+Flexible Tubing Alternatives .......................................................................................... 48
+
+Management Plan .................................................................................................................. 48
+9.1
+
+Team Responsibilities .................................................................................................... 48
+
+9.2
+
+Schedule ......................................................................................................................... 48
+
+Appendices .................................................................................................................................... 48
+References ..................................................................................................................................... 49
+Appendix A: QFD - House of Quality .......................................................................................... 50
+Appendix B: 2500 ppm Boric Acid EES File ............................................................................... 51
+Appendix C: Pugh Matrices .......................................................................................................... 52
+Appendix D: Morphological Chart ............................................................................................... 55
+Appendix E: Final Decision Matrix .............................................................................................. 56
+Appendix F: Flowrate Ratio Verification EES File ...................................................................... 57
+
+iv
+Appendix G: Design Safety Hazard Identification Checklist ....................................................... 58
+Appendix H: Gantt Chart .............................................................................................................. 59
+Appendix I: Failure Mode and Effect Analysis ............................................................................ 61
+Appendix J: Design Verification Plans ......................................................................................... 62
+Appendix K: Scaffolding Analysis ............................................................................................... 63
+Appendix L: Entrance Length Analysis ........................................................................................ 65
+Appendix M: Pump Selection Analysis ........................................................................................ 66
+Appendix N: Air Compressor Analysis ...................................................................................... 108
+Appendix O: Design Assembly with Bill of Materials (Drawing No. A1) ................................ 114
+Appendix P: Detail Part Drawing ............................................................................................... 115
+Appendix Q: Cost Analysis w/ List of Vendors & Pricing (Incl. Tax & Shipping) ................... 126
+Appendix R: Weld-On Literature & MSDS ............................................................................... 128
+Appendix S: Harvey P-12 PVC Cement & Primer MSDS ......................................................... 132
+Appendix T: Ruler Matlab Code................................................................................................. 153
+Appendix U: Omega FTB740 Turbine Flowmeter Spec Sheet .................................................. 155
+Appendix V: Omega DPF701 Display Meter Spec Sheet .......................................................... 156
+
+LIST OF FIGURES
+Figure 1. Sample drawing of project where d is the submergence depth, S is the Critical
+Submergence Depth, DM is the diameter of the main suction header, and DB is the diameter of
+the branch suction nozzle.
+Figure 2. General nuclear power plant piping system illustrating main line with multiple branch
+lines[1].
+Figure 3. Types of vortices to determine critical submergence depth [3].
+Figure 4. Vectors showing end circulation components.
+Figure 5. Schematic of experiment for horizontal flow.
+Figure 6. Section view of multiple offtake branch angles at 0, 45, and 90°.
+Figure 7. Solutions to measure water depth in main suction line.
+Figure 8. Solutions to rotate the branch offtake angle.
+Figure 9. Solutions to measure flowrate throughout system.
+Figure 10. Each member’s initial concept. (a) Ryan’s concept selection, (b) Brian’s concept
+selection, and (c) Brett’s concept selection.
+Figure 11. A basic Solidworks model of the proposed piping system. Clockwise from the top of
+the tank on the far left we have: an 8 bolt flange (1), a 6”-4” reducer (2), a clear main line (3), a
+clear tee (4), a 6”-4” reducer placed backwards (5), another flange (6), the air inlet (7), a
+
+v
+butterfly valve attached with flanges (8), our bottom tee (9), two more flanges (10), the pump
+(11), and finally flanges connecting back to the tank (12). Note the flexible hose forming the
+branch line between the two tees.
+Figure 12. A larger view of the Solidworks model focusing on the clear tee, backwards 6”- 4”
+offset reducer, and air inlet.
+Figure 13. Initial design with areas of interest circled.
+Figure 14. Assembly of the updated design (air compressor not shown).
+Figure 15. Scaffolding at Pismo Yard to support test rig piping.
+Figure 16. Circuit analogy for the piping system.
+Figure 17. Labeled view of the piping system showing what each of the variables in the EES
+system curve code corresponds to.
+Figure 18. The results of the EES system curve code showing how the ratio of Froude numbers
+changes with flowrate and butterfly valve angle.
+Figure 19. System curve showing the required pump head to obtain a desired flowrate with a
+main line diameter of 6 inches and a 4-inch diameter branch line with the butterfly valve 10°
+open.
+Figure 20. Brett using a hand saw to cut a PVC pipe section.
+Figure 21. Manufactured acrylic block.
+Figure 22. Brett drilling a center hole while Brian holds the pipe steady.
+Figure 23. Brian drilling holes into a steel plate to form the orifice plate.
+Figure 24. A hole saw was used to drill the main section of the orifice.
+Figure 25. Brett installing the air flow control valve on the air line with wrenches to compress
+the Teflon tape.
+Figure 26. Transparent ruler taped to the main line.
+Figure 27. The wiring diagram for the pressure transducer connected to the DC power supply and
+a multimeter as the device input.
+Figure 28. Brett applying primer to a flange fitting and PVC pipe.
+Figure 29. Brian using an abrasive cut-off saw to cut steel rods.
+Figure 30. Solidworks CAD drawing of the final design of the testing rig.
+Figure 31. Frontal view of the complete prototype of our vortexing test rig.
+Figure 32. Additional isometric view of the testing rig.
+Figure 33. Both butterfly valves for the 6” & 4" pipes.
+
+LIST OF TABLES
+Table 1. Specification Table derived from QFD.
+Table 2. Minor loss coefficients for common geometries [2].
+Table 3. Range of struts to determine prevention of a system collapse.
+
+vi
+
+LIST OF NOMENCLATURE
+Off-take angle - The angle between an axis parallel to the main line and axis parallel to the
+branch line at the tee junction.
+Main line - The pipe that has an inlet at the reservoir and bends 180° to have an outlet at the
+reservoir.
+Branch line - The pipe that is in-between the two tee junctions
+Critical submergence depth - Depth of water in the pipe before a vortex occurs
+Nondimensional equation - Equation describing physical quantities that scales to various
+parameters with the full removal of units.
+
+1
+
+ABSTRACT
+This project is the first iteration of a testing rig to determine the critical submergence of a
+vortex off a main suction header. The rig was designed with supplies purchased and provided by
+PG&E, including 4-6” schedule 40 PVC pipe and fittings, a large water tank, a pump, and a
+flowmeter. PG&E at Diablo Canyon Power Plant presented their problem to the Cal Poly
+Mechanical Engineering Senior Project class, and three mechanical engineers took up the project.
+The following report details the ideation, design, build, and test processes used during the
+2016-17 academic year to create the vortex testing rig. We determined through testing that the
+location of hydraulic jump can be influenced by how open or closed the branch line valve was,
+which in turn influenced when gas ingestion to the pump occurred.
+
+1 INTRODUCTION
+1.1 ABOUT THE PROJECT
+This study of exploring vortexing off a common header is a senior project for the 2016-17
+California Polytechnic State University of San Luis Obispo’s (Cal Poly SLO) Mechanical
+Engineering department. This senior project is sponsored by PG&E, one of the largest electric
+utility companies in California serving 5.2 million households. The project will be overseen by our
+adviser, Professor Eileen Rossman, and our sponsor, Anderson Lin, who is a Principal Engineer at
+Diablo Canyon Power Plant located in Avila Beach, California.
+We will be working closely with Mr. Lin and a team of other employees at PG&E to design
+a testing apparatus that will simulate the systems that are currently operating in the plant. This
+occurrence does not happen in any particular part of the power plant system, but rather vortexing
+is an event PG&E would like to accurately measure in order to report the safety or vulnerability of
+the plant to the Nuclear Regulatory Commission (NRC). Currently, the NRC has a zero tolerance
+policy regarding the intrusion of bubbles into any system throughout a power plant. But if there is
+any form of maintenance in a system where the removal of components is necessary, then a small
+volume of air is bound to linger within the system piping.
+PG&E is sponsoring us to design a test rig and develop a nondimensional equation to
+predict the depth of fluid at which a vortex begins to form to ingest air from a common suction
+line into a branch line, also known as the critical submergence depth, S. This test rig will allow us
+to visually observe the critical depth at which a vortex forms that will ingest air bubbles through
+the branch lines, or offtake lines, leading to a pump. This gas ingestion could be damaging to the
+pump or the overall system and can eventually compromise plant operation. A graphic shown in
+Figure 1 illustrates that the air bubble is formed in the main suction line downstream of a fluid
+tank, while the vortex will form downwards into the branch suction nozzle. Our main focus when
+we conduct experiments is in the black box labeled ‘Control Volume’, but we will be designing
+
+2
+the entire system. Note that in Figure 1 the vortex occurs when the flowrate through the branch
+line increases. Even though the submergence depth does not change, the system still becomes
+critical. Thus the submergence depth is tied to some aspect of the flowrate. We will also like to
+observe the effects of the vortex when the branch line coming off the main suction line is in either
+the vertical, horizontal, or 45° position, always perpendicular to the main line.
+
+(a)
+
+(b)
+Figure 1. Sample drawing of project where d is the submergence depth, S is the Critical
+Submergence Depth, DM is the diameter of the main suction header, and DB is the diameter of
+the branch suction nozzle.
+(a) Noncritical case (b) Critical case
+
+3
+
+2 BACKGROUND
+2.1 MOTIVATION
+Several of the piping systems in a nuclear plant have a large number of locations where gas
+can be introduced to, or generated within, the lines. This gas could challenge plant operations if a
+large enough bubble makes its way into a pump; the pump will lose suction and will not operate
+as designed. Loss of a pump can degrade plant safety and cause a safe, but economically costly,
+shutdown.
+In 1988, Diablo Canyon Power Plant experienced loss of a pump during a routine refueling
+of one of the reactors. Normal procedure for refueling a reactor requires that the level of water in
+the reactor be reduced to mid-loop to drain the steam generators. To be reduced to mid-loop means
+to decrease the maximum fluid level to only one half the diameter of the pipe. In order to keep the
+core cool, a branch line is opened and cooling water is diverted from the reactor system into a
+branch suction line to a heat exchanger. In the case of this incident, the branch line ingested enough
+gas due to vortexing and lost the siphon in the pump suction high point to break the flow of water
+to the pump, causing it to gas bind and fail. This resulted in the loss of core cooling, which led to
+the emergency flooding of the nuclear vessel to cool the core. A configuration that may closely
+represent this problematic area is shown in Figure 2. This event highlighted the importance of
+studying how vortices form at junctions in piping systems. Because there are many different
+locations where this phenomenon is important to model, we are interested in developing a
+nondimensional equation that can be applied to a large range of flows and geometries.
+
+Figure 2. General nuclear power plant piping system illustrating main line with multiple branch
+lines[1].
+
+4
+
+2.2 BACKGROUND RESEARCH
+Due to the difficulty of the governing equations for fluid dynamics, a majority of problems
+cannot be solved with a direct analytical approach and instead rely on correlations developed from
+experimental data. In order for the results of our experiment to be applicable to a wide range of
+systems, we need to employ the concept of similitude. Our experimental rig will be able to scale
+kinematic, geometric, and dynamic factors where possible in order to scale to larger systems.
+The first step in nondimensional analysis is to determine which variables are of interest
+and to represent these variables as a set of nondimensional numbers. A powerful method of
+determining these nondimensional groups is called the Buckingham Pi theorem. The terms are
+determined by first reducing each of the relevant variables into its basic dimensions of mass,
+length, and time. The variables are then split into the dependent variable that is of interest (in our
+case it is the critical submergence depth), repeating variables, and non-repeating variables. For
+the first pi term, the dependent variable is kept in the denominator and three repeating variables
+are each raised to a coefficient such that the basic dimensions cancel out. This process is repeated
+for each remaining non-repeating variable. The process yields a set of fewer nondimensional
+groups than the original number of variables of interest [2].
+Once we calculate our nondimensional groups we can begin testing and collecting data. In
+collecting data, we need to record data for all of our variables so we can explore a variety of
+relationships between our nondimensional groups. We will form an equation from our collected
+data by regression analysis. This is a statistical method to estimate the relationship between two
+variables resulting in an equation. There are a number of different methods to use with the most
+common being the ordinary least squares method.
+Several studies have been done to determine a nondimensional relationship to predict the
+critical submergence depth for a vortex that will form in a stagnant tank of water. The critical
+submergence depth, S, is nondimensionalized by dividing it by the pipe’s diameter, D, both
+illustrated in Figure 1. Many of experimental studies have found S/D to be a function of the Froude
+number [3]. The Froude number characterizes the ratio of the inertial forces to the gravitational
+forces in the fluid and is defined as
+𝐹𝐹𝐹𝐹 =
+
+𝑉𝑉
+
+�𝑔𝑔𝑔𝑔
+
+(1)
+
+In Equation 1, V represents the characteristic flow velocity, g represents Earth’s
+gravitational constant, and D represents the diameter of the pipe [2]. The Froude number is often
+used when studying flow with a free surface.
+
+5
+
+2.3 HISTORY AND DEFINITION OF VORTICES
+There has been much research done to determine the characteristics of vortices. Starting in
+1858, Hermann von Helmholtz published a mathematical study of vortices, perhaps being the first
+to investigate vortex motion and its properties. He was followed by William Thomson, better
+known as Lord Kelvin, in 1869, who developed a theory of the material atom as a vortex ring [4].
+Vortices usually describe the motion in a frictionless fluid. If there was no friction in fluids,
+there would be no way to create or stop the motion of a vortex, although that is not the case in
+reality because frictionless fluids do not exist. In order to overcome friction and continue the vortex
+motion, one needs to apply a constant power supply to the fluid.
+The vorticity of a vortex is the measure of the strength of rotation, which is defined as the
+curl of the velocity vector of the fluid. The individual vectors are connected with what is called
+a vortex line. As one begins to group up the vortex lines, you are left with a vortex tube, which is
+what many people are familiar with when they see whirlpools or tornadoes.
+[5]
+
+The formation of a vortex is a simple concept. As a water molecule is pulled towards the
+bottom of the tee it accelerates in a straight line, however, as the other molecules around it also try
+to accelerate directly at the bottom of the tee, they interfere with one another and generate an
+overall rotation in the flow. This effect compounds until the downdraft of the flow is enough to
+drag air along with it, and a vortex is formed.
+
+2.4 PREVIOUS EXPERIMENTS
+The experiment we will conduct is unique because the cross flow in the main suction line
+will not be stagnant. Some differences between our experiment and experiments found online
+include transient flow in the main suction line and the fact that the main suction line will not be
+exposed to the atmosphere. The following cases are different to our scenario, but have some
+research that will allow us to improve our study as will be described below.
+2.4.1
+
+Case 1
+In 2014, a paper by Carlos Julián Gavilán Moreno [3] was published that studied the
+accuracy of predicting critical submergence depth based on the Weber and Reynolds number.
+Although this study showed that common calculations in determining critical submergence used
+the Froude number, this study did not use it. We will be using Froude’s number in determining our
+nondimensional equation, but this study provides an interesting alternative.
+One way this paper quantified the depth for a vortex formation was based on certain types
+of vortices. Both the paper and our sponsor recommended obtaining data for a Type 6 vortex, as
+shown in Figure 3.
+
+6
+
+Figure 3. Types of vortices to determine critical submergence depth [3].
+
+In Case 1, flow from a reservoir leading to a pipe with a nozzle is observed. First, he
+calculated Fr for a range of values using Equation 2.
+𝜌𝜌
+
+𝑅𝑅𝑅𝑅∙ϑ
+
+𝐹𝐹𝐹𝐹 = 𝑊𝑊𝑊𝑊�𝜎𝜎𝜎𝜎 = 𝐿𝐿 2
+
+(2)
+
+�𝑔𝑔𝑔𝑔
+
+Then, he numerically modeled critical submergence using Finite Element Analysis. To
+ensure his model was accurate, he compared the simulated submergence with experimentally
+determined submergence, and for various flowrates he observed a total simulation error of less
+than 5%. He plotted these two sets of data and used the non-linear least squared method in order
+to obtain the coefficients for a corrected critical submergence; Equation 3 is the result,
+𝑅𝑅𝑅𝑅
+
+𝑅𝑅𝑅𝑅
+
+𝑅𝑅𝑅𝑅 2
+
+𝑆𝑆𝑐𝑐 = 𝑎𝑎 + 𝑏𝑏 �106 � + 𝑐𝑐 ∙ 𝑊𝑊𝑊𝑊 + 𝑑𝑑 �106 � ∙ 𝑊𝑊𝑊𝑊 + 𝑒𝑒 �106 � + 𝑓𝑓 ∙ 𝑊𝑊𝑊𝑊 2
+
+(3)
+
+with a, b, c, d, e, and f are the coefficients obtained from the non-linear least squared method.
+The take away from Case 1 is the use of obtained experimental data and plotting the data
+in order to refine the anticipation of a particular phenomenon. In our case, this phenomenon is
+critical submergence.
+2.4.2
+
+Case 2
+Next, we examined a paper published by Yaser Sheikhi and Babak Lashkar-Ara, a student
+and professor in Iran. By using four different models, a nondimensional equation was found using
+nonlinear regression (as opposed to linear regression analysis) [6]. One way they found this
+equation was by using a critical spherical sink surface (CSSS). The CSSS has the same center and
+discharge as where the fluid enters from the reservoir into the pipe and the radius of the CSSS is
+equal to the critical submergence for an intake. In order to determine the radius of the CSSS, the
+
+7
+total area minus the area that is blocked is accounted for. For a detailed account of the math, please
+refer to the reference section [6]. This imaginary surface is then used as a way to determine critical
+submergence and is employed as a means with experimental data to create a nondimensional
+equation.
+The most relevant knowledge this paper provided was about the Kolf number. The Kolf
+number is a nondimensional parameter that depends on the geometry of the intake and whether or
+not there is end circulation in the pipe. End circulation, Γ, is “the strength of the vortex tube” and
+is defined by “the product of the vorticity normal to the surface enclosed by the curve C” [7], shown
+in Figure 4; the equation to calculate end circulation is defined in Equation 4.
+𝛤𝛤 = ∫ ɷ • 𝑛𝑛 𝑑𝑑𝑑𝑑
+
+(4)
+
+Figure 4. Vectors showing end circulation components.
+Inevitably, the authors of this paper disregarded the Kolf number since there was no
+imposed end circulation. However, the Kolf number is considered here because it might affect our
+data depending on how the test rig is designed. Although our testing rig down the line may share
+similarities to their schematic shown in Figure 5, they fail to attempt this experiment with cross
+flow in the main suction header and only use one branch line, whereas we will experiment with
+cross flow and apply three different angled branch lines.
+
+Figure 5. Schematic of experiment for horizontal flow.
+
+8
+
+3 OBJECTIVES
+3.1 STATEMENT
+We will investigate the phenomenon that creates a vortex and attempt to relate specific
+conditions of the piping system (pipe diameters, flowrates, etc.) to a correlation of the critical
+submergence depth to the formation of a vortex. Once we build a test rig to conduct observations
+and use various instruments to capture flow and fluid depth data, we will deliver our results to the
+team at PG&E. Our intention is that they will be able to use our results to accurately predict when
+a pump will fail due to the gas-binding of oxygen.
+
+3.2 SPECIFICATIONS
+In order to create a test rig, we utilized a process called Quality Function Deployment
+House of Quality (QFD), shown in Appendix A, in order to obtain realistic targets for our design.
+The QFD is a tool that considers the following: customer requirements and needs, technical
+research, and benchmarking. The main objective is to focus on what is needed for a project rather
+than how to achieve it. We took the requirements presented to us by PG&E to find what needs
+were most important to the design of the test rig. We then attempted to benchmark their needs to
+similar test apparatus found online. Based on these inputs, the QFD helped us find a list of
+engineering specifications and their associated targets. Since one specification can be dependent
+on another, the top of the QFD shows the positive or negative relationship they have on one
+another. By determining the relative importance of a specification to a requirement, we were able
+to determine the relative weight of each customer requirement. From utilizing the QFD process,
+we obtained the specifications found in Table 1. We assigned a High (H), Medium (M) or Low (L)
+risk to each specification. Then we listed how we will verify each specification with different
+methods: Analysis (A), Test (T), Similarity to Existing Designs (S), or Inspection (I).
+Table 1. Specification Table derived from QFD.
+Spec. # Parameter Description Requirement or Target (units)
+
+Tolerance
+
+Risk Compliance
+
+1
+
+Overall Dimensions
+
+20 ft x 8.5 ft x 6 ft
+
+Max.
+
+L
+
+I
+
+2
+
+Number of Offtake Angles
+
+0°, 45°, 90°
+
+N/A
+
+M
+
+T
+
+3
+
+Accuracy
+
+3 test runs are predicted in a row
+
+± 5%
+
+H
+
+T
+
+4
+
+Color of Pipe
+
+Clear
+
+N/A
+
+H
+
+I
+
+N/A
+
+H
+
+I
+
+N/A
+
+M
+
+A
+
+N/A
+
+M
+
+A, T
+
+N/A
+
+M
+
+A, T
+
+7
+
+Modular for 4-6" Diameter Split into multiple parts for pipe
+Pipe
+swaping
+Turbulent flow for accurate
+Fully Developed Flow
+flowrate measurements
+Fluid Flowrate
+100-500 gpm
+
+8
+
+Range of Froude Numbers
+
+5
+6
+
+0-3
+
+9
+For our first specification, we chose to focus on the overall size of our test rig. Because we
+are given a shipping container at Pismo Yard for transportation of the project, we decided to
+provide a maximum size relative to the dimensions of the shipping container. We do not expect
+our project to reach that upper limit, but do not know at this time.
+Also, we were asked to investigate how the critical submergence depth changes as the angle
+of the branch coming off the main suction pipe changes. This is why we would like to conduct the
+experiment using various branch suction nozzles positioned at angles of 0°, 45°, and 90°. These
+multiple angles are shown in Figure 6 that are positioned radially from and perpendicular to the
+main suction line.
+
+Figure 6. Section view of multiple offtake branch angles at 0, 45, and 90°.
+Accuracy is a high risk parameter because it would be desirable to obtain test results that
+are repeatable as well as accurate in order to predict when a vortex would occur. PG&E would like
+to use our rig and procedure to train employees in the future, so this requirement is a necessity.
+In order to determine when a vortex will occur, we decided to choose a transparent pipe to
+visually see the effect of changing water height and fluid flowrate. Thus the color of the pipe is an
+important requirement in the determination of a vortex.
+PG&E asked us to investigate the formation of vortices using multiple pipe dimensions
+such as 4” to 6” diameter pipe for the main suction and branch offtake lines as to get data based
+on varying parameters. Therefore, we chose to make our design modular in order to swap out
+sections rather than to build a new piping system for each diameter we would want to test.
+Applying this specification to the rest of the rig will also aid transportation from location to
+location and assist in easy repairs if the need arises.
+For certain flowmeters, it is necessary to develop fully developed flow throughout the
+piping system. This is because we need to know what the flow profile looks like. Therefore, we
+
+10
+need to create fully developed turbulent flow. We will perhaps do this by installing flow guide
+vanes in the 90° elbows or honeycomb plates for the straight run lines.
+In the power plant, the main suction header and branch offtake lines experience different
+flowrates in the system. But since our project is a scaled down version of the power plant system,
+in theory and in conjunction with data obtained using dimensionless numbers, we have determined
+we will be working with a range of flowrates from 500 – 1500 gpm. More analysis will be made
+to determine a more exact range of flowrates our pump will provide during operation.
+Our last specification is the range of Froude numbers we expect to be working with. From
+research online, we determined to be working with Fr numbers in the range of 0-3. This will
+provide us with a good starting point on what we should be expecting to see during the testing
+phase.
+Something else to consider is the budget for the overall test rig. We were not given an
+estimate on the budget for the project, so we projected a rough cost of $10,000. We do not expect
+to reach this number, but thought it was appropriate for a worst case scenario amount. By doing
+an initial budget calculation of the parts needed for the rig, we expect to spend roughly $1,500,
+without factoring in the cost of renting a pump since we do not know how long we would need to
+rent it for.
+The system within the power plant uses a boric acid-water solution, specifically 2500 parts
+per million boric acid. This concentration is very small; therefore, we will be conducting the
+experiment with water. Other vortex tests in the industry also use water rather than boric acid for
+the simulation, so therefore we would be able to adequately compare our results later on to others
+experiments. To ensure that this substitution is valid, EES calculations are produced in Appendix
+B, showing that the density of the two fluids have a negligible percent difference and behave quite
+similarly. If we have time in our design process, we would like to determine the similarities of
+other fluid properties, such as viscosity and surface tension, since these are parameters that govern
+the behavior of the air bubble.
+
+4 DESIGN DEVELOPMENT
+Once presented with this project, we began by defining the problem faced by PG&E. In
+order to do that, we spoke with the PG&E team overseeing this project and asked questions about
+what already exists and what is lacking in those systems. There have been no other tests done to
+simulate the conditions provided by our sponsor. We proceeded to research similar papers and
+experiments that involved inspecting the effects of a vortex in a similar system to ours, all of which
+was covered in Section 2, Background.
+
+11
+
+4.1 CONCEPT GENERATION
+We created a Quality Function Deployment House of Quality, shown in Appendix A, by
+using the requirements from PG&E and the engineering specifications, which are shown in Table
+1, we came up with for our test rig design, along with benchmarking previous tests from other
+research groups. This allowed us to evaluate the parameters we used to come up with possible
+designs of our test rig.
+Next, we brainstormed different ways we could meet all the parameters described above in
+section 3.2, focusing on one specific function at a time. Some individual functions we identified
+were the following: measuring the water depth in the main line, changing the offtake angle, and
+measuring the flowrate in the main and branch lines. To help us generate methods of achieving
+these functions, we went to the local hardware store and explored the parts available for building
+small piping systems. We looked at ways to join pipes, regulate flow, make removable
+connections, change pipe diameter, and connect hose to pipe. We then held a brain writing session
+to generate the following methods of performing the aforementioned functions.
+4.1.1
+
+Measuring Water Depth
+The first method developed to achieve the measurement of water depth function was to
+etch markings along the side of the tube that correspond to the depth of water at the center of the
+tube, essentially creating a ruler directly measuring the depth in inches. We decided to use this
+method as our datum to compare all our further ideas with so we could rank the methods against
+one another. The rest of our ideas for this function include:
+•
+•
+•
+•
+
+Marked U-Tube
+Water Level Marked on a Weighted String
+Floating Transducer Inside Pipe
+Camera Setup w/ Height Marks on Backboard
+
+Figure 7 shows a few of these solutions. In Figure 7 (a), we illustrate the U-Tube device
+marked with incremental measurements on the side to determine the water depth. Since this system
+is under pressure, we cannot have the U-Tube open to atmosphere. Therefore, the design would
+require a connection at the top of the tube back to the main suction line, where the air pressure
+would be the same. In Figure 7 (b), we show a transducer floating on the surface of the water inside
+the pipe, sending out a signal to determine the depth of the water.
+
+12
+
+(a)
+
+(b)
+
+Figure 7. Solutions to measure water depth in main suction line.
+(a) Marked U-tube (b) Floating Transducer
+4.1.2
+
+Changing the Offtake Angle
+
+Our sponsor suggested to us to use flanged connections in order to change the offtake angle
+during one of our preliminary meetings. This gave us the idea to put eight bolt flanges, shown in
+Figure 8 (a), on either side of the main and branch line intersection to rotate the offtake angle of
+the branch line. The flange needs to have eight bolts because it ensures angle between each bolt is
+45°. We used this idea as our baseline datum, while the other ideas we formulated for this function
+include:
+•
+•
+•
+
+Threaded Union
+Rubber Tube w/ Hose Clamps
+Flexible Tubing
+
+Figure 8 (b) shows the use of flexible piping on either side of the intersection. This would
+make it possible to rotate the pipe without having to drain the system, but would require a
+significant force to hold in place at the three desired angles.
+
+13
+
+(a)
+
+(b)
+Figure 8. Solutions to rotate the branch offtake angle.
+(a) Eight Bolt Flange (b) Flexible Tubing
+4.1.3
+
+Measuring the Flowrate in the Main and Branch Lines
+Another function we looked at was determining how to measure the flowrate in a pipe line.
+The most common idea that we have had experience with in college is the pitot-static tube. We
+used this as our datum but came up with a few other alternatives to solve this particular function:
+•
+•
+•
+•
+
+Rotameter Attachment
+Ultrasonic Flowmeter
+Turbine Flowmeter
+Nutating Disk Flowmeter
+
+Figure 9 (a) illustrates the use of a pitot-static tube inserted into the main suction line to
+determine the flowrate using the velocity of the fluid. A pitot-static tube determines the flow
+velocity by measuring the difference between the flow’s static and dynamic pressure. The flow
+velocity is generally measured at the center of the pipe where the flow is moving fastest.
+Furthermore, determining the flowrate in a tube from its centerline velocity requires knowing the
+velocity profile in the pipe. This velocity profile can vary wildly such that accurate analysis can
+only be performed after the flow has had time to settle into a constant shape. Figure 9 (b) shows a
+paddlewheel meter attached to the pipe as a pipe fitting. Paddlewheel flow meters work by using
+a small rotating wheel to measure the velocity of the flow near the edge of the pipe.
+
+14
+
+(a)
+
+(b)
+
+Figure 9. Solutions to measure flowrate throughout system.
+(a) Pitot-Static Tube (b) Turbine Flowmeter
+4.1.4
+
+Creating Flow Through Piping System
+Next, we wanted to look into how we were going to create the fluid flow throughout the
+piping system. To us, there was an obvious solution to this function, the pump. But we decided to
+figure out if there were any other ways we could complete the same task differently. The solutions
+to this function are as follows:
+•
+•
+•
+
+Pump
+Gravity
+Siphon
+
+There are pros and cons to each of these options, all of which we will discuss in the next
+section, Idea Selection.
+4.1.5
+
+Creating a Bubble Inside Main Line
+The last function that we needed to brainstorm was a definitive way to create and insert an
+air bubble within the main line of the system. We needed to insert either a stagnant slug of air
+within the pipe and be able to gradually increase its’ size, or insert a constant flow of air, then
+increase that flowrate to increase the bubble size. The solutions are as follows:
+•
+•
+•
+•
+
+Air Compressor
+Bike Pump
+Open Channel to Atmosphere
+Air Blower
+
+4.2 IDEA SELECTION
+To select the best ideas, our team set up Pugh matrices, shown in Appendix C. A Pugh
+matrix is a scoring tool we used for concept selection where different options are scored relative
+to a criterion, or datum. The selection is made based on the consolidated scores. For each of these
+functions above, we used this tool to compare and evaluate a number of valid ideas based on the
+specifications we created earlier. Some of these criteria include accuracy, ease of installation,
+availability, overall dimensions, and cost. We felt that these and a few other criteria were essential
+
+15
+to look into. Once we assigned scores to each option based on the specifications and weighed the
+individual specifications according to what we thought to be most important to the project, we
+came up with the best option.
+4.2.1
+
+Evaluating Water Depth Measuring Devices
+
+4.2.1.1 Directly Marking the Tube - Datum
+Etching markings for water depth directly on the tube would be very low cost, but would
+lose some accuracy when we mark the tube ourselves, rather than using a calibrated piece of
+equipment. The device is incredibly non-complex and easy to install because it only requires
+something to mark the tube. The markings on the tube would require almost no maintenance. The
+only upkeep is refreshing the markings if they ever begin to fade.
+4.2.1.2 U-Tube Measuring
+Using the U-Tube would be easier since the measurements are read off a vertical tube with
+equally spaced markings, rather than having to make readings off the curved surface of the pipe.
+It would also be more accurate because we can purchase a calibrated graduated cylinder for our
+readings, rather than using lines we marked ourselves. However, the installation would be more
+difficult than directly marking the tube.
+4.2.1.3 Floating Transducer
+We believe this may not work because the bulk of the device may disrupt the flow and it
+may be difficult to keep the device centered in the pipe to determine the maximum water depth.
+The cost, complexity, installation, and maintenance requirement would all be much greater than
+the datum. This analysis led us away from using the transducer.
+4.2.2
+
+Evaluating Means of Changing the Offtake Angle
+
+4.2.2.1 8 Bolt Flange - Datum
+Eight bolt flanges are widely available in a variety of pipe sizes for relatively cheap and
+when used with a gasket they are watertight. They are able to provide great accuracy in our angle
+of rotation because their bolt pattern ensures that we turn the intersection exactly 45° for each trial.
+However, performing this rotation requires us to drain this part of the system, unbolt the flanges,
+rotate them by 45°, and then re-bolt them. This may prove to be a time consuming process that
+will slow our testing.
+4.2.2.2 Threaded Union
+When compared to the 8 bolt flange, the threaded union is more expensive, and harder to
+find for pipe sizes greater than 4 inches. As a positive, it is easier to adjust than the flange because
+there is only one large thread to loosen, as opposed to 8 smaller bolts. We also believe that the
+union is more leak-proof than the flange because of its integrated O-ring.
+4.2.2.3 Flexible Tube
+The flexible tubing is harder to adjust and less accurate than the 8 bolt flange. Furthermore,
+this solution would require the use of a protractor to accurately measure the rotation of the branch
+
+16
+line. Lastly, we have not been able to find a product we could purchase that would fit our use
+without heavy modification.
+4.2.3
+
+Evaluating Flowrate Measurement Solutions
+
+4.2.3.1 Pitot-static tube – Datum
+The pitot-static tube is a cheap and simple solution, but the tube must be pointed directly
+in line with the flow to get accurate results. Unfortunately, this alignment is difficult and time
+consuming. The pressure drop caused by the pitot-static tube is almost negligible and its
+interruption to the flow is minimal.
+4.2.3.2 Turbine Flowmeter
+The turbine flowmeter costs more than the pitot-static tube. It produces a similar pressure
+drop and is about as easy to use. This would give us an accurate reading but we found it challenging
+to find a 6-inch pipe variant without a long backorder time. Although, we could use a 4-inch variant
+of the flowmeter that is available.
+4.2.3.3 Ultrasonic Flowmeter
+The ultrasonic flowmeter has the advantage of being more accurate, easier to use, and more
+available then the pitot static tube. However, these benefits come at a steep cost that may outweigh
+the benefit more than the Pugh matrix shows.
+4.2.4
+
+Evaluating Means of Creating Flow
+
+4.2.4.1 Pump – Datum
+A pump is the most common and simplest way to create a constantly moving flow. It does
+this through a pressure difference in the piping. There will be a sizable jump in price for this
+solution, but it will be reliable and repeatable.
+4.2.4.2 Gravity
+Another way we could move flow is by using gravity to transport the water. We could create a
+vertical piping system, but this may be very tall and take up a lot of space. A downside to this
+solution is that we would have to keep adding or pumping water back up to the initial height,
+which may complicate the design.
+4.2.4.3 Siphon
+We could also use a siphon to cause the water to flow from one elevation to another.
+However, since the amount of water needed would decrease in a tank, the flowrate of the system
+would change with time. Although it may be an easy option, we could only run the system for a
+certain amount of time before the water runs out. It would require a pump to get water back up to
+the starting point.
+
+17
+4.2.5
+
+Evaluating Bubble Formation Solutions
+
+4.2.5.1 Air Compressor – Datum
+Although the air compressor may be an expensive alternative, we believe that it can supply
+a constant flow of air. The rate at which it can inject air is much faster than the other options. The
+pressure to overcome that of water and volumetric flow to push air down to half the diameter
+(assuming critical submergence happens at or before this depth) is about 6 psi and 19 cfm as shown
+in Appendix N. This calculation assumes a pump outputting 450 gpm, but since the pump we chose
+will have about 420 gpm, the flow needed to introduce an air bubble will be less than 19 cfm. With
+the aid of an air booster, we will be able to reach upwards of 50 cfm.
+4.2.5.2 Bike Air Pump
+The bike pump is a cheap option when it comes to inserting air into the system.
+Unfortunately, this method does not allow us to provide a constant flow of air since the pump
+would need to be recharged after one pump. In addition, knowing how much pressure is already
+going to be within the system, it will be very hard to inject air if we cannot meet and exceed that
+value.
+4.2.5.3 Open Channel to Atmosphere
+Rather than injecting air into the system, we thought we could leave the water at a constant
+level within the main line. Air from the atmosphere that enters by the tank would fill in the rest of
+the main line. If we change the flowrate, then the height of water, or critical submergence depth,
+would change. The downside to this solution is that it can only work with low fluid flowrates; once
+past this range, the pipe would fill up the whole cross section, pushing out the open channel of air
+needed to find the critical submergence depth.
+4.2.5.4 Air Blower
+Another option besides using an air compressor is an air blower. Air blowers can output
+high amounts of volumetric flow, but operate at low pressures. Unfortunately, since the pressure
+at the location where we are going to inject air will be around 6 psi, using air blowers might not
+be the best option to produce an air bubble.
+4.2.6
+
+Forming Concepts
+To narrow down the number of combinations of concepts, we discussed some components
+that would work well compared to their respective options. Two of the functions we narrowed
+down were the means of which to create flow through the pipe and an air bubble in the main line.
+Evaluating our options, we found that the best and most efficient way to create flow throughout
+the system would be to use a pump that produces a pressure head and causes flow. This allows us
+to get repeatable quick data, rather than resetting the system after each run (which is needed if we
+chose the gravity or syphon concepts). Next, we figured that the best way to induce a bubble within
+the main line of the system would be to make use of an air compressor. Again, this component
+choice gives us the ability to get continuous and accurate data without having to reset the system
+or rely on human labor to inject air, such as with the bike air pump. For the other functions, we
+decided to determine which components worked best with each other as a whole. For the functions
+
+18
+from sections 4.2.1, 4.2.2, and 4.2.3, we used the top three ideas from each of our Pugh matrices
+and inserted them into a morphological chart, which can be found in Appendix D. A morphological
+chart is a tool that allows us to present all possible combinations of solutions so a team can quickly
+visualize the options and select the top contenders.
+The X-, Y-, and Z- axes of this three dimensional chart corresponds to a particular function,
+and each space on these axes corresponds to a method of performing the function. Each space on
+a particular axis will intersect every combination of the spaces on the other two axes. By examining
+these combinations, we can see all the options for our concepts. When evaluating combinations,
+Ryan chose the concept in Figure 10 (a) with 8-bolt flanges, the marked U-Tube, and pitot-static
+tubes for pressure measurements resulting in a fluid flowrate. Brian chose the concept in Figure
+10 (b) with threaded unions, a ruler projected directly on the pipe, and an ultrasonic flow meter.
+Lastly, Brett chose the concept in Figure 10 (c) with threaded unions, the marked U-Tube, and a
+paddlewheel flowmeter. After we each chose a unique concept that may satisfy the needs of the
+customer the best, we used a final decision matrix, in Appendix E, to compare the concepts to each
+other. This decision matrix acts much like the Pugh matrix mentioned in the start of section 4.2.
+We used it to evaluate and prioritize all three concepts we came up with by establishing a list of
+weighted criteria and proceeded to evaluate how well those options met those criteria. Those
+criteria are very similar to the criteria used in the Pugh matrices, including cost, ease of use,
+availability of parts, and accuracy. Once we added up the weighted scores, we produced our final
+design.
+The basis behind selecting certain scores for one concept evolved from the theory of
+approaching the construction of the test rig in a cautious manner. We chose to go with flanges
+instead of unions because flanges are more readily available for larger sizes. For measuring the
+height of flow, we selected a U-Tube instead of a marked ruler on the pipe for accuracy purposes.
+Lastly, for measuring flowrate, we chose to use a pitot-static tube, instead of either an ultrasonic
+flowmeter or paddlewheel meter, mainly to keep the cost down.
+
+19
+
+(a)
+
+(b)
+
+(c)
+Figure 10. Each member’s initial concept. (a) Ryan’s concept selection, (b) Brian’s concept
+selection, and (c) Brett’s concept selection.
+4.2.7
+
+Initial Concept
+Our initial top design, shown in Figure 11, ended up using 8-bolt flanges, the U-Tube level
+meter, and pitot-static tubes. We included offset 6” to 4” reducers to allow for our main line to be
+either 4” or 6” if we had time to run additional tests at a larger main line diameter. Both our main
+line and the tee to the branch line would have been made using clear PVC. This would have
+allowed us to see the bubble size in the main line during the formation of a vortex at the
+intersection. Due to the high cost of large clear pipe and clear fittings, these areas were the only
+ones constructed with clear PVC. Common Schedule 40 PVC pipe would have made up the rest
+of the system.
+
+20
+
+Figure 11. A basic Solidworks model of the proposed piping system. Clockwise from the top of
+the tank on the far left we have: an 8 bolt flange (1), a 6”-4” reducer (2), a clear main line (3), a
+clear tee (4), a 6”-4” reducer placed backwards (5), another flange (6), the air inlet (7), a
+butterfly valve attached with flanges (8), our bottom tee (9), two more flanges (10), the pump
+(11), and finally flanges connecting back to the tank (12). Note the flexible hose forming the
+branch line between the two tees.
+The hose connecting the top tee to the bottom tee would have been made using flexible
+EVA plastic to allow the main line to rotate from 0° to 45 and 90° without having to replace the
+branch line pipe. All unthreaded connections would have been glued together with primer and
+PVC cement, and all threaded connections would have been tightened down with Teflon tape over
+the threads to prevent leaks. The flanged connections would have a gasket in between the two
+halves for leak prevention. The main line would have had an uninterrupted straight entrance length
+of 14 feet between the tank and the control volume, shown in Figure 1, to allow the flow to become
+fully developed. This allowed us to use a simple Pitot static tube to calculate the flow rate of the
+water based off the measured centerline velocity. The pipe exiting the tank would have had a 6inch diameter pipe to allow us to run tests with a 4-inch main line, and a 6-inch main line if we
+had time to run the tests. The U-shaped bubble trap shown at the tank outlet would trap air in the
+main line as the system is initially filled with water and would be as compact as possible to
+minimize head loss.
+Figure 12 shows a close-up view of the clear tee where we planned to expect to see our
+vortex, the 6” to 4” offset reducer, and the air compressor inlet. The offset reducer, by the 90degree elbow downstream of the control volume, along with the U-shaped bubble trap next to the
+tank, created a higher elevation area where an air bubble would become trapped while initially
+filling the system with water. This allowed us to have an initial bubble in the system that we could
+later expand. We expected this initial bubble to amass in the upper elbow where the flow turns
+from horizontal to flowing downwards and along the length of the pipe due to the U-shaped bubble
+trap. This is because the friction between the bubble and water would try to pull the air along the
+path of the water’s flow, but once the flow turns downward, the buoyancy of the air would have
+forced the bubble upward until the force due to friction and the buoyancy force cancel out. Our
+intuition tells us that the friction due to the water flowing past would not have been enough to
+force our large bubble down the vertical pipe and away from the air inlet. The air inlet is positioned
+
+21
+near the elbow in order to take advantage of this and add air to our already formed bubble. This
+would reduce the time it takes to set our system up by ensuring all the air we add to the system is
+immediately part of our large bubble, rather than spray into the water and forming a multitude of
+small bubbles that will require time to rise and meld together. However, since the initial size of
+this air bubble might be too big, a bleed valve might have been necessary to release some air from
+the main line into the atmosphere, thereby increasing the water depth and avoiding critical
+submergence too early in the process.
+
+Figure 12. A larger view of the Solidworks model focusing on the clear tee, backwards 6”- 4”
+offset reducer, and air inlet.
+Dimensions of components in the testing rig were determined based on the conditions for
+smooth flow. The vertical height of the tube was estimated at 4 feet. We would have continued to
+research previous projects and studies in order to estimate the total height required to contain the
+bubble if we proceeded with this design. We researched flow-conditioning devices, such as tube
+bundles and honeycomb straighteners, to obtain fully developed flow with less pipe, and positive
+displacement meters for liquids that were large enough to fit on our pipe without requiring a
+reducer. With this design in mind, we gave a presentation on our PDR to our sponsor and his team
+at Diablo Canyon Power Plant.
+
+22
+
+4.3 ORIGINAL DESIGN CHANGES
+With their feedback, we made some critical changes to our design. For the purposes of
+describing what sections were areas of concern, Figure 13 shows the original design.
+
+Figure 13. Initial design with areas of interest circled.
+The first issue our sponsors mentioned is that based on this design, the pump would not
+increase flow in the main line. This is because although altering the performance of the pump will
+increase the flowrate of water into the tank, the only thing driving the flow from the tank into the
+U-trap is the pressure of water above the inlet, and so altering the pump performance will not
+increase flow into the main line.
+The second issue we had was the possibility of cavitation at the inlet of the pump. Due to
+major losses and lack of pressure, the head will be below the required net positive section head
+(NPSHR) before the flow reaches the pump. Therefore, to avoid cavitation, the pump should have
+been placed somewhere at the top on the main line.
+One last concern was the influence of falling water on the air bubble. Because the water
+will be turbulent, the air bubble may be dragged down at the downward elbow after the
+intersection. We assumed a constant air bubble condition, but this disruption might affect our
+bubble size upstream and could lead to inconclusive results.
+The team at Diablo Canyon also suggested to use alternate components to the ones we
+selected using our Pugh Matrices. They advocated for the use of unions to rotate the main line
+because we would not have to drain the system of water and it would save a lot of time during the
+testing phase of the project. The team also suggested to move away from the U-Tube water
+measurement concept because there will be too much pressure within the pipes to use a rubber
+tube. To make it easier, they referred us back to our datum idea of simply writing the water height
+on the side of the main line to determine critical submergence. Since we have a large budget to
+work with, they recommended substituting the Pitot-static flowrate measurement device with a
+turbine flowmeter. This will allow us with more accurate flow data the ability to easily attach
+anywhere within our system.
+
+23
+
+5 FINAL DESIGN
+Based on the feedback from our sponsor, we made alterations to avoid for improper pump
+placement, potential cavitation, and turbulent disturbances. Our new design is shown in Figure 14.
+
+Butterfly
+Valve
+
+Turbine
+Flowmeter
+
+Pump
+Figure 14. Assembly of the updated design (air compressor not shown).
+In the new design, the pump acts to add pressure to the system that increases the flow of
+water, and has a discharge connecting pipe to pipe (not pipe to tank). By positioning the pump
+after the tank in the system, we found that we would avoid pump cavitation. The last major revision
+we made is the pipe layout in relation to where air is injected into the main pipe. Before, due to
+the pipe layout, after air was injected into the main line, it would proceed to travel vertically
+downwards. This was adverse for several reasons. One reason is because it might have disrupted
+the air bubble upstream of this vertically downward portion and would tamper with data on when
+critical submergence would occur. Another reason is because the pump was located downstream
+of the air bubble, with no way to the vent the bubble, so that there was a good chance air bubbles
+would reach and harm the pump.
+The tank in the new system will be open to atmosphere to allow the release of bubbles from
+the system upstream of the pump. Instead of using flanges, we changed to unions as the component
+to change the main-branch offtake angles, due to maximum pressure that the component can
+withstand while serving the same purpose of pipe rotation. We also fixed the two diameters of the
+main and branch line since having several diameters of the branch line proved too difficult to
+design for. This is because we would have to drain the top half of the testing rig in order to swap
+out different sized piping, which would take up a lot of time and water. Having the modularity of
+various branch diameters can be a consideration to include in a second version of this system. Due
+to the valve location near the inlet, there is a possibility that the valve might disrupt the steady
+state growth of the air bubble. To account for this, we decided to use a length equivalent to 15
+
+24
+times the diameter of the pipe. This will be covered more in depth in Section 5 of Engineering
+Validation & Analysis.
+
+5.1 MATERIAL SELECTION
+Much of the testing rig will comprise of opaque Schedule 40 PVC pipe, with the exception
+of the main line pipe and intersecting tee junction. The main reason for this is to decrease spending
+since the only area of interest is where the vortex will occur. As noted before the main line and
+intersection will be made of a clear PVC material. The water tank in the system is made of a plastic
+material that is readily available.
+After drawing a system curve and comparing it to a pump curve, the Multiquip QP4TH
+was chosen because it can handle a flowrate up to 550 GPM. This pump is also ideal because it
+was provided to us for free by Quinn Cat Rentals (Appendix M). The pump inlet and outlet are
+equipped with National Pipe Threads (NPT) so we will therefore be able to connect the pump
+directly to PVC pipe using a flange and female adapter. Since the inlet and outlet diameters for the
+pump is 4", a reducer will also need to be used since the PVC pipe joining to the pump will be 6"
+in diameter.
+Next, we will also need something to support the piping of the testing rig. To handle this
+task, we are using metal scaffolding readily available at Pismo Yard, pictured in Figure 15. This
+scaffolding is left over from a past senior project sponsored by PG&E.
+
+Figure 15. Scaffolding at Pismo Yard to support test rig piping.
+
+25
+
+5.2 SAFETY CONSIDERATIONS
+We must be cautious when manufacturing and constructing the rig itself. We will be
+working with a few large, heavy pipes and machinery and must handle them with care. When
+transferring or attaching pipes to the assembly, we will make sure to use both hands and have it
+supported by at least two people at a time. Our team requires that no one person is working on the
+project alone in case of serious injury and in need of immediate assistance.
+In obtaining data for this experiment, the engineers operating the system should be cautious
+and alert in order to avoid any injuries. Since this system contains long lengths of pipe, extra
+attention will be paid to our surroundings for safety precautions as to not hit one’s head on an
+elevated object or lean up against an unsteady part. Several failure effects considered in the FMEA
+in Appendix I include an unstable structure harming individual or water spilling on electronics due
+to pipe burst. Other safety considerations consist of electrical hazards from the generator or if air
+somehow manages to reach the pump and damage it.
+While the entire system is up and running, safety glasses and hearing protection will be
+worn at all times for the pump and air compressor running the system. Close-toed shoes are a
+requirement when working with or near the assembly due to the use of large objects. We will ask
+our sponsor to provide us with hard hats as well for head protection. We also ask that our sponsor,
+or a member of the PG&E team, attends the assembly and testing phases to provide us with
+guidance and supervision at the testing site located at Pismo Yard.
+
+5.3 MAINTENANCE & REPAIR CONSIDERATIONS
+During the manufacturing of the acrylic block intersection part or the clear PVC main line,
+a crack may form within the part. If this did occur, we ordered a backup part to ensure the least
+amount of setback in our schedule. Once the testing rig was manufactured and built to completion,
+there were inevitable maintenance issues that had to be faced to ensure the rig was working
+correctly. If a water leak was found anywhere in the system, we shut down the process and repaired
+the seal between the parts in question with either PVC glue or caulking. This mainly occurred at
+the joint between the tank and the PVC fitting. All we could do was replace the silicon sealant to
+mitigate any leakages. Another place where we experienced leaks was at most of the unions used
+in the system. We found that it was very difficult to tighten these by hand, and there were no tools
+large enough for this job at local hardware shops. Most likely long after our testing is over, the
+waterproof seals, located at the inlet and outlet of the tank, will eventually degrade and need to be
+replaced. We don’t believe that the degradation of the seals will cause a problem in the few months
+that we are testing the rig.
+The pipes throughout the system are supported by a scaffolding structure. Special care was
+taken to ensure that over time, the scaffolding does not deflect to a significant degree under its
+own weight. Based on the analysis shown in Appendix K, we are confident the piping will be
+sufficiently supported, but this analysis is covered more in depth next in Section 5.4. If for some
+reason during testing this was not the case and there was a clear sag in the pipe, we would have
+halted testing and added another support at that location. This is relatively easy because the
+
+26
+scaffolding can be easily removed and transferred to another location using portable rod clamps
+provided by PG&E.
+Corrosion was not an issue because the main material we are using, PVC, has excellent
+corrosive resistance. Although, if the metal scaffolding showed signs of rust from prolonged
+exposure to rain, we would have used steel wool or other corrosion removal methods to clear the
+metal from rust.
+
+5.4 ENGINEERING VALIDATION & ANALYSIS
+5.4.1
+
+Simulating a Boric Acid Solution
+We found that the addition of boric acid to water at 2500 parts per million causes a
+negligible change in density when compared to pure water. We calculated this by specifying a ratio
+of 2500 moles of boric acid to 1 million moles of water. The densities of the separate substances
+were used to determine the volume of the previously mentioned molar amounts and the molar
+masses of both water and boric acid were used to determine the mass of each. The volumes and
+masses of both were added and divided out to find the total density. From this calculation, the
+difference in the density was so small it fell outside the range of the significant figures we chose
+to use. Therefore, we are using water for this experiment. The Engineering Equation Solver file
+used to do this calculation is included in Appendix B.
+5.4.2
+
+Determining Flowrate Ratio
+When water is flowing through a system with parallel branches, the water will take the path
+of least resistance until the flowrate through that path is large enough to equalize its resistance
+with the other paths. Major losses in pipes refers to the losses due to friction with the material and
+diameter pipe walls. Pipes with smaller diameters have greater major losses than larger pipes at
+the same flow rate. Because we are interested in testing the effects of branch lines with smaller
+diameters than the main line, more water will flow along the main line than the branch line. To
+determine the different ratios of flow rates achievable with our system, we explored the ratio in
+flowrates between the branch line and the main line at our maximum flow rate of 1000 gallons per
+minute. We used the circuit analogy to simplify the piping system as shown in Figure 16.
+
+Figure 16. Circuit analogy for the piping system.
+
+27
+Here, flow rate Q is analogous to current, pressure head h to voltage, and loss coefficient
+KL to resistance. Note that in fluid systems at a given loss head loss is proportional to the square
+of the flow rate whereas in electrical systems the voltage drop is directly proportional to the current
+[2]
+. This gives us Equation 5.
+ℎ = 𝐾𝐾𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿 𝑄𝑄 2
+
+(5)
+
+The major losses in a pipe on a flow rate basis are given by Equation 6,
+𝑙𝑙
+
+4
+
+𝐾𝐾𝑚𝑚𝑚𝑚𝑚𝑚 = 𝑓𝑓 2𝐷𝐷𝐷𝐷 (𝜋𝜋𝐷𝐷2 )2
+
+(6)
+
+where f is the Darcy Friction Factor, l is the length of the pipe, D is the diameter of the pipe, and
+g is the gravitational constant. The Darcy friction factor is a nondimensional function of the flow’s
+Reynolds number and the equivalent roughness, ε/D [2]. For smooth plastic pipe, ε is assumed to
+be zero [2]. The Moody chart, Figure 8.20 in Reference 1, gives us f = 0.014 for our flow in 4 inch
+pipe at an assumed 750 gpm *. The controllable source of losses in our system is the variable minor
+loss coefficient for the butterfly valve, KL,valve. Minor losses occur at obstructions to the regular
+flow of the water such as valves, bends, and tees. Each device has its own minor loss coefficient,
+KL, as shown in Table 2.
+The minor loss in a pipe per unit flow rate is given by Equation 7.
+1
+
+4
+
+𝐾𝐾𝑚𝑚𝑚𝑚𝑚𝑚 = 𝐾𝐾𝐿𝐿 2𝑔𝑔 (𝜋𝜋𝐷𝐷2 )2
+
+(7)
+
+The branch and the main line outlet both start from the upper tee, Point 1 in Figure 16, and
+meet up again at the bottom tee, Point 2 in Figure 16. Each of these points have the same change
+in pressure head, h12. This allows us to equate the ratio between the main line outlet flowrate and
+the branch line flowrate as a ratio of the square roots of their loss factors. This yields Equation 8.
+𝑄𝑄𝑏𝑏
+𝑄𝑄𝑜𝑜𝑜𝑜𝑜𝑜
+
+�𝐾𝐾
+
+= �𝐾𝐾4
+3
+
+(8)
+
+By varying the minor loss coefficient of the valve, we are able to vary the ratio of flow
+rates from 0.25 when the valve is entirely open, all the way to infinity, when the valve is closed
+all the way. A list of these valve losses are found in Table 2. These varying flow rates will give us
+a wide enough range of Frout/Frb to get a useful relationship, where Frout is the Froude number for
+the main line outlet and Frb is the Froude number in the branch line. The EES file showing these
+calculations is in Appendix F.
+
+*
+
+Note that the Reynolds number, and thus the friction factor, changes with flow rate, so the friction factor should be recalculated
+each time the flow rate changes. However, this calculation is being used as an estimation and the difference between a friction
+factor of 0.014 and 0.0125 does not significantly change the results.
+
+28
+Table 2. Minor loss coefficients for common geometries [2].
+
+5.4.3
+
+Determining Bubble Stability
+Since the bubble in the system will extend along the length of the main line, the bubble can
+break up by either the velocity gradient of the flow throughout the pipe, or due to turbulent flow
+when the path of the fully developed flow is disturbed. Although there exist equations to determine
+whether a bubble will be stable or unstable, these equations still are not reliable, and bubble
+instability might happen earlier than expected or vary with constant parameters for multiple test
+runs. However, the equations that exist will be a starting point [8]. We will likely determine bubble
+stability empirically.
+
+29
+5.4.3.1 Breakup Due to Velocity Gradient
+The velocity gradient along the fully developed flow may be enough to drag the bubble
+throughout the rest of the system. Equation 9 is used to estimate the initial bubble radius when the
+bubble starts to become unstable,
+
+𝑁𝑁 =
+
+𝑎𝑎𝑜𝑜 𝐺𝐺𝐺𝐺
+𝜎𝜎
+
+(9)
+
+where N is a nondimensional velocity gradient, ao is in the initial size of bubble, G is the shear
+rate, μ is viscosity of the water, and σ is surface tension. Equation 10 can then be used to determine
+Ncrit in order to find the initial bubble size at the transition from stable to unstable.
+1
+
+1+𝜅𝜅
+
+𝑁𝑁𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 = 2 �1+19𝜅𝜅/16�
+
+(10)
+
+κ is experimentally determined, where when k>3 no breakup occurs and becomes elongated along
+the flow direction [8].
+5.4.3.2 Breakup Due to Turbulent Flow
+Another way to characterize bubble stability is by examining how it behaves in turbulent
+flow. Equation 11[8] is used to determine the diameter of an equivalent volume sphere is,
+𝜏𝜏 > �𝜎𝜎 + 𝜇𝜇𝑝𝑝 �𝜏𝜏/𝜌𝜌𝑝𝑝 � /𝑑𝑑𝑒𝑒
+
+(11)
+
+where τ is the local shear stress, μp is viscosity of bubble, ρp is density of air, and de is the diameter
+of an equivalent volume sphere.
+5.4.4
+
+Entrance Length Analysis
+To ensure that we are taking water height measurements at the intersection correctly and
+without error, we need to make sure the fluid is fully developed in the turbulent phase. To confirm
+this condition, we performed calculations on the entrance length needed prior to the vortex location
+at the intersection. From this analysis shown in Appendix L, we found that there must be
+approximately 14 ft of pipe upstream of the tee-junction. Although, once this entrance length
+exceeds the equivalent of 10 diameters of the pipe, one can use this distance. Therefore, since our
+pipe is 6 inches in diameter, we must have an entrance length of at least 5 ft. To account for any
+error in that approximation, we provided an extra 1’8” to our entrance length, resulting in a total
+of 6’8” long, or equivalent to about 13 diameters of pipe.
+5.4.5
+
+Pump Selection Analysis
+In the same manner that the flowrate ratio was found, an Engineering Equation Solver
+(Appendix M) program was created using the circuit analogy for pipe flow. The program
+simultaneously solved for the pressure at each point indicated in Figure 17, the flow rate of each
+pipe section, the Reynolds and Froude numbers for each pipe section, and the required pump head
+for a given return line flow rate and a flow coefficient for the butterfly valve, Cv. The program
+populated a table that found these values at return line flowrates from 0.1 ft3/s (44.9 gpm) to 2 ft3/s
+
+30
+(897.6 gpm) and flow coefficients corresponding to a 6-inch butterfly valve at 10° intervals from
+90° (fully open) to 10° (almost all the way closed).
+
+Figure 17. Labeled view of the piping system showing what each of the variables in the EES
+system curve code corresponds to.
+We were interested in how closing the butterfly valve would affect the ratio between the
+Froude number of the main line flow and the Froude number of the branch line flow. We plotted
+this ratio versus the flowrate for each of the valve positions in Figure 18. From this graph, one can
+see that valve actuation has less and less of an effect on the Froude ratio as the flowrate increases.
+We decided that reaching flowrates farther above 1 ft3/s did not give us enough variation in the
+Froude ratio to justify the cost of the large pump the flowrates would require.
+
+31
+
+4
+
+Fr main out / Fr Branch
+
+3.5
+3
+
+Full open
+80 deg
+
+2.5
+
+70 deg
+60 deg
+
+2
+
+50 deg
+1.5
+
+40 deg
+30 deg
+
+1
+
+20 deg
+0.5
+
+Closed
+
+0
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+Flowrate [cubic feet per sec]
+
+Figure 18. The results of the EES system curve code showing how the ratio of Froude numbers
+changes with flowrate and butterfly valve angle.
+The system’s resistance will increase when the butterfly valve closes, and thus require a
+larger pump head. We then plotted the flowrate versus the required pump head curve, show in
+Figure 19 when the butterfly valve is open only 10° in order to find the required pump head
+pressure at our desired flowrate of around 1 ft3/s, or 448.8 GPM.
+From the graph shown in Figure 19, we can see that required pump head at a flowrate of
+448.8 GPM is only 20 feet or about 8.7 psi. Because we are looking at a high flowrate at a relatively
+low pressure, we decided to look for pumps that were designed for use in such conditions.
+Additionally, the site where testing will occur is on the edge of the grid and cannot supply enough
+current to power a large pump. This led us to explore agricultural irrigation pumps, trash pumps,
+and other gasoline or diesel powered pumps that were designed to be non-permanent and pump a
+large amount of water over a small vertical distance.
+
+32
+80
+70
+60
+Head [ft]
+
+50
+40
+30
+20
+10
+0
+0
+
+200
+
+400
+
+600
+
+800
+
+1000
+
+Flowrate [gpm]
+Figure 19. System curve showing the required pump head to obtain a desired flowrate with a
+main line diameter of 6 inches and a 4-inch diameter branch line with the butterfly valve 10°
+open.
+We selected the DuroMax XP904WP gas powered trash pump. We opted for this model
+because it provides a higher maximum flowrate and a lower maximum pressure than similarly
+priced competitors. It has a maximum flowrate of only 427 GPM (0.95 ft3/s) but any pump capable
+of a higher flowrate would cost over $1000 more than the DuroMax. However, we cannot find a
+published pump curve for it. The pump is not often used in a closed system like we have, but rather
+in trash clearing applications where it is not essential to accurately predict pump performance.
+Our initial design had the pump placed in a location that would cause the pump inlet to
+experience less than atmospheric pressure. This puts the pump in danger of experiencing such a
+low water pressure in the wake of the impeller blades that the water begins to cavitate and the
+pump stalls. In order to ensure that this will not happen with this design we decided to look at the
+pressure at the pump inlet (point 4 in Figure 17). We found that at our worst-case scenario, when
+the pump is at its maximum flowrate of 427 GPM, the pressure at the inlet is 1.8 feet of head above
+atmospheric pressure. Because the pump is experiencing greater than atmospheric pressure at the
+inlet we are confident that there is no danger of pump cavitation.
+5.4.6
+
+Scaffolding Analysis
+Another aspect of design to consider is the scaffolding. Due to the lengths and diameters
+of pipe used, struts will be needed so that no sag appears. ASME has standards available to
+determine strut locations for the span of a pipe section, but the standards assume a low bending
+stress of 15.9 MPa [9]. In order to determine a safe enough length based on a more conservative
+method, Equations 12[9] and 13[9] are used:
+
+33
+𝑆𝑆𝑏𝑏 =
+
+�0.0624𝑤𝑤𝐿𝐿2 +0.1248𝑤𝑤𝑐𝑐 𝐿𝐿�𝐷𝐷
+
+𝑦𝑦 =
+
+𝐼𝐼
+
+5𝑤𝑤𝐿𝐿4 +8𝑤𝑤𝑐𝑐 𝐿𝐿3
+384𝐸𝐸𝐸𝐸
+
+(12)
+(13)
+
+where
+𝑆𝑆𝑏𝑏 = Maximum bending stress (N/m2)
+w = uniformly distributed weight of pipeline (N/m)
+L = Span length (m)
+wc = Concentrated weight on pipe line, e.g., flanges, valves, other significant point loads (N)
+D = Outsider diameter of pipe (m)
+I = Moment of Inertia of pipe (m4)
+y = Maximum deflection (m)
+E = Young’s modulus (N/m2)
+To start the analysis, the longest length of pipe was considered since it would set a standard
+for the lengths of the other sections of pipe. Therefore, the length of pipe considered is the
+horizontal distance of the main traveling from the inlet of the tank to the end where the pipe
+connects to an elbow. An initial calculation was done to determine the span length of sag using an
+assumed factor of safety of 10. The result gave a span length of 3.2 m. For a pipe filled with water,
+ASME standard B31.3 results in a less conservative span length of 5.2 m, but this considers only
+the deadweight of the pipe and not any concentrated loads (such as flanges or valves); which means
+that we will be designing our scaffolding such that our design should not overload the support in
+a way that is more cautious than accepted engineering standards. Further analysis was done to
+determine the maximum deflection at a length of 3.2 m and was found to be 8 mm. Since this
+relatively is a high deflection for the purpose of constructing a 25’ pipe section, a table was created
+at smaller lengths of 3.2 m, as shown in Table 3.
+
+34
+Table 3. Range of struts to determine prevention of a system collapse.
+Length
+Maximum
+Between Struts Deflection
+(m)
+(mm)
+3.0
+6.26
+2.8
+4.89
+2.6
+3.75
+2.4
+2.82
+2.2
+2.08
+2.0
+1.49
+1.8
+1.03
+1.6
+0.69
+1.4
+0.43
+1.2
+0.26
+1.0
+0.14
+0.8
+0.07
+0.6
+0.03
+0.4
+0.01
+
+We decided to pick a length between struts of 1.0 m because we wanted to be conservative
+in anticipating the loading of the pipes and components on the scaffolding. This would mean that
+for a length of 25 ft (7.6 m), there would be approximately eight struts for support. PG&E has
+scaffolding available at their yard in Pismo Beach, so we will be able to save money on purchasing
+scaffolding materials. Comparing the amount of pipe support for a past experiment that PG&E
+accomplished, we feel comfortable that the scaffolding will support the weight of our piping
+system.
+5.4.7
+
+Air Compressor Analysis
+In determining the power needs of a desirable air compressor to produce a slug of air, we
+created a rudimentary calculation in EES; the purpose of this calculation was to determine the
+cubic feet per minute (CFM) necessary in order to match the flowrate of water when the pipe is
+initially full. A flow of 18.19 CFM was determined to be necessary for the above assumption as
+shown in Appendix N. To compare this flow with the flows provided by air compressors at a
+pressure, a calculation was done to convert 18.19 cfm to standard cubic feet per minute (SCFM)
+using Equation 14. Using a Pactual value of (6 psi +14.7 psi) and an assumed Tactual value of 70°F
+or 529.67°R Equation 14 gave 25.53 SCFM.
+𝑃𝑃
+
+528 °R
+
+𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎
+𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆 = 𝐶𝐶𝐶𝐶𝐶𝐶 ∗ �14.7
+� ∗ �𝑇𝑇
+𝑝𝑝𝑝𝑝𝑝𝑝
+
+𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎
+
+�
+
+(14)
+
+Looking at air compressors, we decided to select the Makita 10 Gal. Twin Stack Air
+Compressor. This air compressor operates at 84 dBA, provides 14.0 SCFM @ 40 PSI, and is
+powered by gas. Since any noise level above 85 dBA can result in permanent hearing damage, ear
+
+35
+protection may potentially be necessary, but because we will not be exposed to this sound intensity
+for several hours continuously, we won’t make noise protection equipment mandatory.
+Finding an air compressor that could provide the required amount of flow of 25.53 SCFM
+seemed not feasible. The Makita Air Compressor we selected does not provide this amount;
+therefore, before we officially purchase the Makita, we plan on testing out a length of pipe—with
+water passing through—using a cheaper and smaller air compressor in order to see if our
+calculations are guiding us in the right direction.
+
+6 PRODUCT REALIZATION
+Manufacturing of the test rig consists mainly of assembling purchased parts. However,
+some parts need to be manufactured and the large size of the pieces means that the manufacturing
+requires special consideration. Furthermore, to make the project as safe as possible, we will be
+doing all manufacturing and gluing at the Cal Poly machine shops under supervision of the shop
+technicians.
+
+6.1 PURCHASING & ORDERING PARTS
+Our group started off by submitting our bill of materials (BOM) to our sponsor. From there,
+PG&E made the initial purchases based on what we specified for the project. Because there was a
+little shortsightedness within our group, we found that there were parts missing from our original
+bill of materials that we required. There was also a large delay in the time we submitted our BOM
+to the time we received the shipments, ranging from a few weeks to two months until parts arrived.
+We purchased the rest of the parts ourselves from the local hardware store and agricultural supply
+store. Our sponsor reimbursed these orders once we provided him with the complete receipts.
+These purchases can be found in the cost analysis in Appendix Q: Cost Analysis w/ List of Vendors
+& Pricing (Incl. Tax & Shipping).
+
+6.2 SCAFFOLDING ASSEMBLY
+We got the scaffolding from PG&E’s property in Pismo Beach where it had been used for
+a previous project that had been completed. We replicated this configuration when assembling the
+scaffolding at Cal Poly for our project. Before disassembling, we took pictures to have something
+to match the assembly on the Cal Poly campus. Once the metal rods and joints were transported
+via trucks, we used wrenches to attach the rods together using the joints. Once the scaffolding
+assembly was finished, we could begin building the testing rig on top of and around the scaffolding.
+
+6.3 MANUFACTURING VARIOUS LENGTH PIPES (DRAWING NOS. PIPE6IN-XX
+AND PIPE4IN-XX)
+The project required many lengths of PVC pipe to be cut. These cuts did not need to be
+very precise because there is a fair amount of room in the fittings to accommodate differences from
+the specified length. These cuts were made with a large hand saw, as shown in Figure 20, which
+
+36
+was regularly used for the 4” and 6” sized pipes. These drawings are included within Appendix P:
+Detail Part Drawing.
+
+Figure 20. Brett using a hand saw to cut a PVC pipe section.
+
+6.4 MANUFACTURING TEST SECTION ASSEMBLY (DRAWING NO. A2)
+The piece that attaches to the test section and creates the tee-junction for our branch line to
+attach (Drawing NO. TS-2 in Appendix P: Detail Part Drawing) is machined from a 6” by 6” by
+4” block of acrylic. Acrylic is a difficult material to machine, and the large size of the part means
+that it is more prone to cracking. Therefore, we elected to have the part machined with a CNC mill
+by a Cal Poly machine shop technician, Tobias Shirts. This part is shown in Figure 21. Because
+the blocks were not exactly the 6” by 6” by 4” blocks we thought they’d be, the first time a block
+was machined, the counterbore was off centered. We elected to redo the machining with the second
+block we ordered after changing the datum from an outside corner to the center of the part. This
+change allowed us to machine a perfectly centered counterbore with high tolerances.
+
+Figure 21. Manufactured acrylic block.
+
+37
+The clear length of the main line that makes up the majority of our test section (Drawing
+NO. TS-1 in Appendix P: Detail Part Drawing) is size 6 schedule 40 clear PVC pipe. We used a
+hand drill tool and a combination of a center drill and a hole saw to create the 4.03” diameter hole
+in the side of the pipe. We opted for a slow cutting speed to avoid cracking the pipe. This
+manufacutring process is shown in Figure 22.
+We attempted to join the two parts with Weld-On® 4SC™ which was order by accident
+instead of the correct Weld-On® 40™. Weld-On® 40™ is an adhesive designed to join acrylic to
+polyester, butyrate, polycarbonate, PVC and other materials whereas Weld-On® 4SC™ is only
+designed to join acrylic to acrylic. The Technical and Material Safety Data Sheet for this product
+appear in Appendix R. After letting the Weld-On® 4SC™ dry, we found that the glue did not
+adhere the two pieces and realized the error in ordering. We then opted to use clear PVC primer
+and cement, which worked well and bonded the acrylic block to the clear PVC pipe. To add extra
+leak security of the two parts, we applied a bead of silicon sealant around the joint.
+
+Figure 22. Brett drilling a center hole while Brian holds
+the pipe steady.
+
+6.5 MANUFACTURING MODIFIED TANK (DRAWING NO. M1-TANK)
+We were given a tank 4 feet in diameter by PG&E that had been used for a previous project.
+However, this tank did not have the holes that our project required to connect the pipes. We
+modified the tank by measuring the locations of the holes’ centers with a tape measure. We ensured
+that the 6” hole on the bottom of the tank was directly opposite the other two holes by measuring
+the tank’s circumference and dividing it by two. After we located the holes, we measured out the
+real outer diameter of the pipe, 6.625” for size 6 pipe, or 4.500” for size 4 pipe, and drew the
+required hole size onto the tank with a sharpie. A 4” hole saw with a center drill removed the
+majority of the material within each of the marked circles. We used a reciprocating saw to carefully
+remove additional material until the thickness of the line was the sole remainder of material that
+needed to be removed. This last bit of material was ground off with a curved file by hand until
+each of the pipes fit in their respective holes.
+
+38
+
+6.6 MANUFACTURING ORIFICE PLATE
+Initially, we wanted to have a flowmeter in the branch line to be able to measure the flow
+rate. After proposing this idea to engineers at PG&E, we decided to opt for an orifice plate instead,
+saving them money and exposing us to alternate methods of measuring flow.
+To determine the flowrate through the 4” offtake branch, we needed to create and install an orifice
+plate. This orifice consisted of 1x1 foot 16-gauge steel plate. During manufacturing, we drilled
+eight 3/4” clearance holes for 5/8” bolts in a circular orientation to pair with 4” flanges on either
+side. This process of the manufacturing is displayed in Figure 23.
+The 3” center hole was drilled out with a hole saw of appropriate size as shown in Figure
+24. The hole saw was cooled and lubricated with cutting oil. We then cut and ground down the
+edges to create a more circular plate.
+
+Figure 23. Brian drilling holes into a steel plate to form the orifice plate.
+
+Figure 24. A hole saw was used to drill the
+main section of the orifice.
+
+39
+
+6.7 ASSEMBLING THE COMPRESSED AIR HOSE LINE
+After our Critical Design Review with our sponsors at Diablo Canyon, we decided to
+completely assemble on Cal Poly’s campus. This opened up the possibility to use the machine
+shop’s compressed air to insert air into our test rig piping. After scrapping the air compressor idea,
+we considered how we were going to design and manufacture the air hose line. The compressed
+air line was mostly assembled of purchased pieces that were threaded together with Teflon tape.
+One part that we needed to include in the hose assembly was a control valve. However,
+because the flow control valve had a push-to-connect fitting for 3/8” OD tube, we needed to cut
+down a piece of ¼” copper tubing, which has a 3/8” OD, and solder it into a copper ¼” tube to ¼”
+NPT adapter.
+
+Figure 25. Brett installing the air flow control valve on the air
+line with wrenches to compress the Teflon tape.
+
+6.8 CREATING WATER LEVEL MEASUREMENT DEVICE
+In order to measure the water level depth at the intersection of the main line, we created a
+transparent ruler to be taped onto the pipe. We used the Matlab software to create increments of
+1/8" starting from the bottom center of the main line to the top center of the main line to create a
+ruler that would represent the vertical height when taped onto a curved surface. For more
+information, refer to Appendix T: Ruler Matlab Code.
+Next, a SolidWorks drawing was created for the ruler. The lines of the ruler were
+dimensioned per the vertical equivalent of a curved height, then renamed so that the distance of
+the line on the ruler was spaced accurately. But the number given to each increment corresponded
+only to the vertical height of any point on a curved surface. This is because we are only interested
+in this height when recording when a vortex occurs. Because we are not interested with
+measurements regarding the outer diameter of the main pipe, we accounted for the thickness of the
+
+40
+main line and started the ruler at the bottom part of the inner diameter and ended the ruler at the
+top part of the inner diameter.
+After the ruler was created and labeled with proper inch increments, we used the printing
+service from the Cal Poly Print & Copy shop to print the ruler on an 8.5” by 11" transparent page.
+This assembly is shown in Figure 26.
+
+Figure 26. Transparent ruler taped to the main line.
+
+6.9 ASSEMBLING WIRING
+Wiring made up a large part of the electronics that had to be connected for the project to
+work. First, the Omega FTB740 turbine flowmeter (Appendix U: Omega FTB740 Turbine
+Flowmeter Spec Sheet) was connected to an Omega DPF701 display (Appendix V: Omega
+DPF701 Display Meter), the same way it was given to us by PG&E. We also needed to connect a
+pressure transducer for the orifice plate to the same display to read a voltage corresponding to a
+differential pressure. To feed both connections into the same display, we had to wire in a double
+pole double throw (DPDT) on/on switch onto the back of the display meter. Now once both devices
+were connected properly to the display, we had to power them. The flowmeter already came with
+a power cord, but the transducer did not. To power it, we installed a power converter to supply
+24V DC power to the transducer.
+However, the Omega display could only be used for totalizing rate inputs and would not
+display the transducer reading as it was a steady voltage and not the oscillating frequency that the
+display looks for and analyzes in signals. Instead we used a 250-ohm resistor across the signal
+output of the transducer and the negative of the power supply. This created a 1V to 5V voltage
+from the transducer’s output that we read with a Fluke Multimeter. The wiring diagram for the
+pressure transducer is shown below in Figure 27.
+
+41
+
+Figure 27. The wiring diagram for the pressure transducer connected to the DC power supply and
+a multimeter as the device input.
+
+6.10 TOTAL ASSEMBLY (DRAWING NO. A1)
+The final assembly of the test rig was assembled at Mustang ’60 machine shop once the
+individual parts were manufactured. This assembly was built as per the drawing found in Appendix
+O. Each of the socket connections will be joined together using PVC primer and PVC solvent glue,
+also known as PVC cement, shown in Figure 27. All socket connections will be cleaned, sanded,
+and primed before gluing takes place. The solvent glue that will be used is Harvey P-12 heavy
+bodied PVC cement, which is designed to solvent weld schedule 40 and schedule 80 PVC items
+up to 12" in diameter. We will also use Harvey Purple Solvent to properly prepare the pipes and
+fittings for the cement. The Material Safety Data Sheets for both the cement and primer are found
+in Appendix S. Flanged joints will be bolted together with the appropriate sized bolts. For the 6”
+flanges on either side of the butterfly valve, we used 3/4” threaded rods and 3/4” washers and nuts
+to secure the fitting. For the 4” flanges on either side of the butterfly valve and the orifice plate,
+we used 5/8” threaded rods and 5/8” washers and nuts to secure the fittings. Because bolts with
+half threads on the shaft would not work with our valves, we needed to cut our own steel rods to
+approximately 7” in length. Figure 28 shows how the threaded rods were cut to length with an
+abrasive shop saw. The ends of the threaded rods were then beveled on the belt sander.
+
+42
+
+Figure 28. Brett applying primer to a flange fitting and
+PVC pipe.
+
+Figure 29. Brian using an abrasive cut-off saw to cut steel
+rods.
+
+43
+
+6.11 OVERALL PROTOTYPE
+The overall prototype came together largely following our original design along with new
+changes to the testing rig. One major change was the way in which we inserted compressed air
+into the piping. Rather than using an air compressor, we used the machine shop’s compressed air.
+Another change was the specific pump that we used. Our calculations led us to select the DuroMax
+XP904WP gas powered trash pump which we thought we would need to purchase or rent. To
+conserve our budget, our sponsor put us in contact with Quinn CAT Rental Services who provided
+us with a Multiquip QP4TH pump to rent for free. This added a small change to our designed
+system, changing the maximum calculated flowrate we could achieve from the previous 427 gpm
+to the new 550 gpm. We also added a second butterfly valve in line with the 4” branch line to allow
+for additional flowrate adjustments throughout the system. The orifice plate replaced the second
+turbine flowmeter that we had designed for initially, where we then had to design and manufacture
+the plate and wiring to the differential pressure transducer. All of these changes can be seen in the
+final design CAD rendering in Figure 30 and compared to the actual final prototype in Figure 31
+and 32. Figure 33 shows a close up of the butterfly valves that act to regulate the two inlets to the
+water tank.
+
+Figure 30. Solidworks CAD drawing of the final design of the testing rig.
+
+44
+
+Figure 31. Frontal view of the complete prototype of our vortexing test rig.
+
+Figure 32. Additional isometric view of the testing rig.
+
+45
+
+Figure 33. Both butterfly valves for the 6” & 4" pipes.
+
+7 DESIGN VERIFICATION & TESTING
+After the manufacturing was completed, we were finally able to test the rig. Rather than
+the usual product testing such as stress analysis and function assessments, our tests consisted of
+determining when a vortex forms, along with other parameters we chose to test for in our Design
+Verification Plan. When testing, we had one person operating and closing the valves, while another
+group member read the water height in the main line. The third member tabulated the data called
+out on a laptop computer. A computer was the only additional tool necessary to complete the
+testing phase of the project. Our original objective was to change flowrates in the main and branch
+lines and rotate the main line to observe multiple critical submergence depths at which the vortex
+forms. To get as many data points as possible, we configured a testing plan. We looked to set up
+three trials for each case for the three different offtake angles of the main line, along with closing
+the butterfly valve from 0 to 90° in 10° increments to see when a vortex would form. This will
+provide us with a total of 90 trials. Unfortunately, this testing did not come to fruition for a few
+reasons.
+
+7.1 ORIFICE PLATE CALIBRATION
+Before we could begin testing and collecting any data that we could, we first had to
+calibrate the orifice plate. There is no flowrate display associated with the orifice, so we had to
+
+46
+conduct a procedure using the turbine flowmeter. In order to use the orifice plate to measure flow,
+we cut off all of the flow going through the main line, so that all of the flow would be redirected
+to the branch line. We then would record the pressure drop using a pressure transducer connected
+to the display after setting a flowrate on the pump and reading it from the turbine flowmeter.
+
+7.2 DESIGN ALTERATIONS
+Our group had to alter our testing because we found it hard, if not impossible, to rotate the
+main line without the flexible hose buckling and kinking. This would just add large pressure losses
+and restrict flow through the branch line, defeating the purpose of this machine. Therefore, we
+settled with just testing one offtake angle, 90° downward; however, if more time was available, it
+would have been possible to test for the three different angles with three separate hoses.
+
+7.3 TESTING COMPLICATIONS
+As we began to test for the orifice plate calibration, we noticed that there was only one
+readout from the display. Prior, we discussed how we installed a DPDT on/on/on switch on the
+back of the display. One of the connections to this switch appeared to be faulty and did not show
+a value. To determine which one was defective, we removed the connection to the pressure
+transducer and just used a multimeter to read the voltage coming from the device. That left only
+the flowmeter, and we found that it was not outputting values to the display. In an attempt to figure
+out if there was a loose wire within the flowmeter that would cause it to not transmit a value, we
+removed the housing. Because we did not know how the flowmeter was constructed, this removal
+allowed water to pour out. During this operation, water landed on the display circuitry and shorted
+it out, giving us no way to read a flowrate. At this point, we concluded that we could not get any
+numerical, quantitative results from this experiment with the time left in the project schedule, with
+only a week left. What followed was an attempt at getting qualitative results to inform the reader
+at what point vortexes form.
+
+7.4 TESTING RESULTS
+To conduct qualitative testing with the equipment we had left, we followed a procedure
+mapped out to us by our sponsor. First, we filled the tank to its maximum height, approximately 6
+feet, which allowed us to completely fill the 6” main line, while keeping the branch line closed.
+From this point while running the system, we slowly opened the branch line valve to lower the
+main line water level, until the air reached about 5, 10, and 15% area at the top of the pipe. These
+area percentages correspond to a distance of 0.59, 0.95, and 1.26 inches respectively from the top
+of the pipe. At each of these levels, we opened the branch line valve to allow air and water to travel
+downward creating the vortex.
+When the main line valve is fully open, the majority of the flow passes by the tee and the
+stratified flow is not greatly influenced by the branch line. When we close the valve, the water is
+slowed down and experiences a hydraulic jump which forces the air out of the way and the water
+fills the full bore of the pipe. This traps any air present within the pipe and, as the zone of slow
+moving water grows, pushes the hydraulic jump phenomena upstream towards the tee. The
+
+47
+location of the hydraulic jump is the cause of gas ingestion because flow disturbance causes
+bubbles to break away from the stratified flow, which then get ingested into the branch line.
+However, this behavior only occurred when gas accounted for more than around 40% of the crosssectional area.
+Another way we tried to get quantitative data was to find the point at which a vortex formed
+at full pump speed. Since the flowmeter was inoperable, there was no way to verify the speed at
+which the fluid was running at, making it impossible to calculate Froude numbers. However, we
+had the pump curve for full operating speed and we knew the maximum speed, so in essence we
+could run the system and obtain data for one point. Unfortunately, when attempting to obtain data
+at this speed, the hose located at the tee junction almost burst when the main line valve was slowly
+closed. When running the system at the same maximum pump speed, but tinkering with
+components at a slower pace, we still could not obtain a vortex.
+
+8 CONCLUSION & RECOMMENDATIONS
+8.1 UNIONS VS FLANGES
+One large obstacle of this project was the leakages through unions installed throughout the
+testing rig. As stated above in Maintenance & Repair Considerations, we had difficulty completely
+tightening the unions to a point where water was not able to escape the system. We first could only
+tighten them by hand, which was not enough torque applied to create a perfect seal. After searching
+for a strap wrench large enough to fit a 6” or 8” wide union at our local hardware stores, we devised
+our own tool consisting of a waist belt and a ratchet strap. This worked well enough to create a
+constant seal and stopped the leaks. But this device was far from ideal. We found that the flanges
+in our system work well and provide no leaks whatsoever. We would wholly advise the use of
+flanges rather than unions in any future development because they are easier to rotate and seal
+back up once the main line is at its desired offtake angle.
+
+8.2 USE BULKHEAD FITTINGS ON TANK
+We had many issues with water getting past the silicon sealant at the intersecting fitting of
+the tank outlet hole and the PVC pipe. We attempted to lather the sealant generously to fill gaps
+and make it watertight. Unfortunately, the water often found a way to get past the silicon seal.
+Another problem we faced was that as we filled the tank with more volume of water, the pressure
+and outward force on the elbow at the tank outlet overpowered the seal and pushed the fitting away
+from the tank. Therefore, we recommend purchasing a 6” bulkhead fitting to install at the bottom
+outlet to the tank. This would provide a sure way to completely seal this intersection and save days
+if not weeks of attempting to re-glue the seal. The only downside is that one of these bulkhead
+fittings cost upwards of $300. However, to save money, we used a piece of rectangular wood to
+provide compressive support at the pipe outlet to counteract the force of the water flowing out of
+the tank and maintain the seal.
+
+48
+
+8.3 FLEXIBLE TUBING ALTERNATIVES
+As stated above in Section 7, we were forced to cut the flexible tube for only one offtake
+angle measurement due to excessive buckling at the slightest bend. If time permitted or our sponsor
+wanted to continue testing with a secondary team, we would recommend looking into other types
+of flexible hose that could hold firm their circular shape as one bent the tube.
+
+9 MANAGEMENT PLAN
+9.1 TEAM RESPONSIBILITIES
+Our group agreed on individual responsibilities regarding this project. Brett was the
+communication officer who was the main point of contact with our sponsor and the project team
+at PG&E. Brett was also in charge of setting up and coordinating any meetings over the span of
+the project, along with relaying topics addressed in meetings to other members, or the sponsor, if
+they are absent. Brian acted as the team treasurer, maintaining the team’s travel and materials
+budget throughout the project. Ryan was the recorder of meetings and kept track of the team’s
+progress of the yearlong project and oversaw the deadlines of deliverables. Regarding team
+meeting leads, we decided to share the role when meeting our advisor, sponsor, and as a team.
+Also, we ensured that the meeting rules are followed as per our team contract provided to Anderson
+Lin on October 6, 2016.
+
+9.2 SCHEDULE
+For a clear view of our schedule throughout the year long project, please refer to Appendix
+H for a Gantt chart. This chart allowed us to keep on schedule and determine if we were off track.
+This provided us with a tool to visually map out every step of the project, from idea generation to
+manufacturing dates.
+
+APPENDICES
+A.
+B.
+C.
+D.
+E.
+F.
+G.
+H.
+I.
+J.
+K.
+L.
+
+QFD – House of Quality
+2500 ppm Boric Acid Engineering Equation Solver File
+Pugh Matrices
+Morphological Chart
+Final Decision Matrix
+Flowrate Ratio Verification EES File
+Design Safety Hazard Identification Checklist
+Gantt Chart
+Failure Modes and Effects Analysis
+Design Verification Plans
+Scaffolding Analysis
+Entrance Length Analysis
+
+49
+M.
+N.
+O.
+P.
+Q.
+R.
+S.
+T.
+U.
+V.
+
+Pump Selection Analysis
+Air Compressor Analysis
+Design Assembly with Bill of Materials (Drawing No. A1)
+Detail Part Drawing
+Cost Analysis w/ List of Vendors & Pricing (Incl. Tax & Shipping)
+Weld-On Literature & MSDS
+Harvey P-12 Cement & Primer MSDS
+Ruler Matlab Code
+Omega FTB740 Turbine Flowmeter Spec Sheet
+Omega DPF701 Display Meter Spec Sheet
+
+REFERENCES
+[1]
+Industrial Zone, Steel Pipelines and Valves. Digital image. Shutterstock.
+Web. 14 Nov. 2016.
+[2]
+Munson, Bruce Roy, T. H. Okiishi, Wade W. Huebsch, and Alric P.
+Rothmayer. Fundamentals of Fluid Mechanics. Hoboken, NJ: John Wiley & Sons, 2013.
+Print. http://dx.doi.org/10.4236/wjet.2014.23024
+[3]
+Gavilán Moreno, C.J. (2014) Determining Critical Submergence in Tanks
+by Means of Reynolds & Weber Numbers. World Journal of Engineering and
+Technology, 2, 222-233.
+[4]
+“Vortexing.” The Columbia Electronic Encyclopedia. 2013. Columbia
+University Press 23 Oct. 2016.
+[5]
+
+The Vortex. J. B. Calvert, 6 Mar. 2003. Web 23 Oct 2016.
+
+[6]
+Sheikhi, Yaser, and Lashkar-Ara, Babak. “Evaluation of Critical
+Submergence for Horizontal Intakes.” IAHR, 2015. Web.
+[7]
+Oct. 2016.
+
+“Chapter 7. Fundamental Theorems: Vorticity and Circulation.” Web. 26
+
+[8]
+Clift, R., John R. Grace, and Martin E. Weber. "Chapter 12, Section III.
+Breakup of Drops and Bubbles." Bubbles, Drops, and Particles. New York: Academic,
+1978. 342-46. Print.
+[9]
+Vakharia, D. P., Dr, and Mohd. A. Farooq. "Determination of Maximum
+Span between Pipe Supports Using Maximum Bending Stress Theory." International
+Journal
+of
+Recent
+Trends
+in
+Engineering
+1.6
+(2009):
+1-4.
+Http://ijrte.academypublisher.com/. The International Journal of Recent Trends in
+Engineering, 6 May 2009. Web. 1 Feb. 2017.
+
+50
+
+APPENDIX A: QFD - HOUSE OF QUALITY
+
+51
+
+APPENDIX B: 2500 PPM BORIC ACID EES FILE
+
+52
+
+APPENDIX C: PUGH MATRICES
+
+53
+
+54
+
+55
+
+APPENDIX D: MORPHOLOGICAL CHART
+
+56
+
+APPENDIX E: FINAL DECISION MATRIX
+
+57
+
+APPENDIX F: FLOWRATE RATIO VERIFICATION EES FILE
+
+58
+
+APPENDIX G: DESIGN SAFETY HAZARD IDENTIFICATION
+CHECKLIST
+
+59
+
+APPENDIX H: GANTT CHART
+
+60
+
+61
+
+APPENDIX I: FAILURE MODE AND EFFECT ANALYSIS
+
+62
+
+APPENDIX J: DESIGN VERIFICATION PLANS
+
+63
+
+APPENDIX K: SCAFFOLDING ANALYSIS
+
+64
+
+65
+
+APPENDIX L: ENTRANCE LENGTH ANALYSIS
+
+66
+
+APPENDIX M: PUMP SELECTION ANALYSIS
+
+67
+
+68
+
+69
+
+70
+
+71
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+108
+
+APPENDIX N: AIR COMPRESSOR ANALYSIS
+
+114
+
+APPENDIX O: DESIGN ASSEMBLY WITH BILL OF MATERIALS (DRAWING NO. A1)
+
+115
+
+APPENDIX P: DETAIL PART DRAWING
+A0. Overall Assembly
+M1. Modified Plastic Tank
+M2. Tapped Pipe for Air Inlet
+HOSE4IN. 4” Flexible Hose for Branch
+PIPE4IN-XX.XX. Various Lengths of 4” Pipe
+PIPE6IN-XX.XX Various Lengths of 6” Pipe
+A2. Test Section
+TS-1. Test Section Main Section
+TS-2. Block to Mount Branch on Main
+A3. Scaffolding
+
+116
+
+117
+
+118
+
+119
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+APPENDIX Q: COST ANALYSIS W/ LIST OF VENDORS &
+PRICING (INCL. TAX & SHIPPING)
+
+127
+
+128
+
+APPENDIX R: WELD-ON LITERATURE & MSDS
+
+129
+
+130
+
+131
+
+132
+
+APPENDIX S: HARVEY P-12 PVC CEMENT & PRIMER MSDS
+
+133
+
+134
+
+135
+
+136
+
+137
+
+138
+
+139
+
+140
+
+141
+
+142
+
+143
+
+144
+
+145
+
+146
+
+147
+
+148
+
+149
+
+150
+
+151
+
+152
+
+153
+
+APPENDIX T: RULER MATLAB CODE
+
+154
+
+155
+
+APPENDIX U: OMEGA FTB740 TURBINE FLOWMETER SPEC
+SHEET
+
+156
+
+APPENDIX V: OMEGA DPF701 DISPLAY METER SPEC SHEET
+
+

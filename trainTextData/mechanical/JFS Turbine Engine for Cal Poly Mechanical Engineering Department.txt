@@ -1,0 +1,2580 @@
+JFS Turbine Engine for Cal Poly Mechanical Engineering Department
+Final Design Review
+Sponsor: Dr. Patrick Lemieux
+06/15/17
+
+Dorian Capps
+dcapps@calpoly.edu
+
+Zoe Tuggle
+jtuggle@calpoly.edu
+
+1
+
+JFS Turbine Engine for Cal Poly Mechanical Engineering
+by
+Zoe Tuggle
+Dorian Capps
+
+Project Advisor: Peter Schuster
+Instructor’s Comments:
+
+Instructor’s Grade: ______________
+Date: _________________________
+
+2
+
+Statement of Disclaimer
+Since this project is a result of a class assignment, it has been graded and accepted as fulfillment of the
+course requirements. Acceptance does not imply technical accuracy or reliability. Any use of
+information in this report is done at the risk of the user. These risks may include catastrophic failure of
+the device or infringement of patent or copyright laws. California Polytechnic State University at San
+Luis Obispo and its staff cannot be held liable for any use or misuse of the project.
+
+3
+
+Table of Contents
+List of Figures ................................................................................................................................................ 7
+List of Tables ................................................................................................................................................. 8
+Abstract/Executive Summary...................................................................................................................... 10
+Chapter 1: Introduction .............................................................................................................................. 10
+Sponsor Background ............................................................................................................................... 10
+Problem Definition .................................................................................................................................. 10
+Objectives/Specification Development .................................................................................................. 10
+Chapter 2: Background ............................................................................................................................... 13
+The JFS-100 Engine ................................................................................................................................. 13
+The JFS Turbine Lab at Cal Poly ............................................................................................................... 15
+Benchmarking ............................................................................................................................................. 20
+Pulse Detonation Combustors at University of Cincinnati.................................................................. 20
+JFS Hobbyist Projects .......................................................................................................................... 20
+Cal Poly BRAE Turbine Senior Project ................................................................................................. 22
+MiniLab and TurboGen ....................................................................................................................... 23
+Gas Turbine Laboratory Activities ....................................................................................................... 25
+Benchmarking Summary ..................................................................................................................... 26
+Chapter 3: Design Development ................................................................................................................. 27
+Turbine Disassembly ............................................................................................................................... 27
+Material Characterization ....................................................................................................................... 28
+Design Point Thermodynamic and Stress Models .................................................................................. 29
+3-D CAD Model........................................................................................................................................ 32
+Instrumentation ...................................................................................................................................... 33
+Stage 1: Compressor Inlet ................................................................................................................... 33
+Stage 2: Compressor Exit .................................................................................................................... 33
+Stage 3: Gas Generator Turbine Inlet ................................................................................................. 33
+Stage 4: Power Turbine Inlet ............................................................................................................... 35
+Stage 5: Engine Exhaust ...................................................................................................................... 40
+Redundant Throttle Position Sensor ....................................................................................................... 40
+Laboratory Activity .................................................................................................................................. 43
+Design Development Summary .............................................................................................................. 44
+Chapter 4: Description of Final Design........................................................................................................ 45
+4
+
+Instrumentation ...................................................................................................................................... 45
+Stage 1: Compressor Inlet ................................................................................................................... 45
+Stage 2: Compressor Exit .................................................................................................................... 45
+Stage 3: Gas Generator Turbine Inlet ................................................................................................. 46
+Stage 4: Power Turbine Inlet ............................................................................................................... 46
+Stage 5: Engine Exhaust ...................................................................................................................... 48
+General Instrumentation Information ................................................................................................ 49
+JFS Primary Starter .................................................................................................................................. 49
+Software Programming and Shutoff Algorithms ................................................................................. 50
+Redundant Throttle Position Sensor ....................................................................................................... 51
+System Overview................................................................................................................................. 51
+Position Sensor.................................................................................................................................... 52
+Helical Coupling................................................................................................................................... 53
+Sensor Bracket .................................................................................................................................... 53
+Base Plate ............................................................................................................................................ 54
+Cost Analysis and BOM ........................................................................................................................... 54
+Laboratory Activity .................................................................................................................................. 55
+Chapter 5: Manufacturing and Assembly ................................................................................................... 55
+Manufacturing ........................................................................................................................................ 55
+Stage 4 Senor Housing ........................................................................................................................ 55
+Containment Ring ............................................................................................................................... 56
+Power Turbine Housing ....................................................................................................................... 59
+Throttle Position Sensor...................................................................................................................... 60
+Assembly ................................................................................................................................................. 61
+Chapter 8: Testing and Design Verification ................................................................................................ 68
+Thermocouple Testing ............................................................................................................................ 68
+Sensor Calibration ................................................................................................................................... 69
+Shutoff Algorithms .................................................................................................................................. 70
+Engine Startup......................................................................................................................................... 70
+Chapter 9: Conclusions and Recommendations ......................................................................................... 71
+APPENDIX A ................................................................................................................................................. 72
+House of Quality ..................................................................................................................................... 72
+Design Safety Hazard Checklist ............................................................................................................... 73
+5
+
+APPENDIX B ................................................................................................................................................. 75
+Drawing Packet ....................................................................................................................................... 75
+JFS-100 Engine .................................................................................................................................... 75
+Stage 4 Instrumentation ..................................................................................................................... 77
+Throttle Position Sensor...................................................................................................................... 79
+APPENDIX C ................................................................................................................................................. 82
+Vendor List .............................................................................................................................................. 82
+McMaster-Carrr .................................................................................................................................. 82
+DigiKey ................................................................................................................................................ 82
+Omega ................................................................................................................................................. 82
+Grainger .............................................................................................................................................. 82
+Honeywell Sensing .............................................................................................................................. 82
+APPENDIX D................................................................................................................................................. 83
+Vendor Specification Sheets ................................................................................................................... 83
+Thermocouples ................................................................................................................................... 83
+Pressure Transducers .......................................................................................................................... 84
+Potentiometer ..................................................................................................................................... 90
+APPENDIX E ................................................................................................................................................. 91
+Supporting Analysis................................................................................................................................. 91
+Test Data ................................................................................................................................................. 92
+APPENDIX F ................................................................................................................................................. 94
+Gantt Chart ............................................................................................................................................. 94
+APPENDIX G................................................................................................................................................. 96
+Indented BOM......................................................................................................................................... 96
+Design Verification Plan ...................................................................................................................... 97
+APPENDIX H................................................................................................................................................. 98
+References .................................................................................................................................................. 99
+
+6
+
+List of Figures
+Figure 1. LTV A-7 Corsair II in flight [2] ....................................................................................................... 14
+Figure 2. Cutaway schematic of the JFS-100 engine [4] ............................................................................. 15
+Figure 3. Close-up of the compressor intake after the JFS was installed in Cal Poly's Engines Lab ........... 16
+Figure 4. Completed installation of the JFS in the test cell. ........................................................................ 17
+Figure 5. Schematic of JFS-100 Turbine Engine .......................................................................................... 17
+Figure 6. Stator for the power turbine, almost completely disintegrated ................................................. 19
+Figure 7. Gas-generator turbine blades after over-temperature condition ............................................... 19
+Figure 8. Pulse Detonation Combustion test rig ......................................................................................... 20
+Figure 9. The original Turbokart, powered by a JFS-100 engine [9] ........................................................... 21
+Figure 10. JFS-100 engine driving the propeller of a home-built aircraft [10]........................................... 21
+Figure 11. GTP350-51 turbine engine upon completion of the 2012 senior project work[11] ................. 22
+Figure 12. TurboGen laboratory unit sold by Turbine Technologies[12] .................................................... 23
+Figure 13. User interface of the TurboGen laboratory engine [12] ............................................................ 24
+Figure 14. Instrumentation on the SR-30 turbojet engine [12] .................................................................. 24
+Figure 15. Energy balance of the SR-30 turbojet engine [13] ..................................................................... 25
+Figure 16. JFS-100 Engine........................................................................................................................... 27
+Figure 17. P.T. rotor……………………………………………………………………………………………………………………………….27
+Figure 18. Containment Ring Front………………………………………………………………………………………………………..27
+Figure 19. Containment Ring Rear ............................................................................................................. 27
+Figure 20. P.T. Inlet Guide Vanes…………………………………………………………………………………………………………..27
+Figure 21. Gas Generator Turbine............................................................................................................... 28
+Figure 22. Portable XRF Analyzer [17] ........................................................................................................ 28
+Figure 23. 3-D model of the JFS hot section, exploded view ...................................................................... 32
+Figure 24. Cross section of JFS assembly, gas flow-path is right to left ...................................................... 32
+Figure 25. Air-start rakes at Stage 3 ........................................................................................................... 34
+Figure 26. Stage 3 Initial Design Instrumentation Assembly ...................................................................... 35
+Figure 27. Target Stage 4 instrumentation location ................................................................................... 36
+Figure 28. Stage 4 instrumentation layout ................................................................................................. 36
+Figure 29.Stage 4 temperature instrumentation ........................................................................................ 37
+Figure 30. Stage 4 Thermocouple Port ...................................................................................................... 37
+Figure 31. Stage 4 pressure instrumentation ............................................................................................. 38
+Figure 32. Stage 4 Pressure Port ................................................................................................................ 39
+Figure 33. Radial location of the stage 4 instrumentation, upstream of the air-start rakes ..................... 40
+Figure 34. Existing fuel control system ....................................................................................................... 41
+Figure 35. Close-up of fuel plunger ............................................................................................................ 41
+Figure 36. Soft-jaw coupling (left) versus helical coupling (right). [McMaster-Carr] ................................ 42
+Figure 38. JFS Intake System…………………………………………………………………………………………………………………45
+Figure 39. Stage 1 Instrumentation ............................................................................................................ 45
+Figure 40. Stage 2 Instrumentation ............................................................................................................ 46
+Figure 42. CAD Model of Stage 4 Sensor Housing…………………………………………………………………………………..46
+Figure 43. Internal Geometry of the Sensor Housing ................................................................................. 47
+7
+
+Figure 44. Final drawing of sensor housing for stage 4 .............................................................................. 48
+Figure 45. Stage 5 Instrumentation ........................................................................................................... 49
+Figure 46. Inside of dyno control Box…………………………………………………………………………………………………….49
+Figure 47. Inputs to dyno control box ......................................................................................................... 49
+Figure 41. Photo of electrical starter installed on JFS ................................................................................ 50
+Figure 48. Entire TPS assembly ................................................................................................................... 52
+Figure 49. Exploded view of TPS assembly ................................................................................................. 52
+Figure 50. CTS Series 026 Rotary Potentiometer, Panel-Mount ................................................................ 53
+Figure 51. Cost Analysis .............................................................................................................................. 54
+Figure 52. Final Sensor Housing Part with Drawing………………………………………………………………………………..55
+Figure 53. Sensor Housing Installed on Tee fitting w/ Thermocouple........................................................ 56
+Figure 54. End of sensor housing with the thermocouple and copper crush washer installed ................. 56
+Figure 55. Power Turbine Containment Ring .............................................................................................. 57
+Figure 56. Spare Containment Ring Being Machined on Jim’s TM-1 .......................................................... 58
+Figure 57. Straight-Flute Drill Bit................................................................................................................. 58
+Figure 58. Final Machining of Actual Containment Ring............................................................................. 59
+Figure 59. Aluminum vice jaws………………………………………………………………………………………………………………60
+Figure 60. Power Turbine Machining Setup................................................................................................ 60
+Figure 61. Base plate machining setup ....................................................................................................... 60
+Figure 62. Stage 3 instrumentation port..................................................................................................... 61
+Figure 63. Stage 3 thermocouple inserted through the air-start rakes ...................................................... 61
+Figure 64. Power turbine IGV ring ready for installation ............................................................................ 62
+Figure 65. IGV ring installed in the gas-generator assembly, with the bolts safety-wired ......................... 62
+Figure 66. Thermal insulation wrapped around containment ring prior to installation............................. 63
+Figure 67. Containment ring installed in power turbine housing ............................................................... 63
+Figure 68. Stage 4 instrumentation installed in power turbine .................................................................. 64
+Figure 69. Stage 4 thermocouple location .................................................................................................. 65
+Figure 70. Preparing to mate the gas generator and power turbine assemblies ....................................... 65
+Figure 71. Fully assembled and instrumented engine ................................................................................ 66
+Figure 72. Installing the engine on the dynamometer ............................................................................... 67
+Figure 73. Engine fully installed and hooked up to the dynamometer ...................................................... 68
+Figure 74. Controller interface including Hypercell display ........................................................................ 69
+Figure 75. Testing over-speed shutoff conditions using a signal generator ............................................... 70
+Figure 76. The dream team! ....................................................................................................................... 71
+
+List of Tables
+Table 1. Technical Specifications ................................................................................................................ 11
+Table 2. Summary of benchmarking efforts ............................................................................................... 26
+Table 3. Summary of XFR Results ................................................................................................................ 29
+Table 4. Summary of thermodynamic analysis results ............................................................................... 31
+Table 5. Design point stress analysis........................................................................................................... 31
+Table 6. Summary of stress analysis at design point .................................................................................. 31
+Table 7. Summary of Important Design Decisions ..................................................................................... 44
+8
+
+Table 8. Programmed warning and shut-off limits ..................................................................................... 51
+Table 9. Worst-case stress analysis results at shut-off conditions ............................................................. 51
+Table 10. Results from preliminary thermocouple testing ......................................................................... 68
+
+9
+
+Abstract/Executive Summary
+This project concerns the development of a gas turbine engine laboratory activity for use in one of Cal
+Poly’s technical elective courses in the Mechanical Engineering Department, ME 444: Combustion
+Engine Design. The class is taught by Dr. Patrick Lemieux, who is also in charge of the on-campus engines
+lab where the turbine engine will be installed. The engine itself is a JFS-100-13A turboshaft engine that
+will be coupled to an electric dynamometer inside of the dyno test cell. Students taking the ME 444
+class, likely starting in Winter Quarter of 2018, will be able to perform hands-on experiments using the
+JFS-100 to gain insight into the types of components, operating theory, and critical parameters of gas
+turbine engines.
+
+Chapter 1: Introduction
+Sponsor Background
+One of Cal Poly Mechanical Engineering's popular technical elective courses, ME 444: Combustion
+Engine Design, includes a laboratory portion where students work in the Engines Lab to test and
+characterize real engines. In order to enhance this hands-on learning experience, a laboratory activity is
+being developed to investigate the performance of small gas turbine engines. A JFS-100-13A turboshaft
+engine, originally used as an Auxiliary Power Unit (APU) in the A-7 Corsair fighter, is the subject of this
+activity. This project first involved instrumenting the small turbine engine and designing the control
+system such that it can be run safely and reliably. Secondly, the engine was installed on one of the lab's
+dynamometer test stands and its individual components characterized. Lastly, the laboratory exercise
+that allows for conceptual understanding of how the turbine operates was outlined for incorporation
+into the lab portion of the class. The three primary stakeholders in this project were:
+1. Dr. Lemieux, the Engines Lab coordinator and instructor of ME444
+2. The students who will take ME444 in the future.
+3. Jim Gerhardt, who is responsible for lab maintenance and technical support.
+
+Problem Definition
+Cal Poly students that enroll in the internal combustion engine design class, ME 444, focus on analyzing
+different thermodynamic cycles. Currently, the lab is limited to studying reciprocating, piston-style
+engines. The implementation of a JFS-100 gas turbine lab activity would allow students to have a unique
+learning experience while also applying fundamental concepts from previous thermodynamics courses
+to gas turbine engines. Previously, the JFS-100 engine instrumentation did not provide adequate control
+and monitoring of critical turbine conditions for a laboratory setting.
+
+Objectives/Specification Development
+The goal of this project was to aid in the development of an insightful and engaging laboratory activity
+that allows ME 444 students to gain hands-on experience with gas turbine engines and become familiar
+with their performance parameters. To safely implement the JFS-100 into the ME combustion engine
+design class, proper instrumentation of the engine was required to safely monitor engine conditions.
+Backup safety algorithms were added to the engine control unit that shut down the engine if any of the
+10
+
+temperature or pressure readings exceed pre-determined thresholds. After both of these tasks were
+completed, the engine was reinstalled on the dynamometer to allow for safe and reliable operation.
+Startup, shutdown, and testing procedure documents were created to ensure all future users are
+familiar with the necessary process and that the turbine can be used in this lab for many years to come.
+Table 1. Technical Specifications
+
+L = Low
+M = Medium
+H = High
+
+T = Testing
+I = Inspection
+A = Analysis
+
+Customer Requirements:
+ Safety
+ Reliable
+ Ease of operation
+ Cost efficient (inexpensive)
+ Serviceable
+ Educational
+The technical specifications for this project were derived from the customer requirements. These were
+based on Cal Poly lab safety standards and practical measures that could be taken to extend the life of
+the engine. The general objective that was gathered from these requirements was to make an
+interesting and educational lab that would be reliable and cost efficient from the standpoint of the
+instructor, serviceable for the mechanic, and safe for students to operate.
+Each of the specifications listed above were used to determine if we successfully met our objectives at
+the conclusion of the project. These are defined with a target value, an estimated tolerance, the
+associated risk, and compliance. The target goal is the value we were aiming to reach for system
+performance. The tolerance is how far we could deviate from the goal and still count it as being met.
+Risk evaluates how essential the requirement was to the project. Compliance defines how we planned
+
+11
+
+on assessing the completion of each design objective. A comprehensive description of each of
+specifications is listed below.
+Instrumentation capable of accurate measurements at local conditions.
+The sensors needed to have a high degree of accuracy and reliability to monitor the turbine during
+operation and provide critical data for the lab activity. The sensors for each stage were chosen based off
+their temperature limitations, and certainty in data measurements. We conducted a thermodynamic
+analysis to determine the temperature and pressure at each stage, to ensure that the sensors were
+rated to the appropriate values. The sensors are replaceable and can be changed if necessary, which is
+why this was assessed as low risk.
+Temperature and pressure instrumentation at stages 1-5.
+The instrumentation of the turbine itself was one of the most crucial portions of the project. We only
+have one operating engine, and the integration of sensors required machining close to critical
+components. This was a high-risk specification because without these sensors, the turbine could exceed
+the temperature limitations of the materials and ultimately damage the power turbine blades.
+Externally-cooled oil system
+An externally-cooled oil system ensured proper lubrication of the bearings in the gas generator and
+power turbine assemblies. This was accomplished by keeping the oil being delivered to the systems at a
+low temperature, providing greater heat absorption from each component. Failure of this system
+presents a medium risk level. If the bearings do not receive sufficient cooling, the heat generated from
+the rotational friction could lead to potential damage of the main components of the turbine. Future
+testing will involve running the engine for various lengths of time and recording the oil circuit
+thermocouple readouts.
+Installation of thermocouples throughout oil circuit
+By integrating thermocouples throughout the oil circuit, we can determine if the gas generator and
+power turbine bearings are appropriately cooled. If the oil temperature reaches above 200 degrees C,
+the heat being generated by the rotational friction could damage the bearings and lead to failure of the
+turbine. The thermocouples used to measure these temperatures are rated to well above the maximum
+oil temperature.
+Maximum engine temperature
+The maximum engine temperature is directly related to the material limits of the power turbine, where
+the highest temperature is located. This was determined from the 1-dimensional thermodynamic
+analysis of the engine. This was assessed to be high risk because if the engine was to exceed this
+temperature, significant damage of the turbine blades could result.
+Instrumentation interface with Digalog Controller
+After the turbine was mounted on the dynamometer, instrumentation interface with the Digalog
+controller needed to be configured. This involved calibration of sensor readings and mechanical
+components to ensure the accuracy of the data displayed by the Digalog software. This was first visually
+
+12
+
+inspected to verify that all connections were in place and attached properly. Secondly, the interface was
+tested while the engine was running.
+Accurate mechanical interface with Digalog Dyno
+The accuracy of the instrumentation interface largely depends on how quickly the sensors respond to
+changes in temperature and pressure. If there is any lag in the transmission of this data to the program
+interface, the operator could accidently run the engine incorrectly. An automatic shut off algorithm for
+the Digalog dynamometer controller was implemented to act as a cut-off switch if the turbine
+temperature values reach predetermined limits. This system also needed to have accurate inputs in
+order to operate correctly. The accuracy of the interface was tested by running the engine and
+determining how quickly the program responds to operation changes. This has been regarded as
+medium risk, because an inaccurate interface could lead to improper use of the turbine.
+System Durability
+We have set the turbine life to be close to ten years, based off frequency of use and serviceability. The
+system durability risk assessment is high due to the fact that if the engine was to fail prematurely, then
+the entire lab could be compromised. This was verified via stress analysis on critical components and a
+routine maintenance plan to keep each system running optimally.
+
+Chapter 2: Background
+The JFS-100 Engine
+The background of this project should begin with a discussion of the JFS-100 engine itself, including
+original application and design intent. Most military aircraft use large gas turbine engines as their
+primary propulsion method due to their high power-to-weight ratios and excellent reliability.
+Considering the scale of these engines, designing a reliable but light-weight starting mechanism can
+often be a difficult problem. Using only electric motors (similar to automotive starting systems) would
+require a very large electric machine that would be unlikely to meet flight-weight targets. Another
+option is to utilize highly compressed air from ground sources to air-start the engines, however this
+means that the engines could not be re-started once in flight should a flameout or other anomaly occur.
+The common solution to this problem is known as an Auxiliary Power Unit (APU).1 These APU's generally
+consist of a small (50-150 HP range) turboshaft engine that is geared to the shafts of the main engines.
+The turboshaft itself is started by a small and compact electric motor which is generally integrated into
+the APU package. This arrangement employs the excellent power-to-weight characteristics inherent to
+gas turbine engines, and results in a compact, reliable, and relatively light-weight starting unit. The JFS100 engine, which is the main subject of this project, was designed as one of these APUs. Built by Allied
+Signal, who was later acquired by Honeywell, the JFS-100 was installed in the LTV A-7 Corsair II (shown
+in Figure 1), a light attack aircraft primarily used by the United States Air Force and Navy during the
+Vietnam War. Approximately 1,569 of these planes were made before production ended in 1984. They
+were officially retired from the U.S. military in 1991.2 Upon decommission, many of the APU's were
+uninstalled and sold to private parties, and over the years most of the JFS engines have been circulating
+amongst hobbyists.
+
+13
+
+Figure 1. LTV A-7 Corsair II in flight [2]
+The JFS-100 is a two-spool turboshaft engine rated to approximately 90 shaft horsepower. It consists of
+a single-stage centrifugal (radial outflow) compressor and two axial-flow turbines. The first turbine is on
+a common shaft with the compressor; when combined with the combustor, this assembly is known as
+the gas generator and functions as the engine's first "spool." The combustor is of the annular type with
+five fuel nozzles symmetrically arrayed around the common shaft. A single capacitive ignitor serves to
+light the engine once it is brought to self-sustaining speed by the electric starter.3 The second turbine,
+called the "power turbine," is placed in series directly after the gas-generator turbine, but is mounted on
+a completely separate shaft (spool). This power turbine is connected to the splined output shaft through
+an integrated 18.3:1 gear reduction, and functions to extract useful work from the hot gases produced
+by the gas generator. The exhaust exits the power turbine housing radially3. These components can be
+seen in the cutaway schematic of Figure 2.
+
+14
+
+Figure 2. Cutaway schematic of the JFS-100 engine [4]
+As the JFS was designed solely as a starter motor, it was never intended to run for longer than 30
+seconds at a time. Many sacrifices were made in this regard, namely lower-quality turbine materials
+(rated for a lower fatigue life) and a low-capacity, uncooled lubrication system. These pose a challenge
+to anyone seeking to use the engine for continuous-use applications.
+
+The JFS Turbine Lab at Cal Poly
+A few years ago at Cal Poly, Professor Lemieux first conceived the idea of integrating a gas turbine-based
+laboratory activity into the ME 444 technical elective. This class, officially titled "Combustion Engine
+Design," introduces students to the theory and design of reciprocating (automobile-style) engines, gas
+turbines, as well as rockets. Unfortunately, however, the hands-on laboratory portion of the class
+studies primarily reciprocating engines, largely due to their low cost and high availability. In the interest
+of giving students a broader variety of hands-on experience, Dr. Lemieux endeavored to introduce a
+practical activity investigating the performance parameters of a real gas turbine engine. The engine
+would be coupled to a large eddy-current dynamometer already installed in the Engine Lab's test cell,
+and students would be able to collect experimental data and correlate it to the theory learned in class.
+In pursuing this goal of a turbine engine installation in the engines lab, Dr. Lemieux had a variety of
+engines to choose from. For practicality purposes, and to avoid exceeding the capacity of the
+dynamometer, the engine had to be a turboshaft engine in the 50-150 HP range (these engines are
+technically classified as “microturbines”). The JFS-100 quickly became a top contender due to its
+availability, adequate size, and convenient mounting points. However it was not without competition;
+for example the T62 engine manufactured by Solar Turbines was strongly considered as well. Unlike the
+JFS, the T62 is a single-spool engine, in which the drive output, compressor, and turbine are all mounted
+15
+
+to a common shaft, resulting in no separate power turbine. Rated to 80 horsepower, the size, cost, and
+simplicity matched that of the JFS, and in terms of long-term reliability the T62 appeared superior.
+However there was a big problem with the T62: the engine’s air intake was arrayed around the entirety
+of the core. Since connecting the air intake to the lab’s mass air-flow sensor (with a single pipe outlet)
+was a necessity in order to accurately characterize the engine, the T62’s layout proved very
+inconvenient and unwieldy. The single pipe inlet leading to the compressor on the JFS created no such
+problem, and that proved to be the deciding factor when the JFS was selected. After acquiring one of
+the engines, Dr. Lemieux and Jim Gerhardt began the modifications necessary for the engine to be
+integrated in the test cell and coupled to the dynamometer. Among many small details, this included
+design and fabrication of a large-capacity, externally cooled oil system. This was necessary to ensure
+long-term reliability of the JFS, as the stock lubrication system was undersized for continuous use. After
+many months of fabrication, the engine was finally installed on the dyno, and initially it ran very well.
+Figures 3 and 4 show the completed JFS installation in the Cal Poly engines lab.
+
+Figure 3. Close-up of the compressor intake after the JFS was installed in Cal Poly's Engines Lab
+
+16
+
+Figure 4. Completed installation of the JFS in the test cell.
+At this point in the discussion, a short discourse is required on the variation in temperature throughout
+the different stages of a gas turbine engine, and the importance of monitoring temperature as a critical
+operating parameter. We will consider specifically the JFS-100 as an example, however many of these
+principles apply to all gas turbine engines. We will use the numbering convention outlined in Figure 5 to
+describe the five stages of the JFS, starting with ambient air entering the compressor at Stage 1 and
+ending with burnt gasses exhausting from the power turbine at Stage 5.
+
+Figure 5. Schematic of JFS-100 Turbine Engine
+Following a simple model for compressible flow, air exits the compressor (Stage 2) at both an elevated
+pressure and temperature. Even for the ideal case of isentropic compression, the temperature is raised
+proportional to the stage pressure ratio.5 Inefficiencies resulting from friction effects, tip clearances, and
+other details generally cause the temperature to increase further.6 This compressed and heated air
+17
+
+enters the combustor where it is mixed with atomized fuel and ignited. The rapid heat release from this
+reaction causes a drastic temperature spike, and the hot gases are then expanded through the turbines
+to produce useful work. The first turbine drives the compressor and the second turbine drives the
+output shaft. From a thermodynamic perspective, a higher temperature at the turbine inlet (T3) results
+in a large increase in both power output and thermal efficiency.6 Thus, as one would expect, general
+turbine engine design usually involves maximizing the temperature at this particular location within the
+limits of the material used for the turbine and housing. Blade cooling using compressor bleed air,
+ceramic materials, and advanced high-temperature coatings have been very active areas of research in
+the turbine industry, all with the goal of increasing this temperature capability.6 Because the operating
+temperature at Stage 3 is usually very close to the material limit, it is important for the survival of the
+engine that this temperature be carefully controlled. Note that there are many more complexities to
+this, and depending on the application, different engines are designed with varying degrees of safety
+margin with respect to this temperature parameter.
+From the factory, the JFS-100 is instrumented with an Exhaust Gas Temperature (EGT) sensor located at
+Stage 5. The output from this sensor is used in the integrated control architecture to indicate when an
+over-temperature condition occurs, by means of illuminating a warning light in the plane’s cockpit.2
+However, from the discussion above it is clear that the temperature at Stage 5 is rarely the peak
+temperature in the engine, nor does this value directly indicate how close the engine is to its limit.
+Returning to the discussion on installing the JFS in Cal Poly’s engines lab, the original setup utilized the
+same EGT sensor as the primary indicator of engine temperature. Assuming careful monitoring and
+control, this likely would have been entirely sufficient. Unfortunately, however, during a student
+experiment not long after the JFS was set up, a series of prolonged start attempts distracted attention
+away from the temperature gauge. By the time Dr. Lemieux, who was overseeing the experiment,
+noticed that the students were not watching the gauge, the temperature had far exceeded the limit. The
+engine was shut off immediately, however unfortunately the damage had been done. Figures 6 and 7
+shows the gas-generator turbine that was exposed upon subsequent disassembly, indicating
+catastrophic heat damage throughout.
+
+18
+
+Figure 6. Stator for the power turbine, almost completely disintegrated
+
+Figure 7. Gas-generator turbine blades after over-temperature condition
+It was immediately obvious that the engine either required a complete overhaul or a full replacement.
+Dr. Lemieux initially pursued the first option, however was unable to come to an agreement with the
+mechanic who was to perform the work. Ultimately, the decision was made to purchase a brand new
+engine, which after years of logistical delays arrived at Cal Poly in the Spring of 2016. This new engine,
+which has logged a remarkably few number of hours and is in excellent condition, is the subject of our
+project. Through careful design, instrumentation, and control methods, we hope to prevent it from
+meeting the same fate as its predecessor.
+
+19
+
+Benchmarking
+Pulse Detonation Combustors at University of Cincinnati
+Throughout our background research on the JFS-100, we found very little reference to the engine in
+scientific journals or other peer-reviewed literature. The main exception is a series of studies and
+experiments performed by the Department of Aerospace Engineering at the University of Cincinnati
+starting in 2005.7,8 The primary goal of this work, which is ongoing, is to study the effects of using pulse
+detonation combustors (PDC) in place of traditional steady-flow combustors to increase the power and
+fuel efficiency of aircraft engines. The PDC concept is being considered for direct thrust-based
+propulsion (where the combustion products are simply expanded through a nozzle), as well as a hybrid
+propulsion system where the combustors are integrated with an axial power turbine that extracts shaft
+work. Regarding the latter, since the supersonic combustion shock waves that characterize pulse
+detonation behave very differently than steady-flow combustion, the researchers needed a way to study
+the interaction between the PDCs and the power turbine. To do this, they constructed a test rig that
+incorporated a circular array of six PDC tubes exhausting into an axial-flow power turbine, with the
+turbine's output shaft coupled to a water-brake dynamometer (Figure 8).
+
+Figure 8. Pulse Detonation Combustion test rig
+The relevance to our project involves the particular power turbine that they decided to use: that of a
+JFS-100. Since the power turbine is a separate assembly that can easily be unbolted from the gas
+generator portion of the JFS, it was simple and convenient for them to integrate the single turbine into
+their test setup. The PDC tubes could be operated in both pulse-detonation and steady-flow combustion
+modes, which allowed for direct comparison of turbine performance under both conditions. This
+resulted in a thorough characterization of the power turbine itself, data that will be very useful to us for
+comparison and benchmarking purposes.
+
+JFS Hobbyist Projects
+The most common results returned when performing cursory internet searches on the JFS-100 engine
+generally involve home-built, hobbyist projects using the engine to power some sort of customized
+vehicle. For example, an ambitious go-kart racer once decided to install a JFS-100 into a heavily modified
+
+20
+
+kart frame (Figure 9). This project, affectionately named Turbokart, took over four years to complete but
+resulted in a go-kart that could easily outrun a Ferrari 360 Modena in a quarter-mile drag race.9
+
+Figure 9. The original Turbokart, powered by a JFS-100 engine [9]
+An equally adventurous and significantly more dangerous venture was the installation of a JFS-100 as
+the primary powerplant for a homebuilt aircraft (Figure 10). While the early stages of this particular
+build were documented fairly well, it is unclear if the plane was ever flown more than once or twice
+
+Figure 10. JFS-100 engine driving the propeller of a home-built aircraft [10]
+
+21
+
+While documentation and reliable data was often thin on the ground when it came to these projects,
+they nonetheless provided valuable insight into the performance of the JFS-100 under operating
+conditions vastly different than what it was designed for. Since most of these applications required
+continuous operation, the primary obstacle that needed to be overcome was the power turbine's
+inadequate lubrication system. Some builds (I.e. Turbokart) avoided the problem entirely by removing
+the power turbine and replacing it with a simple thrust nozzle. This effectively converted the engine
+from a turboshaft to a turbojet, and simplified the installation significantly. An alternative solution,
+followed by the aircraft builder shown above and closely matching the work of Dr. Lemieux and Jim
+Gerhardt on the original Cal Poly JFS setup, involved adding a higher capacity, externally cooled oil
+system. Additionally, a number of ingenious fuel systems, mounting methods, and other supporting
+hardware were devised during the course of these individual projects, which will be helpful references
+as we work out similar details ourselves.
+
+Cal Poly BRAE Turbine Senior Project
+Although the JFS program has definitely been the most thorough and detailed work on gas turbines at
+Cal Poly, there has been another effort at the school to develop and experiment with a real turbine
+engine. Completely separate from the Engines Lab, and largely unbeknownst to the Mechanical
+Engineering Department, a BRAE senior project in 2012 involved setting up and characterizing a Garrett
+AiResearch GTP350-51 turbine (Figure 11).11
+
+Figure 11. GTP350-51 turbine engine upon completion of the 2012 senior project work[11]
+The engine was sourced from Avon Aero Supply, however was purchased with little knowledge of the
+specific condition of the unit. The main goals of the project were to simply get the engine running
+(which ultimately involved two complete rebuilds) and to design a new control system allowing for more
+accurate monitoring of engine parameters. While these objectives were met, the engine was never
+tested on a dynamometer or truly characterized in any way. Nevertheless, the work completed on this
+engine will provide a good source of information on control methods and general turbine questions. In
+
+22
+
+fact, we hope to meet with Kyle Smith, the student involved with the project, and have him show us the
+engine first hand.
+
+MiniLab and TurboGen
+The internal combustion engine, including the gas turbine variety, is a subject frequently studied at
+various educational institutions. Since the end goal of this project is a laboratory activity to be used for
+teaching purposes, we conducted a thorough investigation of other turbine engine installations used
+primarily for research or education. Although there are many of these programs, mostly in the
+engineering departments of well-known universities, there is relatively little variety when it comes to
+which specific engines they use. In fact, the majority of educational gas turbine labs (at least with any
+degree of documentation) involved one of two products sold by a small, Wisconsin-based company
+called Turbine Technologies, LTD.12 This company manufactures and sells a variety of educational
+laboratory equipment, designed to help teach many different engineering subjects including structures,
+controls, and fluid mechanics. However, one of their most popular products, MiniLab, consists of a
+completely self-contained turbojet engine, complete with fuel system, controls, and a high degree of
+instrumentation to allow continuous monitoring the engine's operating parameters. A spinoff of this
+product is called TurboGen (Figure 12), and utilizes the same turbojet engine core (operating as a gas
+generator) combined with a power turbine and electric generator to measure shaft power.
+
+Figure 12. TurboGen laboratory unit sold by Turbine Technologies[12]
+Both of these products are very convenient (although costly) for educational programs that are seeking
+to introduce a gas turbine laboratory but don't have the time or inclination to build a custom setup from
+23
+
+scratch. As we work to implement a comparable degree of instrumentation into the JFS, the
+methodology followed by Turbine Technologies provides an excellent source of information and
+benchmarking. Figure 13 shows the user interface displayed while the TurboGen engine is running, while
+Figure 14 shows the instrumentation locations on the SR-30 turbojet engine.
+
+Figure 13. User interface of the TurboGen laboratory engine [12]
+
+Figure 14. Instrumentation on the SR-30 turbojet engine [12]
+Note the similar stage numbering convention as discussed earlier, as well as the temperature and
+pressure sensors located at all five stages. Gas-generator shaft speed as well as output shaft speed are
+also carefully monitored, which will be a necessity on the JFS as well. All of this data is used both to
+ensure safe, reliable operation, and to allow accurate analysis and engine characterization as part of the
+learning objectives.
+24
+
+Gas Turbine Laboratory Activities
+It was made clear from the outset of this project that developing the specific laboratory exercise for ME
+444 would be a key deliverable. Accordingly, we performed a large amount of background research on
+gas turbine labs at other educational institutions. Initially this research proved difficult, however we
+later found a page on Turbine Technology's website that included links to 20+ papers detailing the
+laboratory procedure that a variety of schools use in combination with the TurboGen and MiniLab
+products described above. For example the University of Minnesota performs a series of experiments
+called "Characterizing the Performance of the SR-30 Turbojet Engine" with undergraduate engineering
+students13. The primary objectives of this exercise are to perform a thermodynamic analysis on the SR30 engine, investigate the impact of sensor location on experimental results, and characterize
+component efficiencies. One of the lab's deliverables is a visual aid known as an "energy balance," which
+shows exactly how the fuel energy is converted into other forms of energy. This graphic is depicted in
+Figure 15. Additionally, while many of the activities followed similar investigations of thermal efficiency
+and performance, this particular laboratory performed an interesting investigation into the effect of
+temperature sensor location. Since a one-dimensional thermodynamic analysis requires bulk average
+fluid properties, care must be taken to ensure that the obtained data closely represents these average
+properties. To highlight this importance, the lab initially placed the compressor outlet temperature
+probe too close to the combustion chamber. This caused very high temperature readings in this location,
+and when the data was used for the thermodynamic analysis the results made little sense. Students
+were then tasked with finding the best radial location for the temperature sensor such that the
+measurements most accurately reflected the average fluid properties.
+
+Figure 15. Energy balance of the SR-30 turbojet engine [13]
+
+25
+
+Benchmarking Summary
+Table 2 shows a summary of our benchmarking process. It cites the specific reference and summarizes
+the main points that we took away from each project. Both hardware and lab activity benchmarking are
+included.
+Table 2. Summary of benchmarking efforts
+Reference
+
+Highlights
+
+University of Cincinnati
+
+
+
+Pulse Detonation
+Combustors7,8
+
+
+
+
+
+JFS Hobbyist Projects9,10
+
+
+
+
+Cal Poly BRAE Turbine
+Senior Project11
+
+Minilab and Turbogen12
+
+Lab Activity - University
+of Minnesota13
+
+Lab Activity - Penn
+State14
+
+Lab Activity - Georgia
+Tech15
+
+Lab Activity - US Naval
+Academy16
+
+Characterized JFS power turbine under both steady flow and pulse
+detonation conditions
+Average turbine-inlet temperature did not exceed 900 degrees F
+Installed JFS Engine in kart, homebuilt aircraft
+Almost universally replaced the power turbine with a thrust nozzle for
+simplicity and cooling reasons
+Some temperature limits were established, but no test data or
+validation available
+
+
+
+BRAE department at Cal Poly has some experience instrumenting gas
+turbine engines
+Not specifically relevant to the JFS
+
+
+
+
+
+Self-contained, fully instrumented gas turbine laboratory equipment
+Good inspiration for how to develop our user interfaces
+Temperature/pressure instrumentation at all stages
+
+
+
+
+
+
+SR-30 Turbojet
+Sensitivity of Stage 2 thermocouple placement (compressor outlet)
+Detailed turbomachinery analysis (geometry) – agreed with data well
+Energy balance
+
+
+
+
+
+SR-30 Turbojet
+Details on installation – exhaust, fuel, power, etc…
+Good startup checklist
+
+
+
+
+
+SR-30 Turbojet
+Thorough coverage of thermocouple theory
+PRc vs mair, ηs,comp vs mair, nthermal vs PRc
+
+
+
+
+
+SR-30 Turbojet
+Thorough discussions of theoretical vs. real thermal efficiency
+Cycle analysis, turbomachinery characterization
+
+26
+
+Chapter 3: Design Development
+The following sections will review each stage of our design development process. In each section, we
+will discuss the decisions we made and layout the process we followed to reach our final design.
+
+Turbine Disassembly
+Following the approval of the project scope, we began evaluating potential locations for the sensors at
+each stage. The primary objective was to find integration points that would not obstruct the gas path or
+interfere with rotating components. After thoroughly reviewing the manual, it was determined that the
+turbine would need to be disassembled to get a closer look a flow paths and the internal geometry.
+Figures 16 through 21 show pictures taken during the disassembly process.
+The first step was to remove of any external lines blocking access to the bolts connecting the gas
+generator assembly to the power turbine assembly. Once the necessary accessories were taken off, the
+two sections were separated.
+
+Figure 16. JFS-100 Engine
+Next, the power turbine containment ring and gasket were detached from the gas generator assembly.
+
+Figure 17. P.T. rotor
+
+Figure 18. Containment Ring Front
+
+27
+
+Figure 19. Containment Ring Rear
+
+The final step was to unscrew the power turbine stator from the gas generator.
+
+Figure 20. P.T. Inlet Guide Vanes
+
+Figure 21. Gas Generator Turbine
+
+This process took about half a day, with each initial part location photograph and labeled. The
+completion of the turbine disassembly was crucial in making the first design decisions.
+
+Material Characterization
+Although we were provided with the engine’s manual containing detailed diagrams and assembly
+drawings, we had difficulty finding any information pertaining to the material composition of each
+component. This information is crucial for turbine life due to the material being the limiting factor of
+turbine operation.
+After contacting the MATE department, we were notified Dr. Trevor Harding was in possession of a
+portable XFR, or X-ray Fluorescence Spectrometer (Figure 22). The XRF works by emitting an X-ray beam
+from the front end of the analyzer that has enough energy to excite electrons that will in turn release Xray photons. By analyzing these photons, the XRF can then identify the element percentages in an
+unknown metal, thus determining the composition and alloy.
+
+Figure 22. Portable XRF Analyzer [17]
+
+28
+
+Using the XFR, we were able to determine what each part of the turbine was made of; the results can be
+seen in Table 3. This allowed us to find the temperature limits of each part, and estimate the maximum
+operating temperatures for each stage.
+Table 3. Summary of XFR Results
+Component
+
+Material
+
+Percentage of elements
+
+Power Turbine
+Rotor
+
+Waspaloy
+
+Ni 56.83, Cr 18.61, Co 12.09, Ti 3.04, Fe 1.405, Mo 4.63, V
+0.06, Mn 0.04, No 0.13, Ta 0, W 0.03
+
+Gas Generator
+Rotor
+
+Unknown
+
+Ti 25.19, Co 11.94, Ni 33.8, Zinc, 0.02, Pggb 0.01
+
+Power Turbine
+Housing
+
+Nitronic 40
+
+Fe 62.38 %, Cr 20.81, Mn 8.40,
+Ni 7.15, Ti 0.07, V 0.03, Co 0.33, Cu 0.07
+
+Power Turbine
+Inlet Guide Vanes
+
+ST 25, L6 05
+
+Co 49.56, Cr 19.49, Mn 1.71, Fe 2.31, Ni 10.72, No 0.02, Mo
+0.66, W 14.58
+
+Power Turbine
+Containment Ring
+
+Ti 64
+
+88.25 Ti, 4.46 V, Cr 0.31, Fe, 0.27, Cu .02,Tin 0.5
+
+Diffuser
+
+347 Stainless Steel
+
+Ti 0.09, V 0.04, Cr 17.54, Mn 1.94, Fe 66.93, Co 0.8, Ni 10.99,
+Cu 0.24, No 0.75, Md 0.18, W 0.02
+
+The only inconclusive results were from the gas generator rotor. This was due to the XRF not having a
+flat surface to perform the test on. We were still able to identify some of the elements, and determined
+from these that the gas generator rotor was most likely Waspaloy, the same alloy as the power turbine
+rotor.
+
+Design Point Thermodynamic and Stress Models
+Although we had come up with a preliminary idea of which sensors we were going to use, we needed a
+way to determine specifically what temperatures and pressure the instruments would be exposed to.
+This involved performing a one-dimensional thermodynamic analysis on the engine, and developing
+what we call the “design point.” The design point is the steady-state operating point that we plan on
+running the engine at during laboratory experiments, and includes full state descriptions (defined by
+two properties) for the working fluid at all five stages of the engine. Defining this design point also
+specifies parameters such as engine speed (both gas-generator and power turbine), power output, and
+fuel flow. The ultimate goal was to set this design point very conservatively, such that the engine
+components are operating far from their maximum working temperatures and stress levels.
+29
+
+Additionally, determining this design point allowed us to more confidently choose which thermocouples
+and pressure transducers to utilize in the different engine stages.
+Upon beginning the analysis, we quickly realized that our lack of specific technical information about the
+JFS-100 would be very limiting and inconvenient. We were not able to find parameters such as rated
+mass flow rate, pressure ratios, or isentropic efficiencies anywhere in the literature or in the
+maintenance manual. We did have a few data logs from the initial JFS installation at Cal Poly, however
+the vast majority of that data was not taken at truly “steady-state” conditions (i.e. conditions not
+changing with respect to time), making it difficult to use for an idealized steady-state analysis.
+Ultimately, we used a combination of the few available technical specifications, the old Cal Poly test
+data, and some certain assumptions to complete the thermodynamic analysis. This model was
+programmed in Microsoft Excel to allow us to easily change parameters and iterate until desired
+conditions were achieved.
+Once the steady-state thermodynamic model was finished, the next step was to estimate the maximum
+stress experienced by the engine to ensure that our chosen operating point did not exceed the material
+limits. Of the many components in the gas turbine engine, the turbine rotor blades are generally
+considered the weakest points. They are essentially thin, cantilevered beams subjected to high
+rotational speeds, torque-induced bending moments, and extreme temperatures. Thus, our objective
+was to estimate the minimum safety-factor based on yield strength for the blades of both the gas
+generator turbine rotor and the power turbine rotor. This analysis required three crucial pieces of
+information:
+1. The approximate temperature of the blade at our design point
+2. The rotational speed and power output of each turbine at our design point
+3. The yield-strength vs. temperature curve for the blade material
+Fortunately, we possessed all of this required information. The thermodynamic analysis described above
+provided us with the gas temperatures at each turbine stage. Because this is a steady-state analysis, we
+made the assumption that the blades themselves operate at exactly the same temperature as the gas.
+Although not strictly true, this assumption will yield a conservative, “worst-case” result. The same
+analysis described the work output and rotational speed of the two turbines, which can be easily
+converted to a torque exerted on the turbine blades by the expanding gases. From this torque value, the
+average force acting at the centroid of each blade could be estimated. Modeling each blade as a simple
+cantilevered beam, this force acting perpendicular to the blade face (at the centroid) resulted in a
+maximum bending moment at the blade root, which was determined to be the critical location
+(maximum stress). This bending stress was combined with centrifugal loading from the rotational speed
+to create a relatively simple, 2-dimensional stress state.
+As previously explained, we had used the XRF Spectrometer to determine that both turbine rotors are
+likely made out of Waspaloy, a nickel-based superalloy frequently used for extreme temperature
+applications. We were able to find significant test data showing the yield strength of Waspaloy at
+multiple elevated temperatures, allowing us to apply a curve fit equation to the data and estimate the
+strength at our design point18. With the yield strength and the stress state fully defined, we calculated
+safety factors at the blade root of each rotor.
+
+30
+
+Detailed versions of both the thermodynamic and stress analyses can be found in Appendix E, along with
+the test data that was used and a comprehensive list of results for our design point. A summary of the
+results pertinent to sensor selection are shown in Tables 4, 5, and 6, below.
+
+Table 4. Summary of thermodynamic analysis results
+
+Table 5. Design point stress analysis
+G.G. Stress Analysis
+Wout
+Speed
+Torque
+# of blades
+Bending Force Per Blade
+Bending Moment
+Centripetal Force
+Bending Stress
+Axial Stress
+
+88
+74000
+11.310
+34
+6.37
+0.053
+8249
+3284996
+420849527
+
+P.T. Stress Analysis
+kW
+RPM
+N*m
+N
+Nm
+N
+Pa
+Pa
+
+Wout
+Speed
+Torque
+# of blades
+Bending Force per Blade
+Bending Moment
+Centripetal Force
+Bending Stress
+Axial Stress
+
+16.4
+60400
+2.59
+36
+1.1214
+0.016
+24480
+259436
+596166255
+
+kW
+RPM
+N*m
+N
+Nm
+N
+Pa
+Pa
+
+Table 6. Summary of stress analysis at design point
+G.G. Stress Analysis
+Sigma Max
+424134523
+Temperature
+684
+786398000
+Yield Strength [Mpa]
+Factor of Safety
+
+1.8541
+
+Pa
+°C
+Pa
+-
+
+31
+
+P.T. Stress Analysis
+Sigma Max
+596425691
+Temperature
+510
+1053499801
+Yield Strength [Mpa]
+Factor of Safety
+
+1.766
+
+Pa
+°C
+Pa
+-
+
+3-D CAD Model
+After the engine was disassembled we immediately began trying to determine a plan for installing the
+required instrumentation. However even with the engine apart, it was still very difficult to visualize how
+effective the different ideas would be. To further help the design process, we decided to create a 3-D
+CAD model in SolidWorks of the components that we had just disassembled. That way we could virtually
+assemble the engine and look at various cross-section views to help determine where there might be
+space for instrumentation. The model is show in Figures 23 and 24.
+
+Figure 23. 3-D model of the JFS hot section, exploded view
+
+Figure 24. Cross section of JFS assembly, gas flow-path is right to left
+
+32
+
+Because we are primarily concerned with the turbine “hot section” (i.e. all components downstream of
+the combustor), those were the only components that were drawn in detail. Similarly, in reality the
+Power Turbine housing (purple in Figure 24) contains a complex gear reduction system and exhaust
+routing, however because these components are not relevant to our instrumentation plans, they were
+not modeled.
+
+Instrumentation
+With the above development activities completed, we were then able to fully begin instrumentation
+plans at each of the five engine stages. The following sections describe the design development process
+for the instrumentation at each stage.
+
+Stage 1: Compressor Inlet
+Due to the previous installation of the JFS-100 in the engines lab, Stage 1 instrumentation had already
+been implemented by Jim Gerhardt. No further design development was necessary. More details can be
+found in Chapter 4.
+
+Stage 2: Compressor Exit
+Due to the previous installation of the JFS-100 in the engines lab, Stage 2 instrumentation had already
+been implemented by Jim Gerhardt. No further design development was necessary. More details can be
+found in Chapter 4.
+
+Stage 3: Gas Generator Turbine Inlet
+After the combustor, the combustion products flow through a set of inlet guide vanes that direct the
+mixture into the gas generator turbine rotor. Stage 3 is located at inlet to this turbine, right after the
+inlet guide vanes. The instrumentation plans for this stage initially involved drilling and tapping into the
+casing at a single point, directly in front of the gas generator. By using a T-fitting equipped with both a
+thermocouple and pressure transducer, we were planning to collect both temperature and pressure
+data at this point. This would decrease machining time, while also reducing the potential for an error to
+occur in the manufacturing process.
+Upon turbine disassembly, we realized that this plan was not possible. We discovered that the power
+turbine stator seals directly over the gas generator blades, which are also partially covered by the nozzle
+leading from the combustor. If we were to drill into the housing through the outer walls of the stator,
+we run a risk of creating a creating another place for the gas to flow, potentially reducing the power
+output of the turbine.
+
+33
+
+Figure 25. Air-start rakes at Stage 3
+However, there was a much easier solution. As the engine is designed to be started using compressed
+air in case of loss of electrical, there are a set of existing rakes that lead from an air-start port on the
+outside of the engine (Figure 25). These rakes direct the compressed air directly at the gas generator
+turbine rotor in order to spin it up, and are located exactly at the Stage 3 location. Thus, the decision
+was quickly made to use these air start rakes as the access point for both temperature and pressure.
+They would provide a housing for a thermocouple, as well as a gas path that could lead back out of the
+start port to a pressure transducer. This solution requires no machining, and provides access to an area
+close to the gas generator blades. The calculated maximum temperature and pressure from the
+thermodynamic analysis was determined to be 1264°F and 37.7 psi. Based on these values, a 1/16”
+diameter Super OMEGACLAD XL Thermocouple and a Honeywell Sensym ICT pressure transducer rated
+to 50 PSI were specified. Figure 26 shows the CAD model developed for this design. A detailed
+description of the final design can be found in Chapter 4.
+
+34
+
+Figure 26. Stage 3 Initial Design Instrumentation Assembly
+
+Stage 4: Power Turbine Inlet
+When we began looking carefully at the disassembled engine and CAD model, it soon became clear that
+Stage 4 would be the most challenging location to implement temperature and pressure sensors. To
+measure temperature, the goal was to insert a thermocouple into the gas flow-path immediately
+downstream of the power turbine inlet guide vanes, just in front of the power turbine rotor (see Figure
+27). To measure pressure, we needed to provide a small passageway (gas-path) leading from that same
+location to a port on the outside of the engine. From this port, a length of steel braided hose would
+connect to the pressure transducer, itself mounted in the electrical control box a few feet away from the
+engine.
+
+Stage 4
+
+35
+
+Figure 27. Target Stage 4 instrumentation location
+For this stage, the first step was to determine specifically which sensors we would be using. From the
+thermodynamic design point analysis detailed earlier, the gas at this point in the engine was predicted
+to be at a temperature of 985 degrees F and a pressure of 16.5 psi. We initially specified an Omega
+sheathed thermocouple of 1/32” diameter, which was rated to 1600°F. However we decided to switch
+to a 1/16” diameter thermocouple from the same Omega product line because we were unable to find
+compression fittings that fit 1/32” thermocouples. For simplicity and cost reasons, we decided to use the
+same line of Sensym ICT pressure transducers for Stage 4, and thus specified the model rated to 50 psi.
+With the sensors for Stage 4 specified, we tackled the problem of installation. There is only
+approximately .15” of clearance between the guide vanes and the rotor, and direct radial access to this
+location necessitates drilling through both the Power Turbine Housing and the Power Turbine
+Containment ring. Because of these difficulties, we initially hoped that there might be another way of
+accessing the location of interest, perhaps by fishing a thermocouple through the guide vanes from
+further towards the front of the engine. However even if this approach would have worked for the
+thermocouple, it would not have been an effective solution to provide the gas path necessary to
+measure pressure, and wouldn’t have made the manufacturing process any easier. Ultimately, we
+decided that the best approach for both sensors was to simply drill holes radially inwards. This approach
+meant that we needed to design some sort of port or housing that would be installed in the engine and
+allow for a thermocouple to be fed down into the Stage 4 location. We also needed to provide a small
+gas path leading to the outside of the engine in order to measure pressure. Figure 28 shows the
+instrumentation layout for the initial design.
+
+Figure 28. Stage 4 instrumentation layout
+The temperature instrumentation consisted of 3 primary components: the 1/16” diameter sheathed
+thermocouple (made by Omega), the compression fitting to fit the thermocouple (also made by Omega),
+and the Stage 4 Thermocouple Port, a component that we designed ourselves. These components can
+be seen in Figure 29, and a detailed view of the Stage 4 Thermocouple Port can be seen in Figure 30.
+
+36
+
+Stage 4 Thermocouple Port
+Compression fitting
+
+1/16” diameter thermocouple
+
+Figure 29.Stage 4 temperature instrumentation
+
+½” Hex
+
+Clearance Hole (3/32”)
+t
+
+¼”-20 External Threads
+
+Thermocouple Support (1/16”)
+t
+Figure 30. Stage 4 Thermocouple Port
+The Stage 4 Thermocouple port screws into the containment ring (shown in light blue/turquoise in
+Figure 29) through a clearance hole in the Power Turbine Housing (shown in purple). The thermocouple
+37
+
+is then inserted down through the center of the port into the Stage 4 gas path. An OMEGAlok series
+compression fitting sized for a 1/16” thermocouple is then screwed into the female 1/8-27 NPT threads
+in the thermocouple port. When tightened, this compression fitting clamps down around the
+thermocouple probe, securing it in place and sealing off the gas path.
+The Stage 4 pressure instrumentation was desinged to be very similar to the temperature
+instrumentation. Thus, many of the redundant details are ommitted in the following discussion.
+
+AN-4 Fitting
+t
+
+Stage 4 Pressure Port
+t
+
+Figure 31. Stage 4 pressure instrumentation
+
+38
+
+1/8-27 NPT
+t
+½” Hex
+
+1/16” diameter gas
+pressure path
+
+¼”-20 External Threads
+
+t
+
+Figure 32. Stage 4 Pressure Port
+Just like the thermocouple port, the pressure port (Figures 31 and 32) would have been threaded into
+the containment ring through a clearance hole in the power turbine housing. An AN-4 pipe fitting would
+have been screwed into the female 1/8-27 NPT threads, which will provide an easy connection point for
+an AN-style hose, which is already provided in the lab. The hose would have then fed to the Sensym ICT
+pressure transducer mounted in the dyno control box.
+Both sensors would have been radially arranged “upstream” of the air-start rakes, as shown in Figure 33.
+This would have ensuren that any unsteady-flow conditions caused by these rakes do not affect the
+Stage 4 temperature and pressure readings.
+
+39
+
+Air-start rakes
+
+Figure 33. Radial location of the stage 4 instrumentation, upstream of the air-start rakes
+
+Stage 5: Engine Exhaust
+Due to the previous installation of the JFS-100 in the engines lab, Stage 5 instrumentation had already
+been implemented by Jim Gerhardt. No further design development was necessary. More details can be
+found in Chapter 4.
+
+Redundant Throttle Position Sensor
+The second subsystem development outlined in the objectives above involves the design and
+implementation of a redundant throttle position sensor. The existing fuel system in the dyno cell is
+relatively robust and effective at delivering fuel to the engine. However, its main weakness is that the
+only indication of throttle position for the operator outside of the engine cell comes from the electric
+throttle actuator itself (which is installed inside of the cell). Thus, should this built-in position sensor fail
+(as it has done in the past), there is no way for the operator to know. This can result in the operator
+unknowingly opening the throttle too much, causing excess fuel to be injected into the engine and
+resulting in a very unsafe condition. To remedy this problem, a secondary, independent throttle position
+sensor will be installed on the throttle actuation linkage to ensure that the throttle is working properly.
+This redundancy will help prevent engine failure and once again increase system reliability.
+The first step in the design process is to truly understand the problem, which required a thorough
+understanding of how the current throttle system works. While spark-ignition reciprocating engines (like
+in many consumer vehicles) control power by means of throttling the air entering the engine, gas
+40
+
+turbine engines (as well as diesel engines) achieve the same effect by throttling the fuel flow. Our JFS100 engine is no exception, however because it was designed only to start the main engines of an
+aircraft, in stock form there is no manually-operated throttle. The pilot needs only to press a single
+“start” button, and the fuel control unit automatically delivers the appropriate amount of fuel based on
+engine speed. However, a manual throttle is critical for a laboratory application, and thus in the original
+installation much effort went into designing a system that could repeatedly deliver varying amounts of
+fuel and be controlled by a user outside of the dyno cell. This system is outlined in Figures 34 and 35.
+
+Electronic Throttle Actuator
+
+Fuel Plunger
+
+Mechanical Linkage
+
+Output Shaft (double-sided)
+Figure 34. Existing fuel control system
+
+Fuel Plunger
+
+Figure 35. Close-up of fuel plunger
+The operator input sends a signal to the electronic throttle actuator, which rotates the output shaft
+accordingly. This rotation is turned into near-linear motion by the mechanical linkage, which in turn
+
+41
+
+actuates the fuel plunger. Moving this fuel plunger in and out is what physically meters the amount of
+fuel entering the engine’s combustion chamber.
+Once the existing throttle system was understood, the process of designing a redundant position sensor
+could continue. The first major decision concerned whether to measure rotary position via the output
+shaft or linear position via the mechanical linkage. Both of these options were considered, however it
+was ultimately decided that measuring rotary position would require simpler mounting, output a more
+reliable signal (since the linkage doesn’t move in a perfectly linear fashion), and require a less expensive
+sensor. As shown in Figure 34, the output shaft of the electronic actuator is double-sided (i.e. the same
+shaft extends out of both sides). This proved extremely convenient, because a rotary position sensor
+could very easily be mounted on the unused side of the output shaft, providing a reliable signal and very
+simple mounting. Once it was decided to measure rotary position from the second side of the output
+shaft, the next step was to determine specifically what kind of sensor should be used. There are multiple
+ways of measuring rotary position, and an excellent summary of the main technologies can be seen on
+page 1 of Reference 19. For our specific application, the choice was reduced to two options: a rotary
+encoder or a potentiometer. Potentiometers have high resolution, are simple to wire, and are very
+cheap, however are limited by the small range of motion that they can accurately measure. Encoders
+are more complicated and more expensive, however can often measure multiple rotations and generally
+have longer lifespans. Because the throttle linkage converts rotary motion to linear motion, the
+maximum amount of rotation that was necessary for our sensor was only 180 degrees. Additionally, the
+lifespan requirement was calculated to be approximately 2000 cycles, assuming 5 years of operation in
+the lab. Both of these requirements are easily met with potentiometers, which are cheap enough that
+purchasing multiple back-up units in case of premature failure is quite reasonable. For these reasons, a
+potentiometer was the sensor of choice for the throttle position sensor.
+The next decision was how to couple the potentiometer shaft to the output shaft of the electronic
+throttle actuator. Our preliminary idea involved the use of a soft-jaw coupling (Figure 36), but Jim
+Gerhardt pointed out that these 3-piece couplings are usually used in extreme shock-loading situations,
+and would be over-complicated and over-built for our application. He suggested that we investigate
+helical couplings (Figure 36), which can also tolerate shaft misalignment but are more commonly used in
+instrumentation and electronics. We heeded his advice, and specified an appropriate helical coupling for
+our shaft sizes.
+
+Figure 36. Soft-jaw coupling (left) versus helical coupling (right). [McMaster-Carr]
+42
+
+With the major decisions made, all that was left was to specify a potentiometer and design a mounting
+bracket. The potentiometer needed to be of appropriate size (1/4”-1/2” diameter input shaft) and be
+able to output 0-10 volts according to the electrical specifications of the controller. Designing a
+mounting bracket was fairly straightforward, as the throttle actuator was already mounted on a set of
+strut channels which allow for linear adjustment in one direction. We decided to mount the bracket in a
+similar fashion and add a slot to the mounting plate in order to provide linear adjustment in two
+directions. A detailed description of the final design can be found in Chapter 4.
+
+Laboratory Activity
+In order to begin designing the lab activity, customer requirements for this portion of the project
+needed to be outlined. The primary objectives focus on developing a detailed data collection process,
+with a safety review, that can be completed in 3 hours, and a lab write-up and analysis that should be
+easily completed in one week. The lab activity should target students' understanding of the operation of
+gas turbine engines and the basic thermodynamic principles governing their performance.
+From these requirements, the first version of the lab was created. This version focused on collecting
+data at a single operating point and utilizing that data to perform a comparative analysis of theoretical
+and experimental calculations. This would allow for students to develop their own computational tool
+(in Excel or MATLAB) to calculate engine power and efficiency at that single point, and to understand
+conceptually how the different components of the turbine interact with one another. After much
+consideration, it was decided that a more in-depth analysis would be required in the lab activity.
+The second revision splits the lab into two consecutive activities. The first lab will introduce students to
+the JFS-100 engine and how to safely operate it on the dyno. They will become familiar with the
+operating principles of gas turbine engines including specific functions of each component. Then,
+students will collect data from the JFS at a single operating point, namely the rated engine speed and a
+pre-determined “baseline” equivalence ratio. This will be considered the “design point.” They will use
+this data to perform a simple one-dimensional thermodynamic analysis to characterize the engine and
+evaluate component efficiencies. Brayton Cycle T-S and P-V diagrams will be heavily emphasized. A
+simple energy balance will be performed as a visual aid to help students understand how effective the
+engine is at converting heat released from combustion to useful work. In addition, a series of conceptual
+questions will accompany the calculations in order to further theoretical understanding and investigate
+sources of experimental errors.
+The next portion of the lab is still being developed and has yet to be finalized. Currently, the idea is that
+the activity will build heavily on the first, but be expanded to include investigation of JFS performance at
+off-design operating points. There will be two primary experiments. Firstly, data will be collected at 4-5
+different operating speeds (all tests will be steady-state) below the rated speed of 74000 RPM. This data
+will be used to investigate engine efficiency, as well as component performance, at these off-design
+speeds. Secondly, the engine will be maintained at its rated speed, and the equivalence ratio will be
+varied by means of increasing or decreasing the fuel flow. This will yield corresponding changes in
+temperatures and pressures downstream of the combustor, and give students insight into the effects
+that these parameters have on performance. Students will be asked to graph a number of performance
+parameters as a function of engine speed and equivalence ratio (separately), and to once again answer a
+set of conceptual questions.
+
+43
+
+Design Development Summary
+Table 6 shows a summary of the major decisions made during the design development phase.
+
+Table 7. Summary of Important Design Decisions
+System
+
+Chosen Concept
+
+Throttle Position Sensor
+
+Potentiometer
+
+
+
+
+
+Cost
+Simplicity
+Met requirements for
+durability, rotation
+
+Throttle Position Sensor Coupling
+
+Helical Coupling
+
+
+
+
+Simplicity
+Misalignment capability
+
+Instrumentation – Thermocouples
+
+Omega K-Type 1/16”
+diameter, sheathed
+
+
+
+
+
+Temperature limit
+Response time
+Cost
+
+Instrumentation – Pressure
+Transducers
+
+Sensym ICT series
+(Honeywell)
+
+
+
+
+Availability
+Cost
+
+Instrumentation – Stage 3
+
+Utilize air-start rakes for
+both temperature and
+pressure
+
+
+
+No machining
+operations
+No risk of gas path
+leakage
+
+Direct radial drilling
+
+
+
+
+Instrumentation – Stage 4
+
+2-port design (temperature,
+pressure)
+Primary Starting Mechanism
+
+Compressed Air
+
+44
+
+Reasons
+
+
+
+
+
+Simplicity
+Support structure for
+thermocouple probe
+Damage mitigation
+
+
+
+
+Simpler
+More reliable
+
+Chapter 4: Description of Final Design
+Instrumentation
+Stage 1: Compressor Inlet
+The first stage is located outside of the turbine, directly before the centrifugal compressor. The current
+setup for the air intake has an air flow sensor attached to the inlet of the compressor, shown as the gold
+section in Figures 38 and 39. Below the air flow sensor is an attachment that has a thermocouple and
+pressure transducer port (Figure 39). This attachment and the airline have already been set up installed
+by Jim Gerhardt.
+
+Figure 37. JFS Intake System
+
+Figure 38. Stage 1 Instrumentation
+
+Stage 2: Compressor Exit
+The second stage resides directly after the compressor and before the annular combustor. The sensor
+set-up was pre-determined by Jim Gerhardt when he was working on the previous installation of the
+JFS-100. There is a small instrumentation port on the outside of the housing wall that gives access to
+outer wall of the compressor outlet. Using this port and a T-fitting, Jim was able to place thermocouple
+through one end of the fitting and attach an air line for pressor transducer on the other (Figure 40). This
+design created a gas path that would flow around the thermocouple through the third end of the fitting,
+giving an approximation of Stage 2 temperature and pressure.
+
+45
+
+Figure 39. Stage 2 Instrumentation
+
+Stage 3: Gas Generator Turbine Inlet
+The temperature and pressure sensors at Stage 3 will be incorporated into the existing air-start port
+using a T-shaped fitting. For this stage specifically, a thermocouple and pressure transducer will each be
+connected to a side of the fitting. The third side will connect directly to the first fitting, which will attach
+to the port, illustrated in Figure 41.
+
+Stage 4: Power Turbine Inlet
+After reviewing the model with our project sponsor, Dr. Lemieux, it was decided that the
+instrumentation design needed to be revised. Our original plan of having two separate stainless
+steel components, one for the pressure transducer line and one for the thermocouple, was dismissed
+and the idea of combining them to form one part was adopted.
+This design decision was based off the fact that having two different instrumentation housings would
+require two separate holes to be drilled into the turbine housing. This would increase the chances of an
+unsuccessful machining operation of a complex part that would be difficult to replace, as well as
+increase the chances of a gas leak.
+The next revision for the instrumentation housing was a single straight piece of 304 stainless steel, 1.5
+inches long, that had 1/8 NPT internal male threads on one end for a tee fitting to thread into, and ¼-28
+external male threads on the other end to thread into the containment ring. As can be seen Figure 42,
+one end of the housing had a small shelf, or grove, cut into it for an O-ring to sit. This O-ring would
+provide sealing against any escape gases.
+
+46
+
+External 1/8 NPT
+Threads
+
+Gas/Thermocouple
+Path
+
+¼-28 Threads
+
+O-ring groove
+Center 1/16” Hole for
+thermocouple support
+
+Figure 40. CAD Model of Stage 4 Sensor Housing
+
+Figure 41. Internal Geometry of the Sensor Housing
+
+The central portion of the housing was designed to hold the thermocouple securely while also providing
+room around the thermocouple for air to flow to the gas line for the pressure transducer. To accomplish
+this, three 1/16” holes will be drilled into the end of the housing. The first, and central hole will be used
+to support the thermocouple and keep it from interfering with the power turbine blades. The other
+two holes are located on opposite sides of the central hole, and overlap it slightly. The effect is that
+there are now two small openings for the gas to flow around the supported thermocouple, which
+provides the static pressure for the pressure transducer to read. The final drawing for this design can be
+seen in Figure 44 below.
+
+47
+
+Figure 42. Final drawing of sensor housing for stage 4
+Initially, the plan was to use a high temperature silicon O-ring that could take a temperature between
+1200°F-1400°F. This temperature range was reasoned from our design point analysis, detailed in
+Chapter 3. Design Development. It became apparent that using a silicon O-ring would be impractical due
+to the cost of purchasing an O-ring that could withstand the elevated temperature for a substantial
+length of time.
+During a brief discussion of the issue with Dr. Kean, a professor in the Mechanical Engineering
+department at Cal poly, metal crush washers were suggested for the application. These washers are
+typically used on diesel engines to seal spark plugs in cylinder heads, which can reach high temperatures
+due to their proximity to the combustion chamber. As the name implies, the metal washer forms a seal
+after being crushed between two surfaces. These are not reusable but are less expensive, less
+susceptible to heat then polymer O-rings, and fairly easy to replace in comparison.
+The incorporation of a metal crush washer called for another revision of the sensor housing. The
+final design included increasing the length of the shank to 1.7” (allowing more room for a metal crush
+washer to sit), increasing the diameter of the O-ring shelf at the end of the shank to 1/4”, and elongating
+the hex portion of the housing. The following design changes were made to allow for a better fit of
+the copper crush washer onto the sensor housing and of the sensor housing into the containment ring.
+
+Stage 5: Engine Exhaust
+Stage 5 is the exhaust, located directly after the power turbine. A thermocouple has already been
+installed in this location, and pressure is assumed to be ambient.
+
+48
+
+Figure 43. Stage 5 Instrumentation
+
+General Instrumentation Information
+There is a control box located above the dynamometer that houses the pressure transducers and
+thermocouple wiring, Figures 46 and 47. There is a pressure transducer for each stage, which convert
+the pressure provided pressures into measurable voltages. The thermocouples plug into the same
+control box, which routes the signal to the Digalog data acquisition and user interface systems outside of
+the cell.
+
+Figure 44. Inside of dyno control Box
+
+Figure 45. Inputs to dyno control box
+
+JFS Primary Starter
+The goal of using the air-start was to increase the reliability of the starting mechanism. Setting up and
+installing the components for this starter was initially, in theory, a much simpler design, and had more
+robust components that would be extremely difficult to break even in unfavorable or harmful
+conditions. This proved not to be feasible, mainly because the compressed air would have to be
+pressurized to at least 1,000 psi, a fact that was discovered after talking with the turbine enthusiast,
+George Carey.
+Thus, the final design utilizes the original primary electric starter. Our research indicated that the
+electric motor within the starter was prone to overheating and breaking if the starter was on for over 7
+49
+
+seconds, or had inadequate time to cool off in between starting attempts. To reduce the potential of
+either of these things happening, two safety backups were incorporated into the final design. First, a
+thermocouple was attached to the outer casing of the motor to read the casing temperature. This
+temperature was programmed to be an input into the Digalog software used to control the turbine, and
+can be used to set over-temperature limits. This will prevent the starter from being turned on if the
+motor is too warm. Secondly, the starter will only run through a test-controlled setting in the software.
+This is a subgroup within ‘cranking routines’, a predesigned subprogram in the Hypercell software that
+allows us to set various parameters. This includes the runtime of the starter, when it can be turned on
+(i.e. if the turbine is off, preventing it from be used when the turbine is running), and when the starter
+will be turned off (i.e. has the turbine reached a predetermined speed). This almost completely
+eliminates any user input error that could result in the starter being overused and the motor fatigued.
+The combination of these redundant safety systems will increase the reliability of the starter for the JFS100.
+
+Electrical Starter
+
+Figure 46. Photo of electrical starter installed on JFS
+
+Software Programming and Shutoff Algorithms
+The last part of our final design involves the alarms and limits that we will program into the controller in
+order to safely shut down the engine if there is any unsafe operating condition. These alarms are
+programmed into the Hypercell software, which serves as the main user interface program for
+controlling the engine and dynamometer. Each parameter (temperatures, pressures, etc…) can be set up
+with two separate alarms:
+High Yellow Alarm: This is the first alarm to be triggered, and is generally considered a warning to the
+operator. It causes a warning message to be displayed on the screen and a loud alarm to sound,
+however it will not shut off or otherwise control the engine or dyno in any way.
+High Red Alarm: Set at a higher threshold than high yellow, this indicates an emergency situation. A
+different message will be displayed, the engine will be immediately shut off, and the test will be put on
+hold.
+50
+
+Our task was to decide specifically what values to set these alarms at for each critical parameter. We
+started with our design point analysis detailed earlier, which describes the steady state operating
+conditions that we plan to run the engine at. We then chose alarm limits slightly higher than these
+operating conditions, with a reasonable margin in order to account for small fluctuations while running.
+As a last check, we repeated our stress analysis calculations at these shutoff conditions in order to
+ensure that the engine could not be damaged under any circumstances. Table 8 shows a summary of our
+programmed limits, while Table 9 shows the results of the stress analysis at these worst-case values.
+
+Table 8. Programmed warning and shut-off limits
+T2 [°F]
+Design
+High Yellow
+High Red
+
+388
+N/A
+N/A
+
+T3 [°F] T4 [°F]
+1264
+1280
+1350
+
+985
+1000
+1100
+
+GG Oil
+Temp
+[°F]
+N/A
+250
+300
+
+T5 [°F]
+932
+1000
+1100
+
+PT Oil
+Temp
+[°F]
+N/A
+250
+300
+
+Starter
+Temp
+[°F]
+N/A
+150
+200
+
+G.G.
+Speed
+[RPM]
+74000
+74000
+75000
+
+Dyno
+Speed
+[RPM]
+3497
+3500
+3550
+
+Table 9. Worst-case stress analysis results at shut-off conditions
+G.G. Stress Analysis
+Max Stress
+435541888
+Temperature
+732
+767654000
+Yield Strength [Mpa]
+Factor of Safety
+
+1.7625
+
+Pa
+degC
+Pa
+-
+
+P.T. Stress Analysis
+Max Stress
+596425691
+Temperature
+593
+1053499768
+Yield Strength [Mpa]
+Factor of Safety
+
+Pa
+degC
+Pa
+
+1.766
+
+Redundant Throttle Position Sensor
+System Overview
+The design process detailed in Chapter 3 culminated with the final design depicted in Figures 44 and 45.
+In these models, the electronic throttle actuator is a rough mockup, but all the dimensions relevant to
+the TPS system are accurate. The mounting scheme utilizes the same strut channels that the actuator is
+already mounted to, allowing for simple assembly and adjustability. In reality, the throttle linkage is
+attached to the left output shaft of the actuator in Figure 44, but it is not shown here (refer to Figure 28
+in Chapter 3). Detailed drawings can be found in Appendix B, and vendor specification sheets can be
+found in Appendix D.
+
+51
+
+-
+
+Electronic Throttle Actuator
+
+Helical Coupling
+
+Potentiometer
+
+Sensor Bracket
+
+Base Plate
+
+Strut Channels
+Figure 47. Entire TPS assembly
+
+Figure 48. Exploded view of TPS assembly
+
+Position Sensor
+The selected rotary position sensor is a Series 026 Rotary Potentiometer manufactured by CTS
+Electrocomponents and sold by Digikey. The potentiometer is rated to 5 watts, has a linear voltage
+output, a minimum effective rotational angle of 280 degrees, and is rated to 10,000 cycles. It is a “panel52
+
+mount” style sensor, meaning that the output shaft is inserted through a hole in the Sensor Bracket and
+secured with the included nut and lock washer, shown in Figure 46.
+
+Figure 49. CTS Series 026 Rotary Potentiometer, Panel-Mount
+A simple wiring harness using existing laboratory components will be manufactured and connected to
+the three electrical terminals on the potentiometer (power, ground, and output). The wires will then be
+fed into the dyno cell control box which is operated from outside of the cell. The dyno controller has
+built in functions that assign values (throttle position, in this case) based on a voltage input and a
+calibration curve. While the engine is off, a simple calibration will be performed by recording the
+potentiometer output voltage at two throttle positions: fully closed (0%) and fully open (100%). Because
+it is a linear-output potentiometer, these two values are enough to fully define the calibration curve.
+
+Helical Coupling
+The helical coupling is sourced directly from McMaster-Carr, and is sized to fit the ½”diameter output
+shaft of the throttle actuator and the ¼” diameter potentiometer shaft. It is tightened onto the shafts
+via two #8-32 x ½” socket head cap screws.
+
+Sensor Bracket
+One of only two components for the TPS system that we will manufacture ourselves, the Sensor Bracket
+will be machined on a manual mill from a single piece of AL 6061 U-Channel. The bracket will be bolted
+to the slot in the Base Plate using two ¼”-20 x 1.25” bolts. Due to the difficulty of perfectly measuring
+the location of the actuator output shaft relative to the strut channels, the bracket is designed to be
+fully adjustable in the two lateral directions. This is achieved by means of tee nuts sliding in the strut
+channels and the bracket mounting bolts sliding in the base plate slot. In order to account for
+measurement errors in the remaining degree of freedom, height, the locating hole in the Sensor Bracket
+for the potentiometer will initially be sized approximately 1/16” too high. The system will then be
+assembled, and the vertical shaft misalignment will be measured. The bottom face of the Sensor Bracket
+(the surface that sits on the Base Plate) will then be faced down on a mill by the measured amount to
+accurately bring the two shafts into alignment. Because the helical coupling can accept up to .015” of
+parallel misalignment, we are confident that this method will ensure alignment well within specification.
+
+53
+
+Base Plate
+The Base Plate is the second (and last) component that we will be machining, and will be made from 9” x
+2” x .5” AL 6061 rectangular bar stock. It will be cut and finish-machined to length, and then drilled and
+slotted for mounting. The slot for the Sensor Bracket will be machined using a ¼” end mill. Because of
+the inherent adjustability, dimensional tolerances on the slot need not be very tight. In fact, the most
+critical dimension on this part is the distance between the two strut channel mounting holes, a
+dimension already determined by the existing hardware.
+
+Cost Analysis and BOM
+For a comprehensive list of all the parts in our final design, please see the indented BOM in Appendix G.
+However, the vast majority of the parts in that list have already been acquired, leaving only a select few
+components that we must buy for this project. Figure 51, below, shows all of our anticipated costs, with
+components grouped based on relative subsystem.
+System
+Relevant Part #
+Instrumentation
+ENG0201
+Instrumentation
+ENG0202
+Instrumentation
+ENG0303
+Instrumentation
+ENG0204
+Instrumentation
+ENG0205
+Instrumentation
+ENG0206
+Instrumentation
+ENG0207
+Instrumentation
+ENG0208
+Instrumentation
+ENG0209
+Instrumentation
+ENG0210
+Instrumentation
+ENG0211
+Instrumentation
+ENG0212
+Instrumentation
+ENG0213
+Instrumentation
+ENG0214
+Instrumentation
+ENG0215
+Instrumentation
+ENG0216
+Instrumentation
+ENG0217
+Instrumentation
+ENG0218
+Instrumentation
+ENG0219
+Instrumentation
+ENG0220
+Instrumentation
+ENG0221
+Instrumentation
+ENG0222
+Instrumentation
+ENG0223
+TPS
+TPS
+TPS
+TPS
+Other
+
+TPS0101
+TPS0103
+TPS0102
+TPS0111
+
+Description
+OMEGACLAD 1/16" Thermocouple
+1/8 NPT to AN-4 Adapter
+1/8 NPT Tee Connector
+1/8 NPT OMEGAlok Compression Fitting
+S.S. 304 1/2" Hex Bar Stock - 1 ft long
+3/32 Cobalt Drillbit
+3/32-3 Flute Jobbers Drill bit
+3/32 4-flute uncoated carbide endmill
+1/8 die dril bit
+3/32 Die Drill
+3/32 4-flute carbide endmill
+1/4-28 Tap for Ti
+3/32 Ultra Duty Drill Bit
+Copper Crush Washers
+KMQXL-062G-6 Thermocouple
+KMQXL-062G-12 Thermocouple
+1/4 NPT Tee Fitting
+SSLK-116-18 Thermocouple
+Aeroquip FBM1011 - Reusable Hose Ends
+Aeroquip FBM1011 - PTFE Fittings
+Summit Racing SUM-220490-Summit Racing Hose Ends
+1/4 NPT to 1/8 NPT Adaptor
+Cobalt End Mill
+CTS Rotary Potentiometer - Panel Mount
+Helical Coupling - 1/2" x 1/4"
+AL 6061 U-Channel, 10" Base x 3-1/2" Leg
+AL 6061 Bar, 1/2" thick x 2" wide x 1' long
+Spare JFS-100 P.T. Containment Ring
+
+Vendor
+Quantity
+Cost
+Omega
+2
+$ 25.00
+McMaster-Carr
+2
+$ 11.30
+McMaster-Carr
+1
+$ 19.47
+Omega
+2
+$ 20.50
+McMaster-Carr
+1
+$ 10.10
+McMaster-Carr
+2
+$ 7.78
+McMaster-Carr
+1
+$ 14.68
+MSC
+1
+$30.90
+MSC
+1
+$27.39
+MSC
+1
+$ 26.90
+MSC
+1
+$ 45.57
+McMaster-Carr
+2
+$ 41.95
+McMaster-Carr
+1
+$ 27.15
+McMaster-Carr
+1
+$ 18.90
+Omega
+2
+$ 32.00
+Omega
+2
+$ 33.00
+McMaster-Carr
+1
+$ 22.79
+Omega
+2
+$ 26.00
+Summit Racing
+2
+$ 10.97
+Summit Racing
+2
+$ 7.97
+Summit Racing
+2
+$ 5.97
+McMaster-Carr
+1
+$ 2.94
+McMaster-Carr
+1
+$ 15.09
+Subtotal
+DigiKey
+1
+$ 5.34
+McMaster-Carr
+1
+$ 58.25
+McMaster-Carr
+1
+$ 28.70
+McMaster-Carr
+1
+$ 8.60
+Subtotal
+George Carey
+1
+$ 250.00
+Subtotal
+
+Total Cost
+$ 50.00
+$ 22.60
+$ 19.47
+$ 41.00
+$ 10.10
+$ 15.56
+$ 14.68
+$ 30.90
+$ 27.39
+$ 26.90
+$ 45.57
+$ 83.90
+$ 27.15
+$ 18.90
+$ 64.00
+$ 66.00
+$ 22.79
+$ 52.00
+$ 21.94
+$ 15.94
+$ 11.94
+$
+2.94
+$ 15.09
+$ 706.76
+$
+5.34
+$ 58.25
+$ 28.70
+$
+8.60
+$ 100.89
+$ 250.00
+$ 250.00
+
+Tax (7%) $ 77.37
+Est. S&H $ 129.29
+TOTAL $ 1,264.31
+
+Figure 50. Cost Analysis
+As implied earlier, much of the hardware (such as all the nuts and bolts for the TPS system) does not
+show up on this cost spreadsheet because Jim Gerhardt has a vast selection of such items that we are
+54
+
+able to use for the project. There are no extra machining service costs because all the manufacturing will
+be completed at Cal Poly. The last line item, the “Spare JFS-100 P.T. Containment Ring,” is an item that
+was purchased from George Carey, a private seller who is currently our only source of spare parts for
+the JFS engine. He agreed to sell us a damaged, unusable power turbine containment ring for $250.
+Because it is difficult to tell exactly what the inner structure of the containment ring looks like, it seemed
+risky to drill into ours (which is in excellent condition) without further investigation. We purchased the
+damaged unit from George, and will cut it apart to be able to clearly see how the various parts of the
+containment ring interface with each other. We will also be able to “practice” our planned machining
+operations on the damaged unit, thus minimizing risk when it comes to the final part.
+
+Laboratory Activity
+Although developing the lab activity is a central part of our project, it was decided shortly after the
+Preliminary Design Review that further work on this front should wait until the engine is fully
+instrumented and operating. Without actually running the engine ourselves, it is difficult to design
+operating procedures in any degree of detail, and it is unclear how much flexibility we will have
+regarding safely operating the engine at various operating points. Thus, the laboratory plan laid out in
+Chapter 3 has not changed. As a review, the primary highlights are:
+1. Review safety protocols
+2. Introduce students to JFS-100 engine. Include brief overview of component functionality
+3. Students will run the engine at its rated design point and collect data
+4. This data will be used to perform a simple 1-dimensional thermodynamic analysis to
+characterize the engine and evaluate component efficiencies
+5. An energy balance will be performed on the engine based on the previous analysis
+6. Finally, the students will be asked a set of conceptual questions to further understanding
+We plan to have the engine running by the beginning of April (see Gantt chart in Appendix F), at which
+point lab activity development will continue.
+
+Chapter 5: Manufacturing and Assembly
+Manufacturing
+The vast majority of the manufacturing phase of our project was focused on fabricating the hardware for
+Stage 4 instrumentation. This proved to be a challenge because it involved machining the titanium
+containment ring around the power turbine, the power turbine housing itself, and a stainless-steel
+sensor housing that would hold the thermocouple and pressure transducer line for Stage 4. As discussed
+earlier in Chapter 3, the majority of the manufacturing processes were carried out in Jim Gerhardt’s
+shop. This allowed him to supervise and advise us on some of the more delicate and complex machining
+processes, while still allowing us to be the primary machinists.
+
+Stage 4 Senor Housing
+The sensor housing was designed to hold an OMEGACLAD 1/16” thermocouple and provide a gas path
+for the pressure transducer line. To accomplish this, two separate machining operations were carried
+55
+
+out. The first involved taking the ½” diameter stock and facing one end to 1.9” on a Haas TL-1 lathe.
+Using a parting tool, the piece was cut to 1.8 inches and reset into the jaws of the chuck. With Quickcam
+the shank of the sensor housing was turned down to 0.4”, with a step down to 1/4 “ inch in diameter at
+the end for the crush washer. Using the tailstock of the lathe, a 1/8” hole was cut 0.75 inches deep into
+the end of the part and tapped for a 1/8 NPT thread. Once this was completed, the part was removed
+from the chuck jaws, flipped, and reset. The next step was to manually drill a pilot hole and a 1/16 inch
+diameter hole. This was cut 0.32” inches into the part, and was designed to loosely hold the
+thermocouple to allow for a flow path of the gases from stage 4 to the pressure transducer.
+The second process was completed on Haas TL-1 CNC mill. The mill was used to precisely locate and drill
+the other two 1/16” holes into the end of the sensor housing. The final part can be seen in Figures 52
+and 54. Figure 53 shows the part with the 1/8 NPT tee fitting attached.
+
+1/8” NPT Tee Fitting
+
+Thermocouple
+
+Stage 4 Senor Housing
+
+Figure 51. Final Sensor Housing Part with Drawing
+
+Figure 52. Sensor Housing Installed on Tee fitting w/ Thermocouple
+
+Thermocouple Tip
+
+Copper Crush Washer
+Stage 4 Senor Housing
+
+Figure 53. End of sensor housing with the thermocouple and copper crush washer installed
+
+Containment Ring
+The containment ring presented two main challenges for us. First, the XRF results showed that the
+containment ring is made out of Ti-6Al-4V, a high-strength titanium alloy known to be difficult to
+56
+
+machine because it work hardens at low temperatures. Second, it was unknown to us if the containment
+ring was solid titanium. As can be seen in Figure 55, wear rings are located on the inner diameter. These
+rings are used to maintain extremely small clearances between the blades of the turbine and the walls
+that surround it.
+
+Power Turbine Wear Rings
+
+Figure 54. Power Turbine Containment Ring
+The issue was that there was no clear indication as to what was behind the wear rings, or how they were
+attached to the titanium portion of the containment ring. Knowing the delicacy of the operation, the
+large amount of unknowns, and how difficult it would be to machine titanium precisely the first time
+with no mistakes, we decided to purchase a spare containment ring from George Carey, the turbine
+enthusiast who is our main source of spare engine parts.
+Upon receiving the spare containment ring, a G-code was written for machining the sensor housing
+instrumentation port on the TM-1 CNC Mill using CamWorks software and the CAD model discussed in
+the Design Development section, Chapter 3. There were five main tooling operations within this code
+that needed to be carried out. First, a pilot hole had to be drilled into the outer wall of the containment
+ring. This would decrease the chances of a drill bit deflecting in the next operation, ensuring a straight
+drill path through the ring. The next step was to drill a 1/8“ through-hole to allow the thermocouple to
+be inserted through the containment ring and into the gas flow path. Once this had been completed the
+next two operations were to drill and tap the threads for the sensor housing to screw into. The final
+machining process was to cut the circular pocket for the crush washer to sit. This involved using a ¼ inch
+end mill to cut a 0.45 inch diameter hole, 0.0610 inches in depth.
+Unfortunately, there were many complications to this seemingly simple procedure. The first problem
+became apparent upon drilling the first through-hole. The cobalt drill bit simply snapped after cutting
+about 1/5 of the way into the containment ring. Thinking that the titanium had been accidently work
+hardened, more research was put into the proper feedrates and tool speeds for machining titanium.
+Another cobalt drill bit was ordered, the practice containment ring was rotated, and the process was
+repeated. Figure 56 shows the practice containment ring being machined. Looking closely, you can see
+the multiple machining attempts along the outer wall.
+57
+
+Hole from Previous Machining Attempt
+
+Figure 55. Spare Containment Ring Being Machined on Jim’s TM-1
+Again, the drill bit snapped early in the machining cycle. Thinking the problem was the tool material, a
+carbide-coated drill bit was ordered. Once again, the drill bit snapped. The next idea was to use a
+square-bottom end mill to drill through the containment ring. During this machining cycle, the end mill
+didn’t snap but instead became rounded and lost all of its cutting edges. A
+Much to our surprise, the key to (this machining operation) machining this processes was a straight-flute
+drill bit. Also called die drill bits, these tools are designed for drilling through hardened tool steel often
+used for stamping and casting dies. With the proper speed and feedrate, a full-retract peck-drill cycle,
+and a large amount of coolant, this drill bit was able to easily cut through the both the containment ring
+and the wear plates. A photo of this drill bit can be seen in Figure 57.
+
+Figure 56. Straight-Flute Drill Bit
+The next issue was how to properly tap the containment ring. For the first attempt, the HAAS VF-3 CNC
+mill in Mustang 60 was used. The tap was not sitting correctly in the tool holder which resulted in the
+tap moving vertically during the machining operation and not threading the hole correctly. In the next
+attempt, we attempted to hand tap the hole. The reasoning was that we had more control over how fast
+the hole was tapped, thus be able to ensure that the titanium wasn’t being work hardened. The tap
+ended up snapping about a quarter way through the containment ring, and was in general extremely
+58
+
+difficult to work with manually. It was decided to go back to using Jim’s TM-1, with lower feeds and
+speeds.
+This ended up working, and the rest of the machining operation was completed with no problems. The
+entire process was done repeatedly until we had complete confidence that there were no errors in the
+code and every operation could be carried out successfully. We then moved on to machining the actual
+containment ring that would be installed in the engine, shown in Figure 58.
+
+Figure 57. Final Machining of Actual Containment Ring
+
+Power Turbine Housing
+The last component that needed to be machined for Stage 4 instrumentation was the power turbine
+housing, which required a clearance hole in order to allow installation of the sensor housing into the
+containment ring. The power turbine housing is made out of a stainless-steel alloy, and we were able to
+determine proper cutting tools and parameters easily. The more challenging aspect was how to fixture
+the turbine housing securely in a vice during machining. Due to the part being asymmetrical and the
+location of the hole being at a strange angle, we had to make specialized vice jaws and an angle finder.
+The angle finder was a triangular piece of wood, cut to 18 degrees. The vice jaws were manually milled
+out of aluminum and can be seen in Figure 59. The final machining set up can be seen in Figure 60, with
+the turbine housing sitting on top of the original vice jaws because the width was larger than the jaws
+could be moved to.
+
+59
+
+Wooden Angle Finder
+AL Vice Jaw
+
+Figure 58. Aluminum vice jaws
+
+Figure 59. Power Turbine Machining Setup
+
+Throttle Position Sensor
+The throttle position sensor has only two components that need to be machined. The first is the base
+plate that bolts to the rails of the floor, and is what the sensor bracket is mounted to. The base plate
+was machined in Mustang 60’ on the manual mill (Figure 61). The first step was to use the aluminum
+chop saw to cut the 12 inch aluminum stock down to 9 inches. Next, the part was faced down to the
+appropriate length on the mill using a ¼ inch end mill and the DRO. Two 3/8 inch holes were drilled with
+a 3/8 inch center-cutting end mill. The final step was to mill out the 0.3” diameter, 2.5”-long slot.
+
+Figure 60. Base plate machining setup
+The second part that needs to be machined is the sensor bracket. This will only require two machining
+operations to be completed. The first is to cut the aluminum stock to length using the aluminum chop
+saw. After this has been completed, two slots will be machined on the base portion of the bracket to
+allow for lateral adjustment of the part. Currently, this component has yet to be machined.
+
+60
+
+Assembly
+With manufacturing complete, we began installing the instrumentation and reassembling the engine.
+The first step was to install the Stage 3 instrumentation into the air-start port, shown in Figures 62 and
+63.
+
+Figure 61. Stage 3 instrumentation port
+
+Figure 62. Stage 3 thermocouple inserted through the air-start rakes
+61
+
+The power turbine IGV ring was then installed, with a layer of high-temperature silica sealant applied to
+the mating surface (Figure 64).
+
+Figure 63. Power turbine IGV ring ready for installation
+Following aerospace standards, the screws that fasten the IGV ring to the gas generator assembly were
+safety-wired to prevent them from loosening due to vibration (Figure 65).
+
+Figure 64. IGV ring installed in the gas-generator assembly, with the bolts safety-wired
+The next step was to install the power turbine containment ring into the power turbine housing, thus
+completing the power turbine assembly. During disassembly, we had noticed a significant amount of
+white thermal insulation installed in the space between the containment ring and the housing.
+Accordingly, we purchased sheets of 1/32”-thick ceramic insulation from McMaster-Carr and wrapped it
+62
+
+around the containment ring prior to installation, as shown in Figure 66. We cut out a small hole in this
+insulation to accommodate the Stage 4 sensor housing.
+
+Figure 65. Thermal insulation wrapped around containment ring prior to installation
+The containment ring was then slid into the power turbine, and the Stage 4 instrumentation holes on
+both parts were checked for alignment. Figure 67 shows these two components mated together.
+
+Figure 66. Containment ring installed in power turbine housing
+Next, the Stage 4 instrumentation assembly, including the sensor housing, thermocouple, and
+compression fitting, were inserted through the clearance hole in the power turbine housing and
+threaded into the containment ring, shown in Figure 68.
+
+63
+
+Figure 67. Stage 4 instrumentation installed in power turbine
+The depth of the thermocouple was adjusted to the desired point: extending as far into the flow path as
+possible without interfering with the power turbine blades. When the desired position was achieved,
+the compression fitting was tightened around the thermocouple, fixing it in place. Figure 69 shows the
+final Stage 4 thermocouple location.
+
+64
+
+Figure 68. Stage 4 thermocouple location
+With the power turbine and gas generator both assembled, the last step was to mate them together.
+The large flange shown in Figure 70 provides the mating surface, and ten screws are installed through
+the gas generator housing and are threaded into the power turbine housing. Figure 71 shows the fully
+assembled engine.
+
+Figure 69. Preparing to mate the gas generator and power turbine assemblies
+
+65
+
+Figure 70. Fully assembled and instrumented engine
+During the entire process of reassembly, we would repeatedly spin the turbine by hand to ensure that
+there was no interference with any part of the rotating assembly. We were very careful to keep things
+clean and organized, as a small oversight here could have been very costly. One of the challenges we
+faced was that none of the manuals for the engine included torque specifications for any of the
+fasteners. We considered calculating some rough torque values ourselves, using the type and size of
+fastener as well as the materials that they interface with. However due to the exotic materials used in
+the engine and our complete lack of knowledge regarding grade or material of the fasteners themselves,
+we soon realized that any attempt at such an analysis would be primarily guesswork. Thus, under the
+direction of Jim Gerhardt, we tightened everything using a small handle ratchet until they were quite
+firm, and left it at that.
+Installing the engine on the dynamometer was the next task, and included many small hardware details
+that needed attention, many of which were initially unforeseen. Because it had been many years since
+the hardware was used, numerous components had to be installed, tested, and in some cases, repaired
+or replaced. In the interest of brevity, we will not discuss each and every one of these tasks in depth,
+however what follows is a brief outline of the dyno installation process. The engine was carried over to
+the dyno, attached the dyno coupling, and bolted to the four main mounting points as shown in Figure
+72.
+
+66
+
+Figure 71. Installing the engine on the dynamometer
+The alignment of the coupling was checked to ensure that there was no more than 1 degree of
+misalignment in any direction. Because this had been set up and aligned before, no further adjustment
+was necessary. We attached the intake and exhaust pipes, and connected hoses from the pressure ports
+on the engine to the pressure transducers located in the control box in the dyno cell. The engine was
+filled with oil, and the oil circulation pumps were turned on to ensure proper operation. In fact, one of
+these pumps had corroded and seized, and was subsequently replaced. We tested the water supply
+system, which circulates cooling water both through the dyno and through the oil heat exchangers, and
+had to flush the system and replace the water filter. The new instrumentation was wired to the control
+box, which was already set up to output the required channels to the controller and data acquisition
+system outside of the test cell. All of the sensors were calibrated (see Chapter 8), and the wires and
+hoses were bundled and organized to make sure they did not touch any hot engine components. The
+fuel supply system (running through the Fuel Balance that measures fuel flow when the engine is
+running) was reattached and flushed with fresh Jet-A fuel. The completed engine/dyno assembly is
+shown in Figure 73.
+
+67
+
+Figure 72. Engine fully installed and hooked up to the dynamometer
+
+Chapter 8: Testing and Design Verification
+Thermocouple Testing
+Although we purchased the thermocouples from Omega, a highly regarded instrumentation company,
+small thermocouples tend to be rather fragile and can easily break during shipping/transportation. As
+such, we decided to test all of the thermocouples we purchased to make sure they function properly.
+This testing process involved submersing each thermocouple in both an ice bath and a reservoir of
+boiling water, and ensuring that they measured 32 °F and 210 °F respectively. The key piece of
+equipment we used for this testing was a Fluke Thermocouple Calibrator provided by Jim Gerhardt. This
+handheld calibrator can be directly plugged into the thermocouple connector and measures
+temperature output. For each thermocouple, we repeated the experiment three times. The results are
+shown in Table 10.
+
+Table 10. Results from preliminary thermocouple testing
+
+Thermocouple 1
+Thermocouple 2
+Thermocouple 3
+Thermocouple 4
+
+Trail 1
+[°F]
+33.0
+33.1
+33.0
+33.0
+
+Ice Bath
+Trial 2
+[°F]
+33.0
+33.0
+33.0
+33.1
+
+Trail 3
+[°F]
+33.0
+33.1
+33.0
+33.1
+
+68
+
+Trail 1
+[°F]
+208.9
+209.1
+208.5
+209.0
+
+Boiling Water
+Trial 2
+[°F]
+209.1
+209.0
+209.0
+209.1
+
+Trail 3
+[°F]
+209.2
+209.0
+209.0
+209.2
+
+Each thermocouple accurately measured the desired temperature within 2 °F for each of the three trials.
+We concluded that all of the thermocouples were accurate and functioning properly.
+
+Sensor Calibration
+With all of the sensors installed in the engine and wired into the controller, the next step was to
+calibrate them in the Digalog data acquisition system, using the Hypercell user interface software (Figure
+74). Because the entire system hadn’t been used in 5-6 years, we decided to calibrate all of the
+thermocouples and pressure transducers used to monitor the engine, not just the ones that we added
+ourselves. The thermocouples are calibrated using a linear conversion through the Hypercell
+“Calibration” menu. First, the Fluke Thermocouple Calibrator was plugged into one of the thermocouple
+channels and set to “Output” mode. This mode allows the calibrator to imitate a temperature input to
+the channel. The calibration interface requires a “low value” and a “high value”, which it uses to create
+the linear calibration curve. We used a low value of 0 °F, and a high value of the design point
+temperature for each thermocouple (e.g. 1264 °F for T3). After calibrating all the thermocouples, with
+the engine off they all displayed the proper ambient temperature within 2 °F.
+
+Figure 73. Controller interface including Hypercell display
+A similar procedure was followed to calibrate the pressure transducers, this time using a Fluke Pressure
+Calibrator. This equipment contains a small hand pump, pressure display, and supply hose that allows
+you to apply the desired pressure to a transducer or other pressure sensor. Like the thermocouples, the
+transducers are linear output sensors, and thus a linear calibration curve was used. We used a low value
+of 0 psig and a high value of 100psig, which covers the entire operating range of the Sensym ICT
+pressure transducers. After calibration and with the engine and subsystems off, the pressure
+transducers all displayed within .5 psig of the expected atmospheric pressure of 0 psig.
+Another critical component that required recalibration was the Laminar Flow Element that is used to
+measure the volumetric air flow into the engine. Also a linear output sensor, the LFE uses the differential
+pressure across a laminar flow-inducing restriction to characterize the flowrate, and was thus easily
+calibrated using the Fluke Pressure Calibrator. A low value of 0 inH20 differential pressure was used,
+69
+
+corresponding to a flowrate of 0 CFM. A high value of 407 CFM at 8 inH20 differential pressure was
+provided by the equipment manufacturer.
+
+Shutoff Algorithms
+After programming the alarms and limits into Hypercell, it was necessary to verify that they functioned
+properly before starting the engine itself. This was done using two methods. The first method was to use
+the thermocouple calibrator described earlier to “fake” an over-temperature condition. For example,
+with the T4 limits set at 1000 °F (high yellow) and 1100 °F (high red), the calibrator was set in “output”
+mode and the output slowly increased until it reached 1000 °F. At this point, the high yellow alarm
+would be tripped and a warning message would appear, accompanied by the Testmate alarm sound.
+After acknowledging the alarm, we continued to increase the calibrator output until it reached 1100 °F.
+This would trip the high red alarm, causing the engine power to be shut off and the test to be put on
+hold. In this manner, we verified that the alarms and shutoff actions for each critical temperature
+performed properly.
+A different method was used to test the over-speed software limits, which were programmed to shut off
+the engine if either the engine or the dyno speed limits were exceeded. Similar to the temperature
+testing described previously, we needed to fake a speed signal to the controller in order to test the
+alarm protocols. This was accomplished by using a signal generator and an oscilloscope, shown in Figure
+75. We programmed the signal generator to output a 1 Vpp square wave, the same type of signal output
+by the hall-effect speed sensors. By varying the frequency of the signal generator, we could imitate
+different speeds to the controller. Using this method, we were able to verify that the high yellow and
+high red alarms based on speed inputs were properly activated, and that the engine power was indeed
+shut off in the high red alarm state.
+
+Figure 74. Testing over-speed shutoff conditions using a signal generator
+
+Engine Startup
+With all of the sensors calibrated and programming complete, the final step is to actually start the
+engine. This will allow us to thoroughly verify our design point analysis and instrumentation hardware
+under real operating conditions. Regrettably, at the time of this writing, we are still working through the
+70
+
+last safety checks and engine operating procedures with Dr. Lemieux and Jim Gerhardt, and thus have
+not yet ran the engine. We are planning on completing this crucial step in the final week of the project.
+
+Chapter 9: Conclusions and Recommendations
+By now it should be fairly clear to the reader that we did not complete all of the objectives that were
+stated at the outset of the project. Throughout the manufacturing and assembly processes, we took
+extreme care to make sure that parts were made correctly and no details were overlooked. As we were
+integrating the engine back onto the dyno, numerous small projects would arise that needed to be
+completed, mostly due to the fact that none of the hardware had been used in more than five years. We
+spent many hours simply troubleshooting the network system that allows the user interface software to
+communicate to the engine and dyno controllers. Even more time was spent learning how to program
+the software, which affords the user a large amount of control and customization, at the cost of a very
+steep learning curve. Although frustrating at times, this lengthy process was necessary to ensure that we
+could confidently run the engine without fear of malfunction or damage. We were constantly reminded
+by Dr. Lemieux, our sponsor, and Jim Gerhardt to work through the details slowly and methodically to
+avoid costly mistakes. Unfortunately, however, this means that there is still work to be done before the
+engine is ready for use as part of a class. The remaining items that still require development are: engine
+startup and design point verification, final manufacturing and integration of the redundant TPS, and
+detailed design of the laboratory activity. Jim Gerhardt and Dr. Lemieux will continue working to
+complete these objectives in the coming months.
+Special thanks to Jim Gerhardt, Dr. Patrick Lemieux, and Dr. Peter Schuster for their advice and support!
+
+Figure 75. The dream team (From left: Dr. Lemieux, Dorian, Jim, Zoe)
+
+71
+
+APPENDIX A
+House of Quality
+
+72
+
+Design Safety Hazard Checklist
+
+73
+
+74
+
+APPENDIX B
+Drawing Packet
+JFS-100 Engine
+
+75
+
+76
+
+Stage 4 Instrumentation
+
+77
+
+78
+
+Throttle Position Sensor
+
+79
+
+80
+
+81
+
+APPENDIX C
+Vendor List
+McMaster-Carrr
+https://www.mcmaster.com/
+(562) 692-5911
+(562) 641-2800
+
+DigiKey
+http://www.digikey.com/
+1-800-344-4539
+
+Omega
+http://www.omega.com/
+1-800-826-6342
+
+Grainger
+https://www.grainger.com/
+1-800-472-4643
+
+Honeywell Sensing
+https://sensing.honeywell.com/
+800-537-6945
+
+82
+
+APPENDIX D
+Vendor Specification Sheets
+Thermocouples
+
+83
+
+Pressure Transducers
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+Potentiometer
+
+90
+
+APPENDIX E
+Supporting Analysis
+
+91
+
+Test Data
+
+92
+
+93
+
+APPENDIX F
+Gantt Chart
+
+94
+
+95
+
+APPENDIX G
+Indented BOM
+
+96
+
+Design Verification Plan
+
+97
+
+APPENDIX H
+JFS100 Operator’s Manual
+Start-up Procedure
+1. Inside Test Cell
+o Connect two 12V batteries to the 24V connector
+o Turn on cooling water valve
+o Turn on exhaust vent fan
+o Turn on fuel pump
+o Open HEX water supply
+o Open HEX water return
+o Fuel selector valve: set to ‘diesel’
+2. Outside Test Cell
+o Turn on cooling tower switch
+o Verify that fuel tank is full (Jet A only)
+o Verify tank quick disconnect
+o Record atmospheric pressure
+o Turn on Cellmate
+o Turn on lower Testmate
+o Turn ON breaker for dyno field
+o Verify “AC Dyno Power” red light on Testmate rear panel is ON
+o Turn on right remote Testmate control panel
+o Turn on right dyno computer.
+o Open HCmain.exe
+o Reset N1 channel
+o Open/start history file (Calpoly.his, z: drive)
+o Open JFS100 display
+3. On Remote Testmate Control Panel
+o Turn on Panel Enable
+o Turn on Aux. Power
+o Turn on Throttle Power
+o Toggle on “Diesel” control button
+o Set Dyno Control to Absorb and Torque
+o Set Engine Control to “%Throt Position”
+o Set 40% throttle position
+4. To Run
+o Turn on two oil pump switches on display; verify HEX oil pressure (approx.. 2psig)
+o Toggle on Ignition (master)
+o Toggle on Fuel (Run/Abort)
+98
+
+References
+[1] Hill, P., Petersen, C., 1992. "Mechanics and Thermodynamics of Propulsion." Addison Wesley
+Publishing Company, Inc.
+[2] Leone, D., "A-7 Corsair II and the Val Program." https://theaviationist.com/2013/08/07/a-7-program/
+[3] Allied Signal, "Gas Turbine Engine Power Unit Maintenance Manual, Parts Catalog, JFS-100-13A, Jet
+Fuel Starter Unit," Allied Signal, Dist. Jim Vos
+[4] http://jfs100jets.com/
+[5] Kurz, R., 2005. "Gas Turbine Performance," Proceedings of the Thirty-Fourth Turbomachinery
+Symposium, Turbomachinery Laboratory, Texas A&M University
+[6] Korakianitis, T., Wilson, D. G., 1998. "The Design of High-Efficiency Turbomachinery and Gas
+Turbines." Prentice Hall, Upper Saddle River, NJ.
+[7] Glaser, A. J., Caldwell, N., Gutmark, E., 2007. "Performance of and Axial Flow Turbine Driven by
+Multiple Pulse Detonation Combustors," American Institute of Aeronautics and Astronautics, NV
+[8] Glaser, A. J., Caldwell, N., Gutmark, E., 2006. "Performance Measurements of a Pulse Detonation
+Combustor Array Integrated with an Axial Flow Turbine," American Institute of Aeronautics and
+Astronautics, Reno, NV
+[9] Turbokart.com. N.p., n.d. Web. 10 Feb. 2017.
+[10] "Garrett JFS 100-13A Turboshaft engine (Zodiac powerplant - kit airplane)." Garrett JFS 10013A Turboshaft engine (Zodiac powerplant - kit airplane). N.p., n.d. Web. 10 Feb. 2017.
+[11] Smith, K., 2012." Gas Turbine Governing Dynamics and Control," California Polytechnic State
+University, San Luis Obispo
+[12] Turbine Technologies, LTD., 2010. "TurboGen, Gas Turbine Electrical Generation System Sample Lab
+Experiment Procedure," Turbine Technologies, LTD., Chetek, Wisconsin
+[13] Witkowski, T., White, S., Ortiz Duenas, C., Strykowski, P., Simon, T., 2003. "Characterizing the
+performance of the SR-30 Turbojet Engine," University of Minnnesota.
+[14] Perez-Blanco, H., “ACTIVITIES AROUND THE SR-30 MINILAB at PSU,” Mechanical and Nuclear
+Engineering – The Pennsylvania State University
+[15] “TEMPERATURE AND PRESSURE MEASUREMENTS IN A TURBINE ENGINE,” Georgia Institute of
+Technology – Daniel Guggenheim School of Aerospace Engineering
+[16] Myre, D., “EA429 Course Objectives,” United States Naval Academy
+[17] "XL-PMI - Retired Product." GE Digital Solutions. N.p., 23 Mar. 2016. Web. 10 Feb. 2017.
+[18]"Waspaloy Tech Data." Waspaloy Tech Data. N.p., n.d. Web. 10 Feb. 2017.
+[19] Cain, P., “Pot vs. Sensor,” Piher International, Libertyville, IL
+
+99
+
+

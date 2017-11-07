@@ -1,0 +1,1703 @@
+LIQUID FORCE KITE CONTROL SYSTEM DESIGN
+
+A Senior Project submitted to
+the Faculty of California Polytechnic State University,
+San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree of
+Bachelor of Science in Industrial and Mechanical Engineering
+
+by
+Brendan Kerr, Alden Simmer, Brodie Sutherland
+March 2017
+
+ABSTRACT
+Liquid Force Kite Control System Design
+Brendan Kerr, Alden Simmer, Brodie Sutherland
+Kiteboarding is an ocean sport wherein the participant, also known as a kiter, uses a large
+inflatable bow shaped kite to plane across the ocean on a surfboard or wakeboard. The
+rider is connected to his or her kite via a control bar system. This control system allows
+the kiter to steer the kite and add or remove power from the kite, in order to change
+direction and increase or decrease speed. This senior project focused on creating a new
+control bar system to replace a control bar system manufactured by a kiteboarding
+company, Liquid Force. The current Liquid Force control bar has two main faults,
+extraneous components and a lack of ergonomic design. Our team aimed to eliminate
+unneeded components and create a more ergonomic bar. By eliminating components, the
+bar would also be more cost effective to produce by using less material and requiring less
+time to manufacture.
+We first conducted a literature review into the areas of kiteboarding control systems and
+handle ergonomics. Based on studies done on optimal grip diameters for reducing
+forearm stress we concluded that the diameter for the bar grip should be at least a
+centimeter less than the maximum grip of the user. In addition to the literature review we
+conducted our own ergonomics surveys on fellow kite surfers regarding their preference
+towards the shape of the grip. Using ANOVA analysis, we found that riders preferred a
+bar with a less square center, but no clear preference on an oval shape versus a circular
+shape, so we decided on circular to minimize manufacturing and material costs. A
+functional decomposition was then employed on the current bar and a QFD analysis of
+each component was conducted. We found that 33% of the components composed the
+plastic bar end swivel. We decided to remove the swivel system due to its lack of use and
+ergonomics. We then began the design process on the new bar ends and bar center.
+We went through two iterations of a smaller square center, choosing a center with
+chamfered edges to blend with the grip material. Our bar end design went through four
+iterations ranging from a simple angular boxy look, to a curved design which was more
+aesthetically and ergonomically pleasing. With SolidWorks models in hand, Mastercam
+toolpaths were built by our technical advisor, and we machined the bar ends and center
+out of aluminum billet. For the grip tubing we used carbon fiber tubing. By the end of
+manufacturing we had three different length bars to test in the ocean and we had reduced
+the bar part count from 31 parts to 13 parts. To justify the bars we created in terms of
+cost, we conducted economic comparisons between our bar design and the current bar.
+We concluded that Liquid Force would save $26,105.87 per year in labor and materials
+by switching to our bar and using casting processes for manufacturing.
+Due to the economic advantage and the new ergonomic design, we feel that Liquid Force
+should implement the design after further testing and refining. The bar performed without
+fault in our ocean test session, but we did find that improvements could be made in terms
+of grip ergonomics; the carbon surface was usable, but an EVA grip would give the user
+a softer, less slippery surface to steer with. We recommend that more long term testing be
+done to insure that the glue does not de-bond over time and that the carbon aluminum
+ii
+
+interface does not corrode. Continuing the project, we will research grip materials such as
+EVA, and create over molded bar grips and bar end covers.
+
+iii
+
+TABLE OF CONTENTS
+
+Page
+List of Tables…………………………………………………….
+List of Figures …………………………………………………..
+
+v
+vi
+
+I. Introduction ……………………………………………………………….....
+
+1
+
+II. Literature Review ………………………………………………………..….
+
+3
+
+III. Design …………..……………………………………………..........….........
+
+4
+
+IV.
+
+Methods………………………………………………………………...........
+
+14
+
+V.
+
+Results…………………………………………………………………….......
+
+18
+
+VI.
+
+Conclusions.....................................................................................................
+
+21
+
+VII. Appendix……………………………………….…..…………………..............
+
+23
+
+VII. Bibliography..........................................................................................................
+
+29
+
+iv
+
+LIST OF TABLES
+Table
+
+Page
+
+1. ANOVA Values
+2. Indented Bill of Materials
+3. Bar Cost
+
+13
+14
+19
+
+v
+
+LIST OF FIGURES
+Figure
+
+Page
+
+1. Kiteboarding Diagram
+2. Functional Decomposition 1
+3. Functional Decomposition 2
+4. Functional Decomposition 3
+5. Functional Decomposition 4
+6. Alternative bar designs Benchmarked
+7. CAD model of 1 st Iteration Bar Assembly
+8. CAD model of 1 st Iteration Bar Center
+9. CAD model of 2nd Iteration Bar Center
+10. CAD model of 1 st Iteration Bar End
+11. CAD model of 2nd Iteration Bar End
+12. CAD model of 3rd Iteration Bar End
+13. CAD model of final Bar End
+14. Bar Centers Minitab
+15. Normality Plot Bar Centers
+16. Bar Center Routing
+17. Bar Center Before/After OP 40
+18. Bar End Routing
+19. Bar End Before and After OP 20
+20. Assembly Routing
+21. Assembled Bar Prototype
+22. Control Bar Prototype
+23. Final rendering of Control Bar
+24. Production Bar Cost
+
+vi
+
+1
+4
+5
+5
+6
+7
+8
+8
+8
+10
+10
+11
+11
+12
+13
+15
+15
+16
+16
+17
+17
+18
+18
+20
+
+vii
+
+I. Introduction
+This report will describe the design of a new control system for our sponsor, Liquid
+Force Kiteboarding.
+Kiteboarding is a water sport where the athlete is pulled across the water on a wakeboard
+or surfboard via the power of a large kite, as seen in Figure 1, below. To control the kite a
+rider uses a kite-bar/control system that that has four very strong lines to both steer and
+adjust the power in the kite. By pulling the bar towards themselves, the rider can increase
+the power in the kite. If the rider angles the bar this creates a difference in tension on the
+lines connected to the wingtips of the kite which causes the kite to turn. The power of the
+kite is dispersed over the riders body using a harness as seen in Figure 1.
+
+Figure 1: Kiteboarding Diagram
+Liquid Force Kiteboarding has been a leading brand in kiteboarding since 1999. They
+provide a full range of kite related products including, kites, bars, boards, harnesses, and
+a full line of both accessories and apparel.
+Currently kiteboarding control systems are very expensive, ranging from $400 - $700.
+These bars are filled with many overcomplicated features which often negatively affect
+the durability and reliability of the bar. In some cases, these features result in safety
+issues due to lack of ergonomic design. The current Liquid Force control system is made
+up of 73 different components and takes 14.4 minutes per bar to assemble.
+Our team’s goal was to develop a new bar that is contained fewer components, was more
+ergonomic, and could be assembled and produced for a much lower cost. Our project
+deliverables are as follows:
+ Build a CAD design of an ergonomic bar with fewer components, and less
+manufacturing/assembly steps. This bar design will be a result of research into
+ergonomics, and manufacturing done by the team.
+ Create manufacturing routings and production planning for prototype
+manufacturing.
+ Machine key components of the new design
+ Assemble a working prototype of the bar.
+ Test the bar on the water, this will require lines, and a safety system, which are
+out of our design scope, to be used from previous Liquid Force bars.
+ Perform an ergonomic comparison with our design.
+1
+
+
+
+Provide Liquid Force with a bill of materials, manufacturing routings, part, and
+assembly drawings and a recommended assembly process for the bar.
+
+To build a CAD design of the control system we must first have an understanding of
+how kite-bars are manufactured. Extensive literature review into materials and
+ergonomics, as well as researching other brands designs was our first step. Next, a
+functional decomposition of the current Liquid Force “Response” bar was performed
+to both further our knowledge of machining processes used in the construction, and to
+set a benchmark to compare our design with. After the functional decomposition, a
+QFD House of Quality was constructed to understand which design features are most
+important and how they are related to other design aspects of the control system.
+Once critical features of a control system were identified, an ergonomic experiment
+and analysis was performed to determine preferred shapes and contours for the new
+design. The next step was building an initial design using CAD software.
+Once we had a design, our team consulted with our technical advisor and made
+adjustments for manufacturing. An assembly model of the prototype was made. Once
+all design work was complete production planning for the prototype began and our
+team formulated manufacturing routings for all machined components on the bar.
+Then with the help of our technical advisor we machined the prototype parts. Once
+the parts were completed, an assembly routing was made and the prototype was put
+together. Once manufacturing was complete on the prototype, Liquid Force lines and
+safety system, which fall out of our design scope, were added to the bar so that it
+could be tested on the water.
+Finally, our team performed an economic analysis comparing the Response bar to our
+new design. Machine time, assembly time and material cost were used to formulate
+an estimated price, which is compare to Liquid Forces current cost on their bar at
+production quantities. Estimations were made and recorded for any costs that our
+team cannot source accurate data for.
+II. Background
+A kite bar allows a rider to control both the direction and power in their kite. The main
+functions of a kite bar are:
+ Connecting the kite to user by attaching the two front lines to a kiters harness.
+ Steering the kite back and forth via pulling on either side of the bar.
+ Adjusting power in the kite via pushing the bar away from you or pulling it
+towards you, (this changes the length ratio between the front two lines and the
+back two steering lines).
+ Providing a safety system that allows the user to release the kite in case of
+emergency.
+There are many components of a kite bar that were researched for our literature review.
+The core of the bar is usually made of metal, plastic, or carbon fiber. The bar undergoes
+many different stresses while kiting and must be able to handle the abuse that a rider may
+put on it. Kiteboarding also takes place in salt water. The salt water use required research
+on how corrosion will affect the components of our control system. In addition to
+designing for the elements, we also must design for user ergonomics, which include how
+2
+
+the bar feels in hand, how easy it is to grip and control, and how easily the rider can
+visually understand the controls. There are many other companies that have already
+designed kite control systems. It will be important for us to look at other existing design
+and make sure we are not infringing on any other company’s patents. We also may be
+able to get ideas from other designs that we can incorporate into our bar.
+In the kiteboarding industry, it is common to release a new product every calendar year to
+attract new consumers and "outdate" previous designs, encouraging consumers to
+upgrade annually. This trend has pushed many kite companies to rush to add more
+features to their bars, often with little testing, and a lack of regard to how much the
+feature will affect the riders experience in a negative or positive way. Some of the
+current trends in kite bar development are:
+ Adjustable bar length.
+ Swivels to reduce twisting of lines.
+ Line trimming systems built into the bar/grip.
+ Redesigned connection/safety systems to allow for more freedom of movement.
+III. Literature Review
+In order to validate our project in terms of its need, and to design the most optimal
+product based on parameters of durability, simplicity, manufacturability, cost, and
+comfort, a literature review was conducted. The literature review contained five main
+areas of research: background research on designs from other kite companies, dangers
+and safety in kiteboarding, grip and color ergonomics, materials selection, and
+manufacturing processes. The first area we looked into was the existing kite bars and
+what they offered in terms of our parameters. We searched through all of the prominent
+kite company websites to look at designs and systems used for the control bar. We found
+that the majority of bars used molded plastic ends with aluminum tubes and EVA grips.
+We then looked at materials used in the bar paying specific attention to studies on
+corrosion resistance. Aluminum is an optimum material for kite bars since it naturally
+reacts very quickly with air to form a protective oxide film [9]. After looking at materials,
+we looked into manufacturing processes for both metal parts and foam parts included in
+the bar. In addition, we looked at design for manufacturing in order to reduce the cost of
+the bar. Designing for assembly is mainly focused on simplifying the assembled bar by
+reducing part count and designing the bar parts so that they are easy to assemble [11]. To
+look at the part count and functionality derived from each part, we used a functional
+decomposition method [15]. Our functional decomposition yielded 73 components the
+bar assembly. In addition to these websites we searched for articles on dangers in
+kiteboarding since safety is a concern in our design and kiteboarding is an extreme sport.
+A paper on the most common traumas and injuries related to kitesurfing concluded that
+most of the injuries experienced by riders are on their lower extremities and their lower
+backs [1]. There are usually no lasting injuries that come directly from the bar, but there
+are definitely crashes and injuries that arise from the misuse of the bar and isolated cases
+of bar components causing minor lacerations to the users hands. To avoid lacerations and
+user mistakes resulting in injury, we decided on a curved bar end design with no small
+plastic parts that could cut the user.
+We wanted to make our bar more user friendly, so we researched color coding for
+usability [13], and the influence of handle diameter and foam thickness on rider comfort.
+Although there were not any studies published about kiteboarding bar grips, studies have
+3
+
+been published on the diameters of tools used by workers in industrial settings. One study
+focused on comparing three different handle diameters [5]. The first bar diameter
+matched the inside grip diameter of the user. The second handle diameter was 1cm larger
+than the users grip diameter, and the third handle diameter was 1cm smaller than the
+users grip diameter. A user’s grip diameter can be measured by forming an O shape with
+the pointer finger and the thumb [6]. The study concluded that a handle diameter 1cm less
+than the users grip diameter increased the users grip strength, and decreased the use of the
+users forearm muscles when compared to the larger diameters[6]. The current Liquid
+Force bar is not perfectly circular; the width is actually larger than the height by
+approximately a tenth of an inch. The rough diameter is around 1.1 inches which, when
+looking at personal grip diameters, is a little over a centimeter smaller. To supplement
+source [6], we conducted our own survey specific to kite bars and grip comfort which
+will be presented in the design section. From this research we decided to use a diameter
+of 0.875in with a grip thickness of 0.1in.
+III. Design
+The first step in our design process was to implement a functional decomposition by
+dismantling the current bar and categorizing the functions of each component to
+determine the usefulness of each one.
+
+Figure 2: Functional Decomposition 1
+
+In figure 2, the current control system is shown with the lines wrapped up for storage
+(top) and with the lines unrolled as they would be for use (bottom left). The intact release
+system is displayed as well, (bottom right). The release system attaches to the rider’s
+4
+
+harness that is worn around their waist. The bar is held by the rider and used to control
+the kite. In the following figures, we took apart each of these components and examined
+how they were made.
+
+Figure 3: Functional Decomposition 2
+
+In Figure 3 you can see the decomposition of the release system. This decomposition
+revealed that the current release system is comprised of 15 different components, many of
+which were molded plastic and held together with pins. The release works by sliding the
+release handle away from yourself. Once the release is pulled, the chicken loop detaches
+from one end and frees the rider for the bar. While disassembling the release system we
+discovered that the current release is unserviceable due to the use of pins. We also found
+that the swivel bearing was very difficult to remove and did not spin freely.
+
+Figure 4: Functional Decomposition 3
+5
+
+Figure 4 shows the internals of the actual bar. The bar is made up of 2 center tubes, a
+center aluminum piece and then molded EVA foam for grip and comfort. The EVA
+coating is made up of 4 individual components, making the total part count for the bar
+equal to 7. After examining the grip we believe it is put on using an over molding
+process. There is no evidence of the grip being wrapped on.
+
+Figure 5: Functional Decomposition 4
+
+Figure 5 shows the bar ends broken down into individual components. This revealed that
+although the bar ends were designed to swivel, there is friction in the rotating joint that
+makes it very difficult to spin the bar end. The locking system for the end consists of two
+tabs that click into slots in the leader line anchors. The swivel system was simply relying
+on the elasticity of plastic in the bar end swivel lock to keep the end from rotating. This
+system is prone to jams and breaks as the plastic ages. There was no way to disassemble
+the bar end without physically breaking the end. The function of the bar end floats is to
+keep the bar floating when the rider crashes their kite, as well as keep the lines away from
+the rider. The bar end was made up of 24 components. Which accounts for 33% of the 73
+components which make up the entire bar.
+Appendix A consists of a list of every part of Liquid Force's current Response bar, as
+well as a description of each part’s function. This parts list will act as a benchmark for
+our team's design and allow us to design a part that has fewer components. By
+performing the functional decomposition, we were able to determine the necessary
+functions for our bar design and eliminate unnecessary components.
+Next, we benchmarked other companies control bars. We wanted to draw inspiration
+from other designs. We made an effort to look at the functions of as many companies
+bars as possible. When evaluating the other designs we looked at what functions the other
+bars had compared to our bar. Figure 6 shows the North Click Bar and the F-ONE bar.
+
+6
+
+Figure 6: Alternative bar designs Benchmarked
+After looking at many different bars and their features, we felt we had a good background
+to base our design on. Many of the bars were feature packed and overcomplicated. The
+next step was to evaluate what features we felt were necessary in a kite bar and what
+could be eliminated. To do this we used a Quality Function Deployment (QFD) matrix.
+Appendix B shows our QFD matrix performed with bar functions and customer
+specifications for quality. We had a group of six experienced kiteboarders go through the
+matrix to rate attributes and then used the QFD matrix to relate those attributes to design
+aspects. What we found was, the highest relatively weighted design aspects in order of
+importance were: maximizing percentage of replaceable parts, reaching 100% depower in
+the safety system, minimizing corrosiveness, smoothness of bar ends, and minimizing
+cost.
+For our design, we wanted to create a bar that met the design requirements attained from
+our QFD. To do this our team used what we had learned from our literature review,
+functional decomposition, and benchmarking other kite company’s bars, to design a
+much simpler bar. The attributes we focused on most were, percentage of replaceable
+parts, minimizing corrosiveness, smoothness of bar ends and minimizing costs. We
+decided reaching 100% depower is out of our scope at the moment as we are currently
+focusing on a bar that will work with their current safety system and lines.
+After reviewing different materials from our literature review and looking at what other
+companies are using for their bars, we decided to make our bar out of aluminum and
+carbon. Aluminum forms an oxidized outside layer that inhibits corrosion. Many of the
+other bars we looked at were constructed out of aluminum or stainless steel. Our plan was
+to die cast the aluminum components in production, as we felt aluminum would be a
+good fit to keep costs low compared to using stainless steel. Our components could also
+be anodized to further inhibit corrosion and give the bar a unique look. Our initial design
+for the core of our bar consists of five main pieces; one bar center, two bar ends, and two
+tubes. The first CAD assembly is shown in Figure 7.
+
+7
+
+.
+Figure 7: CAD model of 1st Iteration Bar Assembly
+
+Figure 8: CAD model of 1st Iteration Bar Center
+
+Figure 9: CAD model of 2nd Iteration Bar Center
+
+8
+
+The center was designed to be comfortable to grip and aesthetically pleasing. The center
+of the bar is a cast A356 aluminum piece as shown in Figures 8 and 9. It was designed to
+be similar to the rest of the Liquid Force product line. The chamfers on the rectangular
+section of the bar allow for a larger bonding surface for the grip of the bar. If the
+chamfers are removed, sharper edges would be make the bar less ergonomic for the rider
+to grip. The logo on the bar center is just on one side of the bar. When the rider crashes
+and loses hold of the bar, the logo gives a visual cue to the rider on what side of the bar
+they should grab. If the rider doesn't see the logo they know they are grabbing the wrong
+side.
+The design difference in the 1st and 2nd iteration bar centers is subtle but important. The
+difference is shown in the transition from the round insert section to the square center. In
+the first iteration, the transition contains a sharp edge whereas the second iteration has a
+curved edge. Furthermore, this curved edge improves the design by giving the grip
+material more surface area to bond to, and gives the user a more seamless transition feel
+in their hands between the exposed aluminum and the grip material
+The round section of the bar is a stock size piece of carbon tubing. We decided to go with
+an off the shelf carbon tube to keep costs down. To determine the size of this tube we
+used our research on grip diameters. We determined .10 inches was a good thickness for
+our grip that goes over the tube. We sized our tube so that with our grip added the
+diameter of the bar would match our desired value. We wanted to find a grip size that we
+believe is best for the rider. This was also difficult because we wanted to use a stock tube
+diameter. We ended up using a 0.875 inch diameter tube, which is comparable to existing
+bar diameters and is approximately a centimeter less than the average user’s grip
+diameter range.
+The last component of the core of our bar is the bar ends. The function of the bar end is to
+move the pivot point of the steering line away from the centerline of the bar to reduce the
+roll produced by the tension in the outside lines. We wanted these ends to be lightweight
+to reduce the swing weight of the bar. A light bar contributes to a more direct feel when
+steering the kite. Reducing the weight of the ends of the bar has the biggest effect on this
+steering feel. We decided to once again use aluminum for our bar ends. This gave us the
+desired strength in the ends as well as a matching look to the bar center. In future designs
+a plastic or over molded rubber version of our end could be used to reduce weight and the
+chance of damaging the riders board. Figure 10 shows the cad model of our 1st iteration
+bar end.
+
+9
+
+Figure 10: CAD model of 1st Iteration Bar End
+
+Figure 11: CAD model of 2nd Iteration Bar End
+We discovered that the first bar end did not offer us enough room to attach the foam
+floats, (long foam pieces which keep the lines away from the bar to prevent wrapping), so
+we decided to change the design to a slightly longer bar end with a tab at the top to attach
+a steering line. We were not pleased with the aesthetics of the 2 nd iteration, shown in
+Figure 11, and decided an end without a tab would better looking and less likely to fail
+mechanically without the stress concentration point at the tab. Our design changes
+resulted in our 3rd iteration in Figure 12 below
+
+10
+
+Figure 12: CAD model of 3rd Iteration Bar End
+For this iteration of the bar end we went with a much smoother look. We felt this end was
+nicer looking than the previous iterations, but didn’t match well with the look of our bar
+center. We quickly revised this design and moved to our final iteration, shown in Figure
+13 below. We used design for manufacturability in our 4th iteration by using standard
+radii and feature sizes to accommodate tooling for the machining needed to make the
+molds for the production model as well as the machining of the prototype. We wanted a
+bar end that could be die cast in an inexpensive manner while also being good looking,
+hence our final design.
+
+Figure 13: CAD model of final Bar End
+With iteration 4 we finally felt we had reached the look and function of the bar end we
+desired. We felt this end matched well with the look of our rectangular center. The curve
+in the end has been sized to fit lines around the end when the bar is wrapped up for
+11
+
+storage. The bar end has no sharp edges so the rider can't cut their hands while using the
+bar. For our prototype, we machined this bar end out of 6061 aluminum whose properties
+closely match the A356, which would be used in the final production parts. Machining
+was the simplest way to produce a prototype of our design. In production this part would
+be die cast. The initial overhead cost of the mold would be high, but the parts could be
+produced very inexpensively with little waste. The finish of the parts would be sufficient
+enough to anodize straight out of the mold. Finally, a portion of the bar end could be over
+molded with rubber, reducing the amount of metal and creating a softer end that wouldn't
+damage boards. With the design of this end we drastically reduced the number of
+components in the bar end while keeping the key functions needed in a kite bar as
+determined in our QFD.
+In Appendix C, our ergonomic survey is shown. In this survey we blindfolded
+kiteboarders, and had them hold 10 different production kiteboarding bars successively.
+Each participant was asked to rate both the grip and the center piece of the bar separately
+from 1- 10, 1 being a very poor fit to their hand, and 10 being a perfect fit to their hand.
+This knowledge helped us build the most ergonomic grip possible. We also surveyed the
+riders on which features they use on their bars. This resulted in determining that none of
+the riders had ever used the adjustable length feature of their bar. We felt this was a
+justifiable reason to eliminate this complicated and expensive feature in an effort to
+reduce our part count and overall cost.
+
+Figure 14: Bar Centers Minitab
+
+In Figure 14 above shows the one-way ANOVA output from our ergonomic survey. The
+comparison of the means gave us a P-value of 0.025, this means we can reject the null
+hypothesis, h0: μ1 = μ2 = μ3 = μ4 and state with 95% confidence that the different bar
+centers have unequal levels of comfort. The small circle and small square cross sections
+had the highest values included in them, but large confidence intervals due to smaller
+12
+
+sample sizes. The large square clearly results in a lower mean. This shows in the P-values
+as well with the only P-value below .005, we can state with 95% confidence that the large
+square cross section results in the least amount of comfort for kiteboarders. For our bar
+center we chose to use a smaller sized rounded square to avoid the discomfort of the large
+square while keeping the modern looking shape of square center. Although ANOVA does
+not rely heavily on normality, the clear normal distribution shown in Figure 15 helps
+confirm and adds confidence to our results.
+
+Table 1. ANOVA Values
+Source
+P-Value
+.433
+Circular
+.061
+Small Circle
+.0732
+Small Square
+.003
+Large Square
+
+Figure 15: Normality Plot Bar Centers
+
+The ANOVA analysis for bar grips resulted with a P-value of .449 therefor failing to
+reject the null hypothesis: h0: μ1 = μ2 = μ3 = μ4 . The bar grips were separated into three
+categories, circular, taller than wide (by 0.1 in or greater) and wider than tall (by 0.1 in or
+greater). As a team we cannot yet make a recommendation on grip shape ergonomics.
+However, a circular grip would result in less material, allow us to use standard carbon
+fiber tube, and allow for fewer steps in assembly, so our prototype uses a circular grip
+design
+
+13
+
+IV. Methods
+
+Once our design was complete, an assembly drawing packet was made; the assembly
+packet includes an assembly drawing (Appendix D), detail part drawings (Appendix E,F),
+and a indented bill of materials shown in Table 2 below.
+Table 2. Indented Bill of Materials
+
+After our design, material selection, and drawings were completed, the team examined
+them with our technical advisor and determined the required manufacturing operations
+and tooling to Computer Numerical Control (CNC) machine the prototype parts from
+billet 6061 Aluminum. This step resulted in manufacturing routings shown in in Figures
+16-19 below.
+For the bar center, 1.5'' diameter by 6.0”, 6061 Aluminum extrusion was cut to length
+before being processed through two CNC lathe operations and one 4-axis CNC milling
+operation. The routing determines all of the operations needed to complete the part, as
+well as, lists both the machines and tools needed to complete it. OP 10 is where the
+aluminum is measured and cut to length on the Horizontal Band Saw. In OP 20 a CNC
+lathe is used to turn the turn stock down to the proper diameter for one side of the part,
+and drilling out the inner diameter. OP 30 is another Lathe operation where the part is
+held by the previously machined section in a 3-jaw chuck, turns down, and drills out the
+second side. OP 40 is a CNC mill operation that contour mills the overall shape of the
+exposed bar center, as well as engraves the Liquid Force logo on one side. Figure 17
+shows both parts before and after the 4-axis CNC mill operations, OP 40. The final OP is
+inspection for quality with calipers and visual inspection.
+
+14
+
+Figure 16: Bar Center Routing
+
+Figure 17: Bar Center Before/After OP 40
+
+For the bar end, a 3''x 1.5'' x 5’’ 6061 aluminum extrusion was processed through four
+different milling operations, and finally inspected for quality using calipers. In OP 10 the
+horizontal band saw cut the billet aluminum to length. Next, is the first CNC mill
+operation, in OP 20 the shape of the bar end is cut out of one side. The part before and
+directly after OP 20 is shown in Figure 19 below. In OP 30, the piece was flipped and
+held in place by custom soft jaws so the opposite side could be milled. In OP 40, the bar
+end was again held in custom soft jaws and milled out the rounded protrusion that fits
+into the carbon tube. Finally OP 50 drilled and chamfered a hole in the top of the bar end
+to create a line attachment point. OP 60 was final inspection where the critical
+dimensions were inspected.
+
+15
+
+Figure 18: Bar End Routing
+
+Figure 19: Bar End Before and After OP 20
+
+Once both bar ends and the bar center were CNC machined and inspected, we cut our
+purchased carbon tube to length. Stock pieces of carbon fiber .875 in OD tubes we
+purchased in the form of one 48'' tube and cut into eight separate pieces for four separate
+bars; two 7'' bar pieces, two 8'',two 9'' bar tubes, and the excess piece was cut in half. This
+allowed us to assemble four bars. Four prototypes allowed us to test different lengths of
+the bar and determine which size had the best combination of mechanical advantage for
+turning the kite while still being lightweight and easy to maneuver.
+An assembly routing was made to define the proper steps in the process, this can be seen
+in Figure 20. OP 10, 20, and 30 involve roughing the surfaces of the parts, that will be
+adhesive bonded together, with a fine 200 grit sand paper. Next, in OP 40, all sanded
+16
+
+areas were cleaned using alcohol and a cloth. OP 50 uses a high strength epoxy, DP420,
+which was chosen by the team due to its wide industry use in bonding aluminum and
+carbon fiber. The adhesive was applied using a paintbrush, and all excess was wiped
+clean with a rag. OP 60 involved fixturing the bar to ensure all parts were aligned and the
+x planes of each part were parallel. Once the parts were aligned properly, OP 70 began
+which cured the epoxy in the oven. Final Inspection then took place after curing with
+possible sanding if any epoxy spread onto the exterior of the joints in OP 80.
+
+Figure 20: Assembly Routing
+
+Throughout the machining and assembly process of the prototypes we recorded cycle
+times. These times allowed the team to both estimate and compare our prototype
+manufacturing and assembly costs to the current Liquid Force Response Bar costs. These
+comparisons are in our recommendations section.
+The provided charts and drawing in this section could be bundled together and provided
+to a contracted manufacturer for production.
+To test our design we compared the part count for the section of the bar we redesigned to
+the original bar and bar end component count. The original bar and bar end had a
+component count of 31 pieces. Our redesigned bar cut that by 58% with only 13 parts,
+including foam floats, and leader lines taken from Liquid Force bars to complete our
+prototype. A finished prototype bar is shown below in Figure 21.
+
+Figure 21: Assembled Bar Prototype
+
+17
+
+Another form of testing was putting the bars to use on the water. In order to test the bar,
+we used lines and safety systems taken from existing Liquid Force bars and attached
+them to our bar. Three functional bars were put together and tested on the water. Initial
+tests displayed that the primary functions of both turning and sheeting the kite have
+remained while utilizing fewer components, better ergonomics, and a lighter bar feel.
+V. Results
+We successfully built a functioning prototype bar to test our design in the ocean. The
+prototype is shown below in Figure 22.
+
+Figure 22. Control Bar Prototype
+Our control bar prototype closely matched the model drawings done in SolidWorks. The
+only exception was the interface between the bar end and the carbon tube. According to
+the drawings the aluminum should have lofted seamlessly into a circular shape to match
+the tube end, but with the machining limitations it could not be done in a timely manner.
+In a final production run the aluminum would be die cast and the part could be made to
+specification. The line attachment points were another result that we believe needs
+changing. With our current prototype the line is free to wiggle slightly and the only
+attachment mechanism is the knot at the bottom of the line. We still need to figure out an
+appropriate design for connecting the EVA floaters to the aluminum ends of the bar and
+integrating the line attachment point into this design. A final rendering of our bar can be
+seen in Figure 23.
+
+Figure 23. Final rendering of Control Bar
+Our design does provide a simple and clean kite bar, however problems may arise with
+the epoxy bond between carbon and aluminum. DP420 epoxy was a good temporary
+solution, however galvanic corrosion may occur down the road. Testing must be done to
+18
+
+see to what extent this corrosion would have on the safety of the bar. ASTM provides a
+"Standard Guide for Conducting and Evaluating Galvanic Corrosion Tests in
+Electrolyte." In order to assess the bar safety these tests could be used, as well as other
+ASTM tests evaluating metals exposed to seawater. The next problem, that may arise in
+the testing of this bar, is issues with exposed metal bar ends. These bar ends could
+potentially hurt a person or damage other equipment in the case of an accident. This
+remains an unanswered question, would it be better to switch to plastic rather than metal
+bar ends, or to simply wrap the bar ends in rubber and possible source a new attachment
+method if the epoxy proves to cause severe corrosion?
+Below in Table 3, our team calculated the cost to make our prototype bar using cycle
+times recorded on the routing sheets we designed.
+Table 3: Prototype Bar Costs
+Part
+(each)
+
+Total Chang Total
+Machin
+e
+Time
+e Time Over
+to
+(min)
+Time Machin
+(1 min e (min)
+per
+OP)
+
+Labor
+Cost
+($90/h
+r)
+
+Materi
+al Cost
+($)
+
+Assemb
+ly Time
+(min)
+
+Assemb
+ly Cost
+($15/hr)
+
+Total
+Cost
+($)
+
+Center
+
+23.8
+
+2
+
+25.8
+
+$38.70
+
+$5.28
+
+$43.98
+
+Bar End
+
+21.01
+
+3
+
+24.01
+
+$36.02
+
+$9.36
+
+$90.76
+
+Carbon
+Tubes
+
+$10.42
+
+$20.84
+
+DP420
+
+$4
+
+Comple
+te
+
+4.4
+
+$6.6
+
+$10.6
+$166.1
+7
+
+Our cost to make our prototype assuming $90 machining costs and $15 labor costs was
+$166.17/bar.
+The prototype cost does not reflect the cost of this bar on a large scale production. The
+economic impact of this bar, if it were to go into production, would be positive. To make
+a comparison between producing our bar and Liquid Force’s current production cost
+many assumptions/estimates were made, including:
+
+
+
+
+
+Cast bar ends were estimated at $1.22 using CustomPartnet.com at a 80,000 part
+quantity [2].
+Cast bar centers were estimated at $1.83 using CustomPartnet.com at a 40,000
+part quantity [2].
+Assembly labor was reduced to 10% of the US cost, adjusted based off of the
+Bureau of Labor Statistics data [7].
+Carbon price were cut by 10% based of our team’s supplier DragonPlate’s volume
+discount. [3].
+19
+
+
+
+
+
+Epoxy costs were cut down from $4/.2 oz to $.63/.2 oz when buying in 5-gallon
+bulk quantities from PacknTape [8].
+We cut down the warranty rate from Liquid Force's current 3.5% to 1% to factor
+in for our more robust design.
+Liquid Force's cost of manufacturing is $100 per bar, much of that is in the
+spectra line and mainline used. Replacement spectra line cost $200, assuming a
+75% margin (between both Liquid Force and the retailer) on replacement lines,
+we valued the lines to make up $50 of the total bar cost. Replacement safety
+system and mainline retails at $80, assuming the same margin we estimate that
+this makes up $20 of the bar cost. Making these calculations we will value the
+portion of the bar we redesigned to have a manufacturing cost of $30. (Liquid
+Force explained that there are so many costs hidden in their BOM it is very
+difficult to estimate cost of an incomplete bar.)
+
+We estimated that we could manufacture this bar for $24.32 using the above
+assumptions. While Liquid Force could produce their current bar for $30. Over one
+year of production, in which they normally produce 4,000 bars this would save Liquid
+Force $26,105.87. We believe these savings would easily justify the purchase of both
+the bar end, and bar center mold.
+
+Production Cost at 4,000 Units
+$140,000.00
+$120,000.00
+$100,000.00
+
+$80,000.00
+$60,000.00
+$40,000.00
+$20,000.00
+$Current Response Bar
+
+Redesigned Bar
+
+Figure 24. Production Bar Cost
+
+As far as longevity goes, the kite industry as a whole promotes a short product lifecycle
+as there is a pressure to attract consumers with a new product, outdating previous year’s
+bar. This often leads to short development times and minimal testing to add new features
+in time, which we believe is partially what lead to the issues with the Response bar. For
+this new design, our team recommends Liquid Force use different grip styles to keep
+consumer demand high year after year. Using inventory postponement, and adding grip
+only when demand pulls a product through the gripping process, right before final
+20
+
+assembly. This allows Liquid Force to offer multiple colors and materials of grip, while
+not holding inventory of each model. Colors, diameters, and textures could be offered to
+meet different demand, such as Females, European Markets, or even customers who
+desire a more personalized product and are willing to pay for customization.
+Moving from a multiple component plastic bar end to a one piece cast aluminum piece
+will have a positive environmental, and social benefit. Die cast aluminum is a waste free,
+and recycle friendly process, compared to small plastic parts which are oil based and
+have high scrap rates. This change will help to reduce Liquid Forces waste. The next way
+they will eliminate waste is in warrantied bars, with less moving parts, the bar end is
+much less likely to fail. This acts as a social impact as equipment failure can prove
+dangerous if not fatal. Reducing bars being shipped back from consumer, to retailers, and
+from retailers back to Liquid Force not only cuts costs for the company, but also less
+environmental impacts due to shipping.
+Another aspect of the design we did not get to in our project was implementing our color
+ergonomics via grip coloring. Looking into the future, we want to have one side of the
+bar colored to signify that the bar is upside down and the other side of the bar a different
+color. This provides a direct visual response so the user does not become confused to
+whether the bar is upside down or not after a crash. If the user is confused the situation
+can become dangerous very quickly because the user thinks the kite will go one way, but
+when the command is given through the bar, the opposite reaction from the kite is
+observed.
+VI. Conclusions
+We believe our design is a viable replacement for the current Liquid Force Response bar
+system because it addresses the initial faults we saw in the bar
+
+
+
+the bar was designed with extraneous components
+the bar had a lack of ergonomic design, especially in the bar ends
+
+By employing a functional decomposition and QFD we insured that our bar performed
+the same vital functions of giving the rider the ability to steer and power the kite, while
+providing a simple and streamlined design and removing the excessive components that
+detracted from the user experience. By the end of our project we completed our following
+main goals
+
+
+
+
+design and build a working prototype of a bar with the same functionality but
+fewer components than the current
+provide Liquid Force with a manufacturing and assembly process for the bar
+including engineering drawings of the assembly and each component, and routing
+sheets for all machining operations
+complete a rough cost estimate for economic validation of the bar
+
+From our literature review, functional decomposition, QFD, and prototyping processes
+we gathered the following results
+
+
+The majority of the components in the current bar are plastic components located
+in the bar end (31 plastic components)
+21
+
+
+
+
+
+
+
+The grip should be at least a centimeter smaller than the average users grip
+diameter so a stock diameter of 0.875in grip was chosen, which is similar to
+existing bar diameters and satisfies the average grip diameter constraint.
+Most riders surveyed preferred a grip without a large square center and ANOVA
+analysis of rider preference on grip shape yielded no definitive favorite so a
+circular shape grip was chosen to minimize cost
+The prototype bar took a total of 1.58 hrs to machine and assemble
+The final cost per bar manufactured was estimated at $22 per bar
+The estimated savings for a production run of 4000 bars was $19440 for one year
+
+Although we did not have enough time to create a grip to cover our carbon tubing, the bar
+was still comfortable during testing. The only part that was questionable was the height
+of the bar center. This was slightly uncomfortable since we did not have a grip in place
+on top of the carbon. The manufacturing was simplified yet again by using an epoxy glue
+to bond the surfaces instead of screws to attach components. We recommend extensive
+testing of the glue in the water before allowing the bar onto the market to insure it doesn’t
+fail over repeated use. We also recommend further research and testing of the interface
+between the carbon and the aluminum since there is a potential for corrosion of the
+aluminum when in contact with carbon. In addition to further testing, the bar ends should
+be over-molded with some sort of rubber or EVA to provide a softer end for safety, and a
+more insulated attachment point for the lines on the bar end.
+
+22
+
+Appendix A: Functional Decomposition
+Component
+
+Quantity
+
+Material
+
+Purpose
+LINES
+
+Kite line
+
+4
+
+Spectra
+
+Steering and Front lines
+
+Pigtails
+
+4
+
+marine grade rope
+
+Connect kite line to Kite bridal
+
+Tiny Blue Pigtail Stopper
+
+1
+
+marine grade rope
+
+Centerline Stopper at swivel
+
+Bungee
+
+1
+
+Bungee rope
+
+Keeps safety line tight when depower is pulled
+
+Safety line D ring
+Center Line
+
+1
+1
+
+Center Line Stopper
+
+1
+
+Plastic
+
+Allows Rider to shorten throw of bar
+
+Depower Cleat
+
+1
+
+Stainless Steel
+
+Allows shortening/lengthening of centerlines
+
+Stainless Steel
+Point of leash attachment
+marine grade rope
+Connects Chicken loop release system to center lines, allows for trimming
+ABOVE BAR/DEPOWER SYSTEM
+
+Depower Loop
+
+1
+
+Velcro
+
+Allows rider to easily use depower cleat
+
+Depower Loop Connection
+
+1
+
+Plastic
+
+Attaches Depower Loop to centerline
+
+Cleat Cover Screw
+
+2
+
+Stainless Steel
+
+Hold cleat cover on
+
+Cleat Cover
+
+1
+
+Stainless Steel
+
+Access to center line cleat routing
+
+Depower Cleat Velcro
+
+1
+
+Velcro
+
+Allows depower loop to Velcro to cleat
+
+6 Piece above bar centerline swivel
+
+6
+
+Ceramic and plastic
+
+Allows center lines to twist under kite pressure
+
+Pin in Cleat
+
+1
+
+Stainless Steel
+
+Hold 1 side of Centerline
+
+CHICKEN LOOP/RELEASE SYSTEM/LOWER SWIVEL
+Chicken Loop Rope
+
+1
+
+marine grade rope
+
+Provides strength of chicken loop
+
+Chicken Loop Coating
+
+1
+
+Rubber
+
+Provides rigidity to chicken loop
+
+Small Chicken Loop Screw
+
+1
+
+Stainless Steel
+
+Holds in donkey dick
+
+Chicken Loop Pin
+
+1
+
+Stainless Steel
+
+Holds chicken loop in to male release piece
+
+Chicken Loop Pin Bushing
+
+1
+
+Stainless Steel
+
+Increases outer diameter of pin for rope
+
+Donkey Dick
+
+1
+
+Molded plastic
+
+Secures chicken loop rider connection
+
+Male Piece Release
+
+1
+
+Stainless Steel
+
+Fits into female piece to close chicken loop
+
+Female Piece of Release
+
+1
+
+Stainless Steel
+
+Accepts male piece to close chicken loop
+
+Center Line Anchor
+
+1
+
+Plastic
+
+Attaches center line to chicken loop/release
+
+Center Line Anchor Cover
+
+1
+
+Plastic
+
+Covers Line Anchor + Houses Swivel
+
+Swivel Pins
+
+2
+
+Stainless Steel
+
+Holds center line anchor and anchor cover together
+
+Swivel + Bearing
+
+1
+
+Stainless Steel
+
+Allows User to rotate center lines
+
+Release handle male
+
+1
+
+Plastic
+
+Connects Chicken Loop/Swivel/Centerline Anchor
+
+Release handle Female
+
+1
+
+Plastic
+
+Handel to disconnect chicken loop by triggering female piece of release
+BAR
+
+Round Tubes
+
+2
+
+Stainless Steel
+
+Provide length + Grip Diameter for Bar
+
+Bar Center Piece
+
+1
+
+Stainless Steel
+
+Connects 2 tubes + hole for center lines to go through bar
+
+EVA Grip Wrap
+
+2
+
+EVA foam
+
+Gives Rider soft grip + color of bar
+
+Grip Knuckle Pad
+
+2
+
+EVA Foam
+
+Provides Asymmetrical Grip on radius of bar
+
+Bar end molds
+
+2
+
+Plastic
+
+Rubber Bar End Coating
+
+2
+
+Rubber
+
+Soften Bar ends
+
+Leader line Anchors
+
+2
+
+Plastic
+
+Connects leader line to bar end
+
+Leader Line from Bar Ends
+
+2
+
+Spectra
+
+Attaches Outside lines to leader line anchors
+
+Leader line coating
+
+2
+
+Rubber
+
+Thickens and softens leader lines for safety
+
+Float Bar Ends
+
+2
+
+Foam
+
+Soften Bar ends + Provide Floatation
+
+Bar End Swivel Locks
+
+2
+
+Plastic
+
+Keeps Bar Rotation to 180 degree turns
+
+Bar End Length Labels
+
+4
+
+Plastic Adhesive
+
+Tells user what length bar is
+
+Bar End Bungees
+
+2
+
+Bungee rope
+
+Keeps Lines Wrapped when stored
+
+BAR ENDS
+Connects bar/tubes to leader line anchors
+
+Molded Nuts
+
+2
+
+Stainless Steel
+
+Allows Leader Lines Anchors to be screwed into bar ends
+
+Large Bar End Screws
+
+2
+
+Stainless Steel
+
+Attach Leader Line Anchors to Bar Ends
+
+total
+
+73
+
+23
+
+Appendix B: QFD House of Quality
+
+24
+
+Appendix C: Ergonomic Survey
+SLINGSHOT
+
+CABRINHA
+
+NORTH
+
+NAISH
+
+Center Type
+Height
+Width
+Difference
+
+Cicular
+1.04
+1.03
+0.01
+
+Circular
+0.98
+1.012
+-0.032
+
+Square Large
+0.985
+0.982
+0.003
+
+Square Small
+1.089
+0.875
+0.214
+
+User 1 (IVY)
+User 2 (nood)
+User 3 (bren)
+User 4(jake)
+user5 brodie
+josh
+reed
+sean
+pat
+teddy
+
+8
+7
+7
+4
+
+8
+6
+4
+6
+
+9
+7
+7
+8
+6
+6
+3
+3
+7
+5
+
+AVERAGE
+
+6.5
+
+User (Ivy)
+User 2 (nood)
+User 3 (bren)
+User 4 (jake)
+user 5 brodie
+josh
+reed
+brody
+sean
+pat
+teddy
+
+8
+7
+7
+8
+
+4
+8
+5
+9
+7
+6
+6.5
+
+LF CPR
+
+LF MISSION
+
+Circular
+Square Large
+1.001
+0.985
+1.135
+1.002
+-0.134
+-0.017
+Grip Rating
+6.5
+8
+7
+8
+6
+7
+7
+6
+2
+5
+4
+7
+6
+7
+6
+7
+8
+8
+5
+3
+
+6
+
+6.1
+
+5.75
+
+6
+6
+6
+6
+4
+6
+5
+
+7
+8
+8
+8
+2
+5
+5
+
+9
+7
+3
+6
+5
+7
+5
+
+8
+7
+6
+
+7
+2
+4
+
+8
+7
+5
+
+6.6
+Bar Center
+6
+4
+8
+6
+5
+3
+4
+2
+2
+3
+
+25
+
+LF RESPONSE
+
+F-One
+
+Slingshot Old
+
+north click
+
+bws
+
+Circular
+0.9875
+1.111
+-0.1235
+
+small circular
+1.053
+1.004
+0.049
+
+large square
+0.975
+0.98
+-0.005
+
+large square
+0.956
+0.958
+-0.002
+
+circle
+1.016
+1.07
+-0.054
+
+7
+9
+6
+7
+4
+4
+4
+2
+8
+5
+
+9
+8
+8
+7
+4
+8
+4
+7
+7
+7
+
+6
+7
+4
+6
+6
+5
+6
+9
+6
+5
+
+6
+6
+4
+3
+5
+6
+
+5
+7
+4
+9
+6
+9
+
+5.6
+
+6.9
+
+6
+
+5
+
+6.666667
+
+8
+8
+6
+8
+4
+3
+7
+
+9
+7
+6
+9
+4
+7
+5
+
+7.5
+4
+8
+5
+5
+3
+5
+
+5
+6
+5
+
+4
+6
+6
+
+6
+2
+5
+
+7
+7
+7
+
+7
+1
+4
+
+9
+2
+3
+
+6
+2
+9
+
+Appendix D: Bar Assembly Drawing
+
+26
+
+Appendix E: Bar End Drawing
+
+27
+
+Appendix F: Bar Center Drawing
+
+28
+
+IV. Bibliography
+1. Brorsson, S., Lungren, L., and Oscalder, A-L. "Injuries related to kitesurfing" World
+
+2.
+3.
+4.
+5.
+
+6.
+
+7.
+8.
+9.
+10.
+
+11.
+
+12.
+
+13.
+
+14.
+15.
+
+Academy of Science, Engineering and Technology, 53.05 (2011): 1132-1136. Web. 25 Oct.
+2016.
+“Die Casting” Cost Estimator Custompart.net Web. 19 Mar. 2017
+http://www.custompartnet.com/estimate/die-casting/
+DragonPlate. “Home” DragonPlate.com. Web. 19 Mar. 2017
+F. Marion et al., "Aluminum to Aluminum bonding at room temperature," 2013 IEEE 63rd
+Electronic Components and Technology Conference, Las Vegas, NV, 2013, pp. 146-153.
+Harih, G., et al. "Optimal Products' Hand-Handle Interface Parameter Identification."
+International Journal Of Simulation Modelling (IJSIMM) 14.3 (2015): 404-415. Academic
+Search Premier. Web. 26 Oct. 2016.
+Katharyn A. Grant, Daniel J. Habes, Libby L. Steward. "An analysis of handle designs for
+reducing manual effort: The influence of grip diameter." International Journal of Industrial
+Ergonomics, Volume 10, Issue 3, 1992, Pages 199-206, ISSN 0169-8141,
+<http://www.sciencedirect.com/science/article/pii 016981419290033V>.
+Kavoussi, Bonnie. “Average Cost of a Factory Worker in the U.S., China and Germany
+[INFOGRAPHIC]” The Huffington Post. 08 Mar. 2012. Web. 19 Mar. 2017
+PacknTape. “3M Scotch-Weld Epoxy Adhesive 420” 3m.pack-n-tape.com Web. 19 Mar.
+2017
+Perryman, Jon. "Corrosion Resistance of Aluminum." Crane Materials International.
+January 2007. Web.
+Pertile, T. S., and E. J. Birriel. "Corrosion Resistance of Investment Casting Samples of CF8
+Stainless Steel in Different Passivation Conditions."Materials and Corrosion 65.12 (2014):
+1172-177. Web. 23 Oct. 2016.
+Tatikonda, Mohan. "Design for Assembly: A Critical Methodology for Product
+Reengineering and New Product Development." Kenan-Flager Business School. March
+1994. Accessed October 2016.
+Wilde, B. E. "A Critical Appraisal of Some Popular Laboratory Electrochemical Tests for
+Predicting the Localized Corrosion Resistance of Stainless Alloys in Sea Water." Corrosion
+28.8 (1972): 283-91. Web. 24 Oct. 2016.
+Wu, Tong, et all. "Color association research on red-green dichromats in the color
+ergonomics of user interface interaction" Color Research and Application, 4.12 (2015): Web.
+25 Oct. 2016.
+Yang, Kuo-Nan. EVA Insole Manufacturing Process. Yang Kuo Nan, assignee. Patent US
+5141578 A. 29 Nov. 1990. Print.
+Yu, Fei, et all. "An improved functional decomposition methods based on FAST and the
+method of removal and operation." Proceedings 2012 International Conference on System
+Science and Engineering, (2012): 487-492. Web. 25 Oct. 2016
+29
+
+1
+
+

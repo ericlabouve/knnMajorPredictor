@@ -1,0 +1,1045 @@
+Lowes -
+
+1
+
+MITIGATION OF CORROSION UNDER INSULATION (CUI) OF CARBON STEEL OF
+DIFFERENT INSULATING MATERIALS
+A Literature Review and Testing Analysis
+
+Author: Michael Lowes
+Advisors: Dr. Trevor Harding*, Dr. Samin Sharifi**
+*California Polytechnic State University at San Luis Obispo
+**Chevron Corporation
+MATE 484: Senior Project III
+May 2017
+
+Lowes -
+
+2
+
+Table of Contents
+Title page
+Table of Contents………………………………………………………………………….2
+Abstract……………………………………………………………………………………3
+Introduction………………………………………………………………………………..4
+Corrosion.………………………………………………………………………….4
+Corrosion Under Insulation (CUI)………………………………………………...5
+Factors Effecting CUI………………………………………………......................6
+Insulation Systems………………………………………………...........................8
+Hydrophobic Insulators………………………………………………....................9
+Chemistry of Insulators………………………………………………..................10
+Operating Conditions……………………………………………….....................11
+Stratmann’s Wet-Dry Cycle Model……………………………………………...13
+Overview………………………………………………........................................15
+Methods and Materials………………………………………………...............................16
+ASTM C1617-15………………………………………………...........................16
+Procedure A………………………………………………...................................16
+Procedure B………………………………………………....................................17
+Apparatus……………………………………………….......................................17
+Insulators Tested………………………………………………………................19
+Results………………………………………………........................................................20
+Discussion………………………………………………..................................................21
+Conclusions………………………………………………................................................23
+Future Work………………………………………………...............................................23
+Works Cited………………………………………………...............................................25
+Appendix I……………………………………………….................................................27
+Standard Operating Procedure for Corrosion Under Insulation (CUI)
+Investigation Procedure
+Appendix II………………………………………………................................................32
+Materials/Insulators Tested Safety Analysis for Corrosion Under
+Insulation (CUI) Investigation Procedure
+
+Lowes -
+
+3
+
+Abstract
+Equipment often found in refineries may be enveloped in insulation and weathering
+jackets to maintain internal processing temperatures. In many cases moisture from the
+environment will penetrate the weathering jacket and infiltrate the insulation, leaching
+corrosive ions to the surface of metal equipment, effectively creating a corrosion cell.
+The goal of this project is to investigate different insulating materials for their ability to
+inhibit corrosion under insulation (CUI). The inhibiting mechanism utilizes water ingress
+that leaches ions from the insulator to bond with the surface metal and create a passive
+layer, inhibiting any further corrosion. This study will follow ASTM C1617-15 in order
+to examine the corrosion mitigating effects of three insulators. Insulators are ground
+down and boiled to extract leachable ions. The leachant is filtered to remove solids and
+then introduced to heated carbon steel coupons in a drip wise fashion over a span of four
+days. Insulators are ranked quantitatively on their ability to prevent corrosion based on
+gravimetric analysis. The mass loss corrosion rate of the insulators were: Sproule WR1200® (4.595 mils/yr), Thermo-12® Gold (5.523 mils/yr), and Pyrogel® XT-E (24.767
+mils/yr). Sproule and Thermo-12 both exhibit corrosion inhibiting ions whereas Pyrogel
+XT-E does not, and these results conclude the effectiveness of these insulators to mitigate
+corrosion.
+
+Key terms: corrosion under insulation (CUI), insulator, weatherproof jacketing, passive
+layer, hydrophobic, calcium silicate, expanded perlite, aerogel, corrosion mitigating ions,
+mass loss corrosion rate (MLCR).
+
+Lowes -
+
+4
+
+Introduction
+Corrosion:
+Corrosion is the deterioration of a material and its properties due to a physical, chemical
+or electrochemical process implemented by that material’s environment. Materials
+subjected to corrosion in engineering applications are commonly metals. Examples of
+physical corrosion include erosion corrosion and fretting corrosion. Chemical corrosion is
+simply one material reacting with its environment, such as oxidation or rusting of iron.
+Electrochemical corrosion implies there is an electric pathway aiding the corrosion
+mechanism. The electrochemical process requires an anode, a cathode, an electronic path,
+and an ionic current path to complete a corrosion cell.1 Figure 1 illustrates the
+relationship of these four requirements.
+
+Figure 1. Schematic of the relationship between the four requirements of a corrosion cell. 2
+
+Corrosion is dictated by two half-cells that make up a redox reaction within the system.
+Net oxidation is occurring at the anode, whereas net reduction occurs at the cathode. In
+the case where a metal is corroding locally in its own system as shown in Figure 1,
+anodic and cathodic regions are formed on the surface which produce the electric
+potential driving force for corrosion to occur. Oxidation of the anode takes place on the
+
+Lowes -
+
+5
+
+metal with a lower electrode potential, and will lose electrons to the cathode yielding a
+higher electrode potential. The ionic current pathway is generally a salt bridge induced by
+moisture where ions are able to move freely.1 An electronic pathway is any conductive or
+metallic connection between the anode and cathode that allows electron transfer.1
+Corrosion is an ever-present problem that is intensely considered in many industries,
+including the oil and gas processing industry.
+
+Corrosion Under Insulation (CUI)
+In the oil and gas processing industry, insulators are commonly used to cover certain
+equipment in order to maintain a necessary operating temperature. Other reasons
+equipment may be insulated include; fire protection, personnel protection, condensation
+control, sound control, and process control.3 Any equipment under insulation has
+potential to undergo corrosion under insulation (CUI). CUI is the external damage of
+metallic components and equipment that are insulated.4 This process is caused by water
+ingress through the insulation material.
+
+The most commonly affected materials are carbon steels, low-alloy steels, and austenitic
+stainless steels.4 The general mechanism associated with CUI is localized corrosion at the
+interface of the insulation material and metal surface.4 Pitting is also observed in features
+of equipment that promote stagnant and highly acidic environments.4 Chloride stress
+corrosion cracking (SCC) is common for austenitic and duplex stainless steels, but for the
+sake of this report will not be concerned.
+
+As mentioned above, localized corrosion at the interface of the insulation material and a
+metallic surface is a common mechanism behind CUI. Localized corrosion is initiated by
+
+Lowes -
+
+6
+
+the oxidation of a metal and can produce anodic and cathodic regions on the metal’s
+surface that will pass electrons and ions induced by electric potentials between the two
+regions.1 This implies an electrochemical process. Even though an insulated system is not
+as exposed to the atmosphere as greatly as other components, mediums like fog,
+humidity, and moisture from air ducts and vents lead to necessary water ingress in an
+insulated system for CUI to occur.
+
+Pitting corrosion may be initiated by the damaging of a protective oxide film or passive
+coating as a result of localized chemical corrosion or mechanical damage.5 Here, a
+stagnant solution with a high concentration of ions and high acidity may collect and
+stimulate metal loss. Pitting may also be initiated by local abnormal anodic regions in a
+normal surface forcing the normal surface to act as a cathode, or by local abnormal
+cathodic regions surrounded by otherwise normal surface metal forcing the normal
+surface to act as an anode.5
+
+Factors Effecting CUI:
+Water, chemical content of water, the type of insulator, and service temperature are four
+major factors that promote CUI.6 Water is necessary at the interface between the
+insulation and the surface of the equipment to initialize corrosion. Instances where water
+infiltration occurs include:
+(a) During insulation storage and/or installation.
+(b) Through system leakages.
+(c) Vapor/condensation due to temperature differentials.
+(d) Insulation absorbing moisture from the environment/atmosphere.
+
+Lowes -
+
+7
+
+During storage and installation of an insulator it is important to keep components dry to
+avoid any initial presence of water. Weathering jackets are commonly used as an external
+layer to the insulator to prevent moisture absorption from atmospheric or environmental
+factors.6 However, there are still many opportunities for water to infiltrate insulators and
+reach the surface metal. The equipment and insulation design plays a role in water
+infiltration.
+
+Insulated equipment may have joint attachments such as small-bore connections that
+bring about complications in insulator design. At such connections an insulator might be
+discontinuous due to the shape, geometry, and orientation of the attachments.3 Having a
+discontinuous insulator will allow for moisture or rainwater to leak down to the surface
+metal, where the water will concentrate and induce corrosion. Flanges and end caps are
+examples on pipelines or equipment that provide an easy access for water.4
+
+A solution to avoiding breaks and gaps within insulators or weathering jackets is caulking
+the gap shut in order to properly seal any entry point, as illustrated in Figure 2. Caulk will
+deteriorate over time and inspection of sealants should be implemented throughout
+service. Sealants should be reapplied where and when necessary. Other maintenance
+inspections of in-service insulators are important in order to discover any unexpected
+penetrations on the weathering jackets or on the outer insulation surface that will lead to
+water ingress. Inspection intervals and procedures are adhered to API 570.4
+
+Lowes -
+
+8
+
+Figure 2. Caulking is used to effectively seal water infiltration sites.3
+
+Frequently these attachments that protrude the insulation are operating in a temperature
+range that promotes CUI, whereas the main process equipment is not.4 In this case the
+equipment is likely to be exposed to condensation due to temperature differentials.
+Condensation will also occur on equipment operating below the dew point.4 The resulting
+moisture will promote corrosion mechanisms to initiate. This is common for equipment
+in cold service, which is also known as sweating service.4
+
+Insulation Systems:
+An important step to preventing CUI is choosing the proper insulator for the scenario.
+Cost along with functionality is considered. One of three common types of insulation that
+API RP 583 identifies is granular insulation.4 The three basic forms of granular fill
+include perlite, vermiculite, and polystyrene beads. Granular insulation is also known as
+granular fill insulation as it has many large grains of material that fill a space in need of
+insulation. Since the insulator fill is discontinuous it does not fair well in impeding
+moisture from absorbing and wicking to the surface of insulated equipment.
+
+Lowes -
+
+9
+
+Manufacturers have implemented waterproofing agents, such as silicone to increase the
+moisture resistance of some granular fill insulators.7
+
+Fibrous insulation is another common type of insulation identified by API RP 583 that is
+used in industrial and domestic applications. The material is composed of a matrix of
+fibers that limit convection as a form of heat transmission due to the trapping of air
+molecules within the fibers.8 This ultimately inhibits motion of molecules, decreasing
+collisions between the particles.8 Fibrous insulators have also been used in soundproofing
+applications as the porous structure dampens any sound waves that may pass through.8
+Some examples of fibrous insulation include fiberglass (aerogels), mineral wool, and
+cellulose.8 It is common in industrial applications to use a combination of granular and
+fibrous insulators in one, to achieve a composite insulation that yields desired properties.
+
+The last insulation material API RP 583 identifies is cellular.4 Cellular insulators are
+porous and absorbent in structure. A common material classified as a cellular insulator is
+calcium silicate. Calcium silicate works similarly to granular insulators and fibrous
+insulators in that they trap air molecules between their structures, effectively insulating a
+system.
+
+Hydrophobic Insulators:
+Insulators are commonly termed “hydrophobic” when treated during manufacturing with
+organic hydrophobic additives. Often these “hydrophobic” insulators are materials that
+will readily absorb water if not for the organic hydrophobic additives.10 At certain
+operating temperatures organic hydrophobic additives will oxidize and burn off,
+rendering the “hydrophobic” insulator to readily absorb water.10 Temperatures greater
+
+Lowes - 10
+than 450°F tend to cause these organic hydrophobic additives to oxidize, which are
+common temperatures that insulators are exposed to.11 These are important
+considerations when determining an appropriate insulator.
+
+Chemistry of Insulators:
+Water ingress is not only the factor that completes a corrosion cell for CUI to occur, but it
+will also leach ions that may be corrosive from insulators to the surface of the metals.
+Commonly mineral wools are composed of chlorides or sulfides that promote an acidic
+corrosion cell. A corrosion inhibiting chemistry has been incorporated in two industrial
+insulations to effectively mitigate CUI.10 These insulators depend on water ingress to
+dissolve different silicate anions within the insulators chemistry and bring the silicates to
+the surface of the metal.10 These silicate anions form a “silica gel” coating as shown
+below:
+H2O • SiO2 (with time) = H2O + SiO2 (silica gel coating) 10
+As the silica gel is introduced to heat and iron compounds it forms an inorganic silicate
+coating that further prevents corrosion as shown below:
+H2O • SiO2 + FeO (with rust and heat) = H2O + FeSiO3 (iron silicate coating) 10
+The silicates also act as a pH buffer to the absorbed water due to the alkaline components
+to neutralize any acidic components. This can be shown below:
+(Ca, Na, Mg, Al, K) • SiO3 + H • (SO4, Cl, CO3) (acid) = (Ca, Na, Mg, Al, K) •
+(SO4, Cl, CO3) (neutral) H2O • SiO2 10
+
+Incorporating corrosion mitigating ions in the chemistry of insulators is another way to
+defend CUI along with treating insulators with hydrophobic additives and the use of
+weatherproof jacketing. The silicate anions make up 95% of the two industrial insulators
+
+Lowes - 11
+that utilize this mechanism, and are claimed to remain present for the majority of the
+insulators lifetime. 11
+
+Operating Conditions:
+When considering carbon steels for piping or equipment, operating with surface
+temperatures in the temperature range of -4°C (25°F) to 175°C (350°F) promotes a
+greater likeliness of CUI occurring.3 At temperatures below -4°C carbon steel equipment
+that is under insulation commonly remains standing without falling victim to CUI.3
+Operating temperatures of carbon steel equipment above 175°C tend to exhibit surfaces
+warm enough to burn away moisture that may initiate corrosion.3 It is important to note
+that higher temperatures can be beneficial as they stay warm enough to evaporate
+moisture, yet can be detrimental since the corrosion rate of a material is generally
+increased as service temperatures rise.
+
+When considering an open system, aerated water has a decrease in oxygen content as
+temperature increases. At temperatures above 80°C, the corrosion rate of carbon steels
+exposed to aerated water decreases as temperature rises. However in a closed system,
+when carbon steel is subject to water it is shown that an increase in the water temperature
+results in an increase in corrosion rate.3 This is due to the oxygen-saturated environment
+that the closed system exhibits. It is found that field measurements of carbon steels
+subjected to CUI are closely related to carbon steels corroding in a closed system, and
+can be shown in Figure 3.3 An increase in temperature correlated to a greater corrosion
+rate for the carbons steels under insulation.3 The insulator surrounding the carbon steels
+acts as a barrier, trapping a surface layer of aerated, oxygen-saturated water. Figure 3
+compares the relationship between water temperature and corrosion rate of an open
+
+Lowes - 12
+system, a closed system, and various field measurements of carbon steel CUI rates at a
+chemical plant.3
+
+Figure 3. Effect of temperature on steel corrosion in water.3
+
+Generally an increase in service temperature will increase the corrosion rate of carbon
+steels. It is also detrimental for the operating temperature to undergo cyclic service, or
+intermittent periods of hot and cold service. Carbon steels operating under -4°C are
+considered in a safe operating temperature region in the presence of water, yet due to
+operating services steels may heat up and cool off again. During these hot periods water
+on the surface may dry up to the atmosphere or insulation, and these wet-dry cycles will
+promote atmospheric corrosion.
+
+Lowes - 13
+Stratmann’s Wet-Dry Cycle Model:
+The wet-dry cyclic mechanism of corrosion of plain carbon steel is illustrated by
+Stratmann’s model as proposed in 1987.9 The initial wetting of the steel surface is the
+first stage, and causes the anodic dissolution of iron as shown below:
+Fe → Fe2+ + 2eThe iron is yielding a high dissolution rate, and in comparison the reduction reaction of
+O2 is slow. Due to this, the anodic dissolution of iron is balanced by the cathodic
+reduction of the iron oxide-hydroxide surface layer:
+2γ-FeOOH + 2H+ + 2e- → 2Fe(OH)2
+The formation of the cathodic iron oxide-hydroxide γ-FeOOH, also known as
+lepidocrocite, is shown as follows:
+Fe
+
+dissolution
+
+Fe2+
+
+hyrdolysis
+
+FeOH+
+
+oxidation and precipitation
+
+γ-FeOOH
+
+This initiates a corrosion cell. Although the dissolution rate of iron is high, the amount of
+reducible γ-FeOOH in the rust layer is limiting the amount of iron able to be dissolved.9
+
+The second stage of Stratmann’s model regards the wet surface of the metal, and
+commences once the cathodic reduction of γ-FeOOH is used up.9 At this point the
+reduction reaction of O2 takes over as the cathodic reaction:
+1/2O2+ H2O + 2e- → 2OHThe dissolution of iron is now limited by the reduction reaction of O2. Stratmann and
+Müller found that oxygen is reduced within the oxide scale (rust layer) and not at the
+metal/electrolyte interface.9 The O2 must diffuse through the electrolyte saturated pores in
+the oxide rust layer, therefore the current density of the O2 reduction reaction is diffusion
+limited.9 This implies that the corrosion rate and reduction of O2 is influenced by the
+
+Lowes - 14
+electronic/conductive properties of the oxides. Good conductive properties lead to more
+reduction of O2 in oxides, causing further dissolution of iron, which in turn leads to an
+increase in corrosion rate.
+
+Drying out of the wet surface as the third stage of Stratmann’s model causes a sharp
+increase of the diffusion-limited cathodic O2 reduction reaction, which is connected to the
+electrolyte film on the inner surface of the rust layer decreasing in thickness and
+saturation.9 As the cathodic O2 reduction reaction is increased, both the dissolution of
+iron and the corrosion rate are increased. The O2 is also able to reoxidize the reduced
+layer of γ-FeOOH formed in stage 1 as follows, restarting the cycle:
+2Fe(OH)2 + 2O2 → 2FeOOH + H2O
+
+These factors leading to increased corrosion rate in the drying mechanism of stage 3
+causes the most metal loss throughout the wet-dry cycle. The regeneration of
+lepidocrocite (γ-FeOOH) and production of goethite (a-FeOOH) are the main corrosion
+products and are a result of reoxidizing the γ-FeOOH and other ferrous species. This
+alters the composition of the rust layer and directly affects the intensity of the next wetdry cycle. The corrosion process is fully stopped once the electrolyte film is completely
+used up, as shown in Figure 4.9
+
+Lowes - 15
+
+Figure 4. Schematic of the atmospheric corrosion wet-dry cycle.9
+
+Overview:
+Corrosion under insulation is a critical problem that is present in the oil and gas
+processing industry. Considering factors that contribute to CUI and an understanding of
+how the mechanisms occur are the first steps to preventing the mechanism. Avoiding
+water infiltration eliminates the potential for CUI, however this can be a challenging
+solution. Design of the insulator along with proper sealing between the insulator and
+weathering jacket interface are steps taken to ensure no water ingress may occur. The
+goal in choosing an insulator for servicing equipment is to consider one that will hinder
+water infiltration, leaching of ions from the insulator, and efficiently and successfully
+serve its purpose in insulating service equipment. The goal of this project is to investigate
+different insulating materials for their ability to inhibit corrosion under insulation (CUI).
+The inhibiting mechanism under study utilizes water ingress that leaches ions from the
+insulator to bond with the surface metal and create a passive layer, inhibiting any further
+corrosion.
+
+Lowes - 16
+Methods and Materials
+ASTM C1617-15:
+In order to test industrial insulators for their ability to mitigate CUI, an experiment is ran
+in accordance to the standard ASTM C1617-15. This standard is titled “Standard Practice
+for Quantitative Accelerated Laboratory Evaluation of Extraction Solutions Containing
+Ions Leached from Thermal Insulation on Aqueous Corrosion of Metals.” 12 ASTM
+C1617-15 in comprised of two procedures, Procedure A and Procedure B.
+
+Procedure A:
+Procedure A is specified for insulator materials that are not classified as hydrophobic.
+Insulators are ground down to a dust and mixed with de-ionized (DI) water and boiled to
+extract any leachable ions that may be produced in a CUI mechanism.12 Once the solution
+is produced it is delivered in a drip wise fashion over four days to the surface of three
+carbon steel coupons of .13wt% C. Three coupons is the minimum sample size for
+accurate results. The coupons are heated to 250°F on a hot plate for the entirety of testing
+to evaporate water producing a wet-dry cycle, to provide an accelerated corrosion test for
+significant results, and to also mimic temperature levels that CUI is likely to occur in a
+real-life scenario. Samples are weighed for their initial and final weight in order to
+calculate the mass loss corrosion rate (MLCR) of each solution. Reference standards are
+ran alongside the insulator solutions in order to compare the corrosiveness of different
+solutions. The reference standards are DI water, 1 ppm chloride solution, and 5 ppm
+chloride solution.12 A blank test cell is produced to observe any mass loss due to the set
+up and cleaning of a test cell without being exposed to any corrosive solution.
+
+Lowes - 17
+Procedure B:
+Procedure B is specified for insulator materials that are classified as hydrophobic.12
+Insulators are cut into cross-sectional pieces and layered to produce a stack of the crosssectional insulator layers. This stack is then placed in the bottom of a DI water bath and
+heated to a specific temperature recommended by the manufacturer.12 The resulting
+solution represents any leachable ions that may be found in a CUI mechanism. This
+solution is then introduced to heated carbon steel coupons in a drip-wise fashion over a
+span of four days in the same manner as Procedure A. The reference standards are also
+ran alongside insulator solutions in Procedure B. Because of the previously stated
+observation that hydrophobic insulators will become non-hydrophobic throughout their
+lifetime, Procedure A is the only testing conducted for this experiment.
+
+Apparatus:
+A Ninja® blender was used to properly grind down insulators. The carbon steel coupons
+are heated on a Wolfgang Puck® hot plate that is monitored by a thermocouple to ensure
+consistent temperature levels. To deliver the solutions to the carbon steel coupons a 24Channel Ismatec IPC® peristaltic pump is used. The full set up of the testing apparatus is
+shown in Figure 5.
+
+Lowes - 18
+
+Figure 5. Testing apparatus of ASTM C1617-15.
+
+Each test cell is composed of a PVC tube sealed to a carbon steel coupon. An O-ring is
+put in place with a silicone sealant in order produce a sealed and defined area to analyze
+corrosion. Tubing from the peristaltic pump is placed in a small hole drilled at the top of
+the PVC cell, which delivers the tested solutions. An example of one test cell is shown in
+Figure 6 from ASTM C1617-15.12
+
+Figure 6. Test cell in accordance to ASTM C1617-15.12
+
+Lowes - 19
+Insulators Tested:
+Three insulators are tested in accordance to ASTM C1617-15 Procedure A in order to
+compare the corrosion mitigating properties of each insulator. The insulators consist of
+two Johns Manville products that exhibit their XOX® corrosion inhibitor ions, Thermo12® Gold and Sproule WR-1200®, and one Aspen Aerogel product, Pyrogel® XT-E,
+that does not exhibit corrosion inhibiting ions within its chemistry. Thermo-12® Gold is
+a calcium silicate insulator material and is qualified to operate up to temperatures of
+1200°F.13 Sproule WR-1200® is an expanded perlite insulator material classified as
+hydrophobic, and is also qualified to operate up to temperatures of 1200°F.14 Pyrogel®
+XT-E is a silica aerogel insulator material that is also classified as hydrophobic, and is
+too qualified to operate up to temperatures of 1200°F.15 All insulators are tested in
+accordance of Procedure A. The three insulators are shown in Figure 7.
+
+(a) Sproule WR-1200® 13
+
+(b) Thermo- 12® Gold 12
+
+(c) Pyrogel® XT-E
+
+15
+
+Figure 7. Insulators tested in accordance to ASTM C1617-15
+
+Lowes - 20
+Results
+Upon completion of the four day trial samples are cleaned from any corrosion product
+and weighed to produce a MLCR. MLCR is calculated using the following equation12:
+MLCR =
+
+K W
+mils/year
+AT D
+
+Where:
+
+
+K = 3.45e6 (a constant to convert cm/h to mils/year)
+
+T = time of exposure in h
+A = area of exposure (cm2), based on inner radius of PVC cell.
+W = mass loss from the coupon (g)
+D = bulk density of the test metal (g/cm3)
+It is important to properly clean the samples of corrosion product formed without
+stripping the coupon of any metal that was not lost to corrosion product. Proper cleaning
+techniques followed that of ASTM C1617-15, however the use of a dental pick to scrap
+the metal was avoided so as not to lose metal material not lost to corrosion product. The
+final MLCR in mils/year of each sample with the respective solution can be shown in
+Table I.
+
+Table I. MLCR (mils/year) of each solution tested.
+DI Water 1 ppm Cl- 5 ppm ClSproule WRSolution
+Solution
+1200®
+Sample 1 11.0025
+35.9900
+98.1606
+2.6512
+Sample 2
+8.6827
+37.1168
+53.9519
+5.5012
+Sample 3
+36.7191
+54.4158
+5.6338
+AVG
+9.843
+36.609
+68.843
+4.595
+
+Thermo-12®
+Gold
+4.6396
+6.0978
+5.8326
+5.523
+
+Pyrogel® XT-E
+31.3504
+19.4200
+23.5294
+24.767
+
+The average mass loss corrosion rate of the insulators were: Sproule WR-1200® at 4.595
+mils/yr, Thermo-12® Gold at 5.523 mils/yr, and Pyrogel® XT-E at 24.767 mils/yr.
+Graphically, the MLCR results are illustrated in Figure 8. The red line is depicting the
+average MLCR of DI water.
+
+Lowes - 21
+
+Figure 8. MLCR (mils/year) of each solution tested
+
+Discussion
+Results determine that Sproule WR-1200® yielded the lowest average MLCR at 4.595
+mils/yr. Thermo-12® Gold yielded the second lowest average MLCR at 5.523 mils/yr.
+Pyrogel® XT-E had the highest average MLCR of the three tested insulators at 24.767
+mils/yr. The blank cell coupon exhibited a MLCR of 3.0489 mils/yr, only 1.5462 mils/yr
+less than Sproule WR-1200®’s average MLCR.
+
+When considering these results it is important to note that the only thing added to the
+insulator solution upon being ground up is DI water. Since this is the case, any insulator
+solutions yielding a MLCR greater than DI water is composed of corrosive ions that
+promote an environment causing corrosion to occur. This is a safe claim, as DI water is
+not composed of any ions whatsoever. Alternatively, any insulator solutions yielding a
+MLCR lower than DI water is composed of corrosion mitigating ions that deter corrosive
+environments. Therefore Thermo-12® Gold and Sproule WR-1200® are confirmed to
+incorporate corrosion mitigating ions, and Pyrogel® XT-E is confirmed to be composed
+
+Lowes - 22
+of corrosive ions. A passive layer on both corrosion mitigating insulator solution coupons
+is shown in Figure 9. Heavy layers of corrosion product can be observed on the samples
+exposed to Pyrogel® XT-E’s solution.
+
+Figure 9. Corrosion product formed on carbon steel samples after the four-day trial.
+
+ASTM standards call for different “PASS” levels of each insulator. Table II depicts these
+different “PASS” levels of each the insulator types tested.
+Table II. MLCR Thresholds of different insulation materials.
+
+From this table it is shown that calcium silicate insulators (Thermo-12® Gold) are the
+only insulator material required to exhibit a lower MLCR than that of DI water in order to
+“PASS” as a usable insulator. Insulators that are flexible aerogels (Pyrogel® XT-E) and
+mineral fibers are only required to exhibit a lower MLCR than that of 5 ppm chloride
+
+Lowes - 23
+solution in order to “PASS” as a usable insulator. DI water is never seen in environments
+where systems need to be insulated, so it seems ridiculous to use this as the point at
+which calcium silicate insulators must pass. However, the Thermo-12® Gold still did
+pass. Pyrogel® XT-E did in fact exhibit a lower MLCR than that of 5 ppm chloride
+solution, however it is appropriate to analyze the results in comparison to DI water to see
+what corrosive environment the insulators produce at the chemical level. Therefore, all
+insulators should be held against the MLCR of DI water, as done in this analysis, to
+properly observe the corrisiveness of each insulator’s chemistry.
+
+Conclusions
+1. Sproule WR-1200® and Thermo-12® Gold solutions both yielded a lower MLCR than
+DI water, confirming these insulators leached corrosion mitigating ions.
+2. Pyrogel® XT-E’s solution yielded a greater MLCR than DI water, therefore this
+insulator leached corrosion promoting ions.
+3. Incorporating ions in thermal insulators to produce a passive layer on metal equipment
+effectively mitigates CUI.
+
+Future Work
+Some manufacturers of insulator materials classified as “hydrophobic” may find the
+claim to use only Procedure A inaccurate. For these reasons it would be appropriate to
+run all of the insulators again in accordance to Procedure B. Results should be compared
+to that of the results from Procedure A to justify the claim, and to provide further
+evidence that Sproule WR-1200® and Thermo-12® Gold produced corrosion mitigating
+ions, while Pyrogel® XT-E produced corrosion promoting ions.
+
+Lowes - 24
+This particular study was conducted on an off-campus site and time was limited. Due to
+this, cleaning and weighing of the samples was done before any characterization of the
+passive layer formed could be conducted. In future studies SEM imaging of the corrosion
+product would serve as investigative measures to further understand the properties of the
+silicate layer. Chemical analysis of the solutions would be an option for future testing in a
+scenario where time is not a limitation, and should follow in accordance to ASTM C871.
+
+As mentioned earlier, it is uncommon to see DI water in an environment that requires
+insulator materials. Testing in accordance to ASTM C1617-15 with reference standards
+of rain water or a mimic solution of ocean fog in marine applications may prove to have
+interesting results, and would show a more accurate corrosion rate of a real life scenario
+of CUI.
+
+Another mode of testing insulators properties to mimic CUI is ASTM C692. This tests
+for chloride stress corrosion cracking (SCC) of stainless steels. Running ASTM C692 in a
+modified test for carbon steel coupons to instead analyze general corrosion and not SCC
+would more appropriately serve as a physical representation of a CUI attack. ASTM
+C692 is shown in Figure 10.16
+
+Figure 10. ASTM C692.16
+
+Lowes - 25
+Works Citied
+[1.] Gibbs, David. “The Basic Concepts.” Lecture. California Polytechnic SLO.
+[2.] Chemistry LibreTexts. “20.6: Corrosion: Unwanted Voltaic Cells.” UC Davis. April
+18, 2017. Accessed May 16, 2017.
+[3.] NACE SP0198-2010. Control of Corrosion Under Thermal Insulation and
+Fireproofing Materials – A Systems Approach.
+[4.] Chevron IS 46. Corrosion Under Insulation (CUI). Version 1.4, Sept. 11, 2016.
+Downstream & Chemicals – Manufacturing.
+[5.] Gibbs, David. “Pitting Corrosion.” Lecture. California Polytechnic SLO.
+[6.] Vogelaere, Frank. “Corrosion Under Insulation.” Nov. 19, 2008. Wiley InterScience.
+[7.] Beach, Emily. “What is Granular Fill?” http://homeguides.sfgate.com/granular-fill69654.html
+[8.] Donev, Jason. “Fibrous Insulation.”
+http://energyeducation.ca/encyclopedia/Fibrous_insulation
+[9.] M, Morcillo, D. de la Fuente, I. Diaz and H. Cano. Atmospheric corrosion of mild
+steel.
+[10.] Shong, David. “Understanding Insulation Chemistry Proven to Inhibit Corrosion
+Under Insulation (CUI).” NACE International, 2017, Accessed 6 June 2017.
+[11.] Shong, D. (2015, September 1). “Expanded Perlite Insulation: Why Hydrophobicity
+is Only Part of the Solution to Prevent CUI.” Retrieved 31 August 2016, from
+Corrosionpedia: https://www.corrosionpedia.com/2/2048/corrosion-prevention/expandedperlite-insulation-why-hydrophobicity-is-only-part-of-the-solution-to-prevent-cui
+[12.] ASTM International. (Latest Edition). ASTM C1617 Standard Practice for
+Quantitative Accelerated Laboratory Evaluation of Extraction Solutions Containing Ions
+
+Lowes - 26
+Leached from Thermal Insulation on Aqueous Corrosion of Metals. West Conshohocken:
+ASTM International.
+[13.] Johns Manville Industrial Insulation Group. “Thermo-12® Gold Pipe and Block
+Insulation.” ©2016 Industrial Insulation Group, LLC. Accessed June 6, 2017.
+[14.] Johns Manville Industrial Insulation Group. “Sproule WR-1200® Perlite Pipe &
+Block Insulation.” ©2015 Industrial Insulation Group, LLC. Accessed June 6, 2017.
+[15.] Aspen Aerogels. “Pyrogel XT-E, Flexible Industrial Insulation for HighTemperature Applications”. ©2015 Aspen Aerogels, Inc. Accesed June 6, 2017.
+[16.] Shong, David. “Using Insulation to Inhibit Corrosion Under Insulation.” Lecture.
+Johns Manville.
+
+Lowes - 27
+
+Appendix I
+Standard Operating Procedure for Corrosion Under Insulation
+(CUI) Investigation Procedure
+Procedure: ASTM C1617-15 PROCEDURE A
+Description: Standard practice for quantitative accelerated laboratory evaluation of
+extraction solutions containing ions leached from thermal insulation on aqueous
+corrosion of metals.
+1. Scope
+1.1 This practice uses controlled amounts of test solutions delivered in a drip wise
+fashion onto a defined area of carbon steel coupons at elevated temperatures for
+the purpose of producing, comparing, and measuring the corrosion that occurs on
+the metals due to the exposure of test solutions.
+2. Hazards
+2.1 Use of hydrochloric acid (35%)
+3. Standards Reference Tests
+3.1 DI water
+3.2 1 ppm chloride solution
+3.3 5 ppm chloride solution
+4. Reagents and Materials
+4.1 Carbon steel coupons: ASTM D609-Type 1, Temper = ¼ hard, Carbon = 0.13
+wt%; size = 0.032 x 2 x 3.5 in.
+4.2 Sproule WR-1200®
+4.3 Thermo-12® Gold
+4.4 Pyrogel® XT-E
+5. Testing Equipment
+5.1 Wolfgang Puck® hot plate
+5.2 24-Channel Ismatec IPC® peristaltic pump
+5.3 Ninja® Blender
+5.4 Silicone rubber tubing to deliver solutions
+5.5 Mettler Toledo Mass Balance Scale (capable of 0.0001 (+/- 0.0002) mass
+determination
+5.6 Drying oven
+
+Lowes - 28
+5.7 Nominal 1-in. Thin-wall PVC Pipe
+5.8 Thermal cover for consistent heating
+5.9 High temperature grease or oil for consistent heating
+5.10 Thermocouple to ensure consistent heating
+5.11 Silicone sealant
+5.12 Rubber O-rings
+5.13 Filter paper of 0.45 micron filter
+5.14 DI water
+5.15 Chloride Standard, 1000 ppm
+5.16 VWR Signature™ Ergonomic High-Performance Pipettor
+5.17 Fiberglass-felt clothe abrasive
+6. Test Cell Preparation
+6.1 Mark each coupon for identification.
+6.2 Heat coupons in 180ºF drying oven to drive off surface moisture. Weigh for
+initial mass.
+6.3 Cut PVC pipe into 1.25 in lengths, smoothing ragged edges. Drill a 1/8 in hole
+in the side of the pipe 1/8 in from the top end of the PVC pipe. Clean pipe with DI
+water and dry.
+6.4 Position O-ring on PVC cell 0.5 in from bottom end of the PVC pipe. Place
+the PVC pipe on a metal coupon. Apply silicone sealant on PVC pipe between the
+metal coupon interface and the O-ring. Push firmly into the metal coupon while
+sliding the O-ring down to the interface forming a continuous, watertight seal.
+Avoid silicone sealant on the inside of the pipe and metal. Allow silicone to cure
+overnight prior to testing. Insert silicone tubing in 1/8 in hole for testing. Produce
+three test cells for each solution tested. Produce one blank cell for control.
+7. Standard Reference Preparation
+7.1 DI water 3000 mL for testing of four-day span (250mL/day on 3 coupons).
+7.2 1 ppm chloride solution Using the VWR Signature™ Ergonomic HighPerformance Pipettor measure out 0.001 mL of Chloride Standard and add to
+1000 mL of DI water. Do this three times to total 3000 mL.
+
+Lowes - 29
+7.3 5 ppm chloride solution Using the VWR Signature™ Ergonomic HighPerformance Pipettor measure out 0.005 mL of Chloride Standard and add to
+1000 mL of DI water. Do this three times to total 3000 mL.
+8. Procedure A Insulator Solution Preparation
+8.1 Weigh out 20.0 g of insulator to be tested.
+8.2 Grind down each insulator in Ninja® Blender until fine dust. If unable to
+produce a fine dust, add 450 mL of DI water prematurely to help mix. This
+proved necessary when producing the silica aerogel solution.
+8.3 Add previously stated 450 mL of DI water to ground insulator.
+8.4 Boil this mixture for 30 min.
+8.5 Adjust solution to total 500 mL by adding more DI water.
+8.6 Filter this solution to remove solids.
+8.7 Adjust this solution to total 3000 mL by adding more DI water. This provides
+for enough for a four-day trial on 3 coupons (250mL/day each coupon).
+9. Dripping Solutions on Hot Plate
+9.1 Ensure hot plate stays at constant 250ºF (+/- 10ºF) for 1 h to calibrate for
+testing.
+9.2 Place test cells in a manner that allows each respective silicone tube to
+properly deliver test solutions without error.
+9.3 Connect silicone tubing to the peristaltic pump and place opposite end in each
+respective test solution to be delivered.
+9.4 Set peristaltic pump rate to deliver 250 mL/day (+/- 50 mL).
+9.5 Run test over a four-day span
+10. Evaluation
+10.1 Cleaning coupons
+10.1.1 Gently remove the PVC cell from the metal coupons, leaving the
+silicone sealant and O-ring in tact when possible. This aids to prevent stripping
+the coupons of any metal not lost to corrosion.
+10.1.2 Using proper PPE (eyewear, nitrile gloves, apron, closed-toe
+shoes), place each metal coupon in a Pyrex bowl and introduce HCl to the
+coupon. Lightly agitate the bowl. After a minute grab the coupons and rub with
+fiberglass-felt clothe abrasive to remove corrosion product.
+
+Lowes - 30
+10.1.3 Repeat these steps if necessary to properly remove as much
+corrosion product as possible. Record the amount of HCl baths for each coupon.
+10.2 Weighing the Samples
+10.2.1 Rinse coupons with DI water upon completion of cleaing.
+10.2.2 Place coupons in a 180ºF drying oven to drive off moisture.
+10.2.3 Record final mass
+10.3 MLCR Calculation
+10.3.1 Using equation 1 below calculate MLCR:
+MLCR =
+
+K W
+mils/year
+AT D
+
+Where:
+
+
+K = 3.45e6 (a constant to convert cm/h to mils/year)
+
+T = time of exposure in h
+A = area of exposure (cm2), based on inner radius of PVC cell.
+W = mass loss from the coupon (g)
+D = bulk density of the test metal (g/cm3)
+11. Report
+11.1 Report on MLCR of all tested cells and solutions including DI water, 1 ppm
+chloride solution, 5 ppm chloride solution, and the blank test cell.
+12. Uncontrolled Variables
+12.1 Atmosphere within laboratory. A fan is helpful in circulating the air above
+the cells and reducing localized humidity from the water evaporating from the
+cells.
+12.2 Rate of evaporation form the coupon.
+12.3 Distribution of localized and general corrosion.
+12.4 Change in the corrosion rate. Longer testing may provide information on the
+change in corrosion rate over time.
+12.5 Different metal coupon qualities. All coupons meet ASTM specification
+however possible localized variances with the coupon are probable.
+13. Controlled Variables
+13.1 Temperature of the hot plate during testing.
+13.2 Duration of the test.
+
+Lowes - 31
+13.3 Rate and volume of testing solution delivered.
+13.4 Solution concentrations.
+13.5 Cell tubes and defined corrosion area.
+13.6 Cleaning of the coupons.
+Author
+Michael Lowes
+Advisor
+Dr. Trevor Harding
+Documentation of Training for SOP of CUI Investigation ASTM C1617-15
+Primary Investigator and Supervisor
+Primary Investigator:
+
+Michael Lowes
+
+Date:
+
+Supervisor:
+
+Dr. Trevor Harding
+
+Date:
+
+Reference
+ASTM International. (Latest Edition). ASTM C1617 Standard Practice for
+Quantitative Accelerated Laboratory Evaluation of Extraction Solutions
+Containing Ions Leached from Thermal Insulation on Aqueous Corrosion of
+Metals. West Conshohocken: ASTM International.
+
+Lowes - 32
+
+Appendix II
+
+Materials/Insulators Tested Safety Analysis for Corrosion
+Under Insulation (CUI) Investigation Procedure
+Thermo-12® Gold Calcium Silicate Insulation
+HAZARDS IDENTIFICATION
+- GHS Classification: Not a hazardous substance or mixture
+- GHS Label element: Not a hazardous substance or mixture
+- Other hazards: Temporary mechanical abrasion (itching) of skin, eyes and respiratory may
+occur upon exposure to fibers or dust during handling of this product.
+COMPOSITION
+Chemical Name
+Synthetic calcium silicate
+Cellulose fiber
+
+CAS-No.
+1344-95-2
+9004-34-6
+
+Concentration (%)
+>=90
+>= 0 - <= 4
+
+FIRST AID MEASURES
+General advice: No hazards, which require special first aid measures.
+If inhaled: If symptoms persist, call a physician.
+In case of skin contact: If symptoms persist, call a physician.
+In case of eye contact: Remove contact lenses. Protect unharmed eye. Rinse thoroughly with
+plenty of water, also under the eyelids. If eye irritation persists, consult a specialist.
+If swallowed: Keep respiratory tract clear. Never give anything by mouth to an unconscious
+person. If symptoms persist, call a physician.
+FIREFIGHTING MEASURES
+Suitable extinguishing media: Use extinguishing measures that are appropriate to local
+circumstances and the surrounding environment.
+Hazardous combustion products: No hazardous combustion products are known
+Specific extinguishing methods: Use extinguishing measures that are appropriate to local
+circumstances and the surrounding environment.
+Further information: Standard procedure for chemical fires.
+Special protective equipment for firefighters: Wear self-contained breathing apparatus for
+firefighting if necessary.
+ACCIDENTAL RELEASE MEASURES
+Personal precautions, protective equipment and emergency procedures: Avoid dust
+formation.
+Methods and materials for containment and cleaning up: Pick up and arrange disposal without
+creating dust. Sweep up and shovel. Keep in suitable, closed containers for disposal.
+HANDLING AND STORAGE
+Advice on safe handling: For personal protection see section 8.
+Smoking, eating and drinking should be prohibited in the application area.
+Conditions for safe storage: Keep in a dry, cool place.
+Materials to avoid: No materials to be especially mentioned.
+
+Lowes - 33
+PERSONAL PROTECTION
+Respiratory protection: When workers are facing concentrations above the exposure limit they
+must use appropriate certified respirators. No personal respiratory protective equipment normally
+required.
+Hand protection Remarks: For prolonged or repeated contact use protective gloves.
+Eye protection: Safety glasses
+Skin and body protection: If used and stored as directed, no special protective equipment is
+necessary.
+Hygiene measures: Handle in accordance with good industrial hygiene and safety practice.
+DISPOSAL CONSIDERATIONS
+Contaminated packaging: Empty containers should be taken to an approved waste-handling site
+for recycling or disposal. Packaging that cannot be reused after cleaning must be disposed or
+recycled in accordance with all federal, national and local regulations.
+
+Sproule WR-1200® Bonded Perlite Thermal Insulation
+HAZARDS IDENTIFICATION
+- GHS Classification: Not a hazardous substance or mixture
+- GHS Label element: Not a hazardous substance or mixture
+- Other hazards: None known.
+COMPOSITION
+Chemical Name
+Perlite
+
+CAS-No.
+93763-70-3
+
+Concentration (%)
+>= 90 - <= 100
+
+FIRST AID MEASURES
+General advice: Do not leave victim unattended.
+If inhaled: If unconscious place in recovery position and seek medical advice. If symptoms
+persist, call a physician
+In case of skin contact: If symptoms persist, call a physician.
+In case of eye contact: Remove contact lenses. Protect unharmed eye. Rinse thoroughly with
+plenty of water, also under the eyelids. If eye irritation persists, consult a specialist.
+If swallowed: Keep respiratory tract clear. Never give anything by mouth to an unconscious
+person. If symptoms persist, call a physician.
+FIREFIGHTING MEASURES
+Specific extinguishing methods: Use extinguishing measures that are appropriate to local
+circumstances and the surrounding environment.
+Further information: Standard procedure for chemical fires.
+Special protective equipment for firefighters: Wear self-contained breathing apparatus for
+firefighting if necessary.
+Hazardous combustion products: No hazardous combustion products are known.
+ACCIDENTAL RELEASE MEASURES
+Personal precautions, protective equipment and emergency procedures: Avoid dust
+formation.
+Methods and materials for containment and cleaning up: Pick up and arrange disposal without
+creating dust. Sweep up and shovel. Keep in suitable, closed containers for disposal.
+HANDLING AND STORAGE
+Advice on safe handling: For personal protection see section 8.
+Smoking, eating and drinking should be prohibited in the application area.
+Conditions for safe storage: Keep in a dry, cool place.
+Materials to avoid: No materials to be especially mentioned.
+
+Lowes - 34
+
+PERSONAL PROTECTION
+Respiratory protection: When workers are facing concentrations above the exposure limit they
+must use appropriate certified respirators. No personal respiratory protective equipment normally
+required.
+Hand protection Remarks: For prolonged or repeated contact use protective gloves. Barrier
+creams may help to protect the exposed areas of skin, they should however not be applied once
+exposure has occurred.
+Eye protection: Safety glasses
+Skin and body protection: If used and stored as directed, no special protective equipment is
+necessary.
+Hygiene measures: Handle in accordance with good industrial hygiene and safety practice.
+Written instructions for handling must be available at the work place.
+DISPOSAL CONSIDERATIONS
+Contaminated packaging: Empty containers should be taken to an approved waste-handling site
+for recycling or disposal. Packaging that cannot be reused after cleaning must be disposed or
+recycled in accordance with all federal, national and local regulations.
+
+Pyrogel® XT-E Silica Aerogel Insulation
+HAZARDS IDENTIFICATION
+- GHS Classification: Not a hazardous substance or mixture
+- GHS Label element: Not a hazardous substance or mixture
+- Other hazards: None known.
+COMPOSITION
+Chemical Name
+Synthetic Amorphous Silica
+Methylsilylated Silica
+Fibrous Glass (textile grade)
+Iron Oxide (iron (III) oxide)
+Aluminum Trihydrate (aluminum hydroxide)
+Other components are either non-hazardous
+ingredients or are below the concentration limit for
+classification
+
+CAS-No.
+7631-86-9
+68909-20-6
+Not Applicable
+1309-37-1
+21645-51-2
+Mixture
+
+Concentration (%)
+30-40%
+10-20%
+40-50%
+1-10%
+1-5%
+Balance
+
+FIRST AID MEASURES
+Inhalation: If dust is inhaled, remove to fresh air. Drink water to clear throat, and blow nose. If
+irritation occurs or symptoms develop, seek medical attention.
+Skin contact: Wash skin with soap and water. If irritation develops, get medical attention, launder
+clothing before reuse.
+Eye contact: Do not rub eyes. Dust particles may cause abrasive injury. Immediately flush eyes
+with water while lifting the upper and lower lids. Seek medical attention if irritation persists.
+Ingestion: No first aid is generally required. No adverse effects are expected from incidental
+ingestion.
+Most important symptoms/effects, acute and delayed: Dust may cause eye irritation. Silica
+aerogels are hydrophobic (repel water) and may cause temporary drying and irritation of the skin,
+eyes, and mucous membranes. Inhalation of dust from handling may cause temporary upper
+respiratory tract irritation. Handling may cause dryness and irritation of the skin.
+Indication of immediate medical attention and special treatment, if necessary: Immediate
+medical attention is generally not required.
+FIREFIGHTING MEASURES
+Extinguishing media: Use any media that is suitable for the surrounding fire.
+
+Lowes - 35
+Specific hazards arising from the substance or mixture: Product is a super-insulator. Rolls of
+material will retain heat within internal layers that may be a source of ignition after the fire is
+extinguished. Keep hot material away from combustible materials and cool hot insulation with
+water.
+Special protective equipment and precautions for fire-fighters: Normal firefighting procedures
+should be followed to avoid inhalation of smoke and gases produced by a fire.
+ACCIDENTAL RELEASE MEASURES
+Personal precautions, protective equipment, and emergency procedures: Wear appropriate
+protective clothing and equipment as described in Section 8. Avoid generating airborne dust
+during cleanup. Ensure adequate ventilation.
+Environmental Precautions: Material is not water-soluble. Report spills as required under
+federal, state and local regulations.
+Methods and materials for containment and cleaning up: Collect using methods that avoid the
+generation of dust (pick up or vacuum dust) and place in appropriate container for disposal.
+HANDLING AND STORAGE
+Precautions for safe handling: Aerogel blankets may generate dust when handled. Workplace
+exposures to all dusts should be controlled with standard industrial hygiene practices. Local
+exhaust should be the primary dust control method. Dust generated when handling this product
+should be cleaned up promptly. Dry vacuuming is the preferred method for cleaning up dust.
+Because aerogel dust is hydrophobic, water is not an effective dust control agent. Unpack material
+in the work area. This will help to minimize the area where dust exposure may occur. Trimmed
+material should be promptly packed in disposal bags. Trims and off-cuts may be reused in
+secondary applications; otherwise scrap material should be packed for disposal. Avoid dust
+contact with eyes, skin and clothing and avoid breathing dust. Wash hands with soap and water
+after handling.
+Conditions for safe storage, including any incompatibilities: Keep tightly closed in the
+packaging until ready for use. Store in a dry location.
+PERSONAL PROTECTION
+Respiratory protection: If exposures exceed the occupational exposure limits or if inhalation of
+dust results in experiencing irritation, an appropriate certified particulate respirator is
+recommended. Selection of respiratory protection depends on the contaminant type, form and
+concentration. Select and use in accordance with OSHA 1910.134 and good Industrial Hygiene
+practice, e.g. a NIOSH approved P100 or N100 particulate filtering facepiece respirator.
+Skin protection: Impervious gloves recommended for handling product. Long-sleeved and longlegged work clothing are also advised.
+Eye protection: Safety glasses with side shields or dust goggles recommended.
+
+Documentation of Training for Materials Safety
+Primary Investigator and Supervisor
+Primary Investigator:
+
+Michael Lowes
+
+Date:
+
+Supervisor:
+Date:
+
+Dr. Trevor Harding
+
+

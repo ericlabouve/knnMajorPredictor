@@ -1,0 +1,1818 @@
+California Polytechnic State University
+San Luis Obispo
+Senior Design
+461/462
+
+Lab-Scale Circuit Breaker Module
+for Power System Laboratories
+Authors:
+Amanda Barley
+Joshua Chung
+Allen Scozzari
+
+Advisor:
+Taufik
+
+June 12, 2017
+
+Abstract
+In this project, a circuit breaker that can simulate different types of power system faults is
+redesigned, constructed, and tested. They will then be implemented in power systems laboratory
+courses at Cal Poly. The project’s goal is to improve a previous circuit breaker design to help
+students better visualize how faults affect power systems in the real world. Two main
+improvements are made to the previous circuit breaker design. The first improvement is to power
+the breaker with a typical wall outlet adapter instead of the DC source from the Cal Poly power
+systems laboratory test benches. This lets the circuit breakers be used in settings other than at Cal
+Poly. This also reduces manufacturing costs for the circuit breaker to allow the Cal Poly EE
+department to afford more modules for increased student use. The adapter converts the AC wall
+voltage to a lower DC value than the test bench to allow for lower voltage ratings and thus lower
+costs of each component. The second improvement is to redesign the faceplate layout to appear
+more intuitive and linear by rearranging, connecting, or removing certain terminals. These
+changes allow students to more easily understand how current flows through the circuit breaker
+and makes wire setup and troubleshooting simpler. After the final circuit breaker was
+constructed, testing determined correct breaker functionality, and the circuit breaker can be
+replicated and used at reduced costs in future Cal Poly Electrical Engineering Labs.
+
+1
+
+Table of Contents
+Abstract
+1 Introduction
+2 Background
+3 Design Requirements
+4 Design
+5 Hardware Tests and Results
+6 Conclusion
+References
+Appendix A: Bill of Materials
+Appendix B: Detailed Procedure
+Appendix C: Analysis of Senior Project
+
+1
+5
+8
+11
+14
+19
+31
+33
+34
+36
+48
+
+2
+
+List of Figures
+3.1 Level 0 Block Diagram
+3.2 Level 1 Block Diagram
+3.3 Circuit Breaker Dimensions
+4.1 Dimensions of Redesigned Acrylic Faceplate
+4.2 Interconnection Diagram of Internal Hardware
+4.3 Circuit Schematic Using Circuit Elements
+4.4 Internal Circuitry of LP1K1210BD
+4.5 Internal Circuitry of LA1KN22 Auxiliary Contact Block
+5.1 Top View of Final Circuit Breaker
+5.2 Internal View of Final Circuit Breaker
+5.3 Top View of Single-Line-To-Ground Fault Configuration
+5.4 Top View of Double-Line-To-Ground Fault Configuration
+5.5 Top View of Line-To-Line Fault Configuration
+5.6 Top View of Three-Phase Fault Configuration
+5.7 Top View of Final Circuit Breaker After a Line-To-Line Fault has Occurred
+5.8 Radial Resistive Circuit Single-Line Diagram
+5.9 Line-To-Line Fault Oscillogram Plot
+5.10 Three-Phase Fault Oscillogram Plot
+5.11 Under Voltage Condition Oscillogram Plot
+B.1 QuickSet Main Window
+B.2 SEL-710 Communication Parameters Window
+B.3 Identifying SEL-710 Relay Family, Model, and Version
+B.4 Identifying SEL-710 Relay Part Number
+B.5 Example SEL-710
+B.6 Saving SEL-710 Settings
+B.7 Choosing Location for New SEL-710 Relay Settings Database
+B.8 SEL-710 Settings Editor Main Window
+B.9 SEL-710 General Settings
+B.10 SEL-710 Breaker Monitor Settings
+B.11 SEL-710 Main Settings
+B.12 SEL-710 Main Settings, cont.
+B.13 SEL-710 Phase Overcurrent Settings
+B.14 SEL-710 Residual Overcurrent Settings
+B.15 SEL-710 Negative Sequence Overcurrent Settings
+B.16 SEL-710 Under voltage Elements
+B.17 SEL-710 Trip and Close Logic
+B.18 SEL-710 Logic 1, Slot A Output Logic
+B.19 SEL-710 Port F Settings
+B.20 SEL-710 Trigger Lists Settings
+B.21 SEL-710 Event Report Settings
+B.22 Send Modified Settings to the SEL-710
+
+3
+
+10
+10
+12
+15
+16
+17
+18
+18
+20
+20
+21
+21
+22
+22
+23
+24
+28
+29
+29
+37
+38
+39
+39
+39
+40
+40
+41
+41
+41
+42
+42
+43
+43
+43
+44
+44
+45
+46
+47
+47
+47
+
+List of Tables
+3.1 Summary of Parameters
+5.1 Per Phase Sequential Points of Connection
+
+13
+25-26
+
+4
+
+1. Introduction
+Power systems date back to 1882 when Thomas Edison and his company, The Edison
+Electric Light Company, developed the first steam-powered electric power station. Previously,
+there were no practical ways to bring electric lights into the home. Edison developed a system
+that needed an elaborate network of underground wiring and tubes (conduits). This piece of his
+system was quite expensive and people were skeptical about letting him dig up the street to
+install it [1]. However, Edison got the system working and lit the streets of New York purely on
+electrical power, marking the start of the power systems industry. He needed to find a way to
+monitor how much power each customer used. He eventually did this using an existing device
+that measured current and calculated the amount of power based on that current over a period of
+time. The station contained six generators driven by steam engines that could power 1,400 light
+bulbs [1]. Customers were connected to the plant by copper wires that ran underground. Later,
+the system was changed to the overhead system still used today due to its increased cost
+effectiveness. The initial station was a DC (direct current) system and operated at a single
+voltage. However, since DC is not easily transformed to the higher voltages necessary to
+minimize power loss during long distance transmission, the system was changed to AC
+(alternating current) and utilized a modified version of the first transformer that was suitable for
+power system use, which was designed by Lucien Gaulard and John Dixon Gibbs. This
+transformer had a few issues such as connecting the primaries in series, but these problems were
+corrected by William Stanley who connected them in parallel instead. Eventually, George
+Westinghouse set up a multi-voltage AC transformer system that competed with Edison’s initial
+system. In 1891, a 20kV, 176 km three-phase transmission line was developed for the Electrical
+Engineering Exhibition in Frankfurt [2]. After a long decision-making process in 1895, it was
+decided that AC transmission was the better system. From there, Westinghouse built a generating
+station at Niagara Falls, and General Electric built a three-phase AC power system to supply
+Buffalo at 11kV. Later in 1936, the first experimental HVDC (high voltage direct current) line
+using mercury arc valves was built; however, the system was not reliable [3]. In the early 1970s,
+solid-state devices became the standard in HVDC. These systems and equipment guided the
+early history of the power systems industry and continue to be important points of reference
+today.
+As power systems continue to grow, there are some new challenges that must be faced.
+One such challenge is in finding alternate sources of generating energy. In particular, we need to
+commit in meeting today’s electricity demand without compromising the needs of future
+generations. This leads to the solution of pursuing renewable energy generation such as solar,
+wind, nuclear, and hydro. However, these new technologies come with their own complications.
+A number of the renewable energy sources tend to be dependent on weather fluctuations which
+introduces uncertainty in generation output [4]. Solar technology, for example, utilizes the sun as
+a power source, meaning generation cannot occur during nighttime or during weather conditions
+that block sunlight. The variability and uncertainty can be dealt with by switching in fast-acting,
+5
+
+conventional reserves as needed through utility-scale energy storage systems. Currently, the
+renewable variability is handled by ramping conventional reserves up or down, but as renewable
+energy generation grows, storage will likely become more cost effective and necessary [4].
+Another challenge in modern power systems is the increased complexity in their
+protection system. With small power systems, protection is relatively manageable and easily
+maintained. However, as power systems grow and more technologies are incorporated, the
+protection system consequently becomes more complex. Power system protection serves to
+minimize the damage of equipment when a system imbalance occurs. The primary cause of
+damage is electrical short circuits which are referred to as “faults.” Different types of faults exist
+in a three-phase power system such as line-to-line, three-phase, single-line-to-ground (SLG), and
+double-line-to-ground (DLG) faults.
+To help attain effective and optimum protection system, models of physical equipment
+must be constructed. The digital era further allows computers to model the systems and make the
+necessary calculations faster than humans would [5]. There are a number of different types of
+equipment used to protect systems. Two important pieces of equipment are relays and circuit
+breakers. Relays are switching devices used to control the path of electricity. Instead of manually
+using a switch, a relay is controlled by a low power signal and assures complete electrical
+isolation between the controlled and control circuits [6]. A circuit breaker is an automatic switch,
+which is an on-load device, designed traditionally using electromechanical techniques to prevent
+power overload damage or short circuits. Once a fault is observed in the circuit, such as an
+overload or a short circuit, the switch is triggered and the current flow is discontinued. Relays
+can be included in circuit breakers but can also be separate. These devices are important for
+keeping the power system in working condition.
+Due to the increased complexity of modern power systems with their associated
+technologies and protection, it becomes critical to train future power engineers to understand the
+circuit theory and device functionality necessary to maintain and operate a power system with
+adequate protection. To receive this training, many universities teach power system analysis and
+design courses. However, in terms of power system protection, a university could most
+effectively teach students using hands-on models that simulate power systems in a laboratory
+setting. This would allow students to be more prepared to enter a career in the power systems
+industry with a full understanding of basic power system protection, how it operates, and how to
+improve it. To better simulate a real-world system, one option is to make a microgrid system
+within a laboratory room. This would require equipment such as solar cells, other power
+generated from the grid, transmission lines, relays, and circuit breakers. With these tools,
+students should have the ability to recognize all types of faults, simulate them, and know the
+effects of each fault configuration on the power system. Since microgrids are small replicas of
+the full power grid, they are important tools for students to visualize and practice with the
+operation of power systems that exist in the real world but in an environment where making
+minor mistakes will not disrupt or endanger real customers and critical equipment. A microgrid
+laboratory course would provide students with practical experience in power system protection
+6
+
+design and in implementing various protection devices such as digital relays.
+
+7
+
+2. Background
+
+The origins of this project stem from the senior project of Ozro Corulli in 2013, who
+created an additional lab experiment for motor protection for the Cal Poly Power Systems
+course, EE 444. The lab experiment covered topics such as relay setup, relay programming, and
+developing protections schemes for various protection scenarios. Equipment for the lab
+experiment included the SEL-710, a microprocessor-controlled protection relay that can read
+voltage and current levels of lines feeding a motor [7]. The relay can detect when an irregularity
+occurs and sends a signal to a circuit breaker box to open the circuit. The circuit breaker was
+designed and developed by Ozro Corulli as a side project using funding from Cal Poly and
+donations from Schweitzer Engineering Laboratories and Schneider Electric. His design allowed
+for the circuit breaker to interface with the lab experiment setup, as well as allow students to
+visualize the operation of various fault conditions. His lab experiment required the use of only
+one circuit breaker per lab group, leading him to produce seven circuit breakers total - one for
+each bench. Ozro Corulli’s lab concept has been expanded upon for the presently on-going
+Master’s thesis of Kenan Pretzer, as well as the senior projects of Ian Hellman-Wylie and Joey
+Navarro. Their projects aim to create a new microgrid protection lab course for Cal Poly using
+additional Schweitzer Engineering Laboratory equipment. Each of their projects requires the use
+of several circuit breakers per lab group. This senior project focuses on reproducing and
+redesigning the circuit breakers in order to address several problems encountered in Corulli’s
+circuit breaker design.
+One problem this senior project will address is the current lack of circuit breakers to
+allow all lab groups to set up and experiment with various fault types within the microgrid. The
+future lab course will utilize up to three circuit breakers per lab group, meaning several more
+must be made to allow multiple groups to perform lab experiments at the same time. With only
+the seven circuit breakers that are currently available, we will only be able to conduct very
+limited number of concurrent experiments in the future EE 444 or the microgrid lab course.
+Therefore, one of the goals of this project is to construct approximately 12-15 more circuit
+breakers. This amount should accommodate multiple lab groups for most lab experiments. If
+more circuit breakers are required, then future students can continue producing them using
+documentation from this senior project.
+The Cal Poly Electrical Engineering Department is currently enhancing the hands-on
+laboratory experience in their power program. The overall microgrid protection lab being
+developed by the previously mentioned students will provide future electrical engineering
+students concentrating in power systems the opportunity to conduct more laboratory experiments
+in power systems and protection theory. The microgrid lab is being designed to help students
+visualize concepts covered in lectures, which is a rare but increasingly necessary tool for
+students in the power systems field. Although the Cal Poly EE 444 course covers topics such as
+power control and protection relaying, another lab is necessary for students to learn the ever
+8
+
+changing power systems and their relevant concepts. The lab provides increased exposure to
+visual, hands-on learning experience in the power curriculum at Cal Poly, and the circuit breaker
+design is a critical component in the microgrid lab plan. The main strength of the circuit breaker
+design is its ability to allow students to test and visualize various fault connections while also
+learning to use modern microprocessor-based relays for power system protection. To achieve
+these goals, the redesigning of the faceplate of the existing circuit breaker module and proper
+placements of terminals for external connections from and to the circuit breaker module will be
+some of the main focus for this project.
+One idea to improve from the present circuit breaker design is the removal of superfluous
+inputs and outputs on the circuit breaker. A major concern with the proposed protection and
+microgrid lab experiments is that they require 30 or more connections. This presents a logistical
+problem because the electrical engineering department at Cal Poly has a limited number of short
+leads and banana-to-spade leads. Therefore, the new circuit breaker design will have fewer
+external connections to minimize the number of leads used for each new experiment.
+Another improvement from the current design is to provide the DC power supply through
+an AC-to-DC adapter connected directly from a standard wall outlet. This will not only minimize
+the number of required leads to check out from the senior project window, but also it will be
+safer and more convenient to use during the lab setup time, allow the circuit breakers to be used
+anywhere outside of the lab room, and lower the cost of the circuit breaker components.
+In order to design and construct an improved version of circuit breaker module, specific
+literature must be reviewed. The main document referenced for this senior project is the senior
+project report written by Ozro Corulli, who created the first set of circuit breakers for his senior
+project. His report provides invaluable data including an extensive list of parts used, his process
+of designing the faceplate, the internal hardware configuration, and lastly the assembly process
+of all the components in his final circuit breaker. The information provided has greatly helped
+accelerate the design process improvements.
+Other literature on circuit breakers includes the textbook “Power System Analysis and
+Design” by Overbye, Glover, and Sarma. There is a section in the book devoted to how to
+connect different fault types, which will be useful when testing and using the circuit breaker [8].
+Considering the planned changes for the circuit breaker, the overall objective of this
+senior project is to help streamline and improve the circuit breakers and to help with the
+development of new lab course to enhance Cal Poly’s power program. Furthermore, the most
+important objective is to ensure that students learn power system protection in a safe
+environment. To achieve this goal, the planned improvements include:
+● Build 12-15 more circuit breakers
+● Remove superfluous external inputs
+● Replace DC source with wall plug
+● Rearrange faceplate
+
+9
+
+3. Design Requirements
+
+Figure 3.1 shows the level 0 block diagram for the proposed circuit breaker module. It
+simply shows the inputs and outputs into the circuit breaker.
+
+Figure 3.1: Level 0 Block Diagram
+Figure 3.2 shows the level 1 block diagram for the circuit breaker. It shows the inputs and
+outputs as well as the basic internal connections and parts within the circuit breaker. As shown,
+there are three inputs: power, three phase current input, and fault input. Only one output exists
+which is to the protection relay. Within the breaker, there will be a mechanical switch, a three
+phase motor contactor, indicator LED’s, manual close and trip buttons and relay contacts.
+
+Figure 3.2: Level 1 Block Diagram
+For this project, there are 6 design objectives that need to be met in order to successfully
+complete this project and improve from the previous breaker module design as listed below:
+10
+
+1. Lab bench DC input voltage removal for minimizing the number of manual physical
+connections to operate the module
+2. Banana jack removal for simpler connection
+3. Faceplate rearrangement for clearer and cleaner cable connections
+4. Construction of 12 to 15 breaker modules
+5. Lower the total cost of each breaker
+Overall, the above purposes aim to streamline the existing circuit breaker modules so that
+the new modules will be more intuitive to use and will cost far less. These changes will also
+allow more flexibility in terms of where the modules are going to be used. The justification for
+these design goals is further detailed in the proceeding paragraphs.
+The removal of the DC Bench voltage is a crucial parameter that would benefit the
+overall project the most. Currently, the circuit breakers are powered by 125VDC from the lab
+bench in the power systems lab 20-102 at Cal Poly. However, this setup is unique to this lab and
+thus will not work in any other lab room unless a 125VDC power supply is available to use. The
+goal is therefore to remove the dependence on the unique lab bench setup by powering the circuit
+breakers using a standard 120VAC outlet. The use of the standard AC outlet to replace the
+125VDC supply will make the circuit breaker module more accessible to any lab beyond the
+power lab at Cal Poly building 20 room 102. To utilize the standard AC outlet, the DC voltage
+into the module can be provided by the commercially available power adapters or chargers.
+These adapters or chargers are a cheap and readily available component that can be used to
+convert 120VAC to 24VDC. Furthermore, since 24VDC is now being used in place of 125VDC,
+the internal electronic components would be cheaper due to the lower DC operating voltage.
+Using these chargers will also reduce the space requirement of the breaker module since the ACDC conversion takes place outside of the breaker module box, and thus increasing the usable
+space inside the breaker module.
+In addition to removing the DC power inputs from the lab bench, 3 inputs to the present
+breaker module are also being removed. The connections bridging the “Circuit Breaker” side
+with the “Fault Connection” side are no longer necessary. Instead of using short leads to connect
+the two sides, the two sides will be internally connected. In total, 5 inputs will be removed: 2
+inputs coming from the bench and 3 inputs connecting the circuit breaker side to the fault side.
+This in turn will simplify the external physical cable connection.
+Due to the removal of these inputs, the faceplate must also be rearranged from its present
+design. The current faceplate layout is not as intuitive as desired, and the interior of the housing
+is not space efficient. Rearranging the top faceplate will allow for more space inside the housing.
+The new breaker module will also be designed to be more space efficient and will provide a
+layout that is more intuitive for users. This could prevent confusion when wiring is applied to the
+circuit breaker, which may result in less damage being done to the internal components due to
+improper wiring.
+Although many changes are being made to the circuit breaker design, the cost of each
+circuit breaker should be reduced. Currently, the circuit breaker is capable of managing upwards
+11
+
+of 30A and 660VAC. Due to the change in power supply from 125VDC to 24VDC, the parts
+being used for these new breakers are going to be rated for lower amounts. For instance, the
+current design uses a 125VDC Motor Contactor that costs approximately $106. The new design
+will use a motor contactor of 24VDC that costs about $50 per contactor. For the construction of
+15 breaker modules, this reduced cost presents a savings of $840. The manual switch is also
+being changed to a lower rating in order to save money. The $135 switch is going to be replaced
+with a $50 switch. With a savings of $85 on each switch, the total amount saved on 15 switches
+is $1275. These savings allow more additions for improvements or breaker modules.
+The final design requirement was the construction of 12-15 circuit breakers. In the Power
+laboratory at Cal Poly building 20 room 102, there are a total of 8 benches with one being
+dedicated for senior and master’s thesis projects. Thus with the remaining 7 lab benches, the
+final goal for this senior project is to get at least 2 circuit breakers constructed for each bench.
+This would leave 1 or 2 spare circuit breakers that could be used as replacements when needed.
+Since the proposed module will use 24VDC to power internal electronics, the LEDs and
+3 phase motor contactor must be rated for this voltage. The normal operating current of the
+system is on the order of microamps, and most LEDs and motor contactors should already be
+rated well above this. As mentioned previously, this power will come out of the wall outlet and
+through a power adapter (AC to DC converter) that will produce the 24VDC input to the circuit
+breaker.
+For the proposed breaker module, the mechanical project specifications consist of a
+manual, mechanical switch that will be used to actuate fault configurations set up by students
+taking the lab course. Mechanical buttons will be used to manually open and close the circuit
+breaker as well. These buttons are connected to relay inputs to allow the breaker to work.
+The targeted dimensions of the proposed circuit breaker are shown in Figure 3.3. The
+circuit breaker is 9.5 inches long, 5.75 inches wide, and 3 inches tall. The volume of the circuit
+breaker is 163.875 cubic inches. These dimensions do not include any extruding parts such as the
+power cable or the top connection points.
+
+Figure 3.3: Circuit Breaker Dimensions
+
+12
+
+Table 3.1 summarizes all of the specifications that will be required for this senior project.
+Table 3.1: Summary of Parameters
+Parameter
+Replace bench DC voltage with
+wall plug
+
+Summary
+●
+
+●
+●
+●
+●
+
+Use a wall outlet as the power source so that the
+breaker can be used anywhere where there is wall
+power.
+2 banana jacks will be removed from the faceplate since
+the bench will not be required for power
+Requires an AC to DC converter
+Will provide 24VDC to the circuit breaker
+Reduces the number of wires that go to the bench
+
+The 3 banana jacks on the “Fault” section of the box
+that are unnecessary
+● The connections will be made internally rather than
+with external short leads.
+
+Remove connections between
+breaker outputs and fault inputs
+
+●
+
+Build 12-15 more breakers
+
+●
+
+Rearrange Faceplate
+
+●
+
+Lower cost per breaker
+
+●
+
+14 breakers are needed to allow 2 circuit breakers on
+each of the 7 lab benches
+● 1 extra breaker as a spare
+A more intuitive faceplate configuration will allow
+users to understand what is going on more clearly
+
+The new breaker design uses 24VDC, allowing for
+cheaper components with reduced ratings
+● Lower costs will allow for the production of more
+circuit breakers in the future
+
+13
+
+4. Design
+To begin the redesign of the circuit breaker, the previous circuit breaker was examined.
+Its bill of materials was reviewed in order to identify part numbers, names, costs, and vendors,
+and an existing circuit breaker was then deconstructed in order to draw a new circuit schematic.
+Using this new schematic, improvements were then brainstormed and proposed. The first
+improvement was rearranging and removing parts on the faceplate. Hole sizes for banana jack
+terminals, LEDs, and buttons were determined by referring to the AutoCAD files provided with
+the existing circuit breaker. For parts that were not included in the original AutoCAD files, sizes
+were determined by measuring the components in person when they arrived from the vendor or
+using specifications on component datasheets. For example, the new breakers will involve
+smaller LED’s than the ones previously used, so the size of the holes on the faceplate will be
+reduced to allow the new LEDs to be mounted properly. Some component placements were
+shifted on the faceplate, such as the input and output banana jack terminals. The terminals for
+each of the three phases were changed to lay out vertically and connect linearly from the left side
+to the right side of the faceplate for more intuitive use, which reflects the design requirements
+mentioned in Chapter 3. Other banana jack terminals were removed from the faceplate altogether
+and connected internally to further improve ease of use. This was done by internally connecting
+the Circuit Breaker Output connections to the Input Fault connections, then to the switch and the
+Output Fault connections terminals. Once these improvements were finalized, a draft was handdrawn and then copied over to AutoCAD. This AutoCAD file was sent to a contact who laser cut
+the faceplates out of a piece of acrylic, which will be discussed in Chapter 5. The new redesigned
+faceplate schematic is shown in Figure 4.1.
+
+14
+
+Figure 4.1: Dimensions of Redesigned Acrylic Faceplate. Red coloring indicates cut-through
+lines; black indicates surface etchings for text and symbols.
+
+The next step in the design process was implementing an AC to DC converter to allow
+the circuit breaker to receive power from a common wall outlet instead of the DC connections on
+the Cal Poly test benches. A laptop charger was chosen to achieve 24 VDC from a 120VAC wall
+outlet. The charger is plugged into a jack on the side of the breaker which will serve as the main
+power connection to the inside of the breaker. Running off of 24 VDC rather than 125 VDC
+allowed the costs and rating sizes of several components to reduce significantly.
+
+15
+
+Figure 4.2: Interconnection diagram of internal hardware
+The new circuit breaker design builds upon the previous circuit breaker design by directly
+improving issues it exhibited with layout, versatility, and cost. The new layout makes the circuit
+breaker connections more intuitive and logical for students, and its cost was decreased due to
+removing components and lowering several component ratings.
+
+16
+
+Figure 4.3: Circuit schematic using circuit elements. The motor contactor and auxiliary motor
+contactor contain a network of switches that are discussed later
+Figure 4.3 shows the circuit schematic that will be used to make the internal connections
+when building the circuit breaker.
+The use of the motor contactor is necessary to manage the number of switches needed for
+proper operation. The motor contactor itself contains a series of switches. The default position of
+the switches, normally open or normally closed, is stated on motor contactor datasheets. For
+example, the motor contactor being used in the circuit breaker is the LP1K1210BD. The model
+number dictates what is inside the motor contactor. Since this is a 3 Pole + N/O contactor, the
+N/O switch is what dictates the number that comes after LP. In this case, LP1K1210BD means
+that there is 1 normally open auxiliary contact. The next sequence of 3 characters, K12, indicates
+the characteristic of these poles. Information about these are in the datasheet. The second to last
+two characters, LP1K1210BD, indicates whether the contactor contains a normally open or
+normally closed auxiliary switch. The “10” indicates a normally open auxiliary switch, shown as
+the T4/8 - 7/L4 switch in Figure 4.4. In another case when this number reads “01”, this indicates
+17
+
+that the auxiliary switch is normally closed. The last two characters, LP1K1210BD, indicate the
+operating coil. The suffix BD requires 24VDC, but a contactor ending in ED would require
+48VDC. This voltage is delivered via +A1 and out -A2.
+
+Figure 4.4 - Internal wiring of LP1K1210BD
+A similar process is used to describe the auxiliary contactor. The purpose of the auxiliary
+contactor is to provide additional normally open and normally closed contact. For this design, we
+are using the LA1KN22 auxiliary contact block. This model number can also be broken down.
+The second character, A, indicates an auxiliary switch. The 22 indicates the number of normally
+open and normally closed poles. For our auxiliary switch, 22 indicates 2 normally open and 2
+normally closed poles. Other auxiliary switches, like the LA1KN13, contain 1 normally open
+pole and 3 normally closed poles. The last character, M, is an optional “mounting” variant of the
+LA1KN22 auxiliary block. Figure 4.5 shows the 2 N/O and 2 N/C configuration of the
+LA1KN22 auxiliary block.
+
+Figure 4.5 - Circuit Schematic of the LA1KN22M contact block.
+
+18
+
+5. Hardware Tests and Results
+To build the circuit breakers, parts and must first be obtained. The Bill of Materials can
+be found in Appendix A. Once all of the materials are obtained, follow the circuit schematic,
+shown in Figure 4.2 in the previous chapter, and connect all the parts together. Suggestions on
+building procedure are as follows:
+1. Screw in manual switch to the faceplate using screws and nuts.
+2. Screw in open and close buttons and LEDs.
+3. Screw in all banana jack terminals with nuts.
+a. Three red terminals should be used for the inputs, three black terminals should
+be used for the outputs and another three black terminals should be used for
+the fault connections.
+b. Four blue terminals should be used for the manual trip and close connections.
+c. Tighten all terminals with nut drivers to ensure maximum safety and security.
+4. Attach the auxiliary contact block to the motor contactor and place on the
+faceplate on their sides so the labels face up.
+5. Cut wires of lengths based on how far the connection that must be made is.
+a. 12 AWG wires must be used for anything connected to the inputs, outputs and
+fault connections.
+b. 16 AWG wires will be used for all other connections.
+6. Strip the ends of each wire.
+7. Crimp the end of each wire that must be connected to a banana jack terminal with
+a ring terminal.
+a. These rings can then be slid on top of the appropriate terminal and screwed in
+place with a nut. A nutdriver is suggested for this step to make sure that the
+nut is tight enough.
+8. Unscrew the screws on the switch, buttons, LEDs, auxiliary contact block, and
+contactor.
+9. Insert a stripped wire (without a ring terminal) under the appropriate screw
+terminal then tighten down using a phillips head screwdriver.
+10. For the power connections, stripped wires without ring terminals will need to be
+soldered to the DC Barrel Power Jack.
+a. Be sure to check which is the positive terminal and which is the negative
+terminal before soldering.
+11. The ground terminal and DC Barrel Power Jack will need to be attached to the
+side of the chassis.
+12. The final step is to carefully place the faceplate with all of the parts attached to it
+right side up on the chassis and screw it in.
+
+19
+
+Figure 5.1: Top View of Final Circuit Breaker
+
+Figure 5.2: Internal View of Final Circuit Breaker
+Single Line to Ground Fault
+A single line to ground fault is created by attaching a banana-banana lead from a phase fault
+terminal to the green chassis ground terminal. This will simulate a single line to ground fault.
+Figure 5.3 shows a single-line-to-ground fault configuration and shows that there is about 0
+ohms across the lines.
+
+20
+
+Figure 5.3 Top view of Single-Line-to-Ground Fault Configuration
+Double Line to Ground Fault
+A double line to ground fault is created by shorting two phases together and then connecting one
+phase to the green chassis ground terminal. This can be seen in Figure 5.4. Once again, there is
+about 0 ohms across the lines.
+
+Figure 5.4 Top view of the Double-Line-to-Ground Configuration
+
+21
+
+Line to Line Fault
+A line to line fault is created by shorting two phases together. This is to simulate wires making
+contact with each other, all the while not contacting the ground. Figure 5.5 shows the line-to-line
+fault configuration and that there is about 0 ohms across the lines.
+
+Figure 5.5 Top View of Final Circuit Breaker with a Line-to-Line Fault Configuration
+Three Phase Fault
+The three phase to ground fault is created by shorting all of the phases together. This is to
+simulate all three wires making contact with each other but not contacting the ground. Figure 5.6
+shows this connection and once again, there is about 0 ohms across the lines.
+
+Figure 5.6 Top View of the Three-Phase Fault Configuration
+To test the circuit breaker’s functionality a few steps need to be taken. The first check is
+22
+
+to use a multimeter to check continuity and voltage drops across each device. Next, the LEDs
+and buttons must be tested by shorting the trip terminals using a short banana-to-banana lead. A
+banana-to-banana lead will also need to be used to ground the chassis. Insert the AC to DC
+converter into a plug socket and check to see if the green LED turns on. Assuming it turns on,
+manually press the red close button. This should result in the green LED turning off and the red
+LED turning on. Then press the green button to turn off the red LED and turn on the green LED.
+To test this functionality under high stress conditions, quickly alternate between pressing the two
+buttons. Figure 5.7 shows the circuit breaker with the green LED on, as the trip button was being
+tested. Here, a line-to-line fault was set up and the circuit breaker was closed. Then when the
+fault switch was switched as seen in the picture, the circuit breaker opened and the green LED
+turned on.
+
+Figure 5.7: Top View of Final Circuit Breaker after a Line-to-Line Fault has occurred
+The final test is to put the circuit breaker into a simple circuit in the power lab. This test
+will be checking to make sure that the fault switch and fault configurations work as designed.
+This testing of the circuit breaker involves the use of a 710 Relay, and induction motor, and a
+Variac autotransformer. This procedure is derived from the EE 444 Experiment 5: SEL-710
+Motor Relay lab written by Kenan Pretzer [9]. Completion of this procedure will test a line-line
+fault and a 3 phase fault. Successful completion of this procedure will test all aspects of the
+circuit breaker’s designed operation setting.
+List of Materials
+● 25-Ω Single-Phase Power Resistor (3x)
+● Bag of Banana-Banana Short Leads (3x) *
+● Banana-Banana or Banana-Spade Leads (18x)
+● Circuit Breaker (1x)
+● Computer with AcSELerator QuickSet Software and a Serial Port
+23
+
+●
+●
+●
+●
+
+Induction Motor: 208 V, 1/3 horsepower (1x), with Magtrol Torque-Adjust Unit (1x)
+SEL-710 Differential and Overcurrent Relay (1x)
+SEL-C234A Serial Cable (1x)
+Voltmeter (1x)
+
+Circuit Diagram
+
+Figure 5.8 Radial Resistive Circuit Single-Line Diagram
+Procedure (see Appendix B for detailed procedure)
+1. Plug in the power cord connected to the SEL-710 relay.
+2. Connect an SEL-C234A serial cable between Port 3 on the back of the 710 and the main
+serial port on the back of the computer (surrounded by light turquoise color).
+3. On the computer, open the AcSELerator QuickSet software.
+4. Apply settings to the relay which can be found in Appendix A
+5. Connect the three-phase circuit illustrated in Figure 5.4. Try to lay out the elements in the
+order illustrated in the schematic, so that power flows across the bench from one end to
+the other. This limits the number of wires crossing each other and makes the path of the
+current flow easier to review (and troubleshoot). Start with the sequential connection
+points in Table 5.2, using the diagrams posted on the wattmeter at the lab bench for
+assistance. Then add the following additional connections:
+a. Connect SEL-710 back-panel ports E01, E02, and E03 to the red Circuit Breaker
+phase A, B, and C terminals (respectively) on the circuit breaker.
+b. Connect SEL-710 back-panel port E05 to the green circuit breaker chassis ground
+terminal.
+c. Connect the green chassis ground terminals of the induction motor and circuit breaker
+together.
+d. Connect SEL-710 back-panel port Z08 to the induction motor green chassis ground
+terminal.
+e. Connect SEL-710 back-panel port Z07 to the green lab bench ground terminal.
+24
+
+f. Connect SEL-710 back-panel port A07 to the top Breaker Control Trip terminal on
+the circuit breaker. Connect the back-panel port A08 to the bottom Breaker Control
+Trip terminal on the circuit breaker. These terminals correspond to the signal
+OUT102 in the SEL-710.
+g. Connect the positive (upper) Breaker Control 125 VDC terminal to input terminal
+G on the lab bench. Connect the negative (lower) Breaker Control 125 VDC
+terminal on both circuit breakers to terminal H.
+h. Connect a voltmeter between the phase-A and phase-B terminals of the induction
+motor to measure the motor’s line-to-line voltage.
+Table 5.1: Per-Phase Sequential Points of Connection
+Phase A
+
+Phase B
+
+Phase C
+
+Input Voltage
+
+Input Voltage
+
+Input Voltage
+
+Bench Variac Phase A Input Bench Variac Phase B Input Bench Variac Phase C Input
+Bench Variac Phase A
+Output
+
+Bench Variac Phase B
+Output
+
+Bench Variac Phase C
+Output
+
+Wattmeter
+
+Wattmeter
+
+Wattmeter
+
+25 Ω Resistor Input
+
+25 Ω Resistor Input
+
+25 Ω Resistor Input
+
+25 Ω Resistor Output
+
+25 Ω Resistor Output
+
+25 Ω Resistor Output
+
+Relay Port Z01
+(Relay Input)
+
+Relay Port Z03
+(Relay Input)
+
+Relay Port Z05
+(Relay Input)
+
+Relay Port Z02
+(Relay Output)
+
+Relay Port Z04
+(Relay Output)
+
+Relay Port Z06
+(Relay Output)
+
+Circuit Breaker Red
+Terminal
+
+Circuit Breaker Red
+Terminal
+
+Circuit Breaker Red
+Terminal
+
+25
+
+Circuit Breaker Black
+Terminal
+
+Circuit Breaker Black
+Terminal
+
+Circuit Breaker Black
+Terminal
+
+Induction Motor Stator
+Terminal, Phase A
+
+Induction Motor Stator
+Terminal, Phase B
+
+Induction Motor Stator
+Terminal, Phase C
+
+6. Set the induction motor Magtrol Torque Adjust switch to the “OFF” position.
+7. Verify the circuit connections and obtain instructor approval to apply power to the circuit.
+8. Set the variac to provide the induction motor with its rated voltage.
+a. Rotate the variac control dial to its fully-counter-clockwise position. This sets the
+autotransformer tap to its lowest available output voltage.
+b. Apply both 240 VAC and 125 VDC (if needed for the circuit breaker) power from the
+bench.
+c. Rotate the variac control dial clockwise until the voltmeter displays 208 V.
+d. Press the “TARGET RESET” button on the front panel of the SEL-710 to clear any
+previous under voltage conditions.
+e. Close the circuit breaker (with the Manual Breaker Control Close button). Confirm
+that the three-phase power displayed on the wattmeter is approximately 1.5 A. If the
+displayed current exceeds 2 A, turn off the bench power and check the circuit wiring
+for errors.
+f. The induction motor should now be running. If the SEL-710 immediately trips for an
+under voltage condition, increase the value of the under voltage Trip Delay (27P1D)
+setting. This delay keeps the relay from tripping in response to the extra voltage drop
+across the current-limiting resistors due to the temporary motor inrush current. If this
+fails, decrease the under voltage Trip Level (27P1P) setting.
+g. Rotate the variac control dial clockwise until the line-to-line voltage displayed on the
+voltmeter at the induction motor terminals again reads 208 V. This compensates for
+the voltage drop across the current-limiting resistors due to the additional current
+drawn by the induction motor.
+9. Create a line-to-line fault at the induction motor.
+a. Turn off AC and DC power from the bench.
+b. Jumper the black Circuit Breaker terminals to the red Fault Connections terminals (if
+present) on the circuit breaker. Jumper two of the black Fault Connections terminals
+together (line-to-line fault configuration).
+c. Set the circuit breaker Fault Switch to the “Normal” position.
+d. Turn on AC and DC bench power. Press the “TARGET RESET” button on the front
+panel of the SEL-710 to clear any previous under voltage conditions.
+e. Manually close the circuit breaker.
+f. Flip the circuit breaker Fault Switch to the “Fault” position.
+26
+
+g. Watch the wattmeter to confirm that the SEL-710 trips the circuit breaker to clear the
+fault. If it does not, turn off AC bench power before sustained fault current damages
+circuit components.
+h. Once the relay clears the fault, turn off AC and DC bench power and flip the Fault
+Switch to the “Normal” position. Press the “TARGET RESET” button on the SEL710 to clear the relay’s front-panel LED display.
+i. Retrieve the event file from the SEL-710 (Step 27).
+j. Add the 50P1P and 50P1T digital signals to the oscillogram plot.
+10. Retrieve the SEL-710 event file for the fault trip.
+a. In QuickSet, select “Tools,” “Event Files,” “Get Event Files.
+b. In the window that comes up, select “Refresh Event History.”
+c. Choose an Event Type of “16 Samples / Cycle – Raw” and an Event Length of 15
+cycles.
+d. Check the boxes of the event file(s) corresponding to the fault. Event files are indexed
+with ‘1’ being the most recent event file saved by the relay.
+e. Click “Get Selected Events.” Save the events in a convenient location, using either a
+default or custom naming convention.
+f. Double-click on the event report file in its file path location. The AcSELerator
+Analytic Assistant software automatically opens an oscillogram plot of the event.
+g. Click the “Pref” button in the lower-right corner of the oscillogram to add digital
+fault-trip signals to the plot. Left-click on the signal you wish to display (from the
+available list in the lower-left corner of the screen); then right-click-drag the signal to
+the Digital Axis list of signals to be displayed. Click “Ok.”
+h. After saving the desired event files, enter the “HIS C” command in the QuickSet
+Terminal window (select “Communications,” “Terminal”) to clear previous event
+files from the relay’s memory. If an error message appears about an invalid access
+level, type in “ACC”, the Enter key, the level relay 1 password (default for SEL-710
+is “OTTER”), and the Enter key. Proceed to clear the event files.
+11. Create a three-phase fault (not grounded) at the induction motor.
+a. Turn off AC and DC power from the bench.
+b. Jumper the black Circuit Breaker terminals to the red Fault Connections terminals (if
+present) on the circuit breaker. Jumper together the black Fault Connections terminals
+(three-phase fault configuration).
+c. Set the circuit breaker Fault Switch to the “Normal” position.
+d. Turn on AC and DC bench power. Press the “TARGET RESET” button on the front
+panel of the SEL-710 to clear any previous under voltage conditions.
+e. Manually close the circuit breaker.
+f. Flip the circuit breaker Fault Switch to the “Fault” position.
+g. Watch the wattmeter to confirm that the SEL-710 trips the circuit breaker to clear the
+fault. If it does not, turn off AC bench power before sustained fault current damages
+27
+
+circuit components.
+h. Once the relay clears the fault, turn off AC and DC bench power and flip the Fault
+Switch to the “Normal” position. Press the “TARGET RESET” button on the SEL710 to clear the relay’s front-panel LED display.
+i. Retrieve the event file from the SEL-710 (Step 27).
+j. Add the 50P1P and 50P1T digital signals to the oscillogram plot.
+12. Create an under voltage condition at the terminals of the induction motor.
+a. Turn on AC and DC bench power. Press the “TARGET RESET” button on the front
+panel of the SEL-710 to clear any previous under voltage conditions.
+b. Manually close the circuit breaker.
+c. Rotate the variac control dial counter-clockwise to decrease the input voltage to the
+induction motor, while watching the motor’s terminal voltage displayed on the
+voltmeter. Momentarily stop once the voltmeter at the induction motor terminals
+reads 185 V. Proceed to slowly rotate the variac dial until the SEL-710 trips the
+circuit breaker. Record the approximate voltage at which trip occurred.
+d. Retrieve the event file from the SEL-710 (Step 27).
+e. Add the 27P1 and 27P1T digital signals to the oscillogram plot.
+If the procedure is done correctly, the oscillograms should look similar to the
+oscillograms in Figures 5.5, 5.6, and 5.7.
+
+Figure 5.9 Line-to-Line Fault Oscillogram Plot.
+From the graph, one can see the normal operating currents followed by the sudden increase in
+current. One can derive from the graph the time it takes for the relay to operate in an
+overcurrent condition.
+
+28
+
+Figure 5.10 Three-Phase Fault Oscillogram Plot.
+Similar to the line to line fault in figure 5.5, the 3 phase fault shows an increased current when
+the fault occurs. The 710 relay took approximately 1 cycle to operate.
+
+Figure 5.11: Under voltage Condition Oscillogram Plot.
+The graph shows the slow decrease in voltage across the motor terminals until the undercurrent
+relay begins to operate. The top oscillogram shows that it takes approximately 1.5 cycles to
+operate.
+Once these tests have been completed the circuit breaker functionality has been
+confirmed. If one test does not pass the test, troubleshooting must occur. To troubleshoot, check
+to make sure the relay settings are correct. If all relay settings are correct, then check the wiring
+29
+
+configuration. If all connections are correct, use a multimeter to check for continuity and correct
+voltage drops across devices.
+
+30
+
+6. Conclusion
+In this project, a circuit breaker box that can simulate different type of power system
+faults was designed, constructed, and then tested. The project also aims to improve the circuit
+breaker box from the previous design by simplifying the connection setup and thus reducing the
+number of wires required to simulate the faults. Hardware testing of the improved circuit breaker
+box demonstrates its full functionality. The subsequent paragraphs describe additional
+improvements of the breaker box which will further provide simpler and safer operation when
+used in conjunction with a fault test circuit.
+First, to obtain better results, a larger chassis could be used. This would allow for more
+space to wire the circuit breaker as well as allow for different spacing of the components on the
+acrylic faceplate. The current chassis being used is fairly small, has only one spot to put the
+ground terminal, and one place to put the power terminal in the side. The holes that were already
+drilled into the chassis were bigger than the power and ground terminals, resulting in problems
+when attaching the parts. With a chassis made specifically for the circuit breaker, holes can be
+drilled that match the size of the power and ground terminals, and in the correct place for the
+most logical setup possible. This would also make any future development without the chassis a
+challenge since the faceplate design also relies on the size of the chassis.
+Another improvement that could be made is allowing more space between the switch and
+the output terminals. Due to the fact that the output terminals are hot, there is some danger when
+switching the switch as the person’s hand could accidentally touch the terminals and hurt
+themselves. To make operating the fault switch easier, the circuit breaker could be larger to
+allow for more space. Another option would be to offset the terminals from the switch so that the
+switch is closer to the bottom of the faceplate where hands will be and the terminals will be at
+the top of the faceplate. Due to space restraints on the current circuit breaker, this problem would
+be hard to fix but with a larger breaker, this would be an easy improvement to make and allow
+for safer use.
+One final improvement could be parts availability. A number of the parts are somewhat
+hard to find. It would be preferable if possible to find an alternative manufacturer for each of
+these parts. It would also make the logistic better if all the parts can be obtained from one
+vendor, but the range of parts needed for the box is very wide, and so this may not be feasible.
+For example, the buttons will most likely not be available from the same place as the power
+connector or motor contactor.
+To help students fully understand how real world utility power systems are affected by
+faults, circuit breakers have been made and improved for a power systems lab. These circuit
+breakers have been improved from a past project and built with less expensive, lower rated parts.
+This means the circuit breaker is safer and easier to reproduce. The circuit breaker is more
+linearly laid out so that the students can gain more insights from the labs and aren’t spending the
+entire lab trying to figure out what the circuit breaker is doing and how it is connected.
+Documentation has been made to better reproduce the circuit breakers and make as many as are
+31
+
+needed in any future power systems, microgrid, or protection lab. The circuit breaker can also be
+reproduced in other schools as they are powered using a computer charger and can be plugged
+into any wall outlet. As long as the school has protective relays, the circuit breakers can be used
+to help simulate a real world power system.
+While the circuit breakers could still be improved further, they will be able to help many
+students in the future whether from Cal Poly or from another school that wants to use the design.
+They could also help utilities teach new employees what is happening in a fairly straightforward
+way as well.
+
+32
+
+References
+[1]. J. K. Williams. (2007). Edison Lights the City [Online]. Available:
+http://nypost.com/2007/11/30/edison-lights-the-city/.
+[2]. M.W. (2013). Lauffen to Frankfurt 1891 [Online]. Available:
+http://www.edisontechcenter.org/LauffenFrankfurt.html
+[3]. James A. Besha, “The Historic Mechanicville Hydroelectric Station,” in IEEE Industry
+Applications Magazine, IEEE Spectr. Palo Alto, CA, 2005, pp. 8-10.
+[4]. APS. (2010). Integrating Renewable Electricity on the Grid [Online]. Available:
+https://www.aps.org/policy/reports/popa-reports/upload/integratingelec.pdf
+[5]. Lawrence C. Gross, Jr., “Practical Challenges and Solutions for Protection Engineering,” in
+30th Annu. Western Protective Relay Conf., Spokane., WA, (2003).
+[6]. Admin (2013, February 28). Difference Between Relay and Circuit Breaker [Online].
+Available: http://www.differencebetween.com/difference-between-relay-and-vs-circuitbreaker/
+[7]. O. Corulli, “Motor Protection Lab Experiment using SEL-710,” Cal Poly Electrical
+Engineering Dept., San Luis Obispo, CA, 2013
+[8]. T. J. Overbye, D. J. Glover, and M. S. Sarma, “Symmetrical Faults,” in Power System
+Analysis and Design, Sixth Edition ed. United States: CENGAGE Learning Custom
+Publishing, 2016.
+[9]. K. Pretzer, “Protective Relaying Student Laboratory,” unpublished.
+
+33
+
+Appendix A - Bill of Materials
+
+Description
+
+Part No.
+
+Quantity
+
+Price Per
+Unit
+
+Total Cost
+
+Vendor
+
+Green Button
+
+PBF-22G
+
+1
+
+$7.95
+
+$7.95
+
+eBay
+
+Red Button
+
+PBF-22R
+
+1
+
+$7.95
+
+$7.95
+
+eBay
+
+Motor Contactor
+
+LP1K1210BD
+
+1
+
+$40.45
+
+$40.45
+
+Amazon
+
+Red LED
+
+PLN-22A Red
+
+1
+
+$5.95
+
+$5.95
+
+eBay
+
+Green LED
+
+PLN-22A
+Green
+
+1
+
+$5.95
+
+$5.95
+
+LA1KN22
+
+1
+
+$14.20
+
+$14.20
+
+Schneider
+Electric
+
+1
+
+$11.39
+
+$11.39
+
+eBay
+
+Auxiliary Contact
+Block
+24VDC Laptop
+Charger
+
+eBay
+
+DC Barrel Power
+Jack/Connector
+
+CP-002A-ND
+
+1
+
+$0.60
+
+$0.60
+
+Digi-key
+
+3-Phase Manual
+Switch
+
+30003D
+
+1
+
+$50.00
+
+$50.00
+
+Automation
+Direct
+
+Red Banana Jacks
+
+501-1080-ND
+
+3
+
+$1.85
+
+$5.55
+
+Digi-key
+
+Black Banana Jacks
+
+501-1078-ND
+
+6
+
+$1.85
+
+$11.10
+
+Digi-key
+
+Blue Banana Jacks
+
+501-1084-ND
+
+4
+
+$1.85
+
+$7.40
+
+Digi-key
+
+Green Banana Jacks
+
+501-1083-ND
+
+1
+
+$1.85
+
+$1.85
+
+Digi-key
+
+12 AWG Wire
+
+55671523
+
+1
+
+$23.13
+
+$23.13
+
+Amazon
+
+16 AWG Wire
+
+55668023
+
+1
+
+$12.44
+
+$12.44
+
+Amazon
+
+Acrylic Faceplate
+
+N/A
+
+1
+
+$20
+
+$20
+
+Cal Poly
+
+Chassis
+
+N/A
+
+1
+
+Donated
+
+Donated
+
+Cal Poly
+
+12 AWG Ring
+
+N/A
+
+10
+
+$0.38
+
+$3.80
+
+Amazon
+
+34
+
+Terminals
+16 AWG Ring
+Terminals
+
+N/A
+
+Crimping Tool
+
+20
+
+$0.19
+
+$3.80
+
+Amazon
+
+VDV226021SE 1
+N
+
+$29.97
+
+$29.97
+
+Amazon
+
+Wire Strippers
+
+48-22-6109
+
+1
+
+$17.97
+
+$17.97
+
+Home
+Depot
+
+Soldering Setup
+
+N/A
+
+1
+
+$30
+
+$30.00
+
+Amazon
+
+Phillips Head
+Screwdriver
+
+N/A
+
+1
+
+$1.49
+
+$1.49
+
+Home
+Depot
+
+Flat Head Screwdriver N/A
+
+1
+
+$1.90
+
+$1.90
+
+Home
+Depot
+
+Nuts
+
+M5-.80
+
+30
+
+$0.35
+
+$10.50
+
+Ace
+Hardware
+
+Screws
+
+N/A
+
+6
+
+$1.25
+
+$7.50
+
+Home
+Depot
+
+35
+
+Appendix B- Detailed Procedure
+1. Plug in the power cord connected to the SEL-710 relay.
+2. Connect an SEL-C234A serial cable between Port 3 on the back of the 710 and the main
+serial port on the back of the computer (surrounded by light turquoise color).
+3. On the computer, open the AcSELerator QuickSet software.
+4. Determine the current baud rate for Port 3 on the 710.
+A. On the front panel of the relay, press the enter button, labeled “ENT.”
+B. Use the down-arrow button to navigate to “Set/Show” on the front panel display.
+Press the enter button.
+C. Use the down-arrow button to navigate to “Port” on the front panel display. Press the
+enter button.
+D. Navigate to Port “3” and press the enter button.
+E. Navigate to “Comm Settings” and press the enter button.
+F. Use the down-arrow button to navigate through the current Port 3 settings. The baud
+rate (SPEED) is near the top of the list. If the baud rate is already set to 19200, press
+the “ESC” button several times to restore the screen to its normal display, and
+continue to the next step.
+G. If the current relay baud rate is not set to 19200, use the following steps to change the
+baud rate:
+H. With the relay’s baud rate setting highlighted, press the enter key.
+I. Use the up, down, left, and right buttons to enter the relay’s level 2 password (default
+is “TAIL” and is case-sensitive). Press the enter key to select each letter. Navigate to
+and select “Accept” after entering the password.
+J. Press the up/down-arrow buttons until “19200” (not 19.2) appears. Press the enter
+key.
+K. Press “ESC” twice, and select “Yes” to save the new port setting.
+5. On the QuickSet main window (Figure B1), open the Communication Parameters
+window (“Communications,” “Parameters”) (Figure B2) to define and create a
+communication link with the 710. Enter the following information for a Serial Active
+Connection Type:
+A. Device: “COM1: Communications Port”
+B. SEL Bluetooth Device: Unchecked
+C. Data Speed: 19200
+D. Data Bits: 8
+E. Stop Bits: 1
+F. Parity: None
+G. RTS/CTS: Off
+H. DTR: On
+I. XON/XOFF: On
+36
+
+J. RTS: N/A (On)
+K. Level 1 Password (Default “OTTER”)
+L. Level 2 Password (Default “TAIL”)
+
+Figure B1: QuickSet Main Window
+
+37
+
+Figure B2: SEL-710 Communication Parameters Window
+6. Click “Apply” at the bottom of the Communication Parameters window. Then click
+“Ok.” If successful, the connection status in the lower-left corner of the QuickSet main
+window should say “Connected.”
+7. Create a new settings file for the SEL-710 relay.
+A. In the QuickSet main window, create a new settings file for the SEL-710 relay
+(“File,” “New”).
+B. Choose the Device Family, Model, and Version for this specific relay unit from the
+available menus, and then click “Ok” (Figure B3). Look up the relay’s version
+number using the front-panel interface on the relay. Press the “ENT” button, and use
+the down-arrow button to navigate to the “STATUS” option. Press the enter button
+again. Select the “Relay Status” option. Navigate down to the “FID” option. Scroll
+across the relay’s FID string until you come to the “Z-number.” The first three digits
+following the ‘Z’ are the relay version number. Press the “ESC” button several times
+to restore the front-panel screen to its normal display. Note: if no devices are listed in
+the QuickSet drop-down menus, then the device drivers need to be installed using the
+SEL Compass software. Ask for assistance.
+38
+
+Figure B3: Identifying SEL-710 Relay Family, Model, and Version
+C. Enter the relay Part Number (Figure B4), printed on the serial number label (P/N,
+Figure B5) attached somewhere on the relay chassis. Note that the 5 A Secondary
+Input Current reflects the convention for American current transformers.
+
+Figure B4: Identifying SEL-710 Relay Part Number
+
+Figure B5: Example SEL-710
+39
+
+8. Save this relay settings database file (“File”, “Save As”; “New” if you do not want to use
+an existing settings database) in a location where it may be reused in future experiments.
+See Figure B6 and Figure B7. Then create a Settings Name for this particular settings
+file.
+
+Figure B6: Saving SEL-710 Settings
+
+Figure B7: Choosing Location for New SEL-710 Relay Settings Database
+9. Open Global settings in the drop-down menu on the left side of the Settings Editor main
+window (Figure B8).
+A. Under General settings (Figure B9), choose a Phase Rotation sequence (PHROT) of
+40
+
+ACB. The frequency and phase rotation settings correspond to electrical properties of
+the utility. Replace the default Fault Condition (FAULT) contents with “TRIP”.
+B. Under Breaker Monitor settings (Figure B10), select ‘N’ for the Enable Breaker
+Monitor (EBMON) setting.
+
+Figure B8: SEL-710 Settings Editor Main
+Window
+
+Figure B9: SEL-710 General Settings
+
+Figure B10: SEL-710 Breaker Monitor Settings
+10. Open the Group 1, Set 1 settings menu on the left side of the screen.
+11. Enter the following information in the Main Settings (Figure B11 and Figure B12).
+A. Enter a Phase Current Transformer Turns Ratio (CTR1) of ‘1’, reflecting the fact that
+the currents measured by the relay are the actual system line currents (not stepped
+down). Current and potential transformers are not needed in this experiment because
+the system line currents and voltages (even during fault conditions) are relatively
+low. The direct connections to the relay are modeled as 1:1 current and potential
+transformers in Figure 5.4 to illustrate how a relay would typically be connected in a
+circuit.
+B. Enter a Motor Full Load Amps (FLA1) value of 1.6 A. This setting acts like the
+41
+
+C.
+D.
+E.
+F.
+
+pickup current setting in traditional electromechanical relays, in addition to its role in
+multiple motor performance calculations made by the SEL-710.
+Enter a Neutral Current Transformer Turns Ratio (CTRN) of ‘1’.
+Enter a Potential Transformer Turns Ratio (PTR) of ‘1’, reflecting the fact that the
+voltages measured by the relay are the actual system voltages (not stepped down).
+Enter a Nominal Line-to-Line Voltage (VNOM) value of 208 V.
+Select “WYE” as the Transformer Connection (DELTA_Y) for the potential
+transformer.
+
+Figure B11: SEL-710 Main Settings
+
+Figure B12: SEL-710 Main Settings, cont.
+
+12. Enter the following information in the Overcurrent Elements section (Figure B13, Figure
+B14, and Figure B15).
+A. Under the Phase Overcurrent sub-heading, enter a Phase Overcurrent Pickup (50P1P)
+of 3.00 multiples of the full load amps setting. Leave the associated Trip Delay
+(50P1D) as its default value of 0.00 s.
+B. Under the Residual Overcurrent sub-heading, enter a Residual Overcurrent Pickup
+(50G1P) of 0.50 multiples of the full load amps setting. Set the associated Trip Delay
+(50G1D) to 0.10 s.
+C. Under the Negative-Sequence Overcurrent sub-heading, enter a Negative-Sequence
+Overcurrent Pickup (50Q1P) of 0.50 multiples of the full load amps setting. Set the
+42
+
+associated Trip Delay (50Q1D) to 0.15 s. Turn “OFF” the Negative-Sequence
+Overcurrent Alarm Pickup (50Q2P).
+
+Figure B13: SEL-710 Phase Overcurrent
+Settings
+
+Figure B14: SEL-710 Residual Overcurrent
+Settings
+
+Figure B15: SEL-710 Negative-Sequence Overcurrent Settings
+13. In the under voltage Elements, set the under voltage Trip Level (27P1P) to 0.80 multiples
+of the nominal motor voltage setting, VNOM (Figure B16). Increase the under voltage
+Trip Delay (27P1D) to 0.8 s to keep the relay from tripping due to effects of inrush
+current.
+
+43
+
+Figure B16: SEL-710 under voltage Elements
+14. Under the Trip and Close Logic sub-heading, replace the default contents of the Trip
+(TR) equation with “50P1T OR 50G1T OR 50Q1T OR 27P1T OR STOP” (Figure B17).
+
+Figure B17: SEL-710 Trip and Close Logic
+15. Enter the following information in the Logic 1, Slot A section (Figure B18).
+A. Select “N” for the OUT101 Fail-Safe (OUT101FS) option.
+B. Select “Y” for the OUT102 Fail-Safe (OUT102FS) option.
+C. Logically-invert the default OUT102 signal to be “NOT START”. Logical inversion
+is necessary for interfacing the normally-open switch (OUT102) on the SEL-710 with
+the normally-open circuit breaker trip coil. This allows the SEL-710 front-panel
+START button to operate the Breaker Control Close contact on the circuit breaker
+through the relay’s rear-panel ports A05 and A06.
+
+44
+
+Figure B18: SEL-710 Logic 1, Slot A Output Logic
+16. Repeat Steps 11 through 15 for the SEL-710 Group 2 - Set 2 and Group 2 - Logic 2
+settings, with the following exceptions:
+A. Enter a new Motor Full Load Amps (FLA1) value of 2.1 A.
+B. Enter a Trip (TR) equation of “50P1T OR 50G1T OR 50Q1T OR STOP”.
+17. Open Port F settings in the menu on the left side of the Settings Editor main window. Set
+the Port F baud rate (SPEED) to 19,200. Change the AUTO setting to ‘Y’. Leave all
+other Port F settings as their default values (Figure B19).
+
+45
+
+Figure B19: SEL-710 Port F Settings
+18. Open the Port 3 settings on the left side of the Settings Editor main window. Set the Port
+3 baud rate (SPEED) to 19,200. Change the AUTO setting to ‘Y’. Leave all other Port 3
+settings as their default values.
+19. Enter the following information in the Report on the left side of the Settings Editor main
+window (Figure B20 and Figure B21).
+A. Under the SER, SER Trigger Lists headings, add “TRIP” to the existing contents of
+the first Sequential Event Recorder (SER1). This causes the SEL-710 to generate an
+event report for any of the conditions specified by the TR equation.
+B. Under the Event Report heading, change the Length of Event Report (LER) setting to
+64 cycles.
+C. Increase the Prefault Length (PRE) data collection time to 10 cycles. This sets the
+amount of data saved in an event report before the relay tripped.
+
+46
+
+Figure B20: SEL-710 Trigger Lists Settings
+
+Figure B21: SEL-710 Event Report Settings
+20. Save your settings (“File,” “Save”).
+21. Send your settings (“File,” “Send…”) to the SEL-710. In the window that appears, check
+the boxes for the Set 1, Set 2, Logic 1, Logic 2, Global, Port F, Port 3, and Report settings
+(Figure B22). Click “Ok”. Sending only the modified settings shortens the file transfer
+time. Ignore any error messages associated with changing the baud rate. Since it can take
+several minutes to transfer the relay settings, this is a good time to start constructing the
+circuit.
+
+Figure B22: Send Modified Settings to the SEL-710
+
+47
+
+Appendix C - Analysis of Senior Project Design
+Project Title: Lab-Scale Circuit Breaker Module For Power System Laboratories
+Student’s Name: Amanda Barley, Josh Chung, Allen Scozzari
+Advisor’s Name: NFN Taufik
+Date: 6/12/17
+
+Summary of Functional Requirements
+●
+
+Describe the overall capabilities or functions of your project or design. Describe
+what your project does. (Do not describe how you designed it).
+o A lab-scale circuit breaker was designed for future Cal Poly power protection
+laboratory courses. The circuit breaker allows students to create faults in a lab
+setting that simulates a power system. The circuit breaker can also interface with
+SEL relays to analyze how faults affect current, voltage and other aspects in the
+system. These circuit breakers are redesigned models of a circuit breaker that was
+built for a previous student’s senior project. The new model has an improved
+faceplate layout, it is powered using a standard AC wall plug and adapter that
+converts 120VAC to 24VDC, and has reduced costs.
+
+Primary Constraints
+●
+
+Describe significant challenges or difficulties associated with your project or
+implementation. For example, what were limiting factors, or other issues that
+impacted your approach? What made your project difficult? What parameters or
+specifications limited your options or directed your approach?
+o The difficulties encountered mainly included finding the necessary parts. Some of
+the parts are not commonly used and harder to find, especially for a cheap cost.
+However, the previous circuit breaker was available for reference for the type of
+parts needed. Although the new parts are of the same type but with reduced
+voltage rating, there was a limitation due to finding these parts at specific voltage
+and current ratings. Additionally, some components, such as the metal chassis and
+banana jack terminals, were used because they were donated by Cal Poly and
+other sources that are unknown. Since these specific parts cannot be purchased,
+they are a limiting factor in the manufacture of future circuit breakers.
+o Space constraints were another factor that existed due to the metal chassis
+available. To reduce costs, the same type of metal chassis used in the previous
+design is used in the new design. This limited the size of the acrylic faceplate and
+the possible new layouts that could be implemented for the faceplate design. The
+size of the chassis also requires that the internal wires and components must be
+carefully arranged to be able to fit into the chassis, which increases the time it
+48
+
+takes to build each circuit breaker.
+
+Economic
+●
+
+What economic impacts result? Consider:
+o Human Capital – What people do.
+o One person can build one circuit breaker in approximately 4 hours.
+o Financial Capital – Monetary instruments.
+o The new circuit breaker cost is approximately $150, down from the original $300.
+This saves money for Cal Poly or other parties making the new circuit breaker.
+o Manufactured or Real Capital – Made by people and their tools.
+o The motor contactor, auxiliary motor contactor, and fault switches are likely less
+commonly purchased items. The circuit breakers can increase demand for these
+items.
+o Natural Capital – The Earth’s resources and bio-capacity.
+o Most parts are made of metal such as silicon and iron that have production cycles
+that can harm the environment.
+
+●
+
+When and where do costs and benefits accrue throughout the project’s lifecycle?
+o Costs of the project accrue at the beginning when obtaining the parts for the
+product and the tools to build the product. Each circuit breaker requires
+approximately four hours to build, which is time that may be compensated for, at
+a cost to the employer or organization. Benefits are accrued at the end of the
+project lifecycle when the product is built and implemented in a lab setting for
+student use.
+
+●
+
+What inputs does the experiment require? How much does the project cost? Who
+pays?
+o The inputs the experiment requires include the parts for the circuit breaker, tools
+used to build it, and people to construct it. The Cal Poly EE department pays for
+the project through reimbursements of up to $200 for each student working on the
+project.
+o Original estimated cost of component parts (as of the start of your project).
+o The original estimated cost of the components was about $200 per circuit breaker
+module.
+o Actual final cost of component parts (at the end of your project)
+o The final cost of the components was about $150 per circuit breaker module.
+o Attach a final bill of materials for all components.
+o A bill of materials can be found in Appendix A of the project report.
+o Additional equipment costs (any equipment needed for development?)
+o Tools needed for development can also be found in the bill of materials in
+Appendix B of the project report.
+49
+
+●
+
+How much does the project earn? Who profits?
+o The project does not make any money, as it is a tool used by students to learn and
+gain knowledge about power systems and faults.
+
+●
+
+Timing
+o When do products emerge? How long do products exist? What maintenance
+or operation costs exist?
+o The products will start being used in the Spring Quarter of 2018 when EE 444
+class is offered. They will exist as long as the product functions as intended and
+the lab course is offered.
+o Maintenance will only be done on an as needed basis if a circuit breaker stops
+working as it should. This shouldn’t happen very often as they were made to be
+fairly sturdy to withstand the use by students.
+o Original estimated development time (as of the start of your project), as
+Gantt or Pert chart Actual development time (at the end of your project), as
+Gantt or Pert chart
+o The development time can be found in the Gantt chart below:
+
+What happens after the project ends?
+o After the project ends, students will be able to use the circuit breakers and if so
+desired, more breakers can be produced.
+o
+
+If manufactured on a commercial basis:
+●
+
+Estimated number of devices sold per year
+50
+
+These devices will not be sold and will be used for Cal Poly only for the time
+being
+Estimated manufacturing cost for each device
+o The manufacturing cost for each device is approximately $150 per breaker.
+Estimated purchase price for each device
+o Since the breakers will not be sold, there is no purchasing price.
+Estimated profit per year
+o The circuit breakers will not be sold and gain no profit.
+Estimated cost for user to operate device, per unit time (specify time interval)
+o There is no cost for the user to operate the device. The cost of electricity used is
+paid for by Cal Poly.
+o
+
+●
+●
+●
+●
+
+Environmental
+●
+
+Describe any environmental impacts associated with manufacturing or use, explain
+where they occur and quantify.
+o The circuit breakers do not directly have an environmental impacts associated
+with manufacturing, except for shipping the parts to the location where the circuit
+breaker will be built.
+o Making the parts could cause environmental impacts but those are very slight due
+to the small number of breakers being produced.
+o Using the circuit breaker will impact the environment only very slightly due to the
+use of electricity to power the breaker.
+● Which natural resources and ecosystem services does the project use directly and
+indirectly?
+o The project uses electricity from PG&E directly.
+● Which natural resources and ecosystem services does the project improve or harm?
+o The project does not improve natural resources or ecosystem services and does
+very little to harm them.
+● How does the project impact other species?
+o The project doesn’t impact other species.
+
+Manufacturability
+●
+
+Describe any issues or challenges associated with manufacturing
+o Obtaining the parts can be challenging and making sure that all the internal
+connections are made correctly can cause problems. Following the schematics in
+the report will allow manufacturers to make sure that all wiring is done properly.
+
+Sustainability
+●
+
+Describe any issues or challenges associated with maintaining the completed device,
+or system.
+o To maintain the completed device, there could be issues if a part stops working. In
+this situation, a new part must be found and ordered and replaced internally.
+o All connections internally are made either using ring terminals or screws that are
+51
+
+mounted onto some of the parts when they are first made. This makes replacing
+the parts very easy.
+● Describe how the project impacts the sustainable use of resources.
+o This project does not use any materials from a known sustainable source. Acrylic,
+plastic, brass, copper wire, and all other parts do not have a defined sustainable
+source to begin with.
+● Describe any upgrades that would improve the design of the project.
+o To improve the design, new chassis’ could be used that are bigger allowing more
+space for the parts internally and externally.
+o The switch on the circuit breaker could also be moved farther away from the
+output terminals to prevent safety hazards.
+● Describe any issues or challenges associated with upgrading the design.
+o Challenges associated with getting a bigger chassis include finding one or making
+a new one. If it is unknown how to make a chassis out of metal, then this could be
+difficult.
+o Challenges with moving the switch farther away from the output terminals
+include needing a larger chassis and breaker to make the room to move the
+switch.
+
+Ethical
+●
+
+Describe ethical implications relating to the design, manufacture, use, or misuse of
+the project.
+o As this project is meant to be used by students, they could use their newfound
+knowledge to cause problems in utility systems, but that is unlikely to happen
+because they would simply be causing faults in the system which utilities know
+how to deal with already.
+
+Health and Safety
+●
+
+Describe any health and safety concerns associated with design, manufacture or use
+of the project.
+o One safety concern is the switch being so close to the output terminals and a
+student accidentally touching the hot terminals when they go to switch the switch
+thereby injuring themselves greatly. Since this is a power systems lab, high
+voltage will be used running through the circuit and this could be a safety hazard.
+
+Social and Political
+●
+
+Describe social and political issues associated with design, manufacture, and use.
+o The social and political issues associated with this project are the electricity being
+used and the teaching of how to work a system in a utility.
+● Who does the project impact? Who are the direct and indirect stakeholders?
+o The project impacts the students of Cal Poly. The direct stakeholders would be the
+Electrical Engineering department since they are the party responsible for seeing
+that they are used appropriately and correctly.
+52
+
+●
+
+How does the project benefit or harm various stakeholders?
+o The project benefits the stakeholders because it allows the Electrical Engineering
+department adequate lab materials for effective teaching.
+● To what extent do stakeholders benefit equally? Pay equally? Does the project
+create any inequities?
+o The project could potentially create inequities if not enough new circuit breakers
+are built for all students to use them. If only some new circuit breakers exist, then
+some students will use the old model, which could lead to different laboratory
+experiences.
+● Consider various stakeholders’ locations, communities, access to resources,
+economic power, knowledge, skills, and political power.
+o The Cal Poly EE department will have more access to the circuit breakers than
+students, since they will likely be stored in room 102 of the Engineering East
+building. They also hold the most political power in being able to decide whether
+or not the circuit breakers will be used.
+o The future students using the circuit breakers will have some access to resources
+and political power. They will have access to the circuit breakers if professors
+allow them to use them during lab, and their feedback will determine if professors
+will continue to use the new circuit breakers. However, they will be the least
+familiar with the circuit breakers.
+
+Development
+●
+
+Describe any new tools or techniques, used for either development or analysis that
+you learned independently during the course of your project. Include a literature
+search.
+o AutoCAD software was learned independently in order to design the faceplates
+and allow them to be cut with the appropriate laser cutter.
+o The Titan Tools 11477 Ratcheting Wire Terminal Crimper was purchased for
+crimping, although learning to use it was simple
+
+53
+
+

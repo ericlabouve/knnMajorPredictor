@@ -1,0 +1,2932 @@
+KETTLE COOLING AND SUSTAINABILITY
+PROJECT
+
+by
+
+Nico DeGiorgio
+
+Agricultural Systems Management
+BioResource and Agricultural Engineering Department
+California Polytechnic State University
+San Luis Obispo
+2017
+
+TITLE
+
+:
+
+Kettle Cooling and Sustainability Project
+
+AUTHOR
+
+:
+
+Nico DeGiorgio
+
+DATE SUBMITTED
+
+:
+
+June 1, 2017
+
+______________________________
+
+______________________________
+
+Senior Project Advisor
+
+Signature
+______________________________
+Date
+
+______________________________
+
+______________________________
+
+Department Head
+
+Signature
+______________________________
+Date
+
+iii
+
+ACKNOWLEDGEMENTS
+First and foremost, I would like the thank my siblings and parents for their
+unwavering support through my college education to develop such a report and to
+pursue my professional goals.
+I would also like to thank my industry advisor, Ken Mozek, for his enthusiasm in
+answering my many questions and for the opportunity to shadow the technical
+sales meetings. This mentorship has been pivotal in my professional development
+as I transition from my undergraduate institution into industry.
+I would also like to thank my project advisors, Dr. Peter Livingston and Dr.
+Franklin Gaudi, for their combined engagement in my project from conception to
+completion.
+Finally, I would like to thank various Cal Poly faculty, Dr. Timothy Delbridge
+and Dr. John Chen, for their constructive criticism in the subjects of finance and
+thermodynamics respectively.
+
+iv
+
+DISCLAIMER STATEMENT
+The university makes it clear that the information forwarded herewith is a project
+resulting from a class assignment and has been graded and accepted only as a
+fulfillment of a course requirement. Acceptance by the university does not imply
+technical accuracy or reliability. Any use of the information in this report is made
+by the user(s) at his/her own risk, which may include catastrophic failure of the
+device or infringement of patent or copyright laws.
+Therefore, the recipient and/or user of the information contained in this report
+agrees to indemnify, defend and save harmless the State its officers, agents and
+employees from any and all claims and losses accruing or resulting to any person,
+firm, or corporation who may be injured or damaged as a result of the use of this
+report.
+
+v
+
+ABSTRACT
+A particular frozen food processing facility uses a once-through cooling process
+to bring their kettle-cooked product’s temperature down from nearly boiling
+temperatures to the eighty degree Fahrenheit range. This process is water
+intensive and facility managers are seeking to reduce their potable water
+consumption. Sales engineers from Air Treatment Corporation, an HVAC&R
+manufacturers’ rep, initiated a number of meetings to propose heat rejection
+solutions and illustrate their associated payback potentials.
+This report contains methods of analyzing a food production process, the
+technical sales process, thermodynamic principles, refrigeration technologies, and
+the application of technical knowledge to provide a long-term, system solution.
+To justify the purchase of a system solution, a detailed engineering economic
+analysis was conducted to account for the time-value of money and equipment
+specifications.
+The goal of this report is to show the potential for monetary savings by combining
+technical, system solutions with sustainability.
+
+Keywords: cooling tower, industrial fluid cooler, sales engineering, food
+processing, heat rejection, cooling, refrigeration, sustainability, HVAC,
+HVAC&R, BAC, thermodynamics, capital budgeting, engineering economics,
+industrial water, water use, wastewater, sewage rate, water rate, pro forma
+financial statement, technical sales, return on investment, closed circuit cooling
+tower
+
+vi
+
+TABLE OF CONTENTS
+
+ACKNOWLEDGEMENTS ................................................................................... iv
+DISCLAIMER STATEMENT ............................................................................... v
+ABSTRACT........................................................................................................... vi
+TABLE OF CONTENTS ...................................................................................... vii
+LIST OF TABLES .................................................................................................. x
+LIST OF FIGURES ............................................................................................... xi
+LIST OF ABBREVIATIONS ............................................................................... xii
+INTRODUCTION .................................................................................................. 1
+Water Supply and Utility Background ................................................................ 1
+Industrial Water Use ........................................................................................... 2
+Process Assessment ........................................................................................ 3
+Project Initiation.................................................................................................. 4
+Sales Cycle ...................................................................................................... 4
+Project Parameters .......................................................................................... 5
+LITERATURE REVIEW ....................................................................................... 6
+Food processing .................................................................................................. 6
+Definition ........................................................................................................ 6
+Food Safety ..................................................................................................... 6
+Food Quality ................................................................................................... 7
+Case Study: Industrial Tomato Processing Operation - Water Energy Nexus
+......................................................................................................................... 7
+Constituents of Financial and Time-Based Constraints ...................................... 9
+Water-use ........................................................................................................ 9
+Electricity ...................................................................................................... 10
+Fixed Assets .................................................................................................. 11
+Prospective Operation ................................................................................... 11
+Refrigeration in Food Processing...................................................................... 12
+Principles and operation of refrigeration technologies ................................. 12
+vii
+
+Evaporative Cooling Systems ....................................................................... 12
+Vapor-Compression Refrigeration Systems ................................................. 14
+Case Study: Cheese Production Facility – Load Shifting ............................. 15
+HVAC&R Industry Terminology and Thermodynamic Principles .................. 15
+Heat Rejection Performance – Vapor-Compression Systems ...................... 15
+Heat Rejection Performance – Evaporative Systems.................................... 17
+PROCEDURES AND METHODS....................................................................... 20
+Initial Considerations ........................................................................................ 20
+Regional Weather Conditions ....................................................................... 20
+Manufacturer ................................................................................................. 20
+Manufacturer Product Line ........................................................................... 22
+Kettle Testing Background ............................................................................... 24
+RESULTS AND DISCUSSION ........................................................................... 27
+Compilation of Kettle Testing Data .................................................................. 27
+Developing the Energy Balance for the Closed-System ............................... 28
+Total Current Heat Transfer from Product........................................................ 30
+Current Rate of Heat Transfer from Product .................................................... 30
+Determining Final Water Temperature from Kettle Jacket .............................. 30
+Method 1 ....................................................................................................... 31
+Method 2 ....................................................................................................... 31
+Establishing Design Day Conditions and Troubleshooting Inputs ................... 34
+Codes, Standards, and Ratings Systems ....................................................... 34
+Additional Selection Requirements .............................................................. 35
+BAC Software Selection ................................................................................... 35
+Engineering Economics of Product Selection................................................... 39
+Capital Budgeting Metrics ............................................................................ 39
+Pro Forma Income Statement........................................................................ 41
+Capital Budget Analysis Results................................................................... 50
+Sensitivity Analysis .......................................................................................... 51
+Scenario 1: Reduction of the Cost of Water ................................................. 51
+Scenario 2: Reduction of the Cost of Sewage ............................................... 51
+viii
+
+Scenario 3: Energy Rate Price Hikes ............................................................ 51
+Scenario 4: Complete Failure of Industrial Fluid Cooler.............................. 51
+RECOMMENDATIONS ...................................................................................... 53
+REFERENCES ..................................................................................................... 54
+APPENDICIES ..................................................................................................... 56
+APPENDIX A Water Flow Diagram Through Facility .................................... 56
+APPENDIX B Process Flow Diagram Before CCCT ...................................... 57
+APPENDIX C Process Flow Diagram After CCCT ......................................... 58
+APPENDIX D Lee Industrial Kettle Dimensions ............................................. 59
+APPENDIX E Kettle Test Summary ................................................................ 60
+APPENDIX F Total and Rate of Heat Rejection Calculations ......................... 61
+APPENDIX G Steam Tables for Water as a Saturated Liquid ......................... 71
+APPENDIX H Cooling Tower Water Use Calculations................................... 72
+APPENDIX I Final Closed Cicuit Cooling Tower Selection ........................... 79
+APPENDIX J Cicruclation Pump Piping Friction Losses through Facility ..... 80
+APPENDIX K Circulation Pump Selection...................................................... 82
+APPENDIX L Cooling Tower Energy Expenditure Computations ................. 83
+APPENDIX M Pro Forma Income Statements for Project ............................... 87
+APPENDIX N Pro Forma Income Statements for Sensitivity Analysis........... 90
+APPENDIX O Santa Rosa Historical Water Rates........................................... 93
+APPENDIX P ASM Senior Project Contract with Requirements Met ............ 94
+
+ix
+
+LIST OF TABLES
+Table 1 Food processes and associated water consumptions.................................. 3
+Table 2 Estimated 2000 Water Use in California’s Industrial Sectors ................... 9
+Table 3 Variables from the Psychrometric Chart ................................................. 18
+Table 4 Decision Matrix for Open or Closed Circuit Cooling Tower .................. 21
+Table 5 Sample Kettle Cooling Test ..................................................................... 25
+Table 6 Summary of Kettle Testing Data with various conditions ....................... 27
+Table 7 Total heat rejection for each condition .................................................... 30
+Table 8 Rate of heat rejection for each condition ................................................. 30
+Table 9 Steam tables for saturated water .............................................................. 33
+Table 10 CTI STD-201 thermal certification limits ............................................. 34
+Table 11 Design Day Criteria .............................................................................. 35
+Table 12 BAC software selection results .............................................................. 38
+Table 13 Decision Matrix for FXV Model ........................................................... 38
+Table 14 Distribution of industrial fluid cooler water use .................................... 49
+Table 15 Summary of important financial rates ................................................... 50
+Table 16 Results for various corporate finance metrics........................................ 50
+
+x
+
+LIST OF FIGURES
+Figure 1Behavior of annual water and sewage rates .............................................. 1
+Figure 2 Pie Chart of Industrial Water Users.......................................................... 2
+Figure 3 Facility’s Water Consumption Diagram ................................................... 3
+Figure 4 Technical Sales Cycle............................................................................... 5
+Figure 5 Spectrum of various bacterias’ optimal temperature range ...................... 6
+Figure 6 Typical tomato paste food process v. recommended................................ 8
+Figure 7 Energy savings from tomato water reuse ................................................. 9
+Figure 8 Sample rate structure based solely on time-of-day principle ................. 10
+Figure 9 Typical Closed-circuit cooling tower ..................................................... 13
+Figure 10 Air and Water Temperature through Tower Profile ............................. 13
+Figure 11 Diagram showing how heat rejection is achieved ............................... 14
+Figure 12 Ideal refrigeration cycle ........................................................................ 16
+Figure 13 Actual Refrigeration Cycle ................................................................... 16
+Figure 14 Refrigeration cycle with highlighted enthalpy points .......................... 17
+Figure 15 Latent and sensible components of total heat rejection vector ............. 18
+Figure 16 Wet bulb temperature and specific enthalpy lines respectively ........... 19
+Figure 17 Closed Circuit Cooling Tower Product Line Set 1 ............................... 22
+Figure 18 Closed Circuit Cooling Tower Product Line Set 2 ............................... 23
+Figure 19 Kettle No. 18, 500-gal jacketed capacity fitted with agitator ............... 25
+Figure 20 Temperature Profile of Representative Kettle Cooling Test ................ 26
+Figure 21 Schematic of control mass for closed-system calculation .................... 28
+Figure 22 Control-volume schematic.................................................................... 31
+Figure 23 T-υ diagram for Water .......................................................................... 32
+Figure 24 LCF tower selected ............................................................................... 36
+Figure 25 Rec cooling tower selection.................................................................. 37
+Figure 26 Plot of Water Rate v. Time ................................................................... 41
+Figure 27 Plot of Sewage Rate v. Time ................................................................ 42
+Figure 28 Cooling tower load profile.................................................................... 43
+Figure 29 Psychrometric chart with indicated process ......................................... 46
+Figure 30 Water Usage Calculator Inputs ............................................................. 47
+Figure 31 Water Usage Calculator Outputs .......................................................... 47
+Figure 32 Water Usage Graph .............................................................................. 48
+
+xi
+
+LIST OF ABBREVIATIONS
+ATC
+
+Air Treatment Corporation
+
+BOD
+
+Biochemical Oxygen Demand (Biological Oxygen Demand)
+
+BTUH
+
+British Thermal Units per Hour
+
+CCCT
+
+Closed Circuit Cooling Tower (industrial fluid cooler)
+
+CTI
+
+Cooling Technology Institute
+
+EOY
+
+End of Year
+
+F
+
+Fahrenheit
+
+HVAC&R
+
+Heating, Ventilation, Air-Conditioning, and Refrigeration
+
+IRR
+
+Internal Rate of Return
+
+MACRS
+
+Modified Accelerated Cost Recovery System
+
+MARR
+
+Minimum Acceptable Rate of Return (hurdle rate)
+
+MIRR
+
+Modified Rate of Return
+
+NAICS
+
+North American Industry Classification System
+
+NPV
+
+Net Present Value
+
+OCCT
+
+Open Circuit Cooling Tower
+
+PP
+
+payback period
+
+ROI
+
+Return on Investment
+
+R Tons
+
+Refrigeration Tons
+
+SGMA
+
+Sustainable Groundwater Management Act
+
+TSS
+
+Total Soluble Solids
+
+TWC
+
+Tomato Water Condensate
+
+WEN
+
+Water Energy Nexus
+xii
+
+1
+
+INTRODUCTION
+Water Supply and Utility Background
+Due specifically to periods of extended drought across California, Governor Brown issued a
+statewide mandate declaring heightened regulation on potable water-use and associated waste.
+(SWRCB 2016). Although the state’s measure requires a 20% reduction in water use by 2020,
+local water agencies will tailor the framework of how they will conduct their conservation
+efforts. Sonoma County Water Agency relies heavily on precipitation for its freshwater
+deliveries which requires adequate storage and timely allocation. The unpredictability of
+atmospheric rivers (CW3E) and a recent reduction of snowpack by 25% (Berg 2017) presents
+challenges to the water managers to ensure a consistent surface water supply for the future.
+Groundwater will also become increasingly difficult to access as time progresses. Local
+governments in Sonoma County have already posed the idea of developing fees on unsustainable
+pumping behavior and are empowered to do so by the Sustainable Groundwater Management
+Act of 2014 (SCSGM 2016). Due to a combination of conservation efforts and the growing
+challenges in water management, water sales have had a steep decline. This has forced the City
+of Santa Rosa and Sonoma County Water Agency to increase their rates to restore cash flow for
+operations and maintenance as seen in Figure 1 below. Supporting documentation provided by
+the city of Santa Rosa can be found in Appendix O (SRW 2016).
+
+Increase from previous year (%)
+
+Annual Changes in Santa Rosa Rates
+
+12%
+10%
+8%
+6%
+
+City Supply Rate
+
+4%
+
+Sewage Rate
+
+2%
+0%
+2011
+
+2012
+
+2013
+
+2014
+Year
+
+2015
+
+2016
+
+2017
+
+Figure 1 Behavior of annual water and sewage rates
+
+Due to this, industrial consumers can expect rate increases for both water and sewage, despite the
+fact that their consumption could remain stable. This will force companies to reanalyze the way
+they use their water and adopt reduced water-consumptive practices. Inefficient use of water,
+
+2
+correlated with unsustainable practice, is in opposition to the Reasonable and Beneficial Use
+Doctrine which could lead to penalties (Wilson 2011).
+
+Industrial Water Use
+In Santa Rosa, industrial demand of potable water amounted to 251 acre-feet or over 81 million
+gallons among 69 customers. This would amount to an average of about 1.2 million gallons per
+year per industrial user. A particular food processing facility uses high volumes of water for
+sanitation, cooking, and cooling applications relative to the industrial average for Santa Rosa.
+Figure 2 below shows the portion of water that the facility uses relative to all other commercialtype users which includes manufacturers or processors of materials defined by NAICS code
+sectors 31 to 33 in Santa Rosa (UWMP 2015).
+Santa Rosa Potable Water Distribution Industrial Users
+
+20%
+68 other industrial users
+Food Processing Facility
+80%
+
+Figure 2 Pie Chart of Industrial Water Users
+This level of consumption has led the food processing facility and the city to investigate steps in
+production that contribute to the highest levels of consumption. In order to do this, the city hired
+water-use consultants to audit the process to identify areas needing improvement.
+
+3
+Process Assessment
+
+Figure 3 Facility’s Water Consumption Diagram
+
+After conducting the facility-wide audit, it was determined that the kettle deck was consuming
+the largest volumes of water for a single process relative to the other processes throughout the
+facility. Table 1 summarizes the results of the audit.
+Table 1 Food Processes and associated water consumptions
+Facility Processes
+Total
+Kettle Deck
+Sanitation
+All other
+
+Acre-Feet/yr
+1500
+411
+318
+771
+
+Gallons/yr Percentage
+65,335,000
+100%
+17,885,000
+27%
+13,870,000
+21%
+33,580,000
+51%
+
+In doing this, various consultants and members of the given food processing facility have come
+to an agreement that the current once-through kettle cooling operation is critical to the path of
+improved water-use. It should be noted that more recent information after the audit was released
+related to water consumption at the kettle deck with values closer to 18 million gallons.
+Improvements to this cooling process have been made by members of a manufacturers’
+representative known as Air Treatment Corporation. They represent a large number of
+
+4
+HVAC&R related manufacturers including: ABB controls and drives, Polaris heat exchangers,
+and BAC heat rejection equipment (i.e. cooling towers, thermal energy storage, and evaporative
+condensers). Particular to the water used at the kettle deck, a closed-circuit cooling tower has
+been proposed to meet the cooling capacity while dramatically reducing the amount of water
+consumed. Although there are many features involved in the refrigeration process, this report
+focuses on the cooling of the food product from boiling water temperatures to the eighty degree
+Fahrenheit range. Improvements are expected to produce large monetary benefits from the
+reduced water usage and the anticipated increase production capacity. The objective of this
+report is to outline the methods of Air Treatment Corporation’s product solution selection, the
+sales process, and the anticipated payback with a capital budgeting analysis.
+
+Project Initiation
+Sales Cycle
+Once the job was prospected, Air Treatment Corporation began to engage in the technical sales
+process. A sales engineering manager from ATC was sent out to meet with clients in order to
+further define the problem. After meeting with the plant supervisor, a follow-up meeting was
+scheduled to learn more about the various constraints that would influence the type of
+refrigeration solution to be selected. Facility managers expressed that a decision would need to
+be made before the end of the fiscal year in 2016 and the payback would need to be in the range
+of three years. The next step in the technical sales process required the sales engineer to
+synthesize a proposed system solution with these key financial parameters in mind.
+The next meeting consisted of a detailed economic analysis, including relevant equipment
+specifications, in order to illustrate returns on investment. While alternatives were addressed,
+there was a clear need to implement a recirculating system for the once-through cooling process.
+Upon further probing, there were a multitude of areas needing improvement for other facility
+refrigeration process thus expanding the scale of the project. Utilizing the areas of expertise in
+the room, appropriate data and information were collected in order to begin measuring the extend
+of savings that could be achieved from load shifting for the proceeding cooling process from 80
+to 35 degrees Fahrenheit. This increase in project scope allowed solutions to be split into two
+phases: kettle cooling upgrades and mechanical cooling upgrades.
+While negotiation strategies are important in the sales process, not enough information released
+in order to mention for this specific project. However, rebates provided by local utilities were
+leveraged as an incentive to pursue this capital investment.
+With the right balance of professional consultation and expression from the clients, ATC closed
+the deal for cooling improvements at the kettle deck known as the first phase.
+The second phase was to replace the air-cooled condensing system, but is outside the scope of
+this report. For the first project phase, a specific model of an industrial fluid cooler will be
+selected that best accommodates the food processing facility parameters. Figure 4 below
+illustrates the basic components of the technical sales cycle.
+
+5
+
+Establish Rapport
+• Upfront contract
+• Identify key players
+• DISC analysis
+• Identify pain
+• Prioritize objectives
+
+Closure
+
+Undertand Logistics
+
+• Clarify any concerns
+• Confirm the contract
+• Provide re-assurance
+
+• Decision Makers
+• Selection Criteria
+• Capital Budgeting
+Process
+• Determine MARR and ROI
+• Action Request
+
+Negotiation
+• BATNA
+• Terms of Payment
+• Terms of Service
+
+Solution Presentation
+• Address
+competition/alternatives
+• Value Proposition
+• Engineering economics
+• Request feedback
+
+Figure 4 Technical Sales Cycle
+Project Parameters
+There are many benchmarks that can be applied to an “improved” operation. Facility
+improvements could result in environmental benefits to the community and further optimize
+production capacity, however, these are difficult project with information currently available.
+This report is primarily concerned with the savings incurred from reduced water consumption
+and improvements to the refrigeration system. A number of variables are involved with the
+justification of such a project: governmental regulation, utility incentive programs, facility
+constraints, and company priorities. To create a relevant benchmark of success, the company’s
+priorities were outlined for the cooling solution to the kettle deck operation. The given food
+processing facility has arranged their list of priorities in the following order:
+1) Food safety and quality
+2) Water consumption
+3) Cooling capacity
+This list of company priorities will play an integral role in the decision making process for the
+best, long-term system solution.
+
+6
+
+LITERATURE REVIEW
+Food processing
+Definition
+Food processing can be defined as any manipulation of the physical or chemical composition of
+raw ingredients in order to produce a food product. These processes include, but are not limited
+to the following: sanitizing, pressurizing, mincing, mashing, liquefying, cooking, baking,
+cooling, and packaging. Each of these processes has associated consumptions of energy and
+water. Learning more about the sequence and dependencies between the events in these food
+processes give us better understanding as to where beneficial improvements can be made.
+Food Safety
+When food production and processing became industrialized, leading to increased capacity, this
+provided for tighter tolerances in all aspects of food safety and quality assurance. Due to this,
+governmental organizations such as the Food and Drug Administration, have implemented
+provisions like Hazard Analysis and Risk-Based Preventive Controls in order to prevent food
+borne illnesses. Food processing companies are at minimum expected to produce a product that
+is deemed “safe” with non-toxic levels pathogenic bacteria, viruses, and other various
+contaminants. Ranging from food handling to temperature regulation, there are many
+opportunities for commodities to be spoiled and result in detrimental losses.
+More specifically, with frozen foods processing, taking cooked product from boiling
+temperatures to freezing temperatures crosses a hazardous region for mesophilic microorganisms
+to thrive and reproduce. Figure 5 shows the growth behavior mesophilic pathogens in food.
+These bacteria are most replicate in food quickest around 100 Farenheight (38 Celsius) which is
+dangerous for human consumption because of how close this temperature is to the average
+human body temperature (AgriLife Extension 2016).
+
+Figure 5 Spectrum of various bacteria’s optimal temperature range (Todar 2008)
+
+7
+Because of this, the FDA has set regulations in the Food Code that require hot foods within the
+region of 135F to 70F to be cooled in under two hours (Food Code 2013). This is to avoid
+dangerous levels of bacteria growth, limiting exposure to humans. Popular pathogens in food
+include, but are not limited to the following: Salmonella, Campylobacter, and E. coli.
+Furthermore, refrigerant selection is also important in regards to food safety. Propylene glycol is
+an example of a food grade refrigerant with water to reduce the freezing point for low
+temperature applications. Food-grade refrigerants are required when refrigerants come into such
+close proximity with the product throughout the plumbing of food processing facilities.
+Food Quality
+Characteristics like taste, appearance, nutritional value, and structure are greatly influenced by a
+product’s temperature profile. Based on consumer preferences, the tolerances for these qualities
+can be extensive requiring high system precision and redundancy. Specialty food products,
+which lack GMO, lose the benefits of reduced risk of disease, improved food structure, and
+longer shelf life. Because the given facility produces a non-GMO product, they are forced to
+look into their production practices to provide desirable characteristics to stay competitive
+(UCSC 2005).
+One characteristic particularly important to the given facility is the food structure. When foods
+are frozen, the water contained within the product’s plant cell walls expand. This compromises
+the structure of food product, especially with relatively high water contents. However, this can
+be avoided by rapidly cooling which forms many smaller internal ice crystals, thus minimizing
+cell wall rupture (UMich 2014).
+In summary, product physical and chemical consistency in food production are extremely
+important in high volume, automated operations. Ensuring a strong cold chain with proper
+cooling capacities provides greater resistance to inconsistencies and hazards in system outputs.
+These considerations play an important role in properly assigning heat rejection solutions to the
+kettle deck cooling process.
+Case Study: Industrial Tomato Processing Operation - Water Energy Nexus
+When looking to create an operational definition for success in this project, it is important to put
+inputs and outputs in comparable terms. For example, contributions from research institutions
+and the Department of Energy used various water-energy nexus methodologies to analyze a
+particular tomato processing facility and recovery payback potentials. With an understanding of
+the tomato paste production process in Figure 6 below, tomato water condensate could be
+recovered to sanitize, to transport tomatoes in processing flume, or to recover thermal energy. By
+analyzing the process in terms of comparable flows of heat and water, the TWC was recycled
+and used for steam generation in the “hot break”. The hot break is an essential process in the
+
+8
+tomato paste processing industry to provide a desired viscosity. In this case, the circled region
+indicates where the water was recommended to be reused.
+
+Figure 6 Typical tomato paste food process v. recommended (Amán 2015)
+This type of reuse had a cascading effect and allowed for four different sources of savings down
+the process chain. First off, the cost natural gas burned to create the steam was reduced.
+Additionally, the volume of water and its associated well pumping cost for steam production
+were also negated. Tomato water previously was sent to a cooling tower before being disposed of
+as sewage. Moreover, since the TWC would be recycled for its heat, the facility could avoid
+energy expenditures related to the cooling tower.
+Furthermore, the study emphasized that less volume of water would be drained to wastewater
+facilities contributing to even more cost-benefits (Amán, Maulhardt, Wong, Kazama, &
+Simmons 2015).
+It’s clear that the sustainable strategies implemented produced large annual cost-savings, but
+each facility must analyze its own process by food type and facility constraints in order to make
+the best improvements. In summary, two universally important resources are of utmost
+importance to all production facilities: time and money. However, breaking down the
+constituents that contribute to slack time and unnecessary expenditures are key to streamlining
+unique processes to their highest potential. Improved operating efficiency and sustainable
+improvements are made possible with proper system analysis and adaptations.
+
+9
+
+Figure 7 Energy savings from tomato water condensate recirculation and reuse (Amán 2015)
+
+Constituents of Financial and Time-Based Constraints
+Water-use
+Industries can get their water from two categories of sources: public supply and/or groundwater.
+Water is used in many tasks of food processing: conveyance, cooking, cooling, sanitation,
+brining, and even as an ingredient in the final product. Food and kindred products manufacturing
+are among the top three most water consumptive industries in California rate at 1967 gallons per
+employee per day. As of year 2000, food processing (i.e. dairy, meat, fruit and vegetable, and
+beverage processing) constitutes 24% of all industrial water use as seen in Table 2 (Gleick 2003)
+Table 2 Estimated 2000 Water Use in California’s Commercial and Industrial Sectors in
+AF/year (provided by Pacific Institute)
+
+10
+
+For cooling processes, regional water availability and resupply rates will greatly influence where
+industrial users can expect to get water from. Specific to California, freshwater resources have
+become increasingly important and at times limited due to the transforming climate. Therefore,
+the largest consumptions of water, whether it is cooling or sanitation, should be evaluated for
+improvements.
+Due to geographical and political differences between regions, the structure for water and
+sewage rates vary greatly. Sewage rates can be based on total volume, demand flow rate, TSS,
+BOD content, or any combination of these. Dependent on each food process, steps can be taken
+to optimize the cost of sewage based on a given rate structure. For example, if wastewater
+treatment plants only charged by TSS and not total volume, theoretically water could be used to
+dilute effluent, lowering the concentration seen at the wastewater facility, thus reducing sewage
+rates. Although this is an unrealistic scenario, this is the premise behind food processing system
+optimization as it relates to water-use.
+Electricity
+Electrical supply capacity, hours of operation, and building load profile are also common
+constraints in the food manufacturing and processing industry. With a general understanding of
+power generation, power distribution, and power quality, this allows us to understand why
+certain characteristics are considered in system selection.
+It is important to keep in mind that electrical utility rates are determined by a provided a rate
+structure dependent on the following criteria: user-type, demand type, power quality, and timeof-usage. Typical peak hours of operation are from 12 P.M. to 6 P.M. as seen in Figure 8 below.
+
+Figure 8 Sample rate structure based solely on time-of-day principle (provided by PG&E)
+
+11
+Though electricity consumption is a relevant variable, water –use efficiency will likely
+contribute to the greatest source of savings further influencing a system solution.
+Fixed Assets
+Among many resource constraints, existing facility processing equipment and buildings space
+availability are variables that system optimizers have the least control over. This is because there
+are many contingencies outside of cooling optimization that go into the way a facility best
+processes their food. As a response, sales and application engineers must be diligent to recognize
+this and propose system solutions that best integrate with existing food processing systems.
+Capital goods such as equipment may include, but is not limited to the following: heat
+exchangers, cooking kettles, blanchers, storage vessels, filters, and pasteurizers. In the case of
+the given food processing facility, jacketed kettles are used to both cook and cool the food
+product. The Lee industrial kettles come with a variety of features including: agitators, uniflow
+jackets, lid-types, and hydraulics for tilting based on capacity. These special features and
+equipment capacities play an important role in the kettle cooling capacity calculation with
+appropriately applied assumptions.
+The largest and generally the costliest form of capital is the industrial building itself. This is
+subject to the least amount of change when seeking to implement heat rejection solutions.
+Refrigeration equipment often consumes a large footprint of area and need to be selected with
+the necessary constraints in mind for future developments, current processing operations, and
+scheduled maintenances.
+Additionally, minimum spatial requirements are specifically important to consider as well.
+Compromising the proper spatial requirements of certain heat rejection equipment is detrimental
+to its performance when the discharge air is recirculated back into the air inlet.
+Finally, sound pollution to the surrounding environment could be an issue if facilities are located
+in residential areas. Proper sound attenuation equipment is available for equipment with noise
+produced by fans and compressors.
+Prospective Operation
+Future operation and expansion are also extremely important to consider in providing a system
+solution. A growing business may be looking into other relevant capital investments that could
+couple well with the system solution in mind. In the case of the given food processing facility, a
+Blentec food processor has been purchased to improve the mechanical cooling process. This will
+be taken into consideration when ATC proposes a system solution for phase 2 of the cooling
+process.
+
+12
+
+Refrigeration in Food Processing
+Principles and operation of refrigeration technologies
+Refrigeration equipment commonly takes advantage of the chemistry of selected refrigerant
+fluids in order to optimize heat transfer with minimized compressor power expenditure.
+Generally, most matter experiences three states: as a solid, a liquid, and/or a gas. Depending on
+the state variables they are prescribed (temperature, pressure, etc.), they can occupy any of these
+forms. Based on changes of these state variables, substances can experience phase changes going
+from liquid to gas, solid to gas, etc. Particularly, water has a relatively high latent heat of
+vaporization. This means that it will accept much more heat while changing phase to a vapor
+compared to many other fluids at atmospheric pressure. This makes water an effective medium
+for heat rejection at the right wet-bulb conditions.
+Evaporative Cooling Systems
+One prime example of an evaporative cooling system is the cooling tower. Cooling towers
+uniquely take advantage of water’s chemistry capable of rejecting equivalent amounts of heat
+without the use of a compressor. Given certain parameters of relative humidity, dry-bulb, and
+wet-bulb temperatures, evaporative cooling may be applied. In order to identify the appropriate
+conditions for this kind of cooling, psychrometric charts are a tool used to approximate the
+feasibility for a given application.
+Where water vapor pressure in the ambient air is greater, water molecules will be less likely to
+escape a droplet, thus reducing the extent of evaporation. Conversely, lower vapor pressure will
+contribute to more molecules escaping the confines of a droplet. Wet-bulb temperature serves as
+an indication for the efficacy of evaporative cooling which is dependent on atmospheric pressure
+and relative humidity at a given dry-bulb temperature. Dry-bulb only takes into account the gas
+constituents of air when measuring the average kinetic energy of a substance (i.e. temperature).
+Understanding the distinction between the dry-bulb and wet-bulb temperatures is important in
+order to understand when evaporative cooling systems can be implemented.
+Facilities where the exit water temperature required is above the regional wet-bulb temperature
+could consider evaporative cooling as product solution to cooling (BAC 2015). An example of
+commonly recognized evaporative cooling equipment is the cooling tower as shown in Figure 9.
+
+13
+
+Figure 9 Typical Closed-circuit cooling tower (BAC Product Handbook Vol. 5)
+As previously mentioned, cooling towers can be used in conjunction with water-cooled chillers
+or they be directly applied to the heat load. This equipment removes heat from surrounding air
+by allowing water and air to passing through channels or fill. Above the fill are water sprayers
+reducing droplet size with application across the entirety of the top layer of fill. We can expect
+the reduction in droplet size facilitates a more rapid mass and energy transfer between the airwater boundaries due to the increased droplet surface area-volume ratio. Additionally, the
+tortuous path the water must take increases the air-water interface time allowing extended
+evaporation to occur. The evaporation on the draining water rejects heat into the outside
+environment thus cooling the return water. Figure 10 below illustrates the relationship between
+the temperature of the water in the circuit and the air passing through the tower.
+
+Figure 10 Air and Water Temperature through Tower Profile (Vengateson 2017)
+
+14
+Industrial fluid coolers, also known as closed-circuit cooling towers, utilize heat-exchanging
+coils to keep the process fluid in a separate circuit. The refrigerant fluid is either potable water or
+a water-glycol mixture.
+The coined term for a cooling tower being the sole heat rejection medium is known as “free
+cooling”. This is because no mechanical cooling is used, resulting in little to no operating costs.
+Technically, input work is still required to pump water with associated pipe friction losses and
+sprayer pressures requirements. Additionally, work-input is required to run the fans for induced
+inlet air and heaters for defrost cycles in cold regions. However, these amounts are relatively
+small compared to the amount of input energy normally required to achieve the same level of
+cooling with a vapor-compression based chiller.
+Vapor-Compression Refrigeration Systems
+
+Figure 11 Diagram showing how heat rejection is achieved (provided by Carrier)
+Figure 11 illustrates the various components of a vapor-compression refrigeration cycle. This is a
+popular cycle found in industrial refrigeration equipment. The compressors require great input
+horsepower in order to achieve those high pressures. The compressor provides the pressure
+necessary to ensure condensation through the next step for optimal heat rejection into the hot
+reservoir. In order to avoid high operating expenses, while cooling large loads, application
+engineers may select thermal energy storage technology over on-demand chillers.
+On-demand chillers can provide for immediate blast chilling, but often have high associated
+energy consumption costs. If operations take place during peak-hours of the electrical grid, this
+can result in exponentially higher utility rates. Secondly, if a central system chiller needed
+maintenance, there would not be a reserve source of cooling to keep operation going. Finally,
+implementing a design with a singular chiller would be difficult in order to meet the varying
+demand from a food processing facility and from the changes in atmospheric climate. Strategies
+to avoid these problems require application engineers to explore load shifting strategies and
+technologies by utilizing thermal energy storage.
+
+15
+Case Study: Cheese Production Facility – Load Shifting
+A study on a cheese production facility in Hanford, California serves a great example to the
+advantages of load shifting with thermal energy storage. Designing a system to build ice
+overnight when rates are low and demand is not immediately necessary allows the cooling
+requirements to be appropriately satisfied during operating hours. A multitude of thermal energy
+storage options were considered, but a dynamic, slurry thermal energy storage system was
+chosen with 130% reserve storage capacity in the case of scheduled maintenance. In addition,
+this particular solution did not require a defrosting cycle with its ice insulation-effect inhibiting
+design. Finally, the dynamic TES system allows for ice storage and production to be separated.
+Static systems are designed with the intent that the ice formed around the coils remains until it is
+melted externally from warm water downstream of load or internally from the coil. However, the
+dynamic system results in the higher cooling capacity for the short durations. There are two
+reasons for this: 1) the high surface area of the slurry ice particles and 2) the direct contact of
+warm water from the load with the slurry ice (Gladis 1997).
+These principles of heat transfer and load shifting strategies are pivotal to providing the best
+long-term solution for a given cooling process like those at the given food processing facility. A
+deeper look into client expectations, facilities operations, and available technologies will provide
+for more beneficial, long-term solutions.
+
+HVAC&R Industry Terminology and Thermodynamic Principles
+Cooling capacity and total heat rejection are other constraints to be specified in this project. In
+order to properly analyze a cooling method, it is important to understand the difference between
+an open system and a closed system in thermodynamics. An open system is where mass and
+energy crosses the thermal boundary thus displacing heat into surroundings. However, a closed
+system allows heat energy to cross the boundary, but no mass. These fundamental
+thermodynamic definitions of systems are the framework behind many refrigeration system
+technologies.
+Furthermore, cooling capacity is defined by tons of refrigeration or the amount of energy
+required to completely freeze a ton of liquid water at 0 degrees Celsius in a period of 24 hours. In
+other words, cooling capacity is the amount of transferred heat energy that is capable of being
+rejected over a certain period of time. This is the HVAC&R industry’s standard unit for
+measuring rate of heat rejection between temperature regions across a certain boundary.
+Heat Rejection Performance – Vapor-Compression Systems
+Measuring thermal performance is different for each piece of heat rejection technology. For
+example, chillers using the vapor-compression cycle measure this efficiency with the COP from
+Equation 1.
+
+16
+
+𝐶𝐶𝐶𝐶𝐶𝐶 (𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟) =
+
+𝑄𝑄 𝑖𝑖𝑖𝑖
+𝑊𝑊𝑐𝑐
+
+, Eqn. 1
+
+𝑊𝑊ℎ𝑒𝑒𝑒𝑒𝑒𝑒,
+𝑄𝑄 𝑖𝑖𝑖𝑖 = ℎ𝑒𝑒𝑒𝑒𝑒𝑒 𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔 𝑡𝑡ℎ𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟ℎ 𝑡𝑡ℎ𝑒𝑒 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐, 𝑘𝑘𝑘𝑘 𝑜𝑜𝑜𝑜 𝐵𝐵𝐵𝐵𝐵𝐵
+𝑊𝑊𝑐𝑐 = 𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑏𝑏𝑏𝑏 𝑡𝑡ℎ𝑒𝑒 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐, 𝑘𝑘𝑘𝑘 𝑜𝑜𝑜𝑜 𝐵𝐵𝐵𝐵𝐵𝐵
+
+The vapor-compression process can be seen in Figure 12 with the pressure-enthalpy diagram.
+This measure of efficiency accounts for the amount of heat absorbed through the evaporator coil
+per unit of energy expended by the compressor. It should be noted that this is a theoretical value
+and could largely misrepresent realistic COP values due to irreversibility of the operation in
+actual performance. Figures 13 illustrates the difference between ideal and actual operation.
+
+Figure 12 Ideal refrigeration cycle
+
+Figure 13 Actual Refrigeration Cycle
+Figure 14 below illustrates the enthalpy values at different points in the refrigeration cycle and
+how they are used to calculate total heat rejection and compressor work.
+
+17
+
+Figure 14 Refrigeration cycle with highlighted enthalpy points
+Heat Rejection Performance – Evaporative Systems
+Cooling towers are a prime example of an evaporative cooling system. They are often used in
+conjunction with chillers to absorb the heat from condenser side. This allows for the heat energy
+to be transferred into the atmosphere leveraging the latent heat of vaporization of water. The
+thermal performance or efficiency of a cooling tower is based on the following equation:
+µ=
+
+(t i − t o )
+∗ 100, Eqn. 2
+(t i − t wb )
+
+Where,
+µ = Cooling tower efficiency, %
+t i = inlet temperature of water to the tower, ℉ or ℃
+t o = outlet temperature of water from the tower, ℉ or ℃
+t wb = wet bulb temperature, ℉ or ℃
+
+Simply put, there are two primary things that contribute to improved cooling tower thermal
+efficiency: range and approach. Range is the difference between the entrance and exit
+temperatures of the recirculating water. Approach is the proximity of the exit water’s
+temperature to the regional wet-bulb temperature.
+This measures of efficiency neglect to factor the energy and water consumption required to
+accomplish this cooling effect. Furthermore, a decision matrix with cost and unique features
+should be used to compare the heat rejection options to best meet a given project’s definition of
+success.
+While the pressure-enthalpy diagram is useful for measuring the heat rejected in chillers, cooling
+towers use the psychrometric chart for that information. In order to extract useful information
+from the psychrometric chart, we must know three independent variables: barometric pressure,
+dry-bulb temperature, and a value that indicates the concentration of vapor in the air (wet-bulb
+temperature, humidity ratio, water vapor pressure, dew point, etc.) Table 3 indicates the variables
+found on the psychrometric chart and how they are obtained.
+
+18
+Table 3 Variables from the Psychrometric Chart (provided by Green Building Advisor)
+
+The psychrometric chart is a tool used to identify the properties of air based on the amount of
+water vapor present. With three independent variables and the correct assumptions, this tool
+allows both the heat rejection and the volume of water evaporated to be calculated for a given
+cooling tower.
+The psychrometric chart below illustrates the sensible and latent heat absorbed by the air as it
+passes through the tower’s fill to the outlet.
+
+Figure 15 Latent and sensible components of total heat rejection vector
+With value for air flow and two known points, the volume of water evaporated from the cooling
+tower can be computed based on the change in specific humidity or humidity ratio. The increase
+in the humidity ratio represents the water vapor absorbed by the air as it passes through the
+
+19
+cooling tower. In most circumstances, it is safe to assume that air exits the cooling tower at
+saturated conditions or 100% relative humidity as seen in Figure 15.
+Path A-C-B represents conditions where the ambient air is below the temperature of the tower
+inlet water. Path D-E-B represents the opposite situation, which greatly affects the amount of
+water the equipment can expect to evaporate for the same amount of total heat rejection. Changes
+in wet-bulb temperature are the primary drivers for changes in specific enthalpy, which indicate
+the cooling effect of the equipment. The similarity between the slope of specific enthalpy and the
+slope of wet-bulb lines verify that strong relationship in Figure 16 below.
+
+Figure 16 Wet bulb temperature and specific enthalpy lines respectively
+Establishing proper dry-bulb conditions for accurate estimates of cooling tower water usage and
+heat rejection are imperative and require justification.
+
+20
+
+PROCEDURES AND METHODS
+Initial Considerations
+Regional Weather Conditions
+For the given food processing facility, the current cooling process of 70 F water is being routed
+through to cool the kettles. Additionally, regional wet-bulb temperatures of 67.5 F indicate that
+Santa Rosa climate provides favorable conditions for evaporative cooling in this application.
+These wet-bulb conditions are guaranteed for 99% of the year while 3 to 4 days of the year are
+expected to have wet-bulb temperatures above this temperature (BAC 2015). Weather data
+indicates that annual dry-bulb temperature is 71.3 F while higher-end temperatures in summer
+months reach approximately 80 F (US Climate Data 2017). This information indicates that
+cooling towers should be considered for a refrigeration solution.
+Manufacturer
+Among the many cooling tower manufacturers, Baltimore Air Coil Company will be the
+equipment manufacturer ATC is representing. BAC offers industry leading technology for both
+open and closed-circuit cooling towers. In order to determine which should be selected, a
+decision matrix was developed in order to quantitatively determine between tower types. Based
+on a series of meetings, the information of qualitative features the client was looking for were be
+translated into quantitative values. The raw scores were developed according to the client’s
+priority levels of the objectives. Table 4 below indicates which of the two would be selected.
+
+21
+Table 4 Decision Matrix for Open or Closed Circuit Cooling Tower
+OCCT or CCCT
+Raw Scoring
+Matrix
+1-3 where, 1 = poor, 2 = satisfactory, 3 = excellent
+Food
+Food
+Capacity
+Energy Treatment
+Safety
+Quality
+Increase
+Savings
+Savings
+OCCT
+2.00
+2.00
+2.00
+3.00
+2.00
+CCCT
+3.00
+2.00
+2.00
+2.00
+3.00
+Importance Factor
+0-1 where, 1 = highest importance, 0 = lowest importance
+Food
+Food
+Increase
+Energy Treatment
+Safety
+Quality
+Capacity
+Savings
+Savings
+1.00
+1.00
+0.50
+0.50
+0.75
+Weighted Scoring Matrix
+Food
+Food
+Increase
+Energy Treatment
+Safety
+Quality
+Capacity
+Savings
+Savings
+OCCT
+2.00
+2.00
+1.00
+1.50
+1.50
+CCCT
+3.00
+2.00
+1.00
+1.00
+2.25
+
+Product
+Cost
+2.00
+2.00
+
+Product
+Cost
+0.50
+Product
+Cost
+1.00
+1.00
+
+Total
+9.00
+10.25
+
+A closed-circuit cooling tower has been determined as the better category for a refrigeration
+solution at the given food processing facility. While the OCCT provides reduced energy costs, it
+compromises food safety by having an open circuit make contact with food processing
+equipment inside the facility. Furthermore, the closed-circuit cooling tower has associated water
+savings because the water does not need to be treated. With this established, a more detailed
+selection process of which model industrial fluid cooler (i.e. CCCT) will be selected.
+There are six main models of cooling towers to select from the BAC provider. The towers vary
+primarily based on the fan system and the single cell heat rejection capacity ranges. Each product
+provides unique features which will be outlined in Figure 17 and 18 below.
+
+22
+Manufacturer Product Line
+
+Figure 17 Closed Circuit Cooling Tower Product Line Set 1
+
+23
+
+Figure 18 Closed Circuit Cooling Tower Product Line Set 2
+
+24
+It is important that we calculate the minimum tonnage required to see which of the cooling
+towers will be needed. To estimate initial feasibility, capacity ranges in the product literature are
+based on typical conditions where inlet water is 95 F, outlet water is 85 F, and the wet bulb
+temperature is 78 F. The associated tonnages ranges are based on a nominal 3 gpm per ton of
+cooling. Selection software will tailor the expected performance of a cooling tower for a design
+day in Santa Rosa. A “design day” includes information about the cooling process load and the
+prescribed atmospheric conditions.
+The unique features of each tower indicate where their application would best be suited. The PFI
+towers are designed to operate in climates with high seasonal temperature variation with
+anticipated dry operations during the winter. These features disqualify the PFI as a potential
+solution because it would be difficult to justify the inflated cost in a temperate region as Santa
+Rosa. Additionally, the models equipped with centrifugal fans are used to overcome static head
+caused by indoor installation and the ductwork. Because of this feature, models with centrifugal
+fans have higher energy consumption making it irrelevant for the outdoor application at the given
+food processing facility. Finally, the HXV hybrid tower can be disqualified as a solution because
+they are best suited for applications with process fluids at temperatures greater than 180 F. This
+leaves two potential system solutions: the FXV and dual air intake FXV as seen in Figure 17
+above. In order to determine which of the two is more feasible, we must calculate the required
+tons of refrigeration from the current process and develop “design day” parameters for the
+selection of new equipment.
+With an understanding of company priorities and the facility’s current cooling process, the
+following steps were taken to develop the best system solution:
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+
+Compile Kettle Cooling Testing Data
+Calculate the current, total heat transferred out of the product, 𝑄𝑄𝑜𝑜𝑜𝑜𝑜𝑜 (BTU)
+Calculate the current, rate of heat transfer out of the product, 𝑄𝑄̇𝑜𝑜𝑜𝑜𝑜𝑜 (BTUH or R Tons)
+Determine the final water temperature of the once-through cooling system,𝑇𝑇𝑓𝑓 (℉)
+Establish design day criteria and troubleshoot inputs
+Select industrial fluid cooler model using BAC selection software
+Conduct an engineering economic analysis to project returns on investment
+Conduct a sensitivity analysis to determine integrity of project
+
+Kettle Testing Background
+The plant manager at the given food processing facility conducted kettle tests where a
+temperature probe measured the changes in temperature over the course of approximately two
+hours at given kettle inlet water temperatures. This raw data collection would allow us to
+complete the first step to provide the best system solution. Table 5 and Figure 19 are the
+components of a sample kettle cooling test. A complete summary of kettle testing data can be
+found in Appendix E.
+
+25
+
+Figure 19 Kettle No. 18, 500-gal jacketed capacity fitted with agitator
+Table 5 Sample Kettle Cooling Test
+
+Test 4, Kettle 18 (Agitator 19 RPM)
+Date
+
+WIP
+
+Back Lid
+
+Bypass
+Valve
+
+9/29/2015
+
+631219
+
+Open
+
+Open
+
+Flow
+Rate
+(GPM)
+15
+
+Time
+
+WIP
+Temp
+
+Cooling
+Rate
+
+Gallons
+Used
+
+Gallons
+Wasted
+
+8:20 AM
+8:35 AM
+8:50 AM
+9:05 AM
+9:20 AM
+9:35 AM
+9:50 AM
+10:05 AM
+10:20 AM
+10:35 AM
+2:15
+
+206° F
+158° F
+130° F
+117° F
+106° F
+97° F
+91° F
+86° F
+82° F
+79° F
+127° F
+
+48° F
+28° F
+13° F
+11° F
+9° F
+6° F
+5° F
+4° F
+3° F
+14.11° F
+
+0
+225
+450
+675
+900
+1125
+1350
+1575
+1800
+2025
+
+0
+225
+450
+675
+900
+1125
+1350
+1575
+1800
+2025
+
+Waste %
+100%
+Gallons
+Recycled
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+26
+
+Test 4, Kettle 18
+Product Temp
+210° F
+
+206° F
+
+190° F
+
+170° F
+158° F
+150° F
+Product Temperature
+
+130° F
+130° F
+117° F
+110° F
+
+106° F
+97° F
+91° F
+
+90° F
+
+86° F
+
+82° F
+
+79° F
+
+70° F
+8:20 AM 8:35 AM 8:50 AM 9:05 AM 9:20 AM 9:35 AM 9:50 AM 10:05 AM 10:20 AM 10:35 AM
+
+Figure 20 Temperature Profile of Representative Kettle Cooling Test
+
+27
+
+RESULTS AND DISCUSSION
+Compilation of Kettle Testing Data
+The kettle cooling test information was collected and organized in a fashion that gave us
+information about the behavior of the product temperatures as water flowed through the jackets
+over a certain period of time. That period of time represents the amount of time normally
+consumed in order to achieve desired cooling of the food product.
+Table 6 Summary of Kettle Testing Data with various conditions
+Condition
+Average
+All Tests
+Extreme
+All Tests
+Representative
+Test 4, No. 18
+
+Initial
+Temp
+(Water)
+70
+F
+73
+max F
+70
+F
+
+Initial
+Final
+Change
+Temp
+Temp
+of Temp
+(Product) (Product) (Product)
+199
+F
+208
+max F
+206
+F
+
+85
+F
+76
+min F
+79
+F
+
+-114
+F
+-132
+delta F
+-127
+F
+
+Total
+Hours
+
+Jacket
+Water
+Flow
+
+2.07
+hrs
+1.50
+min hrs
+2.25
+hrs
+
+≈15
+gpm
+15
+max gpm
+15
+gpm
+
+Total
+Water
+Used
+1799
+gal
+1350
+gal
+2025
+gal
+
+Conclusions from the kettle cooling tests indicate three different process-cooling conditions:
+average, extreme, and representative conditions. Average conditions were based on averages
+taken from over 9 sets of kettle tests involving a variety of kettle capacities (i.e. 500 gal, 400 gal,
+300 gal). Extreme conditions were based on the highest initial product temperature, lowest
+product final temperature, warmer inlet water, and the minimum cooling time. The large value
+heat rejection value from the control-mass thermodynamic problem will explain why the specific
+temperature, duration, and flow values were chosen. Finally, the representative condition
+includes a kettle that undergoes a testing process involving a common kettle capacity with
+expected temperature ranges based on what the head cook has experienced in the past. For these
+criteria, Kettle No. 18 from Test 4 was deemed representative as seen in Figure 19, Table 5, and
+Figure 20 above. The variation of values in the data set may result from varying flows through
+the kettles, size variance in kettles, and varying day-to-day water inlet temperatures. The
+following considerations should be included in future kettle cooling tests to ensure that readings
+are most representative:
+•
+•
+•
+•
+
+Use proper flow measurement and logging technology for cooling water
+All solutions should be agitated at the same speed
+Constituents and characteristics of food product per kettle test should be documented
+Location of the temperature probe should be documented
+
+Jacket
+Water
+Flow
+870
+gph
+900
+gph
+900
+gph
+
+28
+•
+•
+•
+
+Human errors in testing procedures should be documented
+Inlet water temperatures for each kettle test should be documented
+Measurement of product weight should be documented
+
+Developing the Energy Balance for the Closed-System
+The following assumptions were made in order to produce a feasible value of tonnage required:
+•
+•
+•
+•
+•
+•
+•
+•
+
+The food product is contained primarily within the hemispherical portion of the kettle
+Food product is filled to 60% of total kettle capacity
+Sensible heat transfer between food product and cooling water
+Heat rejected from walls of steel kettle to surrounding atmosphere negligible
+Kettle lid was closed, creating a closed system
+Heat primarily conducted through steel jacketed portion
+Isochoric process
+15 gpm of water flow per kettle
+
+Guided by the zeroth law of thermodynamics, heat transfer can be expected from a variance in
+temperatures across the boundary. Additionally, the first law of thermodynamics states that
+energy is neither created nor destroyed, but transferred or transformed instead. This transfer
+occurs to/from the system, through a defined boundary, from/to a surrounding environment. It is
+important to note that only changes in energy can be readily observed with this simplicity. Figure
+19 below illustrates the schematic used to conduct energy balance computation.
+
+Figure 21 Schematic of control mass for closed-system calculation
+For a proper deduction of heat rejected, the fundamental energy balance should be used. The
+simplified energy balance equation for a closed system is denoted as follows:
+∆𝐸𝐸𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 = ∆𝑈𝑈 + ∆𝐾𝐾𝐾𝐾 + ∆𝑃𝑃𝑃𝑃 , Eqn. 3
+
+29
+𝑊𝑊ℎ𝑒𝑒𝑒𝑒𝑒𝑒,
+∆𝐸𝐸𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 = 𝑛𝑛𝑛𝑛𝑛𝑛 𝑐𝑐ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠, 𝐵𝐵𝐵𝐵𝐵𝐵
+∆𝑈𝑈 = 𝑛𝑛𝑛𝑛𝑛𝑛 𝑐𝑐ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠, 𝐵𝐵𝑇𝑇𝑈𝑈
+∆𝐾𝐾𝐾𝐾 = 𝑛𝑛𝑛𝑛𝑛𝑛 𝑐𝑐ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖 𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 , 𝐵𝐵𝐵𝐵𝐵𝐵
+∆𝑃𝑃𝑃𝑃 = 𝑖𝑖𝑖𝑖 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠, 𝐵𝐵𝐵𝐵𝐵𝐵
+We know that the system is not changing in kinetic or potential energy, therefore:
+∆𝐸𝐸𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 = ∆𝑈𝑈 = 𝑄𝑄𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 − 𝑊𝑊𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 , Eqn. 4
+
+𝑊𝑊ℎ𝑒𝑒𝑒𝑒𝑒𝑒,
+∆𝐸𝐸𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 = 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 𝑐𝑐ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠, 𝐵𝐵𝐵𝐵𝐵𝐵
+∆𝑈𝑈 = 𝑐𝑐ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠, 𝐵𝐵𝐵𝐵𝐵𝐵
+𝑄𝑄𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 = ℎ𝑒𝑒𝑒𝑒𝑒𝑒 𝑒𝑒𝑒𝑒𝑒𝑒ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠, 𝐵𝐵𝐵𝐵𝐵𝐵
+𝑊𝑊𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 = 𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤 𝑒𝑒𝑒𝑒𝑒𝑒ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑜𝑜𝑜𝑜𝑜𝑜 𝑜𝑜𝑜𝑜 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 , 𝐵𝐵𝐵𝐵𝐵𝐵
+
+Sign convention for heat and work into system are opposites. While heat flowing in the system is
+represented as a positive number, work into system is represented by a negative number. The
+schematic illustrates heat and work and their associated directions.
+Since this is an isochoric process (i.e. constant volume), we assume the fluid does no work to the
+system. Another assumption is that the lids on the kettles are kept closed during the
+cooking/cooling process. Therefore, this creates a fully "closed" system where no mass crosses
+the boundary. The change in total energy of the fluid can be described by:
+∆𝐸𝐸𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 = ∆𝑈𝑈 = 𝑄𝑄𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 = 0 = 𝑄𝑄𝑖𝑖𝑖𝑖 − 𝑄𝑄𝑜𝑜𝑜𝑜𝑜𝑜 , Eqn. 5
+
+Since there is no heat flow into the product, which produces:
+∆𝐸𝐸𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 = −𝑄𝑄𝑜𝑜𝑜𝑜𝑜𝑜
+
+−𝑄𝑄𝑜𝑜𝑜𝑜𝑜𝑜 = −𝑄𝑄𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃 (𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠) = 𝑚𝑚 𝑐𝑐 ∆𝑇𝑇, Eqn. 6
+
+𝑊𝑊ℎ𝑒𝑒𝑒𝑒𝑒𝑒,
+𝑄𝑄𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 = ℎ𝑒𝑒𝑒𝑒𝑒𝑒 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝, 𝐵𝐵𝐵𝐵𝐵𝐵
+∆𝑇𝑇 = 𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑎𝑎𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡, ℉
+𝑚𝑚 = 𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚 𝑜𝑜𝑜𝑜 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝, 𝑙𝑙𝑙𝑙
+𝐵𝐵𝐵𝐵𝐵𝐵
+𝑐𝑐𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏 = 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 ℎ𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝,
+𝑙𝑙𝑙𝑙℉
+
+Using the mass of our product, a representative heat capacity, and a best condition for
+temperature change, we can solve for the heat rejected out of the kettles. The following results
+were obtained by calculating the heat rejected with all three of those conditions. The kettles cook
+a large variety of products including, but not limited to: vegetables, black-eyed peas, sauces,
+
+30
+beans, and some various chili recipes. Beans provided a representative heat capacity and bean
+density was used to estimate the mass of product in the kettles. A representative mass of 2700 lbs
+was calculated. Additionally, eight 500-gallon kettles were used to represent a design day heat
+load. Since each of our kettles requires 15 gpm of water flow, we can expect a total required
+refrigerant flow of 120 gpm. The following tables contains the results of our calculations.
+
+Total Current Heat Transfer from Product
+Table 7 Total heat rejection for each condition
+Q product
+Condition
+Average
+Extreme
+Rep.
+
+Per Kettle
+BTU
+-277,000
+-321,000
+-309,000
+
+All 8 Kettles
+BTU
+-2,216,000
+-2,568,000
+-2,472,000
+
+Current Rate of Heat Transfer from Product
+The rate of heat transfer is dependent on the amount of time the kettle tests consumed. Most of
+the tests were around two hours. Test durations will be deduced according to their corresponding
+condition.
+Table 8 Rate of heat rejection for each condition
+Q rate
+Condition
+Average
+Extreme
+Rep.
+
+Duration
+hrs
+2.07
+1.50
+2.25
+
+Per Kettle
+BTUH
+-134,000
+-214,000
+-138,000
+
+All 8
+Kettles
+BTUH
+-1,072,000
+-1,712,000
+-1,104,000
+
+Per
+Kettle
+R Tons
+-11
+-18
+-12
+
+All 8
+Kettles
+R Tons
+-89
+-143
+-92
+
+Among these three conditions, the average condition was determined to be the best information
+to use for the selection software. With knowledge of the rate of heat rejection, various methods
+can be used to determine the temperature of the water leaving the kettle jacket.
+
+Determining Final Water Temperature from Kettle Jacket
+There were two methods used in order to determine the final water temperature: using cooling
+tower equations and using steam tables with control-volume analysis.
+
+31
+Method 1
+With proper rearrangement, Equation 7 is used to determine the final water temperature.
+
+𝑊𝑊ℎ𝑒𝑒𝑒𝑒𝑒𝑒,
+
+∆𝑇𝑇 = 𝑇𝑇𝑓𝑓 − 𝑇𝑇𝑖𝑖 =
+
+𝑄𝑄̇
+, Eqn. 7
+𝐿𝐿𝑖𝑖𝑖𝑖 ∗ 𝑐𝑐𝑤𝑤
+
+𝐵𝐵𝐵𝐵𝐵𝐵
+ℎ𝑟𝑟
+∆𝑇𝑇 = 𝑡𝑡ℎ𝑒𝑒 𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏𝑏 𝑡𝑡ℎ𝑒𝑒 𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑎𝑎𝑎𝑎𝑎𝑎 𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡, ℉
+𝑙𝑙𝑙𝑙
+𝐿𝐿𝑖𝑖𝑖𝑖 = 𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑜𝑜𝑜𝑜 𝑡𝑡ℎ𝑒𝑒 𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤,
+ℎ𝑟𝑟
+𝐵𝐵𝐵𝐵𝐵𝐵
+𝑐𝑐𝑤𝑤 = 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 ℎ𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜 𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤,
+𝑙𝑙𝑙𝑙℉
+𝑄𝑄̇ = 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑜𝑜𝑜𝑜 ℎ𝑒𝑒𝑒𝑒𝑒𝑒 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟,
+
+Since the assumption was made that the only significant heat transferred is to the jacket water,
+the water flows in a fixed volume, the following equivalence can be developed:
+−𝑄𝑄̇𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 = 𝑄𝑄̇𝑗𝑗𝑗𝑗𝑗𝑗𝑗𝑗𝑗𝑗𝑗𝑗 𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤 , Eqn. 8
+
+Water in this temperature range was considered relatively incompressible so a single value for
+density could be used. Using Equation 8 above, the final temperature of the water was calculated
+to be 88 F. This final water temperature value makes sense because our food product and water
+are approaching thermal equilibrium. We can verify this is a reasonable value by crossreferencing with the T-v diagram and steam tables for water.
+Method 2
+Using control-volume equation and properties of the initial condition, the final temperature of the
+water can be determined. Figure 22 below is a schematic for the given problem:
+
+Figure 22 Control-volume schematic
+
+32
+The following assumptions must be applied for simplified analysis:
+•
+•
+•
+•
+•
+•
+•
+•
+
+Steady-state operation
+Conservation of mass principle
+Liquid is relatively incompressible
+Inlet and outlet diameters are equivalent
+No significant change in potential energy from the inlet and outlet
+No significant change in kinetic energy from the inlet and outlet
+No phase change
+Isochoric process
+
+Due to the behavior of water in the compressible liquid region, the enthalpy for a liquid can be
+well represented by the enthalpy for a saturated liquid at a given temperature. Figure 23 indicates
+the unique behavior of compressible liquids that justify the use of the saturated liquid values for
+the steam tables.
+
+Figure 23 T-υ diagram for Water (provided by Ohio University)
+Initially, the control-volume equation is represented as:
+𝜕𝜕𝜕𝜕
+= 0 = 𝑄𝑄̇𝐶𝐶𝐶𝐶 − 𝑊𝑊̇𝐶𝐶𝐶𝐶 + 𝑚𝑚̇[(ℎ𝑖𝑖 − ℎ𝑒𝑒 ) + .5(𝑉𝑉 2 𝑖𝑖 − 𝑉𝑉 2 𝑒𝑒 ) + 𝑔𝑔(𝑧𝑧𝑖𝑖 − 𝑧𝑧𝑒𝑒 ) Eqn. 9
+𝑑𝑑𝑑𝑑
+𝑊𝑊ℎ𝑒𝑒𝑒𝑒𝑒𝑒,
+𝜕𝜕𝜕𝜕
+𝐵𝐵𝐵𝐵𝐵𝐵
+= 𝑐𝑐ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡,
+𝑑𝑑𝑑𝑑
+𝑠𝑠
+𝐵𝐵𝐵𝐵𝐵𝐵
+𝑄𝑄̇𝑐𝑐𝑐𝑐 = 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑜𝑜𝑜𝑜 ℎ𝑒𝑒𝑒𝑒𝑒𝑒 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣,
+𝑠𝑠
+
+𝑊𝑊𝐶𝐶𝐶𝐶 = 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑜𝑜𝑜𝑜 𝑚𝑚𝑚𝑚𝑚𝑚ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤 𝑜𝑜𝑜𝑜𝑜𝑜 𝑜𝑜𝑜𝑜 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣,
+𝑚𝑚̇ = 𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑜𝑜𝑜𝑜 𝑡𝑡ℎ𝑒𝑒 𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤,
+
+𝑙𝑙𝑙𝑙
+𝑠𝑠
+
+𝐵𝐵𝐵𝐵𝐵𝐵
+𝑠𝑠
+
+33
+𝐵𝐵𝐵𝐵𝐵𝐵
+𝑐𝑐𝑤𝑤 = 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 ℎ𝑒𝑒𝑒𝑒𝑒𝑒 𝑜𝑜𝑜𝑜 𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤,
+𝑙𝑙𝑙𝑙𝑙𝑙
+𝐵𝐵𝐵𝐵𝐵𝐵
+ℎ𝑖𝑖 = 𝑒𝑒𝑒𝑒𝑒𝑒ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖,
+𝑙𝑙𝑙𝑙
+𝐵𝐵𝐵𝐵𝐵𝐵
+ℎ𝑒𝑒 = 𝑒𝑒𝑒𝑒𝑒𝑒ℎ𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎 𝑎𝑎𝑎𝑎 𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜,
+𝑙𝑙𝑙𝑙
+𝑓𝑓𝑓𝑓
+𝑉𝑉𝑖𝑖 = 𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣 𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖,
+𝑠𝑠
+𝑓𝑓𝑓𝑓
+𝑉𝑉𝑒𝑒 = 𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣 𝑎𝑎𝑎𝑎 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒,
+𝑠𝑠
+𝑓𝑓𝑓𝑓
+𝑔𝑔 = 𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔𝑔 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐, 2
+𝑠𝑠
+𝑧𝑧𝑖𝑖 = 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑎𝑎𝑎𝑎 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖, 𝑓𝑓𝑓𝑓
+𝑧𝑧𝑒𝑒 = 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑎𝑎𝑎𝑎 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒, 𝑓𝑓𝑓𝑓
+With the applied assumptions, the equation can be simplified to the following:
+𝜕𝜕𝜕𝜕
+= 0 = 𝑄𝑄̇𝐶𝐶𝐶𝐶 + 𝑚𝑚̇(ℎ𝑖𝑖 − ℎ𝑒𝑒 ), Eqn. 10
+𝑑𝑑𝑑𝑑
+
+Since we know two independent properties, inlet temperature and inlet state, we can use the
+steam tables. Since the saturated liquid can represent the enthalpy values for compressible
+liquids, a value can be interpolated from the table for the initial enthalpy. Equation 10 above can
+then be used to determine the exit enthalpy. Finally, another interpolation including both
+temperature and enthalpies for the inlet and outlet reveals an exit water temperature of 87.7 F.
+Table 9 Steam tables for saturated water (provided by Wiley 2011)
+
+The two methods of calculating exit temperatures verify that 88 F is a reasonable value to use for
+outlet temperature of exit water. The appropriate assumptions bulleted above provide for a
+
+34
+simple analysis in order to streamline proposal development. This allows sales engineers to
+quickly determine feasibility of a project and provide system solutions in a shorter time-period
+keeping businesses profitable. Design engineers are anticipated to apply a much more thorough
+analysis when the job contract is won. With the appropriate range of inlet and outlet
+temperatures, wet-bulb temperature, and required refrigeration tons, design day conditions can be
+developed and then the selection software can be used.
+
+Establishing Design Day Conditions and Troubleshooting Inputs
+Codes, Standards, and Ratings Systems
+Upon initial selection, design variables were input as follows: 120 gpm flow, 88 F degree tower
+inlet water, 70 F tower outlet temperature, and a 67.5 F wet-bulb temperature. Pure water is used
+as our refrigerant because of our temperature range of application. However, warnings showed
+up with the list of equipment selections because software inputs/design day conditions did not
+meet Cooling Technology Institute’s standards.
+Codes, standards, and rating systems decided by ASHRAE and the Cooling Technology Institute
+have provided minimum performance requirements for heat rejection equipment. Based on test
+procedures CTI ATC-105S and CTI STD-201 RS, this will provide a performance rating for
+closed-circuit cooling towers. For propeller or axial fan closed-circuit cooling towers, the
+minimum performance requirement is ≥16.1 gpm/HP at conditions of 102 F/ 90 F/ 75 F
+(ASHRAE Standard 90.1). These temperatures represent the inlet water temperature, outlet water
+temperature, and regional entrance wet-bulb temperature respectively.
+Since BAC selection software follows those standards and warnings were indicated, specifically
+the minimum approach parameter, the original software selection criteria needed to be adjusted.
+This re-selection is required because the leaving fluid temperature must be 5 F above regional
+wet bulb temperature according to the CTI STD-201 limits of thermal certification as seen in
+Table 10.
+Table 10 CTI STD-201 thermal certification limits for Cooling Towers/Closed-Circuit Coolers
+
+Consequentially, in order to achieve the same total heat rejection, the range must be kept the
+same but at a pair of higher inlet and outlet water temperatures. A second, modified selection
+was made with the following criteria: FXV model, 120gpm, 95F/75F/67.5F, pure water, and with
+a price ranked listing of the results. Previous methods for calculating exit water temperature
+verify that water can expect to leave at 93 F for the second selection, but an intentional 95 F was
+
+35
+applied to provide an additional safety factor for thermal performance. Table 11 illustrates the
+modifications to design day conditions.
+Table 11 Design Day Conditions
+Design
+Day
+Original
+Modified
+
+Tower
+Inlet
+Temp
+F
+88
+95
+
+Tower
+Outlet
+Temp
+F
+70
+75
+
+Ambient
+Dry Bulb
+Temp
+F
+80
+80
+
+Wet
+Bulb
+Temp
+F
+67.5
+67.5
+
+Range/
+Approach
+F
+18/3.5
+20/7.5
+
+Heat
+Rejection
+Rate
+BTUH
+1,080,000
+1,200,000
+
+Fan
+Speed
+%
+50%
+50%
+
+Tower
+Efficiency
+%
+88%
+73%
+
+Additional Selection Requirements
+Once the design day criteria had been input, there were additional selection requirements a
+selector could have used. This included a maximum fluid pressure drop, number of tower units,
+model accessories, and limits on sound pollution, total horsepower, and dimensions. After the
+construction site had been surveyed for its available space, there were no other requirements
+necessary to further refine selection.
+
+BAC Software Selection
+Although modified selection reflects a lower tower efficiency, it provides system redundancy for
+non-ideal weather conditions and complies with CTI standards. The software produced a list of
+models with the top two options being the FXV-0806B-28D-L and the FXV-806B-32D-K. Both
+options were absent of warnings and met thermal performance standards. The options were low
+first cost selection (LFC) and recommended selection (Rec) based on payback impact
+respectively.
+
+36
+
+Figure 24 LCF tower selected
+
+37
+
+Figure 25 Rec cooling tower selection
+
+38
+Table 12 BAC software selection results
+Selection Criteria: 120 gpm, 95F/75F/67.5F, pure water, price ranking
+
+-1,200,000
+
+BTUH rejection
+Selection
+Type
+
+Product
+
+Qty
+
+-100 Tons
+
+Model
+
+FXV0806B28D-L
+FXV0806B32D-K
+
+Series
+
+Total
+
+Warnings
+
+Fan
+
+Pump
+
+Exist
+
+Motor
+
+Motor
+
+(HP)
+
+(HP)
+
+no
+
+15.00
+
+2.00
+
+No
+
+no
+
+10.00
+
+2.00
+
+No
+
+Energy
+
+Warnings
+
+Rating
+
+Exist
+
+FXV
+
+1.00
+
+Rec
+
+FXV
+
+1.00
+
+Unit
+
+Fluid
+
+Reserve
+
+Price
+
+Payback
+
+Height
+
+Pressure
+
+Capability
+
+Rank
+
+(Years)
+
+Drop
+
+(%)
+
+LFC
+Rec
+
+73%
+
+Total
+
+LFC
+
+18′
+01.00″
+18′
+01.00″
+
+Efficiency
+
+(USGPM
+
+(psi)
+
+/HP)
+
+0.86
+
+5.16
+
+1.00
+
+--
+
+23.29
+
+No
+
+0.95
+
+1.48
+
+1.02
+
+1.07
+
+32.00
+
+No
+
+Now that we have models of cooling towers, another decision matrix was created to objectively
+select the best system solution.
+Table 13 Decision Matrix for FXV Model
+FXV Comparison Table
+Raw Scoring Table
+1-3 where, 1 = poor, 2 = satisfactory, 3 = excellent
+Product
+Energy
+Reserve
+Cost
+Rating
+Capacity
+28D-L
+2.00
+2.00
+2.25
+32D-K
+1.75
+3.00
+2.00
+Importance Factor
+0-1 where, 1 = highest importance, 0 = lowest importance
+Product
+Energy
+Reserve
+Cost
+Rating
+Capacity
+0.50
+0.75
+1.00
+Weighted Scoring Matrix
+TOTAL
+28D-L
+1.00
+1.50
+2.25
+4.75
+32D-K
+0.88
+2.25
+2.00
+5.13
+
+Based on the decision matrix, the FXV-806B-32D-K is the best, long-term system solution.
+Although the first model provides a reserve capacity, it does not compare to the level of impact
+
+39
+the energy savings of the second model. This was the model recommended for best payback in
+terms of annual energy savings. Specifics on various savings will be described in the engineering
+economics portion of this report.
+
+Engineering Economics of Product Selection
+Capital Budgeting Metrics
+For this report, the five payback metrics used are: return-on-investment, the payback period, net
+present value, internal rate of return, and modified internal rate of return. Each method of budget
+analysis gives decision makers unique insight into the feasibility of the project.
+Return on Investment
+This value can be given as a percentage or dollar amount comparing the cost of investment to the
+expected returns over a certain period. This term is very familiar to facility managers when it
+comes to making decisions for capital investments. Although this does not include the time value
+of money, this should be included in sales presentations to indicate feasibility and facilitate a
+simple understanding among decision makers. For the pro forma spreadsheet, the ROI was
+computed over the first three years and did include discounted cash flows.
+𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆 𝑅𝑅𝑅𝑅𝑅𝑅 =
+
+Payback Period
+
+𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼 𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅 − 𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼 𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶
+, Eqn. 11
+𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼 𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶
+
+This method provides a rough estimation as to how quickly a project can be paid off. This is also
+useful for determining the feasibility of the project during the sales presentation. This will allow
+decision makers to understand how the project needs to be financed and how it fits within the
+vision of the company’s priorities. Normally in sales presentations, this method does not account
+for the time-value of money. However, cash flows on the pro forma statements have all future
+cash flows discounted taking the time-value of money into account.
+𝑃𝑃𝑃𝑃 (𝑦𝑦𝑦𝑦𝑠𝑠) = 𝑛𝑛 (𝑦𝑦𝑦𝑦𝑦𝑦 𝑢𝑢𝑢𝑢𝑢𝑢𝑢𝑢𝑢𝑢 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟) −
+
+Net Present Value
+
+𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 𝑐𝑐𝑐𝑐𝑐𝑐ℎ 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑎𝑎𝑎𝑎 𝑦𝑦𝑦𝑦𝑦𝑦𝑦𝑦 𝑛𝑛
+, Eqn. 12
+𝑦𝑦𝑦𝑦𝑦𝑦𝑦𝑦 𝑛𝑛 𝑐𝑐𝑐𝑐𝑐𝑐ℎ 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓
+
+This indicates how the initial cash outflow (investment) can be compared to discounted future
+cash inflows and outflows. A positive NPV value tells us that our future cash flows justify the
+initial investment taking the time-value of money into consideration. Determining a
+representative discount rate is important and will be further explored.
+𝑇𝑇
+
+𝑁𝑁𝑁𝑁𝑁𝑁 = �
+𝑡𝑡=1
+
+𝐶𝐶𝑡𝑡
+− 𝐶𝐶𝑜𝑜 , Eqn. 13
+(1 + 𝑟𝑟)𝑡𝑡
+
+40
+𝑊𝑊ℎ𝑒𝑒𝑒𝑒𝑒𝑒,
+𝐶𝐶𝑡𝑡 = 𝑛𝑛𝑛𝑛𝑛𝑛 𝑐𝑐𝑐𝑐𝑐𝑐ℎ 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 𝑡𝑡ℎ𝑒𝑒 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 𝑡𝑡
+𝐶𝐶𝑜𝑜 = 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐
+𝑟𝑟 = 𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟
+𝑡𝑡 = 𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 𝑜𝑜𝑜𝑜 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝
+
+Internal Rate of Return
+
+This value indicates the discount rate at which future cash flow benefits from a project would
+have a net present value of zero. The higher the IRR, the more valuable a capital investment
+appears. This method allows for easier interpretation, regardless of financial scale, with percent
+values. Although the time-value of money is considered, the IRR calculation assumes that
+positive cash flows from the project can be reinvested at a return rate identical to that of the
+initial project. To accommodate for this, the MIRR constructs a more conservative reinvestment
+rate and includes the finance rate.
+𝑇𝑇
+
+𝑁𝑁𝑁𝑁𝑁𝑁 = 0 = �
+𝑡𝑡=1
+
+𝐶𝐶𝑡𝑡
+− 𝐶𝐶𝑜𝑜 , Eqn. 14
+(1 + 𝐼𝐼𝐼𝐼𝐼𝐼)𝑡𝑡
+
+𝑊𝑊ℎ𝑒𝑒𝑒𝑒𝑒𝑒,
+𝐶𝐶𝑡𝑡 = 𝑛𝑛𝑛𝑛𝑛𝑛 𝑐𝑐𝑐𝑐𝑐𝑐ℎ 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 𝑡𝑡ℎ𝑒𝑒 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 𝑡𝑡
+𝐶𝐶𝑜𝑜 = 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐
+𝑟𝑟 = 𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟
+𝑡𝑡 = 𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 𝑜𝑜𝑜𝑜 𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝
+
+Modified Internal Rate of Return
+
+This method offers a more realistic value for rate of return. This is because the water savings
+could not be directly reinvested in another identical cooling tower because our operation only
+requires one solution of that capacity. Thus, the reinvestment rate of return for this project is
+based on the cost of capital. Since this is a private company, information normally used to
+calculate the cost of capital is not available. Therefore, the cost of capital for publicly traded food
+processors was used for the reinvestment rate. From a sample of 87 different food processors, a
+cost of capital was determined to be 5.76% (NYU 2017). Additionally, any negative cash flows
+would be discounted by a finance rate of 6%. This represents a typical interest rate at which
+banks will loan to industrial customers on construction jobs. The resulting percentage values are
+always lower than the IRR.
+𝑛𝑛
+
+𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀 = �
+
+𝐹𝐹𝐹𝐹 (𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 𝑐𝑐𝑐𝑐𝑐𝑐ℎ 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓, 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟)
+− 1, Eqn. 15
+−𝑃𝑃𝑃𝑃 (𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 𝑐𝑐𝑐𝑐𝑐𝑐ℎ 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓, 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟)
+
+Minimum Acceptable Rate of Return
+
+41
+This is a value that is used by facility managers to decide whether a project is attractive or not.
+An acceptable project is deemed when the IRR or MIRR exceeds the hurdle rate (MARR).
+Typically, the hurdle rate developed by financial mangers is dependent on the company’s cost of
+capital and risk tolerance.
+Pro Forma Income Statement
+This type of financial document is a tool used by budget analysts to understand the resulting cash
+flows from anticipated changes in operation ranging from acquisitions to large capital
+investments. This document will allow sales engineers and decision makers to compute payback
+metrics to justify or nullify the project. The full pro forma spreadsheet for the 8-year budget
+analysis can be found in Appendix M. The following subtopics are items affecting or
+representing various cash flows.
+Initial Investment Costs
+Determining relevant cash flows includes any positive or negative change in cash as a result of
+the new investment. The most obvious cash flow would be the net capital investment the
+company must make for the cooling tower including the following components: installation,
+freight cost, sales tax, and the equipment itself. This fixed cost is primarily justified by the
+decrease in processed water contributing to a positive, gradient cash flow series.
+Water Rates
+The pro forma financial statements are in terms of discrete years (2017, 2018, etc.) despite the
+fact that water rates are increased on a semi-annual basis in the months of January and June.
+Based on averages of historical water rate increases, an annual increase of 5% was applied to
+projected water rates. Figure 26 below and includes historical water rates with projections of
+their future values of water rate. Appendix O verifies the historical water rates.
+
+Dollar per thousand gallons
+
+Santa Rosa Water Rate Trend
+$9.00
+$8.00
+$7.00
+Projected Water Rate
+Historical Water Rate
+
+$6.00
+$5.00
+$4.00
+$3.00
+2008
+
+2010
+
+2012
+
+2014
+
+2016
+2018
+Time
+
+2020
+
+Figure 26 Plot of Water Rate v. Time
+
+2022
+
+2024
+
+2026
+
+42
+The historical data, the Sonoma County Water Agency website, and public media outlets suggest
+that this rate increase is a feasible value to apply. Representing the changes in the water rates was
+an important step in the budget analysis because neglecting those changes would have led to a
+discrepancy of approximately $85,000 dollars less in the net present value for the 8-year budget
+analysis.
+Sewage Rate
+In addition to the water that delivered, the company must pay for the water it sends back to the
+wastewater treatment plant. The sewage rate for this particular application is based solely on the
+volume of water sent back, not necessarily the quality of the water (i.e. B.O.D., TSS). However,
+the gradual sewage rate increases were computed similarly to the methodology applied to water
+rates previously discussed. Figure 27 below. Appendix O verify the historical sewage rates.
+Santa Rosa Sewage Rate Trend
+
+Dollar per thousand gallons
+
+$18.00
+$17.00
+$16.00
+$15.00
+Projected Sewage Rate
+
+$14.00
+
+Historical Water Rate
+
+$13.00
+$12.00
+$11.00
+$10.00
+2010
+
+2012
+
+2014
+
+2016
+
+2018
+Time
+
+2020
+
+2022
+
+2024
+
+2026
+
+Figure 27 Plot of Sewage Rate v. Time
+
+This rate increase is accounted for in the pro forma financial statements in terms of discrete years
+with an annual 3% rate increases. Neglecting the changes in sewage rates would have led to a
+discrepancy of approximately $114,000 dollars less in the net present value for the 8-year budget
+analysis.
+Cooling Tower Energy Consumption
+The next relevant cash flow would be the energy consumption from running the new piece of
+heat rejection equipment. This energy consumption is due to the running fan, the sump pump,
+and the circulation pump that goes into the facility. PG&E electricity provider applies
+complicated algorithms and rate structures in order to encourage sustainable energy
+consumption. Among the many things that influence the electricity rate, power-quality and the
+
+43
+demand charge associated with current rate plans will not be considered in the scope of this
+study. However, factors like the projected rate increases over the 8-year period, time-of-day rate
+structure, and customer type will be considered. The most recent electricity rates publicly
+available, for industrial customers (E-20) requiring primary power distribution (i.e. supplied
+voltage between 2,000 and 50,000 volts), are in Figure 28 outlining the $ per kWh and
+distribution of operating hours.
+
+Number of Hours
+
+Time-of-Day PG&E Tariff
+4.50
+4.00
+3.50
+3.00
+2.50
+2.00
+1.50
+1.00
+0.50
+0.00
+
+4.00
+
+4.00
+
+2.00
+
+$0.07869
+
+$0.10344
+
+$0.14369
+
+Dollar per kWh
+Off-Peak
+
+Partial Peak
+
+On-Peak
+
+Figure 28 Cooling tower energy load profile
+The rates in the bar chart above are associated with 2016 values, but will be applied over the
+entirety of the year to simplify analysis and eventually provide a more conservative NPV per
+year. The distribution of hours of cooling-tower operation was based on the facility’s standard
+operating procedures of cooking and cooling five batches of product within the period of 3:30
+AM and 9:30 PM. Each batch of food product is cooled within two hours to meet FDA
+standards for food safety, to retain food quality, and maintain current food-processing capacity.
+Finally, over the 8-year budget analysis, the electricity rates are anticipated to increase each year
+by 3%.
+The power requirements for the fan and the sump pump were based strictly off the nominal
+horsepower ratings listed on the tower datasheet generated by BAC software. Although a
+variable frequency drive will be used to adjust the fan speed, thus lowering power consumption,
+full-speed operation was considered exclusively for the energy consumption analysis. In reality,
+tower fans can be expected to be operating at speeds as low as 50% of maximum.
+The circulating pump power consumption was based on interpretations from the pump curve and
+worst case pumping scenario for the system curve. With a designated operating point, one could
+determine a representative power consumption for the energy analysis. Two scenarios were
+considered for operating points: normal and worst-case operation. Normal operation is based on
+operation of 8 kettles of 500-gallon capacity operating simultaneously on the main kettle deck.
+However, the worst-case scenario was based on the to the simultaneous cooling of 8, 500-gallon
+kettles hydraulically furthest from the pumping station. Based on interpretation of the piping
+
+44
+layout diagram provided, head and flow requirements were developed to represent the most
+power intensive pumping scenario. The following head and flow requirements were largely
+based on kettle design, friction loss estimates, static head, NPSH, and changes in elevation. Pipe
+friction losses were based on the Hazen Williams equation to provide rough estimates on
+pumping costs. Friction loss calculations will need to be reviewed by the refrigeration design
+engineer using the Darcy–Weisbach equation to account for turbulent flow and the temperature
+gradients throughout the pumping system. Furthermore, friction losses across various valves and
+the glycol heat exchanger were included as rough estimates, but also require further
+investigation. Finally, a deeper understanding of kettle deck operation will provide an optimized
+pump selection based on a representative system curve. By providing a slightly oversized pump
+station and variable frequency drive, operators can adjust pump speed according to what
+minimizes energy cost while maintaining production capacity. Once the head requirements for
+both scenarios were considered, the following equations could be applied to estimate the required
+motor horsepower for the pump station.
+𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊 𝐻𝐻𝐻𝐻 =
+𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵 𝐻𝐻𝐻𝐻 =
+𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀 𝐻𝐻𝐻𝐻 =
+
+𝑇𝑇𝑇𝑇𝑇𝑇 ∗ 𝐺𝐺𝐺𝐺𝐺𝐺
+, Eqn. 16
+3960
+
+𝑊𝑊𝑊𝑊𝑊𝑊
+, Eqn. 17
+𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃 𝐸𝐸𝐸𝐸𝐸𝐸.
+𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵 𝐻𝐻𝐻𝐻
+, Eqn. 18
+𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀 𝐸𝐸𝐸𝐸𝐸𝐸.
+
+With normal operation and worst case operation requiring 5.7HP and 8.8HP respectively, a
+nominal 10HP motor would be selected for the capital budget analysis. In reality, a variable
+frequency drive will allow operators to adjust motor speed allowing for adjustable flow and
+head. Therefore, expenses on the pro forma financial statements will be inflated compared to
+what the food processing facility will actually incur.
+Cooling Tower Water Usage
+Another annual cost associated with our capital investment would be the water losses required to
+cool the refrigerant returning back to the heat load in our closed-loop. Calculating the total water
+usage is important for the pro forma financial statements to investigate payback on project. Total
+water use by cooling towers can be described by Equation 19 below.
+𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊 𝑈𝑈𝑈𝑈𝑈𝑈 = 𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸 𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿 + 𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵 + 𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷, Eqn. 19
+
+The first category of water loss would be due to evaporation. Simply put, the spray water in the
+tower making contact with the refrigerant coils, which are plumbed into the kettle jackets, allows
+the heat to be rejected into the atmosphere via evaporation. This is represented by the latent
+component of heat transfer discussed in the literature review.
+
+45
+
+The next source of water loss is called drift loss. This loss is usually composed of only .1% to
+.3% of refrigeration circulation rate (e.g. at .1% and 100gpm refrigerant flow, 0.1gpm of drift
+loss). These consist of liquid droplets that get forced out of the outlet due to high air flow.
+Another loss is the required bleed-off of the water in the sump tank of the cooling tower. The
+selected cooling tower has been designed for 3 cycles of concentration. Due to all of these
+various losses, the remaining water eventually increases in concentration of bicarbonates and
+other constituents that could potentially compromise cooling tower operation. To prevent this,
+water is systematically bled-off in order to prevent costly maintenance caused by the formation
+of deposit on the coil surface.
+For this report, two approaches were used to compute water usage: 1) interpretation from the
+psychometric chart with rule-of-thumb equations 2) utilizing an online cooling tower water-loss
+calculator.
+Method 1
+For the first method, psychrometric chart software by Greenheck was used to provide accurate
+values for properties at the inlet and exit of the cooling tower. The following assumptions were
+used for the computations:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Mass and energy transfer scenario
+Total energy rejected by tower absorbed by air
+Conservation of mass principle through tower system
+Exit air at saturated conditions (i.e. 100% relative humidity)
+Atmosphere at a pressure of 1atm
+Fan running at half-speed
+Affinity law applies
+Average specific volume acceptable for water loss estimation
+80 F dry bulb inlet temperature representative for a “design day”
+
+These assumptions allow us to use the psychrometric chart to indicate the location for the two
+points, compare the change in enthalpy, and dictate the change in humidity ratio. The change in
+humidity ratio indicates the amount of water vapor added into the air as it passes through the
+cooling tower as seen in Figure 29.
+
+46
+
+Figure 29 Psychrometric chart with indicated process and the associated enthalpy change
+After adjustments to exit dry-bulb temperatures were made to correspond to a 1,200,000 BTUH
+rate of heat rejectetion and tower specifications, Equation 19 indicated the evaporative loss to be
+1.95 gpm.
+𝑎𝑎𝑎𝑎𝑎𝑎 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 �
+
+𝑙𝑙𝑙𝑙 𝑑𝑑𝑑𝑑𝑑𝑑 𝑎𝑎𝑎𝑎𝑎𝑎
+𝑓𝑓𝑡𝑡 3
+𝑙𝑙𝑙𝑙 𝐻𝐻20
+𝑙𝑙𝑙𝑙 𝐻𝐻20
+� ∗ ∆𝑊𝑊 �
+� = 𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸 𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿 �
+� Eqn. 19
+� ∗ 𝑎𝑎𝑎𝑎𝑎𝑎 𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑𝑑 �
+3
+𝑓𝑓𝑡𝑡
+𝑚𝑚𝑚𝑚𝑚𝑚
+𝑙𝑙𝑙𝑙 𝑑𝑑𝑑𝑑𝑑𝑑 𝑎𝑎𝑎𝑎𝑎𝑎
+𝑚𝑚𝑚𝑚𝑚𝑚
+
+For drift loss, the rule-of-thumb of .3% of circulating tower flow was used which amounted to
+0.36 gpm. Blowdown used an equation based off the percentages of evaporative and drift loss
+relative to circulating flow. Equation 20 below, with three cycles of concentration, indicates that
+0.62 gpm were lost due to blowdown.
+𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵 (𝑔𝑔𝑔𝑔𝑔𝑔) = 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 𝑓𝑓𝑓𝑓𝑓𝑓𝑓𝑓 ∗ �
+
+% 𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸 𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙
+− % 𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷 � , Eqn. 20
+𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 𝑜𝑜𝑜𝑜 𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐𝑐 − 1
+
+This amounted to a total water usage of 2.93 gpm for Method 1.
+
+47
+Method 2
+The second method required input information about tower flow, range, ambient wet-bulb
+temperature, cycles of concentration, and drift rate. Figures 30 and 31 illustrate the input
+variables and the output for water usage respectively.
+
+Figure 30 Water Usage Calculator Inputs (provided by SPX Cooling)
+
+Figure 31 Water Usage Calculator Outputs (provided by SPX Cooling)
+
+Method 2 amounted to a total of 3.35 gpm of industrial fluid cooler water usage. The following
+graph was generated by the calculator to indicate water usage based on varying wet bulb
+temperature and cooling tower range.
+
+48
+
+Figure 32 Water Usage Graph (provided by SPX Cooling)
+
+Both Method 1 and 2 provided reasonable values of 2.93 gpm and 3.35 gpm respectively. It
+should be taken into consideration that changing ambient dry bulb inlet temperature, tower
+aging, and fan speed will produce varying water loss values. However, the inlet dry bulb
+temperature, fan speed, and wet bulb temperatures selections were intentional to represent a
+"design day". With these considerations, a 3 gpm of water use will be used for the pro forma
+financial statements to illustrate realistic payback period and return on investment. The
+distribution of water use from Method 1 was used and the blowdown value was increased by
+0.07 gpm. Table 14 indicates volume of water consumed by each category of use and their
+relative percentages of total water use. It is important to separate these types of water use
+because blowdown must be accounted for in the sewage costs as well. Table 14 below was
+developed in accordance with 3110 operational hours per year.
+
+49
+
+Table 14 Distribution of industrial fluid cooler water use
+Blowdown
+127,828
+23%
+
+Drift
+Evaporative Total Water Use
+67,176
+363,883
+558,887 gal/year
+12%
+65%
+100%
+
+Miscellaneous cash flows
+This equipment also has an associated annual cost for maintenance and inspection. The cost
+associated for the technician services is two negative cash flows of $1500 dollars per year.
+When looking to determine opportunity cost of the cooling tower investment, it is difficult to
+develop a substantial cost compared to the benefits this investment provides. The unit will takeup approximately 143 square-feet and is placed behind the building in a remote location. Due to
+the immense returns on investment, opportunity cost related to space can be neglected. The only
+opportunity cost associated with this investment is not using the cash in another type of
+investment (stock market, bond, annuity, etc.). Since this is covered by the MIRR, the pro forma
+statements will not double count opportunity cost in the pro forma financial statement.
+On a final note, a boost in productivity may occur due to this improvement in the cooling
+process. However, the positive cash flows associated with the increased operational capacity is
+important, but outside the scope of this budget analysis.
+Depreciation
+Depreciation of the cooling tower product was received from the IRS website with tables of asset
+class codes and their associated MACRS. The cooling tower was found to have a 7-year recovery
+period (OK State 2007). It should also be noted that the salvage value of the cooling tower is
+zero considering how specialized the tower is to this particular facility. This would make the
+cooling tower a particularly difficult product to resell.
+Discount Rate
+In determining the discount rate, the factors that influence its selected value are the internal
+required rate of return and internal financial advisory.
+The required rate of return is influenced primarily by the current risk-free rate of return and
+inflation. The risk-free rates are commonly associated with the returns offered on treasury bonds.
+Treasury bills at the end of year 2016 indicate an approximate rate of return of .5% for the
+maturity of a year-length treasury bond. An approximate inflation rate of 2% was determined
+based on typical values observed in the 5 years prior to 2016. The sum of these two would
+produce an approximate required rate of return of 2.5%.
+The liquidity of assets and the health of the food processing industry influence the risk tolerance
+of the internal financial advisory for the given food processing facility. Since much of this
+
+50
+facility’s fixed assets contribute to its equity, the company’s liquidity ratio is anticipated to be
+low. Additionally, the company’s current assets consist mostly of raw food as inventory, which
+is a nondurable good, thus further contributing to a lower liquidity ratio. This ratio indicates how
+easily the company could transform capital into liquid funds in the case of an emergency to pay
+off debts. These financial and market behavior allow managers tailor the minimum acceptable
+rate of return to their respective industry. Accounting for project risk and the liquidity of the
+facility, an additional 3.5% should contribute to the minimum attractive rate of return.
+Since the MARR was estimated to be 6%, this will also be used as the discount rate. Managers
+must adjust the pro forma financial spreadsheet to use a discount rate that reflects the given
+facility’s precise minimum attractive rate of return.
+Capital Budget Analysis Results
+Table 15 Summary of important rates used to develop pro forma financial spreadsheet
+Annual Rate
+2.0%
+0.5%
+6.0%
+5.8%
+3.0%
+5.0%
+
+Category
+inflation
+T-bill yield
+discount/finance
+reinvestment (cost of capital)
+sewage rate increase
+water rate increase
+
+Table 16 Results for various corporate finance metrics
+ROI =
+EOY 3
+
+32% NPV =
+
+$ 1,230,042.47 IRR = 42% MIRR = 21%
+
+Payback
+Period =
+
+2.31 years
+
+Table 16 above shows that this project is highly profitable. By EOY 3, the company can expect
+to make their money back with a recovery of $212,672. The net present value indicates that this
+project is worth over 1.2 million dollars in year 2016. Furthermore, the IRR and MIRR are likely
+to exceed the company’s hurdle rate which further encourages initiating the project ATC has to
+offer.
+
+51
+
+Sensitivity Analysis
+Before engaging in lofty financial investments, a sensitivity analysis should be used to test the
+integrity of the project potential changes in variables contributing to significant cash flows. This
+analysis was conducted for each individual scenario that could jeopardize the profitability of this
+capital investment:
+1.
+2.
+3.
+4.
+
+A reduction in the cost of water by 25%,50%,75%, and 100% for all 8 years
+A reduction in the cost of sewage by 25%,50%,75%, and 100% for all 8 years
+An electric energy rate increase of two to three times the normal rate for all 8 years
+A complete failure of the original cooling tower followed by a complete reinvestment of
+the original net capital investment amount: $664,600
+
+Scenario 1: Reduction of the Cost of Water
+The measure of the success of the project can be interpreted from its resilience to the reduction
+of the water rate in the sensitivity analysis. The excel document tables indicate that if the water
+rate was reduced to zero, for all 8 years and ceteris paribus, the sewage rate savings would still
+provide a NPV of $664,601 and an IRR of 27%. With further testing, profitability was most
+sensitive to changes in the sewage rate.
+Scenario 2: Reduction of the Cost of Sewage
+Keeping all other factors constant, if there was no sewage rate applied to the facilities
+wastewater, for eight consecutive years, this would make the project unprofitable with a NPV of
+-$7,626 and an IRR of 5.7%. This negative net present value makes sense for an investment
+project considering the discount rate is 6%. Essentially, the earnings are being discounted at a
+higher rate than the potential for returns. However, this scenario is highly unlikely considering
+the sewage rates are trending to rise 3% annually and the facility will continue to discharge water
+to treatment facilities.
+Scenario 3: Energy Rate Price Hikes
+The capital investment was also resilient to increases in energy costs two to three times the
+normal rate described by the E-20 industrial consumer rates from PG&E. Despite the tripled
+energy costs, for all 8 years, the net present value was largely unaffected with a NPV as high as
+$1,170,053.
+Scenario 4: Complete Failure of Industrial Fluid Cooler
+Also, it was determined that the cooling tower would have to break down 3 consecutive years for
+EOY 1, EOY 2, and EOY 3 to produce the first negative present value. Even if the machinery
+were to break down twice, for EOY 1 and EOY 2, the project would still have a NPV of
+$316,187. This was tested by adding a negative -$664,600 cash flow into the maintenance
+category ceteris paribus. This demonstrates the large future cash flows in savings that come from
+the water and sewage savings.
+
+52
+Final Engineering Economics Remarks
+Both the sensitivity analysis and the financial metrics indicate that the industrial fluid cooler
+capital investment would be a highly profitable investment at the given food processing facility.
+
+53
+
+RECOMMENDATIONS
+The kettle cooling and sustainability project can expect three outcomes: water and sewage
+savings equivalent to an average of $397,342 annually, a 97% decrease in water usage, and an
+improved refrigeration process contributing to improved food safety. Additionally, the local
+water authorities of Santa Rosa have provided rebates amounting to $200,000 dollars to assist
+with the initial investment.
+After the kettle cooling improvements, the given food processing facility should invest in the
+improvement of the second phase of cooling. The system solution has a glycol heat exchanger
+plumbed into it to streamline this improvement. The upgrade would allow the facility to:
+1)
+2)
+3)
+4)
+5)
+6)
+
+Eliminate the bucket cooling process by using the kettles as heat exchangers
+Lower the end cooling temperature in phase two
+Improve the flexibility of both phase 1 and 2 cooling processes
+Provide the capability to further reduce phase 1 cooling time
+Ensure resilience of cooling tower performance on days with high wet-bulb temperatures.
+Meet the increase in capacity of incoming food processing equipment
+
+Improved monitoring of flow rates and temperature profiles of the kettles are also important for
+future facility improvements. Additionally, an outline of the food processing facility’s daily
+kettle deck operation should be documented so that the pumping station and distribution system
+can be further optimized. Furthermore, an internal case study should be conducted by the given
+food processing facility to measure how much more product is being produced as a result of the
+system solution.
+Currently, the facility kettle decks produce an average of 4663 lbs per operational hour with
+3110 operating hours per year (See Appendix B). Since kettle deck is responsible for 77% of the
+total food production, improvements to the kettle deck are likely to result in greater annual
+production output. Assuming there are no upstream bottlenecks and the demand for the product
+was there, this would translate into increased annual sales. This extrinsic benefit of increased
+revenue could be applied to the pro forma financial statements further justifying the project. The
+conclusions of such a study would further incentivize future project improvements to increase in
+production capacity at the kettle deck of similar food processing facilities. Systems solutions,
+such as Kettle Cooling and Sustainability Project, are relevant to many industrial and commercial
+facilities by coupling profitability with sustainability.
+
+54
+
+REFERENCES
+Amon, R. , Maulhardt, M. , Wong, T. , Kazama, D. , & Simmons, C. (2015). Waste heat and
+water recovery opportunities in california tomato paste processing. Applied Thermal
+Engineering, 78, 525.
+BAC. (2015, October). Product & Application Handbook – Volume V [PDF]. Baltimore:
+Baltimore Air Coil Company.
+Berg, N. , & Hall, A. (2017). Anthropogenic warming impacts on California snowpack during
+drought. Geophysical Research Letters, 44(5), 2511-2518.
+C. (2016, June). CITY OF SANTA ROSA 2015 URBAN WATER MANAGEMENT
+PLAN [PDF]. Santa Rosa: Santa Rosa Water Department.
+C. (2016, January). City of Santa Rosa Utility Rates [PDF]. Santa Rosa: Santa Rosa Water
+Department.
+Center for Western Weather and Water Extremes. (n.d.). Retrieved January, 2017, from
+http://cw3e.ucsd.edu/overview/
+Damodaran, A. (2017, January). Cost of Capital by Sector (US). Retrieved May, 2017, from
+http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/wacc.htm
+Erbe, D. (2016). Energy Standard for Buildings Except Low-Rise Residential
+Buildings [PDF]. Atlanta: ASHRAE.
+Food Technology & Processing. (n.d.). Retrieved November, 2016, from http://aggie
+horticulture.tamu.edu/food-technology/food-processing-entrepreneurs/microbiology-of
+food/
+Gladis, S. , Ice Slurry Thermal Energy Storage for Cheese Process Cooling, American Society of
+Heating, Refrigeration, and Air-Conditioning Engineers, Inc. from ASHRAE
+Transactions 1997, Volume 103, Part 2.
+Gleick, P. H. (2013, November). Waste Not, Want Not: The Potential for Urban Water
+Conservation in California. Retrieved October, 2016, from
+http://pacinst.org/publication/waste-not-want-not/
+Jasperse, J. (2014, December). SGMA in Sonoma County - Presentation [PDF]. Sonoma County
+Water Agency.
+Prakash Rao, Aimee McKane, and Andre de Fontaine. (2015). Energy
+Savings from Industrial Water Reductions, 2015 ACEEE Summer
+Study on Energy Efficiency in Industry, Buffalo, NY
+United States Geological Survey (2010). Water Use Data For California [Data file]. Retrieved
+
+55
+from https://waterdata.usgs.gov/ca/nwis/water_use/
+United States, Food and Drug Administration, U.S. Public Health Service. (n.d.). Food Code
+2013 (pp. 90-91). U.S. DEPARTMENT OF HEALTH AND HUMAN SERVICES.
+Vengateson, U. (2017). Cooling towers: Estimate evaporation loss and makeup water
+requirements. Chemical Engineering, 124(4), 64-67.
+Wilson, C. M. (2011, January). THE REASONABLE USE DOCTRINE & AGRICULTURAL
+WATER USE EFFICIENCY (Rep.). Retrieved April, 2017, from State Water Resources
+Control Board website:
+http://www.waterboards.ca.gov/board_info/agendas/2011/jan/011911_12_reasonableused
+octrine_v010611.pdf
+
+56
+
+APPENDICIES
+APPENDIX A
+
+57
+
+APPENDIX B
+
+58
+
+APPENDIX C
+
+59
+
+APPENDIX D
+
+60
+
+APPENDIX E
+
+61
+
+APPENDIX F
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+APPENDIX G
+
+72
+
+APPENDIX H
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+APPENDIX I
+
+80
+
+APPENDIX J
+
+Note: Friction losses based on engineering drawings that could not be included in the Appendices due to confidentiality
+
+81
+
+82
+
+APPENDIX K
+
+83
+
+APPENDIX L
+
+84
+
+85
+
+86
+
+87
+
+APPENDIX M
+
+88
+
+NPV Profile
+$1,800,000.00
+$1,600,000.00
+$1,400,000.00
+
+Net Preent Value
+
+$1,200,000.00
+$1,000,000.00
+y = -6E+05ln(x) - 477543
+R² = 0.9902
+
+$800,000.00
+
+NPV Profile
+
+$600,000.00
+$400,000.00
+$200,000.00
+$0.00
+($200,000.00)
+($400,000.00)
+
+0%
+
+10%
+
+20%
+
+30%
+
+40%
+
+50%
+
+Required Rate of Return % (Discount Rate)
+
+60%
+
+70%
+
+89
+
+6% discount/finance rate
+3% sewage rate increase
+5.8% reinvestment rate
+5% water rate increase
+
+90
+
+APPENDIX N
+
+91
+
+NPV Profile *
+$200,000.00
+$100,000.00
+$0.00
+Net Preent Value
+
+0%
+($100,000.00)
+
+10%
+
+20%
+
+30%
+
+40%
+
+50%
+
+70%
+
+y = -2E+05ln(x) - 594449
+R² = 0.9898
+
+($200,000.00)
+
+NPV Profile
+
+($300,000.00)
+($400,000.00)
+($500,000.00)
+($600,000.00)
+
+60%
+
+Required Rate of Return (Cost of Capital)
+
+92
+
+93
+
+APPENDIX O
+
+94
+
+APPENDIX P
+
+C a l i f o r n i a P o l yt e c h n i c S t a t e Un i ve r s i t y
+
+06/01/2016
+
+BioResource and Agricultural Engineering Department
+
+DeGiorgio, Nicolo
+
+ASM Senior Project Contract
+
+007551319
+
+ASM
+
+Project Title
+Kettle Cooling and Sustainability Project
+
+How Project Meets Requirements for the ASM Major
+ASM Project Requirements - The ASM senior project must include a problem solving
+experience that incorporates the application of technology and the organizational skills of
+business and management, and quantitative, analytical problem solving.
+Application of agricultural
+technology
+
+The project will involve the study of current cooking and cooling
+systems for food process.
+
+Application of business
+and/or management skills
+
+Using engineering economics, selected technologies can then be
+analyzed for their return on investments by working with utility
+companies to discuss rebate potential. Additionally, the interaction
+with the customer puts my soft-skills to the test in a professional
+environment conducting a sale.
+
+Quantitative, analytical
+problem solving
+
+The technology involved will have parameters that must be
+designed for to meet financial, energy-water consumptive, and
+production parameters.
+
+Capstone Project Experience - The ASM senior project must incorporate knowledge and
+skills acquired in earlier coursework (Major, Support and/or GE courses).
+ASM Approach - "Senior projects for students in the Agricultural Systems
+
+Management major must include a problem solving experience that incorporates
+the application of technology and the application of business or management
+skills. Agricultural systems management involves the application of quantitative,
+analytical processes for developing solutions to technological, business or
+management problems associated with agricultural production, processing,
+or the distribution of agricultural products and support services to agricultural
+or related industries. A systems approach, interdisciplinary experience and
+agricultural training in specialized areas are common features of this type of
+problem solving. "
+
+95
+
+incorporates knowledge/
+skills from these key
+courses
+
+AGB 310 Agribusiness Credit and Finance (time-value
+of money, discount rate, depreciation, capital budget
+analysis, pro forma income statements)
+BRAE 203 Agricultural Systems Analysis (engineering
+economics, flow network diagrams, project costestimation)
+BRAE 301 Hydraulic and Mechanical Power Systems
+(selection, application, and use of hydraulic
+components and mechanical power transmission
+equipment)
+BRAE 324 Principles of Agricultural Electrification
+(basic power and circuits calculations, power factor
+improvement, reading circuit diagrams, basic
+power distribution design)
+BRAE 342 Agricultural Materials (stress, strain, mat'l
+selection, etc.)
+BRAE 432 Agricultural Buildings (principles of building
+heat loss/rejection, food storage selection,
+environmental factors consideration)
+BRAE 532 Pumps and Wells (pump curve familiarity,
+well and sump pump design, pump station
+maintenance, efficiency improvements)
+Statistical Methods for Engineers
+General Chemistry for Engineers I (section on Heat
+Transfer)
+Physics I & II (section on Thermodynamics)
+Technical Writing
+Thermodynamics I
+
+

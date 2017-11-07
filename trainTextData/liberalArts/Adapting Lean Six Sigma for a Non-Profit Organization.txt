@@ -1,0 +1,678 @@
+Adapting Lean Six Sigma for a Non-Profit Organization
+Jocelyn De Leon
+California Polytechnic State University
+Liberal Arts and Engineering Studies
+June 2016
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+2
+
+Table of Contents
+Abstract ............................................................................................................................................4
+What is Lean Six Sigma? .................................................................................................................5
+Nonprofit Case Studies ....................................................................................................................6
+What is a Nonprofit? ........................................................................................................................8
+Common Nonprofit Challenges .......................................................................................................8
+GRID Alternatives Warehouse ......................................................................................................10
+DMAIC Methodology……………………………………………………………………………11
+Implementation of Improvement Plans…………………………………………………………..22
+Results and Usability Study………………………………………………………………...........25
+Adapting Lean Six Sigma to GRID Alternatives………………………………………………...29
+Conclusion……………………………………………………………………………....…...…..30
+Works Cited …………………………………………………………………………………......31
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+Table of Figures
+Figure 1 Define- Spaghetti Diagram……………………………………………………..……13
+Figure 2 Measure- Pareto Chart…………………………………………………………….…14
+Figure 3 Measure- Direct Time Motion Study………………………………………………..15
+Figure 4 Analyze- Fishbone Diagram…………………………………………………………16
+Figure 5 Analyze- 5 Why 1 How Analysis………………………...………………………….17
+Figure 6 Improve- 5S Plan…………………………………………………………………….18
+Figure 7 Improve- Kanban bins with tags……………………………………………………..19
+Figure 8 Improve- Red and blue colored Kanban bins………………………………………..20
+Figure 9 Control- Check Process……………………………………………………………...21
+Figure 10 Control- Control Plan……………………………………………….……………...22
+Figure 11 Before Pictures of Warehouse Space……………………………………………....24
+Figure 12 After Pictures of Warehouse Space………………………………………...………25
+Figure 13 Usability Study Sample Bill of Materials…………………………………………..27
+Figure 14 Map of Warehouse Space for Usability Study……………………………………..27
+Figure 15 Usability Study Results…………………………………………………………….28
+
+3
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+Abstract
+Lean Six Sigma is a process improvement practice most commonly used in large scale
+manufacturing and health care industries to improve performance and efficiency. The goal of
+Lean Six Sigma is to improve efficiency, consistency, and focus on value added elements.
+Over the years, Lean Six Sigma has evolved from being primarily a manufacturing practice to
+serving more service based industries such as healthcare and government. However, Lean Six
+Sigma has yet to be implemented in the non-profit sector. This technical report outlines the
+importance of identifying the unique characteristics of the organization you wish to improve
+and then adapting lean six sigma techniques accordingly. This report will specifically look at
+the challenges faced by a non-profit organization, GRID Alternatives, and evaluate how Lean
+Six Sigma techniques can be adapted to improve their warehouse procedures and conditions.
+
+4
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+What is Lean Six Sigma?
+Lean Six Sigma is a methodology that focuses on continuous process improvement.
+Lean Six Sigma is a combination of Lean Manufacturing and Six Sigma. Lean Manufacturing
+focuses on people involvement, the business philosophy, doing the right thing, creating a more
+predictable process, and most importantly reducing waste. The eight types of waste in Lean
+are defects, overproduction, waiting, neglecting resources, transportation, inventory, motion,
+and extra processing. The goal is to develop “eyes for waste” so that you can recognize and
+eliminate the unnecessary or non-value added steps in a process. Six Sigma focuses on applied
+statistics, tools to improve business processes, creating a more capable process, and reducing
+process variation. Six Sigma really focuses on the numbers, the statistical definition of Six
+Sigma is striving for a process to be 99.9 percent capable and producing only 3.4 defects per
+million opportunities (DPMO). Six Sigma is about reducing the number of defects and errors
+while simultaneously lowering costs, saving time, and improving customer satisfaction.
+Lean Manufacturing and Six Sigma together are much more powerful. Lean Six Sigma
+is defined as a “well-structured theory based methodology that improves performance,
+develops effective leadership, customer satisfaction and bottom line results” (Zhang). Lean
+Six Sigma is very project based and strives for continuous improvement.
+Lean Six Sigma originally came from manufacturing industries and has now found its
+way to services. “Lean Six Sigma: A Literature Review” mentions that in addition to
+manufacturing Lean Six Sigma has also become very common in healthcare, since defects and
+
+5
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+errors are even less tolerable in this industry. Lean Six Sigma is not only in healthcare and
+manufacturing but is also seen in government, the military, and financial services. Literature
+reveals that Lean Six Sigma is beneficial for different industries with little modifications per
+industry requirement. In addition, it has been stated that Lean Six Sigma is “equally beneficial
+for manufacturing or services concerns in large or small scale organizations” (Zhang). These
+finding come to show how applicable Lean Six Sigma can be in different organizations
+whether it’s based on type of industry or size of the organization.
+However, it is still suggested to continue research for implementing Lean Six Sigma
+where financial capability is a hurdle (Zhang), which brings our attention to a specific industry
+that needs more Lean Six Sigma implementation research: the nonprofit sector.
+Nonprofit Case Studies
+Currently, there are very few literary works that examine the implementation of Lean
+Six Sigma in the nonprofit sector. There is a case study by Chen-Yang Cheng and Pu-Yuan
+Chang from Tunghai University in Taichung, Taiwan that examined how to implement Lean
+Six Sigma in a non-profit organization that provided wheelchairs, walkers, and various
+assistive devices for people with disabilities. Their work is titled “Implementation of the Lean
+Six Sigma Framework in Non-profit Organisations: A Case Study.” Cheng and Chang
+mention that prior to their case study, which took place in 2012, the Lean Six Sigma process
+had not yet been applied to non-profit organizations. Their case study demonstrates that they
+were able to improve efficiency by reducing transfer and delay times, and raising process
+cycle efficiency by 27% and 28% (Cheng, Chang). However, at the end of their case study,
+they emphasizes the importance of recognizing the unique characteristics of the non-profit
+organization you wish to improve stating that it can “provide a reference to improve the
+
+6
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+efficiency of non-profit organizations’ services.” This case study reveals the importance of
+recognizing the culture and structure of the organization you plan to work with because it can
+reveal certain queues that may help improve different processes’ within the organization.
+Another relevant literary source is “The Role of Process Improvement in the Nonprofit Organization” by Vikki C. Lassiter, a master student from the University of
+Pennsylvania. This thesis case study is different from Cheng and Chang’s because it focuses
+on the application of the process improvement concepts in general and then applies those
+specific principles to nonprofit organizations. Process improvement in general is different
+from Lean Six Sigma because as Lassiter states Lean Six Sigma methods and tools are
+“somewhat limiting, since they tend to examine only individual processes rather than
+integrating these processes into an examination of the complete system at work within an
+organization.” Lassiter looks at process improvement in non-profit organizations as a whole
+and assesses the understanding of process improvement culture in an organization as well as
+overall organizational growth.
+These literary works support the purpose of this technical report demonstrating that
+there is a need for more Lean Six Sigma case studies in the nonprofit sector. This report also
+recognizes the importance of paying close attention to the unique characteristics of the nonprofit organization services’ and processes because they provide queues and references for not
+only improving process performance and efficiency but also help in creating a culture of
+understanding process improvement in the organization.
+This report is a documentation of the implementation of Lean Six Sigma process
+improvement tools at GRID Alternatives’ Warehouse, and the results and recommendations
+for adapting Lean Six Sigma for their specific needs. However, first it is important to
+
+7
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+understand the type of organization that GRID Alternatives, what makes it unique and some
+challenges this organization faces.
+
+What is a Nonprofit?
+A non-profit is an organization that has no owner, stockholder or trustee that shares in
+the profits or losses of the organization. Nonprofits exist not to make revenue but to promote a
+mission that generally enhances community welfare (Lassiter). GRID Alternatives is a nonprofit solar organization that provide solar electric systems for low income families. The
+GRID Alternatives’ mission is to “make renewable energy technology and training available
+to underserved communities” (GRID Alternatives). The GRID Alternatives goal is not to
+make money but to provide a service for low income families. By installing solar, GRID
+Alternatives is not only reducing our carbon footprint, but is also providing families with
+energy savings and up to 10 volunteers per install with free solar job training (Non-profit
+group).
+Common Nonprofit Challenges
+Nonprofit organizations are faced with a variety of challenges on a day to day basis.
+Some of these challenges include a rapidly growing demand for their services, pressures to
+incorporate a fee for the services being provided, competition from for-profit organizations,
+and many more that require a consistent evaluation of ongoing organization effectiveness
+(Lassiter). GRID Alternatives for instance constantly faces all of these challenges. With the
+changing economy more and more homeowners are meeting the low income requirements and
+people are seeking job training opportunities. Therefore there is an increasing in demand for
+GRID Alternatives services.
+
+8
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+In addition, to the growing demand for their services, GRID Alternatives also faces the
+pressure of charging a service fee. According to Energy Informative, solar electric systems are
+not cheap and states that “a residential electric systems cost upwards of thirty thousand
+dollars” (Non-profit group). In order to help finance the expenses of these solar electric
+systems GRID Alternatives has made an effort to partner with Third Party Owners (TPOs) to
+help cover the expenses. GRID Alternatives has also recently incorporated a homeowner
+contribution fee to help the program continue its efforts. Homeowners are asked to contribute
+two cents per kilowatt of energy their electric system generates every month. On average a
+homeowners pay about eight dollars a month to help the program continue its mission to
+providing energy savings and job training for underserved communities (Non-profit group).
+Lastly, GRID Alternatives is also facing more and more competition from for-profit
+solar providers. Today, there are numerous solar company providers that sell and rent
+residential solar electric systems to homeowners, some of these companies include Solar City,
+Sun Run, Vivent Solar, and REC Solar. These companies are competitors to GRID
+Alternatives because they are selling or renting solar to homeowners who may have qualified
+for their services. To make matters worse, because they are for-profit companies they have
+more money to spend on marketing and advertising. Therefore, GRID Alternatives struggles to
+compete with these large for-profit organizations. Every low income home that receives solar
+from a for-profit company means that that is one less family that GRID Alternatives can
+provide a service too and one less install that could have been an opportunity to provide job
+training to the community. A growing demand for services, financial pressures, and
+competition from for-profit companies are just a few organizational challenges GRID
+
+9
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+Alternatives faces. These challenges come to show that there is a need to consistently
+reevaluate the effectiveness of this organization's operations.
+So how does Lean Six Sigma come into the mix? Well you see as Lassiter states
+“every organization, whether it is large, medium, or small, profit-driven or not-for-profit, has
+one thing in common: their operations requires processes. Processes are the fundamental way
+of thinking about operations and managing an organization.” It is really important to plan a
+systematic way to measure, analyze, and improve organizational performance and Lean Six
+Sigma is a very applicable and methodological approach to do so.
+However, it is important to clarify that the purpose of this report is to not to evaluate
+the operations of the GRID Alternatives organization as a whole but instead to look at a
+specific process and evaluate how effective that process performance is. Lean Six Sigma is
+about refining and continuously improving processes within an organization. Certainly the
+goal is improve the overall organization as a whole, but realistically speaking the best way to
+tackle such an enormous task is to look into the components of the organization and tweak,
+modify, and improve those smaller components. Therefore, for this particular case study we
+are going to focus on a GRID Alternatives Warehouse and implement Lean Six Sigma Tools
+to evaluate the performance of the warehouse procedures and conditions.
+GRID Alternatives Warehouse
+GRID Alternatives is a relatively large organization and has numerous offices in
+California alone, and also has offices in Colorado and New York. However, for this particular
+project we are going to focus on the Central Coast Office in Atascadero, California. Within
+this particular office we are going to take a look at the warehouse space and the procedures by
+which this warehouse operates.
+
+10
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+11
+
+This warehouse space is primarily used by the construction staff at GRID Alternatives.
+The warehouse is the area in which all the solar modules, conduit, hardware, supplies, and
+equipment are stored and kept. The construction staff not only uses this space to store all the
+supplies and equipment but also uses the space to prepare and load for a build as well as
+unload after a build. This case study will apply the DMAIC method to evaluate the
+performance of this warehouse space and use Lean Six Sigma tools to make suggestions on
+how to improve efficiency.
+DMAIC Methodology
+The DMAIC method stands for Define, Measure, Analyze, Improve, and Control.
+DMAIC is the main method for Lean Six Sigma implementation. It is used to identify problem
+areas, define root causes and constraints to an issue, measures current state processes, analyze
+the data and observations collected, make recommendations to improve the current state
+process, and then propose ways to control and monitor improvement changes. The DMAIC
+process was used to improve warehouse conditions and procedures at GRID Alternatives. The
+process was implemented over a period of 2 months and consisted of a phase for each DMAIC
+step. Each DMAIC step utilized at least 2 Lean tools to complete each phase. Some of the
+Lean tools used were: Fishbone Diagram, Five S, Five Whys, Standardized Work, Pareto
+Charts, and Time Studies.
+The Define phase of the GRID Alternatives Warehouse Improvement project consisted of
+staff interviews, a project charter, and a spaghetti diagram. The staff members that were
+interviewed for the define phase were Carlos Chairez, the Warehouse Manager, and Xavier
+Villazana, the Construction Manager. The reason these two staff members were selected to be
+interviewed in this phase of the project was because they were the most knowledgeable in how
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+12
+
+the warehouse space was currently being used and they were the most familiar with procedures
+and issues being faced. Some of the questions that asked were: What is the most common
+bottleneck or constraint? What is the general process or procedure for how things get done? Who
+is responsible? What issues are most commonly neglected? The interview questions were
+particular designed to gather information about the reoccurring problems or issues. After
+interviews the next step was establishing a project charter.
+A project charter was created to help define the scope, parameters, and mission of this
+warehouse improvement project. The project charter outlined deliverables, expectations,
+milestones, completion dates, and resources needed. This tool helped to clearly communicate the
+purpose, expectations, and deliverables of this project to the supervising sponsor, Carlos Chairez.
+The project charter stated that the problem was that it was taking the construction staff a really
+long time to load and unload the equipment before and after an installation build. The goal was
+to improve the current warehouse procedures and conditions and to make loading and unloading
+processes easier and quicker. In addition, the project scope also included making
+recommendations on how to improve warehouse processes and how to control the changes that
+were going to be implemented. In addition, to making suggestions on how to improve the
+warehouse this project was actually going to implementation the proposed plans. The project
+scope did not include monitoring long term warehouse progress.
+A spaghetti diagram was also used in the define phase of this project to narrow the scope
+even further. The spaghetti diagram helped identify where in the warehouse space the process
+improvement project would take place. The spaghetti diagram outlined the layout of the
+warehouse work space and illustrated the physical flow of materials/equipment relative to their
+physical location. Especially, when construction staff loaded and unloaded equipment before and
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+13
+
+after an installation build. Figure 1 below shows the material and equipment flow in red and
+reveals that the majority of the material flow is in the inventory shelves and tools area and very
+
+little to no flow occurs in the shipment container and crates area.
+Figure 1 Spaghetti Diagram used in Define phase illustrates the work flow and material
+flow at the GRID Alternatives Warehouse space.
+The interviews revealed the problem, the project charter outlined the project goals and
+plans and the spaghetti diagram showed the specific problem area. The following step in the
+DMAIC process is measure.
+The Measure phase for this project consisted of a Pareto chart and a Time study. A Pareto
+chart was used to measure the frequency of reoccurring issues and was then used to rank the
+priority of each issue in descending order. The Figure 2 below is the Pareto chart that was
+created and to help determine which issues to address first. The Pareto chart show that the most
+reoccurring issues were: old and outdated inventory taking up space, the need to trash or recycle
+miscellaneous items, and the need sort and organize unloaded equipment. These 3 issues alone
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+14
+
+accounted for 79% of the warehouse procedures and conditions problems. Therefore, the Pareto
+chart suggests that these issues had the greatest priority.
+
+Figure 2 A Parto Chart was created in the measure phase to identify the most reoccurring issues
+in the loading and unloading process.
+Next, a Direct Time Motion study was conducted to determine how long it was really
+taking the construction staff to load and unload equipment and supplies after a build. The Direct
+Time Motion study measured cycle time, including a performance and allowance rating and
+calculated normal and standard time. The Direct Time Motion study was useful because it helped
+determine the approximate amount of time it took to complete specific task (cycle time).
+Normal time is the basic time it takes to complete a specified task and is calculated by
+multiplying the performance rating (difficulty of task) and the cycle time of each process step
+and then adding all those times. Standard time is the time it takes to complete a specified task
+while taking allowances or break time into consideration. The standard time is calculated by
+adding basic time and allowances. The figure below show the data that was collected for this
+time study.
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+15
+
+Figure 3 This is the Time Study data collection table which shows that the standard time was
+8.75 min and normal times was 7.17 min.
+This Direct Time Motion study indicates that the normal time to sort through items,
+return and store an item to its designated location, and position or restock accordingly, took
+approximately seven minutes. When considering an allowance of 22% due to the weather
+conditions, standing for long periods of time, lifting, and bending the standard time to complete
+these tasks was about nine minutes. The performance rating or difficulty of each element/ task in
+the process was one meaning that they had relatively low complexity ratings. The average cycle
+time to return and store equipment was about 2 minutes, to sort through items was about 4
+minutes, and to position or restock accordingly was about 1 minute. Therefore, on average the
+most time consuming element was to sort through miscellaneous items. The measure phase
+identified which issues were occurring the most: old and outdated inventory were taking up
+space, miscellaneous items needed to be trashed or recycled, and unloaded items needed to be
+sorted and organized, and which task took the longest to do: sorting through items. The next
+phase was to analyze these issues and tasks in attempt to discover the root causes.
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+16
+
+The Analyze phase consisted of a fishbone diagram and 5 Why 1 How analysis. These
+Lean Six Sigma Tools were used in the analyze phase because they helped investigate the root
+causes, issues, and determining factors for why the construction staff was taking so long to load
+and unload equipment before and after an installation build.
+This Fishbone diagram showed that the key factors that were affecting the warehouse
+conditions were the people, material, equipment, and procedures. The people that had the
+greatest impact on the warehouse environment was the warehouse manager and construction
+staff. The most common issues with regards to material, machines, and equipment was that items
+were misplaced, old, or outdated. In addition, the most complex and time consuming process was
+sorting through inventory and finding a place to store items. The figure below shows the
+Fishbone diagram that was created to assess the different factors and issues in the warehouse.
+
+Figure 4 This Fishbone Diagram was used in the analyze phase and highlights the significant
+factors: the warehouse manager, construction staff, old outdated material and equipment,
+misplaced equipment, and the sorting through items process when loading and unloading after a
+construction build.
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+17
+
+The 5 Why-1 How analysis tool was then used to delve deeper in the issues highlighted in
+the Fishbone Diagram. The 5 Why analysis tool helps gain a better understanding of how the
+warehouse issues are related in terms of cause and effect. Figure 5 below shows the 5 Why –1
+How analysis and shows that the root cause for why the warehouse conditions are not as
+organized as they could be, is because the warehouse space is understaffed and the person
+currently maintaining the warehouse is overworked. Therefore, regular warehouse procedures
+were being neglected and items were accumulating fast, making the sorting and storing of items
+time consuming to do. Now that the root causes had been identified the next step was to
+determine what actions to take to improve the warehouse space.
+
+Figure 5 A 5 Why and 1 How Analysis tool was used in the analyze phase to identify the
+possible root cause for why the current inventory system was not as organized as it could be.
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+18
+
+The Improve Phase was about identifying which lean tools could be used to improve the
+warehouse conditions and procedures. The team leader and sponsor determined that a 5S and
+Kanban projects would be best improvement project to do because it would help standardize the
+warehouse space.
+5S is an organizational tool that is used to improve visual controls in a workspace,
+reinforce safety practices, and support worker performance. 5 S stands for Sort, Straighten,
+Standardize, Scrub, and Sustain. This tool was selected because it would help organize
+warehouse inventory and procedures. In addition, 5S could help decrease time spent searching
+for tools or supplies.
+The 5S plan was to sort inventory items according to use: in use vs non-opened (new).
+All items were also to be straightened by grouping items of similar function and use, returning
+items to original storage location, and positioning all the items according to inventory levels. For
+standardization, items were to be designated a permanent area and labeled or tagged for visual
+controls. The warehouse was to be kept clean by wiping down surfaces, keeping walkways and
+work areas clear, and keeping inventory off the floor and in boxes or packaging. Lastly, for
+sustaining organization a Kanban replenishment system, a check process, and visual controls
+were to be implemented. The 5S plan is shown below in Figure 6.
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+19
+
+Figure 6 A 5S plan was created to help improve the current warehouse space conditions.
+A Kanban Replenishment system was also planned to organize the equipment, tools, and
+supplies because Kanban’s specify how many parts or items need to be restocked. Kanban
+systems also eliminate waste by preventing the accumulation of excess inventory and visual
+obstructions, preserving storage space, reducing long cycle times, and avoiding unnecessary
+inventory transactions. A two bin Kanban replenishment system was specifically recommended
+to aid inventory replenishment. The two bins system is meant to communicate when there is and
+isn’t a need to replenish. The bins are to be placed in front of one another and ideally in two
+different colors (ex. red and blue). For example, when the red bin is in front then that indicates to
+replenish the inventory stock (alert) and if the blue bin is in front then do not replenish. In
+addition, to the different colored bins it was also proposed to attach tags and barcodes on the
+bins. The tags were to be labeled “restock” and “stock card.” These tags are to be visual controls
+that clearly communicate and reinforce inventory status this is in addition to the color coded
+bins. Another proposed idea was to incorporate a barcode system that corresponded vendor and
+inventory status which could help simplify the replenishment process. The Figures 7 and 8
+below show examples of what a two bin Kanban system could look like. Now that the plan on
+how to improve the warehouse was decided on it was time to brainstorm how the improvement
+changes would be maintained.
+Figure 7 Example of Kanban bins with visual control stock cards.
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+20
+
+Figure 8 Example of color coded Kanban bins.
+
+For the Control phase of the DMAIC process the team leader and sponsor brainstormed
+methods and tools that could be used to sustain the improvement changes in the
+warehouse. They proposed that a Check Process and a Control Plan would to be implemented.
+A Check Process is a quick and effective verification tool that can be used to evaluate
+process conformance. This tool was proposed because it could be used as a guideline to make
+sure that the basics were consistently met. The Check Process stands for Correct, Housekeeping,
+Equipment, Contain, and Keep Doing it and these are the metrics the Check Process accounts
+for.
+For each Check Process measure it is important to include questions that truly reflect the
+current state. For instance, for the Correct measure the question to be asked is “Are tools,
+equipment, and materials in their designated location? Or are items labeled and stored
+correctly?” For Housekeeping, it was proposed to ask questions about workspace cleanliness,
+organization, safety hazards, and whether or not there was an ample and comfortable amount of
+space to work in. For the Equipment measure, questions tried to verify if equipment was in
+proper working condition, was well calibrated, and accounted for in the inventory. For
+Containment the measures ensured that defects or mishaps had not passed on to the following
+steps in the process. And lastly, the Check Process asks and makes sure that process is
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+21
+
+consistently being done and is part of the daily routine. Figure 9 below shows the Check
+Process in greater detail.
+
+Figure 9 Check Process plan to help maintain the improved conditions of Warehouse space.
+The other control tool was to implement a Control Plan, which is a centralized document
+that keeps track of the status of all significant process characteristics. This tools was
+recommended to help control warehouse conditions because it would provide a visual record of
+project status and aid as a reminder to get certain tasks done that may affect process flow. The
+proposed processes to keep track of in the Control Plan were inspections for inventory standards,
+trash, reuse, and recycle items, and safety inspections. These are useful processes to keep track
+of because they could alert the warehouse manager of the urgency or need to follow up with a
+certain action and how often. The control plan is very useful because it really helps reinforce the
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+22
+
+Lean principle of continuous improvement. The figure below shows the Control Plan in greater
+detail.
+
+Figure 10 The control plan to help keep track of the status of improvement tasks.
+The discoveries and proposed project plans that resulted from the DMAIC process
+steps were to implement 5S, a Kanban Replenishment system, a Check Process, and a Control
+Plan. The goal was to standardize inventory items and procedures by eliminating tedious tasks
+such has having to continuously sort and organize items and creating a designated spot and
+location for all items so that they could easily be put back in their spot and found. Even though
+these proposed plans for improving the warehouse procedures and conditions were valid and
+logical using the DMAIC method, the actual implementation of these project didn’t exactly go
+as planned.
+Implementation of Improvement Plan
+Carlos Chairez, the warehouse manager and I spent about 3 weeks cleaning, sorting,
+organizing, and standardizing the warehouse tools and shelves area. We sorted through
+miscellaneous items such as trash, recyclable items, outdated inventory items, current
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+inventory items, and new delivered items. We then got rid of outdated and recyclable items to
+create space for the current and new inventory items. We then created permanent designated
+areas for the different items, tools, and equipment and created stations for the different
+activities/ tasks that took place in the warehouse space. For instance, we made a loading table
+area in the shed, an unloading table in the open space shed, and a drop off table for new
+inventory items that are delivered. The warehouse manager and I decided to created different
+work station areas so that the different types of inventory items would be kept separate from
+one another. At each work or task station we also included different accommodations to
+simplify the processes at each station. At the unloading table we added bins where employees
+could easily leave or pull loose bits, nails, and screws after each build. Then the loading table
+inside the shed was designed so that inventory stock items could be pulled and loaded into the
+large storage bins that get loaded into the construction trailer and the new inventory items
+table has plenty of open space to separate items by type. Lastly, we labeled each shelf
+according to the type or group of item that was stored there and we also labeled each container
+according to its contents. Figures 11 and 12 below show the before and after conditions of the
+warehouse shelves and tool area.
+What made this particular implementation project unique was that the warehouse
+manager and I had to be creative and resourceful when implementing our warehouse
+improvement plan keeping in mind that there was little to no funds to support our project.
+First, space was limited and not all items had a designated storage location so rather than
+investing in more storage space such as expanding the warehouse tools and shelves area we
+decided to make better use of the space we had. So that was why we trashed, repurposed, and
+recycled items we didn’t need or use. Second, we didn’t have the funds to buy new shelves/
+
+23
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+cabinet space or buy bins to sort and store all the inventory items. So what Chairez and I did
+was make our own new shelves using wood pallets that weren’t being used and transformed a
+compartment cart in to separate shelves, and used the railing of the cart to mount on the wall
+and create an additional shelf space. The different colored bins of the compartment cart were
+also used to group different item types by color. For example, yellow bins were used for
+conduit items, blue bins were used for junction box items, and red bins were used for
+miscellaneous hardware bits. Figure 11 show an image on bottom right corner of the
+compartment cart that was transformed into separate bins and shelf space. All in all, Chiarez
+and I sorted through the different items in the warehouse shelves and tool area, created more
+open space for different work stations and inventory items, designated specific locations for
+different items, and labeled each shelf and bin accordingly. The next phase of this
+improvement project was to test if our project had been effective.
+
+Figure 11 The image above shows the initial conditions of the warehouse shelves and
+tools area before the warehouse improvement project began. It also includes the standard lead
+
+24
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+time of 8 min which is the time it took an employees to start unloading an item and then finish
+and return it to its designated location.
+
+Figure 12 The images in this figure show the after conditions of the warehouse tools
+and shelves areas and shows the labeled shelves, open space, new shelves, and work stations.
+The image also shows that after conditions were improved the new standard lead time was 3.5
+minutes.
+Results and Usability Study
+Once the warehouse improvement project had been implemented a direct time motion
+study was conducted to test whether or not the time to load and unload items after a
+construction build had changed. Similar to the initial time study conducted in the define phase
+of the DMAIC process, employees were timed from when they unloaded an item from the
+construction trailer and finished returning an item to its location or original condition. The
+initial lead time for staff to load and unload after a build was about 8 minutes per task or
+activity. However, after implementing the improvement project in the warehouse space the
+lead time decreased to about 3.5 minutes per task or activity. The time study revealed that the
+change was significant, and construction staff would being saving about 4.5 minutes with the
+
+25
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+new changes. In addition, to verifying that lead time had changed it was also important to test
+how legible the warehouse space was to others.
+Reducing the lead time for construction staff to load and unload after a build was the
+initial goal, Chairez and I set to improve. However, we came to realize that it would also be
+beneficial to create a usability test to see how legible the space was to someone who isn’t
+necessarily familiar with the warehouse. We thought that if we had really standardized and
+simplified the warehouse space then that meant that anyone could find what they needed and
+find their way around the warehouse. So we decided to work on designing a usability test. We
+figured that this would be a beneficial study to conduct because it could not only tell us how
+well we improved the space but also reveal some great insight as to how we could continue to
+improve the warehouse space. The fundamental principle of Lean Six Sigma is continuous
+improvement which is why this usability study was so important.
+The design of the usability study was that at least two GRID Alternatives staff
+members not in the construction department, would participate and each receive the same
+sample Bill of Materials for a random installation build and ask them to locate the items on the
+list. The participants would have 15 minutes to find as many items as they can and would also
+be provided with a map of the warehouse shelves and tools areas to help the get a better
+understanding of the space. Figures 13 and 14 below show the sample BOM and maps used
+for the study.
+
+26
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+Figure 13 The sample BOM list that was used for the Usability Study.
+
+Figure 14 Illustrations of the warehouse set up in the uncovered shed area in the warehouse.
+This figure was used in the usability study to familiarize participants with the space.
+When we tested the usability study we had a two participants’ one from the workforce
+and development department and the other from the headquarters team. Neither of these
+participants were familiar with the logistics and set up of the construction warehouse space.
+Chairez and I led the study and we gave each participant maps of the warehouse space and a
+Bill of Materials. They had 15 minutes to find as many items on the list and in the end the
+
+27
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+results were: workforce and development participant found 9 out of 17 items on the list and
+the headquarters intern found 11 out of 17 items on the list. Figure 15 below shows the BOM
+with red lines for the missing items that the headquarters intern missed.
+
+Figure 15 The list of BOM from the usability test of the headquarters intern who got 11 out of
+17 items correct.
+The usability study revealed some insightful recommendations to continue improving
+the warehouse space and conditions. For instance, the study results themselves showed
+specific items on the bill of material that were difficult to find for both participants which
+indicates that perhaps they weren’t placed in a legible or intuitive location or need to be
+labeled differently. In addition, the design of the study itself gave Chairez and I the idea to
+putting up maps of the shelves and tools areas for construction staff to also see and reference
+to not only help them find items but also know where items are expected to be returned and
+kept. Another idea, that came to mind was making modifications to the bill of materials and
+group certain items on the list to reduce the amount of walking back and forth finding items in
+different locations. All in all, the usability study was very helpful because it really helped
+reinforce the Lean Six Sigma philosophy of continuous improvement.
+
+28
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+29
+
+Adapting Lean Six Sigma to GRID Alternatives
+Implementing Lean Six Sigma at the GRID Alternatives warehouse was effective and we
+were able to demonstrate a positive change. However, realistically it is important to think what
+impact did this warehouse improvement project have on the organization as a whole and how can
+Lean Six Sigma be adapted so that GRID Alternatives, the nonprofit organization not just the
+warehouse can implement this practice. Lean Six Sigma is a very practical and applicable
+methodology however it does require to be modified depending on the project and especially the
+organization. The case studies previously mentioned in this report highlighted the importance
+recognizing and paying attention to the unique characteristics of the project or organization you
+wish to apply Lean Six Sigma to. That is why it is important to understand that the culture of an
+organization in order to begin to adapt lean six sigma accordingly. GRID Alternatives is a laid
+back and casual organization and the best way to encourage Lean Six Sigma practice is to model
+the behavior. This can be done as simply as posting images or maps of how a certain area is
+expected to be maintained. In addition to modeling the behavior it is very important to
+communicate to staff or team members what the goals are and explaining Lean Six Sigma in way
+that is relevant and applicable to them, such as continuing to make tweaks to task to make it
+easier and less time consuming to do. Also, feedback and input from staff and team members is
+very helpful to make the practice more beneficial for both parties. Improvement projects should
+be a continuous team effort and really encourage participation, and especially in a nonprofit
+organization where the team dynamic is so strong. Lastly, it is important to be flexible and
+resourceful, nonprofits face constant variability and random factors that it is best to learn to work
+with what you’ve got and be open minded to change.
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+30
+
+Conclusion
+Lean Six Sigma is a process improvement methodology that is transitioning from being a not just
+a manufacturing technique but also a practice that is being developed in service based industries.
+The nonprofit industry is a service based sector that can particularly benefit from the Lean Six
+Sigma Methodology. Nonprofits faces numerous challenges and constant variability on a daily
+basis that the need for standardization, steady process flow, and consistency is crucial. A couple
+case studies in the nonprofit sector have been documented, however there continues to be a need
+for further research. That is why this report serves as an addition to the existing implementation
+research of LSS. I applied Leans Six Sigma tools and the DMAIC process to develop an
+improvement project at the GRID Alternatives warehouse. I applied more than one tool for each
+step in the DMAIC process to gather as much information as I could about the current state of
+the warehouse and also came up with an implementation plan with Carlos Chairez, the
+warehouse manager. We then implemented our plan and were able to verify an improvement of
+4.5 minutes. We were able to reduce lead time from 8.5 minutes per task in loading/unloading
+after a build to 3.5 minutes. In addition, to improving lead time we also designed a usability
+study to test how legible the warehouse space was to a non-construction staff member. The
+results from this study came to show that there is still a work to be done to continue to improve
+the warehouse space. The study specifically highlighted items that weren’t necessarily intuitive
+to find and also gave us insight on that perhaps we could also improve the Bill of Materials
+spreadsheet layout as well incorporating layout maps in the warehouse for employees to
+reference. The usability study was extremely important because it really helped reinforce the
+philosophy of continuous improvement in Lean Six Sigma. Lastly, in the end I was able to take a
+step back and reflect on the bigger picture and yes we were able to implement a Lean Six Sigma
+
+ADAPTING LEAN SIX SIGMA FOR A NON PROFIT ORGANIZATION
+
+31
+
+process improvement project at the GRID Warehouse but how does that relate to incorporating
+and adapting Lean Six Sigma for GRID. Adapting Lean Six Sigma to the GRID Alternatives
+culture means flexibility, open communication, resourcefulness, standardization, and team effort.
+Works Cited
+Cheng, Chen-Yang, and Pu-Yuan Chang. Implementation of Lean Six Sigma Framework in Nonprofit
+Organisations: A Case Study. Thesis. University of Tunghai, 2012. N.p.: Routledge Taylor &
+Francis Group, n.d. Web.
+Lassiter, Vikki C. The Role of Process Improvement in the Nonprofit Organization. Thesis. University
+of Pennsylvania, 2007. N.p.: Penn Libraries Scholarly Commons, n.d. Print.
+Zhang, Qun, Muhammad Irfan, Muhammad Aamir Obaid Khattak, Xiaoning Zhu, and Mahmood
+Hassan. Lean Six Sigma: A Literature Review. Thesis. University of Sciences and TechnologyBeijing, China and University of Southern Queensland- Sydney, Australia, 2012. N.p.: Institute
+of Interdisciplinary Business Research, n.d. Print.
+
+

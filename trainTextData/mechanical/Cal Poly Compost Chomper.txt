@@ -1,0 +1,2595 @@
+Cal Poly Compost Chomper
+Final Design Report
+Anthony Jungquist - djungqui@calpoly.edu
+Cory Parmenter - cparment@calpoly.edu
+Joe McGill - jmmcgill@calpoly.edu
+Team Email - cpcompchomp@gmail.com
+Sponsor:
+Susan Deogracias - fourdeos@sbcglobal.net
+June 2nd, 2017
+
+Statement of Disclaimer
+Since this project is a result of a class assignment, it has been graded and accepted as fulfillment of the
+course requirements. Acceptance does not imply technical accuracy or reliability. Any use of information
+in this report is done at the risk of the user. These risks may include catastrophic failure of the device or
+infringement of patent or copyright laws. California Polytechnic State University at San Luis Obispo and
+its staff cannot be held liable for any use or misuse of the project.
+
+2
+
+Table of Contents
+1.0 Introduction........................................................................................................................................... 7
+2.0 Background ..................................................................................................................................... 7-14
+2.1 Human Powered Shredder ....................................................................................................... 8
+2.2 Filamaker Organic Waste Shredder ......................................................................................... 9
+2.3 Gas Engine and Electric Motor Driven Shredders ............................................................ 10-13
+2.4 Child-Adult Tandem Bikes ................................................................................................... 14
+3.0 Objectives ..................................................................................................................................... 14-12
+3.1 Needs List ............................................................................................................................. 14
+3.2 Quality Function Deployment ............................................................................................... 15
+3.3 Engineering Specifications ............................................................................................... 17-20
+3.4 Additional Design Considerations ......................................................................................... 12
+4.0 Design Development ..................................................................................................................... 21-33
+4.1 Ideation ................................................................................................................................. 21
+4.2 Idea Selection ........................................................................................................................ 22
+4.3 Initial CAD and Design Considerations ................................................................................ 29
+5.0 Final Design ................................................................................................................................... 34-51
+5.1 Functional Description ........................................................................................................... 34
+5.2 Supporting Analysis Results Showing Satisfaction of Specs ................................................. 40
+5.3 Design Safety Considerations ................................................................................................ 42
+5.4 Material Selection and Justification ....................................................................................... 44
+5.5 Manufacturing and Assembly Instructions ............................................................................. 46
+5.6 Maintenance Considerations .................................................................................................. 48
+5.7 Cost Analysis ......................................................................................................................... 48
+5.8 Testing Timing and DVP ....................................................................................................... 49
+6.0 Manufacturing ............................................................................................................................... 49-57
+6.1 Support Frame ........................................................................................................................50
+6.2 Bike and Drivetrain ................................................................................................................ 51
+6.3 Hopper ................................................................................................................................... 54
+6.4 Safety ..................................................................................................................................... 55
+6.5 Final Assembly and Painting.................................................................................................. 57
+7.0 Testing .......................................................................................................................................... 58-63
+7.1 Testing Summaries .................................................................................................................58
+9.0 Conclusion ......................................................................................................................................... 65
+Works Cited ........................................................................................................................................ 66-67
+Appendices ....................................................................................................................................... 68-160
+
+3
+
+List of Figures and Tables
+Figures (in order of appearance)
+Figure 1. Human-Powered Shredder ............................................................................................. 8
+Figure 2. Filamaker ....................................................................................................................... 9
+Figure 3. Bosch AXT 2200 ......................................................................................................... 10
+Figure 4. Bosch AXT 25 D ......................................................................................................... 10
+Figure 5. Bosch AXT 25 TC ....................................................................................................... 11
+Figure 6. DR Wood Chipper ....................................................................................................... 12
+Figure 7. DR Wood Chipper blade .............................................................................................. 12
+Figure 8. Toro gas Trimmer ........................................................................................................ 13
+Figure 9. Weed Warrior .............................................................................................................. 13
+Figure 10. Child-Adult Tandem .................................................................................................. 14
+Figure 11. Boundary Sketch 0 ...................................................................................................... 15
+Figure 12. Brainwriting ............................................................................................................... 21
+Figure 13. Concept Model ........................................................................................................... 22
+Figure 14. Cutting Decision Matrix ............................................................................................ 23
+Figure 15. Safety Decision Matrix .............................................................................................. 24
+Figure 16. Driving Decision Matrix ............................................................................................ 25
+Figure 17. Feeding Decision Matrix ............................................................................................ 26
+Figure 18. Standard Shredder Sketch .......................................................................................... 27
+Figure 19. Whole System Decision Matrix ................................................................................. 28
+Figure 20. Full CAD Model ........................................................................................................ 29
+Figure 21. Frame and Drivetrain Mockup ................................................................................... 30
+Figure 22. Pedal Phasing ............................................................................................................. 31
+Figure 23. In Phase Pedal Plot .................................................................................................... 32
+Figure 24. Out of Phase Pedal Plot .............................................................................................. 32
+Figure 25. Bike Frame ................................................................................................................ 34
+Figure 26. Flywheel ..................................................................................................................... 34
+Figure 27. Filamaker .................................................................................................................... 35
+Figure 28. Hopper ........................................................................................................................ 35
+Figure 29. Hopper Cam ................................................................................................................ 37
+Figure 30. Rim Brake ................................................................................................................... 37
+Figure 31. Drive Train ................................................................................................................. 38
+Figure 32. Support Frame ............................................................................................................ 38
+Figure 33. Disassembled Design .................................................................................................. 39
+Figure 34. Final Design ................................................................................................................ 40
+Figure 35. Schwinn Chainguard ................................................................................................... 42
+Figure 36. Sheet metal shielding .................................................................................................. 43
+Figure 37. Support Frame ............................................................................................................ 45
+Figure 38. Acrylic Clear Panels ................................................................................................... 47
+Figure 39. Hopper Assembly ....................................................................................................... 47
+Figure 40. Compost Chomper, Fully Assembled ......................................................................... 49
+Figure 41. Axle Assembly ........................................................................................................... 50
+Figure 42. Rear Support Frame Tacked ....................................................................................... 51
+Figure 43. Completed Support Frame .......................................................................................... 51
+Figure 44. Flywheel Assembly..................................................................................................... 52
+Figure 45. Flywheel in Drivetrain ................................................................................................ 53
+Figure 46. Tensioners ................................................................................................................... 53
+4
+
+Figure 47. Flywheel Braking System ........................................................................................... 54
+Figure 48. Bending Jig ................................................................................................................. 54
+Figure 49. Fully Assembled Hopper ............................................................................................ 55
+Figure 50. Cam Braking System .................................................................................................. 56
+Figure 51. Sheet Metal Covers ..................................................................................................... 57
+Figure 52. Test Garden Waste ...................................................................................................... 59
+Figure 53. Shredded Chips ........................................................................................................... 59
+Figure 54. Chip Histogram ........................................................................................................... 60
+Figure 55. Chip SPC .................................................................................................................... 61
+Figure 56. Feed Jam Frequency ................................................................................................... 62
+Figure 57. Feed Jam Frequency SPC ........................................................................................... 62
+Figure 58. Planned Gantt Chart .................................................................................................... 64
+Figure 59. Updated Gantt Chart ................................................................................................... 65
+Tables (in order of appearance)
+Table 1. Product details of three Bosch motor driven yard shredders. ........................................ 11
+Table 2. QFD Matrix for Compost Chomper Design. ................................................................ 16
+Table 3. Engineering Specifications for the Compost Chomper. ................................................. 18
+Table 4. Cost Analysis ................................................................................................................ 48
+Table 5. Testing Summary ........................................................................................................... 58
+
+5
+
+Executive Summary
+The purpose of this final design report is to detail the design, manufacturing, and testing of a
+bicycle powered compost cutter for use by the Captain Raymond Collin’s Elementary school. Students in
+the garden program are tired of manually chopping up garden waste into small enough pieces to be
+composted effectively. Project Sponsor and Master Gardener, Susan Deogracias had the idea to create a
+pedal powered compost cutter which would save time and improve moral for the aspiring gardeners.
+This report details the ideation process the team went through in defining the compost cutting
+system. Engineering methods are documented for the selection, design, and synthesis of the appropriate
+drive train, support structure, safety systems, and cutting mechanism. Important steps within the
+manufacturing process for the project have been recorded, including problems that were encountered.
+Results from testing performed on the final product to ensure the objectives were met are also recorded
+and analyzed. An operations manual is provided in the Appendix for reference.
+This “Cal Poly Compost Chomper” device successfully takes in garden waste and cuts it into
+compost. It is now in the hands of Captain Raymond Collin’s Elementary school and will be implemented
+by the garden program in the near future (circa 2017-2018 school year).
+
+6
+
+1.0 Introduction
+The Captain Raymond Collins Elementary School has a spectacular garden under the direction of
+master gardener, Susan Deogracias. The garden teaches students valuable gardening skills, inspires a
+healthy lifestyle, and produces vegetables, herbs, berries, and some flowers which are shared within the
+community. With this produce comes a large amount of garden waste in the form of weeds, vines, stalks,
+and roots. These vines and other forms of garden waste are chopped up and made into compost to be used
+as fertilizer and show the students the full life cycle of the plants. The problem the students have is that
+the garden waste is very tedious and difficult to cut into compostable pieces using their current method of
+processing: chopping with shovels. A better method to process the garden waste is needed in order to save
+time and energy as well as keep the students engaged.
+The goal of the California Polytechnic State University Compost Chomper (CP Comp Chomp)
+team is to design and build a device that will solve the Captain Raymond Collins Elementary school
+garden’s problem of composting garden waste. Cal Poly Compost Chomper is comprised of three fourthyear Mechanical Engineering students: Joe McGill, Cory Parmenter and Anthony Jungquist. Each of us
+has a passion for learning and developing effective designs that we will apply to this project. This project
+is under the advisement of Sarah Harding of the Cal Poly Mechanical Engineering Department.
+This final design report documents background research, the scope of the project, project
+objectives, plans for the achievement of these objectives, ideation and iterations, our final design for the
+project, the design process we went through, analysis to justify our design, manufacturing, and testing.
+
+2.0 Background
+Composting garden waste products like vines, leaves, roots, etc. provides an inexpensive method
+to create soil with high nutrition and teaches students important concepts of sustainability. The smaller the
+organic waste can be cut for compost, the quicker it will decompose and be ready for garden use. As
+waste is cut into smaller pieces, more surface area is created, allowing more opportunities for
+microorganisms to break down the material [1]. A common method for making compost is placing the
+organic waste in closed bins as it decomposes. Depending on the desired speed of composting, full or
+chopped plants can be put into the bins. For the Captain Raymond Collins Elementary school, small
+chopped compost is ideal to reduce composting time.
+In order to get an idea of what designs work best for the needs of the school garden,
+benchmarking of some key existing product designs was performed. These products include existing
+composting systems, cutting devices, and any bicycle powered machines. The benefits and drawbacks of
+the various designs are discussed below.
+
+7
+
+2.1 Human-Powered Shredder
+The Human-Powered Shredder (Figure 1 below) [2] is perhaps the best fitting pre-existing
+solution to the needs of the school garden.
+
+Figure 1. Human-Powered Shredder [2].
+This machine, designed for rural farm use by Peter Harrison, was the closest design we found to a
+pedal-powered compost shredder. Harrison’s design features a pedal-powered, chain-driven system that
+seats the operator flat on the ground with a steel frame supporting the shredding mechanism. While this
+design is promising for shredding compost, it still does not satisfy the needs of the Captain Ray Collins
+Elementary School. This design caters specifically to adults, with the seated position requiring more
+strength from the legs to pedal the shredder, as well as the lack of adjustable seating for different sized
+people and children. For children to be able to pedal with ease, a different design must be implemented.
+Harrison’s shredder also lacks any safety measures to prevent children from injuring themselves in the
+shredder or any other moving parts. This is a crucial flaw in its design and is one of the chief reasons that
+it cannot be implemented for use at an elementary school. The shredder also lacks a feeding system, such
+as a hopper, and has no built-in method of capturing the compost once it is shredded.
+
+8
+
+2.2 Filamaker Organic Waste Shredder
+The Filamaker Organic Waste Shredder (Figure 2 below) is a European made industrial style
+shredder [3]. It takes a standard concept for shredding large and tough materials and scales it down for
+household use.
+
+Figure 2. Filamaker Organic Waste Shredder [3].
+The shredder is operated by a variety of methods: both hand cranked and motor driven. Hand
+crank models display great proficiency in shredding organic waste into approximately half-inch size but
+no videos of testing on stiff vines are available. This style of shredder is a proven design in industry but is
+fairly expensive at $900 and lacks the benefit of being pedal powered. This design holds some potential to
+be adopted to make a pedal powered version. On an additional note, this device has a 3D printed
+functional model, which could be made to test the potential of this design.
+
+9
+
+2.3 Gas Engine and Electric Motor Driven Shredders
+Electric and gas-powered shredders do not fit the needs of the Captain Raymond Collins
+Elementary School Garden due to safety reasons and the fact that the device is intended to be pedal
+powered. However, they still serve as useful benchmarks with which to be compared. Bosch has a product
+line of three motor driven shredders, each with different cutting mechanisms which span a range of
+cutting torque, cutting speed, and power. Investigation into why these designs are different provides
+valuable information for choosing a cutting device.
+The first model is the Bosch AXT Rapid 2200 (see Figure 3). This model requires the least
+amount of power out of the three and relies on sharp, fast moving, propeller shaped blades (similar to
+lawn mower blades) to cut through the material (see Table 1 for details). It also includes a handheld
+wedge that can be used to push the material into the blade without the user’s hands getting in harm’s way
+[4].
+
+Figure 3. Bosch AXT Rapid 2200 cutting device [4].
+The second model is the Bosch AXT 25 D (see Figure 4). This design utilizes a gear-like cutting
+drum which shears the material against a back-plate and provides a self-feeding feature by pulling the
+material in with its gear-like teeth. This blade design rotates much slower than the AXT Rapid 2200, but
+makes up for it in much higher torque. This model also has the highest processing rate out of the three
+(see Table 1 for details).
+
+10
+
+Figure 4. Bosch AXT 25 D cutting device [4].
+The third model is the Bosch AXT 25 TC (see Figure 5). This design incorporates a blade pattern
+that looks similar to a turbine. It can take the largest diameter branches and is more resistant to jamming
+because the excess material is allowed to fall through the center of the blade array (see Table 1 for
+details).
+
+Figure 5. Bosch AXT 25 TC cutting device [4].
+Table 1 below contains data that was taken into account before choosing a cutting blade design.
+The data shows how existing shredders use either a high speed and low torque, or high torque and low
+speed combination. Further analysis is required to determine which is better for a pedal powered device,
+but these values can be used as a reference when designing a gear ratio which allows for acceptable
+pedaling torque and frequency requirements of the student(s).
+Table 1. Product details of three Bosch motor driven yard shredders [4]. These values are
+approximate.
+Model
+
+Cutting
+Device
+Shape
+
+Motor
+Power [hp]
+
+Torque
+[ft-lb]
+
+Cutting
+Speed
+[rpm]
+
+Branch
+Diameter
+[in]
+
+Process
+Rate
+𝑙𝑏
+[ ]
+
+Weight
+[lb]
+
+ℎ𝑟
+
+AXT Rapid 2200
+
+Straight
+
+2.95
+
+10
+
+3650
+
+1.6
+
+198
+
+26
+
+AXT 25 D
+
+Drum
+
+3.35
+
+479
+
+41
+
+1.6
+
+386
+
+69
+
+AXT 25 TC
+
+Turbine
+
+3.35
+
+479
+
+41
+
+1.8
+
+230
+
+67
+
+Another shredding/chipping/mulching mechanism to consider is the DR Wood Chipper 11.5 SelfFeeding, Manual Start (Figure 6). This design is powered by a 1 cylinder, 250 cc overhead valve engine,
+which supplies 11.5 ft-lbf of torque [5].
+
+11
+
+Figure 6. DR Wood Chipper 11.5 Self-Feeding, Manual Start [5].
+The manufacturer boasts that the chipper knife is attached to a 14" flywheel that spins at 101 mph
+and weighs 25 lb (Figure 7). This flywheel was an intriguing aspect to consider incorporating into our
+design in order to store pedaling energy in the form of a rotating mass. A flywheel has the potential to
+increase our cutting efficiency especially if the children pedal sporadically.
+
+Figure 7. DR Wood Chipper 11.5 Self-Feeding, Manual Start flywheel and cutting blade [5].
+A design that could potentially be more resistant to jamming on the cutting side is the weed
+whacker. The design shown in Figure 8 below is made by Toro and is powered by a 2-cycle, 25.4 cc gas
+engine [6]. The string cutting mechanism of a weed whacker could be advantageous because it is not rigid
+and therefore can bend instead of binding. However, the string cutters may not be strong enough to cut
+the thicker vines in the garden and may wear out quickly.
+
+12
+
+Figure 8. Toro 2-Cycle 25.4cc Attachment Capable Curved Shaft Gas String Trimmer [6].
+This model allows for changing out the strings for other attachments like the one shown in Figure
+9. This attachment has the advantage of rigid blades for more cutting strength but the blades are also on
+hinges so that they are free to pivot and avoid jamming.
+
+Figure 9. Weed Warrior plastic (left) and metal (right) attachment blades for heavier duty cutting
+[7], [8].
+The nature of these cutting devices requires high rpm, so it could be a significant safety hazard if
+a blade fell off while the device was spinning. However, if the cutting device was contained within walls,
+this hazard could be mitigated. A benefit of the weed whacker concept is that most blade inserts are fairly
+affordable and easy to replace. A plastic version of the weed warrior attachment blade is about $12 and a
+metal version goes for about $40 on Amazon.com [7], [8].
+13
+
+2.4 Child-Adult Tandem Bikes
+In addition to implementing a standard bicycle design, we have also considered a tandem system.
+Most tandem bicycles are designed for adults and would need to be modified to accommodate children.
+However, some manufacturers do make tandem bikes designed with children in mind. An example of one
+of these products can be seen in Figure 10 below.
+
+Figure 10. Child-Adult tandem bicycle [9].
+These bicycles, designed and built by Brown Cycles in Grand Junction, Colorado, have specially
+designed pedals and seats for children. This particular model, the Standard Yellow, allows for one adult
+and one child to ride together. The adult sits in the back and has control over steering and gear shifting
+while the child sits in front. The child's seat features a lower seat, and shorter pedals.
+
+3.0 Objectives
+Students in the garden program at the Captain Raymond Collins Elementary School spend
+excessive time and energy manually chopping garden leftovers to make compost. The students need a
+safe, easy to operate, pedal-powered device which chops the material while encouraging a lifelong
+passion of gardening and engineering.
+3.1 Needs List
+After extensive conversation with our sponsor, Mrs. Deogracias, we determined the following list
+of needs that she and her students have for the device:
+● Pedal Powered
+● Cuts compost into reasonable sized chips
+● Safe, restrict access to cutting blades
+● Removable receptacle
+● Wide hopper/ funnel for loading vines
+14
+
+●
+●
+●
+●
+●
+●
+●
+●
+
+Adjustable quick release seat, must accommodate age 6 to adult
+Long lasting and serviceable
+Low cost (below $1000 + additional funding)
+Must be operable by 1st-5th graders (must be able to operate on their own under supervision)
+Transportable (slide/roll/ be able to be pushed in some way)
+Must fit in 40’x70’ grass area (better if it is long and skinny)
+Stable foundation, no tipping
+Must support an adult for demonstration purposes
+
+From the needs list we developed a brief boundary sketch (Figure 11) that outlines the areas of
+the product we’ll be working on.
+
+Figure 11. Boundary sketch diagram.
+All areas within the dotted line on the above figure show aspects that we can control on our
+product. In this case the user and organic waste are two areas we can’t control, while the pedal-powered
+device and cutting mechanism are within our control. This along with our needs list control form the
+scope of our project.
+3.2 Quality Function Deployment
+Using the above list of needs, we determined a set of target specifications for our machine. These
+needs and specifications were then inputted into a Quality Function Deployment matrix (QFD) known as
+a “house of quality” in order to develop and refine the specifications. An excerpt from our QFD is
+included in Table 2 below; please see Appendix A for the full QFD matrix. Values for our target
+quantities were determined using information found in our background research.
+
+15
+
+Table 2. QFD Matrix for Compost Chomper Design.
+
+On the left, we can see the design requirements we interpreted from our sponsor and on top are
+the specifications developed by our team to meet those requirements. The symbols seen in this section of
+the QFD signify the correlation between the specification areas and the customer requirements that we
+determined. A dark circle represents a strong correlation between specification and requirement, meaning
+for us that the specification is something worth focusing on because it will satisfy a requirement well. In
+that same vein, a white circle represents a medium correlation, and a triangle a weak correlation, between
+16
+
+specification and requirement. This matrix gives us a guide into what specifications may require more
+attention and consideration when creating our design in order to best satisfy the requirements of our
+customer. A full detailed QFD can be found in Appendix A with comparisons to existing designs.
+3.3 Engineering Specifications
+Once the specifications were refined using the house of quality, we were able to create the
+specification table (Table 3). We used a weighted importance rating as a guideline for determining the
+“risk” of each individual specification parameter. The “risk” describes the amount of difficulty our team
+will have in meeting a specification. We also assigned four possible methods of determining specification
+compliance. These methods are analysis (A), test (T), similarity to existing products (S), and inspection
+(I).
+
+17
+
+Table 3. Engineering Specifications for the Compost Chomper.
+Spec. #
+
+Parameter
+Description
+
+Target Quantity
+
+Tolerance
+
+Risk*
+
+Compliance**
+
+1
+
+Torque Input
+
+320 in-lbf
+
+Max
+
+H
+
+A,T,S
+
+2
+
+Input RPM
+
+60 rpm
+
+Max
+
+H
+
+A,T,S
+
+3
+
+Torque Output
+
+960 in-lbf
+
+Min
+
+H
+
+A,T,S
+
+4
+
+Cutter RPM
+
+20 rpm
+
+Min
+
+H
+
+A,T,S
+
+5
+
+Chip Size
+
+1 in3
+
+Max
+
+L
+
+I
+
+6
+
+Vine Size
+
+3 in diameter
+
+Min
+
+M
+
+I
+
+7
+
+Process Rate
+
+0.8 lb/min
+
+Min
+
+L
+
+T
+
+8
+
+Jam Frequency
+
+3 jams/hr
+
+Max
+
+M
+
+T
+
+9
+
+Supports
+Operator
+Weight
+
+300 lb
+
+Min
+
+H
+
+A,T,S
+
+10
+
+Product Weight
+
+500 lb
+
+Max
+
+M
+
+A,T,I
+
+11
+
+Footprint
+
+4’10” x 10’
+
+Max
+
+L
+
+A,I
+
+12
+
+Stability
+
+Will remain stable with 60lbs
+applied at highest point
+
+Min
+
+M
+
+A,T,S
+
+13
+
+Feed Volume
+
+2 ft3
+
+±0.5ft3
+
+L
+
+A,I
+
+14
+
+Product Cost
+
+$3000
+
+Max
+
+M
+
+A
+
+15
+
+Height
+
+4 ft
+
+Max
+
+L
+
+I
+
+* High (H), Medium (M) or Low (L) risk
+**Analysis (A), Test (T), Similarity to Existing Designs (S), and/or Inspection (I)
+For each specification, our reasoning for the target quantity is explained below:
+1. Input Torque: we made an assumption of how much force a child could put on a recommended
+lever arm based on anthropometric data for the 5th percentile weight of a six-year-old child [10].
+See Figure B.1 in Appendix B for supporting hand calculations.
+
+18
+
+2. Input RPM was based off of information on typical adult cyclist RPM and adjusted for children
+[11]. For clarity, it should be noted that the input torque and input RPM specifications have
+maximum tolerances because we are referring to the maximum torque and RPM we think the
+children will be able to supply; however, if the children were able to provide higher values than
+the specification, we would still consider those values within the specification. Another way to
+describe these specifications is the maximum input torque and RPM that our device can feasibly
+require of the students.
+3. Output RPM was approximated by examining a video of the Filamaker Organic Waste Shredder,
+which is a cutting mechanism that is similar to one we plan on employing [12]. From this video
+we were able to visually estimate the RPM of the cutting blades to be about 20 rpm.
+4. Output torque was determined by assuming that power input to our system, which is simply the
+angular velocity multiplied by the torque, is equal to power output from our system. This simple
+math (see Figure B.2 in Appendix B) shows us that our output torque should be approximately
+960 in-lbf. Because of this power relationship, the output torque value is essentially forced by
+specifications 1-3. Specifications 1-4 are all labeled as high risk because we anticipate difficulty
+in producing enough power to cut the material. If the pedal is too hard to crank or the cutter does
+not cut, then our device would be useless. All values in Table 3 are assuming only one child is
+pedaling; however, we will likely employ a tandem drive system which would allow two users to
+pedal at the same time, thus doubling the potential power input. We also plan to use a rapidprototype model of the cutting device to assess early on if we have enough output torque to cut
+the material. If we find that the prototype is ineffective with the specified torque, we can add an
+additional user to supply more torque or modify the cutting device so it is more effective with the
+existing torque. We have also consulted documentation on the force required to cut branches
+using shears in order to get an idea of the order of magnitude of the forces we will require [13].
+5. Our target chip size, that is the size of the individual pieces of compost being outputted, was
+created based off of our benchmarking research with products already built.
+6. The target vine size that our composter should be able to handle was determined through
+discussion with our sponsor, Mrs. Deogracias, about the typical thickness of the vines and stalks
+that are grown and chopped in the garden.
+7. Our process rate for the amount of garden material going into our machine was found by taking
+the lowest process rate from the different models of Bosch AXT Shredders, quartering that
+amount, and converting that process rate to pounds per minute in order to more accurately
+represent the process rate associated with the power a child provides to our system (see Table 1).
+From examining videos and qualitatively assessing the speed at which these shredders process the
+material, we estimate that it will still be acceptable if our process rate is at least a quarter of this
+[14].
+8. Our jam frequency parameter was determined more on a qualitative level. Seeing as it is a
+difficult parameter to quantify, we aimed to set a target quantity that seemed reasonable for a
+composting mechanism (and the user) to endure. If the user (probably an adult supervisor) has to
+unjam the device more than three times per hour, he or she may get frustrated and more likely to
+get hurt.
+19
+
+9. The operator weight parameter was found by looking at data for the 95 th percentile weight of a
+20-year-old adult male which was about 225 lbs, and then bumping that up to 300lbs for added
+measure and setting that as our minimum amount that the machine must be able to support [15].
+We consider this a high risk parameter because safety is a primary concern.
+10. The product weight target was decided based on the need of portability for our device. In order
+for our device to be portable, it needs to be light enough that a group of four people can move it.
+The means by which the device can be moved has yet to be decided, but the weight of the product
+is crucial to the portability of the device.
+11. Our footprint parameter for the machine was determined from a drawing provided to us by Mrs.
+Deogracias detailing the dimensions of the storage space in which the machine is meant to be
+kept (see Appendix C).
+12. Our stability parameter was set based on some minor calculations concerning an adult leaning on
+the machine at its highest point, using rough estimates for leaning angle and average adult weight
+(see Figure B-3 in Appendix B ).
+13. Our feed volume parameter refers to the amount of garden waste that would be fed into a hopper
+or similar feeding mechanism before going into the cutting mechanism itself. We quantified this
+parameter by referring to pictures given to us by Mrs. Deogracias of the amount of garden waste
+created after an average harvest.
+14. Product cost is set per the funding we are guaranteed by Mrs. Deogracias as well as the funding
+from the Baker-Koob Endowment, totaling 3000 dollars.
+15. Lastly, the height of the machine we set at four feet maximum to allow for children to get onto
+the machine with relative ease.
+3.4 Additional Design Considerations
+Designing the product to last is very important to us, but we have no feasible way to test if our
+design is long lasting. The best that we can do is choose durable materials that are reasonably corrosion
+resistant. We will also apply fatigue analysis where we can in order to maximize the lifespan of critical
+parts. The ability of the machine to adjust to children and adults of varying heights and dimensions is also
+very important to our design, but is not something that we can quantify as a target, and so we will make
+sure that our device can accommodate a wide range of users. We also want the machine to be safe, of
+course; even though safety is not quantifiable we will make sure that the machine is as safe as we can
+design it. The hardest thing to gauge is how fun and engaging the device is for the children. We will try to
+channel our inner child so that we can design the device to be as fun as possible. We have visual and
+auditory feedback, competition, and aesthetics in mind for some fun and engaging aspects that can be
+incorporated.
+
+20
+
+4.0 Design Development
+In the following section, the process used to develop our preliminary design is outlined.
+Throughout the process, the overall design was split into subsystems: cutting mechanism, driving
+mechanism, safety mechanism, and feeding mechanism. Once the ideas for each subsystem had been
+determined, the various advantages and disadvantages of each mechanism idea were weighed, and from
+this, the best ideas for each subsystem were chosen. These ideas were then combined to form a number of
+overall system ideas, and again the process of weighing the advantages and disadvantages of each idea
+was repeated to determine the best overall system to fit the project’s needs.
+4.1 Ideation
+Our approach to this project has and will continue to follow the design process outlined in
+Appendix D. As the project progressed, a number of concepts were developed for the different crucial
+subsystems of the Compost Chomper. We focused on the development of conceptual designs for the
+cutting, feeding, driving, and safety mechanisms for our machine. We used a variety of ideation
+techniques to come up with a large selection of designs. These techniques included brainstorming
+(coming up with as many ideas as possible and writing them down in a short time period), brainwriting
+(modified brainstorming where each member draws an idea and then the ideas are traded between
+members to add to the original drawing), and SCAMPER (stands for Substitute, Combine, Adapt,
+Modify, Put to another use, Eliminate, and Reverse). An example of our ideation sessions can be seen in
+Figure 12 below.
+
+Figure 12. Excerpt from brainwriting ideation session focused on cutting, driving, and safety
+mechanisms.
+21
+
+After these ideation sessions, we produced rough concept prototypes for some select subsystems
+that would benefit us the most. We decided that the mailbox, weed whacker, standard shredder, and
+tapered worm would benefit the most from prototyping. The focus of these prototypes was more for
+getting an idea of the physical form of the subsystem rather than producing a fully functional model. Our
+rough prototype of a mailbox-inspired feeding/safety mechanism and standard shredder concept model
+can be seen in Figure 13 below.
+
+Figure 13. Rough prototype of mailbox feeding/safety mechanism and standard shredder
+concept.
+4.2 Idea Selection
+Once we had concepts for these mechanisms, we used Pugh Matrices to weigh each concept
+against one another in order to determine which concept best satisfied the specifications applicable to it.
+On the matrices, the datum with which we compared all other concepts is listed as the left-most concept
+and has a "0" rating for all specification areas. A "-1" represents that a given concept performs worse than
+the datum in a particular specification area. A "1" represents that a given concept performs better than the
+datum in a particular specification area. Our specifications are weighted to represent their relative
+importance to each subsystem.
+For our cutting subsystem, we were choosing between eight different concepts. Please refer to
+Figure 14 to see our Pugh matrix and the accompanying sketches. We chose the standard shredder as our
+22
+
+datum with which we compared all of our other concepts. As is apparent from the total scores of each of
+the concepts, the standard shredder proved to be our best concept for the cutting mechanism. The chief
+advantages of the standard shredder is that it requires a low rotational speed, which allows for higher
+torque and does not pose the risk of flinging debris while operating. The high torque associated with the
+standard shredder also allows for it to digest thick vines easier than other designs. Because we do not
+want to limit ourselves in terms of overall system creation, we considered the weed whacker and onesided gear shear for implementation as well.
+
+Figure 14. Decision matrix for cutting mechanism with brief sketches
+For our safety mechanism, we had six concepts which did not necessarily need to be exclusive.
+Refer to Figure 14 to see the Pugh matrix. We went through with comparing different safety mechanisms
+with our datum mailbox system, and saw that our mechanical stopper won. The mechanical stopper refers
+to a system that would engage and disengage a pin in the cutting mechanism, stopping the cutting blades
+when the blades are accessible, and letting the blades rotate when they are not accessible. We realized
+after we had done the comparison that we could combine many of these systems to create an even safer
+machine.
+
+23
+
+Figure 15. Decision matrix for safety mechanism with brief sketches
+For our driving mechanism we had six mechanisms with which to compare. Please refer to Figure
+16 for the Pugh matrix and accompanying sketches. The driving mechanism refers to the method with
+which the power will be provided to the system. We chose a standard bicycle foot pedal for our datum.
+The alternate concepts fared much more poorly compared to the standard bicycle and tandem bicycle
+driving systems. The tandem bicycle won overall due to its ability to create about twice as much power (if
+it is a two person tandem) than a standard bicycle system.
+
+24
+
+Figure 16. Decision matrix for driving mechanism with brief sketches
+For our feeding mechanism, we came up with a number of unique designs. Refer to Figure 17 for
+the Pugh matrix accompanying sketches. Our datum was chosen to be an open shredder because we found
+that feeding by hand is the most basic feeding mechanism. The feeding mechanisms had some overlap
+with the safety mechanisms because in some cases they served both purposes. Our top choices that arose
+from our Pugh matrix were the sliding door, due to its simplicity, and the mailbox, due to its enhanced
+safety precautions.
+
+25
+
+Figure 17. Decision matrix for feeding mechanism with brief sketches.
+After looking through our Pugh matrices, we determined our top concepts for each subsystem.
+These top concepts for each subsystem were combined to create some designs for our entire machine.
+Included below (Figure 18) is a more detailed sketch of our standard shredder concept. This cutting
+mechanism design would be very similar to the Filamaker Organic Waste Shredder [3]. For the sake of
+brevity of the report, a compilation of the more detailed sketches of our top concepts that we combined to
+create our overall system concepts is included in Appendix E as Figures E-1 through E-7.
+
+26
+
+Figure 18. Sketch of Standard Shredder cutting mechanism
+We then took the best of our subsystem designs and combined them to create another Pugh matrix
+with our overall system designs to once again determine which overall designs best satisfy our
+specifications. This overall system Pugh matrix is viewable in Figure 19.
+
+27
+
+Figure 19. Whole system, weighted, decision matrix for top 6 subsystem
+combinations. "All" refers to mailbox, brushes, Plexiglas cover, mechanical
+stopper, and pusher.
+As is apparent from our Pugh matrix above, System F is rated as the best system and is our
+overall system of choice. System F prevails over the other systems for a number of reasons. Firstly, it
+employs a tandem bicycle driving mechanism, which provides twice as much power as the standard
+singular bicycle. System F also uses the mailbox feeding system even though the sliding door scored
+higher in our feeding system Pugh matrix. This is because the Pugh matrix failed to represent that the
+mailbox is far safer than the sliding door. The mailbox feeding system also allows the operator(s) to apply
+pressure on the compost as it is being fed into the shredder without risking danger (the mailbox design
+has a plunger mechanism built into it). System F also features all of the safety mechanisms discussed in
+the safety mechanism Pugh matrix (mailbox, brushes, Plexiglas cover, mechanical stopper, and pusher),
+which allows the system to be safe for operation by curious elementary school students. Using all of the
+safety mechanisms is also beneficial because it introduces redundancies into the system; if one safety
+mechanism were to fail, it would be backed up by the other four. This benefit greatly outweighs the
+drawbacks of having a slightly more complex system.
+
+28
+
+4.3 Initial CAD and Design Considerations
+Once we had determined the best overall subsystem, we created a rough solid model using
+SolidWorks to demonstrate the functionality of our concepts.
+
+Figure 20. CAD Model of Compost Chomper.
+
+29
+
+Figure 21. Frame and Drive-Train mockup.
+With our preliminary design in Figure 20, we were confident we would meet all of the
+specifications and design considerations we set. While the dimensions and drive train were not yet fully
+designed, we know the gearing ratio we need in order to transmit the necessary torque and rotational
+speed to the cutting mechanism. For the preliminary design, this was a 6 to 1 reduction, meaning that the
+children would pedal six times faster than the cutters will rotate, thus increasing the cutting torque by 6
+times that of the input torque. The gear placeholders visible in Figure 21 will form a full gear train in the
+final product, with the rear pedaling system connected to the front pedaling system and drive train via
+chain. Refer to Appendix B, Figure B-4 for sample calculations on the gear reduction we planned on
+implementing.
+With the cutting mechanism we have set, we would be able to digest the target vine size into the
+target compost size at the process rate we set. At this phase of the design, the cutting system was either
+going to be purchased (if one was found within spec and price) or be machined by a contracted machinist
+because of the complex shape. The gears, represented by the discs in Figure 21, were to be purchased
+from a vendor to allow for easy maintenance and replacement. The dimensions of our mailbox were
+highly adjustable; and because of this, we were confident that our max feed volume and processing rate
+specifications could be met. The plunger on the mailbox would be able to limit the number of jams in the
+hopper shaft, and the low rotational speed and high torque of our cutting mechanism would make the
+system resistant to jamming as well. Although the framing for our machine was not designed at this point
+(the frames in Figure 21 are taken from an online source [16]), we were confident in our ability to design
+a structure that could support an adult's weight. Because the frame and cutting mechanism would need to
+be made of steel, our machine would be heavy, but with our material choices for the mailbox and other
+smaller systems, we were confident that we could achieve an overall weight lower than our specified
+30
+
+maximum of 500 lbs. This product weight (the majority of which being low to the ground) would also
+increase the ability of the machine to avoid being tipped over, which aided us in achieving the stability
+specification.
+The footprint was well within our allowable footprint, with our width slightly over two feet and
+our length slightly over seven feet. Our machine's height was just over two feet, so again well within
+acceptable ranges. With our design as it stood, we anticipated difficulty staying under our one-thousanddollar budget. However, we applied for the Baker-Koob Grant, which when accepted, added an additional
+$2000 of funding. We found out this grant proposal had been accepted on December 5th.
+Having developed a solid outline of our design, we began some additional analysis on the
+capabilities of our design. We wanted to get a better idea of what the power output of the tandem design
+might be, so we developed a code in MATLAB (Appendix F) to model it. Two pedal orientations where
+analyzed: first with both pedals synched in the same phase and second with the pedals 90 degrees out of
+phase. Figure 22 below illustrates the two orientations.
+
+Figure 22. In and out of phase pedal orientations [17].
+The power plots were generated from the MATLAB code displayed the power output plotted over
+a given timeframe. The resulting plots can be see below in figures 23 and 24.
+
+31
+
+Figure 23. In phase tandem power output in horsepower.
+
+Figure 24. Out of Phase tandem power output in horsepower.
+We can see that in the in phase design the peak power output is significantly higher than the out
+of phase, with peak values of 0.305 horsepower and 0.215 horsepower respectively. The drawback of the
+32
+
+in phase design however, is that it has periods of extremely low/no power. The out of phase design on the
+other hand maintains a min power of 0.152 horsepower. The periods with no power in the in phase design
+could make it prone to frequent jams but the out of phase design may lack adequate power. Changing the
+phasing of our pedals is an extremely easy task because it only requires that we remove the chain the
+rotate the pedal, so this is a design area we can easily test to determine the best set up. Additionally, 90
+degrees is not the only option for out of phase, any number of degrees can be chosen which may yield an
+even better design. Alternative phasing will also be experimented with during the construction/testing
+phase.
+Testing would involve experimentation with gear meshing and power output. We planned on
+using rapid prototyping techniques in order to quickly and cheaply produce models of our cutting
+mechanism and gears that we can test and use to measure and more accurately determine the forces
+needed to cut compost. We planned on calculating all forces within our gear train, performing stress
+analysis and fatigue strength analysis on our gears and cutting mechanism. This would allow us to
+determine how long our design can operate before failing and allow us to plan and adjust accordingly.
+Manufacturing our design as it stood would be a challenge; the volume of steel involved and number of
+cutting blades involved will make producing our compost cutter expensive, time-consuming, and heavy.
+One of our goals was to determine where and how we can save time, money, and weight with our cutting
+mechanism. This required us to purchase cutting blades if it is cheaper than contracting a machinist and
+buying the steel. Our overall design also needed reevaluation in order to determine where we could
+change materials or reduce dimensions in order to save weight.
+With some of the initial design concepts completed we, generated a brief Design Hazard
+Checklist found in Appendix G. This checklist helped ensure that all of our safety concerns are dealt with
+appropriately.
+
+33
+
+5.0 Final Design
+5.1 Functional Description
+In order to reach the final design of the Compost Chomper, a number of decisions had to be made
+with the direction of the design. Foremost of these decisions was to select a cutting mechanism and obtain
+a bike frame from donations. Our team was able to obtain an adult tandem steel bicycle (Figure 25) as
+well as a flywheel (Figure 26) among various other bicycle components at no cost through a donation
+from Jail Enterprises, a subsidiary of the Los Angeles County Jail. This donation was crucial in that it
+saved our team a large amount of money and also provided a reliable frame on which we could base our
+driving mechanism and support frame designs.
+
+Figure 25. Bike Frame acquired from Jail Enterprises.
+
+Figure 26. Flywheel acquired from Jail Enterprises.
+Our team decided to purchase the Organic Waste Shredder from Filamaker [3] (Figure 27) to use
+as our cutting mechanism. Buying the cutting mechanism drastically reduced the complexity of
+34
+
+manufacturing the final product and guaranteed a certain quality of cutter that otherwise our team may not
+have been able to achieve through manufacturing.
+
+Figure 27. Filamaker Organic Waste Shredder
+Since the Filamaker shredder suited our needs for cutting organic material into compostable bits
+and was the basis of our preliminary design cutting mechanism, the decision to buy from Filamaker was a
+natural one. We were also able to get a significant discount from Filamaker in support of our cause.
+Additionally, it is beneficial to buy the Filamaker because it is made from stainless steel and will
+therefore be corrosion resistant and easy to clean, Using the purchased shredder, however, affected our
+design quite drastically due to the fact that our preliminary design cutting mechanism had much larger
+dimensions than the Filamaker shredder. This large reduction in dimensions of our cutting mechanism
+thus constrained our feeding mechanism, making the preliminary feeding/safety mechanism of the
+mailbox chute (Figure 20) insufficient and obsolete. A chute the size of the Filamaker would not have
+been able to make use of the mailbox design.
+
+35
+
+Figure 28. Redesigned Hopper Feeding Mechanism
+For this reason, the chute had to be redesigned entirely. Our new chute (Figure 28) functions as a
+funnel with a lid, with the narrow section of the funnel fastened to the cutting mechanism. The lid will
+serve as a part of the primary safety mechanism. Attached to the shaft that the lid will rotate on is a cam
+(Figure 29).
+
+36
+
+Figure 29. Cam Attached to Shaft Of Hopper Lid
+This cam has a brake line attached to it that runs to a bicycle rim brake that acts upon the
+flywheel of the drivetrain. When the lid is opened, the cam will rotate, pulling the brake line and engaging
+the brake on the flywheel in order to stop the cutting mechanism from rotating when the lid is open
+(Figure 30). This will prevent children from harming themselves when they have access to the cutter.
+While the hopper will prevent the children from injuring themselves, it will not prevent them from being
+able to see what's going on inside the shredder, because we will make the side panels out of clear acrylic.
+
+Figure 30. Rim Brake Disengaged On Flywheel
+The drive train makes use of the sprockets already on the bicycle frame, with a chain connecting
+the two sprockets on each pedaling shaft. A chain also runs from the rear pedaling shaft to a sprocket on
+37
+
+the shaft of the flywheel, providing power from both sets of pedals to the flywheel. The sprocket on the
+flywheel shaft is considerably smaller than the sprockets on the pedaling shafts in order to increase the
+rotational speed of the flywheel and thus store more rotational energy in the flywheel. Having a high
+rotational speed at the flywheel is beneficial because the increased rotational energy will allow for
+smoother pedaling. Yet another chain runs from the small sprocket on the flywheel shaft to a large
+sprocket on the shaft of the cutting mechanism. This provides power from the drivetrain to the cutting
+mechanism. The large size of the sprocket on the cutting mechanism allows for increased torque to the
+cutter while also decreasing the rotational speed of the cutter to a reasonable level. For added safety, the
+drivetrain is covered with a chain protector. The full drivetrain can be seen in Figure 31.
+
+Figure 31. Drive Train
+The support frame (Figure 32) supports the entire machine and fits with wheels to allow for easy
+transport. It connects to the bike frame at three locations in a way that will allow the bike frame to be
+detached from the support frame.
+
+Figure 32. Support Frame
+In the front of the bike frame, the support frame attaches to the bike frame by means of a bicycle
+skewer. The skewer fastens the front fork to the support frame, and the handlebars will be welded in
+position to prevent the front of the bike frame from moving in relation to the support frame. In the middle
+38
+
+of the bike frame, the support frame connects to the bottom bar of the bike frame by means of a support
+beam flush with the bottom bar. Perpendicular to the bike frame at this location is a slot machined
+through the support beam on the support frame, where a strap can be threaded through and around the
+bottom of the bike frame and cinched down, attaching the bottom of the frame to the support beam. At the
+rear of the bike frame, a shaft is put through the flywheel and rear drop-outs that will attach the back of
+the bike and flywheel to the support frame. This shaft is a modified version of the bearing shaft already
+part of the flywheel donated to us, lengthened to be able to be fixed to the support frame. The support
+frame also supports the cutting mechanism and hopper and features bars that run perpendicular to the
+length of the bike in order to prevent it from tipping and provide stability to the riders. Based on
+component grouping, the Compost Chomper was divided up into 3 sub-assemblies (Figure 33): Support
+Frame, Bike Frame and Hopper.
+
+Figure 33. Disassembled Bike Frame and Drive Train, Support Frame and Cutting Mechanism
+(Not Visible), and Hopper.
+Each sub-assembly can be easily removed for repair and maintenance, with the goal of creating a
+long lasting design. Sheet metal shielding was added to the support frame to protect the large sprocket and
+flywheel for any students accidentally accessing it. Additional safety measures may be imposed after
+further review and testing. The full assembled design can be seen in Figure 34.
+
+39
+
+Figure 34. Final design.
+With each sub-assembly put together and fasteners secured the final design was estimated to be
+200lbs based off solid molding material weights.
+5.2 Supporting Analysis: Satisfaction of Specifications
+At this stage in our design, we can safely say that we are able to meet all of our specifications
+listed in Table 3 with the "A" Compliance designation. The first four of these specifications concern the
+drivetrain of the machine and are very closely related to each other. Our background research lead to our
+torque [10] and RPM input [11] estimates. Refer to Figure B-1 for input torque calculations. Based on the
+video of the Filamaker Organic Waste Shredder [12] we were also able to approximate a reasonable
+output RPM. With an ideal input RPM and torque as well as an ideal output RPM, our team was able to
+design a drivetrain based around the sprockets already on the tandem bicycle frame. The addition of the
+flywheel to the drive train, while complicating the system, provides valuable rotational energy storage,
+allowing for easier pedaling while grinding the garden waste. One of the largest considerations during our
+drive train design process was the rotational speed of the flywheel. The higher the rotational speed of the
+flywheel, the more energy it stores and the smoother the pedaling will be. In order to reach high rotational
+speeds however, a small sprocket must be connected with a chain to a large sprocket. This is because,
+when two sprockets are connecting by a chain in a drive train, rotational speed and size of the sprocket are
+inversely proportional. For a look at how our team decided on the selection of a chain for our drive train,
+please refer to Figure G-10. This idea of gearing ratios complicates the design of the drive train because
+the largest possible step-up (that is, going from the largest sprocket to the smallest possible sprocket)
+requires unique sprocket sizes in order to achieve the highest possible rotational speed at the flywheel,
+and thus more unique sprocket sizes in order to step the RPM of the sprockets back down to a reasonable
+level for the cutting mechanism. Because of this complication that is created by introducing a high RPM
+component like a flywheel to our drive train, we came up with two drive train designs. Refer to Figures
+G-7, G-8, and G-9 for drive train sketches, power verification, and our optimization spreadsheet. Initially,
+our team was in favor of our drive train design that featured a two-step reduction in RPM from the
+40
+
+flywheel to the cutting mechanism. This design allowed the system to store about 2.67 times more energy
+by powering the flywheel at a higher rotational speed, at the cost of being more complicated, featuring
+more sprockets, and operating our cutting mechanism at a half of our ideal rotational speed. After careful
+review, we decided to go with our drive train design that featured a one-step RPM reduction between the
+flywheel and cutting mechanism, which allowed us to use the sprockets already on the bike while using
+less sprockets and chains overall. This came at a cost of operating our flywheel at a lower rotational
+speed, but considering that we are able to achieve both our input and output specifications for RPM and
+torque using this drive train design, the loss in stored rotational energy is acceptable.
+Our next specification that required analysis of our system involved making sure that our machine
+could sustain a total operator weight (between two people in the case of our tandem frame) of 300 lbs.
+Our design meets this specification given the assumption that the bicycle frame that we obtained from Jail
+Enterprises is safe to ride. Because the frame we obtained is a commercial-grade steel tandem frame, the
+assumption that it is safe to ride is a reasonable assumption to make, as bicycles made available to the
+public feature large factors of safety so that the frames can support a variety of users. This same idea was
+applied to our support frame; because our support frame is made out of carbon steel, and therefore has a
+very high elastic modulus and yield strength, the three vertical supports that connect to the bicycle frame
+will be able to take the load of the operator with extremely small deflections and with extremely high
+factors of safety, making the integrity of the support frame material itself an area of least concern. For a
+look at how our team calculated deflection for the wheel axle, please refer to Figure G-2. The area of
+most concern, however, lies in where our stress concentrations will be highest, which is at our weld joints.
+We identified the areas of critical concern on our support frame using our engineering judgement, and
+performed stress calculations using worst-case scenarios involving a 500 lb operator load as well as the
+loads from the weights of all other components. Using worst-case scenarios, however impossible or
+unlikely, allow our designs to be as conservative and safe as possible. Please refer to Figures G-3, G-4,
+and G-5 for our in-depth calculations at our points of critical concern. Once our stress calculations were
+performed, we found that our welds had factors of safety of 31, 40, and even in the most extreme case,
+6.8. These factors of safety tell us that our frame is many times over-designed, making it very safe for
+even the heaviest loads.
+The weight of our product is also of concern due to the fact that it needs to be moved into and out
+of storage. Our specifications set our maximum weight as 500 lbs, and after modeling our total machine
+assembly in SolidWorks, a Computer Aided Design software, we were able to estimate our total weight at
+around 200 lbs. This puts our design well within our specification, and will allow two to three people to
+easily tilt and roll the machine to and from storage.
+Our device's footprint, that is the area it takes up on the ground, had to be a maximum 4 feet and
+10 inches wide and 10 feet long in order to fit within the storage area at the Captain Ray Collins
+Elementary School. Including all parts of our design, our machine's dimensions are 7.5 feet long and 3
+feet wide, so well within the allowable footprint. The extra space that we have left within the allowable
+footprint will make getting around the machine when moving it into and out of storage much easier.
+The stability of our machine is yet another critical specification that warrants analysis before we
+continue with manufacture. While our specification describes that our machine will remain stable with a
+60 lb force applied to the highest point of its side profile, as we finished our design our concerns grew to
+consider that our device may tip backward, pivoting on the wheel axis due to the weight of the cutting
+41
+
+mechanism and hopper. Analysis was performed for both cases, please refer to Figures G-1 and G-6 for
+in-depth analysis. In either case, we found that our machine would not tip.
+Our machine's feed volume, that is the volume that the hopper can store while the lid is closed,
+needs to be 2 cubic feet plus or minus 0.5 cubic feet. The volume of our hopper comes out to be slightly
+less than 2.5 cubic feet, putting our design just on the upper limits of our specifications. Please refer to
+Drawing #403 in Appendix K for exact dimensions of the hopper.
+Since our Senior Project Team was awarded $2000 from the Baker-Koob Endowment, our total
+budget was increased to $3000 during this phase of the design. Thus, our total cost for the design could
+not exceed $3000. Our cost was estimated to be around $1600, well within our budget. Please refer to our
+Section 5.7 Cost Analysis as well as our Bill of Materials in Appendix J for a detailed breakdown of our
+project's costs.
+5.3 Design Safety Considerations
+The Compost Chomper is designed to be operated by children from first to sixth grade, making
+safety a major concern in our final design. The most design intensive features of our final product were in
+fact the safety features. Outlined in the following sub-section are our safety features included in the
+device.
+As seen in Figure 31 and 34 a guard was fastened over the chain to prevent students from getting
+any articles of clothing caught in the drivetrain while operating or easily putting and appendages in the
+drivetrain. At this time the guard exists on the top of the drivetrain only, but if necessary a guard that
+encompasses more of the drivetrain could be purchased or manufactured such as the guard seen in Figure
+35.
+
+Figure 35. Schwinn Town & Country Tandem Bike- Chrome Chainguard [18]
+To prevent the flywheel and cutter drive sprocket from potentially causing injury some
+form of shielding needed to be implemented. Figure 36 shows the rear section of the drivetrain
+with the designed safety shielding.
+42
+
+Figure 36 Sheet Metal Safety Shielding for The Rear Drive Train
+If deemed necessary, a guard for the lower flywheel could be designed, but the current design
+prevents easy access to moving components from the top and sides. This design limits the amount the
+students can see, which is unfortunate for their enjoyment of the design but provides a level of safety the
+is crucial to this project.
+The hopper of the Compost Chomper is the key safety system to preventing access to the spinning
+blade of the shredder as well as preventing the device from operating while it is being loaded. Figures 28
+and 29 show these systems in detail. This hopper allows for viewing into the shredding area while
+preventing any interaction with the blades.
+To prevent tipping and provide a stable ride for the students the supporting frame was designed
+with 3ft long support bars and a wide wheelbase (Figure 37).
+
+43
+
+Figure 37. Top view of supporting frame showing support feet.
+As outlined in section 5.2, the length of the support feet allows for large forces to be applied at
+the highest point of the device without it tipping. Additionally, the wide feet will prevent excessive
+rocking of the device on uneven ground. Sharp exposed edges on the device will be ground down and all
+exposed tube-ends will be capped off with rubber plugs. Painting or powder coating the frame will
+prevent exposed rust.
+5.4 Material Selection and Justification
+When selecting material for the Compost Chomper, three main considerations were taken into
+account: manufacturability (machine, weld, bend, etc.), corrosion resistance and strength properties. Due
+to the healthy budget, of our project cost was not a major concern in a material selection. Assistance for
+44
+
+material selection was provided by David Otsu with the Materials Engineering Student Society, mainly
+for the hopper panels. David's report suggested we use a clear UV resistant breed of acrylic. The acrylic
+selected (Appendix H) offers strength properties that fit well within our model but still allow for viewing
+of the shredder as seen in Figure 38.
+
+Figure 38. Acrylic see-through panels allow for prime shredding entertainment.
+The supporting frame system is made entirely from low carbon steel square tubing. Low carbon
+steel offers great weldability and strength properties, at the cost of poor corrosion resistance. Left
+untreated, the frame would corrode and possibly become a hazard. To mitigate this, the frame will be
+painted or powder coated with corrosion resistant material to ensure longevity of the device. The axel
+portion of the supporting frame was also selected to be low carbon steel for its weldability.
+The tandem frame and supporting parts of the bike were donated to the project so they did not
+have a specific material selection process. We sought steel parts to be donated for their weldability and
+strength but the components we received varied between aluminum and steel. The materials we received
+however proved to be well within workable limits. The stainless steel chain will be one of the few
+purchased parts that goes on to the bike. Chains often are one of the first parts to fail/lose functionality on
+a bike so using a stainless steel chain allows for better life and fewer repairs.
+45
+
+The flywheel guard and rear guard show in Figure 36 will be made out of stainless steel sheet
+metal. Stainless steel will provide great corrosion resistance and strength. The downside of using stainless
+steel is that the rear guard will likely require a paid fabricator to weld it, due to the skill required to weld.
+It also has a relatively high cost but well within our budget.
+All fasteners were selected to have high corrosion resistance. This meant the material for the parts
+was stainless steel and typically coated with zinc or galvanized. These parts were selected so that they can
+outlast the even the device itself.
+5.5 Manufacturing and Assembly Instructions
+We have designed our system such that it can be manufactured and assembled in the Cal Poly
+machine shops. However, there are some parts that we will contract professionals to manufacture. Details
+on the intended manufacturing and assembling process for each subsystem are listed below. The actual
+manufacturing process is described in Section 6.
+5.5.1 Bike and Drive Train Manufacturing and Assembly
+Thanks to the donations from Jail Enterprises, we will be using a complete tandem frame as the
+basis of our drive train assembly. This frame already has sprockets mounted to the two pedal axles, and
+we plan to use these existing sprockets in the final design (shown as N2, N3, and N4 in Figure G-8). We
+will attach two 12 tooth sprockets purchased from McMaster-Carr (shown as N5 and N6 in Figure G-8) to
+the flywheel axle using either welding or brazing. The flywheel will be mounted in place of the back
+wheel using the existing dropouts on the forks. We will use an existing keyway on the Filamaker drive
+shaft to attach a 60 tooth sprocket with a setscrew also purchased from McMaster-Carr (N7 in Figure G8). We will purchase new chains for each pair of gears and attach them using a bike chain tool. After the
+chains are in place, we tension them with the derailleur and chain tensioners. The bike frame will be
+attached to the support frame at three points: the front dropout, the center of the down tube, and the rear
+dropout. The front and rear dropouts will be mounted to axles in the support frame and secured using
+quick release skewers as if they were being attached to a regular wheel. The center of the down tube will
+rest in a groove cut into the middle column of the support frame and will be cinched down using a draw
+strap attached to the middle column. Finally, we will use MIG or TIG welding to weld the front
+handlebars to the post so the structure is more secure.
+5.5.2 Support Frame Manufacturing and Assembly
+The entire support frame will be manufactured and assembled in the Cal Poly machine shop with
+the exception of the chain and flywheel guards, which we will contract out to a local sheet metal shop.
+We will use tube notches to notch tubing in order to fit together for welding. The frame will be welded
+using the MIG and TIG welders in the shop. We will create the rear support frame axle by turning down
+the ends of a 1” diameter bar to a diameter of 5/8”. This axle will then be welded to the rest of the frame
+and wheel burrow wheels will be fastened to the axle using cotter pins. Using a press or hand drill, holes
+will be drilled in the support columns to mount the front and rear bike axle rods, and additional bolt holes
+will be drilled to fasten the Filamaker to the support frame. A notch will be cut in the middle support
+column for the bike frame down tube to rest in, and a slot will be cut using a small diameter handheld
+46
+
+circular saw below the notch to allow straps to be secured around the bike frame. The chain and flywheel
+guards will be fastened to the frame once the bike and drive train are in place.
+5.5.3 Hopper Manufacturing and Assembly
+The hopper will get its rigidity from a welded steel frame on which the acrylic siding panels can
+be bolted. The top and bottom of the frame will be welded into rectangles from 1/8'' steel bars. In order to
+create the corners of the frame, we will bend McMaster-Carr's bolt-together framing from 90 degrees to
+109 degrees using the sheet metal bender in the Cal Poly machine shop. The ends of these pieces will be
+cut at an angle in order to fit to the top and bottom bars. We will need to grind away the zinc plating from
+the ends of the framing in order to safely weld the framing to the top and bottom bars. To cut the acrylic
+panels, we prefer to use the laser cutter to get very accurate angles and easily and precisely locate bolt
+holes; however, if the laser cutter is not available, we can use a table saw and drill press to create the
+panels. The panels will then be bolted to the hopper frame. The lid will be cut from a sheet metal panel
+(or possibly other material such as expanded steel), then welded to a rod. In order to mount the lid, we
+will machine bearings that slide over each end of the rod and can be fastened to the hopper frame. We
+will then machine the safety cam which will be attached to the rod on the lid. We will thread a brake line
+through a hole in the safety cam and attach the other end to the existing brake calipers on the bike frame
+so that when the lid opens, the cutter cannot rotate. Lastly, rubber stripping will be added to the edges of
+the lid to ensure good contact with the frame and reduce pinch points.
+
+Figure 39. Exploded view of hopper assembly.
+47
+
+5.6 Maintenance Considerations
+Maintenance for the Compost Chomper is similar to that of a standard bike with a few additions.
+Regular cleaning of the chain should occur whenever any sign of corrosion or debris is present. Cleaning
+consists of using a chain cleaning device and oiling the chain with any available chain oil or chain
+lubricant. Sprockets can be cleaned with a gear brush or any brush with stiff plastic bristles. The
+drivetrain may be hosed down to be clean as long as water is not left standing on parts.
+The hopper and Filamaker shredder should be hosed down after each use to ensure maximum life.
+Leftover plant residue could contain chemicals that accelerate any corrosion in the hopper and shredder.
+In the case that the shredder cannot be adequately cleaned with a hose alone, the hopper can be removed
+and a small scrubber brush can be used to clean the shredder. The hinge of the hopper should be
+lubricated once a year to ensure easy opening. Additionally, attention should be paid to the brake line,
+looking for corrosion or signs of wear. If the line looks at all fatigued it may require replacement.
+If chains and sprockets become corroded or worn, they may need to be replaced. The chains can
+be split off and replaced with the corresponding part from the Bill of Materials (Appendix J). Sprockets
+can be replaced with related parts found on most standard bikes. Local bike shops will be capable of
+ordering compatible parts if sourcing parts online or off the shelf is difficult
+5.7 Cost Analysis
+With the Baker-Koob Endowment and the funding guaranteed to us by our sponsor Susan
+Deogracias, our project has a total budget of $2500, down from the $3000 originally promised. Below is a
+brief summary of our costs per each subassembly. For a more comprehensive list of costs and materials,
+please refer to our Bill of Materials in Appendix J.
+Table 4. Cost Analysis
+
+Cost Analysis
+Sub-Assembly
+
+Cost
+
+Weight
+
+Fasteners
+
+$170.80
+
+~7 lbs
+
+Hopper
+
+$307.75
+
+~35 lbs
+
+Support
+Bike Frame
+Total
+
+$1,035.46 ~100 lbs
+$410.03
+
+~55 lbs
+
+$1,924.04 197 lbs
+
+As our project stands, having completed the finished product, we have about $500 leftover in our
+budget. Note that the costs shown in the cost analysis above and the Bill of Materials in Appendix J have
+been adjusted for shipping and tax fees once orders have been placed. Should our team have decided at
+any time that an aspect of manufacturing our project was out of our skill range, we had enough money to
+contract a machinist or Cal Poly Shop Tech.
+
+48
+
+5.8 Testing Timing and DVP
+Once the system was built, we planned to be able to start testing. Refer to the DVP in Appendix I
+or Figure 58 above for a comprehensive list of the timing for the tests we performed. We planned to use
+our tests to verify that the Compost Chomper indeed performs how we expected it to and to ensure that it
+is safe to use.
+In order to perform these tests effectively, we needed the right equipment. We expected that we
+would require a series of torque wrenches to measure the input torque required to operate the Filamaker
+and would be able to borrow or purchase these for little or no cost. To measure the RPM, we planned to
+either purchase a tachometer or use slow-motion video. We would use rulers and tape measures to
+measure the physical dimensions of the system. To measure the total weight of the system, we would
+likely break it down into subsystems and put them on the shop scale. To test if the structure supports the
+operator weight, we would sit on it ourselves. Finally, to measure the stability of the device, we would try
+pushing on it on the highest point of the broad side and see if it tips. To get a more accurate reading of the
+forces involved in the process, we planned to use masses and pulleys.
+
+6.0 Manufacturing
+Manufacturing the Compost Chomper was very time intensive and took the team to nearly every
+corner of the Cal Poly machine shops. The design of the Compost Chomper required a variety of systems
+effectively working together, which meant that each system needed to be manufactured carefully so as not
+to interfere with others. The final assembled design can be seen in Figure 40.
+
+Figure 40. Compost Chomper, fully assembled.
+49
+
+The following sections detail the manufacturing of various sub-systems of the Compost Chomper
+6.1 Support Frame
+The support frame makes up the base for the Compost Chomper and all systems are attached to it.
+This made it the natural place to begin manufacturing. The axle of the support frame was the first part to
+be manufactured. The axle was made from a 3ft long 1in diameter steel rod. The ends of the rod were
+turned down on a lathe to accommodate the wheels and holes drilled for the cotter pins. The completed
+axle with the wheels mounted can be seen in Figure 41.
+
+Figure 41. Axle assembly that allows the Compost Chomper to be easily moved.
+To make the support legs, two 3ft long 1.5in wide steel squaring tubing sections were attached
+normal to a 5ft section of 1in square tubing by MIG welding the sections. Perpendicularity of the legs was
+checked using a square before welding. The base for the Filamaker was made from the same 1in tubing
+used for the spine of the base. Sections of tubing were cut on a steel chop saw and necessary holes made
+on a drill press. Once each section of tubing was ground to ensure a good fit, the base was tacked and
+welded together. After the base was confirmed to fit the Filamaker the rest of the rear support frame was
+welded together and attached to the axle seen in Figure 42.
+
+50
+
+Figure 42. Rear support frame tacked together preparing for welding.
+To attached the rear support frame to supporting leg section, the rear was clamped to a piece of
+scrape metal and a level was used to ensure the Filamaker would sit parallel to the ground. Once the fit
+was confirmed the frame was welded and can be seen in Figure 43.
+
+Figure 43. Completed Support Frame
+During testing, it was discovered that the back portion of the frame saw a large amount of
+deflection when the device was shredding. To remedy this two support bars were added which can be
+seen in the lower back part of the frame in Figure 43.
+6.2 Bike and Drivetrain
+To use the flywheel acquired from the LA county jail, sprockets needed to be mounted to
+accommodate the bike chain and the machine chain used to drive the Filamaker. The thick sprocket
+needed to be fixed to the flywheel but the chain would not fit if mounted directly to the face. To fix this a
+custom spacer was manufactured on the lathe using a piece a scrap bar stock found in the Cal Poly
+machine shop. Turning and facing the steel spacer was a straightforward process, but parting the section
+off proved to be a lengthy operation. The parting tool provided by the shop was likely dull but no
+replacements could be found.
+51
+
+With the spacer completed, the sprocket needed to be welded on. Fixing to sprocket required
+carefully welding inside a small 1/2in gap using a TIG welder. The stick on the TIG gun was pulled out to
+allow the tip to reach but this came at the cost of a more erratic arc due to turbulent gas flow. Despite this
+the sprocket was successfully mounted and after some grinding with a Dremel fit the chain comfortably.
+Securing the sprocket assembly to the flywheel would mean closing of access to the bearings inside the
+flywheel. In order to allow for potential servicing to sprocket assembly was tacked multiple times instead
+of fully welded so that the tacks could be ground off if necessary. The thick sprocket and flywheel
+assembly can be seen in Figure 44.
+
+Figure 44. Picture of flywheel and thick sprocket assembly.
+To fix the sprocket that would run to the pedals, the shaft that originally held the spin bike drive
+belt was used. The shaft inserted into the flywheel allowing the flywheel to freely spin but still be driven
+by the pedals like a normal bike. To modify the shaft for the bike sprocket, it was turned down on a lathe
+to a standard size of 1.25in. A collar with a face mount was fixed to allow for the sprocket to attach. A
+sprocket was found from the bike graveyard, which was drilled to fit to the shaft and collar. This
+assembly was placed into the flywheel assembly. During testing, the sprag clutch inside the flywheel
+failed, taking away the ability of the flywheel to spin freely. To fix this the shaft was welded in place,
+which fixed the full drivetrain together. Although this raised some concerns about the flywheel “bucking”
+riders further testing proved this to not be an issue. The final flywheel drive assembly can be seen in
+Figure 45.
+
+52
+
+Figure 45. Final flywheel drive assembly with all parts welded together.
+During testing, some chain slip was occurring in both the sprockets attached to the flywheel. To
+fix this tensioners where purchased and welded as seen in Figure 46.
+
+Figure 46. The rear tensioner on the left and front tensioner on the right.
+In order to stop the flywheel on command, a braking system was attached. A 1.5in steel metal
+plate was welded directly to the bike frame and a standard road bike brake was fixed seen in Figure 47.
+
+53
+
+Figure 47. Flywheel braking system
+6.3 Hopper
+Manufacturing of the Hopper occurred concurrently with the drivetrain. To start the hopper, one
+large and one small steel rectangle was made from 1.5in wide 1/8in thick steel bars. The bars were cut on
+the steel chop saw and MIG welded together. To form the pyramid shape of the hopper, 90 degree bolttogether framing was used. The 90 degree bend needed to be changed to 110 degrees to accommodate the
+plexiglass so a bending jig was created using a piece of wood and a vice seen in Figure 48.
+
+Figure 48. Bending jig created to achieve 110 degree angles in framing
+Once the framing was bent, it was cut to size with an angle grinder. One of the challenges in
+using the framing was that it was galvanized steel, which when welded can release toxic fumes. To weld
+the framing the galvanized layer had to be ground off any area exposed to the heat of the welder. The
+framing was put in place with the rectangles and MIG welded together. During welding a fume hood was
+placed directly over the work area to ensure that any toxic fumes developed were quickly moved out of
+54
+
+the area. Holes were then drilled in the hopper frame to allow for it to be fixed to the Filamaker and for
+the lid hinges.
+To make the lid another large rectangle was manufactured but now with one side missing, making
+a “U” shape. Inside the “U” a sheet of expanded steel was MIG welded. The structure was then attached
+to a steel bar that ran through the hinges. Rubber trimming was placed on all the edges of the hopper lid
+for safety. The fully assembled hopper can be seen in Figure 49.
+
+Figure 49. Fully assembled hopper.
+6.4 Safety
+
+As was previously mentioned in the Drivetrain section, a handbrake was installed so that
+the drivetrain could be stopped with relative ease. Additionally, a cam and follower system,
+visible in Figure 50, was created so that when the hopper lid was open, the cam would move the
+follower, pulling a brake line attached to the same brake calipers around the flywheel as the
+handbrake so that the drivetrain could not move while the hopper was open. This braking system
+acts as an automatic safety feature to prevent the children from having access to the moving
+blades.
+
+55
+
+Figure 50. Cam braking system attached to hopper lid shaft
+To prevent the children from accessing the other moving parts of the Compost Chomper,
+sheet metal covers were designed and then manufactured by Paladin Sheet Metal in Paso Robles
+at no cost to the team. The covers are viewable in Figure 51, and served to prevent the children
+from accessing the chains around the pedals, the flywheel, and the chain running from the
+flywheel to the large sprocket at the cutter.
+
+56
+
+Figure 51. Sheet metal covers for chains, flywheel, and large sprocket
+Two locks were also purchased so that the pedals of the Compost Chomper could be
+locked together and the hopper locked closed when not in operation.
+6.5 Final Assembly and Painting
+
+Once all of the various components had been manufactured and assembled, we took apart the
+Compost Chomper so that it could be painted. Painting the Comp Chomp is important because
+the paint will act as a protective anti-corrosion layer on our steel. Even while being
+manufactured, many of our carbon steel parts began to show signs of rust, so it was crucial that
+an outdoor project like ours be coated with paint. We decided to use Rust-Oleum spray paint
+because of its superior corrosion resistance. After grinding off the layer of rust on the carbon
+steel parts of the bike frame, support frame, and hopper, we began painting. We chose to paint
+the ground frame red, viewable in Figure 40, so that it matched the Collins School colors, and
+painted the hopper blue because we thought the children would enjoy it. The bike frame had
+spots of rust and chipping paint which we touched up with black paint. The final assembly, after
+being painted, can be seen in Figure 41.
+
+57
+
+7.0 Testing
+The majority of the tests to verify that Compost Chomper met its specifications were go/no-go
+tests. Testing was carried out according to our DVP. Table 5 summarizes our testing results.
+Table 5. Testing result summary
+
+Parameter
+Description
+
+Target Quantity
+
+Test Result
+
+Torque Input
+
+160 in-lbf
+
+160 in-lbf 
+
+Input RPM
+
+60 rpm
+
+60 rpm 
+
+Torque Output
+
+960 in-lbf
+
+721 in-lbf 
+
+Cutter RPM
+
+10 rpm
+
+13 Rpm
+
+Chip Size
+
+1 in3
+
+0.62 in3 
+
+Vine Size
+
+3 in diameter
+
+Pass 
+
+Process Rate
+
+0.8 lb/min
+
+2.7 lb/min 
+
+Jam Frequency
+
+3 jams/hr
+
+Fail 
+
+Supports
+Operator Weight
+
+300 lb
+
+340 lb 
+
+Product Weight
+
+500 lb
+
+170 
+
+Footprint
+
+4’10” x 10’
+Will remain stable
+with 60lbs applied
+at highest point
+
+3’ x 7’6” 
+
+Feed Volume
+
+8 ft3
+
+1.5 ft3 
+
+Product Cost
+
+$1,000
+
+$2000 
+
+Height
+
+4 ft
+
+3 ft 
+
+Stability
+
+Pass 
+
+7.1 Test Summaries
+Torque Input/Output Testing:
+Torque testing was done by using luggage scales and knowing the length of our pedal shafts. We
+were able to match our input torque specification, but when that torque was applied at the pedals we
+measured the torque at the large sprocket on the cutter. Knowing the dimensions of the cutter, we were
+able to calculate what the output torque was, unfortunately falling below what our target was. We believe
+this discrepancy can be attributed to the fact that during manufacturing, we used a sprocket with a
+different number of teeth than what was designed on our flywheel shaft running to one of the pedal shafts.
+This was because it was the only bicycle sprocket we had that could fit our flywheel shaft and was close
+to our designed sprocket size.
+58
+
+Input/Cutter RPM Testing
+RPM testing was done by counting how many revolutions we had at both the input and the output
+within a given time frame. We were able to operate the compost cutter at 60 RPM pedaling speed, so we
+considered that a passing score. When pedaling at 60 RPM, we counted approximately 13 RPM at the
+cutter, which is above our 10 RPM minimum speed, so we considered that a passing score as well. As
+was previously mentioned, the discrepancies in speeds from what our design specifications were can be
+attributed to the small change in sprocket size that we used.
+Chip Size
+Chip size was tested thoroughly so that we could perform statistical analysis on the results. We
+shredded seven different kinds of garden waste: Vinca, Lavender, Centrathus Ruper, Alder Tree branches,
+Privet Tree branches, Pepper Tree branches, and Rose bushes, seen in Figure 52. These samples varied in
+diameter and level of dryness as well as material density.
+
+Figure 52. From left to right: Vinca, Lavender, Centrathus Ruper, Alder Tree branches,
+Privet Tree branches, Pepper Tree branches, and Rose bushes.
+
+Figure 53. Shredded chips of sample mixture from Figure 51.
+59
+
+This test was done concurrently with our test for Process Rate, Jam Frequency, and Vine size. We
+found that chip size depended greatly on the kind of garden waste put into the Comp Chomp, with the
+longer, skinnier vines creating longer chips more often than the thicker, shorter stalks of garden waste.
+Running the chopped compost a second time through the grinder produces even smaller chip sizes if that
+is desired. A histogram of our chip size data is provided in Figure 54.
+
+Figure 54. Histogram of 50 chip length samples randomly selected from chips collected
+during 8 trials with mixed material.
+From visual interpretation of the histogram, it could be loosely determined that this data is
+probably normally distributed. Further analysis would be required to conclude this with confidence, but
+for our purposes, we will assume that the data is in fact normally distributed. We believe that a reason the
+data appears to be slightly skewed to the left is that it was difficult to select a purely random sample from
+the chip population. The larger pieces were more prominent and thus more were grabbed than the smaller
+pieces which tended to sink to the bottom. In reality, we expect there to be a similar pattern as the right
+side of the histogram mirrored on the left side.
+Using normal distribution as an assumption, we performed an uncertainty analysis to determine
+the expected next measurement and mean value of the chips with 95% confidence. The resolution
+uncertainty was root-sum-squared with the statistical uncertainty (calculated with a student T variable) in
+order to get a final uncertainty. The result was an expected next value of approximately 5 ±5 in and an
+expected mean of 5±1 in. This makes sense because most of the measurements we saw fell within that
+range.
+Additionally, a statistical process control chart was created to visualize the patterns of results
+from each chip size test (Figure 55). This time, the chip sizes are represented by the maximum size per
+trial and are in units of volume.
+60
+
+1.2
+
+Chip Size [in3]
+
+1
+
+Chip
+Size
+Mean
+
+0.8
+
+Target
+
+0.6
+
+3Sigma
+0.4
+Toleranc
+e
+
+0.2
+0
+0
+
+2
+
+4
+Trial # [-]
+
+6
+
+8
+
+Figure 55. Statistical Process Control Chart displaying maximum chip volume of each of
+the 8 trials.
+According to the chart, our process is performing well for chip volume. There have been
+no failures (measurements past the red tolerance line) and the 3sigma uncertainty range is also
+below the red tolerance line (meaning future failures are not likely).
+Vine Size
+Our vine size specification was set to be 3 inches in diameter maximum for a vine based on
+information our sponsor told us about her garden. While testing how well the Comp Chomp ground the
+garden waste, we were able to pick out the widest piece we had, at just over 3 inches in diameter, and we
+were successfully able to grind it.
+Process Rate
+Process rate was tested by creating a thorough mix of all of our plant material and weighing a
+small, uniform, amount of it. Then the mixture of garden waste was thrown into the hopper to be
+shredded, and the amount of time it took to completely grind away the waste was recorded. Based on this
+data, we were able to determine if the Comp Chomp was able to grind compost in a timely manner. We
+were consistently above the minimum process rate of 0.8 pounds per minute with an average of about
+2.7lbs of compost ground per minute, thus satisfying our specification.
+Jam Frequency
+Concurrently with our Process Rate, Vine Size, and Chip Size tests, we were also testing for Jam
+Frequency. We considered jams in the hopper and jams in the cutter to be separate categories, with jams
+in the cutter being the main issue of focus. After testing multiple batches of garden waste, we found that
+our grinder did jam fairly often with drier, thicker material, and so while our tests only lasted 30 seconds
+each, a single jam in that time would put us over our 3 jams per hour specification. It seems that our
+specification in this case was too ambitious for a compost grinder.
+61
+
+Statistical process control charts for the feed jam frequency and the feed frequency can be seen in
+Figures 56 and 57 below.
+
+Feed Jam Frequency [Jams/hr]
+
+250
+
+150
+
+Feed Jam
+Frequenc
+y
+Mean
+
+100
+
+Target
+
+50
+
+3Sigma
+
+200
+
+0
+0
+
+2
+
+4
+Trial # [-]
+
+6
+
+8
+
+Figure 56. Feed jam frequency for 8 trials of operating the device.
+90.00
+Jam
+Frequency
+
+Jam Frequency [Jams/hr]
+
+80.00
+70.00
+
+Mean
+
+60.00
+50.00
+
+Target
+
+40.00
+3Sigma
+
+30.00
+20.00
+
+Tolerance
+
+10.00
+0.00
+0
+
+2
+
+4
+Trial # [-]
+
+6
+
+8
+
+Figure 57. Jam frequency for 8 trials of operating the device.
+Unlike the chip size SPC chart, the jam frequency SPC charts show processes that are operating
+far outside of the desired range. There are multiple failing measurements and the 3sigma uncertainty
+ranges exceed the tolerance by orders of magnitude. Although the data looks bad, this could be due to a
+poorly thought out specification. A jam/minute spec would have probably been more appropriate than
+jam/hr and would have likely shown less dramatic failures due to the nature of our testing. We are
+confident that the jams experienced by the device will not hinder successful operation although they may
+just be a slight inconvenience.
+62
+
+Operator Weight
+Operator Weight was a fairly easy test to complete, as when any combination of the three of our
+team members were operating the Compost Chomper we were above 300 lbs of operator weight already
+and the system showed no signs of failure.
+Product Weight
+Product Weight was again a simple test. With 500 lbs being our maximum, it was fairly easy to
+tell that we were well underweight when two of our team members could pick up the Comp Chomp. We
+estimate our weight to be around 140 lbs, and when tilted onto its rear wheel the Compost Chomper
+becomes very easy to move.
+Footprint
+The footprint of our project was important because it needs to fit within the storage space our
+sponsor has available. Using a measuring tape, we were able to determine that our ground footprint was
+around two feet less in both width and length than our maximum dimensions.
+Stability
+The stability specification for our project was determined based off of approximations for the
+amount of force someone would put onto the Comp Chomp while leaning on it. We leaned on the project
+in many directions and even tried to tip it over, but the weight of the project allows it to stay very stable.
+Feed Volume
+Feed volume refers to the volume of our hopper. Due to the small size of the Filamaker shredder
+we had to downsize the volume of our hopper, and so our hopper volume fell out of tolerance of our
+specification.
+Project Cost
+Our project cost specification stems from the original amount of budget that we had to work with.
+Once we were granted Baker-Koob funds, it quickly became apparent that keeping the entire project
+under $1000 when the shredder alone cost $600 was not possible. In the end, our project cost nearly
+$2000, twice our original budget.
+Height
+Height is an important characteristic of our project because if the project is too tall then children
+will not be able to operate it. The maximum height we set was four feet, and we came a foot under that at
+three feet, satisfying our specification.
+
+8.0 Management
+To facilitate successful completion of project tasks, we assigned specific responsibilities to each
+team member. Anthony is our communication head, meaning that he was responsible for sending and
+responding to the bulk of the team emails and reaching out to our various contacts. He also dealt with any
+manufacturing considerations and was be the main authority on prototype fabrications. Anthony was
+63
+
+primarily responsible for the frame and overall structure of the device. Joe was in charge of
+documentation, which entails preparation of weekly status reports with our advisor and recording all
+important project progress. Joe was also the main CAD modeler and will be primarily responsible for the
+cutting mechanism. Cory was assigned the task of treasurer, which includes monitoring funds, handling
+spending and material acquisition, and applying for grants. He was also in charge of test planning, and
+analysis. The subsystem of the device that Cory was primarily responsible for was the gear train.
+In order to stay organized and on track, we composed a Gantt chart, seen in Figure 58. This chart shows
+estimated completion times and due dates for various key project components.
+
+Figure 58. Gantt chart with currently planned tasks.
+This gantt chart reflected our planned completion dates as of CDR. The actual schedule that we
+ended up following can be found in Figure 59.
+
+64
+
+Figure 59. Updated Gantt chart to reflect actual dates
+The actual completion dates ended up being significantly later in almost all areas of the gant
+chart. The building and assembly of the total design continued right up until expo with testing occurring
+concurrently to the build.
+9.0 Conclusion
+The goal of this document has been to take the needs of the Captain Raymond Collins Elementary
+School Garden and translate them into engineering specifications that can be used to produce a successful
+device. In order to produce accurate, competitive specifications, we have done comprehensive research on
+existing products related to the needs. We have generated design ideas and selected the best configuration
+to meet our specifications. Based of those specifications we have developed our final design. Our
+machine has been thoroughly tested and meets all crucial criteria, and for that reason we believe it will
+meet the needs of our client well. For an operations manual, please refer to Appendix M at the end of the
+report. This final design is the product of 30 weeks of work, and we hope that this final design proves to
+be satisfactory for all of the Captain Raymond Collins Elementary School Garden’s goals.
+
+65
+
+Works Cited
+[1] "Guide to Small Batch Composting." Urban Garden Center. N.p., 2014. Web. 20 Oct. 2016.
+<http://www.urbangardencenter.com/how-to-compost/how-to-compost.html>.
+[2] "Human-Powered Shredder for Urban Farmers." Design Society Development DESIS Lab. Faculty of
+Art, Design & Architecture, University of Johannesburg, South Africa, n.d. Web. 15 Oct. 2016.
+<http://www.designsocietydevelopment.org/project/human-powered-shredder>.
+[3] "Organic Waste Shredder." Filamaker. N.p., n.d. Web. 08 Nov. 2016.
+<http://filamaker.eu/product/organic-waste-shredder/>.
+[4]"Shredders by Bosch Garden Tools | Bosch." Garden Tools from Bosch. N.p., n.d. Web. 25 Oct. 2016.
+<https://www.bosch-garden.com/gb/en/garden-tools/garden-tools/shredders-199967.jsp>.
+[5] "DR Wood Chipper." DR Power. N.p., n.d. Web. 16 Nov. 2016. <http://www.drpower.com/powerequipment/chippers/wood-chippers/self-feeding-wood-chipper-11-5-manualstart.axd?ctm_id=CPR11AMN&src=AW90375XE3663309&gclid=CLnL656OpNACFcNhfgodrfMKow
+>.
+[6] "Toro 2-Cycle 25.4cc Attachment Capable Straight Shaft Gas String Trimmer-51978 - The Home
+Depot."The Home Depot. N.p., n.d. Web. 17 Nov. 2016. <http://www.homedepot.com/p/Toro-2-Cycle25-4cc-Attachment-Capable-Straight-Shaft-Gas-String-Trimmer-51978/202071363>.
+[7] "Weed Warrior Light Blade Trimmer." Amazon.com. N.p., n.d. Web. 16 Nov. 2016.
+<https://www.amazon.com/Warrior-Light-Blade-Timmer59600/dp/B002ATMWU0/ref=pd_sbs_86_t_1?_encoding=UTF8&psc=1&refRID=1DK5M5VDKD58R
+Y4E00F9>.
+[8] "Weed Warrior Timmer Head." Amazon.com. N.p., n.d. Web. 16 Nov. 2016.
+<https://www.amazon.com/Weed-Warrior-TrimmerHead/dp/B002YKM6DS/ref=sr_1_fkmr0_4?ie=UTF8&qid=1478993816&sr=8-4fkmr0&keywords=weed+warrior+heavy+duty+attachment>.
+[9] "Brown Cycles of Grand Junction, Colorado." Browncycles.com. N.p., n.d. Web. 18 Nov. 2016.
+<http://browncycles.com/bc/kidz-tandem/>.
+[10] "2 to 20 Years: Boys Stature Weight-for-age Percentiles." www.cdc.gov. CDC, 30 May 200. Web.
+21 Oct. 2016. <https://www.cdc.gov/growthcharts/data/set2clinical/cj41c071.pdf+>.
+[11] "How Cycling Cadence Works." HowStuffWorks. N.p., 14 July 2010. Web. 15 Oct. 2016.
+<http://adventure.howstuffworks.com/outdoor-activities/triathlons/training/cycling-cadence1.htm>.
+[12] Thymark. "Making Salad with FilaMaker Organic Waste Shredder." YouTube. YouTube, 23 July
+2016. Web. 14 Nov. 2016.< https://www.youtube.com/watch?v=TfqV_HdRUMQ&t=51s>.
+[13] Crossland, P., G. Murphy, G. Martin, and M. Dean. Energy and Force Requirements for Six Pruning
+Shear Designs (n.d.): n. pag. 1997. Web. 1 Nov. 2016.
+<http://www.nzjf.org/free_issues/NZJF42_3_1997/76E76EA5-2923-4DAD-9212BC3AAA82C69E.pdf>.
+[14] Ducci, Vincent. "Broyeur Rapid AXT Rapid 2200 Bosch Pour BRF." YouTube. YouTube, 02 Oct.
+2014. Web. 30 Oct. 2016. <https://www.youtube.com/watch?v=gXGsP8Z06dk>.
+[15] "95 Percentile Person." 95 Percentile Person. N.p., n.d. Web. 17 Nov. 2016.
+<http://members.shaw.ca/gnat/95.html>.
+66
+
+[16] Jamerson, Shane. "GrabCAD - CAD Library." GrabCAD - CAD Library. N.p., 15 Jan. 2015. Web.
+14 Nov. 2016. <https://grabcad.com/library/bike-19>.
+[17] "Off-set Crankarm Positions." Off-set Crankarm Positions. - Bike Forums. N.p., n.d. Web. 17 Nov.
+2016. <http://www.bikeforums.net/tandem-cycling/299299-off-set-crankarm-positions.html?styleid=6>.
+[18] "Rare 1950 Arnold Schwinn Town & Country Twinn Tandem Bike-chrome Chainguard." Terapeak.
+N.p., n.d. Web. 09 Feb. 2017. <http://www.terapeak.com/worth/rare-1950-arnold-schwinn-town-countrytwinn-tandem-bike-chrome-chainguard/111760558872/>
+
+67
+
+Appendices
+Appendix A - Quality Function Deployment Matrix……………………………………………………….69
+Appendix B - Hand Calculations………………………………………………………………………..70-73
+Appendix C - Storage Space Floor Plan………………………………………………………………….....74
+Appendix D - Design Process Flowchart (from Professor Schuster's 2016 Senior Project lecture)………..75
+Appendix E - Top Subsystem Concept Sketches………………………………………………………..76-82
+Appendix F - Tandem Power MATLAB Code………………………………………………………….83-84
+Appendix G - Specification Satisfaction Calculations…………………………………………………..85-93
+Appendix H - Design Hazard Checklist…………………………………………………………………94-95
+Appendix I – DVPR ………………………………………………………………………………………..96
+Appendix J - Bill of Materials ……………………………………………………………………………...97
+Appendix K - Component Specification Sheets………………………………………………………..98-128
+Appendix L - CAD Drawings………………………………………………………………………...129-145
+Appendix M - Test Procedures………………………………………………………………………..146-158
+Appendix N - Operator Manual……………………………………………………………………....159-160
+
+68
+
+Appendix A - Quality Function Deployment Matrix
+
+69
+
+Appendix B – Hand Calculations
+
+Figure B-1. Torque input calculations for single and 2 person tandem pedaling.
+
+70
+
+Figure B-2. Power calculations for single and 2 person tandem pedaling.
+
+71
+
+Figure B-3. Estimating leaning force of an adult leaning on the Compost Chomper.
+72
+
+Figure B-4. Gear ratio calculations for drive train.
+
+73
+
+Appendix C – Storage Space Floor Plan
+
+74
+
+Appendix D – Design Process Flowchart (from Professor Schuster's 2016
+Senior Project lecture)
+
+75
+
+Appendix E – Top Subsystem Concept Sketches
+
+Figure E-1. Standard Shredder cutting mechanism
+
+76
+
+Figure E-2. Weed whacker and One-sided Gear Shear cutting mechanisms
+
+77
+
+Figure E-3. Upright Pedal and Tandem Pedal Driving Mechanisms
+
+78
+
+Figure E-4. Horizontal driving mechanism
+
+79
+
+Figure E-5. Mechanical stopper and Pusher safety mechanisms
+
+80
+
+Figure E-6. Brush and Mailbox feeding mechanisms
+81
+
+Figure E-7. Hopper and Sliding Door feeding mechanisms
+82
+
+Appendix F – Tandem Power MATLAB Code
+
+83
+
+84
+
+Appendix G – Specification Satisfaction Calculations
+
+Figure G-1. Tipping Force Analysis
+
+85
+
+Figure G-2. Rear Axle Deflection Calculations
+
+86
+
+Figure G-3. Critical Weld Stress Analysis Part 1
+87
+
+Figure G-4. Critical Weld Stress Analysis Part 2
+88
+
+Figure G-5. Critical Weld Stress Analysis Part 3
+
+89
+
+Figure G-6. Frame Tipping Due to Imbalance Calculations
+
+Figure G-7. Bicycle Drive Train Sprocket Tooth/RPM Optimization Spreadsheet; Refer to Figure
+G-8 For Accompanying Sketches
+
+90
+
+Figure G-8. Drive Train Considerations; Refer to Figure G-7 For Accompanying Optimization
+Spreadsheet
+
+91
+
+Figure G-9. Power Verification for Given Sprocket Sizes
+
+92
+
+Figure G-10. Chain Sizing Calculations for Flywheel to Filamaker.
+
+93
+
+Appendix H - Design Hazard Checklist
+
+94
+
+Planned Actual
+Date
+Date
+2/7/17 2/7/17
+
+Description of Hazard
+
+Planned Corrective Action
+
+Cutting mechanism will
+have moderate speed
+cutting blades.
+
+Design a safety mechanism that prevents blades from
+spinning while device is being maintained and a safe
+loading mechanism during operation.
+
+Cutting mechanism
+may be a relatively
+large rotating device.
+
+See above action.
+
+2/7/17 2/7/17
+
+System could tip if
+enough force is applied
+to the side.
+
+Design a stable base that allows for a large adult to
+lean on device with tipping.
+
+2/7/17 2/7/17
+
+Cutting blades will
+have sharp edges.
+
+See first action
+
+2/7/17 2/7/17
+
+Device will be stored
+outdoors in a humid
+area where rust could
+form.
+Device could be used
+to shred objects that
+should not be
+shredded.
+
+Paint device with corrosive resistant paint and use
+stainless steel parts wherever possible.
+
+2/7/17 2/7/17
+
+Require adult supervision when device is in use and
+inform adults about what products can and can’t be
+shredded.
+
+2/7/17 2/7/17
+
+95
+
+Appendix I -- DVPR
+
+96
+
+Appendix J – Bill of Materials
+
+97
+
+Appendix K – Component Specification Sheets
+
+Metric Machine Key, Stainless Steel, 6mm Square, 30mm Length
+
+98
+
+Type 316 Stainless Steel Slotted Cup Point Set Screw, 1/4"-20 Thread, 1/2" Length
+
+99
+
+Ultra-Corrosion-Resistant Hex Head Screw, Alloy 20 Stainless Steel, 5/16"-18 Thread Size, 1-1/2" Long (bag
+of 25)
+
+100
+
+Ultra-Corrosion-Resistant Hex Head Screw, Alloy 20 Stainless Steel, 5/16"-18 Thread Size, 1" Long (bag of
+25)
+
+101
+
+Super-Corrosion-Resistant 316 Stainless Steel Hex Nut, 5/16"-18 Thread Size (bag of 50)
+
+102
+
+Type 316 Stainless Steel Cotter Pin, 1/16" Diameter, 1" Length (bag of 100)
+
+103
+
+316 Stainless Steel Washer for 5/8" Screw Size, 0.688" ID, 1.5" OD (bag of 10)
+
+104
+
+Strengthened UV-Resistant Acrylic Sheet 1/8" Thick, 24" x 24", clear
+
+105
+
+1/8 x 1.5 x 6'and 2' bar
+106
+
+Easy-to-Weld 4130 Alloy Steel Sheet with Material Certification, .125" Thick, 24" x 24"
+
+107
+
+10x 4-40 screws
+
+108
+
+109
+
+6061 Aluminum block for hopper bearing
+
+Rubber Edge Trim, 1/8" Inside Width, 15/32" Inside Height, 10ft. Length
+
+110
+
+Easy-to-Weld 4130 Alloy Steel Round Tube 3/8" Dia
+111
+
+1/4 20 lock nut for hopper panels
+
+112
+
+1/4 20 5/8 screw for hopper panels
+
+113
+
+1/4 washer for hopper panels
+
+114
+
+Bolt together Framing 3ft each
+
+115
+
+Cinching Strap, Includes 30' of 1" Polypropylene Webbing, 6 Buckles
+
+116
+
+117
+
+Filamaker Organic Waste Shredder
+
+Polypropylene Core with Cushion Rubber-Tread Wheel, 8" x 2", 5/8" Axle, Side-Mount Hub/Ball Bearing, 450 lb
+Capacity
+
+118
+
+Easy-to-Weld 4130 Alloy Steel, Rod, 1" Diameter
+119
+
+Highly Corrosion-Resistant Roller Chain, 304 Stainless Steel, ANSI Number 40-SS, 1/2" Pitch, 6ft
+
+120
+
+ANSI Number 40-SS Connecting Link for 304 Stainless Steel Highly Corrosion-Resistant Roller Chain
+
+121
+
+Phillips Rounded Head Screws for Sheet Metal, 18-8 Stainless Steel, Number 5 Size, 3/4" Long (bag of 50)
+
+122
+
+Steel Machinable-Bore Sprocket for ANSI Number 40 Roller Chain, 1/2" Pitch, 60 Teeth
+
+123
+
+Steel Machinable-Bore Sprocket for ANSI Number 40 Roller Chain, 1/2" Pitch, 12 Teeth
+
+124
+
+Steel Machinable-Bore Sprocket for ANSI Number 40 Roller Chain, 1/2" Pitch, 20 Teeth
+
+125
+
+0.120" thick 1" square tubing 6' long
+126
+
+Square Finishing Plug for Tubing, Ribbed, Fits 1" Tube OD and 0.72"-0.84" Tube ID
+
+127
+
+Multipurpose 304 Stainless Steel Sheet, .060" Thick, 36" x 36"
+128
+
+Appendix L – CAD Drawings
+
+129
+
+130
+
+131
+
+132
+
+133
+
+134
+
+135
+
+136
+
+137
+
+138
+
+139
+
+140
+
+141
+
+142
+
+143
+
+144
+
+145
+
+Appendix M – Testing Procedures
+Test #1: Torque Input
+
+Testing performed:
+
+Part: Drivetrain
+
+Ensure that the fully assembled device is positioned on flat ground. One rider
+will stand on the front pedals (Joe, Cory or Anthony). The rear pedals will have
+a digital scale measuring the force from the rear. From this the input torque can
+be calculated
+
+Location: Bonderson 110
+Goal: Measure input torque of
+single rider
+Equipment: Digital Scale
+
+Problems Testing: Finding
+Scales that were accurate
+enough for our range of forces.
+
+Successes Testing: Luggage scales worked well.
+
+146
+
+Test #2 Input/Flywheel RPM
+
+Testing performed:
+
+Part: Drive Train
+
+Counting number of pedaling cycles per minute for each operator, test
+different pedaling speeds and how system handles. Riders will pedal
+with a steady cadence in increments of 20 RPM per test.
+
+Goal of testing:
+Verify that design speeds for the drive train are
+feasible and find out how system performs
+under different speeds.
+
+We will also use this opportunity to calibrate the tachometer. We will
+use the data from the above procedure to verify that the tachometer
+displays the same values.
+
+Equipment:
+Materials: Tachometer,
+Fully-assembled drivetrain, including cutter.
+
+Problems Testing: Pedalling at exactly the right
+cadence was a challenge initially.
+
+Successes Testing: Using a metronome and a cheap tachometer allowed
+for more accurate testing.
+
+147
+
+Test #3: Cutter RPM
+
+Testing performed:
+
+Part: Cutter
+
+A tooth will be marker with permanent marker on the large cutter
+sprocket. With one rider pedaling a slow motion video will be taken to
+count RPM.
+
+Location: Bonderson 110
+Goal: Measure cutter rpm
+Tools/Devices: iPhone, Marker
+
+Problems Testing: Counting the RPM of the
+cutting blades was difficult to make accurate.
+
+Successes Testing: Running multiple tests and using a marker to mark
+the blades assured that our measurements were reasonable.
+
+148
+
+Test #4: Chip Size
+
+Testing performed:
+
+Part: Cutter
+
+Have two riders pedal full assembly with vines/sticks in the shredder.
+Once the shredder has come to a full stop, measure the longest length
+of any chip.
+
+Location: Bonderson 110
+Goal: Measure average chip size leaving the cutter
+
+This test will be repeated 10 times and statistical analysis will be
+performed to predict the size of a chip.
+
+Tools/Devices: Ruler
+
+Problems Testing: Some of the longer, viny,
+garden waste did not get shredded as well as we
+wanted.
+
+Successes Testing: Running the garden waste through a second time
+helped shred the compost more.
+
+149
+
+Test #5: Vine Size
+
+Testing performed:
+
+Part: Cutter
+
+Have two riders pedal full assembly with increasingly large vines in the shredder.
+Once the riders are unable to pedal or have overly frequent jams the max vine size
+has been reached.
+
+Location: Bonderson 110
+Goal: Measure largest vine size
+shredder is capable of shredding
+Tools/Devices: Ruler
+
+Problems Testing: Cutter had
+trouble with thicker, drier vines.
+
+Successes Testing: The cutter was better at cutting wetter material at the same
+thickness than it was cutting drier material.
+
+150
+
+Test #6: Process Rate
+
+Testing performed:
+
+Part: Cutter
+
+Fill the hopper with approximately 1lb of garden waste. Have two riders power
+the device. As soon as the riders begin to pedal a timer will start. Once all the
+contents of the hopper are gone the timer will stop. From this the process rate will
+be calculated.
+
+Location: Bonderson 110
+Goal: Measure process rate capability of
+the compost chomper
+Tools/Devices: Stopwatch
+
+Problems Testing: Making sure our
+amounts of garden waste for each
+test were even was difficult.
+
+Successes Testing: We were able to shred a relatively even amount of compost in
+a fairly consistently short time.
+
+151
+
+Test #7: Jam Frequency
+
+Testing performed:
+
+Part: Cutter
+
+During the chip size test above, the number of jams that occur will be recorded and a
+jam frequency will be calculated from it.
+
+Location: Bonderson 110
+Goal: Measure Jam frequency
+during operation
+Tools/Devices: Stopwatch
+
+Problems Testing: Hard to define
+what a “jam” is.
+
+Successes Testing: Separating the definition of jam into a hopper jam and a cutter jam
+made it easier to classify how many jams we had per second.
+
+152
+
+Test #8: Operator
+Weight
+Part: Frame
+Location: Bonderson
+110
+
+Testing performed:
+Two operators (Joe, Anthony, or Cory) will sit on the two seats to ensure the structure does not
+fail. The weight of the operators will be measured and if their combined body weight is not
+enough to meet the 300 lb spec, they will hold additional weights while seated. Caution will be
+taken to ensure the operators do not get hurt if the structure fails.
+
+Goal: Ensure structure
+holds up under weight of
+users.
+Tools/Devices: Weights
+
+Problems Testing:
+N/A
+
+Successes Testing: Frame successfully held our weight, which together is over 300 pounds.
+
+153
+
+Test #9: Product Weight
+
+Testing performed:
+
+Part: Whole assembly
+
+The whole assembly will be placed on a shop scale and measured. If the assembly does
+not fit in one piece, components will be detached and measured individually, and the
+total weight will be calculated as the sum of the parts.
+
+Location: Hangar
+Goal: Test total weight of
+assembly
+Tools/Devices: Shop scale
+
+Problems Testing: Finding a
+scale to weigh the bike was
+hard.
+
+Successes Testing: Testing was straight forward.
+
+154
+
+Test #10: Footprint
+
+Testing performed:
+
+Part: Whole assembly
+
+Measure the dimensions of the virtual rectangle of space that the device occupies on the
+ground.
+
+Location: Bonderson 110
+Goal: Test total footprint
+Tools/Devices: Tape
+measure
+
+Problems Testing: N/A
+
+Successes Testing: N/A
+
+155
+
+Test #11: Stability
+
+Testing performed:
+
+Part: Frame/Whole
+assembly
+
+Push perpendicularly on broad side of device at the highest point. Pushing will be performed by
+either Joe, Anthony, or Cory (whoever is strongest). Pushing force will be calibrated at the gym to
+ensure the pusher is able to apply the specified 60 lbs of force.
+
+Location: Bonderson
+110
+Goal: Test device’s
+resistance to tipping.
+Tools/Devices: Weight
+
+Problems Testing:
+N/A
+
+Successes Testing: We purposefully tried to tip the machine over and we were not able to.
+Accidentally tipping the machine over would be next to impossible.
+
+156
+
+Test #12: Feed Volume
+
+Testing performed:
+
+Part: Hopper
+
+Measure the dimensions of the inside of the hopper and calculate
+the volume. Verify that the volume is within spec.
+
+Location: Bonderson 110
+Goal: Test hopper’s capacity.
+Tools/Devices: Tape measure
+
+Problems Testing: Measuring volume of the hopper
+was difficult because of the geometry.
+
+Successes Testing: Using known quantities of volume we were
+able to estimate how much the hopper could fit.
+
+157
+
+Test #13: Height
+
+Testing performed:
+
+Part: Whole assembly
+
+Measure the normal distance from the ground to the highest point of the assembly. Verify that
+the height is within spec.
+
+Location: Bonderson 110
+Goal: Test max height of
+device
+Tools/Devices: Tape
+measure
+
+Problems Testing: N/A
+
+Successes Testing: Testing was straightforward.
+
+158
+
+Appendix N – Operator Manual
+Operating the Compost Chomper
+The Compost Chomper is built to be easy to use but has a number a safety measures that must be
+acknowledged to ensure proper use. To begin, load the hopper with garden waste before any riders have mounted
+the bike. To fill the hopper, unlock the lid and lift it open. When filling the hopper some materials may need to be
+bent to fit inside the lid. At the same time material should be oriented as vertically as possible to facilitate feed
+into the shredder. Do not pack the hopper tightly. This increases the risk of a feed jam (material not feeding into
+the Filamaker). Before loading any garden was into the Compost Chomper be sure to check that no rocks are
+caught. Very small rocks do not pose a large threat to the shredder but larger ones could chip a shredder tooth.
+Tougher materials should be done individually or with as little material as possible.
+Once the garden waste is loaded into the hopper, the rider(s) may mount the bike. One to two riders may
+power the device at a time, however, one rider may not be able to provide adequate power. Riders can adjust the
+seat height to their liking as well as add pedal blocks if the pedals are too far away. Each rider should be aware of
+the other and be on the lookout for issues or if another rider’s foot slips. If a jam occurs during operation, riders
+should dismount the Compost Chomper until the issue has been resolved. Fixing a jam may require pedaling
+backwards or pulling on the jammed material within the shredder. It is crucial that while this unjamming process
+is taking place that hands are kept away from moving parts and that if meddling with the shredder is necessary,
+that all riders have dismounted and are away from the machine. Only adults should un-jam the device.
+Maintenance Considerations
+It is possible that the thick machine chain or the bicycle chain(s) may hop off of their sprockets during
+operation. If this occurs, rider(s) should dismount the bike and an adult should remount the chains on the
+sprockets. Chain and sprocket life can be extended by the occasional use of chain lubricant around the chains.
+Brake line lubricant can be applied to the brake lines to maintain a smooth braking motion when the lines are
+pulled. Cleaning the shredder can be done with a hose, or if additional cleaning is required, the hopper can be
+taken off the shredder and, using a brush, debris can be scrubbed off the shredder.
+If, however unlikely, the bearing on the flywheel needs maintenance, the tack welds that hold the
+flywheel assembly together can be easily ground off with an angle grinder with a cutoff wheel blade. Once that is
+done, the bearing may be easily accessed or replaced.
+Safety Considerations
+While the hopper lid is open NO RIDER MAY PEDAL OR TOUCH THE PEDALS. The hopper has a
+safety mechanism and the front rider has access to a handbrake, but these may be overcome with enough force
+which could result in bodily harm if any hands are near the shredder. Therefore, the braking systems on the
+machine should not be relied upon alone to provide safety. The use of clear verbal cues is recommended to
+communicate when the hopper is being loaded and when the hopper lid is closed and it is safe to pedal.
+While the sheet metal guards make it more difficult to access moving parts on the machine, it is still
+possible that sprockets and chains and flywheel may still be accessed. It is crucial that the safety labels and
+warnings are heeded, and it is necessary that all operators are made aware of the dangers of touching the moving
+parts before operating the machine. BEWARE OF PINCH POINTS.
+
+159
+
+Hands should be kept away from the bottom of the shredder. The blades are still exposed on the bottom
+but are harder to see so under no circumstances should hands or feet be by the bottom of the shredder during
+operation.
+
+160
+
+

@@ -1,0 +1,900 @@
+DESIGN, CONSTRUCTION, AND EVALUATION
+OF A GAS FORGE
+Spencer M. Davis
+2016
+BRAE
+
+DESIGN, CONSTRUCTION, AND EVALUATION
+OF A GAS FORGE
+
+by
+
+Spencer Davis
+
+BioResource and Agricultural Engineering
+BioResource and Agricultural Engineering Department
+California Polytechnic State University
+San Luis Obispo
+2016
+
+TITLE
+
+: Design, Construction, and Evaluation of a Gas Forge
+
+AUTHOR
+DATE SUBMITTED
+
+: Spencer Davis
+: June 3, 2016
+
+______Dr. Mark Zohns________
+Senior Project Advisor
+
+_______________________
+Signature
+_______________________
+Date
+_______________________
+Signature
+_______________________
+Date
+
+Charlie Crabb________________
+Department Head
+
+ii
+
+PREFACE OR ACKNOWLEDGEMENTS
+
+I would like to thank Mr. Virgil Threlkel for all his help in the shop. His expertise and
+patience is always much appreciated. I would also like to thank Dr. Holtz and Dr. Zohns
+for their help and guidance through the process. Lastly, I would like to thank my family
+for always being supportive of everything I do.
+
+iii
+
+ABSTRACT
+
+This report covers the design, construction, and evaluation of a propane forge. The
+purpose for building this propane forge was to replace an old charcoal forge in order to
+improve upon certain points of performance such as adjustability of heat, portability, and
+fuel cost by being able to run the forge for any amount of time with an easy on/off
+control. The design of this forge consisted of a steel pipe body insulated with ceramic
+fiber blanket, and was heated by a single atmospheric burner.
+
+iv
+
+DISCLAIMER STATEMENT
+
+The university makes it clear that the information forwarded herewith is a project
+resulting from a class assignment and has been graded and accepted only as a
+fulfillment of a course requirement. Acceptance by the university does not imply
+technical accuracy or reliability. Any use of the information in this report is made by the
+user(s) at his/her own risk, which may include catastrophic failure of the device or
+infringement of patent or copyright laws.
+Therefore, the recipient and/or user of the information contained in this report agrees to
+indemnify, defend and save harmless the State its officers, agents and employees from
+any and all claims and losses accruing or resulting to any person, firm, or corporation
+who may be injured or damaged as a result of the use of this report.
+
+v
+
+TABLE OF CONTENTS
+PAGE
+SIGNATURE PAGE--------------------------------------------------------------------------------------- ii
+ACKNOWLEDGEMENTS------------------------------------------------------------------------------- iii
+ABSRACT--------------------------------------------------------------------------------------------------- iv
+DISCLAIMER STATEMENT---------------------------------------------------------------------------- v
+LIST OF FIGURES--------------------------------------------------------------------------------------- vii
+LIST OF TABLES----------------------------------------------------------------------------------------- viii
+INTRODUCTION------------------------------------------------------------------------------------------ 1
+LITERATURE RREVIEW-------------------------------------------------------------------------------- 3
+PROCEDURES AND METHODS--------------------------------------------------------------------- 5
+Design Procedure-------------------------------------------------------------------------------- 5
+Construction Procedure------------------------------------------------------------------------ 8
+RESULTS-------------------------------------------------------------------------------------------------- 19
+DISCUSSION---------------------------------------------------------------------------------------------- 20
+RECOMMENDATIONS-------------------------------------------------------------------------------- 22
+REFERENCES------------------------------------------------------------------------------------------ 23
+APPENDICES-------------------------------------------------------------------------------------------- 24
+
+vi
+
+LIST OF FIGURES
+PAGE
+Figure 1: Blacksmiths Using Archaic Forge ---------------------------------------------------------1
+Figure 2: Forge Design Drawing -----------------------------------------------------------------------5
+Figure 3: Burner Diagram --------------------------------------------------------------------------------7
+Figure 4: Cutting Body to Length -----------------------------------------------------------------------8
+Figure 5: Laying Out Holes on the Burner Holder --------------------------------------------------9
+Figure 6: Rebar Handle Drawing----------------------------------------------------------------------10
+Figure 7: Angle Iron Feet--------------------------------------------------------------------------------11
+Figure 8: Toolstand---------------------------------------------------------------------------------------12
+Figure 9: Spray Painting the Body with High-Heat Spray Paint-------------------------------12
+Figure 10: Flaring the Nozzle over Round Stock--------------------------------------------------14
+Figure 11: Tapping the Set Screw Holes on the Burner Nozzle-------------------------------15
+Figure 12: Tapering Burner Tube on Bench Grinder---------------------------------------------16
+Figure 13: Fully Constructed Forge Body-----------------------------------------------------------16
+Figure 14: Rear Wall Installed with Front Bricks Stacked in Place---------------------------17
+Figure 15: Forge with Fiber Blanket Installed------------------------------------------------------18
+Figure 16: Painting ITC-100 Onto the Fiber Blanket---------------------------------------------18
+Figure 17: Forge User with Forged Knife------------------------------------------------------------19
+
+vii
+
+LIST OF TABLES
+
+PAGE
+Table 1: Propane Gas Properties-----------------------------------------------------------------------3
+Table 2: Coal Properties-----------------------------------------------------------------------------------4
+
+viii
+
+1
+
+INTRODUCTION
+
+Since the beginning of time, man has found the need to use tools to help him
+accomplish his work. One of the first tools was the blade. Starting from crude
+elements, man found better ways to make the blades that met societal needs
+along with advances in technology. Through the ages, the materials and quality
+of man’s blades increased. For many centuries, man relied on the edged
+weapon as a means of survival from daily life to warfare. From the Japanese
+Katana to the American Bowie knife, the blade has become a historical and
+iconic piece for civilizations as well as a unique art form among people as is seen
+in Figure1 below. While the process of forging a blade has changed over the
+course of history, man’s need for the blade has not diminished any.
+
+Figure 1. Blacksmiths Using Archaic Forge (blackiron.us).
+To create a hardened blade that can withstand repeated use and hold an edge,
+knife makers temper and heat treat the blade. To harden the blade, it must be
+heated to a high temperature then quickly cooled in a liquid. The process of
+heating a blade takes place in a forge. A forge is a device that can harbor an
+environment of extreme heat by providing and containing a concentrated heat
+source. Forges use various methods to provide the heat.
+Ashton Davis currently uses a homemade charcoal forge to make knives and
+metalwork. His current forge consists of a cast iron pot which is filled with coals,
+and air-fed by an air compressor through a PVC pipe. The problems with coal
+and charcoal forges are that they cannot easily be turned off or on, the
+
+2
+
+temperature is difficult to control, and poor quality charcoal can adversely affect
+the blades by causing impurities. By switching to a propane powered forge,
+those problems would be eliminated by allowing it to easily be turned off or on,
+being able to control the gas flow, and eliminating the possibility of poor quality
+charcoal. Propane heat is still able to reach forge welding temperatures so the
+capabilities of the forge are not diminished. The project is to design, build, and
+test a propane forge that will improve the quality and ease of knife making over a
+coal forge and is big enough to fit other tools such as hammers and hatchets for
+forge work but can be lifted by a single man.
+
+3
+
+LITERATURE REVIEW
+
+Research was conducted in order to examine existing methods for metalworking
+for hobbyists. Much information regarding propane forges, including DIY guides
+on making propane forges, can be found on the internet. There are numerous
+videos, pictures, and articles describing relatively easy ways to construct
+homemade propane forge. Information from a few articles will be compiled and
+used for the final project plan. Propane is nearly twice as energy dense as coal
+(see Tables 1 and 2 below) and charcoal energy density is usually around the
+high values of coal given in Table 2.
+As for composition of the forge itself, the main body can be a cylindrical piece of
+steel. Dempsey (2005) claims that a body as thin as 14ga steel will work if
+proper insulation is installed because it will not get too hot. A forge must be
+heated by a burner, for which there are a couple of options to go with. From the
+review, the RR type EZ burner has the ability to reach forge welding
+temperatures without requiring a blower. This burner is recommended for sea
+level areas, and is simple to construct from parts purchased at a local plumbing
+store. This burner is said to be a good beginner burner and can be easily
+replaced by a more advanced burner (adjustable) at a later time (Dempsey,
+2005). The article also talks about the front and back of the forge and what to do
+about retaining heat. Dempsey (2005) says that there should be a small hole in
+the back so that long pieces can extend
+
+Table 1. Propane Gas Properties (NFPA 1998).
+
+4
+
+through the opening and so that expanding hot gases have a place to escape.
+For the front, it should be large and open, but have soft firebricks to stack and
+close off the front to heat it up to retain heat. The rule of thumb for the vent is at
+least seven times the cross sectional area of the burner.
+
+Table 2. Coal Properties (Engineering ToolBox).
+Another article described the need for fiber lining inside of the forge (Zoeller,
+2012). The purpose of it is the keep as much heat within the forge as possible so
+the heating process is as efficient as possible. There are a few options for
+insulating the inside of the forge. One option is to use firebrick because it is
+cheap, but it is also inefficient. Fabric lining is the ideal option because, while it
+is more expensive, it holds heat much better. Kaowool is one option for the lining
+that is very common in gas forge construction. From reviewing the specifications
+of their products on the Morgan: Thermal Ceramics website, the Kaowool
+ceramic fiber blankets are rated at 1,260 degrees C which is equal to 2,300
+degrees F. The combustion temperature of propane is 1,967 degrees F for
+combustion with air and 2,526 degrees for combustion with pure oxygen (The
+Engineering ToolBox). Typical forge welding temperatures for a propane forge
+are accepted as 2,300 degrees F, and common forging can be accomplished at a
+lower temperature.
+The body must be painted so that it will be protected from corrosion. From the
+review of the products on Home Depot’s website, there are many paints that will
+work for high heat applications, but one is easily obtainable and fits the
+specifications. Rust-Oleum High Heat has a flat finish and will look nice and will
+also protect the steel from rust and corrosion. The thing that paint must be able
+to weather in this application is the heat that it will be subject to. For the outside
+of the body of the forge, the paint will be subject only to the heat of the steel body
+itself which is protected from direct contact with the flames by way of the wool
+fabric refractory lining. The paint is rated for 2,000 degrees F which will be
+sufficient heat resistance as the steel body of the forge should never get near
+that temperature.
+
+5
+
+PROCEDURES AND METHODS
+
+Design
+Body. Because this project was meant to replace one device with a new, better
+device, certain areas had to be focused on for the alteration. The first design
+consideration was the main body of the apparatus. Since propane forges are
+enclosed systems with the only openings being vents and access doors or
+permanent openings, a body had to be created that would be big enough to fit
+the pieces that would be forged as well as allow for insulation, but not be too big
+where it could not be carried short distances or lifted chest high by one man.
+
+Figure 2. Forge Design Drawing
+The other consideration for main body size was the heating required for the
+space. A rule of thumb in the forging industry is one EZ burner (the burner that
+was ultimately chosen) per 350 cubic inches of space in the forge in order to
+reach standard forging temperatures. This design ended up being 339 cubic
+
+6
+
+inches of The body that was chosen was a 10” ID schedule 40 steel pipe. This
+was chosen because it was available, however in another instance where one
+would have to be ordered a different choice may have been made. The body
+also included two pieces of angle iron for stabilizers at the base of the forge
+Insulation. To insulate the inside of the forge, 2” of ceramic fiber blanket
+insulation was chosen because of its high resistance to extreme heat and its
+workability in a round pipe. 2” was chosen because of the double effectiveness
+of retaining the heat in the forge. While it cost more to add the extra layer, lower
+fuel costs would make up the difference quickly. Like a car with good gas
+mileage, it costs more to begin with, but requires less fuel to run. The same
+concept applies with the forge because less heat is escaping the forge with better
+insulation and the fuel is therefore used more efficiently. The additional cost of
+installing the second layer of insulation would be $7.46 since the cost of the
+blanket is $4.75 per square foot. The extra fuel cost without the second layer of
+insulation is $0.18 per hour (refer to Appendix B). After 26 hours of operating the
+forge, the second layer of insulation pays itself off and starts saving money.
+Instead of a single roll of 2” thick fiber blanket, two 1” layers were used because
+it is easier to work 1” layers in a round body than it is to work a 2” piece. In a box
+shaped forge, firebricks probably would have been chosen because they are
+cheaper than the fiber blanket and can easily be stacked during installation.
+Firebricks also do not emit dangerous fiber particles in the air when the forge is
+ran such as the fiber blanket does. For this design, a refractory coating called
+ITC-100 was used to coat the entirety of the fiber blanket. The coating is a claylike substance that is painted on and dries. This was done because it helps keep
+heat in the forge, but also because it seals the ceramic fibers that would be
+otherwise harmful to the user of the forge. While the cost increased because of
+the use of the expensive refractory coating, it was worth the expense because
+the user would then be able to operate the forge without a respirator. To close
+off the ends of the forge, the considerations were minimum ventilation and
+access. The minimum ventilation required for an atmospheric burner like the one
+that was chosen is at least seven times the area of the end of the burner. Since
+the burner that was chosen had a 1.77 square inch nozzle, the minimum
+ventilation required was 12.4 square inches. Because the nozzle was to be
+made using non-precise methods, a safe 14 square inches was used.
+Burner. Since this forge was to be propane powered as opposed to charcoal
+heated, a fuel system had to be designed to deliver and burn the propane. The
+main piece of this design was the burner. Many different types of burners are
+available for propane forges, and there are many plans for making burners.
+
+7
+
+Burners can either be atmospherically aerated or blown. Atmospheric burners
+rely on venturi shaped burners to draw air in to the high-velocity, low-pressure
+streams of propane being injected into the forge.
+
+Propane from tank fed into pipe
+Choke controls air intake
+
+0.040” orifice
+
+Second set of screw added to
+allow for angle adjustment
+
+One end capped
+
+Propane burns here
+
+Figure 3. Burner Diagram
+Atmospheric burners work great at low elevations and do not require any
+mechanisms to deliver the air. Blown burners rely on a compressor to force air
+into the burner. Blown burners are better for high elevation applications due to
+the thinner air at high elevations and the inability of atmospheric burners to
+deliver the proper amount of air because of that. The downside to blown burners
+is that they require another power source to run the compressor and therefore
+limit the portability of the forge. For a shop forge there is no problem with that,
+but for people that need to take their forge around with them for work (such as
+farriers who go out to ranches and work out of the back of their truck), it does not
+work quite so well. Because portability was a strong consideration, and the forge
+was to be used at or near sea-level, the atmospheric burner was chosen.
+
+8
+
+Construction
+Body. The first step was to build the main body of the forge which everything
+else would attach to. To do this, a piece of steel had to be acquired large
+enough for the type of jobs the forge would be to handle. A common body is an
+old propane or Freon tank which results in a large, lightweight body but locating
+these can be difficult. A 10” diameter pipe was used because it would only
+require one burner for a 1’ length as opposed to an old propane tank which would
+require two burners because of the extra 2” of diameter.
+
+Figure 4. Cutting Body to Length
+The pipe is much heavier than the tank would be, but also much sturdier. The
+pipe was then cut to a length of 1’ in the band saw. The second step in
+constructing the body of the forge was to build and attach the burner holder. The
+burner holder was made out of a 2” diameter pipe section. The length of the pipe
+was cut to 4” and then one end of the pipe was cut at a 45 degree angle. The
+
+9
+
+purpose of the angled end of the pipe is for when it is attached to the body. The
+burner will heat up the forge best when it is at an angle inside the forge to create
+a swirling effect around the inside. To create the hole where the burner holder
+would go, the angled pipe section was held on the center of the body and traced
+with a scratch awl. The hole was then cut out with an oxy-torch and a piece of
+scrap sheet metal was placed inside the pipe to catch all of the molten metal to
+assist with cleanup. A half-round file was used to clean up the hole and smooth
+some angular edges so that the holder would fit well inside the hole.
+Burner Holder. The burner holder was designed to have two sets of set screws
+so that the angle of the burner inside could be finely adjusted. Each row would
+have four set screws, so eight total holes had to be drilled into the burner holder.
+To locate the lines where the holes would be placed, an initial line was placed
+and then the others were measured off that one. The lines were to be offset to
+create an “x” pattern as opposed to a “+” pattern. The first line was eyeballed
+along one of the sides and scratched in using a square held onto the end of the
+pipe (which was in a vice) and a scratch awl. The next lines were marked by
+dividing the circumference by four and measuring each one along the edge of the
+pipe. After the four lines were established, each hole was located by measuring
+a prescribed distance from the edge of the pipe to the two holes along each line.
+Once the centers were marked with the scratch awl, they were set with a center
+punch. The pipe was then moved to the drill press to drill the holes. A pilot hole
+was used for each one and then the drill size that would fit the weld nut was used
+for the final hole.
+Lower set of four holes
+
+Upper set of four holes
+
+Figure 5. Laying Out Holes on the Burner Holder
+
+10
+
+The body was then clamped to the table with the cut hole on top. The body and
+the burner holder were cleaned up with a wire wheel to provide a cleaner weld.
+The burner holder was set at the desired angle then tacked into place with the
+MIG welder. Since the hole was cut with the torch and imperfect, gaps had to be
+filled with the welder. The MIG was then run around the burner holder in the hole
+until it was secure. At that point, the nuts had to be welded onto the burner
+holder. Each nut was hit with the wire wheel to remove the coating in preparation
+for the welding. Each nut was welded on two sides with the MIG.
+Handle. A handle for the forge was constructed from some rebar because it was
+readily available. A piece of rebar was held in the vice and hammered with a
+sledge hammer to form 90 degree bends. The excess material was cut off in the
+band saw and then the handle was welded onto the top of the body with the MIG.
+
+Figure 6. Rebar Handle Drawing
+Feet. The feet of the forge were constructed from a piece of angle iron cut to
+length on the band saw and then welded to the bottom of the forge body at the
+point where the feet were flat and the forge body touched the ground in the
+middle. The foot was welded on both sides to create distance between the two
+welds so they could resist a bending moment.
+
+11
+
+Figure 7. Angle Iron Feet
+Tool Rest. The tool rest was constructed by simply cutting a piece of rebar to
+length and then bending it 90 degrees with a hammer and vice. The tool rest
+attachment part was constructed by finding a small piece of pipe that could just fit
+the rebar into it without too much slop, cutting it to length, and then drilling a hole
+into the middle of it. The hole was sized so that the weld nut would fit and a bolt
+could be tightened and loosened to adjust or remove the tool rest bar. The
+attachment part was then welded onto the forge body flush with the face of the
+pipe.
+
+12
+
+Figure 8. Toolstand
+
+Figure 9. Spray Painting the Body with High-Heat Spray Paint
+
+13
+
+Burner
+The burner was constructed using basic plumbing parts and a little machining.
+For the air intake, the 1 ½” to ¾” galvanized bell reducer was marked a quarter
+inch below the large opening along center and a 9/64” hole was drilled clear
+through both sides. A hole was then drilled on only one side from the top face of
+the reducer down into the previously drilled hole so that both holes intersected
+each other. This hole was sized so that it could be tapped for an 1/4” NC bolt.
+The original hole had to be filed with a small round file in order to smooth out little
+pieces of metal from the second hole being drilled. The propane injector was
+simply created from an 1/8” brass pipe nipple with a #60 hole drilled in the center
+of it. The pipe nipple was then placed through the top of the bell reducer and
+capped on one end. The hole was oriented directly center pointing towards the
+small end of the reducer, and an 1/8” bolt was placed in the previously drilled and
+tapped hole to set the pipe nipple in place. A choke was then added on top of
+the large end of the reducer by taking an old lid from a jam jar and drilling a hole
+through one side of it so that it could sit evenly on top of the reducer and rotate
+about the bolt. An 8” long ¾” black pipe nipple was then threaded into the small
+end of the reducer after cutting the threads off of one side. For the burner
+nozzle, a 3” section of 1” black pipe was used. A hole was drilled through center
+of one end of the pipe and the holes were tapped for a ¼” NC set screw. To
+create the flared end of the nozzle, an oxy-torch was placed in a vice grip and
+used for a heat source. The end of the pipe was then heated up and worked
+around a small piece of round stock over and over until a flare with a diameter of
+about 1 ½” was created.
+
+14
+
+Figure 10. Flaring the Nozzle over Round Stock
+In order for the nozzle to fit over the black pipe nipple, the black pipe nipple had
+to be tapered using a bench grinder. The nozzle was placed on the black pipe
+nipple and set in place using two hex bolts. These hex bolts were later changed
+to set screws because the clearance between the nozzle and burner holder was
+not great enough to allow the burner to be installed. The brass pipe nipple was
+then connected to a 0-30psi propane regulator by a swivel fitting to a 3/8” hose.
+All the threaded connections in the burner were later doped to seal them.
+
+15
+
+Figure 11. Tapping the Set Screw Holes on the Burner Nozzle
+
+16
+
+Figure 12. Tapering Burner Tube on Bench Grinder
+
+Figure 13. Fully Constructed Forge Body
+
+17
+
+Insulation. The entirety of the forge body was then cleaned with a wire wheel
+and spray painted with 2000 degree F rated high-heat black paint. Two layers of
+1” thick 2400 degree F ceramic fiber blanket was then installed inside the forge
+body covering the entire inside surface. An “x” was then cut into the blanket from
+the burner holder hole. The outside diameter of the forge body was then traced
+onto a piece of ½” x 1’ x 1’ ceramic fiber board and cutout with a coping saw. A
+rectangular section was then cut out of the board. Later, paint had to be wire
+wheeled off in four spots so ½” pieces of ½” x ½” x ⅛” angle iron could be welded
+to the edge of the forge body in order to hold the fiber board in place. All
+surfaces of the fiber blanket and fiber board were then painted with a clay-like
+refractory material called ITC-100 and allowed to dry. Later, the forge had to be
+heated to its running temperature and then let cool three times in order to set the
+refractory coating. Six 2” thick firebricks were then acquired and stacked in front
+of the opening.
+
+Figure 14. Rear Wall Installed with Front Bricks Stacked in Place
+
+18
+
+Figure 15. Forge with Fiber Blanket Installed
+
+Figure 16. Painting ITC-100 Onto the Fiber Blanket
+
+19
+
+RESULTS
+
+During the initial testing of the burner, it was found that flames shot out of all
+threaded fittings that weren’t sealed, but after the problem was fixed and all
+threaded fittings were doped, the burner worked. A nice steady flame could be
+produced using the choke in conjunction with the regulator to establish a flame
+with a proper air fuel mixture. The flame could then be easily adjusted using both
+aforementioned devices to achieve the desired output.
+The fully constructed forge was able to reach peak heat after being run for only a
+couple of minutes. The flame was easy to establish and control, and even after
+being run for a significant length of time, the handle and bottom of the forge did
+not get too hot to touch.
+
+Figure 17. Forge User with Forged Knife
+
+20
+
+DISCUSSION
+
+Cost Analysis
+Materials
+Quantity Item
+
+Unit Cost
+
+1 10" Sch. 40 Steel Pipe x 1'
+
+$
+
+85.00
+
+1 3/8" Rebar x 3'
+
+$
+
+2.00
+
+1 Brass Couplings and Caps
+
+$
+
+5.00
+
+1 1 1/2" to 3/4" Galvanized Reducer
+
+$
+
+3.00
+
+1 1/8" Brass Pipe Nipple x 3"
+
+$
+
+5.00
+
+2 6" Angle Iron 2" x 2" x 3/16"
+
+$
+
+2.00
+
+1 1/2" Pipe x 3"
+
+$
+
+1.00
+
+1 Bolts & Screws
+
+$
+
+10.00
+
+6 Fire Bricks
+
+$
+
+3.00
+
+1 Rust-Oleum High Heat Spray Paint
+
+$
+
+5.00
+
+1 ITC 100 (1/2 pint)
+
+$
+
+40.00
+
+1 1" Inswool Fiber Blanket 2' x 5'
+
+$
+
+36.00
+
+1 1/2" Insboard 1' x 1'
+
+$
+
+17.00
+
+1 (Shipping for above 3 items)
+
+$
+
+42.00
+
+1 0-30 psi Propane Regulator (3/8")
+
+$
+
+32.00
+
+Total Cost
+$
+85.00
+$
+2.00
+$
+5.00
+$
+3.00
+$
+5.00
+$
+4.00
+$
+1.00
+$
+10.00
+$
+18.00
+$
+5.00
+$
+40.00
+$
+36.00
+$
+17.00
+$
+42.00
+$
+32.00
+
+Total Materials $
+Cost = 305.00
+
+21
+
+Labor
+Hrs
+
+Task
+
+Per Hour rate
+
+25 Research and Design
+
+$
+
+15.00
+
+35 Materials Acquisition and Construction
+
+$
+
+70.00
+
+10 Testing
+
+$
+
+15.00
+
+Total Cost
+$
+375.00
+$
+2,450.00
+$
+150.00
+
+$
+Total Labor Cost = 2,975.00
+
+The cost for the project was analyzed by breaking the process down into two
+distinct sources of cost: parts and labor. The parts were then counted as were
+purchased. The labor was counted using realistic assumptions for what it would
+actually cost a company. The materials acquisition and construction portion of
+the project was priced at $70.00 an hour because that includes the hourly wage
+of the employee doing the work as well as the cost to own and run the equipment
+and tools required. The research and design portion of the project as well as the
+testing phase were priced at $15.00 an hour because they do not require much
+machinery besides the product itself and can be done by an employee at regular
+wages.
+The cost of the project was extremely high when labor is counted because of the
+man-hours invested. The actual cost of the parts required to construct the forge
+was relatively low, and the actual cost to build it was even lower because some
+parts were salvaged from the scrap pile, which meant not having to purchase
+some of the materials on the parts list. In the future, if this project were to be
+done again, the time needed to research and design it would be cut down to
+almost nothing more than familiarization with this report. A lot of time was
+wasted in the shop either waiting to use equipment or needing to be taught how
+to do certain things, and so time could be shaved off the construction phase by
+already knowing how to do all of the steps involved. Time for testing cannot
+really be cut, however, since this design is known to work, one could skip the
+lengthy testing phase and simply start using it after it is built and checked for
+basic proper function.
+A small propane forge can be purchased for a few hundred dollars which beats
+the project cost by a longshot. The price for building one would be lower if more
+material was closely accessible and did not have to be shipped long distances,
+but someone without shop equipment would not be able to make it on their own.
+
+22
+
+RECOMMENDATIONS
+
+For a future forge, a larger body as well as a second and possibly third burner
+would expand the capabilities of the forge. With a larger body, if even only by
+two inches, bigger pieces of metal could be accommodated in the forge but they
+would require that second burner. A third or fourth burner could be used to
+increase the reachable temperatures inside the forge. The thickness of the
+current body is also unnecessary and adds extra weight that the user has to deal
+with. For a body, an old propane tank would be a great option to go with. It
+would be lightweight as well as a larger diameter than the forge that was built. If
+the same amount of insulation was used, the outside metal would still not get
+warm. Welding to the thin gauge steel might be more challenging but overall it
+would be a better forge.
+As far as burners go, the burner that was used works great. If the forge were
+going to be moved to a location with an elevation significantly above sea level,
+then a blown burner might be considered to replace the current atmospheric
+burner.
+Another addition to the forge that would make it better would be an ignition
+system. Currently, the gas has to be turned on and lit with a barbecue lighter,
+but if there was some kind of small spark igniter inside the forge then it could be
+started with a simple button press. The difficulty in that is finding something that
+can withstand the heat, which was the reason that option was ruled out in the first
+place.
+One other firebrick would be a great addition to the forge. It would be a ½” thick
+firebrick used for the floor of the forge to set pieces on so that the fiber blanket
+does not get damaged. It was a part of the original design but limited availability
+left it out of the final assembly.
+A final recommendation would be to build a door for the front of the forge that has
+a rectangular port for minimum ventilation purposes, but could be opened to set
+and retrieve large pieces inside the forge.
+
+23
+
+REFERENCES
+
+1. Dempsey, Jock. 2003. Gas Forges: Building Your First Gas Forge. AnvilFire.com.
+Available at: http://www.anvilfire.com/article.php?bodyName=/FAQs/gas_forges.htm.
+Accessed 3 October 2015.
+2. Hart, Gordon. 2009. K-value, U-value, R-value, C-value: Understanding the Value in all
+these Values. Insulation Outlook. Available at:
+http://www.insulation.org/articles/article.cfm?id=IO090302. Accessed 4 March 2016.
+
+3. NFPA 58: Liquefied Petroleum Gas Code. 1998. Available at:
+http://www.nfpa.org/assets/files/aboutthecodes/58/58-98-pdf.pdf. Accessed 4
+October 2015.
+4. The Engineering Toolbox. Available at: http://www.engineeringtoolbox.com/coalheating-values-d_1675.html. Accessed 4 October 2015.
+
+5. Smoot, Fred. 2002-2011. Forges, Bellows, and Blowers: The American Blacksmith.
+Available at: http://blackiron.us/forge.html. Accessed 6 October 2015.
+6. Zoeller, Larry. 2000. Zoeller Forge. Available at: http://zoellerforge.com/.
+
+24
+
+APPENDIX A
+HOW PROJECT MEETS REQUIREMENTS FOR THE BRAE MAJOR
+
+25
+
+HOW PROJECT MEETS REQUIREMENTS FOR THE BRAE MAJOR
+
+Major Design Experience
+The BRAE senior project must incorporate a major design experience. Design is
+the process of devising a system, component, or process to meet specific needs.
+The design process typically includes the following fundamental elements. This
+project addresses these issues as follows.
+Establishment of Objectives and Criteria. Project objectives and criteria are
+established to meet the needs and expectations of the client. See Design
+Parameters and Constraints below for specific objectives and criteria for the
+project.
+Synthesis and Analysis. This project incorporates energy output calculations,
+thermal resistance calculations, and the consideration of alternative forging
+methods.
+Construction, Testing, and Analysis. The propane forge was designed,
+constructed, and tested.
+Incorporation of Applicable Engineering Standards. NFPA Codes which deal
+with liquefied petroleum gas.
+Capstone Design Experience
+The BRAE senior project is an engineering design project based on the
+knowledge and skills acquired in earlier coursework (Major, Support and/or GE
+courses). This project incorporates knowledge/skills from these key courses.
+▪ BRAE 129 Shop Skills and Safety
+▪ BRAE 133 Engineering Graphics
+▪ BRAE 152 SolidWorks
+▪ BRAE 232 Ag Structures Planning
+▪ BRAE 421/422 Equipment Engineering
+▪ ME 302 Thermodynamics I
+▪ ENGL 149 Tech Writing
+▪ CHEM 124/125 Chemistry for Engineers
+Design Parameters and Constraints
+
+26
+
+This project addresses a significant number of the categories of constraints listed
+below.
+Physical. The forge dimensions ended being 12” x 14” x 15” and weighed about
+50 lbs. The opening is 6” and has a tool rest.
+Economic. Propane is cheaper than charcoal to purchase on a per energy
+basis.
+Environmental. The propane emits less carbon than the dirty-burning charcoal
+forge.
+Sustainability. Propane is from fossil-fuels and charcoal is from wood so it is
+not as sustainable as the old forge.
+Manufacturability. The project was able to be constructed from the tools in the
+BRAE shops.
+Health and Safety. The forge is only be used in outdoors or well ventilated
+areas because of the carbon monoxide output. Gloves and eye protection are
+also worn when using the forge.
+Ethical. Operator safety was not neglected in order to meet other constraints
+such as Economics or Sustainability.
+Social. The propane forge is noisier than the charcoal forge but produces less
+smoke.
+Political. The propane forge helps reduce air pollution.
+Aesthetic. The finished product is painted with heat resistant spray paint to
+protect from corrosion and give a nice appearance.
+Other-Productivity. The forge is able to reach 2,300 degrees F.
+
+27
+
+APPENDIX B
+DESIGN CALCULATIONS
+
+28
+
+1. Design Calculations for Heat Energy Output
+Formula used:
+Burner output (BTU/hr) =
+((π*(gas orifice)2)/4)*(orifice discharge coefficient/144)*(21,407*√(propane
+pressure))*2,498 BTU/cu ft*60
+Gas orifice = #60 drill bit = 0.040 in
+Orifice discharge coefficient = 0.75
+Propane pressure = 5 psi – 15 psi
+Burner output = 47,000 – 81,000 BTU/hr
+
+2. Design Calculations for Heat Loss
+R-Values (thermal resistivity)
+R = 1/k
+R (steel body) = 1 / 40 BTU*in/hr*ft2*°F
+= 0.025 hr*ft2*°F/BTU*in
+R (Inswool fiber blanket) @ 2000 deg F = 1 / 2.34 BTU*in/hr*ft2*°F
+= 0.427 hr*ft2*°F/BTU*in
+Composite R value = ( 0.025 * 0.364 in ) + ( 0.427 * 2 in ) = 0.863
+hr*ft2*°F/BTU
+0.836 hr*ft2*°F/BTU * ( 1 / .5’ * π ) * ( 1 / 2200 °F ) = 0.00024196 hr/BTU
+1 / 0.00024196 hr/BTU = 4,134 BTU/hr lost through the walls of the forge
+
+Exhaust losses = about 75-90% of the heat produced
+*If only 1” of insulation was used:
+Composite R = 0.4361 hr*ft2*°F/BTU
+
+29
+
+0.4361 hr*ft2*°F/BTU * ( 1 / .5’ * π ) * ( 1 / 2200 °F ) = 0.0001262 hr/BTU
+1 / 0.0001262 hr/BTU = 7,924 BTU/hr
+3. Design Calculations for Heat Transfer to Part
+Specific heat of mild steel = 0.122 BTU/lb*°F
+
+Low end (assuming fully open exhaust ports):
+(47,000 BTU/hr * .1) – 4,100 BTU/hr = 600 BTU/hr to part
+For a 12 oz blade: 0.122 BTU/lb*°F * (.75 lb) / ((600 BTU/hr) *(1hr/60 min))
+= 109°F/min
+
+High End (assuming closed exhaust ports):
+(81,000 BTU/hr * .25) – 4,100 BTU/hr = 16,150 BTU/hr to part
+For a 12 oz blade: 0.122 BTU/lb*°F * (.75 lb) / ((16,150 BTU/hr) *(1hr/60
+min))
+= 2,940°F/min
+
+4. Design Calculations for Cost to Run Forge
+At 5 psi:
+47,000 BTU/hr / (21,548 BTU/lb) = 2.18 lb/hr
+2.18 lb/hr / (20 lb tank / $20 ) = $2.18/hr
+At 15 psi:
+81,000 BTU/hr / (21,548 BTU/lb) = 3.76 lb/hr
+3.76 lb/hr / (20 lb tank / $20 ) = $3.76/hr
+
+*If only using 1” of insulation:
+Extra loss = 7,924 BTU/hr – 4,134 BTU/hr = 3,790 BTU/hr
+
+30
+
+Extra Cost =
+3,790 BTU/hr / (21,548 BTU/lb) = 0.18 lb/hr
+0.18 lb/hr / (20 lb tank / $20 ) = $0.18/hr
+
+31
+
+APPENDIX C
+CONSTRUCTION DRAWINGS
+
+32
+
+33
+
+34
+
+

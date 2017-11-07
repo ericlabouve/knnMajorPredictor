@@ -1,0 +1,5911 @@
+Crop Selection, Cost Analysis, and Irrigation System Design
+For the Replanting of a Nut Orchard
+
+By
+
+Maximilian Bricker
+
+Agricultural Systems Management
+BioResource and Agricultural Engineering Department
+California Polytechnic State University
+San Luis Obispo
+2016
+
+SIGNATURE
+PAGE
+
+TITLE: Crop Selection, Cost Analysis, and Irrigation System Design for the Replanting of a
+Nut Orchard
+AUTHORS:
+
+Maximilian Bricker
+
+DATE SUBMITTED: June 2, 2016
+
+_____________________________
+Senior Project Advisor Signature
+
+__________________________
+Date
+
+______________________________
+Department Head Signature
+
+__________________________
+Date
+
+ii
+
+ACKNOWLEDGEMENTS
+First, I would like to thank my Father, Mr. Walter Bricker. He is the landowner of Bricker
+Farms, and gave me the opportunity to do this project. I would also like to thank Mr. Brody
+Blain, the Farm Manager of Bricker Farms. He took time to meet with me and give input on
+all three phases of the project.
+I would also like to thank Dr. Howes and the entire faculty of the BRAE Department. The
+rigorous courses that I have taken have given me the skills to make a project such as this, as
+well as prepared me to apply my knowledge to real-life situations. Dr. Howes also spent
+several hours out of class to help me with the irrigation design for the project.
+Lastly, I would like to thank Steve Johnson and Cory Broad of JAIN Irrigation for agreeing
+to donate the above-ground components of the irrigation system, should the landowner
+choose to install it. The company wishes to encourage the education of irrigation in our
+Universities, and showed extreme generosity by assisting in the design of this project.
+
+iii
+
+ABSTRACT
+This report was made to help the landowner of Bricker Farms make decisions regarding the
+replanting of his orchard. The decisions that need to be made in this process include: which
+crop to plant, how to plant it, and how to improve the distribution uniformity of irrigation
+water on the orchard. The report does not give definitive final decisions, but presents viable
+options that the landowner can utilize when deciding. In addition to the options that are
+presented, the report offers suggestions to the landowner so that the replanting process is
+done properly in a timely and economically-friendly manner.
+
+iv
+
+DISCLAIMER STATEMENT
+The university makes it clear that the information forwarded herewith is a project resulting
+from a class assignment and has been graded and accepted only as a fulfillment of a course
+requirement. Acceptance by the university does not imply technical accuracy or reliability.
+Any use of the information in this report is made by the user(s) at his/her own risk, which
+may include catastrophic failure of the device or infringement of patent or copyright laws.
+Therefore, the recipient and/or user of the information contained in this report agrees to
+indemnify, defend and save harmless the State its officers, agents and employees from any
+and all claims and losses accruing or resulting to any person, firm, or corporation who may
+be injured or damaged as a result of the use of this report.
+
+v
+
+TABLE OF CONTENTS
+PAGE....................................................................................................................................... ii
+ACKNOWLEDGEMENTS ................................................................................................... iii
+ABSTRACT ........................................................................................................................... iv
+DISCLAIMER STATEMENT ................................................................................................ v
+TABLE OF CONTENTS ....................................................................................................... vi
+LIST OF FIGURES .............................................................................................................. viii
+LIST OF TABLES ................................................................................................................. ix
+INTRODUCTION ................................................................................................................... 1
+Crop Selection................................................................................................................................... 2
+Replanting Process ............................................................................................................................ 2
+Irrigation System Design .................................................................................................................. 3
+
+LITERATURE REVIEW ........................................................................................................ 4
+Crop Selection................................................................................................................................... 4
+Replanting Process & Cost savings .................................................................................................. 8
+Irrigation System Design ................................................................................................................ 10
+
+PROCEDURES AND METHODS ....................................................................................... 18
+Crop Selection................................................................................................................................. 18
+Replanting Process .......................................................................................................................... 18
+Irrigation System Design ................................................................................................................ 18
+
+RESULTS AND DISCUSSION............................................................................................ 28
+Crop Selection................................................................................................................................. 28
+Replanting Process .......................................................................................................................... 28
+Irrigation System Design ................................................................................................................ 29
+
+RECOMMENDATIONS ...................................................................................................... 35
+REFERENCES ...................................................................................................................... 38
+APPENDIX A ....................................................................................................................... 40
+How Project Meets Requirements for the ASM Major................................................................... 40
+
+APPENDIX B ........................................................................................................................ 43
+Irrigation System Design Drawings ................................................................................................ 43
+
+APPENDIX C ........................................................................................................................ 47
+Irrigation System Design Excel Spreadsheets ................................................................................ 47
+
+vi
+
+9 Acres – Chandler Walnuts ........................................................................................................... 48
+24 acres – Wichita and Western Schley Pecans.............................................................................. 53
+
+APPENDIX D ....................................................................................................................... 59
+Replanting Cost/Income Excel Spreadsheets .................................................................................. 59
+“Transplanting” Method ................................................................................................................. 60
+“Traditional” Method ...................................................................................................................... 61
+
+APPENDIX E ........................................................................................................................ 62
+NRCS Soil Survey Results ............................................................................................................. 62
+
+vii
+
+LIST OF FIGURES
+Figure 1. Photo of the pecan seedlings located at the Blain Farms shop. ............................... 1
+Figure 2. Photo of a Chandler walnut tree at Bricker Farms. Note the visual difference
+between the root stock and the scion. ...................................................................................... 5
+Figure 3. When the shucks begin to open, as seen in this photo, pecans are mature and ready
+for harvest. (Upson, 2012) ....................................................................................................... 7
+Figure 4. Diagram of microsprinkler components. Courtesy of Jain Irrigation. ................... 13
+Figure 5. A Flow vs. Pressure graph for a variety of emitters with a Netafim SuperNet Jr.
+Microsprinkler. Courtesy of Netafim. ................................................................................... 14
+Figure 6. Photo of existing well pump station at Bricker Farms. .......................................... 36
+Figure 7. Photo of the existing Oaks Ditch turnout at Bricker Farms. .................................. 37
+
+viii
+
+LIST OF TABLES
+Table 1. Grass reference ETo based crop coefficients (Kc) for walnuts in Manteca, CA
+(Walnuts, 2016). .................................................................................................................... 11
+Table 2. Table demonstrating the peak ETc rates and yearly accumulation of water by pecan
+trees........................................................................................................................................ 20
+Table 3. K values of the different nozzle types found by knowing the Q, P, and x values. .. 21
+Table 4. Number of Sets and Nozzle type selection table. This table was used when
+designing the pecan field. ...................................................................................................... 21
+Table 5. Common pipe sizes used for drip/micro designs..................................................... 24
+Table 6. Excel table used to size manifolds. This is a manifold on the pecan block. ........... 25
+Table 7. Mainline sizing table for the walnut block. ............................................................. 25
+Table 8. Mainline sizing table for the pecan block. .............................................................. 26
+Table 9. Particle and mesh sizes (Burt and Styles, 2011). .................................................... 26
+Table 10. Media selection table (Burt and Styles, 2011). ..................................................... 26
+Table 11. Design summary for the walnut block. ................................................................. 33
+Table 12. Design summary for the pecan block. ................................................................... 33
+
+ix
+
+1
+INTRODUCTION
+Bricker Farms was established in 1966 in Visalia, CA. The property consisted of 39
+acres, however, after the 2015 harvest, six acres were sold to the land owner adjacent to
+the North. As it stands currently, the property consists of 33 acres of walnuts – 24 acres
+of Serr variety, planted in 1967, and 9 acres of Chandler variety, planted in 1988. The
+Serr trees are approaching the end of their production life and need to be replanted soon.
+The land owner, Walter Bricker, is thinking of replacing the 24 acres of Serr walnut trees
+with either walnut trees again, or possibly pecan trees, within the next few years.
+The farm manager and neighbor – Brody Blain, head of Blain Farms – planted
+approximately 600 acres of pecan trees in early 2015 and has a surplus of seedlings –
+enough to cover planting 24 acres. The land owner wishes to replant the 24 acres in the
+most economical and hassle-free manner possible. It appears that the easiest way to meet
+these wishes is to by-pass buying new trees from a nursery and dealing directly with the
+farm manager.
+The two parties discussed replanting the acreage with the excess pecan seedlings, and the
+farm manager expressed interest in replanting the orchard via “transplantation”, or
+individually transplanting each tree from one site to another. The seedlings currently are
+planted in the ground on a small plot of land at the Blain Farm Shop, which is less than
+one-half mile away from Bricker Farms. There are approximately 1000 seedlings, and
+they have already been grafted. In addition to replanting, the owner of the property would
+like to incorporate a new irrigation system with high distribution uniformity, while still
+keeping the existing border strip system on all 33 acres.
+
+Figure 1. Photo of the pecan seedlings located at the Blain Farms shop.
+
+2
+So, there are three major areas of this replanting process that need to be covered: the
+selection of the crop that is to be replanted on the 24 acres; the most economical manner
+the crop can be planted; and the design of a new irrigation system to be installed without
+abandoning the old system.
+Crop Selection
+This report will show the research and thought that goes into the decision making process
+of selecting a crop to replant. Since the landowner has a longstanding relationship with
+Blain Farms that has been successful, he would like to continue farming with them. That
+being said, Blain Farms farms/processes/markets only walnuts and pecans. So, the
+selection pool has been narrowed down to two possible crops: walnut trees or pecan trees.
+With regards to ecological and economic factors, one crop will be chosen as a clear
+favorite.
+Replanting Process
+After a crop is selected, the landowner must decide how the trees will replace the current
+Serr walnut trees. As mentioned earlier, the landowner and farm manager have met and
+discussed the idea of “transplanting” the more mature excess pecan trees after the
+removal of the Serrs. This process entails moving trees individually that are more mature
+(trees that are on their third leaf) that were stationed at a near-by site, as opposed to
+planting younger trees straight from a nursery.
+While this is not a common practice in the Visalia area, there are other areas of the
+Country that plant their orchards via transplantation. According to the farm manager, if
+executed properly, transplanting can offer the land owner multiple benefits, including
+ease of planting (since the trees are in close proximity to the orchard) and a shorter period
+of non-production once planting is finished. The largest potential benefit from
+transplanting are the savings that are associated with planting three year old trees as
+opposed to brand new seedlings. Due to size constraints, one can transplant a tree up until
+the end of their third growing year. For example, if pecan trees take six years to produce
+a first crop, the period of non-production will only be three years. Transplanting
+essentially accelerates the period of non-production by three years, and this saves the
+landowner money in the long run.
+However, the farm manager has never performed this process, so there are risks. The
+farm manager is performing a trial at the end of the 2016 year on a different orchard, and
+this will help the landowner decide if he wants to transplant his own trees. If the
+landowner decides to forgo the idea of transplanting, then he must buy separate trees
+from a nursery and plant them in a traditional manner. A “traditional manner” entails
+buying brand new seedlings, having them delivered to the orchard, and hiring labor to
+plant them.
+This report will not state the method of replanting that will be chosen by the landowner,
+or which method is better. Instead, this report will compare the two methods, and a
+spreadsheet that expresses the costs/savings of both methods will be produced. Since this
+
+3
+process will not be performed until early in the 2018 year, the landowner will have ample
+time to decide which method is preferred.
+Irrigation System Design
+A border strip surface irrigation system has been in place the entire duration of time that
+Bricker Farms has grown walnut trees. This system has proven to be adequate to meet the
+demands of the orchard. However, with the improved technology that has occurred in the
+last few decades, the landowner believes there are better alternatives to more effectively
+irrigate the trees with a higher distribution uniformity. Original thoughts were that a
+drip/micro system would be the best fit for the entire 33 acres.
+In addition to installing a new drip/micro system, the landowner would like to keep the
+existing border strip system for the sake of leaching and other reasons. This report will
+demonstrate all considerations that must be made when designing a drip/micro system on
+an orchard, and ultimately a finished design will be presented.
+JAIN Irrigation. When attending an irrigation showcase in Long Beach, CA in November
+2015, the author of this report was able to communicate the premise of the project with
+some sales representatives of JAIN Irrigation Co. After explaining the preliminary
+planning of a new irrigation system design, a representative stated that JAIN Irrigation
+would donate the “above-ground” components for a new drip/micro system to be
+installed. Above ground components include all hoses and microsprinklers. Therefore,
+when designing the system, it will be designed to include JAIN products, since the
+company has agreed to donate them at no cost because of their commitment to support
+irrigation education.
+
+4
+LITERATURE REVIEW
+Crop Selection
+Walnuts and pecans are the two crops that have the possibility of being planted on the 24
+acres of existing Serr walnuts. As one drives down Hwy 198 on the East side of Visalia,
+trees bearing both crops can be seen from the road. Both nuts have proven to be
+profitable in Tulare County, and both just happen to be the two nuts that Blain Farms
+grows, harvests, processes, and markets. Before beginning to think about the irrigation
+design or replanting method, the crop to be planted must be established.
+Walnuts. California produces 99 percent of the nation’s commercial English walnuts with
+almost all production taking place in the Sacramento and San Joaquin valleys (Boriss et
+al., 2006). According to the USDA, walnut production in California hit record numbers in
+2014, grossing 570,000 tons, and growers are projecting an even larger crop in 2015. The
+total bearing acreage in the state has now exceeded 300,000 acres. Walnuts belong to the
+same family as the pecan, the Juglandaceae family, and originate from Persia (now Iran)
+in Central Asia. It is thought that walnut trees first appeared in California with the
+Spanish settlers in the 18th century, and were commercially produced near the end of the
+19th century (Walnuts, 2014).
+Walnut trees have two major components: a rootstock and a scion. There are two
+common types of rootstock, the seedling Northern California black walnut (J. hindsii)
+and seedling Paradox (Walnuts, 2014). The rootstock is the foundation of the tree; it is
+what is planted and grown until budding, when a scion is grafted to the rootstock. The
+“scion” is a cultivar of walnut; it is what one sees from the trunk of the tree upwards,
+including all of the branches, leaves, and fruit. There are more than 30 cultivars of
+walnuts in California, while only four make up 80% of production; those four cultivars
+are Chandler, Howard, Hartley, and Tulare. Farmers use this grafting technique is
+because each component does its job more effectively – the rootstock acts as an anchor in
+the ground since it is much stronger and resistant to disease, while the scion produces
+high quality consumable nuts.
+
+5
+
+Figure 2. Photo of a Chandler walnut tree at Bricker Farms. Note the visual difference
+between the root stock and the scion.
+There are generally two different methods to the structure of a walnut orchard. Due to
+their large size, walnut trees are planted with much more space than almonds or
+pistachios. A typical walnut orchard tree spacing is 30 x 30 ft. This spacing does not
+produce as much yields in early years, but it is beneficial for the lifespan of the orchard.
+Such a wide spacing allows sunlight to reach the lower branches of the trees once they
+mature, because the canopy of a mature tree can prevent lower limb growth. Another
+method is a 15 x 22 ft. tree spacing. This spacing allows for a higher return on investment
+in the initial producing years, since there are more trees, but can cause issues in the
+future. Because of the thin row spacing and significant canopy cover, labor costs for
+pruning can be much greater (Walnuts, 2014).
+Walnuts are harvested using a three-step process. First a mechanical shaker grips the
+trunk of the tree and shakes the tree, so that the nuts fall to the ground. Next, a sweeper
+goes between the rows and sweeps the fallen nuts and debris into the center of each row.
+Finally, a harvester separates the nuts from debris and collects the nuts to take to a
+dehydrator. This process is done quickly to minimize the time that the nuts remain on the
+ground.
+
+6
+Some of the diseases that can damage walnut orchards include walnut blight, crown gall,
+blackline, and deep bark canker. These diseases are spread through fungal, bacterial, or
+viral pathogens. Some of the insects/pests that damage walnut orchards include codling
+moth, scale, mites, walnut husk fly, and nematodes. All pests with the exception of
+nematodes cause damage above ground, which affects yearly nut quality and quantity.
+Nematodes are a deep-rooted issue, which will be covered in greater detail later.
+Pecans. The United States produces 80 to 95% of the world’s pecans from native stands
+and cultivated orchards of selected cultivars (Pecan, 2014). Unlike walnuts, pecans are
+grown throughout the United States, not simply in California. In fact, California is not
+even a top producer. The state with the most acreage of bearing trees is Georgia, and a
+number of southern states stretching from Georgia to California cultivate pecans. In
+2014, the United States produced 133,165 tons of pecans (in-shell) valued at
+$417,758,000. California's 2500 tons, valued at $10,300,000, represented less than 2% of
+this domestic product. However, commercial pecan production is rather new to
+California, beginning around 1970 in the Fresno area. A pecan tree can produce fruit for
+up to 300 years (Pecan, 2014).
+Similar to walnuts, pecan trees consist of a rootstock and a cultivar. The most common
+cultivars for pecans are Wichita, Cheyenne, Pawnee, Western Schley, and Shoshone.
+Pecan trees require pollination from separate varieties. For instance, the Wichita variety
+is a great pollinator of Pawnee and Western varieties (Linwood). Therefore, when
+establishing an orchard, it is recommended to plant one row of pollinator cultivar for
+every four rows of typical cultivars.
+According to Linwood Nursery, there are three different patterns of planting an orchard:
+1) square, where the distance between rows and trees are the same 2) hedgerow, where
+the distance between rows is much greater than the distance between trees 3) equilateral
+triangle, where the distance between trees are the same, but each row is offset. In
+California traditional pecan orchards contain approximately 50 trees per acre: at 35 x 25
+ft. (49 trees/ac) or 30 x 30 ft. (48 trees/ac) spacing (Pecan, 2014). However, according to
+Texas A&M, some orchards in Texas are spaced as widely as 50 or 60 feet apart. The
+University states that 50% of the orchard floor should receive sunlight at midday in the
+summer in order to achieve maximum production. In cases where the trees are spaced
+tightly and are more crowded, pruning is an annual necessity.
+Unlike walnuts, which produce similar yields annually, pecan trees alternate bear,
+oscillating between heavy and light crop production across years; the degree of
+alternation can be managed to some extent with proper culture and cultivar selection
+(Pecan, 2014). One way of manipulating the orchard to regulate yearly yields is to
+perform a pre-shaking, where the trees are shaken in summer if there appears to be a
+heavy crop. By doing this, not only is the current year’s crop affected, but it also helps
+manipulate the following year’s crop. Similar to walnuts, pecan harvesting is a three-step
+process – shaking, sweeping, and collecting. Harvest usually begins between October and
+December. When 70 to 80 percent of the nut clusters have open shucks and kernel
+moisture is below 10 percent, harvesting can begin (Upson, 2012).
+
+7
+
+Figure 3. When the shucks begin to open, as seen in this photo, pecans are mature and
+ready for harvest. (Upson, 2012)
+Pecan trees face different obstacles depending on location. In Texas, pecan growers face
+many diseases and insects. Pecan scab can be the worst disease, followed by downy spot,
+powdery mildew, and many others (Nesbitt et al., 2013). In addition, insects such as
+pecan nut casebearer, the pecan weevil, and hickory shuckworm can cause damage to
+trees. Cases of nematodes have been found in Texas. In California, however, growers are
+much luckier. According to Linwood Nursery, the only insect problems that one may face
+in California are aphids and mites.
+Nematode Susceptibility. The largest factor in the crop selection are nematodes in the
+soil.
+Plant parasitic nematodes are microscopic roundworms that feed on plant roots.
+They live in soil and plant tissues. The species of nematode most commonly
+found causing problems in soils of walnut orchards in California is lesion
+nematode, Pratylenchus vulnus. Ring nematode (Mesocriconema xenoplax) is
+also damaging to walnuts, and root knot nematodes (Meloidogyne spp.) cause
+problems on Paradox and English walnut rootstocks. (UC Davis IPM)
+As stated above, walnut trees are susceptible to damage from nematodes. The UC Davis
+IPM (2009) continues by saying that the severity of damage due to nematodes varies
+based on tree age and insect population density. In addition, if young trees are planted in
+an area of high infestation, the roots will be damaged and tree growth will be stunted.
+
+8
+Mature trees can tolerate nematodes and still produce, but it is not a good idea to plant
+young walnut trees in a nematode-infested zone. Therefore, management decisions must
+be made when replanting a walnut orchard.
+In the past, the best way to overcome nematode infestation was to fumigate with Methyl
+Bromide (hereinafter referred to as MB). MB is a soil fumigant that is nothing short of a
+miracle for pest control – one single treatment could control a nematode populations so
+replanting was not an issue (Meadows, 2013). If MB were to be used in this case, the
+replanting issue would be solved. However, MB is considered a health and environmental
+hazard; the gas is volatile and much of the soil injection rises to the atmosphere,
+contributing to the thinning of the ozone. In fact, the Montreal Protocol, signed in 1987,
+attempted to eliminate the usage of the gas. There are still specific situations where
+applications are still technically legal, but Caprile and McHenry (2006) state that its price
+rises with each year, and it is better to try different alternatives.
+There are many alternatives to solve the nematode issue when replanting, but none come
+close to the success of MB applications. Waiting extensive amounts of time, using less
+hazardous fumigants, rotating crops, and fertilizing are the alternative methods laid out
+by Caprile and McHenry (2006), but this process would take several years before the soil
+is ready for young walnut trees. According to UC Davis IPM (2009), waiting five years
+after an application of triclopyr will reduce nematode numbers by 95%. It also
+recommends selecting a rootstock that is able to tolerate low numbers of nematodes, such
+as Paradox, although even the most resilient rootstocks are still susceptible. So, since MB
+is not a viable option at this point in time, it could take years to control the nematode
+population in order to replant with young walnut trees. The landowner is assuming there
+is a nematode issue with the orchard, but further testing will confirm this.
+Pecan trees, on the other hand, do not have the same obstacle when replanting an orchard.
+According to UC Davis IPM, nematode problems in pecans have not been reported in
+California. Not one source stated that pecan trees are nematode susceptible in California.
+In fact, Freeman et al. (2005) explicitly states there are no known economic disease or
+nematode problems with pecans in California. However, according to Nesbitt et al.
+(2013), pecans in Texas can be attacked by root-knot nematodes. Given the track record
+of pecan trees in California, it appears that nematodes due not pose a serious threat when
+replanting with young trees. Farm manager, Brody Blain, also stated that his family has
+never seen issues with nematodes among pecan orchards in their multiple decades of
+farming, but have directly seen the impacts of nematodes on walnut trees. Therefore, it is
+possible to replant young pecan trees on the 24 acres of soil without having to wait and
+control pests.
+Replanting Process & Cost savings
+Since there is no question how the ripping/removing of the existing trees will happen, the
+big question is this: how will the young trees be planted? In this case, there are two
+options: a traditional planting or a transplanting. There are constraints involving the
+second option, while the first option is feasible essentially any time.
+
+9
+Traditional Planting. This process involves planting trees that come straight from the
+nursery into the desired location. A 12-step process, beginning with planting during the
+dormant season to painting for sun protection, is laid out explicitly on the Linwood
+Nursery website. Whether planting walnut or pecan trees, this process can be started by
+making an order to nursery well ahead of the desired planting date.
+Using this method will typically result in a seven year waiting period before seeing a
+return, since a young orchard does not produce a profitable crop until year seven. In
+addition, this method requires that the land owner contact a nursery and place an order for
+trees to be planted. However, this method does give the land owner flexibility in when he
+chooses to replant, in case he chooses not to remove the current trees after the 2017
+harvest.
+Transplanting. This process involves moving individual trees from an off-site location to
+the desired planting location. The main difference with this method is that the young trees
+are not straight from the nursery. Instead, they have already been planted on a lot at the
+Blain Farms shop facility, located less than one-half mile away. It is assumed that all
+input (trees) and labor costs involved with this method are the same as the traditional
+planting method, but this method may be favorable because of the time saved before
+seeing production on the young trees.
+This method will hopefully save the landowner money in the long run, since the young
+trees will have already been growing for three years prior to transplantation. Therefore,
+since pecan trees do not begin to produce until year seven, the land owner should begin to
+see returns around year four, as opposed to the traditional method.
+The current arrangement with Blain Farms is as follows: Blain Farms holds all
+responsibility for the young trees, including irrigating and maintenance. Should the
+landowner choose to transplant these trees, Blain Farms will charge the landowner on a
+per-tree basis; should the landowner choose to not transplant these young trees, Blain
+Farms will disk the trees under at no cost to the landowner.
+This method includes the following constraints:
+ Survival. In order for the transplant method to be possible, the young trees must
+be alive. In order to satisfy the 24 acres at the desired spacing, there must be
+enough young trees. For instance, if the spacing is 30 x 30 ft., resulting in 48 trees
+per acre, there must be 1,104 living young trees available. If the number of trees
+that survive is not sufficient, the plan would be thwarted.
+ Time. If the landowner wishes to go through with the transplant method, the
+existing Serr walnuts must be removed following the 2017 harvest. The reason for
+this is the young pecan trees were planted at the start of the 2015 calendar year,
+and they must be transplanted within three years, so it is essential that they be
+planted in the winter of 2018.
+
+10
+Irrigation System Design
+After establishing the crop to be replanted, the next step is to design an irrigation system
+before replanting can take place. Not only will the new system irrigate the 24 acres of
+new young trees to be planted, but it will also irrigate the existing 9 acres of Chandler
+walnuts. In order to properly design the system, each individual component must be
+properly sized, from the water emitters to the mainline. To begin, it is important to look
+at the ETc demands of walnut and pecan trees.
+Crop Evapotranspiration and Soil. Evapotranspiration (ET) is the combined process of
+evaporation from soil and plant surfaces, and transpiration from plants (Burt and Styles,
+2011). ET is dependent on the following things: location, time of year, and crop. The ET
+will tell the irrigator how much water is used over a period of time (daily, monthly,
+yearly), so the owner must base his irrigation system around the needs of both walnuts
+and pecans.
+The ET of a particular crop, ETc, can be derived from the following equation:
+ETc = ETo * Kc
+ETc = Crop evapotranspiration
+ETo = Grass referenced evapotranspiration
+Kc = Crop coefficient
+
+(1)
+
+When designing an irrigation system, it must be done conservatively. Therefore, the
+system must be designed so that it can meet the demands of the crops when they
+experience peak ETc rates. The website for the Irrigation Training and Research Center
+(ITRC) has published documents which give ETc information based on location, time of
+year, and crop. The information on the ITRC website is made possible by the monitoring
+of California Irrigation Management Information Station (CIMIS) stations, which record
+the ETo at different sites throughout the State of California, and divides the State in
+different zones. According to the ITRC, the peak month for evapotranspiration at the
+location of the orchard is July. So, when designing the system, it must be capable of
+supplying enough water so that the trees are not under-watered in the month of July. In
+addition to meeting demands at peak times, the system is designed for worst-case
+scenarios. The tables accessed on the ITRC website gave ETo data for a dry year, when
+ETo rates are higher over the course of the year. This table was chosen in place of a table
+representing a wet year, so that the system is designed to supply the absolute most water
+the plants will need over the course of a year.
+In order to determine the ETc for walnuts or pecans, the crop coefficient of each crop
+must be found. This Kc value varies between crops, and even varies within the same crop
+throughout the year. The following table represents the crop coefficient for walnuts in
+Manteca, CA.
+
+11
+Table 1. Grass reference ETo based crop coefficients (Kc) for walnuts in Manteca, CA
+(Walnuts, 2016).
+
+Date
+
+Crop
+Coefficient
+Kc
+
+Mar 16-31
+
+0.12
+
+Apr 1-15
+
+0.53
+
+Apr 16-30
+
+0.68
+
+May 1-15
+
+0.79
+
+May 16-31
+
+0.86
+
+Jun 1-15
+
+0.93
+
+Jun 16-30
+
+1.00
+
+Jul 1-15
+
+1.14
+
+Jul 16-31
+
+1.14
+
+Aug 1-15
+
+1.14
+
+Aug 16-31
+
+1.14
+
+Sep 1-15
+
+1.08
+
+Sep 16-30
+
+0.97
+
+Oct 1-15
+
+0.88
+
+Oct 16-31
+
+0.51
+
+Nov 1-15
+
+0.28
+
+It was difficult to find Kc values for pecan trees. According to the Food and Agriculture
+Organization for the United Nations (FAO, 2016), there is no particular crop coefficient
+specific to pecan trees. Instead, pecans are categorized as a stone fruit, and share the same
+Kc values as peaches, apricots, pears, and plums. There is also data available that states
+the evapotranspiration rates of pecan trees in New Mexico, but this data is not valid for
+the sake of this project, which is located in the Central Valley of California. According to
+farm manager Brody Blain, pecan trees generally require 1.2 times the amount of water
+that walnut trees require, whether it be over the course of a week during peak ETc rates or
+over the course of an entire year. So, when solving for ETc of pecan trees, there will be an
+adjusted Kc value that is 1.2 times the crop coefficient of walnut trees in the area.
+In addition to crop evapotranspiration, the soil is a factor when designing system needs.
+One may be able to apply the required flows and pressures for hours, but it is not
+beneficial irrigation if the soil cannot handle the volume of water being applied. The soil
+contains a certain readily available water, or RAW, storage amount. This volume of water
+is looked at in terms of gallons per tree. Different soil types will offer different RAW
+
+12
+storage values, which are affected by management allowable depletion (MAD), the root
+zone available water holding capacity (AWHC) of the soil, and the wetted area. So, when
+designing the irrigation scheduling, the system must be designed to run a maximum
+duration so that there is not more water being applied than the RAW storage can handle,
+or deep percolation and inefficient irrigation will occur.
+Soil map surveys can be acquired via the Natural Resources Conservation Service
+(NRCS). An outline of the desired area is made and the online service gives the user
+information regarding the soil characteristics in that area. After completing the steps
+needed to retrieve this information, it was determined that 100% of the soil in the area of
+Bricker Farms consists of a Grangeville sandy loam.
+Surface Irrigation vs. Drip/Micro Irrigation. The entire 33 acres currently are irrigated
+using a border strip irrigation method, a form of surface irrigation. The existing system
+has proven effective in irrigating the orchard over several decades, but new technology is
+available that could improve farm production. The landowner would like to keep the
+existing system (for multiple reasons, including potential leaching), but install a new
+system that will benefit production on a long-term basis.
+A common drip/micro irrigation system for almond and pistachio orchards is drip
+emitters. These systems operate by directly discharging water through long hoses with inline or on-line emitters. The emitters slowly trickle out water at a rate of 0.5 – 2.0 gallons
+per hour (gph); it is common to have two emitters per tree. However, for pecan and
+walnut orchards, the trees prefer a larger wetting area. Therefore, microsprinklers are a
+better alternative to drip emitters – microsprinklers have rotating parts with an emission
+device that throws water horizontally and vertically with a sprinkler pattern (Burt and
+Styles, 2011). According to Brody Blain, Farm Manager, it is essential that the irrigation
+system wets approximately 90% of the area, at the least. Therefore, a microsprinkler that
+provides a large wetted diameter should be chosen.
+According to JAIN Irrigation, the supplier offers three different models of
+microsprinklers: Eliminator, 2002 AquaSmart PC, and 2005 AquaMaster (non-PC). The
+first two models do not offer a large enough wetted diameter to irrigate a mature pecan
+orchard, so the 2005 AquaMaster microsprinklers would be a viable option to install. A
+technical brochure states that the 2005 AquaMaster product features nine color-coded
+nozzles that have flow ranges from 7 to 79 GPH at a working pressure of 29 PSI, and a
+wetted diameter ranges of 18 to 39.4 feet. Additionally, it states that this model of
+microsprinkler is intended for application on almond, walnut, pecan, stone-fruit, and
+citrus orchards.
+Installing a microsprinkler system offers many benefits to farms. Some potential
+advantages of a drip/micro system include: 1) the ability to be used on extremely steep
+ground, whereas flood or sprinklers cannot; 2) there generally are no runoff problems to
+contend with; 3) the ability to apply fertilizer directly to the root zone at any stage of
+growth on any day and with any dosage, without wetting plant foliage; 4) systems can be
+installed on virtually any size or shape of parcel 5) Distribution Uniformity (DU) of such
+
+13
+systems can be very high (0.93 or higher) when the system is designed and maintained
+properly.
+Potential disadvantages of drip/micro systems include: 1) DU can degrade over time from
+a multitude of sources. Poor management, poor filtration, rodents, and insects can all
+cause a drip/micro system to suffer DU losses; 2) Such systems are susceptible to
+vandalism and theft; 3) Evaporation losses can be high in a micro system that wet large
+areas of bare soil; 4) There is generally a very high initial cost for these systems; and 5) It
+is possible to buy parts for the system from an inept or faulty dealer; it is essential to use
+quality components for the system to function properly.
+
+Figure 4. Diagram of microsprinkler components. Courtesy of Jain Irrigation.
+The emitter type that is chosen will depend on its throw diameter, flow rate, and
+operating pressure. The relationship between flow and pressure is as follows:
+𝑄 = 𝑘𝑃 𝑥
+
+(2)
+
+The flow rate, Q, is impacted by the k value, which is a constant depending upon the units
+and orifice size, the pressure, P, and the emitter discharge exponent, x. For pressure
+compensating (PC) emitters, it is assumed that the exponent is equal to zero over a range,
+since the flow rate stays the same as long as there is a minimum pressure. For nonpressure compensating (non-PC) emitters, the flow rate will always increase as the
+pressure increases (Burt and Styles, 2011). Therefore, if one is looking to have an emitter
+that discharges similar flow rates across a range of pressures, a smaller exponent value is
+desired. All emitters have different flow rate/pressure relationships, as seen in the figure
+below.
+
+14
+
+Figure 5. A Flow vs. Pressure graph for a variety of emitters with a Netafim SuperNet Jr.
+Microsprinkler. Courtesy of Netafim.
+Hydraulics. One may determine the pressure at a point in the system using Bernoulli’s
+Equation. This equation accounts for all components of pressure within a pipeline –
+pressure (P), in terms of either psi or feet; elevation (E), in terms of feet; velocity head;
+and friction loss (Hf), in terms of feet. However, when in the context of a drip system on
+a small farm, velocity head is ignored because of its miniscule effect on the system. The
+equation is displayed below:
+𝑃1 + 𝐸1 = 𝑃2 + 𝐸2 + 𝐻𝑓
+
+(3)
+
+The formula allows the user to find the pressure and elevation at a certain point, and the
+loss of pressure due to friction over a span. The friction loss, or Hf, can be found using
+the Hazen-Williams formula. Variables affecting the friction loss in a pipeline include the
+flow rate inside the pipe (GPM), the roughness or material of the pipe (c value), the
+length of the pipe (L), and the I.D. of the pipe. The formula is displayed below:
+𝐻𝑓 = 10.5 ∗ (
+
+𝐺𝑃𝑀 1.852
+𝐶
+
+)
+
+∗ 𝐿 ∗ 𝐼. 𝐷.−4.87
+
+(4)
+
+Hoses and Pipelines. When sizing the hoses and pipelines that supply water to the
+microsprinklers, one must account for both the pressures and flow rates inside the pipe.
+For the underground pipe, these lines will be composed of poly-vinyl chloride (PVC).
+The classification of the pipe will be Iron Pipe Size (IPS), which is preferred instead of
+Plastic Irrigation Pipe (PIP) on pipes with a diameter less than 12 inches. Each size of
+IPS pipe has a certain pressure (psi) rating, and the system should be designed so that the
+pressure in the pipe is not greater than the rating of the pipe.
+In addition, the system will be designed using economic pipe sizing, or a “maximum
+velocity” method. This means that the designer selects pipes as small as possible, but
+does not exceed a velocity of 4 feet per second in any segment (Burt and Styles, 2011).
+
+15
+The reason this method is used is because smaller pipe is cheaper than large pipe, so
+going as small as possible will minimize capital costs. However, if they are too small, the
+velocity in the pipe will be greater than 4 feet per second, and this will lead to both
+increased pumping costs (because of higher friction losses) and a greater potential for
+water hammer.
+Distribution Uniformity. Distribution Uniformity (DU) is a term that relates to the
+evenness of water application to plants throughout a field (Burt and Styles, 2011). It can
+also be described by the following formula.
+Average low quarter depth of water
+
+DUlq= Average depth of water accumulated in all elements
+
+(5)
+
+Achieving a high DU is essential for optimal crop production. According to Burt and
+Styles (2011), the DU for a new drip/micro system that has been designed and installed
+properly should consistently fall in high (>0.93) ranges. The two biggest factors that
+negatively affect DU are pressure differences and other causes of flow variation
+(plugging); these two factors account for 95% of DU problems with drip/micro systems
+in California. A system must be maintained and operated properly or DU problems can
+occur.
+Filters. Filtration is necessary for a drip or micro-sprayer system to function properly.
+The sources of irrigation water include groundwater and ditch water, which can include
+solids that can be detrimental to the system. According to Burt and Styles (2011), there
+are several reasons why filtration is needed, including: pump wear, emitter plugging,
+micro-sprayer wear, and the accumulation of solids in pipelines. All of these situations
+can occur when solids are present in the system, but can be avoided with proper filtration.
+There are many methods of filtration, including, but not limited to: sand separators,
+media tanks, tubular screens, gravity overflow screens, and disc filters (Burt and Styles,
+2011). For the sake of this project, the land owner would prefer to use media filters in the
+new irrigation system. Media filters, also known as “sand filters”, generally are vertical
+tanks filled with a media that prevents solids from being introduced into the sub-main
+lines and sprayers. The following diagram demonstrates the multiple processes of the
+media tanks.
+
+Figure 6. Processes performed by media filter tanks. Courtesy of Burt and Styles (2011).
+
+16
+
+As water flows downward through the tanks, solids are retained by the media, allowing
+clean water to exit the outlet into the system. Therefore, the tanks must be backflushed
+periodically to remove such solids. In addition to a backflush release system, the tanks
+may also require other hardware, such as air vents and pressure relief valves.
+To properly select the correct tank and media size, a three step process must be
+performed. First, the tank size and number of tanks must be determined based on the
+irrigation system’s flow rate and water quality. Next, the mean filtration capacity must be
+determined. According to Burt and Styles (2011), a common rule of thumb is to remove
+all particles larger than 1/10th of the diameter of the smallest passage in the emitters. For
+sprayers, the ratio used is often 1/7 if the sprayer has a simple short orifice. Lastly, after
+determining the needed filtration size, one must select the proper media.
+Pressure Regulators. Pressure regulators are often used in drip/micro irrigation systems to
+regulate the downstream pressure in a pipe. They can be used at either at the entrance to a
+manifold from the main line or at the entrance to a lateral from a manifold. According to
+Burt and Styles (2011), a pre-set pressure regulator will have a 1 - 5 psi minor loss in
+friction. So, if the desired pressure downstream of the regulator is 20 psi, the upstream
+pressure should be 24 - 25 psi. If it is less, the pressure regulator will not operate
+correctly, and instead will serve as an obstruction in the pipe. With adjustable pressure
+regulators it is important to be aware of the pressure control range of the regulator. Some
+regulators may work well above 15 psi, but may be useless at lower pressure ranges.
+When studying adjustable valve (AV) pressure regulators that were placed at the head of
+each lateral (hose) on a simulated field, Ella et al. (2013) found that the system’s average
+DU ranged from 64% to 91% with AV adjustment and from only 25% to 87% without
+AV adjustment. While this study proves that pressure regulation is helpful when it comes
+to improving the DU in a field, it may not be relevant to this project. It would not be
+reasonable to install an AV pressure regulator at the head of each hose because of labor
+costs. Instead, it would make more sense to install pre-set regulators at the head of each
+hose, or an AV pressure regulator at the head of each manifold.
+Air Vents. Air vents are required on drip/micro systems for three reasons (Burt and
+Styles, 2011). The first reason is to release of large volumes of air on startup, and to
+prevent air blockages and water hammer. This occurs with special valves that only
+function before the system is under pressure. The second reason is for the continuous
+release of air after the system has been pressurized. This is necessary to prevent water
+hammer and air blockages. This requires a special air vent that has a smaller orifice than
+the large volume air release valves. And lastly, air vents prevent vacuums in the lines
+after shutoff. In general, the vacuum relief function is part of the large volume air release
+valve design.
+Air vents should be placed throughout the system accordingly. Burt and Styles (2011)
+states that air release vents should be placed at least every 1320 feet on pipelines and
+
+17
+downstream of all air entry points to release air. Additionally, vacuum relief valves
+should be placed at all high points and downstream of shutoff valves.
+According to Netafim (2004), there are three different types of air vents: 1) air/vacuum
+relief vents, which discharge large amounts of air when a pipeline is being pressurized
+and admit air when water exits the pipe 2) air release vents, which release small amounts
+of air after the vacuum vent closes because the pipeline is pressurized 3) combination air
+vents, which perform all functions of the other two types.
+
+18
+
+PROCEDURES AND METHODS
+Crop Selection
+In order to determine what crop was going to replace the 24 acres of Serr walnut trees,
+first the landowner was consulted. His preference was to stay with the same farm
+manager, so this narrowed the potential crops to two options: walnuts or pecans. From
+there, research was performed in the Literature Review. Then, when meeting with the
+farm manager, all aspects of the research were discussed, and it was agreed that one
+option is better than the other. These results will be discussed in the next section.
+Replanting Process
+In order to determine what method of planting should occur, spreadsheets representing
+the costs of either method were produced. This required meeting with the farm manager
+and receiving individual costs on activities that must be performed in order to replant and
+farm an orchard. Then, two spreadsheets were made – one for the costs of “transplanting”
+over a nine year period, and one for the costs of a “traditional” planting over a nine year
+period. One can see the economical differences between the two methods via these
+spreadsheets, and it is clear that one method will save the landowner both time and
+money.
+Irrigation System Design
+Field and Micro Sprinkler Constraints. In order to find the constraints of the field, the
+field was surveyed prior to beginning the design. The surveying was performed by the
+land owner and the author of this report. The tools that were used to survey the field were
+an automatic level and a Philadelphia Rod. It was found that there is a maximum change
+in elevation of only 3 feet over a span of 2000 feet, which amounts to essentially a 0%
+change in slope along rows. There was no change in elevation across rows.
+The spacing of the Chandler walnut trees was measured using a cloth tape measure. It
+was determined that the trees are 27 feet apart along the rows, and 32 feet apart across
+rows. The pecan trees have yet to be planted, so the tree spacing for those was decided
+after researching pecan tree orchards and talking to the Farm Manager. The land owner
+decided that the optimal spacing for the pecan trees to be planted is 30 feet along rows
+and 35 feet across rows.
+The soil type of the field was determined by performing a soil survey via the Natural
+Resources Conservation Service. This can be completed online, and the result of the
+survey was that 100% of the field is a Grangeville sandy loam. More information
+regarding soil type can be seen in Appendix E.
+The maximum flow rate available to the field was determined by checking with the
+landowner. The landowner stated that the flow rate from the well at the end of the 2015
+
+19
+season was approximately 350 gallons per minute (GPM). The landowner also stated that
+the design should be done assuming this is the maximum flow rate, even though in past
+years the flow rates have been in the neighborhood of 400-450 GPM. The reduced flow
+(compared to past years) is due to a multi-year drought that has delivered minimal to zero
+surface water, leaving farmers to rely solely on groundwater to irrigate their crops. An
+extended reliance on groundwater has led to excessive groundwater pumping and
+diminishing groundwater levels. Since the depth to groundwater is greater than ever
+before, the total dynamic head (TDH) of the pump is higher. As one may see on a pump
+curve, an increased TDH results in a lower flow rate (GPM). However, the landowner is
+confident that the drought will not remain forever, meaning groundwater levels will rise,
+and the flow rate from the well (with the same pump) will not dip below 350 GPM. Since
+the well pump – as well as the turnout from the ditch – discharges into an open standpipe,
+there is minimal pressure entering the system.
+As for the microsprinkler constraints, the main constraint was that the microsprinkler
+must be chosen from a JAIN technical brochure. Additionally, it was preferred that the
+nozzle on the sprinkler have an orifice size greater than 0.04 inches to avoid plugging. It
+was also determined that the spaghetti hose length to the microsprinkler be 5 feet, so that
+it gives the land owner flexibility on the exact location of the sprinkler between trees.
+Determine Peak ET. In order to find the peak ETc rate, research was conducted to find
+grass-referenced (ETo) rates and crop coefficients (Kc). ETo rates were found via the
+ITRC website, where they list these rates based on the type of irrigation system (in this
+case, drip/micro), type of year in terms of precipitation, and region. A “dry” year was
+chosen when finding ET rates, because the design should be done so that it delivers as
+much as water as is needed by the crop, and the crop will require the most water in a
+“dry” year. Lastly, the region was chosen by selecting a zone on a map of California; for
+this design, in Visalia, the field fell in zone 12. After finding the grass-referenced ET
+rates, the crop coefficient was found in order to determine the ETc rates of the trees. As
+seen in the literature review, Table 1 states the crop coefficient for walnuts over the
+course of a year in Manteca, CA. It was decided that the climate in Manteca is
+comparable to Visalia, so these values are valid for this design. When solving for the
+pecan crop coefficients, it was very difficult to find information on the web. Also stated
+in the literature review, it was decided that the crop coefficient for pecan trees (Kc
+adjusted) will be 1.2 times the crop coefficient for walnut trees.
+
+20
+Table 2. Table demonstrating the peak ETc rates and yearly accumulation of water by
+pecan trees.
+Month
+March
+April
+May
+June
+July
+August
+September
+October
+
+ETo (inches)*
+
+Kc**
+
+2.78
+5.34
+7.14
+7.23
+7.73
+6.38
+5.23
+3.62
+
+0.12
+0.61
+0.83
+0.97
+1.14
+1.14
+1.03
+0.69
+
+Full ETc
+(inches)
+0.33
+3.26
+5.93
+7.01
+8.81
+7.27
+5.39
+2.50
+
+Kc
+ETc adjusted (in)
+ajdusted
+0.14
+0.40
+0.73
+3.91
+1.00
+7.11
+1.16
+8.42
+1.37
+10.57
+1.37
+8.73
+1.24
+6.46
+0.83
+3.00
+Year Total:
+48.60
+
+Estimate GPH/Tree Needed. In order to estimate the flow rate, in terms of gallons per
+hour (GPH), per tree, the equations below were used.
+𝐺𝑃𝑀 (𝑛𝑒𝑡) =
+
+𝑖𝑛∗𝑡𝑟𝑒𝑒 𝑠𝑝𝑎𝑐𝑖𝑛𝑔 𝑎𝑟𝑒𝑎
+96.3∗ℎ𝑟𝑠
+𝐺𝑃𝑀 (𝑛𝑒𝑡)
+
+𝐺𝑃𝑀 (𝑔𝑟𝑜𝑠𝑠) = ((1−𝑠𝑝𝑟𝑎𝑦 𝑙𝑜𝑠𝑠𝑒𝑠)∗𝐷𝑈)
+
+(6)
+(7)
+
+These equations allow the user to solve for the flow rate required, given the area of the
+element, the hours of operation, and the inches required by the tree. For the Chandler
+walnuts, the peak ETc rates were 1.99 in/week, and the tree spacing is 27 feet by 32 feet,
+so the flow rate per tree was determined by altering the hours of operation until it was a
+preferred amount. The gross value is used because it allows for enough flow to the trees
+even after the system deteriorates, when the DU drops to 0.85. The gross GPM per tree –
+assuming 36 hours/week for walnut block, 120 hours/week for pecan block – was found
+and converted to GPH per tree by diving the value by 60. The reason for converting to
+GPH per tree is that microsprinkler flow rates are given in terms of GPH, not GPM. The
+hours of operation per week was decided based on the estimated pump GPM. The overall
+flow rate required by the system can be found by solving for the GPM with the total area
+of a block. It is important to remember that the overall flow rate is not the maximum flow
+rate will be required – additional flow will be needed when a tank is backflushing. If the
+system only ran during off-peak hours for the pecan block (80 hours per week), the
+required flow rate for the block would exceed the discharge from the well pump.
+Therefore, 120 hours was used because it fit the pump flow rate and allowed for other
+conveniences, which are discussed later on.
+Estimate Number of Micro Sprinklers/Tree. In order to estimate the number of
+microsprinklers per tree, the wetted area was determined. This was done by multiplying
+the element (area dedicated to one tree) by 0.9, since it was stated that the land owner
+wishes to achieve a 90% wetted area by the irrigation system. After solving for the wetted
+area, the diameter that would achieve this wetted area was found. The diameter that
+
+21
+achieves a 90% wetted area should equal the throw diameter of the microsprinkler if there
+is to be one microsprinkler per tree; if not, multiple microsprinklers should be chosen.
+Select the Proper Microsprinkler & Number of Sets. In order to find the proper
+microsprinkler and number of sets used on each crop, first the “k” value of each nozzle
+was determined. There were four different nozzle types to choose from; these four
+nozzles were eligible because of their orifice size, throw diameter, and nominal flow rate.
+The JAIN technical brochure supplied the throw diameters at a certain pressure, as well
+as flow rates at different pressures. Since the flow rate, pressure, and emitter exponents
+were all known, the k value was able to be found by dividing the flow by the pressure to
+the power of the exponent. The table below shows the k values of the different nozzle
+types.
+Table 3. K values of the different nozzle types found by knowing the Q, P, and x values.
+Nozzle Color
+Orange
+Black
+Blue
+Yellow
+
+Orifice Size (in)
+0.06
+0.07
+0.08
+0.09
+
+Q (GPH)
+33.3
+44.4
+55.5
+69.4
+
+P (psi)
+30
+30
+30
+30
+
+K
+5.94
+7.92
+9.90
+12.39
+
+Now a selection table was developed that examined different numbers of sets using
+different nozzle colors. In the table below, the pressure for each nozzle color is solved for
+- once the desired GPH/sprayer is known. An emitter exponent of 0.5 is used for these
+microsprinklers.
+Table 4. Number of Sets and Nozzle type selection table. This table was used when
+designing the pecan field.
+Required Pressure (psi) for various orifice sizes
+# of sets
+1
+
+Needed GPH/microsprinkler
+15.3
+
+Orange
+6.6
+
+Black
+3.7
+
+Blue
+2.4
+
+Yellow
+1.5
+
+2
+3
+4
+
+30.6
+45.9
+61.2
+
+26.5
+59.7
+106.2
+
+14.9
+33.6
+59.7
+
+9.6
+21.5
+38.2
+
+6.1
+13.8
+24.4
+
+As shown in Table 4, the pecan design uses an orange nozzle with two sets. Note that the
+GPH/microsprinkler is double what is needed if there were one set; this is because there
+are two sets, so the irrigation time per tree is cut in half, so the flow is doubled. Two sets
+were selected for several reasons, including that the JAIN catalog recommends the
+microsprinklers have a working pressure between 20 and 35 psi. Additionally, the size of
+the field is ideal to divide it in half – by creating two sets, each set serves 12 acres,
+similar in size to the walnut set, and makes three total sets (one walnut, two pecan) of
+similar flow rate requirements.
+
+22
+
+It is also convenient to choose two sets because it means the orange nozzle is then used
+on every emitter on the orchard. Using just one type of nozzle is not only easier to order
+from a dealer, but it also means it is easier to replace a nozzle at any place on the orchard,
+since there is one universal emitter. This eliminates confusion in the field when changing
+emitters.
+Locate and Position Manifolds, Determine Hose Sizes. The manifolds were placed with
+help from the Manifold placement program made by the ITRC. Even though the program
+outputs an uphill and downhill location for the manifold within the entire field, the
+manifold was placed based on the shape of the field, not simply the output number from
+the program. For the walnuts, the Western manifold was not positioned at the location
+given by the program because of the neighbor’s lot in the SW corner. For the pecans, the
+placement of the manifolds was based on the shape of the field due to the creek on the
+North side of the field.
+Even though the manifold program was not used for the location of the manifolds, it was
+still useful for finding the average pressures and flows in one hose lateral, the DU of
+hose, and the inlet pressure into the hose. Additionally, the manifold placement program
+helps find the ideal hose I.D. for the laterals for the tradeoff between high DU and inlet
+pressure. The output hose DU from the program was 0.97 for both the walnut and pecan
+blocks.
+Determine the Allowable Change in Pressure. When solving for the allowable change in
+pressure within the manifold, know that the DU of the system is represented by the
+equation shown below.
+𝑀𝑖𝑛𝑖𝑚𝑢𝑚 𝐴𝑙𝑙𝑜𝑤𝑎𝑏𝑙𝑒 𝑆𝑦𝑠𝑡𝑒𝑚 𝐷𝑈 = 𝑀𝑎𝑛𝑖𝑓𝑜𝑙𝑑 𝐷𝑈 ∗ 𝑆𝑖𝑛𝑔𝑙𝑒 𝐻𝑜𝑠𝑒 𝐷𝑈
+
+(8)
+
+As stated earlier, the system is designed for a DU of 0.92; this is the minimum allowable
+system DU. The single hose DU is the output from the manifold placement program; this
+value was 0.97. Therefore, in order to ensure the overall DU of the system is 0.92, the
+minimum manifold DU must be the value of the system DU divided by the single hose
+DU. After solving this value, it was determined that the manifold DU must be equal to or
+greater than 0.95.
+The manifold DU is held at a high value by minimizing the pressure loss within the
+manifold. So, to ensure that the manifold DU is what it is supposed to be, the allowable
+change in pressure must be found and the manifold must be sized so that the change in
+pressure in the pipeline does not exceed its allowable value. To find the allowable change
+in pressure, the equation below was used:
+Allowable ΔP = 2[Pavg - Pavg(DUsystem/DUhose)1/x]
+
+(9)
+
+The pressure regulation strategy that has been defined for this step does not allow
+individual pressure regulators at the start of each hose, nor does it allow PC emitters to be
+
+23
+used. The allowable pressures difference downstream of the pressure regulation point
+includes pressure differences along the manifold and the pressure differences along the
+hoses. Since this design does not allow for PC emitters or regulators at the head of each
+hose, a pressure regulator will be placed at the head of every manifold.
+Manifold Sizing. The manifolds were sized so that the change in pressure along a single
+manifold did not exceed its allowable ΔP. For the walnuts, the allowable change in
+pressure was 6.97 psi; for the pecans, the allowable change in pressure was 5.33 psi.
+Normally, when designing a system based on DU, pipe sizes are selected so that the
+actual pressure change across the manifold is as close as possible to the allowable
+pressure change without exceeding it. By doing this, the designer ensures DU
+requirements are met and also the installation costs are minimized (smaller pipe is used,
+which is cheaper to purchase). However, when designing for the walnut block, the
+manifold was sized well under the allowable pressure change. This was done for multiple
+reasons. First, it offers an even better system DU. Secondly, while it may increase
+installation costs, it lowers operating costs because less pressure is required at the head of
+the manifold, meaning less pressure is required at the pump, which lowers the
+horsepower being used by the motor. Lastly, and holding the most weight, it makes the
+pressure required at the pump for the walnut set is similar to the pressure required at the
+pump by the pecan sets.
+The pecan manifolds were sized normally, so the pipes are as small as possible but still
+meet allowable pressure requirements. That being said, the pecan manifolds do not
+require as much inlet pressure as the walnut manifolds due to their lower operating
+pressures of the microsprinklers. So, by overdesigning the walnut manifolds, the
+difference in pressure required at the pump between the different sets is minimized. This
+will play a role later, when deciding if a VFD is needed for the booster pump.
+When sizing the manifolds, IPS PVC pipe sizes were used. The minimum pipe rating that
+should be used in this design is Class 125 since they are pressures as high as 53 psi. This
+is especially important on the mainline because it could change the TDH due to a smaller
+I.D. The table below shows the dimensions and “C” values of different nominal pipe
+sizes.
+
+24
+
+Table 5. Common pipe sizes used for drip/micro designs.
+Nominal Dia.
+1.5
+2
+2.5
+3
+4
+5
+6
+8
+10
+12
+15
+18
+21
+24
+
+PIPE SELECTION TABLE
+ID
+PR
+Type
+1.72
+200
+IPS
+2.193
+160
+IPS
+2.655
+160
+IPS
+3.284
+125
+IPS
+4.28
+100
+IPS
+5.291
+100
+IPS
+6.301
+100
+IPS
+8.205
+100
+IPS
+10.226
+100
+IPS
+12.128
+100
+IPS
+14.55
+100
+PIP
+17.725
+100
+PIP
+20.90
+100
+PIP
+23.51
+100
+PIP
+
+H-W "C"
+145
+146
+147
+148
+149
+150
+150
+150
+150
+150
+150
+150
+150
+150
+
+In order to size the manifolds so that they did not exceed the allowable change in
+pressure, the pipe sizes of the manifold were manipulated manually. Since there is no
+elevation difference along the manifold, friction is the only cause of pressure loss. The
+pipe I.D. is a major component of friction, so adjusting the pipe sizes changes the friction
+loss along the manifold, and the sum of friction losses makes up the actual change of
+pressure. This can be seen in Table 6, where the pipe I.D. changes once friction becomes
+too great.
+
+25
+Table 6. Excel table used to size manifolds. This is a manifold on the pecan block.
+Outlet
+
+Point P (psi)
+
+Micros per row
+
+27.15
+27.16
+27.22
+27.35
+27.56
+27.88
+28.33
+28.93
+29.68
+30.62
+31.76
+31.95
+32.18
+32.44
+
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+
+Paverage
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+=
+
+Pmax
+
+=
+
+32.44
+
+Pmin
+=
+ΔP =
+
+27.15
+5.29
+
+Point Q
+(gpm)
+0.00
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+
+u/s Seg Q
+(gpm)
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+ΔP (psi)
+
+8.17
+16.34
+24.51
+32.68
+40.85
+49.02
+57.19
+65.36
+73.53
+81.70
+89.87
+98.04
+106.21
+114.38
+
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+3.284
+3.284
+3.284
+3.284
+
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+17.5
+
+0.016
+0.059
+0.124
+0.212
+0.320
+0.449
+0.597
+0.755
+0.939
+1.142
+0.191
+0.224
+0.260
+0.149
+
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+
+-0.02
+-0.06
+-0.12
+-0.21
+-0.32
+-0.45
+-0.60
+-0.76
+-0.94
+-1.14
+-0.19
+-0.22
+-0.26
+-0.15
+
+29.30
+
+Hf = 10.5*(GPM/C)^1.852*L*(ID)^-4.87
+
+Target Inlet P Desired: 29.30 psi
+<
+
+Allowable ΔP (5.33 psi)
+
+Additionally, the manifold was sized so that the average pressure in the manifold is equal
+to the target lateral inlet pressure. This was done in Excel using the “goal seek” command
+– the Point P column values were changed by setting the Paverage cell equal to 29.30 psi.
+After all manifolds were sized, the different pipe sizes and their total lengths were
+recorded.
+Mainline Sizing. Unlike the manifolds, which were designed based on DU, the mainline
+was designed based on economics. This means that the line was sized so that it uses the
+smallest pipe possible without the water exceeding a velocity of five feet per second. The
+velocity of the pipe can be determined by dividing the flow rate in the pipe by the area of
+the pipe. By doing this, it lowers the chance of water hammer in the pipe, as well as
+lowers pumping costs (high velocity means more friction, resulting in more pressure loss
+and more required pressure at the pump). However, in the case of the pecan block, the
+mainline was sized based on the walnut block, because the mainline must deliver water to
+both the pecan and walnut blocks. So, even though a smaller pipe size could have been
+chosen to deliver water to the pecans, 6” pipe was chosen because it still had to deliver
+water downstream to the walnuts. It is true that 5” pipe could have been chosen instead of
+6”, but 5” pipe is not commonly used and may not be readily available. The tables below
+were used to size the mainline.
+
+Table 7. Mainline sizing table for the walnut block.
+Outlet
+
+Point P (psi)
+
+1
+2
+Pressure D/S of Filters
+
+37.93
+38.89
+39.48
+
+Point Q (gpm)
+0.00
+113.14
+128.91
+
+u/s Seg Q
+(gpm)
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+113.14
+242.05
+
+4.284
+6.301
+
+420
+1930
+
+0.960
+2.756
+
+0.00
+2.16
+
+vel.
+ΔP (psi) (ft/sec)
+-0.96
+-0.59
+
+2.52
+2.49
+
+26
+Table 8. Mainline sizing table for the pecan block.
+Outlet
+
+Point P (psi)
+
+1
+2
+Pressure D/S of Filters
+
+32.44
+31.66
+32.48
+
+Point Q (gpm)
+0.00
+84.15
+161.16
+
+u/s Seg Q
+(gpm)
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+84.15
+245.31
+
+6.301
+6.301
+
+473
+850
+
+0.095
+1.244
+
+0.87
+0.43
+
+vel.
+ΔP (psi) (ft/sec)
+0.77
+-0.81
+
+0.87
+2.52
+
+Filtration Requirements. The filtration system was designed for the worst-case scenario,
+and since the water supply comes from both a well and ditch, the filtration was designed
+to handle the surface water contaminants. This design requires media tanks to sufficiently
+filter the moderately dirty water. A common rule of thumb is to remove all particles
+larger than 1/7th the microsprinkler orifice diameter. Since the orifice diameter is 0.06
+inches, the maximum particle size that should pass filtration is 0.0086 inches, or 0.218
+mm. However, it states in the JAIN technical brochure that the required filtration for all
+2005 AquaMaster nozzles is 120 mesh. Therefore, 120 mesh will be used, even though an
+80 mesh filter would properly filter a 0.218 mm particle. The correlation between particle
+size and mesh number can be seen in the table below.
+Table 9. Particle and mesh sizes (Burt and Styles, 2011).
+Opening
+Mesh Size Size
+20
+0.0280
+80
+0.0071
+100
+0.0060
+120
+0.0049
+150
+0.0041
+
+(mm)
+0.71
+0.18
+0.15
+0.12
+0.10
+
+After determining the max particle size to be filtered is 0.12 mm, the filter media to be
+used was selected. The table used to select the proper media can be seen below.
+Table 10. Media selection table (Burt and Styles, 2011).
+
+Media #
+12
+16
+8
+12
+20
+11
+16
+20
+
+Media Selection Table
+Mean Effective
+Media Type
+Media Size (mm)
+Round Monterey Sand
+1.30
+Round Monterey Sand
+0.65
+Crushed Granite
+1.50
+Crushed Silica
+1.20
+Round Monterey Sand
+0.50
+Crushed Granite
+0.78
+Crushed Silica
+0.70
+Crushed Silica
+0.47
+
+Mean Filtration Capacity (mm)
+(@ 15-25 GPM/sq ft)
+
+0.16 - 0.15
+0.12 - 0.15
+0.11 - 0.15
+0.11
+0.11
+0.08 - 0.11
+0.08 - 0.10
+0.06 - 0.08
+
+Sizing the Media Tanks. Table 45 in the literature by Burt and Styles (2011) recommends
+the number and size of tanks based on the system flow rate and water quality. For the
+sake of this design, the tanks were designed for a "moderate dirt load". Considering the
+
+27
+system will use surface water, some may suggest using a “moderate heavy dirt load”
+instead. However, because the orchard is located on the east side of the Central Valley
+between Visalia and Exeter, the surface water has low debris levels. This is because it is
+closer to the Sierra Nevada Mountain Range, so the water has not picked up debris that is
+seen in canals further west. So, a “moderate dirt load” is sufficient. All three sets that will
+run in the system were designed so that they all require a similar total flow rate, between
+225-250 GPM. Since the flow rate and water quality were both known, the number and
+size of the media tanks was easy to find.
+TDH Required. The Total Dynamic Head is the amount of pressure that is required at the
+pump – in this case, the booster pump directly downstream of the ditch inlet. It is
+important to have a pump that can supply enough pressure to the entire system at all
+times. In order to find the TDH required, all forms of pressure in the field must be
+accounted for. This includes: the pressure required at the heads of manifolds plus the loss
+due to friction in the mainline, the pressure loss through the filter tanks when most dirty,
+the loss through the emergency filter screen, and minor losses. Any inlet pressure to the
+pump would help lower the TDH, but in this case there is no inlet pressure due to an open
+discharge.
+The pressure required at the head of the manifold is the pressure at which the pressure
+regulator will be set; this ensures the manifolds receive a consistent pressure. This
+pressure, plus the losses due to friction in the mainline, is higher for the walnut block
+than the pecan block. A typical value of friction loss through a well-designed filtration
+system is 7.0 psi when the tanks are most dirty. It is also assumed that the loss through
+the emergency filter screen is 0.5 psi. Minor losses include check valves, risers, fittings,
+pressure regulators, etc. It is assumed that the minor losses in the system will equal 6.0
+psi. The TDH is the sum of all of these forms of pressure.
+
+28
+RESULTS AND DISCUSSION
+Crop Selection
+After comparing the crops that potentially could be planted, the landowner decided that it
+is best to select pecans; this was decided for three reasons. The first reason pecans were
+selected is because it allows the landowner to continue with the same farm manager. The
+two sides have a good relationship, and the farm manager manages both walnut and
+pecan orchards. The second reason is that pecan trees are readily available and in close
+proximity to the orchard. Since the trees are already located at the Blain Shop, the
+landowner does not need to contact a nursery to buy seedlings, which is convenient. The
+trees at that spot are approximately 80% Wichita and 20% Western Schley (used as
+pollinator) with Shoshone rootstocks. Lastly, and most importantly, selecting pecans
+allows the landowner to not worry about nematodes. After reviewing literature, it appears
+that nematodes have little to no effect on pecan trees, but can be detrimental to young
+walnut trees without proper management. By selecting pecans, the landowner can avoid
+fallowing the land, fumigating, and losing several years’ worth of production.
+Replanting Process
+The selection of a replanting process has yet to be determined by the landowner. The two
+options are to plant the 24 acres with pecans via the “transplanting” method or a
+“traditional” method. The farm manager is performing a trial transplant on a separate
+orchard at the end of 2016, so the decision of the landowner will be influenced by those
+results. That being said, there are great benefits to the “transplanting” method on paper.
+After completing an income/cost spreadsheet, the landowner is able to compare the cash
+revenues of the two different methods over a nine-year period. This spreadsheet can be
+seen in Appendix D.
+The “traditional” method, where the pecan trees are planted when they are at year 0 (in
+early 2018), has an accumulative deficit of $308,841 after nine years. The first profitable
+year does not occur until year nine, and the payback period extends for several more
+years.
+The “transplanting” method, where the pecan trees are planted when they are at year 3 (in
+early 2018), has an accumulative profit of $45,159 after nine years. The first profitable
+year occurs in year six, and the payback period, when the initial investment pays itself
+off, is between the eighth and ninth years.
+It is true that the costs and incomes on this spreadsheet are all hypothetical and are
+dependent on many variables, but the spreadsheet does a good job of showing the
+potential benefits of planting via “transplanting”. The costs to plant, farm, and harvest the
+trees are the same, but the overall replanting process is essentially accelerated three years
+through transplanting, and the payback period is shorter. Keep in mind that the
+“traditional” method of planting pecans is still a better option than doing a “traditional”
+planting of walnuts, because walnut trees at year 0 would not be able to be planted until,
+
+29
+maybe, 2021 because of a potential nematode infestation. So, if the landowner chooses to
+plant the 24 acres in 2018 with pecans via the “transplanting” method instead of doing a
+“traditional” planting of walnuts in 2021, it would essentially accelerate the replanting
+process by six years!
+Irrigation System Design
+Field and Micro Sprinkler Constraints. The constraints for the existing Chandler walnut
+block include 27 foot tree spacing down rows and 32 foot tree spacing between rows.
+There are 34 trees per row when rows are full; there is 0% slope between and down rows,
+and 100% of the field consists of Grangeville sandy loam soil.
+The constraints for the pecan block include 30 foot tree spacing down rows and 35 foot
+tree spacing between rows. There are 31 trees per row when rows are full; there is 0%
+slope between and down rows, and 100% of the field consists of Grangeville sandy loam
+soil.
+When looking at the overall field, including both walnut and pecan blocks, there is 350
+GPM available to the system at one time, from either the well pump or the inlet from the
+ditch at the NE corner of the field. The pressure provided by the well pump is zero due to
+the open discharge into the standpipe feeding the pipeline. Another constraint is that the
+landowner would prefer to not irrigate between the hours of 12:00-6:00 pm due to keep
+power costs to a minimum, as those hours are peak hours and have a more expensive rate
+of electricity use. Also, the landowner would like to achieve a 90% wetted area when
+irrigating.
+One constraint for the microsprinklers is that the orifice size of the emitter should be
+greater than 0.04 inches; this helps avoid plugging. Also, the spaghetti hose to supply the
+microsprinklers from the hose will be a length of five feet, which allows some flexibility
+on the exact location of the microsprinkler between trees. Lastly, the system is designed
+to have a global DU of 0.92 without using pressure regulators at the head of each hose.
+Determine Peak ET. The peak ET rate for both walnuts and pecans falls in the month of
+July. The peak rate for walnuts is 8.81 inches per month, or 1.99 inches per week, or 0.28
+inches per day. The peak rate for pecans is 10.57 inches per month, or 2.39 inches per
+week, or 0.34 inches per day.
+Estimate GPH/Tree Needed. For the walnut block, the estimated flow rate per tree is
+35.01 GPH when irrigated 36 hours per week. The irrigation scheduling is the choice of
+the landowner, but irrigating 18 hours per day, two days per week, allows the landowner
+to avoid irrigating during peak electricity usage hours, thereby lowering pumping costs.
+For the pecan block, the estimated flow rate per tree is 15.31 GPH when irrigated 120
+hours per week. Since the walnuts are irrigated two days out of the week during peak ET
+rates, there are five days remaining to irrigate the pecans. As mentioned in the Procedures
+section, running the pecan block only during off-peak hours (80 hours – 16 hours per day,
+five days per week) makes the required system flow rate greater than the maximum flow
+
+30
+rate provided by the pump. So, operating hours will need to be extended into peak
+electrical usage hours during peak ET rates.
+120 hours means the pecans will have to be irrigated 24 hours per day, five days per week
+during peak ET rates. Even though one of the constraints was to avoid irrigating between
+12:00-6:00 pm, it was decided that it is better to have the pecans irrigated 24 hours per
+day to accommodate pump flow constraints. Peak ET rates only occur one month out of
+the year, meaning the field does not require as many hours of irrigation in the other
+eleven months, so the landowner is willing to pump 24 hours per day for the month of
+July. He is willing to make this sacrifice because irrigating 120 hours per week during
+peak times allows the pecan blocks to use the same nozzle type as the walnut block,
+where 100 hours results in a different nozzle type. Additionally, irrigating 120 hours per
+week results in similar total flows (225-245 GPM) required by the walnut and pecan sets,
+which is less than the well pump flow rate. Even though this seems like overkill, one
+must remember that additional flow is required by the system when backflushing occurs,
+which will be discussed when sizing tanks.
+Estimate Number of Micro Sprinklers/Tree. There will be one microsprinkler per tree on
+both the pecan and walnut blocks. One microsprinkler is capable of providing close to a
+90% wetted area for both pecan and walnut spacing, so only one is needed. Even though
+the wetted diameter of the microsprinkler may not provide the exact area to make a 90%
+wetted area, it is a trade-off that the landowner is willing to make since the
+microsprinkler provides the correct depth of water, which is most crucial.
+Select the Proper Microsprinkler & Number of Sets. For the walnuts, a JAIN 2005
+AquaMaster microsprinkler with a green swivel and an orange nozzle was selected. There
+is only set when irrigating the walnut block, so it is all irrigated at the same time for 36
+hours per week during peak ET rates. This microsprinkler is capable of supplying the
+walnuts with the proper depth of water and wetted area – with just one sprinkler per tree
+– all at a reasonable pressure of 34.7 psi. So, the microsprinklers will provide 35.01 GPH
+when operating at 34.7 psi. This is seen as feasible, since the JAIN technical brochure
+recommends the operating pressure of their microsprinklers be between 20-35 psi for best
+results.
+For the pecans, the same microsprinkler, swivel, and nozzle types were selected. There
+are two sets when irrigating the pecan block, which means each sprinkler will operate
+half the time. And, since they are operating half the time, they need double the flow rate.
+The reason two sets were selected is because the needed flow rate per tree was too small
+to provide close to a 90% wetted area when irrigated 120 hours per week. By splitting
+this time in half, the sprinklers can operate at twice the flow, which will provide a better
+wetted area. However, the entire block could not be operated 60 hours per week at twice
+the flow, because the pump can only provide 350 GPM, which is not enough to supply
+the entire block. So, by creating two sets, half of the 24 acres of pecans will run for 60
+hours at a desired flow rate and pressure, and the other half will do the same at a different
+time. This is why the mainline is positioned so that the pecan block is cut in half, 12 acres
+on each side. The estimated flowrate per tree for the pecans was 15.31 GPH when
+
+31
+irrigating 120 hours per week, but since there are two sets, each microsprinkler will
+provide 30.62 GPH when operating at 26.5 psi.
+Locate and Position Manifolds, Determine Hose Sizes. Since the slope of the field is 0%,
+the manifolds would be placed in the middle of the blocks if they were squarely shaped.
+However, for the walnuts, it was decided that the length of the field is too long for one
+manifold to supply the entire block, so there are two manifolds. Since there are two
+manifolds, and no slope, the manifolds would be placed 1/4th and 3/4th of the length of the
+field so they supply an even amount of trees. But, due to the neighbor’s lot in the SW, the
+western manifold had to be moved east. The eastern manifold is located so that there is
+230 feet of lateral on each side of the manifold, but the western manifold is located so
+that there is the 185 feet of lateral to the east and 275 feet to the west. Drawings of these
+locations, along with proper dimensions, make this easier to understand. This drawing
+can be located in Appendix B.
+The hose size was determined using the manifold placement program from the ITRC, and
+it was found that the ideal size is 1.06” polyethylene hose. This is because it offers a
+lower inlet pressure than smaller hoses (due to less friction loss), and offers the same DU
+as larger hoses, which are more expensive. The inlet pressure to the hose for the walnuts
+is 37.70 psi.
+For the pecans, there was a similar issue with the boundary – Mill Creek, which runs on
+the north edge of the pecan block. Since the distance from the first tree to last tree will
+(these trees are not planted yet) be 900 feet, the manifolds should each supply water to
+450 feet of lateral and they should be 450 feet apart (1/4th, 3/4th of the length of the field).
+Since there are two sets, there are four manifolds – two manifolds per set. However, due
+to the terrain, the manifolds had to be moved. The eastern manifolds are located so that
+there is 214 feet of lateral to the east and 236 feet to the west. Notice that the manifolds
+still supply 450 feet worth of lateral. The western manifolds are located so that there are
+207 feet to the east and 243 feet to the west. Although the southern manifolds did not
+need to be moved as the northern ones did, it was seen as convenient to have their inlets
+be located on the same row.
+The same hose size is used for the pecan block, 1.06” polyethylene hose. The inlet
+pressure to the hose is 29.30 psi. In both cases the hose DU is 0.97, meaning the manifold
+DU must be 0.95 to ensure a global DU of 0.92.
+Determine the Allowable Change in Pressure. To ensure that the manifold DU meets its
+requirements, the allowable change in pressure along a manifold was found. For the
+walnuts, the allowable ΔP is 6.97 psi. For the pecans, the allowable ΔP is 5.33 psi.
+Manifold Sizing. There are a total of six manifolds – two for the walnut block, and four
+for the pecan block. As mentioned in the Procedures section, the pecan manifolds were
+sized so they get as close to the allowable change in pressure without exceeding it, which
+lowers installation cost by using smaller pipe but still meets the target system design DU
+(0.92). The walnut manifolds, on the other hand, were sized to experience as little change
+
+32
+in pressure as possible, in order to lower the input pressure at the head of the manifold (at
+the pressure regulator). This was done to close the gap between the different operating
+pressures, as the walnut manifolds require more pressure than the pecan manifolds, so
+that the TDH required for the different sets is more similar. The exact manifold pipe
+I.D.’s and their lengths can be seen in the irrigation design spreadsheets, located in
+Appendix C. The walnut manifolds consist of 3 inch and 4 inch nominal IPS PVC pipe
+sizes, and the pecan manifolds consist of 2 inch and 3 inch nominal IPS PVC pipe sizes.
+Note that the pipe sizes of the pecan manifolds are smaller, which attributes to the larger
+change in pressure due to friction.
+Mainline Sizing. The mainline was sized based on economics (as opposed to DU which
+was used downstream of the pressure regulator) so that the velocity in the pipe does not
+exceed five feet per second. The mainline has a total length of 2,350 feet, and will run
+from the well pump, split the pecan block in half, and then dogleg south before finishing
+at the western manifold in the walnut block. Because the flow rate between the walnut
+manifolds is much less than the flow upstream of the eastern walnut manifold (more than
+half the flow rate outlets at the eastern manifold), the pipe size in that section did not
+need to be as large. Therefore, 4 inch nominal IPS PVC pipe is used in this section. It is
+true that 3 inch pipe could be used because the velocity would be less than five feet per
+second, but the manifold begins with 4 inch pipe, so it makes sense to use 4 inch pipe.
+The rest of the mainline, from the eastern walnut manifold to the well, consists of 6 inch
+nominal IPS PVC pipe. Even though the pecan block does not need such a large diameter
+pipe, the 6 inch pipe still has to supply the walnut block with water, and the larger pipe
+will minimize pressure loss, again so the pump discharge pressure is similar when either
+the walnuts or the pecans are being irrigated.
+Filtration Requirements. After determining the mesh size to be used and the maximum
+particle size that passes, the media to be used in the sand media tanks was selected from
+the table in the procedures section. The media that will be used is #11 Crushed Granite.
+Sizing the Media Tanks. The number and size of the media tanks was selected based on
+the flow rate of the system and the water quality. Normally, for a system with a big
+difference in flows between different sets, the tanks are sized based on the set with the
+highest flow rate. Luckily, since all three sets operate at a similar flow rate, the tank
+sizing will be the same for all sets. The recommended filter station contains three 30”
+media tanks. However, since one tank does not filter during backflush, it is beneficial to
+have an additional tank for proper filtration. Therefore, four 30” media tanks will be
+used.
+It is important to note that the required backflush flow rate for a 30” media tank is 80
+GPM (Burt and Styles, 2011). So, when backflushing occurs, the system requires an
+additional 80 GPM to what the field needs. The largest flow rate required at one time in
+the field is 245 GPM; this occurs when irrigating the Northern part of the pecan block.
+So, when backflushing occurs during this irrigation event, the well pump will need to
+provide 325 GPM to the pipeline (245 + 80 GPM). Since it was assumed the maximum
+
+33
+flow rate from the pump is 350 GPM, this design ensures that the required system flow
+rate does not exceed the flow rate provided by the well pump.
+TDH Required. Since the different sets operate at different pressures, the booster pump
+that will be used must be sized for the set with the highest pressure. For the walnuts, the
+TDH required is 52.98 psi. For the pecans, the TDH is 45.98 psi. Therefore, a booster
+pump that is capable of pressurizing the system at approximately 53 psi should be
+installed.
+The tables below represent a summary of the designs for both blocks.
+Table 11. Design summary for the walnut block.
+TOTAL DESIGN SUMMARY
+a)
+b)
+c)
+d)
+e)
+
+f)
+g)
+
+Required Flows:
+Average Q & P per hose:
+Hose size:
+Hose inlet pressure:
+Pressure regulator strategy and all pipe sizing:
+
+35.01 GPH/emitter, 10.50 GPM/hose, 242.05 GPM total
+35.01 GPH, 34.70 PSI
+1.06" polyethelene hose
+37.70 psi
+Pressure regulator to be installed at the head of each manifold
+and set @ approx. 38 PSI; 3 and 4" nominal ID PVC pipe for
+manifolds, 4" and 6" nominal ID PVC pipe for mainlines
+Pressure required at the pump: 52.98 psi
+Proper filtration specificiations: 4 - 30" tanks, #11 Crushed Granite
+
+Table 12. Design summary for the pecan block.
+TOTAL DESIGN SUMMARY
+a)
+b)
+c)
+d)
+e)
+
+f)
+g)
+
+Required Flows:
+Average Q & P per hose:
+Hose size:
+Hose inlet pressure:
+Pressure regulator strategy and all pipe sizing:
+
+30.62 GPH/emitter, 8.17 GPM/hose, 245.31 GPM total
+30.62 GPH, 26.5 PSI
+1.06" polyethelene hose
+29.30 PSI
+Pressure regulator to be installed at the head of each manifold
+and set @ approx. 32 PSI; 2, 3" nominal ID pipes for manifolds, 6"
+nominal ID pipes for mainline
+Pressure required at the pump: 45.98 PSI
+Proper filtration specificiations: 4 - 30" tanks, #11 Crushed Granite
+
+Miscellaneous. In addition to the parts and materials that were mentioned in the irrigation
+system design, the system needs several other components in order to be completed and
+ready to operate. For example, the filtration system is not simply three 30” sand media
+tanks – the tanks requires additional parts to ensure that the water is filtered properly. A
+sight tube, two air vents, an emergency screen, and a flow control valve – for the
+backflush line – are also needed on a filter station. There may be additional components
+that are needed as well. A representation of these components in the system can be seen
+in the drawings in Appendix C.
+If chemigation is to take place, it is necessary that two check valves be installed. One
+check valve must be located on the chemical line upstream of the injection point – this
+prevents water in the pipeline from flowing into the chemical tank. Another check valve
+must be installed upstream of the injection point and downstream of the booster pump –
+this prevents injected water from flowing back into the pump upon turnoff. In addition to
+the check valve, the “chemigation” valve also contains an air vent and a low pressure
+drain, which are directly upstream of the check valve.
+
+34
+Multiple air vents are required on the system. In addition to the air vents on the filter
+station, the system needs air vents at the head of each manifold. In fact, it needs two air
+vents at each head – one upstream of the pressure regulator, to release air continuously
+and when the system is pressurizing, and one downstream of the pressure regulator, to
+allow air into the pipe when water exits. In total, the orchard requires two air vents at
+every manifold connection, two on the filter station, one at the chemigation valve, one at
+every flushout, and two at the butterfly valve between the walnut and pecan blocks.
+The system also requires flushouts on the end of every manifold line and one at the end
+of the mainline. The diameter of the flushout should be atleast half the diameter of the
+manifold pipe. The flushouts help to remove solids and settled debris from the system.
+There also needs to be pressure relief valves to ensure the pressure in the pipe does not
+become over-pressurized. There should be one located directly downstream of the booster
+pump and upstream of a manual valve, and another located at the end of the mainline
+before the flushout.
+
+35
+RECOMMENDATIONS
+All of the data tables and drawings that were made were intended to aid the landowner in
+his decision making for the replanting of the orchard, not give him a single option. The
+ideas that were presented in this report are simply one scenario of replanting the orchard,
+but it is not to say there are other options. However, this report does show the benefits
+that will be seen if the landowner chooses to plant pecans, plant them via “transplanting”,
+and install the proposed irrigation system. The proposed irrigation system does not
+suggest that the orchard will conserve water, but it does suggest that very similar amounts
+of water will be made available to all trees in the field. Because of this high DU, the trees
+are more likely to experience more uniform yields, and potentially higher yields if the
+system is run properly.
+If the landowner does choose to implement the options given in this report, there are still
+some loose ends that need to be addressed. One issue that needs to be resolved is the flow
+rate entering the system. The highest flow rate at one time that is required by the system
+is 245 GPM, but during backflush the required flow rate will be 325 GPM; the well pump
+discharges more in the range of 350 GPM, and this number can vary depending on
+groundwater levels. So, to ensure that there is not excess flow causing the standpipe to
+overflow, the landowner has a few options. One option is to install a VFD on the
+electrical motor of the well pump, but the landowner would like to avoid this due to the
+high installation cost and added electrical inefficiencies.
+Another option is to build a reservoir. A reservoir would allow water to be stored so that
+the system can be running without the well pump running 24/7 during times of peak ET,
+assuming no surface water is available. An automated system could be installed so that
+the well pump kicks on when a minimum level is reached in the reservoir, and turns off
+when the maximum level is reached. A benefit of this idea is that the system could
+receive the correct flow rate (with a proper flow control valve) and the well pump would
+not need to run continuously. Another benefit is that it allows both well and surface water
+to be used without having to throttle the output from the well pump, since the reservoir
+regulates the available water to the booster pump. It also provides a place to backflush
+water and recycle it, so any additional flow for backflushing will be reused. A
+disadvantage of this idea is that the reservoir would take the place of land where extra
+trees could be planted, and the installation cost of the system would increase.
+If the reservoir is sized to have 8250 gallons of live storage, the well pump should never
+have to turn on more than one time per hour. This size can be created with several
+different combinations of length, width, and height, but it should be constructed so that
+the maximum level in the reservoir is the same elevation as the maximum water level in
+the ditch. The reservoir water level will float with the ditch water level when surface
+water is available. The minimum water level will need to be above the booster pump
+intake accounting for proper submergence to prevent vortexing. More information on the
+reservoir can be seen at the bottom of the pecan irrigation system design spreadsheet in
+Appendix C.
+
+36
+An alternative to building a reservoir is to throttle the discharge of the well pump with a
+throttle valve. This could not be done manually because the required flow rate of the
+system changes when backflush is initiated. It is not feasible to have a person open/close
+the valve every time backflush occurs. Instead, a float that connects to the throttle valve
+could be installed in the standpipe. The float would move up/down depending on the
+water level in the pipeline, and it would in turn open/close the throttle valve until the
+ideal flow is reached. A good source of information for this idea can be found on the
+ITRC website, where there is a report by Franklin Gaudi titled “Evaluation and
+Modification of a Float Valve for the Delano-Earlimart Irrigation District”. A benefit of
+this idea is that it is a low installation cost. A disadvantage of this idea is that while the
+throttle valve lowers the flow rate, it also increases TDH by burning pressure through the
+valve, which increases annual pumping costs.
+
+Figure 6. Photo of existing well pump station at Bricker Farms.
+If the system is being fed via surface water, the ditch turnout valve should be opened so
+the incoming flow matches the required flow of the system. Therefore, in addition to the
+existing flow meter on the well discharge pipe, a flow meter should be installed
+downstream of the inlet from the ditch. The meter would help the landowner know that
+flow entering the system from the ditch matches what is desired. If a reservoir is used, the
+well pump will never have to be used to compensate for the additional flow for
+backflushing, because the backflush flow water will be recycled back into the reservoir. It
+may be a good idea to check that the capacity of the ditch inlet matches the maximum
+required flow rate by the system.
+
+37
+
+Figure 7. Photo of the existing Oaks Ditch turnout at Bricker Farms.
+Once the optimal flow rate is achieved, the system also needs to be properly pressurized.
+Therefore, as mentioned in the results, a booster pump should be installed upstream of the
+filter station. The booster pump must be able to add approximately 53 psi of pressure to
+the system when irrigating the walnut block. Since the landowner does not want to deal
+with a VFD, the booster pump will supply this 53 psi to the pipeline when irrigating the
+pecans, even though it only require 46 psi. This is alright – the extra pressure will be
+burned off at the pressure regulator, which would be set at approximately 32 psi. The
+landowner should choose a pump that features a pump curve that has a high efficiency in
+the neighborhood of 240 GPM and a TDH of 122 feet (or 53 psi). Additionally, it would
+be ideal to select a pump with a flat system curve, so the pressure does not decrease
+dramatically during backflush.
+
+38
+
+REFERENCES
+1. "Air Vents Selection and Placement Guide." (n.d.): n. pag. Netafim, Aug. 2004. Web.
+4 Feb. 2016. <http://www.netafimusa.com/files/literature/agriculture/air-ventscheck-valves-pressure-regulators/A047-Air-Vent-Selection-Guide.pdf>.
+2. Boriss, Hayley, Henrich Burnke, and Marcia Kreith. "English Walnuts
+Profile."Agricultural Marketing Resource Center. Ed. Diane Huntrods. USDA,
+Mar. 2006. Available at:
+http://www.agmrc.org/commodities__products/nuts/english-walnuts-profile/>.
+Accessed 17 November 2015.
+3. Blain, Brody. Personal interview. 18 December 2015.
+4. Burt, C. and Styles, S. 2011. Drip and Micro Irrigation Design and Management for
+Trees, Vines, and Field Crops: Practice plus Theory. Cal Poly Irrigation Training
+and Research Center.
+5. Caprile, Janet, and Mike McHenry, Dr. "Orchard Replant Considerations."Crop
+Currents Fall (2006): n. pag. Web.
+<http://ucanr.org/sites/cccoopext/files/80960.pdf>, referenced 17 November 2015.
+6. "Chapter 6 - ETc - Single Crop Coefficient (Kc)." Chapter 6. FAO, n.d. Web. 09 Feb.
+2016. <http://www.fao.org/docrep/x0490e/x0490e0b.htm>.
+7.
+
+Ella, V.B., J. Keller, M.R. Reyes, and R. Yoder. "Technical Note: A Low-Cost
+Pressure Regulator for Improving the Water Distribution Uniformity of a
+Microtube-Type Drip Irrigation System." Applied Engineering in Agriculture Appl.
+Eng. Agric. 29.3 (2013): 343-49. Web. 4 Feb. 2016.Freeman, Mark W., G. Steven
+Sibbett, Karen M. Klonsky, and Richard L. De Moura. Sample Costs to Establish
+and Produce Pecans. Rep. N.p.: n.p., 2005. UC Cooperative Extension. Web.
+<http://www.agmrc.org/media/cms/pecansjv2005_5d1b53161843a.pdf>. referenced
+17 November 2015.
+
+8. JAIN Irrigation Inc. Micro-Sprinklers. Fresno,CA: JAIN Irrigation, 2013. Print.
+9. Linwood Nursery. 2009. Linwood Nursery Variety Information.
+<http://www.linwoodnursery.com/variety.aspx>, referenced 18 November 2015.
+10. Meadows R. 2013. NEWS OVERVIEW: Researchers develop alternatives to methyl
+bromide fumigation. California Agriculture 67(3):125-127. July-September 2013.
+
+39
+11. Nesbitt, Monte, Larry Stein, and Jim Kamas. "Improved Pecans." Texas Fruit and
+Nut Production (2013): n. pag. Texas A&M University System, Feb. 2013. Web,
+referenced 18 Nov. 2015.
+12. "Pecan in California." Fruit & Nut Research and Information Center Education. UC
+Davis, Sept. 2014.
+<http://fruitandnuteducation.ucdavis.edu/education/fruitnutproduction/Pecan/>,
+referenced 18 November 2015.
+13. Perez, Agnes, and Kristy Plattner. Fruit and Tree Nuts Outlook. Rep. USDA, 30 Sept.
+2015. Web. Referenced 17 November 2015.
+14. Upson, Steve, Charles Rohla, James Locke, and Job Springer. "Establishing and
+Managing an Improved Variety Pecan Enterprise in the Southern Great
+Plains." PECAN PRODUCTION 101 (2012): n. pag. Samuel Roberts Noble
+Foundation. Web, referenced 17 November 2015.
+15. "Walnuts." UC Drought Management. Division of Agriculture and Natural
+Resources, University of California, n.d. Web. 02 Feb. 2016.
+http://ucmanagedrought.ucdavis.edu/Agriculture/Crop_Irrigation_Strategies/Walnut
+s/
+16. "Walnuts in California." Fruit & Nut Research and Information Center Education.
+UC Davis, Sept. 2014.
+<http://fruitandnuteducation.ucdavis.edu/education/fruitnutproduction/Walnut/>,
+referenced 17 November 2015.
+
+40
+
+APPENDIX A
+How Project Meets Requirements for the ASM Major
+
+41
+Major Design Experience
+The BRAE senior project must incorporate a major design experience. The design
+process usually involves the fundamental elements as outlined below.
+Establishment of Objectives and Criteria. Project objectives and criteria are
+established to meet the needs of Bricker Farms.
+Synthesis and Analysis. The project analyzed the potential economic impacts of
+different planting techniques, and payback periods associated with them.
+Construction, Testing, and Evaluation. This project will be designed to meet the needs
+of Bricker Farms. There will be no testing done on this project.
+Incorporation of Applicable Engineering Standards. The system was designed based
+on strategies and requirements described in Burt and Styles (2011). Additionally, Soil
+Surveys were conducted through programs provided by the NRCS.
+Capstone Project Experience. The project will incorporate many concepts that were
+introduced in previous engineering classes. The project will also utilize many concepts
+that had to be researched further. The relevant classes include: BRAE 151 AutoCAD, 321
+Ag Safety, 340 Irrigation Water Management, 438 Drip/Micro Irrigation, 418/419 Ag
+Systems Management, 532 Water Wells and Pumps, ENGL 145 Reasoning,
+Argumentation and Writing, SS 121 Introductory Soil Science.
+Design Parameters and Constraints. This project addresses a significant number of the
+categories of constraints listed below.
+Physical. The replanting of the orchard relies heavily on Mother Nature; if weather is not
+cooperative, the entire design and lead-up could be worthless.
+Economic. The land owner wishes to limit the costs as much as possible; this is why the
+transplant method of replanting is a serious consideration.
+Environmental. A huge factor in the decision on which crop to replant is the
+environmental impact on the land. Replanting walnuts would require a significant amount
+of fumigation, which has negative environmental effects.
+Ergonomical. N/A
+Manufacturability. The new irrigation system must be designed so that all
+manufacturing and installation are feasible and can be completed with ease.
+Health and Safety. The transplant replanting method must be completed in a way that
+does not place the equipment operator in harm’s way.
+
+42
+Ethical. The system was designed to meet peak evapotranspiration demands and
+pipelines were sized based on engineering standards to ensure high DU and economic
+considerations. Pipeline protection (air vents, pressure sustaining valves, etc.) was also
+added to the system.
+Political. Improving irrigation to potentially assist in the groundwater sustainability plan
+that Governor Brown has set forth; determining if it is correct to replant trees in a time of
+drought.
+Productivity. The objective when choosing irrigation systems and crops is to maximize
+profits in the future.
+
+43
+
+APPENDIX B
+Irrigation System Design Drawings
+
+44
+
+45
+
+46
+
+47
+
+APPENDIX C
+Irrigation System Design Excel Spreadsheets
+
+48
+9 Acres – Chandler Walnuts
+Field Constraints:
+Crop:
+Walnuts
+Location:
+Visalia, CA
+Crop Spacing:
+27 ft
+x
+32 ft
+13 rows
+34 trees/row
+No Cover Crop
+Slope:
+0 % between rows
+0 % down the rows
+Peak ET Rate:
+8.81 in/month
+Sandy Loam Soil
+Water is available from a pipeline at the high corner (NE) of the field. The water is a combination of well and surface water.
+Pressure provided by the water source =
+0 ft
+Max flow rate available =
+350 GPM
+The farmer will try to not irrigate between the hours of noon to 6 pm to keep power costs to a minimum.
+Microsprayer Constraints:
+Must use a JAIN microsprinkler, orifice size larger than 0.04 inches.
+Manufacturing cv =
+0.025
+Length of spaghetti hose to the microsprinkler =
+5 ft
+Requirements:
+Design a microsprinkler system with a system DU of at least
+0.92
+Ignore unequal drainage
+Cannot use pre-set pressure regulators at the heads of the hoses.
+Must select from hose ID's of 0.83, 1.06, 1.36, 1.60, and 2.075 inches (Standard JAIN tubing sizes)
+Add an additional percentage to the hose lengths for snaking of:
+2.5 %
+Solution:
+1) Determine peak ET rate.
+ETc = ETo * Kc
+Full ETc
+(inches)
+March
+2.78
+0.12
+0.33
+April
+5.34
+0.61
+3.26
+May
+7.14
+0.83
+5.93
+June
+7.23
+0.97
+7.01
+July
+7.73
+1.14
+8.81
+August
+6.38
+1.14
+7.27
+September
+5.23
+1.03
+5.39
+October
+3.62
+0.69
+2.50
+Year Total:
+40.50
+* numbers based on monthly ETo rates for a dry year for a drip/micro system in Zone 12 of California
+** values based on estimates from Kc tables in Senior Project Literature Review
+Month
+
+ETo (inches)*
+
+Peak ET rate =
+Peak ET rate =
+Peak ET rate =
+
+8.81 in/31 days
+1.99 in/week
+0.28 in/day
+
+Kc**
+
+2) Estimate GPH/tree needed.
+GPM (net) = (Inches * tree spacing)/(96.3 * hours)
+Inches/week =
+Hours of operation =
+Tree Spacing Area =
+GPM/tree =
+GPH/tree =
+
+1.99
+36 hours per week (18 hrs/day, 2 days/week)
+864 sq. ft
+0.50 (net)
+29.76 (net)
+
+GPH (gross) = Net/((1 - spray losses) * DU)
+* assume a DU of 0.85, so that even when the system deteriorates it can still provide enough water to prevent under-irrigation
+* spray losses are considered to be insignificant. Usually, the ET should have already been adjusted to include
+evaporation losses from the wet ground surface.
+GPH/tree =
+35.01 (gross) if irrigated 18 hrs/day
+Est. Pump GPM
+256 GPM
+3) Estimate number of microsprayers needed per tree.
+Soil Type
+Coarse Sand
+Fine Sand
+Loam
+Heavy Clay
+
+Additional Lateral Movement (ft)
+0.1
+0.4
+0.2
+0.7
+0.7
+1.1
+1.0
+1.5
+
+*This design is for a sandy loam so the additional water will go about 0.75 ft beyond the radius of throw of the
+microsprinkler, adding 1.5 ft to the diameter - this would supposedly occur below the soil surface; rough estimate only.
+*The system is to be designed for a wetted soil volume of 90% or greater.
+
+49
+90% wetted area =
+777.6 sq. ft
+Diameter that provides this =
+31.5 ft.
+Reduce the diameter by 1.5 ft due to sandy loam spreading.
+Diameter of microsprayer =
+30.0 sq. ft
+The radius of throw for a 2005 AquaMaster Green Swivel will be adequate for the needed diamter for most pressure selections.
+Therefore, use one microsprayer per tree.
+4) Select the proper microsprayer and number of sets.
+The above calculation of flow rate per tree assumed all of the emitters operated at the same time. If there are two sets
+the flow rate per microsprayer will be doubled because a single microsprayer would only operate half of the time.
+Nozzle Color
+Orange
+Black
+Blue
+Yellow
+
+Orifice Size (in)
+0.06
+0.07
+0.08
+0.09
+
+Q (GPH)
+33.3
+44.4
+55.5
+69.4
+
+P (psi)
+30
+30
+30
+30
+
+K
+5.94
+7.92
+9.90
+12.39
+
+*K was determined by solving for the k value in the formula:
+GPH = kPx ---> k = GPH/(P0.5)
+Flow rate and pressure data found in technical brochure provided by JAIN
+Now a selection table is to be developed that examines different numbers of sets using different nozzle colors. In the
+table below, the pressure for each nozzle color is solved for - once the GPH/sprayer is known. An emitter exponent of 0.5
+is used for these microsprinklers.
+P = (GPH/k) 2
+# of sets
+1
+2
+3
+4
+
+Required Pressure (psi) for various orifice sizes
+Needed GPH/microspinkler
+Orange
+Black
+Blue Yellow
+35.0
+34.7
+19.5
+12.5
+8.0
+70.0
+138.8
+78.1
+50.0
+32.0
+105.0
+312.3
+175.7
+112.4
+71.9
+140.0
+555.2
+312.3
+199.9
+127.8
+
+1 set is selected because:
+* The pressure is reasonable. The recommended working pressures for the 2005 AquaMaster microsprinkler are from 20 to 35 psi
+** the operating time is ideal for the orchard when irrigated in one set. Since the 24 acres of pecans on the orchard will
+also need to be irrigated, this allows the entire walnut block to be irrigated separately at once , two days out of the week.
+*** The yellow nozzle also operates at a working pressure when there are two sets, but this results in much too large of a wetted diameter.
+**** The orange nozzle delivers a wetted diameter of 29.5 ft when operating at 29 psi, so it will be
+slightly larger at a higher pressure, resulting in atleast 90% wetted area.
+Summary thus far:
+1 set
+35.01 gph/microsprinkler
+34.7 working pressure (psi)
+1 microsprinkler/tree
+27 ft between microsprinklers (plus an additional 2.5% snaking for snaking)
+0.025 Manufacturing cv
+Orange Nozzle
+5) Locate positions of the manifolds via the Manifold location program
+The pressure regulation strategy that has been defined for this step does not allow individual pressure regulators at the
+start of each hose, nor does it need PC emitters to be used (due to the level field). The allowable pressures difference
+downstream of the "PR" point includes pressure differences along the manifold and the pressure differences along the
+hoses.
+Minimum Allowable System DU = Manifold DU x Single Hose DU
+Because the required new system DU must be better than 0.92, the DU of a single hose must be considerably better than
+that, which will allow for some pressure differences along the manifold.
+Field Length (ft)
+920
+920
+920
+920
+
+Number of Manifolds
+1
+2
+3
+4
+
+Approx. Total Length
+920
+460
+(17 trees/manifold)
+307
+230
+
+920 ft is used instead of 891 ft because often microsprinklers are located on the outside edges of the field. A typical hose
+length is commonly between 200 ft and 300 ft. The actual length of hose accounting for tree spacing will be approximately
+460 ft. 2 manifolds will give an approximate 230 ft hose uphill and downhill.
+*However, since the neighbors lot in the SW corner extends more than 230 ft (it extends 275 ft), the west
+manifold will be placed so there is 185 ft uphill and 275 ft downhill (10 trees downhill, 7 uphill). The southernmost 4 rows will not have any downhill emitters, only 7 emitters uphill.
+In a commercial design, one might examine the costs for 2, 3, and 4 manifolds per set and then make a selection based on DU, cost,
+the benefits of more or fewer valves in the field, etc., but this example just examines 2 manifolds.
+
+50
+
+Hose Program Inputs:
+Length of Hose =
+460 ft
+Water Temp =
+70 degrees F
+Spacing =
+324 in
+Nominal Flow Rate =
+32 gph
+Desired Flow Rate =
+35.01 gph
+P @ nominal Q =
+29 psi
+n = 2 ** when mature, each tree will be supplied from both sides
+Slope =
+0%
+Discharge Exponent =
+0.5
+Extra hose length =
+2.5% for snaking (temperature expansion and contraction)
+Emitter cv =
+0.025
+Spaghetti Hose Loss:
+2.5 psi
+
+Hose ID
+0.83
+1.06
+1.39
+1.60
+2.075
+
+Uphill Length
+(ft)
+
+Downhill
+Length (ft)
+
+Inlet P
+(psi)
+
+DUlq
+Min. Allow Manifold DU
+230
+230
+38.90
+0.96
+0.96
+230
+230
+37.70
+0.97
+0.95
+230
+230
+37.30
+0.97
+0.95
+230
+230
+37.20
+0.97
+0.95
+230
+230
+37.20
+0.97
+0.95
+* Inlet pressures are after the hose fittings
+Choose: 1.06 inch ID hose. The 1.39 ID hose requires slightly less inlet
+pressure, but cost more and has the same DU.
+*Hose ID values taken from tubing sizes in JAIN technical brochure
+The 230' does not match the actual tree spacing.
+230/27' = 8.52 trees
+The manifold must be installed midway between adjacent trees in a row. Therefore, the first (East) manifold must be
+trenched after the 8th tree, meaning there are 8 trees uphill of the first manifold, and 9 trees downhill. Both manifolds
+supply 17 trees. The second (West) manifold should be placed so that it has 7 trees uphill and 10 trees downhill, due to
+the neighbors' lot. The manifolds will be 420' apart.
+*Total combined hose inlet flow for 460 ft =
+*Total combined hose inlet flow for 185 ft =
+Pressure at emitter with average flow =
+
+10.5 gpm
+4.66 gpm
+34.7 psi
+
+6) Determine the allowable manifold ΔP.
+Pavg =
+DU system =
+DU hose =
+Allowable ΔP =
+
+34.70 psi
+0.92
+0.97
+Allowable ΔP = 2[Pavg - Pavg(DUsystem/DUhose)1/x]
+
+6.97 psi
+
+7) Manifold sizing. The following table lists common sizes used for drip/micro designs.
+
+Nominal Dia.
+1.5
+2
+2.5
+3
+4
+5
+6
+8
+10
+12
+15
+18
+21
+24
+
+PIPE SELECTION TABLE
+ID
+PR
+Type
+1.72
+200
+IPS
+2.193
+160
+IPS
+2.655
+160
+IPS
+3.284
+125
+IPS
+4.28
+100
+IPS
+5.291
+100
+IPS
+6.301
+100
+IPS
+8.205
+100
+IPS
+10.226
+100
+IPS
+12.128
+100
+IPS
+14.55
+100
+PIP
+17.725
+100
+PIP
+20.90
+100
+PIP
+23.51
+100
+PIP
+
+H-W "C"
+145
+146
+147
+148
+149
+150
+150
+150
+150
+150
+150
+150
+150
+150
+
+First manifold (East)
+Outlet
+
+Point P (psi)
+
+Micros per
+row
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+
+37.52
+37.53
+37.54
+37.56
+37.60
+37.66
+37.68
+37.71
+37.75
+37.79
+37.85
+37.92
+38.00
+
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+
+Point Q
+(gpm)
+0.00
+9.92
+9.92
+9.92
+9.92
+9.92
+9.92
+9.92
+9.92
+9.92
+9.92
+9.92
+9.92
+9.92
+
+u/s Seg Q
+(gpm)
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+ΔP (psi)
+
+9.92
+19.83
+29.75
+39.66
+49.58
+59.50
+69.41
+79.33
+89.24
+99.16
+109.08
+118.99
+128.91
+
+3.284
+3.284
+3.284
+3.284
+3.284
+4.28
+4.28
+4.28
+4.28
+4.28
+4.28
+4.28
+4.28
+
+32
+32
+32
+32
+32
+32
+32
+32
+32
+32
+32
+32
+16
+
+0.003
+0.011
+0.023
+0.039
+0.059
+0.022
+0.030
+0.038
+0.047
+0.058
+0.069
+0.081
+0.047
+
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+
+0.00
+-0.01
+-0.02
+-0.04
+-0.06
+-0.02
+-0.03
+-0.04
+-0.05
+-0.06
+-0.07
+-0.08
+-0.05
+
+51
+Paverage =
+
+37.70
+
+Pmax
+
+=
+
+38.00
+
+Pmin
+=
+ΔP =
+
+37.52
+0.48
+
+Hf = 10.5*(GPM/C)^1.852*L*(ID)^-4.87
+
+Target Inlet P Desired: 37.70 psi
+<
+
+Outlet
+
+Point P (psi)
+
+Micros per
+row
+
+37.58
+37.59
+37.59
+37.59
+37.60
+37.62
+37.66
+37.72
+37.75
+37.78
+37.82
+37.87
+37.93
+
+7
+7
+7
+7
+18
+18
+18
+18
+18
+18
+18
+18
+18
+
+Paverage
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+=
+
+Pmax
+
+=
+
+37.93
+
+Pmin
+=
+ΔP =
+
+37.58
+0.34
+
+Second manifold (West)
+
+Allowable ΔP (6.97 psi)
+Point Q
+(gpm)
+0.00
+4.66
+4.66
+4.66
+4.66
+10.5
+10.5
+10.5
+10.5
+10.5
+10.5
+10.5
+10.5
+10.5
+
+u/s Seg Q
+(gpm)
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+ΔP (psi)
+
+4.66
+9.32
+13.98
+18.64
+29.14
+39.64
+50.14
+60.64
+71.14
+81.64
+92.14
+102.64
+113.14
+
+3.284
+3.284
+3.284
+3.284
+3.284
+3.284
+3.284
+4.28
+4.28
+4.28
+4.28
+4.28
+4.28
+
+32
+32
+32
+32
+32
+32
+32
+32
+32
+32
+32
+32
+16
+
+0.001
+0.003
+0.006
+0.009
+0.022
+0.038
+0.059
+0.023
+0.031
+0.040
+0.050
+0.061
+0.037
+
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+
+0.00
+0.00
+-0.01
+-0.01
+-0.02
+-0.04
+-0.06
+-0.02
+-0.03
+-0.04
+-0.05
+-0.06
+-0.04
+
+37.70
+
+Hf = 10.5*(GPM/C)^1.852*L*(ID)^-4.87
+
+Target Inlet P Desired: 37.70 psi
+<
+
+Allowable ΔP (6.97 psi)
+
+A. This pressure difference and sizing logic assumes that there is an adjustable pressure regulator at the head of each manifold
+B. The pressure differential throughout the manifold is less than the allowable, therefore the required manifold DU will also meet requirements.
+Bernoulli's Equation: P1+E1=P2+E2+Hf
+Required Pressure at the Head of East Manifold:
+Required Pressure at the Head of West Manifold:
+
+38.00 psi
+37.93 psi
+
+Required Flow Rate at the Head of East Manifold:
+Required Flow Rate at the Head of West Manifold:
+Total flow in order to operate entire set at once:
+Pipe Sizes & Lengths
+East manifold
+Nominal Dia. (in)
+Length (ft)
+3
+160
+4
+240
+Total Length:
+400
+
+ft
+
+West manifold
+Nominal Dia. (in)
+Length (ft)
+3
+224
+4
+176
+Total Length:
+400
+
+ft
+
+128.91 gpm
+113.14 gpm
+242.05 gpm
+
+8) Mainline sizing
+Mainline from well to the manifold will be designed to handle:
+
+242.05 gpm
+
+The pipe should be sized to maintain a velocity less than 4.5 feet per second
+Minimum pipe size we can use:
+Velocity of this pipe:
+
+4.28 inches (ID) from max pipe on Manifold
+5.40 feet per second
+Vel =
+
+(GPM/449)/(3.14*((Pipe ID/12in/ft)/2)^2)
+
+If velocity is not less than 4.5 fps, change the pipe ID to another value from table above.
+Therefore, the mainline will be a minimum of 5" Nominal PVC pipe.
+Mainline Length =
+Elevation change along mainline
+Well to Manifold =
+
+Outlet
+
+Point P (psi)
+
+1
+2
+Pressure D/S of Filters
+
+37.93
+38.89
+39.48
+
+Point Q (gpm)
+0.00
+113.14
+128.91
+
+2350 feet
+5 feet
+
+u/s Seg Q
+(gpm)
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+113.14
+242.05
+
+4.284
+6.301
+
+420
+1930
+
+0.960
+2.756
+
+0.00
+2.16
+
+vel.
+ΔP (psi) (ft/sec)
+-0.96
+-0.59
+
+9) Filtration Requirements
+The filtration system must be designed for the worst situation and since the water supply comes from both a well and ditch the filtration must
+be designed to handle the surface water contaminants. This design requires media tanks to sufficiently filter the moderately dirty water.
+**A common rule of thumb is to remove all particles larger than 1/7th the microsprinkler orifice diameter.
+
+2.52
+2.49
+
+52
+
+Maximum flow rate:
+Orifice diameter:
+Min. removed particle diameter:
+
+242.05 gpm
+0.06 in
+0.0086 in =
+
+0.217714 mm
+
+It states in the JAIN technical brochure that the required filtration for all 2005 AquaMaster nozzles is 120 mesh. Therefore, 120 mesh will be used.
+Media Selection Table
+Mean Effective
+Media Type
+Media Size (mm)
+Round Monterey Sand
+1.30
+Round Monterey Sand
+0.65
+Crushed Granite
+1.50
+Crushed Silica
+1.20
+Round Monterey Sand
+0.50
+Crushed Granite
+0.78
+Crushed Silica
+0.70
+Crushed Silica
+0.47
+
+Media #
+12
+16
+8
+12
+20
+11
+16
+20
+
+Mean Filtration Capacity (mm)
+(@ 15-25 GPM/sq ft)
+
+0.16 - 0.15
+0.12 - 0.15
+0.11 - 0.15
+0.11
+0.11
+0.08 - 0.11
+0.08 - 0.10
+0.06 - 0.08
+
+Mesh Size
+20
+80
+100
+120
+150
+
+Opening
+Size
+0.0280
+0.0071
+0.0060
+0.0049
+0.0041
+
+Use #11 Crushed Granite
+10) Size the media tanks
+The total flow rate:
+
+242.05 gpm
+
+Table 45 in the book (pg 207) recommends the number and size of tanks based on the system flow rate and water quality.
+For the sake of this design, the tanks will be designed for a "moderate dirt load".
+
+Flow rate
+
+Moderate Dirt Load
+175 - 275 gpm
+
+Number & size of tanks
+3 - 30" tanks
+
+4 30" media tanks with #8 Crushed Granite Media will be used to filter this system.
+4 will be used instead of 3 because it will help filtration during backflush, as one of the tanks does not filter during backflush.
+11) Estimation of pressure loss when filters are dirty.
+A typical value of friction loss through a well designed filtration system is 7.0 psi ( with some media
+filters having good underdrains and valves, this can be reduced ).
+Filtration Summary:
+4 30" tanks
+#11 Crushed Granite
+7 psi loss when filters are dirty
+12) Total Discharge Pressure Required of the Well Pump
+Pressure u/s of East manifold
++ media filter loss when dirty
++ Emergency screen loss
++ *minor losses
+- pump inlet pressure
+
+=
+=
+=
+=
+=
+TDH =
+
+39.5
+7.0
+0.5
+6.0
+0.0
+52.98 psi
+
+* minor losses include: check valves, set valves, risers, pressure regulators, elbows, etc. One should always check with the specific
+valve manufacturer to determine as many valve loss components as possible.
+**Considering the well pump and ditch turnout have no inlet pressure (they discharge into an open stand pipe), a booster pump
+must be installed between the well pump/ditch turnout and the filter station. The booster pump should be able to add
+approximately 53 psi of pressure to the pipeline.
+
+TOTAL DESIGN SUMMARY
+a)
+b)
+c)
+d)
+e)
+
+Required Flows:
+Average Q & P per hose:
+Hose size:
+Hose inlet pressure:
+Pressure regulator strategy and all pipe sizing:
+
+f)
+
+35.01 GPH/emitter, 10.50 GPM/hose, 242.05 GPM total
+35.01 GPH, 34.70 PSI
+1.06" polyethelene hose
+37.70 psi
+Pressure regulator to be installed at the head of each manifold
+and set @ approx. 38 PSI; 3 and 4" nominal ID PVC pipe for
+manifolds, 4" and 6" nominal ID PVC pipe for mainlines
+Pressure required at the pump: 52.98 psi
+
+g)
+
+Proper filtration specificiations: 4 - 30" tanks, #11 Crushed Granite
+
+(mm)
+0.71
+0.18
+0.15
+0.12
+0.10
+
+53
+24 acres – Wichita and Western Schley Pecans
+Field Constraints:
+Crop:
+Pecans
+Location:
+Visalia, CA
+Crop Spacing:
+30 ft
+x
+35 ft
+34 rows
+31 trees/row
+No Cover Crop
+Slope:
+0 % between rows
+0 % down the rows
+Peak ET Rate:
+10.57 in/month
+Sandy Loam Soil
+Water is available from a pipeline at the high corner (NE) of the field. The water is a combination of well and surface water.
+Pressure provided by the water source =
+0 ft
+Max flow rate available =
+350 GPM
+The farmer will try to not irrigate between the hours of noon to 6 pm to keep power costs to a minimum.
+Microsprayer Constraints:
+Must use a JAIN microsprinkler, orifice size larger than 0.04 inches.
+Manufacturing cv =
+0.025
+Length of spaghetti hose to the microsprinkler =
+
+5 ft
+
+Requirements:
+Design a microsprinkler system with a system DU of at least
+0.92
+Ignore unequal drainage
+Cannot use pre-set pressure regulators at the heads of the hoses.
+Must select from hose ID's of 0.83, 1.06, 1.36, 1.60, and 2.075 inches (Standard JAIN tubing sizes)
+Add an additional percentage to the hose lengths for snaking of:
+2.5 %
+Solution:
+1) Determine peak ET rate.
+ETc = ETo * Kc
+Kc
+ETc adjusted (in)
+ajdusted
+0.14
+0.40
+0.73
+3.91
+1.00
+7.11
+1.16
+8.42
+1.37
+10.57
+1.37
+8.73
+1.24
+6.46
+0.83
+3.00
+Year Total:
+48.60
+* numbers based on monthly ETo rates for a dry year for a drip/micro system in zone 12 of California
+** values based on estimates from walnut Kc tables in Literature Review, adjusted pecan Kc values are 1.2 times walnut Kc values
+Month
+
+March
+April
+May
+June
+July
+August
+September
+October
+
+Peak ET rate =
+Peak ET rate =
+Peak ET rate =
+
+ETo (inches)*
+
+Kc**
+
+2.78
+5.34
+7.14
+7.23
+7.73
+6.38
+5.23
+3.62
+
+0.12
+0.61
+0.83
+0.97
+1.14
+1.14
+1.03
+0.69
+
+Full ETc
+(inches)
+0.33
+3.26
+5.93
+7.01
+8.81
+7.27
+5.39
+2.50
+
+10.57 in/31 days
+2.39 in/week
+0.34 in/day
+
+2) Estimate GPH/tree needed.
+GPM (net) = (Inches * tree spacing)/(96.3 * hours)
+Inches/week =
+Hours of operation =
+Tree Spacing Area =
+GPM/tree =
+GPH/tree =
+
+2.39
+120 hours per week (24 hrs/day, 5 days/week)
+1050 sq. ft
+0.22 (net)
+13.01 (net)
+
+GPH (gross) = Net/((1 - spray losses) * DU)
+* assume a DU of 0.85, so that even when the system deteriorates it can still provide enough water to prevent under-irrigation
+* spray losses are considered to be insignificant. Usually, the ET should have already been adjusted to include
+evaporation losses from the wet ground surface.
+GPH/tree =
+Est. Pump GPM:
+
+15.31 (gross) if irrigated 24 hrs/day
+249 GPM
+
+3) Estimate number of microsprayers needed per tree.
+Soil Type
+Coarse Sand
+Fine Sand
+Loam
+Heavy Clay
+
+Additional Lateral Movement (ft)
+0.1
+0.4
+0.2
+0.7
+0.7
+1.1
+1.0
+1.5
+
+*This design is for a sandy loam so the additional water will go about 0.75 ft beyond the radius of throw of the microsprinkler,
+adding 1.5 ft to the diameter - this would supposedly occur below the soil surface; rough estimate only.
+*The system is to be designed for a wetted soil volume of 90% or greater.
+90% wetted area =
+945 sq. ft
+Diameter that provides this =
+34.7 ft.
+Reduce the diameter by 1.5 ft due to sandy loam spreading.
+Diameter of microsprayer =
+33.2 sq. ft
+The radius of throw for a 2005 AquaMaster Green Swivel will be adequate for the needed diameter for most pressure selections.
+Therefore, use one microsprayer per tree.
+
+54
+4) Select the proper microsprayer and number of sets.
+The above calculation of flow rate per tree assumed all of the emitters operated at the same time. If there are two sets the
+flow rate per microsprayer will be doubled because a single microsprayer would only operate half of the time.
+Nozzle Color
+Orange
+Black
+Blue
+Yellow
+
+Orifice Size (in)
+0.06
+0.07
+0.08
+0.09
+
+Q (GPH)
+33.3
+44.4
+55.5
+69.4
+
+P (psi)
+30
+30
+30
+30
+
+K
+5.94
+7.92
+9.90
+12.39
+
+*K was determined by solving for the k value in the formula:
+GPH = kPx ---> k = GPH/(P0.5)
+Flow rate and pressure data found in technical brochure provided by JAIN
+Now a selection table is to be developed that examines different numbers of sets using different nozzle colors. In the table
+below, the pressure for each nozzle color is solved for - once the GPH/sprayer is known. An emitter exponent of 0.5 is used for
+these microsprinklers.
+P = (GPH/k) 2
+Required Pressure (psi) for various orifice sizes
+Needed GPH/microsprinkler
+Orange
+Black
+Blue Yellow
+15.3
+6.6
+3.7
+2.4
+1.5
+
+# of sets
+1
+2
+3
+4
+
+30.6
+45.9
+61.2
+
+26.5
+59.7
+106.2
+
+14.9
+33.6
+59.7
+
+9.6
+21.5
+38.2
+
+6.1
+13.8
+24.4
+
+2 sets are selected because:
+* The pressure is reasonable. The recommended working pressures for the 2005 AquaMaster microsprinkler are from 20 to 35 psi
+** the operating time is ideal for the orchard when irrigated in two sets. Since the walnuts will also need to be irrigated two days per
+week, this allows the pecan block (which must operate 120 hrs/week) to be runs in two sets - half will run for 24 hrs/day, 2.5 days/week,
+and the other half will run for 24 hrs/day, 2.5 days/week. Therefore, the pump will operate 18 hrs/day for 2 days/week, and 24 hrs/day
+for 5 days/week in order to supply the entire orchard with enough water during times of peak ET c rates.
+*** The orange nozzle delivers a wetted diameter of 29.5 ft when operating at 29 psi, so it will be slightly
+smaller at a lower pressure, still resulting in close to a 90% wetted area.
+Summary thus far:
+2 sets
+30.62 gph/microsprinkler
+26.5 working pressure (psi)
+1 microsprinkler/tree
+30 ft between microsprinklers (plus an additional 2.5% snaking for snaking)
+0.025 Manufacturing cv
+Orange Nozzle
+5) Locate positions of the manifolds via the Manifold location program
+The pressure regulation strategy that has been defined for this step does not allow individual pressure regulators at the start
+of each hose, nor does it allow PC emitters to be used. The allowable pressures difference downstream of the "PR" point
+includes pressure differences along the manifold and the pressure differences along the hoses.
+Minimum Allowable System DU = Manifold DU x Single Hose DU
+Because the required new system DU must be better than 0.92, the DU of a single hose must be considerably better than that,
+which will allow for some pressure differences along the manifold.
+Field Length (ft)
+900
+900
+900
+900
+
+Number of Manifolds
+1
+2
+3
+4
+
+Approx. Total Length
+900
+450
+(16 trees/manifold)
+300
+225
+
+900 ft is used because microsprinklers are located on the outside edges of the field, and the outside sprinklers on each
+manifold are 450 ft apart. A typical hose length is commonly between 200 ft and 300 ft. 2 manifolds will give an approximate
+225 ft hose uphill and downhill, but due to the irregular shape from the creek the East manifolds will be placed 214 ft from the
+edge, or uphill, with 236 ft downhill (East --> West = downhill). The West manifold will have 207 ft uphill and 243 ft downhill.
+Due to the main line location, there will actually be 4 manifolds (one East and one West manifold North of the main line, and one East
+and one West manifold South of the mainline). The Southern manifolds will all have the same size laterals, but the Northern manifold's
+laterals will change size due to the creek. That being said, there will still be 2 sets - the Southern manifolds will run at the same time, and
+the Northern manifolds will run at the same time. The main line was placed so that the 24 acres of Pecans is cut in half as accurately as
+possible, allowing the two sets to have similar flows.
+Hose Program Inputs:
+Length of Hose =
+450 ft
+Water Temp =
+70 degrees F
+Spacing =
+360 in
+Nominal Flow Rate =
+32 gph
+Desired Flow Rate =
+30.62 gph
+P @ nominal Q =
+29 psi
+n = 2 ** when mature, each tree will be supplied from both sides
+Slope =
+0%
+Discharge Exponent =
+0.5
+Extra hose length =
+2.5% for snaking (temperature expansion and contraction)
+Emitter cv =
+0.025
+Spaghetti Hose Loss:
+2.5 psi
+
+55
+Hose ID
+0.83
+1.06
+1.39
+1.60
+2.075
+
+Uphill Length (ft)
+
+Downhill
+Length (ft)
+
+Inlet P
+(psi)
+
+DUlq
+Min. Allow Manifold DU
+225
+225
+30.10
+0.97
+0.95
+225
+225
+29.30
+0.97
+0.95
+225
+225
+29.10
+0.97
+0.95
+225
+225
+29.00
+0.97
+0.95
+225
+225
+29.00
+0.97
+0.95
+* Inlet pressures are after the hose fittings
+Choose:
+1.06 inch ID hose. The 1.39 ID hose requires slightly less inlet
+pressure, but cost more and has the same DU.
+*Hose ID values taken from tubing sizes in JAIN technical brochure
+The manifold must be installed midway between adjacent trees in a row. Therefore, the first (East) manifold must be trenched
+after the 7th tree, meaning there are 8 emitters uphill of the first manifold, and 8 emitter downhill. The second (West)
+manifold must be trenched after the 8th tree from the West, meaning there are 7 emitters uphill and 9 emitters downhill.
+Both manifolds supply 16 trees, with the 16th tree being supplied by both manifolds. The manifolds will be 473' apart.
+*Total combined hose inlet flow for 450 ft =
+*Total combined hose inlet flow for 190 ft =
+
+8.17 gpm
+4.66 gpm
+
+6) Determine the allowable manifold ΔP.
+Pavg =
+DU system =
+DU hose =
+Allowable ΔP =
+
+26.5 psi
+0.92
+0.97
+Allowable ΔP = 2[Pavg - Pavg(DUsystem/DUhose)1/x]
+
+5.33 psi
+
+7) Manifold sizing. The following table lists common sizes used for drip/micro designs.
+
+Nominal Dia.
+1.5
+2
+2.5
+3
+4
+5
+6
+8
+10
+12
+15
+18
+21
+24
+
+First manifold (South East)
+
+Outlet
+
+Point P (psi)
+
+Micros per row
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+
+27.15
+27.16
+27.22
+27.35
+27.56
+27.88
+28.33
+28.93
+29.68
+30.62
+31.76
+31.95
+32.18
+32.44
+
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+
+Paverage =
+
+29.30
+
+Pmax
+
+=
+
+32.44
+
+Pmin
+=
+ΔP =
+
+27.15
+5.29
+
+Second manifold (South
+West)
+
+PIPE SELECTION TABLE
+ID
+PR
+Type
+1.72
+200
+IPS
+2.193
+160
+IPS
+2.655
+160
+IPS
+3.284
+125
+IPS
+4.28
+100
+IPS
+5.291
+100
+IPS
+6.301
+100
+IPS
+8.205
+100
+IPS
+10.226
+100
+IPS
+12.128
+100
+IPS
+14.55
+100
+PIP
+17.725
+100
+PIP
+20.90
+100
+PIP
+23.51
+100
+PIP
+
+<
+
+Micros per row
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+
+27.15
+27.16
+27.22
+27.35
+27.56
+27.88
+28.33
+28.93
+29.68
+30.62
+31.76
+31.95
+32.18
+32.44
+
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+29.30
+32.44
+
+=
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+ΔP (psi)
+
+8.17
+16.34
+24.51
+32.68
+40.85
+49.02
+57.19
+65.36
+73.53
+81.70
+89.87
+98.04
+106.21
+114.38
+
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+3.284
+3.284
+3.284
+3.284
+
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+17.5
+
+0.016
+0.059
+0.124
+0.212
+0.320
+0.449
+0.597
+0.755
+0.939
+1.142
+0.191
+0.224
+0.260
+0.149
+
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+
+-0.02
+-0.06
+-0.12
+-0.21
+-0.32
+-0.45
+-0.60
+-0.76
+-0.94
+-1.14
+-0.19
+-0.22
+-0.26
+-0.15
+
+Hf = 10.5*(GPM/C)^1.852*L*(ID)^-4.87
+
+Point P (psi)
+
+Pmax
+
+u/s Seg Q
+(gpm)
+
+Target Inlet P Desired: 29.30 psi
+
+Outlet
+
+Paverage =
+
+Point Q
+(gpm)
+0.00
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+
+H-W "C"
+145
+146
+147
+148
+149
+150
+150
+150
+150
+150
+150
+150
+150
+150
+
+Allowable ΔP (5.33 psi)
+Point Q
+(gpm)
+0.00
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+8.17
+
+u/s Seg Q
+(gpm)
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+ΔP (psi)
+
+8.17
+16.34
+24.51
+32.68
+40.85
+49.02
+57.19
+65.36
+73.53
+81.70
+89.87
+98.04
+106.21
+114.38
+
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+3.284
+3.284
+3.284
+3.284
+
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+17.5
+
+0.016
+0.059
+0.124
+0.212
+0.320
+0.449
+0.597
+0.755
+0.939
+1.142
+0.191
+0.224
+0.260
+0.149
+
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+
+-0.02
+-0.06
+-0.12
+-0.21
+-0.32
+-0.45
+-0.60
+-0.76
+-0.94
+-1.14
+-0.19
+-0.22
+-0.26
+-0.15
+
+Target Inlet P Desired: 29.30 psi
+
+56
+Pmin
+=
+ΔP =
+Third manifold (North
+East)
+
+27.15
+5.29
+
+Outlet
+
+Point P (psi)
+
+Micros per row
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+27.14
+27.15
+27.19
+27.27
+27.42
+27.66
+28.02
+28.52
+29.19
+29.31
+29.46
+29.64
+29.86
+30.11
+30.39
+30.72
+31.08
+31.49
+31.95
+32.45
+
+11
+13
+14
+15
+16
+16
+17
+18
+20
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+16
+
+Paverage =
+
+29.30
+
+Pmax
+
+=
+
+32.45
+
+Pmin
+=
+ΔP =
+
+27.14
+5.31
+
+Fourth manifold (North
+West)
+
+<
+
+<
+
+Micros per row
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+28.31
+28.32
+28.35
+28.42
+28.57
+28.82
+29.17
+29.67
+30.30
+31.11
+31.25
+
+9
+13
+15
+16
+16
+16
+16
+16
+16
+16
+16
+29.30
+
+=
+
+31.25
+
+Pmin
+=
+ΔP =
+
+28.31
+2.94
+
+u/s Seg Q
+(gpm)
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+ΔP (psi)
+
+5.61
+12.24
+19.38
+27.03
+35.19
+43.35
+52.02
+61.20
+71.40
+79.56
+87.72
+95.88
+104.04
+112.20
+120.36
+128.52
+136.68
+144.84
+153.00
+161.16
+
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+3.284
+3.284
+3.284
+3.284
+3.284
+3.284
+3.284
+3.284
+3.284
+3.284
+3.284
+3.284
+
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+17.5
+
+0.008
+0.034
+0.080
+0.149
+0.243
+0.357
+0.501
+0.669
+0.124
+0.152
+0.182
+0.215
+0.250
+0.284
+0.323
+0.365
+0.409
+0.456
+0.504
+0.278
+
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+
+-0.01
+-0.03
+-0.08
+-0.15
+-0.24
+-0.36
+-0.50
+-0.67
+-0.12
+-0.15
+-0.18
+-0.21
+-0.25
+-0.28
+-0.32
+-0.37
+-0.41
+-0.46
+-0.50
+-0.28
+
+Hf = 10.5*(GPM/C)^1.852*L*(ID)^-4.87
+
+Point P (psi)
+
+Pmax
+
+Point Q
+(gpm)
+0.00
+5.61
+6.63
+7.14
+7.65
+8.16
+8.16
+8.67
+9.18
+10.20
+8.16
+8.16
+8.16
+8.16
+8.16
+8.16
+8.16
+8.16
+8.16
+8.16
+8.16
+
+Target Inlet P Desired: 29.30 psi
+
+Outlet
+
+Paverage =
+
+Allowable ΔP 5.33 psi)
+
+Allowable ΔP (5.33 psi)
+Point Q
+(gpm)
+0.00
+4.59
+6.63
+7.65
+8.16
+8.16
+8.16
+8.16
+8.16
+8.16
+8.16
+8.16
+
+u/s Seg Q
+(gpm)
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+ΔP (psi)
+
+4.59
+11.22
+18.87
+27.03
+35.19
+43.35
+51.51
+59.67
+67.83
+75.99
+84.15
+
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+2.193
+3.284
+3.284
+
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+17.5
+
+0.006
+0.029
+0.077
+0.149
+0.243
+0.357
+0.492
+0.638
+0.809
+0.140
+0.084
+
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+
+-0.01
+-0.03
+-0.08
+-0.15
+-0.24
+-0.36
+-0.49
+-0.64
+-0.81
+-0.14
+-0.08
+
+Hf = 10.5*(GPM/C)^1.852*L*(ID)^-4.87
+
+Target Inlet P Desired: 29.30 psi
+<
+
+Allowable ΔP (5.33 psi)
+
+A. This pressure difference and sizing logic assumes that there is an adjustable pressure regulator at the head of each manifold
+B. The pressure differential throughout the manifold is less than the allowable, therefore the required manifold DU will also meet requirements.
+Bernoulli's Equation:
+
+P1+E1=P2+E2+Hf
+
+Required Pressure at the Head of South East Manifold:
+Required Pressure at the Head of South West Manifold:
+
+32.44 psi
+32.44 psi
+
+Required Pressure at the Head of North East Manifold:
+Required Pressure at the Head of North West Manifold:
+
+32.45 psi
+31.25 psi
+
+Required Flow Rate at the Head of South East Manifold:
+Required Flow Rate at the Head of South West Manifold:
+Total flow in order to operate set 1 at once:
+
+114.38 gpm
+114.38 gpm
+228.76 gpm
+
+Required Flow Rate at the Head of North East Manifold:
+Required Flow Rate at the Head of North West Manifold:
+Total flow in order to operate set 1 at once:
+
+161.16 gpm
+84.15 gpm
+245.31 gpm
+
+Pipe Sizes & Lengths
+South East manifold
+Nominal Dia. (in)
+Length (ft)
+2
+350
+3
+122.5
+Total Length:
+472.5
+
+ft
+
+South West manifold
+Nominal Dia. (in)
+Length (ft)
+2
+350
+3
+122.5
+Total Length:
+472.5
+
+ft
+
+North East manifold
+Nominal Dia. (in)
+Length (ft)
+2
+280
+3
+402.5
+Total Length:
+682.5
+
+ft
+
+North West manifold
+
+57
+Nominal Dia. (in)
+Length (ft)
+2
+315
+3
+52.5
+Total Length:
+367.5
+
+ft
+
+8) Mainline sizing
+Mainline from well to the manifold will be designed to handle:
+
+245.31 gpm
+
+The pipe should be sized to maintain a velocity less than 4.5 feet per second
+Minimum pipe size we can use:
+Velocity of this pipe:
+
+3.284 inches (ID) from max pipe on Manifold
+9.29 feet per second
+Vel =
+
+(GPM/449)/(3.14*((Pipe ID/12in/ft)/2)^2)
+
+If velocity is not less than 4.5 fps, change the pipe ID to another value from table above.
+Therefore, the mainline will be a minimum of 5" Nominal PVC pipe.
+Mainline Length =
+Elevation change along mainline
+Well to Manifold =
+
+Outlet
+
+Point P (psi)
+
+1
+2
+Pressure D/S of Filters
+
+32.44
+31.66
+32.48
+
+Point Q (gpm)
+0.00
+84.15
+161.16
+
+1323 feet
+3 feet
+
+u/s Seg Q
+(gpm)
+
+Pipe ID
+
+Segment
+Length (ft)
+
+Segment Hf (psi)
+
+ΔElev
+(psi)
+
+84.15
+245.31
+
+6.301
+6.301
+
+473
+850
+
+0.095
+1.244
+
+0.87
+0.43
+
+vel.
+ΔP (psi) (ft/sec)
+0.77
+-0.81
+
+0.87
+2.52
+
+** The pipe ID will be 6.301 because this is what is used to deliver water to the walnut trees, even though it is larger than needed for the sake of the pecans.
+9) Filtration Requirements
+The filtration system must be designed for the worst situation and since the water supply comes from both a well and ditch the filtration must be
+designed to handle the surface water contaminants. This design requires media tanks to sufficiently filter the moderately dirty water. **A common
+rule of thumb is to remove all particles larger than 1/7th the microsprinkler orifice diameter.
+Maximum flow rate:
+Orifice diameter:
+Min. removed particle diameter:
+
+245.31 gpm
+0.06 in
+0.0086 in
+
+=
+
+0.217714 mm
+
+It states in the JAIN technical brochure that the required filtration for all 2005 AquaMaster nozzles is 120 mesh. Therefore, 120 mesh will be used.
+
+Media #
+12
+16
+8
+12
+20
+11
+16
+20
+
+Media Selection Table
+Mean Effective
+Media Type
+Media Size (mm)
+Round Monterey Sand
+1.30
+Round Monterey Sand
+0.65
+Crushed Granite
+1.50
+Crushed Silica
+1.20
+Round Monterey Sand
+0.50
+Crushed Granite
+0.78
+Crushed Silica
+0.70
+Crushed Silica
+0.47
+
+Mean Filtration Capacity (mm)
+(@ 15-25 GPM/sq ft)
+
+0.16 - 0.15
+0.12 - 0.15
+0.11 - 0.15
+0.11
+0.11
+0.08 - 0.11
+0.08 - 0.10
+0.06 - 0.08
+
+Use #11 Crushed Granite
+10) Size the media tanks
+The total flow rate:
+
+245.31 gpm
+
+Table 45 in the book (pg 207) recommends the number and size of tanks based on the system flow rate and water quality. For
+the sake of this design, the tanks will be designed for a "moderate dirt load".
+
+Flow rate
+
+Moderate Dirt Load
+175 - 275 gpm
+
+Number & size of tanks
+3 - 30" tanks
+
+4 30" media tanks with #11 Crushed Granite Media will be used to filter this system.
+4 will be used instead of 3 because it will help filtration during backflush, as one of the tanks does not filter during backflush.
+11) Estimation of pressure loss when filters are dirty.
+A typical value of friction loss through a well designed filtration system is 7.0 psi ( with some media filters
+having good underdrains and valves, this can be reduced ).
+Filtration Summary:
+4 30" tanks
+#11 Crushed Granite
+7 psi loss when filters are dirty
+12) Total Dynamic Head (TDH) Required of the Pump
+Pressure @ u/s part of East manifold
++ media filter loss when dirty
++ Emergency screen loss
++ *minor losses
+- pump inlet pressure
+
+=
+=
+=
+=
+=
+TDH =
+
+32.5
+7.0
+0.5
+6.0
+0.0
+45.98 psi
+
+Mesh Size
+20
+80
+100
+120
+150
+
+Opening
+Size
+0.0280
+0.0071
+0.0060
+0.0049
+0.0041
+
+(mm)
+0.71
+0.18
+0.15
+0.12
+0.10
+
+58
+* minor losses include: check valves, set valves, risers, pressure regulators, elbows, etc. One should always check with the specific valve
+manufacturer to determine as many valve loss components as possible.
+**Considering the pump and ditch turnout have no inlet pressure (they discharge into an open stand pipe), a booster pump must be
+installed between the well pump/ditch turnout and the filter station. The booster pump should be able to add approximately 53 psi of
+pressure to the pipeline in order to supply the Chandler walnuts, so the same pump will be sufficient for the Pecans.
+
+TOTAL DESIGN SUMMARY
+a)
+b)
+c)
+d)
+e)
+
+Required Flows:
+Average Q & P per hose:
+Hose size:
+Hose inlet pressure:
+Pressure regulator strategy and all pipe sizing:
+
+30.62 GPH/emitter, 8.17 GPM/hose, 245.31 GPM total
+30.62 GPH, 26.5 PSI
+1.06" polyethelene hose
+29.30 PSI
+Pressure regulator to be installed at the head of each manifold
+and set @ approx. 32 PSI; 2, 3" nominal ID pipes for manifolds, 6"
+nominal ID pipes for mainline
+Pressure required at the pump: 45.98 PSI
+Proper filtration specificiations: 4 - 30" tanks, #11 Crushed Granite
+
+f)
+g)
+
+SIZING THE RESERVOIR
+What is the general formula for required volume, given a pump GPM (P) and number of cycles/hr
+(n)? Solve for the pool volume that would be needed to have only 1 pump start per hour,
+maximum. Prove with the plug-and-chug method that you are correct.
+Symbol for pump flow:
+Symbol for outflow:
+Symbol for pool volume:
+Symbol for cycles/hr:
+
+P
+Q
+V
+n
+
+=
+=
+=
+=
+
+350 GPM
+175 GPM
+? Gal
+1
+
+For conservative estimate
+Max. cycles when Q=P/2
+
+* An outflow of 250 GPM is used because the system requires between 225-245 GPM, plus adding extra for backflushing
+** P is approx. 585 GPM when using well + surface water, so well water provides enough for system minus backflushing
+At any outflow, time to empty =
+net time to re-fill =
+Total cycle time (T, sec) =
+
+V/Q
+(sec)
+V/(P-Q)
+(sec)
+V/Q + V/(P-Q)
+T = V*P/Q(P-Q)
+
+n=
+n=
+V=
+V=
+V + Factor Safety
+
+60/T
+60*Q(P-Q)/V*P
+60*Q(P-Q)/P*n
+5250
+8250
+
+Option 1
+
+Deeper reservoir and only using upper portion to prevent vortexing
+
+Gallons
+Gallons
+
+or
+
+701.9 cu ft
+1102.9 cu ft
+
+Approximate Reservoir dimensions: Width:
+Length:
+Height:
+Volume:
+
+Manual Pump Primer
+
+Pump
+
+Minimum Reservoir WL
+Req. Submergence ~3'
+
+Option 2
+
+Shallow reservoir with sump for pump intake that is deeper to prevent vortexing.
+Manual Pump Primer
+
+Pump
+
+Minimum Reservoir WL
+
+Req. Submergence ~3'
+
+Option 3
+
+Vertical turbine booster for shallower reservoir and no need for manual priming.
+
+To system
+
+Motor
+
+Minimum Reservoir WL
+Req. Submergence ~3'
+Pump
+
+12.25 ft
+15 ft
+6 ft
+1102.9 cu ft
+
+59
+
+APPENDIX D
+Replanting Cost/Income Excel Spreadsheets
+
+60
+“Transplanting” Method
+Pecans - Planting & Establishing Orchard Cash Flows (including removal of existing walnut trees)
+Assumptions:
+Year 0 - Walnut Orchard removed, ground prepared for planting, irrigation system installed
+Year 1 - Trees planted @ age 3 years
+Year 9 - Investment repaid
+Inshell Pounds Harvested Per Acre =
+0
+0
+0
+Price received per inshell pound =
+$
+2.60
+0
+1st
+2nd
+Cost Per Acre
+Year:
+(2017)
+(2018)
+(2019)
+Walnut Tree Removal:
+Dig & Grind Trees
+750
+Rip and remve roots
+1,400
+Planting Costs:
+Fumigation
+Land Prep: Sip Plow
+300
+Land Prep: Disk 2X
+50
+Land Prep: Laser Level & Float
+150
+Weed Control: Residual Herbicide
+6
+Trees: 42 Per Acre
+750
+1,000
+Survey, Mark, Dig Holes, Plant, Tank
+550
+20
+Paint & Stake Tree Trunks
+40
+2
+Irrigation System
+1,700
+TOTAL TREE REMOVAL & PLANTING COSTS
+5,106
+1,590
+22
+Cultural Costs:
+Irrigation Labor
+35
+40
+Cultivation and Mowing
+85
+50
+Weed Control
+50
+60
+Fertilizer & Soil Amendments
+20
+25
+Foliar Zinc and Potassium sprays
+46
+46
+Prune or Hedge
+15
+15
+Brush Shredding and Removal
+Nut Thinning
+Replanting
+60
+30
+Pest Control
+62
+115
+Technical Services
+20
+20
+Management
+155
+155
+Miscellaneous
+25
+25
+Pump, Well and Irrigation Repairs
+25
+25
+Water & Power Cost
+50
+50
+TOTAL CULTURAL COSTS
+648
+656
+Harvest Costs:
+Hand Pick
+Mechanical Harvest & Haul
+Dehydrating
+TOTAL HARVEST COSTS
+TOTAL PLANTING AND OPERATING COSTS
+
+0
+
+100
+
+300
+
+600
+
+1,200
+
+2,400
+
+2,800
+
+3rd
+(2020)
+
+4th
+(2021)
+
+5th
+(2022)
+
+6th
+(2023)
+
+7th
+(2024)
+
+8th
+(2025)
+
+9th
+(2026)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+40
+60
+70
+35
+52
+30
+
+55
+85
+80
+45
+100
+60
+10
+
+55
+85
+90
+65
+100
+100
+10
+
+75
+100
+90
+120
+100
+100
+25
+
+75
+100
+90
+125
+100
+50
+50
+
+75
+105
+90
+150
+100
+50
+80
+25
+
+75
+105
+90
+150
+100
+50
+80
+25
+
+150
+20
+155
+30
+25
+75
+742
+
+150
+20
+155
+35
+25
+150
+970
+
+150
+40
+155
+40
+25
+150
+1,065
+
+150
+40
+155
+45
+25
+175
+1,200
+
+150
+50
+155
+50
+25
+200
+1,220
+
+150
+50
+155
+50
+25
+200
+1,305
+
+150
+50
+155
+50
+25
+200
+1,305
+
+5
+90
+
+225
+35
+260
+
+225
+50
+275
+
+290
+150
+440
+
+500
+200
+700
+
+500
+200
+700
+
+1,060
+
+1,325
+
+1,475
+
+1,660
+
+2,005
+
+2,005
+
+260
+
+780
+
+1,560
+
+3,120
+
+6,240
+
+7,280
+
+85
+
+-
+
+5,106
+
+2,238
+
+-
+
+-
+
+NET INCOME (EXPENSE) PER ACRE
+
+(5,106)
+
+(2,238)
+
+(678)
+
+(742)
+
+(800)
+
+(545)
+
+85
+
+1,460
+
+4,235
+
+5,275
+
+ACCUMULATED REVENUE (DEFICIT) PER ACRE
+
+(5,106)
+
+(7,344)
+
+(8,022)
+
+(8,764)
+
+(9,564)
+
+(10,109)
+
+(10,024)
+
+(8,564)
+
+(4,329)
+
+946
+
+(122,544)
+
+(176,256)
+
+(192,528)
+
+(210,336)
+
+(229,536)
+
+(242,616)
+
+(240,576) (205,536) (103,896)
+
+22,704
+
+NET INCOME FROM CHANDLER WALNUTS - 9 ACRES
+22,455
+(ASSUMING 3000 lb/ACRE, $1.50/lb PRICE, $2,005 COST)
+
+22,455
+
+22,455
+
+22,455
+
+22,455
+
+22,455
+
+(153,801)
+
+(170,073)
+
+(187,881)
+
+(207,081)
+
+(220,161)
+
+GROSS INCOME PER ACRE
+
+TOTAL ACCUMULATED REVENUE - 24 ACRES
+
+TOTAL BRICKER FARMS ACCUM. REV.
+
+(100,089)
+
+678
+
+742
+
+-
+
+-
+
+22,455
+
+22,455
+
+22,455
+
+22,455
+
+(218,121) (183,081)
+
+(81,441)
+
+45,159
+
+61
+“Traditional” Method
+
+Pecans - Planting & Establishing Orchard Cash Flows (including removal of existing walnut trees)
+Assumptions:
+Year 0 - Walnut Orchard removed, ground prepared for planting, irrigation system installed
+Year 1 - Trees planted @ age 0 year
+Inshell Pounds Harvested Per Acre =
+Price received per inshell pound =
+Cost Per Acre
+Year:
+Walnut Tree Removal:
+Dig & Grind Trees
+Rip and remve roots
+Planting Costs:
+Fumigation
+Land Prep: Sip Plow
+Land Prep: Disk 2X
+Land Prep: Laser Level & Float
+Weed Control: Residual Herbicide
+Trees: 42 Per Acre
+Survey, Mark, Dig Holes, Plant, Tank
+Paint & Stake Tree Trunks
+Irrigation System
+TOTAL TREE REMOVAL & PLANTING COSTS
+Cultural Costs:
+Irrigation Labor
+Cultivation and Mowing
+Weed Control
+Fertilizer & Soil Amendments
+Foliar Zinc and Potassium sprays
+Prune or Hedge
+Brush Shredding and Removal
+Nut Thinning
+Replanting
+Pest Control
+Technical Services
+Management
+Miscellaneous
+Pump, Well and Irrigation Repairs
+Water & Power Cost
+TOTAL CULTURAL COSTS
+Harvest Costs:
+Hand Pick
+Mechanical Harvest & Haul
+Dehydrating
+TOTAL HARVEST COSTS
+TOTAL PLANTING AND OPERATING COSTS
+GROSS INCOME PER ACRE
+
+$
+
+0
+2.60
+0
+(2017)
+
+0
+1st
+(2018)
+
+0
+2nd
+(2019)
+
+0
+
+0
+
+0
+
+0
+
+100
+
+300
+
+600
+
+3rd
+(2020)
+
+4th
+(2021)
+
+5th
+(2022)
+
+6th
+(2023)
+
+7th
+(2024)
+
+8th
+(2025)
+
+9th
+(2026)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+750
+1,400
+
+300
+50
+150
+6
+750
+
+1,700
+5,106
+
+-
+
+1,000
+550
+40
+
+20
+2
+
+1,590
+
+22
+
+35
+85
+50
+20
+46
+15
+
+40
+50
+60
+25
+46
+15
+
+40
+60
+70
+35
+52
+30
+
+55
+85
+80
+45
+100
+60
+10
+
+55
+85
+90
+65
+100
+100
+10
+
+75
+100
+90
+120
+100
+100
+25
+
+75
+100
+90
+125
+100
+50
+50
+
+75
+105
+90
+150
+100
+50
+80
+
+75
+105
+90
+150
+100
+50
+80
+
+60
+62
+20
+155
+25
+25
+50
+648
+
+30
+115
+20
+155
+25
+25
+50
+656
+
+150
+20
+155
+30
+25
+75
+742
+
+150
+20
+155
+35
+25
+150
+970
+
+150
+40
+155
+40
+25
+150
+1,065
+
+150
+40
+155
+45
+25
+175
+1,200
+
+150
+50
+155
+50
+25
+200
+1,220
+
+150
+50
+155
+50
+25
+200
+1,280
+
+150
+50
+155
+50
+25
+200
+1,280
+
+5
+90
+
+225
+35
+260
+
+225
+50
+275
+
+1,310
+
+1,540
+
+1,555
+
+260
+
+780
+
+1,560
+
+85
+
+-
+
+-
+
+5,106
+
+2,238
+
+-
+
+-
+
+-
+
+678
+
+742
+
+970
+
+-
+
+-
+
+-
+
+-
+
+1,065
+
+1,200
+
+-
+
+-
+
+NET INCOME (EXPENSE) PER ACRE
+
+(5,106)
+
+(2,238)
+
+(678)
+
+(742)
+
+(970)
+
+(1,065)
+
+(1,200)
+
+(1,050)
+
+(760)
+
+5
+
+ACCUMULATED REVENUE (DEFICIT) PER ACRE
+
+(5,106)
+
+(7,344)
+
+(8,022)
+
+(8,764)
+
+(9,734)
+
+(10,799)
+
+(11,999)
+
+(13,049)
+
+(13,809)
+
+(13,804)
+
+TOTAL ACCUMULATED REVENUE - 24 ACRES
+
+(122,544) (176,256) (192,528) (210,336) (233,616) (259,176) (287,976) (313,176) (331,416) (331,296)
+
+NET INCOME FROM CHANDLER WALNUTS - 9 ACRES
+22,455
+(ASSUMING 3000 lb/ACRE, $1.50/lb PRICE, $2,005 COST)
+
+TOTAL BRICKER FARMS ACCUM. REV.
+
+22,455
+
+22,455
+
+22,455
+
+22,455
+
+22,455
+
+22,455
+
+22,455
+
+22,455
+
+22,455
+
+(100,089) (153,801) (170,073) (187,881) (211,161) (236,721) (265,521) (290,721) (308,961) (308,841)
+
+62
+
+APPENDIX E
+NRCS Soil Survey Results
+
+

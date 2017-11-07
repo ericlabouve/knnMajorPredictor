@@ -1,0 +1,571 @@
+Construction Agility
+An Integrated Management System
+By Remington Goodwin
+B.A. Liberal Arts and Engineering Studies
+June 17th, 2017
+
+Construction Agility, An Integrated Management System
+
+1
+
+Table of Contents
+Background and Introduction .............................................................................................. 4
+Executive Summary ......................................................................................................................4
+Introduction to Agile Management and Lean ................................................................................4
+Breakdown of Construction Agility ...............................................................................................4
+
+Preliminary Research ........................................................................................................... 5
+An Opportunity to Eliminate Waste ..............................................................................................5
+Program Management 2.0., Thomsen, C. and Sanders, S. .................................................................... 5
+Success factors for Agile Management ..........................................................................................5
+Agile project management in the construction industry - An inquiry of the opportunities in
+construction projects, Mattias Yllen ...................................................................................................... 5
+Case Study: Agile in Construction.................................................................................................7
+Centrus Energy Corp. Applying certain Agile Manifesto principles to Construction, Glenn Straçusser
+............................................................................................................................................................... 7
+Selected Lean management principles to be applied ......................................................................7
+The Toyota way: 14 management principles from the world’s greatest manufacturer, J. K. Liker ...... 7
+Case Study: Reasons for Lean application ....................................................................................8
+The Toyota way: 14 management principles from the world’s greatest manufacturer, J. K. Liker ...... 8
+The Importance of Culture ...........................................................................................................8
+This American Life Podcast Nummi 2015, Ira Glass ............................................................................ 8
+
+Iterative Process of Design and Development ....................................................................... 9
+Initial Trial ...................................................................................................................................9
+Integration of Industrial Engineering ..................................................................................................... 9
+Team Reflection and Interviews ............................................................................................................ 9
+Refined Reflection ...............................................................................................................................10
+Dealing with a Traditional Industry ............................................................................................ 10
+Socialization ........................................................................................................................................10
+Industry Interviews and Refinement ........................................................................................... 11
+March 2, 2017 - Tavio Darchangelo, Regional Manager - Whiting-Turner Construction ..................11
+March 2nd, 2017 - Michael Conroy, VP of Operations - Level 10 Construction ...............................11
+March 12th, 2017 - Chase Corcorran, Superintendent - Webcor Builders ...........................................12
+March 28th, 2017 - Brett Curry, VP of Operations - C.W. Driver Construction .................................12
+Second Iteration .......................................................................................................................... 12
+Recommendation .................................................................................................................................12
+Final Scenario, Critiques, and Product ....................................................................................... 13
+Reasons to Implement ..........................................................................................................................13
+Construction Agility’s Value ...............................................................................................................13
+
+Appendix ............................................................................................................................ 14
+Table 1 ........................................................................................................................................ 14
+Table 2 ........................................................................................................................................ 14
+Construction Agility, An Integrated Management System
+
+2
+
+Table 3 ........................................................................................................................................ 15
+Table 4 ........................................................................................................................................ 15
+Image 1 ....................................................................................................................................... 16
+Image 2 ....................................................................................................................................... 16
+
+Works Cited ....................................................................................................................... 17
+
+Construction Agility, An Integrated Management System
+
+3
+
+Background and Introduction
+Executive Summary
+Construction Agility is a management system to be utilized by project managers to create a
+visual representation of work in progress on the jobsite. This visual component of Construction
+Agility increases awareness of job site activities among the general contractor, subcontractors,
+and visitors, thus increasing safety. The system is a Kanban, otherwise known as a batch system,
+that displays critical activities with physical moveable cards that display the task, the duration,
+and the proceeding party. There is a focus on handoffs which requires a willingness to open
+communication. The visual appeal and simplicity of the batch system for all to view promotes
+accountability among participating parties. This also doubles as a check and balance for
+completed tasks, increasing quality. The backbone of this system is not alone the visuals, but the
+collaborative and communicative team culture that is fostered around it. This team environment
+and learning culture is a facilitated through periodic reflection and input from all participants.
+With the proper application, Construction Agility should decrease waste and increase
+productivity, safety, turnover rates, and communication.
+
+Introduction to Agile Management and Lean
+“Agile management, agile process management, or simply agile, refers to an iterative,
+incremental method of managing the design and build activities of engineering, information
+technology and other business areas that aim to provide new product or service development in a
+highly flexible and interactive manner.” If you have noticed, construction is not included in the
+definition’s description. “Lean manufacturing or lean production, often simply "lean", is a
+systematic method for waste minimization ("Muda") within a manufacturing system without
+sacrificing productivity. Lean also takes into account waste created through overburden ("Muri")
+and waste created through unevenness in workloads ("Mura").”
+
+Breakdown of Construction Agility
+Agile uses a Kanban system for visual representation. At the beginning of the project the team
+goes over deliverables and categorizes them by which team member is responsible, the task
+duration, and the task prioritization. The Kanban system is broken up into six batches or
+columns: Backlog, Responsible Party, Weekly To-Do, In-Progress, Review, Complete. Each
+team member has a backlog which is used as storage for future activities. Each week activities
+are moved from the Backlog batch and placed in the To-Do batch, acting as a more pertinent
+backlog. Activities are initiated when the activity card is moved to the In-Progress batch. Once
+an activity is complete it is moved into the Review batch. Each member has the opportunity to
+review if desired, but the final move to the complete batch will be decided by the designated
+champion of that phase. Periodically throughout the process the team stops work and meets
+Construction Agility, An Integrated Management System
+
+4
+
+briefly for progress reports which discuss three main points: “This is what I have done”, “This is
+what is preventing me from completion”, and “This is what I plan to-do next”. Monthly, Weekly,
+or daily as decided by the team; there is reflection on the process to facilitate a learning culture
+and growth of team members for future tasks and projects.
+
+Preliminary Research
+An Opportunity to Eliminate Waste
+Program Management 2.0., Thomsen, C. and Sanders, S.
+The construction industry has approximately 57% waste. In comparison, the manufacturing
+industry has approximately 12% waste. (Thomsen and Sanders, 2011.) There is an opportunity
+here to eliminate waste and make construction companies more lucrative. I looked to develop a
+management tool, Construction Agility, to help eliminate this waste.
+
+Success factors for Agile Management
+Agile project management in the construction industry - An inquiry of the opportunities in
+construction projects, Mattias Yllen
+The first point I want to discuss from Mattias Yllen’s thesis is the communication aspect of
+Agile. In Agile, communication is not just delivered but also received. Agile limits the amount of
+information a person, or receiver, needs to pay close attention to. This requires close attention of
+the receiver when they are receiving certain information. Due to this, the information being
+received needs to be explicit and to the point. The information is not holistic of the project, but
+like previously stated, limited. If desired, the receivers can pay attention to all information being
+delivered to the team, though it is not necessarily expected of them. In order for this
+communication to be effective, dialog needs to work on both end. Employees need to be
+involved in decisions, able to give input, and empowered.
+Transitioning into the next point, good communication comes from planning. “To miss manage
+the meetings is to mismanage the business.” (Yllen, 2012, p. 15) Agile needs to build into the
+company’s strategy. Meetings are built into Agile. These meetings need to show measurable
+results with a clear purpose and goal of each. This again goes back to communication where the
+meetings need to engage and maintain focus of each participant. Mattias recommends meetings
+need to be held standing not sitting. He also recommends that meetings be held before lunch or
+end of the day coming from the notion that hunger drives efficiency in terms of meeting time and
+structure.
+
+Construction Agility, An Integrated Management System
+
+5
+
+A problem Mattias found was that the aim for both Lean and Agile is smaller deliveries that are
+developed throughout the project, not the beginning. This can be a contractual issue and can be
+deferred to whomever the project’s client is. For agile to be successful, the client must be trusting
+of the contractor and open to the non-pre-defined incremental deliveries. Many clients like to
+know what their money is going towards, and they do in a holistic sense, but not in a parceled
+step by step procedure with Agile.
+Coming off this aspect of a divided process into smaller parts, there is opportunity for increased
+involvement for the client. The client has an opportunity to review each presentation which
+allows for opportunity to discuss and decide future course of action. This increased client
+involvement does rely on the occurrence of these meeting though, which should be held at a
+maximum of a month's interval.
+When practicing Agile, the project team needs to determine which tasks are most important and
+least important and organize accordingly. It is good to involve the client in these meetings
+because the client can determine and work with the team on determining what is most important.
+The client can now assist in the direction of the project and the qualities they see most important.
+There is a self-governance aspect of Agile meaning that even though the captain of the team has
+the overall responsibility, every single position in the team has his or her own specific
+responsibilities and authorities. Everybody on the project team still has the same goal to
+complete the project on schedule, within budget, and with the highest quality, though collectively
+divided. There is a collective responsibility among that team that even though each member has
+specific responsibilities, everyone is responsible for assisting each other.
+Agile is unique in that it has a Scrum master. The scrum master does not decide what the team
+does, but instead supports the team and helps keep the team working together and efficiently. In
+a sense, the Scrum master acts as a guide for the team to help in decision making. On the
+contrary, the Scrum master does decide the duration of review huddles, establishes an agenda,
+and determines amount of resources.
+Mattias discusses a Kanban project board. The Kanban board is elaborate and has a breakdown
+such as analysis, design, and development. The purpose of the Kanban board is to get activities
+completed faster by making it as clear as possible as to what step each participant is in regarding
+the current task.
+
+Construction Agility, An Integrated Management System
+
+6
+
+Case Study: Agile in Construction
+Centrus Energy Corp. Applying certain Agile Manifesto principles to Construction, Glenn
+Straçusser
+Agile promotes customer satisfaction through early and continuous involvement. To allow this to
+work for construction, there needs to be a focus on delivering functional systems to test and
+operation. Turnovers need to be as soon as practical, avoiding a single massive project turnover.
+A problem with Agile is that it embraces change. Construction does not due to the exponential
+cost increase as the project moves forward. An outstanding quality of Agile is it embraces
+cooperation which is the route construction has been moving in the past decade with project
+delivery strategies such as Design Build and Integrated Project Delivery. This cooperation is
+across all levels of the organization and is focused on face to face interaction. This can transition
+to construction by “minimizing organization silos and using a team approach rather than
+adversarial approach. To maintain this face to face interaction, it is recommended to have
+integrated meetings to share information rather than electronic sharing. Particular to this case
+study, there was an off-site designer. To solve this problem and maintain collaboration and
+“team”, a designer’s assistant was stationed on site.” (Straçusser, 2015). Support and motivation
+needs to be implemented in these meetings to foster a team environment and maintain moral. A
+way the team in this case study maintained this moral was through project goals and milestone
+progress. One of the goals was to keep productive hours productive and focus on these hours. An
+integrated method of agile, which promotes a learning environment, is to at regular intervals
+reflect and adjust. If there are complications, use root cause analysis and discussion of the causes
+of various complications and problems. During these meetings open discussion of ideas for
+improvement during meetings discussing certain topics such as lessons learned, how to improve,
+eliminate barriers, and how to make safer. A problem the team found when implementing agile
+on this project was the formality of these meetings. The beginning formal meetings felt forced
+with non-value added. Adjustments to the later project meetings were on an informal basis.
+Methods of implementation of Agile on the project began with training and development on
+Agile, producing a benefit to the company and employee. At the end of the project the overall
+cost was significantly lower than compared to the traditional method.
+
+Selected Lean management principles to be applied
+The Toyota way: 14 management principles from the world’s greatest manufacturer, J. K. Liker
+When looking into “The Toyota Way”, I decided to select specific management principles
+described. “Principle 1, create continuous process flow to bring problems to the surface. This
+reduced the amount of time the project is sitting idle to zero, links processes and people together,
+and make flow evident a part of the culture. Principle 3, use pull systems to avoid
+overproduction. This allows for a responsive day-to-day shifts in demands. Principle 4, level out
+Construction Agility, An Integrated Management System
+
+7
+
+the workload. Managers need to work to level out workload which aims to eliminate overburden
+to people. It is alternative to a start and stop approach. Principle 5, build a culture of stopping to
+fix problems to get quality right the first time. To assist this, it is recommended to develop a
+visual system to alert the team of problems. Utilize support systems to quickly solve problems.
+Development of a culture around stopping or slowing down to get quality right the first time.
+Principle 6, standardized tasks are the foundation for improvement and employee empowerment.
+This is the notion to use stable and repeatable methods everywhere to maintain the predictability,
+regular timing, and regular output of your processes. Allow for individual expression to improve
+upon standards. Principle 7, use visual controls so no problems are hidden. Simple visual
+indicators are used to help people determine immediately whether they are on track or not. Avoid
+using computer screens as it moves focus away from the workplace. Design simple visual
+systems at the place the work is done to support flow and pull. Principle 14, becoming a learning
+organization through relentless reflection and continuous improvement. Use reflection at key
+milestones and after you finish a project openly identify all the shortcoming of the project and
+develop countermeasures.” (Liker, 2011)
+
+Case Study: Reasons for Lean application
+The Toyota way: 14 management principles from the world’s greatest manufacturer, J. K. Liker
+In this Case Example: Job Summaries in a Navy Repair Facility, the 14 management principles
+were applied to a Navy Repair Facility (Appendix Table 1). There was a heavy problem
+diagnosing and problem solving each repair situation because they were unique. An
+improvement was to develop a cross functional work cell and eliminating handoffs.
+Improvements in categories such as required non value added days, pure non value added wait
+time, total lead time, travel distance of paperwork, number of process steps, and handoffs
+increased from 55%-95% (Appendix 1.1). This case study shows the validity of the application
+of the 14 management principles. (Liker, 2011)
+
+The Importance of Culture
+This American Life Podcast Nummi 2015, Ira Glass
+A final aspect of the management system which is the glue that bonds is in the culture around the
+board. I looked to a podcast based on a Joint Venture that involves Toyota and GM and a
+manufacturing plant. “At manufacturing plant named NUMMI, Toyota showed GM all of its
+secrets. At the time, the NUMMI plant was failing and risked closure. Toyota showed GM
+exactly how it made some of the best-built, most reliable in cars the world back then. The
+NUMMI plant became a success. The year following GM attempted to replicate the success of
+NUMMI at a second plant, Van Nuys. It however was a failure.” (Langfitt, 2010) GM attempted
+to replicate what they saw at NUMMI. The problem was, the “Toyota Way” could not just be
+Construction Agility, An Integrated Management System
+
+8
+
+replicated visually, it needed to be replicated by the culture as well. There was a lack of
+communication between the plant managers and the employees at Van Nuys. This
+communicative and collaborative culture existed at NUMMI, but not Van Nuys. The Van Nuys
+plant failure is a result from only focusing on the replication of physical attributes of NUMMI,
+rather than the interconnected system of communication, collaboration, and employee value.
+This case study of NUMMI’s success and Van Nuy’s failure shows the underlying importance of
+the culture within the work environment and around proper management.
+
+Iterative Process of Design and Development
+Initial Trial
+The initial trial for Construction Agility was performed during the Associated Schools of
+Construction, Integrated Project Delivery Competition 2017. This seventeen hour competition
+was with a project team of six members competing against twelve schools. The project team
+worked in a fast tracked competition in a small environment. The first iteration of the
+Construction Agility board can be seen in Appendix Table 2.
+
+Integration of Industrial Engineering
+Agile mirrors the lean principle of Plan-Do-Check-Adjust. The “check-adjust” portion is applied
+to the “review” portion of Agile. If the task need be adjusted or corrected after it has been
+reviewed by the project coordinators, a root cause analysis is performed. A problem solving A3
+can be used to document the process to provide context to the review such as a background,
+current condition, goal, root cause analysis, countermeasures, confirmation, and future. Within
+the specific root cause analysis portion, a fish bone analysis or 5 whys analysis is used for
+brevity.
+
+Team Reflection and Interviews
+March 15th, 2017 - Camille La Cour
+“I liked the board system because it helped me keep track of my own tasks,
+dedicate focused attention to whatever task I was currently on, and inform
+my teammates of my workload and focus. It was like constant nonverbal
+communication. I think the timed huddles could've benefited from having a little
+pre-planned agenda in tangent with our milestones. That way, each person
+could quickly prepare what they need to say and then relate their current
+tasks and status to the team's overall milestones.”
+
+Construction Agility, An Integrated Management System
+
+9
+
+March 15th, 2017 - Pierre Abdel-Malek
+“I honestly think the management system was really good. It just wasn't executed properly.
+Mainly the teams fault not yours. The team didn't believe it was necessary for the competition
+and did their own thing. Adding incentives maybe or just making sure that people will use it will
+allow it to be effective. If it's just one person trying to do it, it won't be effective. Team
+involvement is key to your management strategy.”
+March 15th, 2017 - Carter Sandzimier
+“I thought the management system did a great job of tracking workflow for each member of the
+team. I think knowing where you can help others on the team (or they can help you) gives more
+overall transparency to the management of a project. I remember we discussed pull-planning
+before setting up the management system (the white board). I think those two strategies work
+really well together in terms of knowing what needs to be compete for the next guy to do his
+work. I think the management system requires a lot of consistent organization on all fronts
+Everyone would need to constantly update their workflow, break down larger assignments into
+smaller tasks, and communicate their workflow to others. The Reno competition was a small
+scale project. On a larger project, I could see the system running into some organizational issues
+if not managed or used correctly. I think it would be a good idea to address how those changes in
+task assignments/scope would affect its organization. Address how/who would manage the
+overall project workflow, and how this smaller scale management system would be beneficial in
+doing so. Maybe address how implementing the change to this management system would look
+(on-boarding, training, tech utilization, etc.)”
+
+Refined Reflection
+Exceptional aspects of Construction Agility from the competition was the ease to keep track of
+time and tasks, visual aspect of team member’s deliverables, the increased collaboration and help
+efforts from other team members, and limited multiple in-progress tasks resulting in efficient
+completions. Needs for improvement were a pre-planned agenda in tangent with deliverables for
+more concise meetings. Team involvement and culture around the board lacked as well. This can
+be averted by a stronger introduction, hands-on training, on-boarding process of the board, use of
+incentives, and/or contractual agreements. It was difficult to estimate certain durations which can
+be fixed by a further breakdown of tasks. It is also notable that collectively as a team we all
+agreed that this management system may not be valuable for a larger, more extensive job.
+
+Dealing with a Traditional Industry
+Socialization
+The construction industry is very interesting in terms of culture. The industry is very traditional,
+partially egotistical, and resistant to change. Dealing with subcontractors and managing them can
+Construction Agility, An Integrated Management System
+
+10
+
+be very difficult at times for the general contractor. One way to ease the transition to
+Construction Agility and the change the subcontractors will be experience is to use terminology
+that is common in the industry. The original Agile Management system uses terminology derived
+from the software industry where it was developed. When dealing with general contractors and
+subcontractors in construction, I looked to ease them into the Construction Agility system with
+terminology they have heard previously. These changes are “scrum” to “daily huddle”, “Kanban”
+to “Batch Board”, and “Stories” to “Backlog”. An on-boarding process should be used as well
+for familiarity reasons of the system. Not only showing, but practicing the system is needed from
+the general contractors to bring the subcontractors on board with this system. In this aspect, the
+general contractors must practice what they preach.
+
+Industry Interviews and Refinement
+Throughout the development of the system, I interviewed several general contractors. Below is a
+summary of those interviews.
+March 2, 2017 - Tavio Darchangelo, Regional Manager - Whiting-Turner Construction
+We discussed the potential problem and need to get stakeholders onboard with the system.
+Putting the system in perspective of size of the applicable project, it may be more valuable for
+certain smaller market sectors. An attribute that was praised was that the system is a simple and
+straightforward overview tool for the project manager or superintendent concerning big issues.
+The project managers are not always at every meeting and the system maintains a great way to
+keep track and keep accountability. This attribute of accountability can not only be utilized
+internally for the general contractor, but also in the subcontractor meetings to maintain
+subcontractor accountability. The visual representation helps for tracking subcontractors and
+their completed tasks, giving an insight of whether they are on schedule or not. At this point
+there may be a need for incentives or a scorecard for subcontractors to stay on track. The largest
+exposed flaw from this interview was that the system is not the best in regards to formal
+documentation and should stay on the lines of an informal tracking tool. Further adjustments
+from the initial iteration of Construction Agility is the application to subcontractors, additional
+subcategories under the responsible engineer or foreman while maintaining simplicity.
+March 2nd, 2017 - Michael Conroy, VP of Operations - Level 10 Construction
+Michael recommended to look to Weekly Work Plans and Pull Planning for more potential ideas
+in developing the system. There was an emphasis to focus on handoffs and the flow of the
+system. For subcontractor tracking with a pull planning visual system using different colored
+sticky notes/cards per trade with additional constraints and handoffs listed on each. A concern
+was how to get subcontractors on board. This can be done contractually. The general contractor
+needs to “practice what they preach” to promote value of the process and a better return on
+investment. This can create a cross accountability with subcontractors in the sense that “no one
+Construction Agility, An Integrated Management System
+
+11
+
+wants to be that guy” that is delaying the schedule. Further adjustments from this system is to use
+different colored sticky notes, add constraints, and add handoff dates.
+March 12th, 2017 - Chase Corcorran, Superintendent - Webcor Builders
+When getting input from a superintendent, there was a big focus on management of the
+subcontractors and issue resolution. What is needed is to determine the process for issue
+resolution. This may result in contractual agreements and setting issue resolution deadlines to
+stay on schedule. There was also a desire to incorporate interdependence of subcontractors
+bringing back the focus to handoffs.
+March 28th, 2017 - Brett Curry, VP of Operations - C.W. Driver Construction
+Brett insisted in potentially mimicking a hotlist concept which focuses on more important tasks
+such as critical activities. There needs to be an agreement among participating parties to dates to
+maintain accountability through contractual agreements. In regards to management of the
+system, consider having a deeper breakdown structure, consequences for missing deliverables,
+and informal issue resolution to continually foster a collaborative environment.
+
+Second Iteration
+The second iteration of Construction Agility is based off the previous board and the adjustments
+made following the competition and interviews. The board now instead of a “To-Do” batch, is
+now named “Weekly To-Do”. This is to not only assist in the organization aspect but also to
+maintain the frequency of meeting weekly and updating the board. What would normally be
+filled in the “To-Do” batch is now moved into a newly introduced “Backlog” batch. This allows
+for projects of work weeks ahead. Each responsible participant now also has color coded rows on
+the Construction Agility board. Coordinated with the color of the responsible participant are
+color coded cards. These cards list the activity, the duration, and the next in line party. This helps
+with visual aspects and handoffs. (Appendix Table 3)
+
+Recommendation
+I recommend that the on-boarding process for introducing Construction Agility be presented in
+tangent with the safety orientation. A safety orientation is a serious introduction to new
+contractors on the jobsite and by doing both together shows the importance of Construction
+Agility. There is a need to facilitate a team and learning culture around the board. This is done by
+periodic reflection and input from participants. To maintain quality, a “champion”, whom of
+which would be a project manager or superintendent, is the participant that is designated to move
+cards from the “review” batch to the” complete” batch. Weekly huddles and daily huddles need
+to be utilized to maximize communication of handoffs. These weekly huddles need to occur at
+the start of each week. During these focused meetings there are three questions that need to be
+asked, “What I have done”, “What is preventing me from completion” and “What I plan to-do
+Construction Agility, An Integrated Management System
+
+12
+
+next”. During these weekly and daily huddles, the champion needs to have a pre-planned agenda
+that is used in tangent with deliverable to keep the meeting focused and on track. When issues
+arise, preferably it would be informally resolved though that will be determined contractually.
+Finally, a use of incentives or contractual agreement might be used to ensure participation.
+
+Final Scenario, Critiques, and Product
+I took this established system to a construction management professor at Cal Poly, Jason Hailer.
+With him I ran through a scenario and critiques. His concern consisted of the subcontractors
+untruthfully updating the board in order to stay out of negative light if they are not making
+schedule. A solution to this is either contractual agreements or simply use subcontractors that are
+willing to participate in such a system. A second recommendation to refine Construction Agility
+was to use two boards instead of one. One of the boards will consist of the general contractor’s
+project team and remain in the job site trailer. The second will consist of the subcontractors and
+remain on the outside of the jobsite trailer. This will enhance accountability and safety for
+visitors as it is a type of signage promoting awareness of job site activities. A final
+recommendation to help with task identification is to display critical activities. This will be more
+focused for subcontractors rather than the general contractor. The final iteration and example on
+a jobsite can be seen in Appendix Table 4, Image 1, and Image 2.
+
+Reasons to Implement
+To this entirety, this is Construction Agility. With the previous recommendation in combination
+with the final scenario and critiques completes Construction Agility. This tool uses simple visual
+concepts that are measurable. Construction Agility promotes accountability, collaboration,
+safety, awareness, learning, and quality.
+
+Construction Agility’s Value
+Lastly I want to state that this tool is not intended for all job sites and project. It is more for fast
+tracked projects, high collaboration contracts, critical and highly involved clients, and
+smaller/midsized design build or integrated project delivery. A unique thing about Construction
+Agility though it it’s power to differentiate. It can be used to create a new company dynamic and
+identity. For this reason, it can be of great value to start-ups as well as companies dealing with a
+change of leadership.
+
+Construction Agility, An Integrated Management System
+
+13
+
+Appendix
+Table 1
+Before
+
+After
+
+Improvement
+
+Value-added time
+(days)
+
+15
+
+15
+
+0%
+
+Required non-valueadded time (days)
+
+20
+
+8
+
+60%
+
+Pure non-value-added 62
+wait time (days)
+
+3
+
+95%
+
+Total lead time (days) 67
+
+26
+
+73%
+
+Travel distance of
+paperwork (feet)
+
+30744
+
+2500-14000
+
+55-92%
+
+Number of process
+steps
+
+70
+
+23
+
+67%
+
+Handoffs
+
+58
+
+10
+
+80%
+
+Table 2
+
+Construction Agility, An Integrated Management System
+
+14
+
+Table 3
+
+Table 4
+
+Construction Agility, An Integrated Management System
+
+15
+
+Image 1
+
+Image 2
+
+Construction Agility, An Integrated Management System
+
+16
+
+Works Cited
+Liker, J. K. (2004). The Toyota way: 14 management principles from the world’s greatest
+manufacturer. New York: McGraw-Hill.
+Straçusser, G. (2015). Agile project management concepts applied to construction and other nonIT fields. Paper presented at PMI® Global Congress 2015—North America, Orlando, FL.
+Newtown Square, PA: Project Management Institute.
+Glass, Ira. (2015). This American Life Podcast Episode 561: NUMMI.
+https://www.thisamericanlife.org/radio-archives/episode/561/nummi-2015
+Thomsen, C. and Sanders, S. (2011). Program Management 2.0. McLean, Va.: Construction
+Manager’s Association of America Foundation.
+Yllen, Mattias. (2012) Agile project management in the construction industry - An inquiry of the
+opportunities in construction projects. KYH Vetenskap Och Konst.
+https://www.kth.se/polopoly_fs/1.339912!/Menu/general/columncontent/attachment/Mattias_no148.pdf
+Agile Management. (201 7). In Wikipedia. Retrieved June 1 st, 2017 from
+https://en.wikipedia.org/wiki/Agile_management.
+Lean Manufacturing. (2017). In Wikipedia. Retrieved June 1 st, 2017 from
+https://en.wikipedia.org/wiki/Lean_manufacturing.
+
+Construction Agility, An Integrated Management System
+
+17
+
+

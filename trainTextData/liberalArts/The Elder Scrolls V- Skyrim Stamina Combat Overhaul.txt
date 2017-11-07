@@ -1,0 +1,493 @@
+The Elder Scrolls V: Skyrim Stamina Combat Overhaul
+
+A Senior Project Presented to
+the Faculty of the Liberal Arts and Engineering Studies Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree
+Bachelor of Arts
+
+by Richard Rattner
+June, 2016
+
+©2016 Richard Rattner
+
+Table of Contents
+
+Introduction and Deliverable.................................................................................................................... 1
+
+Literature and Technology Review and Technology Overview................................................................ 2
+
+Design and Implementation...................................................................................................................... 4
+
+Analysis and Verification of Success........................................................................................................ 5
+
+Future Work............................................................................................................................................... 7
+
+Societal Impacts........................................................................................................................................ 8
+
+Conclusion................................................................................................................................................ 8
+
+References................................................................................................................................................. 9
+
+ii
+
+Introduction and Deliverable
+The Elder Scrolls V: Skyrim is a role playing game released by Bethesda Softworks in 2011 that
+has received numerous accolades, awards, and an aggregate review score of 94/100i. It's known for its
+massive real-time world with numerous characters to engage with, locales to explore, and stories to
+uncover and affect, but has also been criticized by professional game reviewers and gamers alike for its
+awkwardii and unengagingiii combat. The aim of this project was to modify Skyrim's combat system to
+be an enjoyable and engaging part of the game, as opposed to an element that drags it down as a whole.
+Compared to other role playing games, Skyrim's combat system falls flat, lacking the depth of semi
+turn-based games like Bioware's Dragon Age: Origins or the precision of From Software's Dark Souls.
+This is in large part because the structure of Bethesda's Elder Scrolls and Fallout role playing games are
+very different from these examples, so much so that they're considered to be in their own subgenre of
+role playing game. This difference in structure means that Bethesda cannot easily pull elements from
+games like Dark Souls or Dragon Age: Origins. It doesn't have a party system where you issue series
+of commands to manage multiple characters, like in Dragon Age: Origins, and the game wasn't
+designed with constant player deaths in mind like Dark Souls was, so a combat system like Dark
+Souls's that forces the player to learn the details of how their weapon works or die trying would be
+much more punishing, as players could lose significant amounts of progress for a small lapse in
+concentration. However, looking at Dragon Age: Origins and Dark Souls, it became clear that one of
+the biggest common threads they had that Skyrim lacked were consequences for the player's resource
+management. Both Dragon Age: Origins and Dark Souls have negative consequences for players
+wasting their resources, usually in the form of needing to reload the game or restart an area, and
+positive ones for optimizing them, which is a design concept that could be implemented into Skyrim.
+My solution was to add consequences that were slightly less severe than Dragon Age: Origins's or Dark
+Souls's, which I did by reworking how Skyrim's "stamina" statistic, which measures the character's
+1
+
+physical fatigue, is utilized in combat. Previously stamina was only consumed when characters
+performed a special "power attack," which is an attack with a wind-up that deals more damage, or
+when they "sprinted," after which stamina would slowly regenerate. In my project, stamina was
+changed so that every swing of a weapon consumes stamina, and so that when a character drops to zero
+or less stamina as a result of a weapon swing, they have a high chance of dropping their weapon on the
+floor, significantly setting them back in combat. Additionally, trying to sprint and running out of
+stamina causes that character to trip. These new mechanics have been applied to the player and to all
+the characters the player encounters, forcing players to carefully manage their attacks and movement to
+avoid falling into a disadvantage in combat, but also giving them an opportunity to manipulate the
+mechanics to give themselves the edge. Players can't treat combat like a mindless exercise in clicking
+because doing so will leave them unarmed and scrambling to stabilize. Needing to gauge how much
+stamina they have forces the player to engage with the combat, and makes it feel less like a thoughtless
+chore and more like an activity that requires strategic thought.
+
+Literature and Technology Review and Technology Overview
+Before starting this project, I did research to see if there were any other modifications, also
+referred to as "mods," that were created with similar goals in mind. From research I found that there
+were two primary sources for mods, the Steam Workshop, which is part of the same software platform
+Skyrim is on, so all Skyrim players have easy access to it, and the Skyrim Nexus Mods site, which has
+retained popularity in part due to its history hosting mods for other Bethesda role playing games,
+including The Elder Scrolls III: Morrowind, The Elder Scrolls IV: Oblivion, Fallout 3, and Fallout:
+New Vegas. This information was gathered by reviewing forums used for discussion of Skyrim, some
+of the largest being the Skyrim Subredditiv, the Skyrim GameFAQs pagev, The Nexus Forumsvi, and
+TES Alliancevii. I found several mods that tried to address the same problem, but none that did so in
+2
+
+the same way that I did, and all to seeming various degrees of success. Some of the most prominent
+mods that attempted to do so were DUEL- Combat Realismviii, which adjusts the artificial intelligence
+of the game's characters, makes timing blocks and attacks more important, makes more player actions
+consume stamina, and substantially increases damage taken, Ultimate Combatix, which gives enemies
+more combat abilities, emphasizes blocks and timing, implements changes to the artificial intelligence
+of the game's characters, and makes weapon swings cost stamina, and Deadly Combatx, which largely
+focuses on adjustable values to modify how much damage players and enemies take by modifying the
+effectiveness of armor and weapons. While these are quite popular mods, none of them are universally
+accepted by the community as an improvement or a fix to Skyrim's combat, and none of them utilize
+the consequences that I came up with. Because there was nothing that seemed to implement the ideas I
+had, I did further research on the best tools for the modification of Skyrim. Using the same sites I did
+to find the most popular sources for mods, I did research on tools that could be used to mod Skyrim.
+Through my research, the primary tool that seemed to be in use was the Creation Kit, a modified
+version of the software used to make Skyrim that was released by the game's developers to the
+community for free use. Further research showed that the Creation Kit used a proprietary scripting
+language called papyrus. I also found another resource, the Skyrim Script Extender, which acted as a
+free function library for papyrus. Throughout the course of my project, I used the same sources'
+modding subforums to find answers to questions I had about how the Creation Kit, papyrus, and the
+Skyrim Script Extender worked, and through them I also found the Creation Kit Wikixi, a wiki site
+dedicated to the tools used in the Creation Kit, which was a significant reference for methods in
+papyrus, and which also provided substantial tutorials that helped me create the skeleton for my own
+mod.
+
+3
+
+Design and Implementation
+From my research, I knew that the Creation Kit was the most versatile and well documented
+way to add to or modify Skyrim, so my first thought was to look into using the Creation Kit to directly
+add code that would run alongside the rest of the game, forcing all characters to operate by my new
+rules, but after some investigation, I found out that the Creation Kit doesn’t support the direct addition
+of code to the game. I then did additional investigation to see if there was a way to apply new code to
+all characters in the game, as this would still force characters to act by my new rules. While there was
+no way to apply code to all characters other than manually applying it to them one at a time, a few of
+the sources I used recommended a workaround that would apply the code to all relevant characters
+dynamically. This workaround utilized the Creation Kit’s magic system. Magic is organized by the
+“Magic Effect”, which is what the magic does to whatever target it is applied to, and the “Spell,” which
+acts as a delivery mechanism for the magic effect. My mod uses several spells and magic effects to
+make its changes, the first spell being “cloak”, which targets all characters within a specified range of
+the character who casts the spell. I made a magic effect to be applied by the cloak Spell that forces all
+characters under its effects to cast a second spell. This second spell targets the caster, which in this
+case is every character who is hit by the first spell. The magic effect for the second spell forces
+characters to continually cast a third spell on themselves. The magic effect corresponding to the third
+spell applies the codexii that I’ve written to all characters targeted by the spell. The player character is
+forced to always cast the first spell (with no sound or animations), causing all characters within range
+to cast the second spell on themselves, which then forces them to cast the third spell on themselves.
+effectively applying the new rules I’ve made to everyone within combat range of the player character.
+The player character is also forced to cast the second spell, so that the player is also forced to abide by
+the new rules. These spells were heavily based off the guide Dynamically Attaching Scriptsxiii,
+specifically the subsection Applying Scripts to Actors. The new rules force characters to lose stamina
+4
+
+every time they swing their weapon, with the amount of stamina lost tied to the weight of their weapon,
+and whenever a character’s stamina drops to zero, a random number between one and ten is generated,
+and if the character’s skill in using that weapon divided by fifteen plus one is less than the randomly
+generated number, they drop the weapon they swung in front of them. If one plus their skill over
+fifteen is greater than or equal to the randomly generated number, the character holds on to the weapon
+they swung. The script detects when a weapon is swung by constantly checking to see when the
+character performs a weapon swing animation, and when they do it runs a check to see if this caused
+the character’s stamina to drop to zero. The code also implements a check to see what kind of weapon
+the character is using, so that it knows which skill to use. The Skyrim Script Extender was introduced
+at this point, as the basic papyrus library of functions doesn't offer a straightforward way to check what
+weapon the player is using, but the Skyrim Script Extender's expanded function library did. My mod
+makes its changes to sprinting by constantly checking to see if the character is sprinting, and if they are
+if their stamina is at zero. If it is, then the character is knocked down and set to "Ragdoll." Ragdolling
+is when a character falls to the ground like a normal object would, so when they trip they fall and then
+have to wait a few seconds to get up. This mod also makes sprinting cost significantly more stamina to
+reflect the advantage movement gives in combat, and makes stamina regenerate significantly faster, as
+leaving the stamina regeneration rate at the game’s base level forced players to hang back for
+significant periods of time waiting for their stamina to regenerate, which is not a very entertaining
+experience. This allowed me to implement the changes I wanted to.
+
+Analysis and Verification of Success
+Early testing of the mod was conducted on my personal laptop and was overseen by me. A total
+of five people participated in testing, which consisted of playing a level one character set immediately
+before the Bleak Falls Barrow dungeon, being asked to progress as far as they could in the dungeon in
+5
+
+fifteen minutes, and taking a short anonymous questionnairexiv after they had finished playing. I chose
+to use a level one character so that players had a blank slate to work with, and didn’t feel forced into a
+playstyle that took advantage of a leveled up character. Bleak Falls Barrow was chosen because it’s an
+early dungeon that most Skyrim players will have already gone through in their own playing
+experience because of its importance in the game's early story, because it is designed to be accessible
+for low level characters, and because it presents a fair amount of enemy variety in the form of bandits,
+undead, spiders, and animals, so players would have to vary their strategy based on which kind of
+enemy they were fighting. The questionnaire indicated that two of the five testers had no prior
+experience playing Skyrim, that one had between 40 and 100 hours of experience, that another had
+between 100 and 200 hours of experience, and that another had over 200 hours of experience. The
+testing session was structured with the expectation that players already had at least some background
+with Skyrim, and as a result the two testers with no prior experience were unable to comment on how
+they felt the mod affected the game, as they had no basis for comparison. Questions were asked on a
+one to ten scale, with ten being yes, one being no, and five being neutral. The three testers with prior
+Skyrim answered the question "Did the mod make combat feel more engaging than the original game's
+combat," with an eight, an eight, and a nine, indicating that the mod was a success in term of getting
+the player more engaged. When asked "Did the mod make combat feel more fun than the original
+game's combat?" testers responded with a five, an eight, and a seven, indicating that testers mostly had
+more fun, and at the very least did not have less fun. There were a few issues encountered in the
+testing session, namely that certain weapons were heavy enough that one swing of them could drop a
+player’s stamina to zero, which indicates that the cost per swing may be too high, as players only had
+access to starting weapons, and while gating access to heavier weapons based on stamina later in the
+game is certainly an interesting idea, players should be able to use the full suite of starting level gear
+from level one, as they are often still feeling out what kind of character they would like to play, and
+6
+
+should be able to use the starting set of weapons to experiment without too dire of consequences.
+Another tester commented that they don’t think they saw an enemy drop a weapon. While bandits have
+been tested and confirmed to drop their weapons when appropriate, additional tests may be conducted
+on the "Draugr" enemies, as they may not be affected by the mod the same way that human characters
+are. The testers had differing opinions on the combat, with some claiming additional difficulty, and
+some claiming that the difficulty was about the same. These tests indicate that the changes made do
+make combat more engaging and overall generally more enjoyable, which was the primary purpose of
+this project. Further testing is still needed, but current results are positive.
+
+Future Work
+Testing also outlined several elements that will be of interest for future work. The most
+important of which is to properly balance the weights of weapons to make sure that the stamina costs
+make sense with the weapon in question, but there are also several UI elements that I intend to
+incorporate. One of these is a notification that a weapon may be dropped from a single attack (or
+power attack) when the player is at full stamina, another is recognizing when a player has "favorited" a
+weapon, so that if dropped, when it is retrieved it goes back into the favorited category instead of
+requiring the player to re-favorite it whenever they drop it. Another future change is to incorporate a
+mechanic that points players to where their dropped weapons are, so they don't have to search all over
+the map to find them after a fight. In the further future, I intend to look into additional changes, like
+items or spells that make it harder to drop weapons or trip when sprinting, and re-balancing of items
+that damage fatigue, which with the changes I've made are much more powerful than they were in the
+base game. I'd also like to create custom animations for weapon drops and sprinting trips, which
+should enhance player immersion and make what's happening more clear for players who are
+unfamiliar with my mod and the changes it makes.
+7
+
+Societal Impacts
+The primary implications my project has are largely related to the subgenre of Bethesda role
+playing games, but the general finding that the lack of consequence is what causes lack of engagement
+could be applied to a much wider spread of games. Additional Bethesda role playing games (whether
+or not they are actually published by Bethesda) can implement the changes I made in any title that
+utilizes the mechanics that my changes rely on, stamina, weapon swings, and sprinting, to create a more
+engaging experience, which should mean that players will feel less like they have to force themselves
+through the combat to enjoy the rest of the experience, and hopefully will view it as another positive
+element the game has to offer. Other games that rely on mechanics players find unsatisfying may also
+benefit from incorporating more consequences into gameplay, making players more willing to play not
+only with those mechanics, but to see the other aspects of the game as well.
+
+Conclusion
+This project was created with the intent of making the melee combat of The Elder Scrolls V:
+Skyrim engaging and enjoyable. I started by looking at other games in different role playing game
+subgenres, and identified that an element they had in common that Skyrim lacked were significant
+consequences for player actions in combat. With some brainstorming, I thought of the idea of
+modifying the way the stamina statistic worked as a way to implement these consequences. I then
+followed up on this by doing research to see where mods for Skyrim could be found, if anyone had
+made any mods to address the same issues I had, and if those mods were succesful. Upon finding that
+no mods were accepted by the majority of the community as a solution to the problem, I looked into the
+tools I would need to make my own mod, and did research into the Creation Kit and Skyrim Script
+Extender. Once I started making the mod, I used various forums and the Creation Kit wiki to figure out
+how to implement the changes I wanted to make. Once I had a working version, I did some
+8
+
+preliminary tests, which came back mostly positive and at worst neutral. From those tests I've been
+able to identify several features I want to implement in the future, as well as find a few bugs I was not
+aware of. The ideas behind this mod could go on to influence other games in the genre to incorporate
+similar design ideologies, and potentially make them more enjoyable games for it. Incorporating
+consequences into Skyrim will make the game a better experience by making the combat more
+engaging and enjoyable, and by extension making the rest of what the game has to offer be more
+accessible.
+
+References
+i
+
+"The Elder Scrolls V: Skyrim." Metacritic. Web. 01 June 2016. <http://www.metacritic.com/game/pc/the-elder-scrolls-vskyrim>.
+ii
+Onyett, Charles. "The Elder Scrolls V: Skyrim Review - IGN - Page 3." IGN. 10 Nov. 2011. Web. 01 June 2016.
+<http://www.ign.com/articles/2011/11/10/the-elder-scrolls-v-skyrim-review?page=3>.
+iii
+Magnus. "How Could Skyrim Get Away with Such Clunky Combat Mechanics?" NeoGAF. 08 June 2013. Web. 01 June
+2016. <http://www.neogaf.com/forum/showthread.php?p=75014727>.
+iv
+https://www.reddit.com/r/skyrim/
+v
+http://www.gamefaqs.com/pc/615805-the-elder-scrolls-v-skyrim/faqs
+vi
+https://forums.nexusmods.com/
+vii
+http://www.tesalliance.org/
+viii
+LogRaam. "Duel - Combat Realism at Skyrim Nexus - Mods and Community." Skyrim Nexus - Mods and Community. 20
+Nov. 2015. Web. Mar. 2016. <http://www.nexusmods.com/skyrim/mods/2700/>.
+ix
+Tktk1. "Ultimate Combat at Skyrim Nexus - Mods and Community." Skyrim Nexus - Mods and Community. 14 Jan. 2016.
+Web. Mar. 2016. <http://www.nexusmods.com/skyrim/mods/36006/>.
+x
+Borgut1337. "Deadly Combat at Skyrim Nexus - Mods and Community." Skyrim Nexus - Mods and Community. 2 Aug.
+2013. Web. Mar. 2016. <http://www.nexusmods.com/skyrim/mods/5485/>.
+xi
+"Main Page." Creation Kit. 12 Nov. 2012. Web. Mar. 2016. <http://www.creationkit.com/index.php?title=Main_Page>.
+xii
+
+Scriptname WeaponAndSprintRebalanceScript extends activemagiceffect
+Actor MySelf
+Float Stamina
+Event OnEffectStart(Actor akTarget, Actor akCaster)
+MySelf = akTarget
+Stamina = MySelf.GetActorValue("Stamina")
+RegisterForSingleUpdate(0.001)
+RegisterForAnimationEvent(MySelf, "weaponSwing")
+RegisterForAnimationEvent(MySelf, "weaponLeftSwing")
+EndEvent
+Event OnUpdate()
+Stamina = MySelf.GetActorValue("Stamina")
+if( MySelf.isSprinting())
+MySelf.DamageActorValue("Stamina", (MySelf.getActorValue("InventoryWeight") as Float) / 100)
+if(Stamina <= 0)
+MySelf.PushActorAway(MySelf, 0.0)
+MySelf.ApplyHavokImpulse(0, 0, 0, 0)
+
+9
+
+endif
+else
+MySelf.RestoreActorValue("Stamina", 0.85)
+endif
+RegisterForSingleUpdate(0.001)
+RegisterForAnimationEvent(MySelf, "weaponSwing")
+RegisterForAnimationEvent(MySelf, "weaponLeftSwing")
+EndEvent
+Event OnEffectFinish(Actor akTarget, Actor akCaster)
+UnregisterForUpdate()
+EndEvent
+Event OnAnimationEvent(ObjectReference akAggressor, String detectedAnimation)
+if(detectedAnimation== "weaponLeftSwing")
+Stamina = MySelf.GetActorValue("Stamina")
+Weapon MyRightWeapon = MySelf.GetEquippedWeapon(false)
+Weapon MyLeftWeapon = MySelf.GetEquippedWeapon(true)
+Float WeaponWeight = MyLeftWeapon.GetWeight() as Float
+MySelf.DamageActorValue("Stamina", 10.0 + WeaponWeight as Int)
+Stamina = MySelf.GetActorValue("Stamina")
+if (Stamina <= 0)
+Int random = Utility.RandomInt( 1, 10)
+Int chance = 1 + ((MySelf.GetActorValue("OneHanded") / 15) as Int)
+if (chance < random)
+MySelf.UnequipItemEx(MyLeftWeapon, 2, false)
+MySelf.DropObject(MyLeftWeapon, 1)
+endif
+endif
+elseif(detectedAnimation== "weaponSwing")
+Stamina = MySelf.GetActorValue("Stamina")
+Weapon MyRightWeapon = MySelf.GetEquippedWeapon(false)
+Weapon MyLeftWeapon = MySelf.GetEquippedWeapon(true)
+Float WeaponWeight = MyRightWeapon.GetWeight() as Float
+String MyWeaponType = "OneHanded"
+if(MyRightWeapon.GetWeaponType() > 4)
+MyWeaponType = "TwoHanded"
+endif
+MySelf.DamageActorValue("Stamina", 10.0 + WeaponWeight as Int)
+Stamina = MySelf.GetActorValue("Stamina")
+if (Stamina <= 0)
+Int random = Utility.RandomInt( 1, 10)
+Int chance = 1 + ((MySelf.GetActorValue(MyWeaponType) / 15) as Int)
+if (chance < random)
+MySelf.UnequipItemEx(MyRightWeapon, 1, false)
+MySelf.DropObject(MyRightWeapon , 1)
+endif
+endif
+endif
+EndEvent
+xiii
+Chesko, Egocarb, Sagitarius22, Brisid, Jonwd7, and Fg109. "Dynamically Attaching Scripts." Creation Kit. 20 Feb.
+2015. Web. Mar. 2016. <http://www.creationkit.com/index.php?title=Dynamically_Attaching_Scripts>.
+xiv
+
+LAES 462 Senior Project: The Elder Scrolls V: Skyrim Combat Stamina Overhaul
+By Richard Rattner
+
+10
+
+On average, roughly how many hours a week do you play video games?
+>2
+2-5
+5-10
+10-20
+20+
+How many hours of prior experience do you have with The Elder Scrolls V: Skyrim?
+0-10 10-20
+20-40
+40-100
+100-200
+200+
+NO
+NEUTRAL
+YES
+Did the mod make combat feel more fun than the original game’s combat?
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Did the mod make combat feel more engaging than the original game’s combat?
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Did the mod make you reconsider your strategy in approaching combat? If so, how so? If not, what do you
+think might?
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+______________________________________________________________________________________
+______________________________________________________________________________________
+_______________________________________________________________________
+Did the mod make combat feel unbalanced in favor of the player?
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Did the mod make combat feel unbalanced in favor of enemies?
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+If the mod felt in favor of the enemies or the player, briefly elaborate on what tipped the balance.
+______________________________________________________________________________________
+______________________________________________________________________________________
+_______________________________________________________________________
+Was playing with the mod, in general, an improvement over the original system?
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Are there any additional features you think the mod might have benefit fitted from? Any features that
+should be cut?
+______________________________________________________________________________________
+______________________________________________________________________________________
+_______________________________________________________________________
+Did the mod break any other aspects of the game? If so which one(s)?
+______________________________________________________________________________________
+______________________________________________________________________________________
+_______________________________________________________________________
+If you started a new game of Skyrim, would you use this mod?
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Please add any additional comments or thoughts below. If you ran into any bugs, please mention them here.
+______________________________________________________________________________________
+____________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+
+11
+
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+Thanks for trying the mod and taking the survey!
+
+12
+
+

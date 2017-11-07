@@ -1,0 +1,1336 @@
+DESIGN AND TESTING OF AN AUTONOMOUS GROUND ROBOT FOR
+AGRICULTURAL APPLICATIONS
+
+by
+
+Lukas L. Hannemann
+
+BioResource and Agricultural Engineering
+BioResource and Agricultural Engineering Department
+California Polytechnic State University
+San Luis Obispo
+2016
+
+TITLE:
+
+Design and Testing of an Autonomous Ground Robot for
+Agricultural Applications
+
+AUTHOR:
+
+Lukas L. Hannemann
+
+DATE SUBMITTED:
+
+June 1, 2016
+
+Dr. Bo Liu
+
+Senior Project Advisor
+
+Signature
+
+Date
+Dr. Crabb
+
+Department Head
+
+Signature
+
+Date
+
+ii
+
+ACKNOWLEDGEMENTS
+I would first like to thank my advisor, Dr. Bo Liu for his assistance with this project. I would
+also like to thank my partner, Shane Thulin, for his help throughout this project. Additionally, I
+would like to thank BRAE faculty members Dr. Zohns, Dr. Holtz, and Mr. Burlingame for their
+additional help with this design. Finally, I would like to thank my family, without their
+encouragement I would not be here.
+
+iii
+
+ABSTRACT
+This senior project discusses the design and testing of an autonomous ground robot for
+agricultural applications such as strawberries. The vehicle will feature a robotic arm that will be
+programmed to perform various tasks, such as collecting soil and leaf samples of the crop or
+measuring soil moisture and salinity. Various components were chosen to be implemented on the
+vehicle due its power requirements and operating environment. Finite Element Analysis testing
+was done on the frame of the vehicle to ensure the adequacy of the design.
+
+iv
+
+DISCLAIMER STATEMENT
+The university makes it clear that the information forwarded herewith is a project resulting from
+a class assignment and has been graded and accepted only as a fulfillment of a course
+requirement. Acceptance by the university does not imply technical accuracy or reliability. Any
+use of the information in this report is made by the user(s) at his/her own risk, which may
+include catastrophic failure of the device or infringement of patent or copyright laws.
+Therefore, the recipient and/or user of the information contained in this report agrees to
+indemnify, defend and save harmless the State its officers, agents and employees from any and
+all claims and losses accruing or resulting to any person, firm, or corporation who may be injured
+or damaged as a result of the use of this report.
+
+v
+
+TABLE OF CONTENTS
+
+ACKNOWLEDGEMENTS ................................................................................................................................ iii
+ABSTRACT..................................................................................................................................................... iv
+DISCLAIMER STATEMENT .............................................................................................................................. v
+LIST OF FIGURES .......................................................................................................................................... vii
+LIST OF TABLES ........................................................................................................................................... viii
+INTRODUCTION ............................................................................................................................................. 1
+LITERATURE REVIEW ..................................................................................................................................... 3
+Existing Designs ......................................................................................................................................... 3
+Frame Design ............................................................................................................................................ 5
+Articulation ............................................................................................................................................... 7
+PROCEDURES AND METHODS ....................................................................................................................... 9
+Constraints ................................................................................................................................................ 9
+Weight Budget .......................................................................................................................................... 9
+Initial Frame Design ................................................................................................................................ 10
+New Design ............................................................................................................................................. 12
+Power Requirements .............................................................................................................................. 15
+RESULTS ...................................................................................................................................................... 19
+DISCUSSION................................................................................................................................................. 24
+RECOMMENDATIONS ................................................................................................................................. 25
+APPENDIX A ................................................................................................................................................. 27
+APPENDIX B ................................................................................................................................................. 30
+REFERENCES ................................................................................................................................................ 33
+
+vi
+
+LIST OF FIGURES
+Figure 1: Example Robot 1 from the University of Illinois ............................................................ 3
+Figure 2: Agrobot SW6010............................................................................................................. 4
+Figure 3: Example Frame Design (Courtesy of Design and development of the architecture of an
+agricultural mobile robot) ............................................................................................................... 6
+Figure 4: Body Design (Direct Herbicide Application With an Autonomous Robot for Weed
+Control) ........................................................................................................................................... 7
+Figure 5: CRAB Rover Step Climbing Example ............................................................................ 8
+Figure 6: Universal Robotics UR5 Robotic Arm .......................................................................... 10
+Figure 7: Initial Design ................................................................................................................. 11
+Figure 8: Bolt and slot plate design .............................................................................................. 11
+Figure 9: New Wheel Base Design ............................................................................................... 13
+Figure 10: Cross Span Assembly with Spacer .............................................................................. 14
+Figure 11: Battery storage area ..................................................................................................... 15
+Figure 12 Hub motor assembly ..................................................................................................... 16
+Figure 13: Wiring Diagram ........................................................................................................... 18
+Figure 14: FInal Assembly............................................................................................................ 19
+Figure 15: Cross Span FEA .......................................................................................................... 20
+Figure 16: Reaction forces on wheel base .................................................................................... 21
+Figure 17: Wheel Base FEA ......................................................................................................... 22
+Figure 18: Wheel base displacement ............................................................................................ 23
+
+vii
+
+LIST OF TABLES
+Table 1: Pros and Cons of existing designs .................................................................................................. 5
+Table 2: Weight budget ................................................................................................................................. 9
+Table 3: Power Requirements ..................................................................................................................... 16
+Table 4: Power consumption ...................................................................................................................... 17
+
+viii
+
+1
+
+INTRODUCTION
+Agriculture is a significant part of our past as human beings, and it will need to be a significant
+part of our future, especially with the growing world population. Technology and Agriculture
+will continuously be associated with each other, as both will have to work harder and smarter to
+feed our world. In more ways than one, California is representative of a growing world that will
+always rely on agriculture, but will also become increasingly reliant on technology due to the
+difficulties it can alleviate. California is known for being “America’s Salad Bowl” due to its
+large agricultural presence, as well as home to several of the largest technology companies in the
+world. That being said, it was inevitable that technology would become increasingly
+incorporated in agriculture here in California. Today, technologies such as drones, robots, GPS,
+and thermal and 3-D imaging are widely used in agriculture to gather and analyze data, with the
+goal of decreasing labor and increasing production. Specifically, the use of ground robots is
+becoming more widely used in agriculture to gather data across a large field area, sometimes
+autonomously. In this growing field, the greatest challenge is to “develop smarter machines that
+are intelligent enough to work in an unmodified or semi natural environment” (Design and
+development of the architecture of an agricultural mobile robot). In other words, these robots are
+usually not designed for a typical indoor, controlled environment, which poses exciting new
+challenges for engineers and designers. In Time-optimal guidance control for an agricultural
+robot with orientation constraints, the author says this well by explaining that, “Differently from
+the well-structured environment, the working environment of agricultural robots imposes varied
+constraints on the movements of the vehicles due to contact surface of loose soil and the
+specialties of crop cultivation features.” Robots such as these can be used to gather and analyze
+soil samples, use thermal or 3D imaging, apply nutrients or pesticides, as well as many other
+different tasks associated with agricultural data. However, these robots are sometimes limited to
+only one of these tasks, and for a hefty price tag, a farmer or field manager might only get one
+aspect of data out of it. These robots also sometimes require user operation, as some of them are
+not autonomous. This senior project is to bring all of these aspects together into one robot. A
+robot will be designed and built so that multiple sensors, cameras, and robotic arms can be added
+or removed from the robot, depending on the specific operation. This would make it possible to
+accomplish several different tasks that collect many kinds of data that a farmer or field manager
+1
+
+would find useful. Designers that have created similar robots in the past have had to deal with the
+challenges associated with designing a robot that could simulate the intricacies and complexities
+in dealing with agricultural products. This fact sets apart agricultural robots from similar robots
+in different applications, as fruits, vegetables, and nuts are more delicate in handling and most
+processes still require a human eye to determine the state of the product. In Evaluation of a
+Strawberry Harvesting Robot in a Field Test, this is reinforced when the author states that “it is
+necessary to design an intelligent robot with human-like perceptive capabilities; for instance, the
+machine would need to calculate fruit position, assess maturity level and pick the fruit without
+damaging the pericarp.” This will likely displace some of the labor associated with managing a
+farm, either by replacing certain workers, or by simply adding to the work force by working at
+off-hours, because the robot can work 24/7. In addition to this, the robot would also be designed
+to be autonomous, making it more convenient for the user, without adding any unnecessary
+labor. Such a robot would prove useful in agriculture, as it would be able to give a good overall
+representation of different kinds of data in a field. The goal of this project is to design a
+prototype that utilizes the current technologies seen in similar agricultural robots in use today,
+while experimenting with new ideas in an attempt to keep the project innovative and original.
+
+2
+
+LITERATURE REVIEW
+Research was done in order to order to determine existing ground robotics applications in
+agriculture. Because there are various robotic applications that are used for many different types
+of crops in agriculture, the research was limited to robots that are used in ground crops. This is
+due to the fact that this project will be designed and built for ground crops organized in rows
+such as strawberries. The literature review will be focused exclusively on the frame design for
+the agricultural robot, given the components that the robot will need and the applications this
+specific robot will be used for. Because there are several different students working on this
+project, this individual literature review will not include information on the steering and drive
+design, electronics, sensors, or machine vision systems, all of which are crucial components to
+the robot’s design as a whole.
+Existing Designs
+Before beginning the preliminary design of the robot, research was done in order to discover
+what was already being implemented in agriculture, and how those robots operate in ground
+crops. Because there are a great number of designs in existence, only robots that operate in
+ground crops will be included in this literature review.
+One design that was found was developed by the College of Engineering at Nanjing
+Architectural University in China and the Department of Agricultural and Biological
+Engineering at the University of Illinois. This robot is designed to navigate throughout corn
+fields using a machine vision guidance system. It provides this autonomous guidance by using a
+fuzzy logic control system. The robot design can be seen in Figure 1 below.
+
+Figure 1: Example Robot 1 from the University of Illinois
+3
+
+This robot is a good reference point for the robot that will be designed in this senior project. It is
+a well developed example of an autonomous ground robot that operates within row crops based
+on machine vision. Although it is a good starting point for research, there are a few constraints
+that the robot for this senior project would have to address. If a design similar to this were used,
+it would limit the range of motion of the robotic arm. This is because the robotic arm would have
+to be placed on top of the robot, which greatly reduces its ability to perfom tasks. Additionally,
+the base of the robot would likely have to be higher up off of the ground, in order to be able to
+operate in the varying ground conditions of the fields. This design was similar to many of the
+other designs found while researching. Most of the ground robots found were relatively small,
+relatively low to the ground, and did not have the ideal framework for housing the given robotic
+arm.
+A few larger designs were found, many of them the size of typical farm tractors. One example
+that was found was designed and built by Agrobot, a company that has developed several
+harvesting robots. This specific design is a strawberry harvesting robot, which features a
+machine vision system and several robotic arms used to havest the strawberries. The robot itself
+is about the size of medium-sized tractor and drives over the rows of strawberries in order to
+view and harvest the strawberries easily. The Agrobot SW6010 stawberry harvester is shown
+below in Figure 2.
+
+Figure 2: Agrobot SW6010
+The Agrobot SW6010 and other designs that were found during research that addresses the
+inadequacies of the smaller robots. These designs that were found feature a “bay” type frame
+design, allowing the robot to drive over rows of crops, with the robotic arm mounted on the
+underside of the frame.
+4
+
+Additional designs were considered during research and a pros and cons list was formulated in
+order to evaulate these designs.
+Table 1: Pros and Cons of existing designs
+ROBOT
+
+Univ. of Illinois/Nanjing Univ.
+
+PROS
+
+CONS
+
+Autonmous guidance, machine vision, small Could not accommodate current robotic
+overall footprint
+arm
+
+Agrobot SW6010
+
+Able to harvest strawberries, features
+mutiple actuating arms, machine vision,
+autonomous guidance
+
+Size of a typical tractor, is rather
+expensive due to a lack of similar robots
+
+Mobile Robot for weeding,
+Univ. of Denmark
+
+4 wheel drive and 4 wheel steering,
+experimented with RTK/GPS, low turing
+radius for easier operation
+
+Mostly experimental, was made in 2001,
+lacks a suspensio system to protect
+components from shock damage
+
+Hakotrac 3000 Tractor,
+Germany
+Autonmous Christmas Tree
+Weeder
+
+This project is an add on to an existing
+tractor and uses typical tractor
+Operates autonomously, uses Trimble
+implements, this senior project will be
+RTK/GPS for guidance, has several safety
+built from the ground up
+features
+Operates autonomously, utilizes RTK/GPS, Was developed by modifying an exisiting
+uses control algorithms developed in
+riding mower, is used soley for mowing
+Simulink
+weeds
+
+Supportive Autonomous
+Features 4 wheel drive and 4 wheel
+may not be tall enough to accommodate
+Vehicle for Agriculture
+steering, frame would be easy to fabricate, the current robotic arm, may not be large
+(SAVAGE), Piraeus Institute of operates autonomously, feature the "bay"
+enough to accommodate all of the
+Technology, Greece
+type design
+batteries
+Similar to SAVAGE, has 4 wheel drive and 4
+The Weedy Robot, University wheel steering for operation in compact current size could not accommodate the
+spaces, features extra storage for batteries robotic arm, current design is only used
+of Applied Sciences,
+and other electrical components
+Osnabrueck, Germany
+for pulling weeds
+Autonomous Crop Treatment
+Vehicle, Tillet and Hague
+Technology Ltd
+
+Features a "bay" type design, utilizes
+differential steering
+
+was developed in 1993-1996, features 2
+wheel drive, frame is very low to the
+ground and would not be able to operate
+in a strawberry field
+
+Frame Design
+For this project, it has been decided that the robot must be large enough to hold the robotic arm
+that is already available. It was also required that the robot work easily with various row crops
+and to be of a reasonable size as to power it electrically. The original thought for the frame
+design was either an aluminum or steel base frame that would be strong enough to hold all of the
+components, but still able to move about in an agricultural environment. Therefore, designs
+similar to the end goal of this project were researched. Figure 3 below shows a design that was
+5
+
+found during research that will house a robotic arm. However, this design is built so that the
+robotic arm would be placed upside-down on the underside of the frame.
+
+Figure 3: Example Frame Design (Courtesy of Design and development of the architecture of an
+agricultural mobile robot)
+This design seemed like it would work well for row crops, as the wheels can travel along the
+rows of crops and the robotic arm could have direct access to the plants below by hanging upside
+down. Another benefit of this design is the truss-type frame design. A frame design such as this
+can be quite strong while using less material when compared to other designs. This will
+ultimately make the robot lighter as a whole, as well as being able to withstand wind loads more
+effectively. However, the manufacturing difficulty and what type of material to use for the
+frame must be carefully considered for this design. Another design that was looked at for the
+frame design was quite similar to the one shown earlier, however it has not been built yet, so the
+design is much more abstract. In theory, this robot is designed to seek out weeds within a field
+and apply herbicide to them. As can be seen in Figure 4, it also features robotic arms that are
+attached to the underside of the robot itself, so the arms can reach down and have easy access to
+the plants below.
+
+6
+
+Figure 4: Body Design (Direct Herbicide Application With an Autonomous Robot for Weed
+Control)
+
+The frame design for this senior project will have to be strong enough to support to the robotic
+arms and other components, but not too rigid, as the robot needs to be able to articulate while it
+is making small movements. This is especially necessary if a differential drive system is used, as
+the wheels would be moving at different speeds at times to steer the robot. These designs were
+chosen as resources because they feature a taller frame, which allows for more clearance when
+driving over the row crops. This also allows the robot arm to hang on the underside of the body,
+which maximizes its range of motion and ability to access the plants in the rows.
+Articulation
+When considering frame design, it can be easy to forget that the rigidity of the design is not
+always a good thing. Because this robot is designed to operate in an agricultural setting, it must
+be designed to handle rough and uneven ground, wet soil, and other various obstacles. A design
+that is too rigid would not work well in an agricultural setting because the drive system would
+not work properly if each wheel does not have proper contact with the soil. There are a few
+different ways to ensure articulation when designing the frame of the robot.
+The first of these articulation techniques is to allow flexure in the frame. This is not an easy
+design task, as the frame itself must be allowed to handle the loads subjected to it, while being
+allowed to flex enough to provide the articulation needed. If too much flexure is allowed
+however, the frame could experience deformations or failures (Design and development of the
+architecture of an agricultural mobile robot). This method of allowing articulation is also
+designed for one specific loading or loading range for the robot. This may pose a problem, as it
+7
+
+allows for less flexibility in the components that can be added to the robot. If this method for
+allowing articulation is chosen, it should be done concurrently with creating the parts list for the
+robot and deciding which components will be featured on the robot and where they will be
+placed, in order to estimate a proper loading condition.
+Another method for allowing articulation in the robot is to design the frame to have linkages,
+which allows parts of the frame to move, making it no longer completely rigid. The movement of
+different parts of the frame ensures that each wheel experiences full contact with the soil,
+providing traction. In an article entitled The ExoMars Rover Locomotion System, different Mars
+Rover robot designs are examined on their ability to drive over various obstacles. Figure 5 shows
+the CRAB design and how it is designed to climb up a step.
+
+Figure 5: CRAB Rover Step Climbing Example
+This design clearly implements articulation of the robot frame in order to climb up the step with
+all of the wheels still contacting the ground and experiencing full traction. This is a dramatic
+example of an uneven surface where articulation is required, but it shows the benefits and
+capabilities of articulation of the frame of the robot using linkages. When considering using
+linkages to provide articulation, it is important to note that flexibility of components is not
+recommended, as proper linkages rely on dynamic equations based on rigid components. This is
+observed in a study on mechanical linkages entitled Dynamics of Nonrigid Robot Linkages,
+where the authors “examine the problem of modeling the kinematic and dynamic motion of
+flexible articulated linkages…for the control of structural deformations in such linkages.” In
+other words, it is crucial to ensure as little flexure in the members in question as possible, in
+order to be able to model the system dynamically using standard kinematic equations.
+
+8
+
+PROCEDURES AND METHODS
+Constraints
+In order to begin the design of the robot, many constraints had to be considered. First of all, it
+was decided that the vehicle should be able to run completely on electrical power. This would
+eliminate the need for a small engine and the additional drive train design that would be needed.
+The decision of making it completely electrically powered could also present the possibility of
+adding a solar panel to help power the vehicle. Another constraint that was considered was the
+size of the vehicle. Because this robot will be primary used in strawberry fields, this limits the
+width of the vehicle to the width in between rows, as the vehicle will have to be able to drive
+over the rows. Due to these size constraints, the vehicle frame ended up being quite large. This
+added a weight constraint, as the vehicle should be able to operate without an unreasonably large
+power requirement from the drive motors to move the vehicle. Additionally, the frame had to be
+designed in a way that maximized the functionality of the UR5 robotic arm, as it is the main
+component needed for the vehicle to accomplish tasks in the field. This would ensure that the
+robotic arm can efficiently perform tasks in a way that would justify the choice to use this
+specific arm.
+
+Weight Budget
+In order to design the frame correctly, a preliminary weight budget had to be done. The weight
+budget included the batteries, the UR5 robotic arm (shown in Figure 6), the wheel and tire
+assemblies, the computer and navigation equipment, and the frame itself, is shown in Table 2.
+The frame had to be designed to be able to handle this loading. However, if the frame is too
+robust, it will weigh more, which would require more power to be able to move. Therefore, a
+balance must be found between its strength and weight characteristics.
+
+Table 2: Weight budget
+Item
+#
+1
+2
+3
+4
+5
+6
+
+Description
+Interstate SRM-27 Deep Cycle Batteries (210A-h reserve)
+Universal Robotics UR5 Arm and Control System
+Frame
+Wheel and Tire
+Computer and navigation equipment
+Payload
+
+9
+
+Weight (lbs.) Quantity Weight (lbs.)
+60
+8
+480
+100
+1
+100
+150
+1
+150
+35
+4
+140
+35
+1
+35
+200
+1
+200
+TOTAL =
+1105
+
+Figure 6: Universal Robotics UR5 Robotic Arm
+Initial Frame Design
+Because the rows of strawberries are around 5 feet apart, a relatively large frame was needed to
+span over the row of strawberries, so that the robotic arm could have direct access to the crop.
+This design would have each wheel base placed on separate sides of the crop. A truss type design
+was chosen for the frame because trusses are relatively light for how structurally sound they are.
+A truss type design also has relatively low surface area, making it less susceptible to wind loads
+when out in the field. This truss design was used for each side of the frame, where both wheel
+bases would be. The initial design featured this truss type design for the frame of each wheel
+base. The steel tubing chosen for this design was 2”x2”x1/4”. This entire assembly is shown in
+Figure 7.
+
+10
+
+Figure 7: Initial Design
+
+The cross span that connects both wheel bases also supports the robotic arm. This allows the
+robotic arm to hang upside down, increasing its functionality. In order to make the frame
+adjustable to accommodate different widths between rows, a bolt and slot plate design was
+initially chosen to connect the cross span to the wheel bases. This proved to be a simple way for
+the user to change the width of the wheel base of the robot. Figure 8 shows the slot plate, which
+would be welded to the top of the wheel base, and the bolt plate, which would be welded onto
+the bottom of the cross span truss.
+
+Figure 8: Bolt and slot plate design
+
+11
+
+The cross span also needed a way to mount the UR5 robotic arm so a ¼” steel plate was used and
+welded to the top of the cross span. This component can be seen in Figure 1 above. Additionally,
+in the extra space between the front and rear wheels, an addition to the frame was made with the
+purpose of storing additional components such as batteries or the UR5 control box.
+After some consideration, there appeared to be several issues with this initial design. First, the
+frame was too tall. Because of this, the robotic arm would not have enough functionality if it
+were forced to stretch out too far. This significantly reduces the robotic arm’s range of motion
+and ability to accomplish certain tasks. To address this issue, either the frame has to be shorter,
+or there has to be some type of way to lower the robotic arm, or simply a place to mount it that is
+lower than the top of the frame, such as a spacer of some sort. Additionally, although the
+2”x2”x1/4” steel square tubing would provide adequate support for the vehicle and its
+components, it may make the vehicle too heavy, requiring more powerful drive motors. Also, the
+¼ inch steel plate on top of the cross span is seen as unnecessarily heavy, as all it needs to do is
+provide a surface to bolt the robotic arm to. The vehicle frame also needs a place to store the
+UR5 robotic arm control box, as the current design does not provide a place for the control box
+that the user could easily access it.
+
+New Design
+The new design featured several improvements from the old design. The new design features a
+spacer that can be added to the bottom of the cross span, which allows the robotic arm to be
+mounted lower. This will give the robotic arm more functionality when working with
+strawberries because it will be closer to the ground. If the spacer is removed, the vehicle could
+then be useful in crops that grow taller than strawberries, as the robotic arm would be mounted
+higher. An additional improvement that was made was that the structural members were changed
+to 1”x1”x1/4” tubing, as the 2”x2”x1/4” was seen as unnecessarily large. Figure 9 shows the new
+design for each wheelbase. It is now taller and the inside support tubing has been moved more
+toward the outside, resulting in more open space in the center to allow easier access to the UR5
+robotic arm control box as well as additional electronics.
+
+12
+
+Figure 9: New Wheel Base Design
+
+Figure 10 below shows the new cross span assembly, featuring the spacer and UR5 robotic arm.
+The new cross span assembly provides additional structural supports with the goal of minimizing
+the movement of the base that the robotic arm is attached to. Connected to the spacer is a ¼ inch
+steel plate that the robotic arm is mounted to.
+
+13
+
+Figure 10: Cross Span Assembly with Spacer
+Further along in the project, it was proposed that there be a space on top of the frame where
+UAV’s or drones would be able to land. This would allow these drones that are travelling
+throughout a field to track where the robot is with GPS, and land on the robot. The drone can do
+this when it is low on battery and cannot travel all the way back to the operator. Instead of the ¼”
+plate on top of the robot, it was decided that expanded metal would be used to create this
+platform. Expanded metal would be much lighter than the ¼” steel plate, and it would provide
+enough strength to simply support a drone. The expanded metal chosen was a 0.04” thick that
+weighs 82 pounds per 100 ft2, so the 10 ft2 piece needed to cover the top of the cross span would
+weigh only 8.2 pounds
+Another option for the top platform of the vehicle would be to implement a solar panel to
+provide extra power to the robot. This option will be left open for the user to decide whether or
+not to include a solar panel. The top platform will be left relatively simple and open in order to
+accommodate a solar panel in the future.
+This new design also allows for more space to store the UR5 robotic arm control box, which also
+makes it more accessible to the user. Because the frame was also lengthened, there is now more
+space available to store batteries in between the front and rear wheels. Figure 11 below shows
+14
+
+this battery storage area, and where the angle iron will be welded onto the frame to hold the
+batteries. The angle iron used was 2”x1 ½”x1/4”
+
+Figure 11: Battery storage area
+Power Requirements
+In order to choose the correct drive motors and the correct number of batteries, a power
+requirements calculation table was created. An AutoCAD drawing in Figure 12 illustrates all of
+the inputs that are used in the calculation table. The table demonstrates the power requirements
+for the vehicle to be able to operate on different slopes and at different speeds, with all the other
+inputs staying constant. The calculations for each of the values are shown in APPENDIX B.
+
+Figure 12: Power requirement variables
+15
+
+Table 3: Power Requirements
+Input Values
+1
+2
+3
+4
+5
+
+Variable
+Vehicle Weight
+Estimated Force for Motion
+Max Vehicle Speed
+Max Slope
+Tire Diameter
+
+Units
+lbs
+lbs
+mph
+%
+in
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+Description
+Req'd Flat Ground HP
+Req'd Incline HP
+Req'd Incline Power Per Motor
+Req'd Flat Ground Power
+Req'd Incline Power
+Req'd Propulsion Force for Vehicle
+Torque at Each Motor
+Wheel RPM
+Constant Torque at Each Motor
+Peak Torque at Each Motor
+Req'd Incline Power Per Motor
+Req'd Flat Ground Power Per Motor
+
+Units
+HP
+HP
+HP
+Watts
+Watts
+Lb
+lb ft
+RPM
+Nm
+Nm
+Watts
+Watts
+
+1100
+200
+0.5
+50
+20
+
+1100
+200
+1
+50
+20
+
+1100
+200
+2
+48
+20
+
+1100
+200
+3
+46
+20
+
+1100
+200
+4
+44
+20
+
+Value
+1100 1100
+200
+200
+5
+6
+42
+40
+20
+20
+
+1100 1100
+200 200
+7
+8
+38
+36
+20
+20
+
+2.1
+6.9
+1.7
+1591
+5117
+643
+134
+67
+56
+182
+1279
+398
+
+Value
+2.7
+3.2
+8.3
+9.7
+2.1
+2.4
+1989 2387
+6226 7263
+626
+609
+130
+127
+84
+101
+56
+56
+177
+172
+1557 1816
+497
+597
+
+3.7
+4.3
+4.8
+5.3
+5.9
+11.0 12.2 13.3
+14.3 15.1
+2.8
+3.1
+3.3
+3.6
+3.8
+2785 3183 3581 3979 4377
+8226 9113 9920 10648 11293
+591 573 554
+535
+516
+123 119 115
+112
+108
+118 134 151
+168
+185
+56
+56
+56
+56
+56
+167 162 157
+151
+146
+2057 2278 2480 2662 2823
+696 796 895
+995 1094
+
+1100
+200
+9
+34
+20
+
+1100
+200
+10
+32
+20
+
+1100
+200
+11
+30
+20
+
+Derived Values
+0.3
+0.9
+0.2
+199
+688
+692
+144
+8
+56
+195
+172
+50
+
+0.5
+1.8
+0.5
+398
+1376
+692
+144
+17
+56
+195
+344
+99
+
+1.1
+3.6
+0.9
+796
+2690
+676
+141
+34
+56
+191
+672
+199
+
+1.6
+5.3
+1.3
+1194
+3937
+660
+137
+50
+56
+186
+984
+298
+
+For the drive system of the vehicle, a hub motor was chosen for this application because it would
+be much easier to implement onto the frame of the vehicle due to the fact that a chain or belt
+drive would not be needed. This is because the motor and wheel would all be one assembly that
+would be connected onto the frame. Figure 13 shows a SolidWorks model of a hub motor and
+wheel assembly that will be implemented onto the frame.
+
+Figure 13: Hub motor assembly
+
+16
+
+Table 4 below shows the power requirements of the additional components that will be featured
+on the vehicle.
+
+Table 4: Power consumption
+Item
+UR5 Robotic Arm
+UR5 Control Box
+Industrial Computer
+Drive Motors
+Steering Motors
+
+Power Required (Watts)
+200
+48
+60
+1500
+40
+
+Quantity
+1
+1
+1
+4
+4
+
+Total (Watts)
+200
+48
+60
+6000
+160
+
+SUM =
+
+6468
+
+In order to power all of the components of the vehicle, it was decided to use deep cycle batteries,
+such as those used in marine and RV vehicles. These batteries were chosen because deep cycle
+batteries can be deeply discharged, using much more of their capacity than typical starter
+batteries in cars. This will allow for a much longer operation time for the vehicle, while
+powering all of its components. The deep cycle battery chosen was the Interstate 27M Deep
+Cycle Marine Battery, which can run at 12 volts for 67 Amp-Hours.
+Once the frame was designed and the components for the vehicle were selected, a cost analysis
+was done for the final assembly. This cost analysis takes into account the steel, batteries, robotic
+arm, motors, and is shown in Table 5. Comments on the cost analysis of the vehicle as a whole
+can be found in the discussion section.
+Item
+#
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+
+Description
+Universal Robotics UR5 Arm and Control System (used
+demo version)
+Onboard Computer
+Cyclone Geared Motor 1800-3000watt 24-72V
+Interstate SRM-27 Deep Cycle Battery
+AIMS Power 2000 Watt 48 Volt Pure Sine Inverter
+Brushed Worm Drive Steering Motor
+Cyclone Brushless Motor Controller
+3/16" Plate
+Steering Motor Controllers
+1.5" Round Bar
+1"x1"x1/16" Square Tubing
+16" Off Road Tire 4.80/4.00-8
+Dexstar 8" Standard Painted Trailer Rim (3.75" Width)
+
+Price ea.
+$ 20,000
+$ 1,000
+$
+216
+$
+79
+$
+631
+$
+100
+$
+52
+$
+120
+$
+20
+$
+70
+$
+12
+$
+28
+$
+7
+
+Qty
+1
+1
+4
+8
+1
+4
+4
+1
+4
+1
+11
+4
+4
+
+Unit
+
+Price
+
+ea.
+ea.
+ea.
+ea.
+ea.
+ea.
+ea.
+4'x8' plate
+ea.
+20' section
+20' section
+ea.
+ea.
+
+$ 20,000
+$ 1,000
+$
+864
+$
+632
+$
+631
+$
+400
+$
+208
+$
+120
+$
+80
+$
+70
+$
+132
+$
+112
+$
+28
+$ 23,855
+
+17
+
+After all of the components were chosen for the vehicle, a wiring diagram was created to show
+how all of the components are powered. Figure 14 shows the wiring diagram, which was drawn
+in AutoCAD.
+
+Figure 14: Wiring Diagram
+The second design is superior to the initial design in several ways. First, it decreases the overall
+weight of the vehicle frame by decreasing the square tubing from 2”x2”x1/4” to 1”x1”x1/4”.
+This weight reduction puts less load on the drive and steering motors and less load on the frame
+itself. The FEA testing on the new frame design is shown in the Results section, which justifies
+the switch to smaller steel tubing. This also results in a cost reduction, as the smaller steel square
+tubing weighs much less than before. Further weight reduction was also seen in the slot and bolt
+plates, as extra through holes were cut into the material, as a large steel plate was not needed for
+its current function. Additionally, the large steel plate that was placed on the top of the cross
+span in the initial design was much too heavy, so it was replaced with expanded metal. Expanded
+metal is sufficient for this application because the only loads that the top of the frame would be
+subjected to would be a drone landing on it on occasion. The weight reduction of the slot and
+bolt plates and the cross span plate results in a cost reduction as well, as much less steel is being
+used.
+
+18
+
+RESULTS
+A final assembly including the two wheel bases, batteries, cross span, slot and bolt plates, spacer,
+UR5 robotic arm, and UR5 control box is shown in Figure 15.
+
+Figure 15: Final Assembly
+In order to ensure the adequacy of the current design, Finite Element Analysis testing was done
+in SolidWorks. Finite Element Analysis is simulation within SolidWorks that can be used to find
+displacement of material and stresses within a material when it is exposed to internal or external
+loads. FEA is used to simulate real-life situations that the model may be exposed to, in order to
+see how the model will react. FEA testing was done on the frame to ensure that the vehicle frame
+would not experience too high of stresses under the loads the vehicle would experience during
+operation. The testing was also done in order to justify the switch from 2”x2”x1/4” to
+19
+
+1”x1”x1/4” steel square tubing. For the cross span and wheel base tests, the material assigned in
+SolidWorks was carbon steel in order to receive accurate results from the FEA analysis. For all
+of the tests, static studies were done, as it was assumed that this vehicle will not be operating at
+high enough speeds or in rough enough terrain to have to worry about any cyclic loading that
+may occur. The static loading tests include all of the components on the vehicle that would cause
+a load on the frame, as well as all the areas on the frame that would act as points for reaction
+forces.
+The first test that was done on the frame was a distributed load on the cross span, replicating the
+load from the added spacer and the UR5 robotic arm. The UR5 robotic arm weighs 40 pounds
+and is capable of a 10 pound payload, and the steel tubing spacer was estimated at 15 pounds, so
+the cross span testing was done with a load of 65 pounds. The reaction forces used for this
+simulation were the 4 joints on each side of the cross span, as this is where the cross span will
+rest on the bolt plate which will be attached to the wheel base. These reaction forces can be seen
+in Figure 16 as the green reaction force arrows at each joint. Figure 16 shows the deflected
+model and the stress diagram that shows the areas of greatest stress. The middle of the cross span
+where the spacer is to be attached experienced the greatest amount of stress, at 11.78 ksi. This is
+well below the yield strength of 89.98 ksi, resulting in a factor of safety of 7.64.
+
+Figure 16: Cross Span FEA
+The maximum deflection for this test was also in the middle of the cross span, 0.094 inches, or
+2.39 millimeters, a deflection small enough to neglect.
+The next test was done is on the wheel base of the vehicle, in order to simulate the load of the
+cross span, including the spacer and the robotic arm, the load from the control box, and the load
+from the batteries. The steel cross span weighs 44 pounds, and the expanded metal weighs 8.2
+pounds, resulting in a total load of 118 pounds when the spacer and robotic arm were added.
+Because this load rests on both wheel bases, a single 59 pound load was used for the load on one
+wheel base. Additionally, one of the wheel bases will accommodate the UR5 control box, which
+20
+
+weighs 60 pounds. The eight batteries will be stored in the additional area between the front and
+rear wheels on both wheel bases. These batteries are 60 pounds each, so four of these batteries
+result in a 240 pound load on the bottom are of the wheel base previously mentioned. These four
+batteries will have very little space in between them, so the batteries were treated as a distributed
+load along the bottom of the wheel base. For this testing, the reaction forces that were used to
+counteract the load were the four joints on each end of the wheel base, as can be seen in Figure
+17. These were chosen as the reaction forces on the wheel base because this is where the wheel
+and hub motor assembly will be connected to the frame, which will have contact with the surface
+it is driving on.
+
+Figure 17: Reaction forces on wheel base
+Figure 18 shows the results of the FEA testing done on the wheel base, with the distributed load
+from the cross span and control box shown on the top of the frame, as well as the distributed load
+from the batteries, shown on the bottom on the frame.
+
+21
+
+Figure 18: Wheel Base FEA
+The maximum stress seen in this this simulation was in the middle of the bottom of the frame
+where is little support (seen in red). Although this is where the maximum stress occurs, it is still
+less than the yield strength of 41 ksi, as it is only 13.2 ksi. This results in a factor of safety of 3.1.
+Additionally, the maximum displacement that was seen in the model is in the same area where
+the maximum stress occurred. The displacement profile can be seen in Figure 19.
+
+22
+
+Figure 19: Wheel base displacement
+The maximum displacement that was seen in the model was 0.133 inches, or 3.38 millimeters,
+which is slightly larger than the maximum displacement that was seen in the cross span FEA
+study, but it is still permissible, as the maximum stress that is seen in the frame does not exceed
+the maximum yield strength of the material. It is important to note that the center point of the
+battery bay between the front and rear wheel wells was the area that experienced the most stress
+and was displaced the most from its original position.
+
+23
+
+DISCUSSION
+The FEA testing has clearly shown which areas of the vehicle frame will experience the most
+stress while under the given loadings. The battery bay between the front and rear drive wheels
+experienced the largest amount of stress and saw the largest amount of displacement. This
+loading situation is unavoidable because it is simply due to the weight of the batteries, as each
+one weighs 60 pounds each.
+The current vehicle frame as a whole was designed in order to accommodate the UR5 robotic
+arm, as the UR5 was purchased by the BioResource and Agricultural Engineering Department
+earlier in 2016 for educational purposes. The cost of the vehicle components including the steel,
+motors, batteries, wheels, and other electronic components are relatively inexpensive when
+compared to the UR5 robotic arm itself. Therefore, if a user is willing to invest in the robotic
+arm, the cost for all of the other components is not a significant factor in the overall cost.
+Because of this, the user may decide to invest in
+
+24
+
+RECOMMENDATIONS
+Because this project will be passed on to other students in the future, it is important to give a few
+necessary recommendations to these students based on what was observed and discovered while
+working on this project. The first recommendation to these future students is in regard to battery
+placement. In the FEA testing that was done on the wheel base model, the area that experienced
+the most displacement and the area that experienced the most stress was the middle of the bay
+where the batteries are placed. This testing was done using the total weight of the batteries
+applied as a distributed load along that section, implying that the batteries were all equally
+spaced apart. To slightly reduce the displacement and stress on the middle section, it is advised
+that the batteries be spread out from the middle, maximizing the distance in between the two
+batteries in the middle.
+Another recommendation that could be given to these future students is in regard to the current
+slot plate and bolt plate design, which allows the vehicle to be set to different widths depending
+on the dimensions of crop’s rows. Other designs may need to be considered, as this design could
+potentially put large amounts of stress on the bolts that are used in the bolt plates. A type of
+telescoping tubing design could be considered that allows the vehicle to change widths, although
+this will likely require different sizes of steel tubing, as one tube would have to slide into a larger
+one. However, if this method is used it may require a redesign of the cross span section as well.
+
+25
+
+REFERENCES
+Agrobots. 2012. Agrobots Products Page.
+http://www.agrobot.com/products.html, referenced May 20, 2016.
+Fuhong Dong, Olaf Petzold, Wolfgang Heinemann, Roland Kasper, Time-optimal guidance
+control for an agricultural robot with orientation constraints, Computers and Electronics in
+Agriculture, Volume 99, November 2013, Pages 124-131, ISSN 0168-1699,
+http://dx.doi.org/10.1016/j.compag.2013.09.009.
+Jinlin Xue, Lei Zhang, Tony E. Grift. (2012). Variable field-of-view machine vision based row
+guidance of an agricultural robot. Computers and Electronics in Agriculture, Volume 84,
+February 2012, Pages 85-91
+http://www.sciencedirect.com/science/article/pii/S016816991200049X
+Nildeep Patel, Richard Slade, Jim Clemmet, The ExoMars rover locomotion subsystem.
+ScienceDirect Journal of Terramechanics Vol. 47, pages 227-242. 2010.
+Robert P. Judd, Donald R Falkenburg, Dynamics of Nonrigid Articulated Robot Linkages. IEEE
+Transactions on Automatic Control, Vol. AC-30, No. 5, May 1985
+http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1103978
+Shigehiko Hayashia, Kenta Shigematsua, Satoshi Yamamotoa, Ken Kobayashia, Yasushi
+Kohnob, Junzo Kamatac, Mitsutaka Kuritac. (2009). Evaluation of a Strawberry Harvesting
+Robot in a Field Test. Elsevier, Biosystems Engineering. Volume 105, Issue 2, February 2010,
+Pages 160-171. http://www.sciencedirect.com/science/article/pii/S1537511009002797
+SolidWorks. 2014. Product Simulations page, Finite Element Analysis.
+https://www.solidworks.com/sw/products/simulation/finite-element-analysis.htm, referenced
+May 20, 2016.
+Tabile, Rubens A, Godoy, Eduardo P, Pereira, Robson R. D, Tangerino, Giovana T, Porto,
+Arthur J. V, & Inamasu, Ricardo Y. (2011). Design and development of the architecture of an
+agricultural mobile robot. Engenharia Agrícola, 31(1), 130-142. Retrieved November 19, 2015,
+from http://www.scielo.br/scielo.php?script=sci_arttext&pid=S010069162011000100013&lng=en&tlng=en.
+Unibots. 2011. Unibots home page.
+http://www.unibots.com/Papers/mobilerobot.pdf, referenced May 15, 2016.
+Yong Chen, JiaQiang Zheng, Lei Than, Haitao Xiang, Direct Herbicide Application With an
+Autonomous Robot for Weed Control. 2005 ASAE Annual International Meeting.
+http://elibrary.asabe.org/azdez.asp?search=1&JID=5&AID=18820&CID=tfl2005&v=&i=&T=1
+&urlRedirect=
+
+26
+
+APPENDIX A
+
+27
+
+HOW PROJECT MEETS REQUIREMENTS FOR THE BRAE MAJOR
+Major Design Experience
+Establishment of objectives and criteria: This project is to be designed to meet the needs and
+expectations that other robots do, according to ASABE standards.
+Synthesis and analysis: This project will incorporate power requirement calculations, bending
+stress calculations, and deflection analysis.
+Construction, testing, and evaluation: This project will be tested and evaluated using
+SolidWorks FEA analysis.
+Incorporation of applicable engineering standards: This project will utilize AISC standards for
+allowable bending stresses.
+Capstone Design Experience
+Incorporates knowledge/skills from these key courses: 133 Engineering Graphics, 152
+SolidWorks, 328 Measurements & Computer Interfacing, 421/422 Equipment Engineering, 470
+Fundamentals of Robotics, Engineering Statics/Dynamics, Strength of Materials
+Design Parameters and Constraints
+Physical: The size of the robotics reasonable, as the weight doesn’t require unreasonable power
+from the motors to operate.
+Economic: The majority of the cost is the robotic arm, so if the user is willing to invest the
+money, the rest of the assembly is reasonable.
+Environmental: If the robot is spot treating the field using chemicals, much less chemicals will
+be used.
+Sustainability: The vehicle operates solely on electrical power.
+Manufacturability: The majority of the assembly is made of square tubing, making
+manufacturing more feasible.
+
+28
+
+Health and Safety: The robot should be operated in a way that does not put other humans in
+danger, as it operates autonomously.
+Ethical: Because it is an autonomous robot, it should operate in a way that keeps the humans
+around it free from harm.
+Social: The use of this robot will likely lead to the displacement of labor on a farm.
+Political: There are no emissions to worry about.
+Aesthetic: Because of its weight requirements, not much of the design was based around
+aesthetic. However, the robot was designed in a way that makes it look approachable to users,
+without being too complicated.
+Other-Productivity: If the robot can run autonomously, it could run 24/7, working much more
+hours than a human.
+
+29
+
+APPENDIX B
+DESIGN CALCULATIONS
+
+30
+
+I. Design calculations for power requirements
+𝑓𝑓𝑓𝑓
+�
+5280 �
+𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚
+𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚
+�� ∗ �
+�𝑀𝑀𝑀𝑀𝑀𝑀 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 �
+𝑠𝑠 �
+ℎ𝑜𝑜𝑜𝑜𝑜𝑜
+3600 �
+�
+ℎ𝑜𝑜𝑜𝑜𝑜𝑜
+𝑭𝑭𝑭𝑭𝑭𝑭𝑭𝑭 𝑮𝑮𝑮𝑮𝑮𝑮𝑮𝑮𝑮𝑮𝑮𝑮 𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷 (𝑯𝑯𝑯𝑯) = (𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹 𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅 (𝑙𝑙𝑙𝑙𝑙𝑙. )) ∗
+𝑓𝑓𝑓𝑓 − 𝑙𝑙𝑙𝑙𝑙𝑙
+550
+𝑠𝑠 − 𝐻𝐻𝐻𝐻
+
+𝑓𝑓𝑓𝑓
+�
+5280 �
+𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚
+𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚
+�� ∗ �
+�
+�𝑀𝑀𝑀𝑀𝑀𝑀 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 �
+𝑠𝑠
+ℎ𝑜𝑜𝑜𝑜𝑜𝑜
+3600 �
+�
+ℎ𝑜𝑜𝑜𝑜𝑜𝑜
+𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷 𝑹𝑹𝑹𝑹𝒒𝒒′ 𝒅𝒅, 𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺 𝜽𝜽 = ��𝑤𝑤𝑤𝑤𝑤𝑤𝑤𝑤ℎ𝑡𝑡(𝑙𝑙𝑙𝑙𝑙𝑙. )� ∗ sin(𝜃𝜃) + 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹 𝑅𝑅𝑅𝑅𝑅𝑅′𝑑𝑑 (𝑙𝑙𝑙𝑙𝑙𝑙. )� ∗
+𝑓𝑓𝑓𝑓 − 𝑙𝑙𝑙𝑙𝑙𝑙
+550
+𝑠𝑠 − 𝐻𝐻𝐻𝐻
+
+% 𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆
+�
+𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺 (𝑫𝑫𝑫𝑫𝑫𝑫𝑫𝑫𝑫𝑫𝑫𝑫𝑫𝑫) = 𝑇𝑇𝑇𝑇𝑛𝑛−1 �
+100
+
+𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷 𝒑𝒑𝒑𝒑𝒑𝒑 𝑴𝑴𝑴𝑴𝑴𝑴𝑴𝑴𝑴𝑴 =
+
+𝑇𝑇𝑇𝑇𝑇𝑇𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃 𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅
+# 𝑜𝑜𝑜𝑜 𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀
+
+𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷 𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝑹𝑹 (𝑾𝑾𝑾𝑾𝑾𝑾𝑾𝑾𝑾𝑾) = 𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃 (𝐻𝐻𝐻𝐻) ∗
+
+𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷𝑷 𝑭𝑭𝑭𝑭𝑭𝑭𝑭𝑭𝑭𝑭 𝒇𝒇𝒇𝒇𝒇𝒇 𝑽𝑽𝑽𝑽𝑽𝑽𝑽𝑽𝑽𝑽𝑽𝑽𝑽𝑽 (𝒍𝒍𝒍𝒍𝒍𝒍. ) =
+
+𝑴𝑴𝑴𝑴𝑴𝑴𝑴𝑴𝑴𝑴 𝑻𝑻𝑻𝑻𝑻𝑻𝑻𝑻𝑻𝑻𝑻𝑻 (𝒇𝒇𝒇𝒇 − 𝒍𝒍𝒍𝒍𝒍𝒍. ) =
+
+746 𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊
+𝐻𝐻𝐻𝐻
+
+𝑓𝑓𝑓𝑓 − 𝑙𝑙𝑙𝑙𝑙𝑙
+𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼𝐼 𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃 𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅 (𝐻𝐻𝐻𝐻)
+∗ 550
+𝑓𝑓𝑓𝑓
+1
+𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚
+𝑠𝑠 − 𝐻𝐻𝐻𝐻
+� ∗ 5280 �
+�∗
+𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆 �
+ℎ𝑜𝑜𝑜𝑜𝑜𝑜
+𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚 3600 � 𝑠𝑠 �
+ℎ𝑜𝑜𝑜𝑜𝑜𝑜
+
+𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑛𝑛 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹 (𝑙𝑙𝑙𝑙𝑙𝑙. ) 𝑇𝑇𝑇𝑇𝑇𝑇𝑇𝑇 𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷 (𝑖𝑖𝑖𝑖. ) 1 𝑓𝑓𝑓𝑓
+∗
+∗
+4 𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀
+2
+12 𝑖𝑖𝑖𝑖.
+
+31
+
+𝑓𝑓𝑓𝑓
+𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚 5280 𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚
+𝑀𝑀𝑀𝑀𝑀𝑀 𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆 �
+�∗
+𝑚𝑚𝑚𝑚𝑚𝑚
+ℎ𝑜𝑜𝑜𝑜𝑜𝑜
+60
+ℎ𝑜𝑜𝑜𝑜𝑜𝑜
+𝑾𝑾𝑾𝑾𝑾𝑾𝑾𝑾𝑾𝑾 𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺𝑺 (𝑹𝑹𝑹𝑹𝑹𝑹) =
+𝑇𝑇𝑇𝑇𝑇𝑇𝑇𝑇 𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷𝐷 (𝑖𝑖𝑖𝑖. )
+∗ 𝜋𝜋
+𝑖𝑖𝑖𝑖.
+12
+𝑓𝑓𝑓𝑓
+
+32
+
+APPENDIX C
+PART DRAWINGS
+
+33
+
+34
+
+35
+
+36
+
+37
+
+38
+
+39
+
+40
+
+

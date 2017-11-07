@@ -1,0 +1,3138 @@
+DESIGN FOR MANUFACTURABILITY: OFF-ROAD TOYOTA BUMPER
+
+A Senior Project submitted
+In Partial Fulfillment
+of the Requirements for the Degree of
+Bachelor of Science in Industrial Engineering
+
+the Faculty of California Polytechnic State University,
+San Luis Obispo
+
+by
+Drew Donlon
+June 2016
+
+Graded by:______________ Date of Submission__________________________
+Checked by:_____________ Approved by:_____________________________
+
+Abstract
+Design for Manufacturability: Off-Road Toyota Bumper
+Drew Donlon
+
+The purpose of this project is to design a new off-road bumper that is improved from the stock
+form of a 1996-2002 Toyota 4Runner and a 1996-2004 Toyota Tacoma. The current state of the
+component is too weak to endure to off-road endeavors, and a kit bumper market is virtually
+untapped for these vehicles. The objectives of this project were met by redesigning the stock
+front bumper, conducting a finite element analysis on the model to test for strength, prototyping
+the bumper with CNC cut cardboard, and conducting a full cost analysis including the costs for
+waterjet and laser cutting of the steel. The new bumper was designed to improve performance,
+reliability, strength, and to increase the approach angle while staying under Design for
+Manufacturing/Assembly methodologies. By prototyping the bumper and speaking with various
+metal cutting facilities, a full cost analysis has also been conducted in order to determine the
+feasibility of small, medium, and large production volumes.
+
+Table of Contents
+Name
+Lit of Tables………………………………………………………………………………
+List of Figures…………………………………………………………………………….
+1.0 Introduction…………………………………………………………………………..
+2.0 Background and Literature Review…………………………………………………..
+2.1 Background…………………………………………………………………...
+2.2 Literature Review…………………………………………………………….
+3.0 Design………………………………………………………………………………...
+3.1 Bumper Design……………………………………………………………….
+3.2 Design Changes………………………………………………………………
+4.0 Methods………………………………………………………………………………
+4.1 Finite Element Analysis………………………………………………………
+4.2 Prototype Analysis……………………………………………………………
+5.0 Results………………………………………………………………………………..
+5.1 FEA Study Results……………………………………………………………
+5.2 Prototype Assembly Results………………………………………………….
+5.3 Cost Analysis…………………………………………………………………
+5.4 Final Remarks………………………………………………………………...
+6.0 Conclusion……………………………………………………………………………
+Appendices……………………………………………………………………………….
+Cost Analysis……………………………………………………………………..
+Detailed Drawings………………………………………………………………..
+References………………………………………………………………………………..
+
+Page
+i
+ii
+1
+3
+3
+5
+11
+11
+15
+16
+16
+18
+19
+19
+22
+26
+27
+28
+30
+30
+32
+60
+
+List of Tables
+Table
+
+Name
+
+Page
+
+1
+2
+3
+
+Bill of Materials……………………………………………………………….. 29
+Waterjet Cutting Costs…..……………………………………………………. 29
+Laser Cutting Costs..………………………………………………………….. 30
+
+i
+
+List of Figures
+Figure
+
+Name
+
+Page
+
+1.1
+2.1.1
+2.1.2
+2.1.3
+2.1.4
+2.1.5
+2.2.3.1
+2.2.3.2
+2.2.3.3
+2.2.3.4
+3.1.1
+3.1.2
+3.1.3
+3.1.4
+3.2.1
+3.2.2
+4.1.1
+4.2.1
+5.1.1
+5.1.2
+5.1.3
+5.1.4
+5.1.5
+5.1.6
+5.2.1
+5.2.2
+5.2.3
+5.2.4
+5.2.5
+
+Approach Angle Example…………………………………………………...
+Plate Bumper………………………………………………………………...
+Tubular Bumper……………………………………………………………..
+Hybrid Bumper………………………………………………………………
+Warn M8000-s Winch……………………………………………………….
+Frame End Cap Failure………………………………………………………
+GMAW………………………………………………………………………
+GTAW……………………………………………………………………….
+SMAW……………………………………………………………………….
+FCAW………………………………………………………………………..
+Tooth and Slot Features……………………………………………………...
+Mounting Assembly………………………………………………………....
+Vertical Plate Features…………………………………………………….....
+Bumper Isometric View……………………………………………………..
+Triangular Plates……………………………………………………………..
+Winch Support Plate…………………………………………………………
+FEA Component……………………………………………………………..
+Cardboard Bumper Components…………………………………………….
+Stress Test 1………………………………………………………………….
+Displacement Test 1………………………………………………………....
+Stress Test 2………………………………………………………………….
+Displacement Test 2………………………………………………………....
+Stress Test 3………………………………………………………………….
+Displacement Test 3………………………………………………………....
+Prototype, Rear………………………………………………………………
+Prototype, Side……………………………………………………………....
+Assembly, Front……………………………………………………………..
+Assembly, Top……………………………………………………………….
+Assembly, Side……………………………………………………………....
+
+ii
+
+2
+4
+4
+4
+4
+4
+9
+9
+9
+9
+14
+14
+14
+14
+15
+15
+17
+18
+20
+20
+21
+21
+21
+22
+23
+24
+24
+25
+25
+
+1.0 Introduction
+This report will describe the design and manufacturing process of a front off-road winch bumper
+for the 1996-2002 Toyota 4Runner and 1996-2004 Toyota Tacoma 4x4. This project was
+presented to me from a local machine shop, Maglio, Inc., looking to enter into the off-road
+manufacturing market. The product has to be durable for rigorous use off-road and cost effective
+for the end-user while being easy to assemble.
+The upgraded bumper will serve as a stock replacement with one mounting modification
+required to the front frame rails for added strength. The stock bumper on these generations of
+vehicles is inadequate for their intended use of off-roading due to a lack of approach angle
+(described in Figure 1.1 below), and the ability to harm the vehicle due to harsh environments.
+By redesigning and manufacturing a new front bumper for these vehicles, these problems will
+disappear allowing for an improved off-road utility vehicle. The new bumper weight will also be
+a factor since the plate steel will be heavier than the stock bumper. Keeping the bumper at, or
+under 110 pounds would be ideal to not stress the front end components too much.
+The following is a list of main objectives for this project:
+ Reverse engineer the front end of the donor vehicle with important features such as
+mounting holes and locations of the frame/cab
+ Design bumper using existing mounting locations on frame
+o Include self-fixturing design for components being assembled and cut down on
+unnecessary materials
+o Conduct Finite Element Analysis (FEA) on bumper
+ Make a cardboard prototype of the design
+ Test for fitment and usability on vehicle
+ Perform cost analysis
+Since most companies who manufacture aftermarket bumpers are secretive on how they mount
+to the frame, I will go in and reverse engineer the frame rails and the cab of the vehicle to get the
+locations of the mounting holes using manual tools, and utilize SolidWorks to make a CAD
+model. By having this initial model, I will be able to check clearance and fitment of the bumper
+in the design phase, instead of after manufacturing a prototype. The bumper will be designed in a
+way to ease the assembly process, known as Design for Manufacture/Assembly, which will be
+further described in the literature review section. Other areas of research that will be required for
+the success of this project are material selection and welding methodologies.
+A prototype will be made from the CAD models being designed. It will be made from either
+laser-cut ABS plastic or high-grade, CNC cut cardboard. This prototype will be test fit onto the
+
+1
+
+vehicle to determine if the initial design was accurate. A cost analysis will be conducted at the
+end to determine production costs and how affordable it is to the end-user.
+Following in this report are the background, literature review, design, methods, results, and
+conclusion which will further show the relevance and purpose of this project.
+
+Figure 1.1 – Approach Angle Example
+
+2
+
+2.0 Background and Literature Review
+This section will deal with the background for this project as well as why it is relevant to
+complete. A literature review will follow, adding information on important subjects pertaining to
+the end product.
+
+2.1 Background
+In 1995 and 1996, Toyota introduced the first-generation Tacoma and the third-generation
+4Runner respectively. Since the day they have come out, off-road enthusiasts have used these
+vehicles to their full extent. Climbing over rocks, racing through the desert, and cruising down a
+dirt trail are just some of the ways they have been used. Even though both trucks are great in
+their stock form, owners started to modify them to better handle the harsher environments. One
+of the most important modifications that can be made to these vehicles is an off-road bumper.
+These aftermarket bumpers allow for better protection versus the light metal and plastic that
+makes up the stock bumper on the vehicles, allowing for collisions with the terrain without
+serious damage. An upgraded bumper also has a more optimal approach angle, increasing the
+maximum angle the vehicle can climb from a horizontal plane without interference. Although the
+stock bumper is great for on-road driving, it does not meet expectations off-road.
+Aftermarket bumpers are very popular in the off-roading community, and many companies have
+been established in the market for many years. A few of the large companies include: CBI OffRoad Fabrication, Addicted Off-road, Northwest Trail Innovations, and Shrockworks 4x4
+Products. While they make various other off-road components, they specialize in bumpers and
+other protection products. Each bumper is unique, but they all come fully fabricated and cost
+anywhere between $600 and $1200 before shipping and painting. This can be a daunting price
+point for enthusiasts just getting into the sport with other many other components they would
+need such as suspension, a rear bumper, and a winch.
+There are three main types of bumpers being made by these companies as well: solid plate
+(Figure 2.1.1), tubular (Figure 2.1.2), and a hybrid of the two (Figure 2.1.3). The most popular
+style is the plate bumper since it blends well with the shape of the vehicle’s body versus the
+open-look of the tubular bumper. Each type of bumper made by these companies can be bolted
+onto the stock location, but some may require a new mounting point for strength if they are going
+to start winching. This is important because someone with little to no technical knowledge can
+install one of these bumpers, increasing the market size. Customers only have to fabricate an
+extra piece on their vehicles only if they feel they need to. Winching requires this extra plate
+because of the extreme forces that will be experienced at the frame. Below, Figure 2.1.4 shows
+an example of a winch in action while Figure 2.1.5 shows the damage that can be caused without
+the modification to the frame rails.
+
+3
+
+Although many companies manufacture a front, off-road bumper for the first gen Tacoma and
+the third gen 4Runner, none of them offer a Weld-it-Yourself (WIY) kit option. By designing a
+bumper that can be easily assembled without the need for special part holders, anyone would be
+able to, or have a trusted welder, assemble the bumper while saving money in the end. A cost
+analysis will have to be done at the end to make sure this holds true. I will also see how much it
+would cost to sell a fully fabricated bumper like the already established companies. Since both
+bodies are designed around the same frame, one design can work for both vehicles increasing the
+market size. Since this type of bumper has not been introduced for these vehicles, it definitely
+has the potential to thrive.
+
+Figure 2.1.1 – Plate Bumper
+
+Figure 2.1.2 – Tubular Bumper
+
+Figure 2.1.3 – Hybrid Bumper
+
+Figure 2.1.4 – Warn M-8000-s Winch
+
+Figure 2.1.5 – Frame End Cap Failure
+
+4
+
+2.2 Literature Review
+In order to effectively design an off-road plate bumper, I need to familiarize myself with the
+related subjects. This project requires knowledge in Design for Manufacturing and Assembly,
+material selection, and materials joining. By conducting this research, I have gained the
+necessary tools to complete this project.
+2.2.1 Design for Manufacturing/Assembly
+Design for Manufacturing (DFM) is the integration of product design and process planning
+which allows for an end product that is easily and economically manufactured. Design for
+Assembly (DFA) is the method of design a product for ease of assembly. Components can be
+produced at a low cost while keeping fit, form, and function of the end part. DFM/A allows
+potential problems to be found and fixed in the initial design phase where no resources have been
+wasted by scrapping them. This task is usually performed by a manufacturing engineer when
+they conduct a design review for an existing part. Some guidelines (as well as many others) as
+specified by Engineers Edge is as follows:
+
+
+
+
+
+
+
+
+
+Design around standard cutters, drill bit sizes or other tools
+Avoid small and intricate features such as holes and slots
+Design using “off the shelf” standard or OEM components
+Design for ease of fabrication and assembly
+Avoid complex tooling and equipment
+Simplify design and assembly (KIS)
+Design tolerances must be within the manufacturing processes capabilities
+Design parts to orient themselves (i.e. self-fixturing)
+
+The design stage is very important and highly influential in the end-product’s cost, quality, and
+time to market. These guidelines must be taken into account for a successful and cost effective
+final product (McLean/Engineers Edge, 2011).
+Dr. David Stienstra of the Rose-Hulman Institute of Technology states that in order for good
+DFA, the engineer must cut down on the number of parts in the assembly, design parts with a
+self-locating feature, and reduce the number of manufacturing operations. In order to effectively
+use DFA in this project, I have to take a look at the total number of parts being used and see if I
+can merge any of them together, or take it out completely. This will save time and money in the
+assembly step. In DFA, a big push is to get rid of unnecessary fasteners. Since this project is
+being welded together, the fasteners are not as important. I will have to take a look and see if the
+metal can be bent at a certain spot instead of being welded to another plate.
+Since the bumper will be welded together during final assembly, it is important to make the
+design work well so there will not be extra steps grinding the metal for prep. Having the
+components fit up to each other well will allow the weld quality to go up. Having a large gap
+
+5
+
+between the parts will cause shrinkage and give some distortion along the seam. It is important to
+leave enough space for the weld to get good penetration while keeping it a tight-fit (Manner
+2016). If the space between the pieces getting welded together is not large enough, then there
+will be not enough penetration. If this was the case, the welder would have to go in and grind the
+metal to make room for the weld bead. If the design accounted for this in the first place, the
+assembly would take less time and it would end up costing less as well. Another factor to take
+into the design is the finish of the surface. If a perfectly smooth surface is required, MIG would
+not be a good choice. However, if there can be some spatter on the material that can be taken off
+with some light grinding, then MIG would be the correct choice in the design because of its low
+cost.
+Since the components of the bumper are going to be cut, either water-jet or laser, they have to be
+designed in a way to accommodate for that. By making sure the components can be cut in 2D is
+important since most cutting processes can only do that. If there was a complex angle in the Zplane, the part would have to be cut with a different process, or outsourced to a different cutting
+facility. This is important to take into consideration since there would be a longer lead time on
+the components to start assembling the bumper. Tolerances for the cut components are also
+important. According to Laser Services USA, overall length and width have a tolerance range of
+± .001” - .020” for a laser cut part. The hole diameters and internal machined features have a
+tolerance of .005”. According to Waterjets.org, the water jet process can get within ± .002”.
+Some water-jet companies have a taper issue though, cutting off the edges unevenly. A local
+water-jet company in San Luis Obispo has a variable nozzle to combat this error. It corrects itself
+at a certain angle to get a flat cut on the material.
+2.2.2 Material Selection
+The type of material being selected is a major factor in any manufacturing project. To design and
+manufacture an off-road bumper, material will need to be chosen for the components being
+fabricated as well as the fixtures (if there are any). Many types of materials are being used for
+manufacturing today such as composites, organics, and metals. Of them, metal is most
+commonly used for the protection of an off-road vehicle. While steel and various steel alloys
+have been more popular in the past, some companies, such as Pelfreybilt, are starting to
+introduce aluminum skid plates. The aluminum armor is harder to manufacture, but much lighter
+on the vehicle compared to steel, allowing for better drivability and maneuverability. Both steel
+and aluminum are good choices due to their cost per weight, strength, and material properties.
+Generally, off-road bumpers are being made structurally out of steel plate and steel round tubing.
+Both have unique characteristics and need to be looked into more to be used for this project.
+Steel plate is usually rolled out in two ways: hot rolled and cold rolled. “Hot rolling of sheet
+ingots carried out first since greater reductions in thickness can be taken with each rolling pass
+when the metal is hot” (Smith, 2005). According to Metal Man Knows from the Metal
+
+6
+
+Supermarkets, cold rolling is always done after hot rolling has taken place. The steel is processed
+further in a cold reduction mill at room temperature allowing it to have tighter tolerances and a
+better surface finish. Both hot and cold rolled processes are followed by an annealing process to
+soften the metal. Hot rolled steel is typically less expensive compared to cold rolled steel since
+there is no re-processing times (Wick, 1960).
+Round steel tubing is usually found in two different ways, welded round steel tube (HREW) and
+DOM steel tube. According to the Metals Depot, HREW is a hot rolled electric welded round
+tube. It is structural grade steel, but dimensional accuracy and precision tolerances are low.
+There is also a raised welded seam on the inside of the tubing. DOM steel tubing is a welded
+mechanical round steel tube with no internal weld seam. This tubing is drawn over a mandrel to
+produce more exact dimensional accuracy and tolerances. This type of tubing is recommended
+for high stress applications, increased mechanical properties, strength, and uniformity. DOM
+tubing is used in many bumper designs because of its strength.
+There are numerous steel alloys that could be used in this application so they need to be
+researched and taken into consideration. Out of all of the steel alloys, A36 is the most common
+one. Since it is only hot rolled, it is cheaper to produce but it will have a rough surface finish.
+The yield strength of A36 is also lower than most alloys coming in at 36,300 psi. This type of
+steel is also more difficult to machine down. Since I will be using a water-jet cutter for the
+sheets, this should not be an issue. 1018 mild steel is the next most common alloy, but this is
+cold rolled. It is very similar to the A36, but since it is cold rolled, it has a better surface finish
+and physical properties such as strength, ductility and ease of machining. The yield strength of
+1018 steel is higher than A36 at 53,700psi, but there is a significant difference in price. Finally, a
+high grade alloy is 4130 chromoly steel. It has an even higher tensile strength at 63,100 psi and
+good malleability. This alloy is also easily welded as well as being considerably stronger and
+more durable than the other two, but is the most expensive per pound (Oberg, 2012)
+Lightweight and corrosion resistance is where 6061-T6 aluminum is used best. It is easy to weld
+and machine on making this aluminum alloy a good fit. 6061 is frequently found in aircraft
+construction and is one of the most common grade of aluminum, but requires a specific welding
+process to join together. The density is three times less than that of steel, but costs more per
+pound. Another commonly used grade of aluminum is 7075-T6. It is used primarily in the
+aerospace industry because of its high strength, making it comparable to many steel alloys while
+keeping the weight down.
+Stainless steel is another commonly found type of metal in the automotive industry. Stainless has
+high corrosion resistance compared to typical alloy steel and similar yield strengths as well.
+Stainless steel is more expensive per pound compared to common alloy steels, but is still a viable
+option due to weldability and strength.
+
+7
+
+With the highest strength to weight ratio, titanium is used in high-end applications such as
+racing, aerospace, and health care. Titanium has a higher yield strength than the most high-end
+chromoly steel, but comes at an even greater expense. Even though the price of titanium is
+decreasing over time, it is still about 10 times more expensive than alloy steel (Online Metals,
+2011).
+Material selection will depend on the manufacturing process selection. In a fabricated part such
+as an off-road bumper, steel would be the better choice due to the sub-par fatigue characteristics
+of aluminum, especially along a weld joint as well as the cost per pound.
+2.2.3 Welding Processes
+Welding is an important part of the metal fabrication process, and there are many styles that can
+be taken into consideration. Of the many processes, I will be looking into GMAW, GTAW,
+SMAW, and FCAW. In order to choose the best welding method for this project, I have to look
+at the advantages and disadvantages of each.
+Gas metal arc welding (GMAW), or MIG welding, is a process that uses a continuous bare, solid
+or tubular wire wound on a spool as the electrode. This thin wire goes through a wire feeder and
+out the nozzle of the welding gun to contact the work piece. The weld is protected by a shielding
+gas which also comes out of the welding gun at a controlled rate. Typical shielding gases are
+100% CO2 or a mixture of 75% Ar and 25% CO2. GMAW is typically the most common form of
+welding in the automotive industry since it can be highly automated with the wire feeding feature
+(Strahl, 2001).
+Gas tungsten arc welding (GTAW), or TIG welding, utilizes an arc established between a nonconsumable tungsten electrode and the work piece. A filler rode is used as the filler metal to join
+the two pieces together, but this is not always required. If the space is small enough, autogenous
+welds can be made without the use of a filler rod. The arc and weld puddle is protected by an
+inert shielding gas, usually argon. TIG welding is one of the most versatile methods of welding
+since it can be used on many types of metals and their alloys as well as varying thicknesses. TIG
+welding is one of the slowest processes though, making it one of the more expensive ones to use
+(Strahl, 2001).
+Shielded metal arc welding (SMAW), or stick welding, is a manual process that uses an arc
+established between the tip of a covered metal electrode and the work piece. The electrode
+becomes a filler metal and mixes with the molten base to form the weld metal. This is known as
+a fusion welding process since electricity passes through the electrode and the work piece. The
+electrode uses a flux covering that is decomposed in the arc to produce gases and slag to shield
+the weld from the atmosphere. This helps create a better weld with less defects. SMAW is quick
+and is used on a variety of metals, but takes time to remove slag from the weld (Strahl, 2001).
+
+8
+
+Flux cored arc welding (FCAW) uses both the shielded metal arc processes and the gas metal arc
+welding processes. This makes it similar to GMAW, the main difference being a flux cored
+electrode wire is used instead of a bare solid wire. Two of the main processes in FCAW are selfshieling, and gas-shielding FCAW with the latter requiring an external shielding gas in addition
+to the flux core to shield the weld correctly. FCAW is being used to replace SMAW and GMAW
+processes in areas such as shop fabrication, maintenance, and field erection. Advantages of this
+process include being used outdoors under drafty or windy conditions, and producing a higher
+deposition rate. A disadvantage is that it can only be used on ferrous alloys and some nickel-base
+alloys (Strahl, 2001).
+Other processes include submerged arc welding, plasma arc welding, electroslag and electogas
+welding, as well as many others. The processes looked at are the most common in industry and
+highly available in a commercial setting. Below are figures of the processes discussed.
+
+Figure 2.2.3.1 - GMAW
+
+Figure 2.2.3.2 - GTAW
+
+Figure 2.2.3.3 - SMAW
+
+Figure 2.2.3.4 - FCAW
+
+2.2.4 Bolt Sizes
+While most of the fastenings for this bumper will use the vehicle’s stock location, one bolt on
+each side will have to be added for added support. Determining the correct size of the bolt as
+well as the grade is very important since there will be a large moment and force surrounding
+them. According to Huw Kidwell of Nord Lock, “the function of a bolted joint is to clamp two or
+more parts together. However, the specific purpose of a bolt is to create a clamp force in the joint
+and not to sustain shear, bending, or excessive dynamic loads.” This is very important since the
+bolts that will be used to hold the bumper in place need to counteract all of those as well. Too
+
+9
+
+large of a bolt can cause the joint to have a low clamp load and a high risk for fatigue failure.
+These bolts are also more expensive since they are larger versus a smaller one. Too small of a
+bolt, and you can still lose clamp load and cause the joint to fail.
+In order to determine the correct bolt for the specific joint, you must:
+ Identify the load case
+ Determine the necessary clamping forces in the joint
+ Choose the smallest bolt diameter that can support the clamp load
+ Choose an effective bolt securing method (i.e. nut)
+ Decide on the most appropriate tightening method
+Dr. Jeff Vogwell of Bath University, UK, in the Department of Mechanical Engineering states,
+“a good bolted joint is one which places the bolt in tension and hence the clamped members in
+compression. Friction between the camped members helps resist any sliding of the joint thus
+protecting the bolt in shear.” If this is followed, a correct bolt size will be chosen allowing for the
+joint being bolted together to have the most strength and not fail.
+
+10
+
+3.0 Design
+This section will deal with the actual design of the bumper and key features involved in it. This
+section will also go over important design changes.
+3.1 Bumper Design
+The major design needed for this project to be successful is the plate bumper. The bumper’s
+design needs to be stronger, reliable, and have an increased approach angle while being cost
+effective to the end user. The bumper also has a scope of being close to 110 pounds after
+assembly. This design also needs to incorporate design for manufacturing and assembly
+(DFM/A).
+In order to design the bumper, reverse engineering had to be done on a stock third generation
+Toyota 4Runner to get the correct dimensions of the frame horns and other key mounting
+locations. The stock bumper was removed to expose the three critical mounting locations: the
+front mounting, side mounting plate, and bottom tow points. Metrology equipment and
+techniques were used in reverse engineering these locations. A caliper, with an accuracy of
+0.02mm, was used to measure the height and width of the frame rails. A metric steel rule, with an
+accuracy of 0.5mm, measured the distance between two holes as well as their location. The
+distance between the centers of the frame rails as well as the height of the rails and cab was
+measured using a class 2 metric tape measure and comparing it to spec drawings from Toyota.
+Because of the poorly designed front plate by Toyota, a new, stronger plate has to be welded in
+its place. This will be the only non-stock feature for this design, but must be completed if the
+end-user wants to use this bumper as a winching platform. Without this modification, the frame’s
+endcaps will tear and cause damage to the vehicle. However, if the end-user will not be using a
+winch, they can skip the modification and not mount the bumper on the front plate. The bumper
+will still be strong for use which is backed up by the finite element analysis (FEA) done below.
+Once each of the key features was measured, and rudimentary part drawings were made,
+SolidWorks was utilized to start the computer-aided design process. The mounting portion of the
+bumper is the most important part since it will be experiencing forces is various directions as
+well as moments from winching. The thickness of the plates being used is important as well
+since they need to be just strong enough for those forces without too above them. After
+researching the companies listed in the Literature Review section, it was made apparent that
+0.25” was the standard mounting thickness. This will be proven to be sufficient below in the
+FEA analysis.
+After the research done on the various alloys of steel, it was decided that A36 steel plate would
+be used due to the wide availability of it, the cost vs. strength ratio, and the high weldability of
+the material. The strength of the metal is approved in the Finite Element Analysis section in the
+
+11
+
+Results below. A36 is not as machinable as 1018 steel, but the components are going to be cut
+using laser, so it does not make a difference. The cutting process chosen is shown in detail in the
+cost analysis section below.
+On the topic of laser cutting, each piece has been designed to be cut by a 3-axis waterjet cutter.
+This was done in order to get rid of complex machinery, such as a 5-axis cutter. These cutters are
+very expensive so most companies do not have them, or have access to them. This brings the cost
+of cutting the material significantly down since each part is made in a 2-D plane. The thickness
+of the mounting plates as described below will be cut from ¼” plate steel while the aesthetic
+front plates will be cut from 3/16” plate steel. Design for Manufacturing of the bumper was taken
+into consideration to increase the manufacturability of it while decreasing the overall cost. While
+the overall number of parts is high, the complexity of the assembly and the lack of specialty
+tools, such as a fixture, was a big part of it. Each bumper is made up of 42 parts, 26 of them
+being unique. Many of the components are also designed using tooth and slot construction to
+locate the parts on the bumper (Figure 3.1.1). The components are broken up into two sections
+(aesthetic and mounted) listed below (each component drawing is located in the Appendix as
+well):
+Aesthetic Components
+Front Middle Plate
+Front Upper Plate
+Front Lower Plate
+Angled Upper Plate x2
+Angled Middle Plate x2
+Angled Lower Plate x2
+Side Upper Plate x2
+Side Middle Plate x2
+Side Lower Plate x2
+
+Rear Endcap x2
+Large Gusset x2
+Center Gusset
+Light Mounting Plate x2
+Light Mount Gusset x2
+Light Mount x2
+Top Plate
+Grille Guard
+Winch Plate Support
+
+Mounting Components
+Lower Frame Mount Channel D
+Winch Mount Plate
+Side Tube Mount x2
+Front Frame Mount Plate x2
+
+Lower Frame Mount Channel P
+Side Frame Plate x2
+D-Ring Shackle Hanger x2
+Vertical Plate x2
+
+While bending would decrease the overall number of parts required to assemble the bumper, the
+steel would be more brittle than its welded counterpart. This could cause the bumper to fracture
+if it took an impact which is not ideal for off-road use. It would also require that the plates go to
+another facility to get precisely bent on a large press brake. Once the plates are bent, the creases
+would then have to be welded to ensure that the plates would not get bent back from an impact.
+12
+
+Instead of going through these extra steps, adding the few extra parts would be more beneficial
+in order to keep transportation and manufacturing costs down.
+At first, a steel tube was going to be used as the bottom brace, but standard channel steel was
+chosen instead since it would be nearly as strong while cutting back on the weight from the
+lower connecting plate (Figure 3.1.2). A vertical mounting plate was designed perpendicular to
+the channel steel. This plate has unique chamfers in it to locate the angled aesthetic components,
+and more importantly, increase the approach angle of the bumper (Figure 3.1.3). The mounting
+holes on the bumper were designed around the stock frame mounts as well as one reinforced
+plate needed to be welded to the front of the frame rail as described in the Background earlier. In
+order to reinforce the sides of the bumper, a connecting rod had to go from the bumper to the
+side of the frame. This will prevent the bumper from crushing in on itself and damaging the
+vehicle. This tube can be seen below in Figure 3.1.2. The horizontal plate that connects both
+mounting sides will hold the winch. This plate will experience a tremendous amount of torque
+and downward force from the winch, so it must be strong. An FEA analysis will be conducted on
+this plate to determine the failure point of the plate.
+After discussing with users on various Toyota forums, it was made apparent that light features
+were a must have. On the angled plates, a large 5” diameter hole is included with a mounting tab
+and gusset to withstand the downward forces it will experience off-road. These holes are cut
+parallel to the front face in order to have all of the light to go straight out. A 5” DOM ID tube
+will be welded on the inside of the plate to direct the light outside of the bumper instead of
+having it trapped internally. A smaller 2.5” diameter hole is in the same plate to place an
+aftermarket LED fog light, or something similar. This light is meant to be pressed in as opposed
+to bolted down like the larger diameter light.
+Each component on the Bill of Materials can be purchased by numerous metal companies in
+person or online. They were designed in SolidWorks to match the readily available stock in order
+to get very exact pricing.
+The purpose of the design is to minimize the complexity of the assembly. This is done by having
+the self-locating tooth and slot features on the main components. Each plate can be located and
+welded to the bumper by the tooth and slots and matching the angles of the plates around it. The
+only tools required by the shop to assemble this bumper are a welder, some clamps, and basic
+hand tools. This will allow Maglio to continue their normal machining operations without taking
+too much space to manufacture the bumpers. The steel plate will be outsourced to a CNC
+waterjet facility to keep the footprint in the facility low. Since the bumper is a specialty off-road
+item, it will likely have a low volume, so it is important to keep the shop impact low. Figure
+3.1.4 shows an isometric view of the bumper in its entirety.
+
+13
+
+Figure 3.1.3 – Vertical Plate
+
+Figure 3.1.1 – Tooth and Slot Features
+
+Figure 3.1.2 – Mounting Assembly
+
+Figure 3.1.4 – Bumper Isometric View
+
+14
+
+3.2 Design Changes
+In order to better implement DFM/A methodologies, I decided to get rid of a few of the aesthetic
+plates. Figure 3.2.1 shows the old design with the triangular side plates below. Initially, these
+plates connected the angled to the side plates. It blended the corner to have more of a radius, but
+taking out these plates allowed for 6 less parts and 8 less welded edges. Overall, this would make
+the bumper cheaper to manufacture. The other plates had to be extended to meet each other once
+the triangle plates were taken out, so a complete redesign of them was done. These plates were
+made to be easily waterjet-cut in 2-D, or saw cut since some of them are nominal bar stock. This
+will cut down on the total manufacturing cost of the bumper as well. The angled middle plate had
+to use some 3-D geometry on the large light feature, but these will be easy to manufacture on the
+waterjet. After the initial FEA analysis was complete, it was made apparent that the winch plate
+needed to be reinforced. A nominal bar stock of 1.5” coming down the back of the plate will do
+just that by being welded to the front frame plate and the side vertical plates. This cuts down on
+the displacement the bumper had when a load was applied as well as cutting down the stresses it
+endured. Overall, the design changes allowed for not only a stronger bumper, but cheaper
+manufacturing costs and ease of assembly.
+
+Figure 3.2.1 – Triangular Plates
+
+Figure 3.2.2 – Winch Support Plate
+
+15
+
+4.0 Methods
+This section will first discuss the finite element analysis (FEA) completed on the model in
+Solidworks. After the FEA is complete, a prototype of the bumper will be assembled and
+analyzed from CNC cut cardboard.
+4.1 Finite Element Analysis
+FEA is a type of program that uses the finite element method to analyze a material or object and
+find how applied stresses will affect the material or design. This will help determine any points
+of weakness in the bumper design before the actual bumper gets manufactured. In order to get
+the bumper ready for the analysis, it had to be made into one solid part. Because of the way the
+parts are joined together in the model, a mock weld had to be added in each of the open sections.
+Not only will these extrusions strengthen the whole model, but they show exactly what should
+happen since those channels will be filled with weld material. Once each of the holes in the
+model was filled, each part was able to be combined making one solid part.
+In order to implement the FEA, three components have to be set-up: the fixed geometry, the load
+being applied, and finally a mesh that the analysis will run over. The fixed geometry has to
+match exactly how it will be bolted onto the car. This is done by placing the on each of the
+surfaces of the model that will be bolted to the frame of the car. A split line is used in order to
+get a small area around the bolt holes to be fixed in place. The split lines were placed on the front
+mounting plate and the lower mounting plate. By doing this, it gives a more realistic look into
+how the bumper will be attached instead of just doing the inner diameter of the bolt holes. This
+will let the computer know that these are fixed points and should not move around when a load is
+applied.
+The next part that has to be added is the load being applied to the model. This will replicate the
+forces and the moment being applied to the bumper. These forces are brought on by the winch
+which is bolted onto the bumper. Since the winch line is not located right on top of the winch
+mounting plate, a new coordinate system had to be made in order to raise the load. Using the
+remote load feature, a load can be applied 2” above the mounting plate, which is where the
+winch line will be coming out. This load simulates the car being pulled by the winch line. It will
+be tested at 5000lbs (an average load of the winch) and 9500lbs (the max load the winch can
+handle). A moment is also applied on the same coordinate system and it will demonstrate the
+torque the bumper will experience from winching.
+Finally, a mesh had to be created on the model so the computer can run the finite element
+analysis. A curvature based mesh was created with a very fine mesh density. This style of mesh
+places small triangles around each of the holes, getting a more precise analysis around them. The
+max element size is set to 1.00” while the minimum number of elements in a circle is set to 8.
+
+16
+
+Once the settings are applied, the computer creates a mesh over the entire model. This is what
+the computer will analyze using the finite element method. The picture below shows the forces
+being applied (in purple), the fixed geometry (in green), and the mesh (denoted by the small
+triangles everywhere).
+
+Figure 4.1.1 – FEA Components
+
+17
+
+4.2 Prototype Analysis
+In order to physically test the design, a cardboard bumper prototype needs to be made. While the
+cardboard being used is not the correct thickness for each of the plates, it works as a great
+example of how each component will fit together on the actual bumper. The cardboard is cut out
+on a CNC cardboard cutter on campus. The cutter does not have as tight tolerances as the
+waterjet cutter that will be used for the end product, but each part will be within ± 0.030”. The
+cardboard cutter is also only able to cut in 2-D unlike the waterjet. Some parts have to be
+modified to work on the cutter such as the large light holes on the angled middle plates. Even
+though the parts won’t come out as nice as a waterjet cut part would, they will work well for the
+prototype application. Each part will be glued together in the same way they will be welded
+together on the actual part. Assembling the bumper this way is a good indication on how the real
+bumper will be assembled. The prototype will show various flaws in the design (if any) in terms
+of ease of assembly, manufacturability, and fitment errors. Figure 4.2.1 below shows the
+cardboard components that are waiting to be assembled into the prototype.
+
+Figure 4.2.1 – Cardboard Bumper Components
+
+18
+
+5.0 Results and Discussion
+In this section, the results from the FEA study will be discussed, as well as how the prototype
+bumper went. These results will include what went wrong and what went right with the studies
+conducted. Various questions will also be answered to interpret the findings.
+5.1 FEA Study Results
+Setting up the FEA study was discussed in detail in the previous section. After running the first
+round of simulations in Solidworks, it was found that the stress was too high on the bumper with
+only the 5,000lb force. The yield strength of the material is 36,300 psi, but a few parts of the
+bumper exceeded this highlighted in Figure 5.1.1 below. Since the stress is higher than the yield
+strength in those highlighted zones, the bumper will fail. This can also be seen in the
+displacement image shown in Figure 5.1.2. The max displacement on the rear of the winch plate
+exceeds 0.40” which is shown in red. This kind of movement will cause the bumper to fold in on
+itself and make it completely useless. This result was completely unexpected at first. I thought
+the gussets that were placed in the design would be enough to reinforce the bumper, but this was
+proven wrong.
+After researching what could make the winch plate stronger, a small flange coming down the
+back will make it much more rigid. This is due to the moment of inertia equation, where I =
+bh3/12. By adding height to the plate, it will increase the moment of inertia by an exponential
+factor of 3. This flange will span the length of the winch plate and come down 1.5”, increasing
+the moment of inertia on the rear of the plate from .0327in4 to 11.234in4. Running the new
+simulation in Solidworks proves that the bumper is much more rigid now at the 5,000lb
+benchmark. Figure 5.1.3 highlights the two small sections where the stress is higher than the
+yield strength, but this is completely normal. The displacement image that is shown below in
+Figure 5.1.4 displays that the bumper only moved 0.012” in the same spot as the previous test.
+This is roughly 33 times less movement the previous iteration of the bumper. While there are
+more colors shown in Figure 5.1.4 compared to 5.1.2, the overall displacement is much lower.
+The areas that are blue in the previous figure were still moving a significant amount, but not as
+much as the actual winch plate. Since the winch plate is hardly moving now, the other
+components start to show their actual movement. The largest displacement from this simulation
+is just over 0.028” shown in red on the top plate.
+
+19
+
+While the bumper will not be used on a heavy vehicle and should not reach this kind of force, it
+is important to test the maximum the winch can handle to see the effects it will have on the
+bumper. By changing the remote load to a 9,500lb force, we will be able to see how much more
+the bumper will be stressed out as well as how much it will displace. Compared to the second
+stress test, the 9,500lb load did increase the stresses applied to the bumper, but only marginally.
+Only a few more areas are higher than the yield strength which is highlighted in the figure below.
+Since the bumper should never experience this high of a force, the bumper does not need to be
+reinforced any more than it already is. Looking at the displacement chart in Figure 5.1.6 shows a
+very similar spread compared to Figure 5.1.4. The winching plate moved 0.025” this time while
+the top plate moved 0.053”. Even though the displacement doubled from the previous test, a
+0.050” movement on a non-important piece is completely fine. This is also reinforced since the
+forces should not reach the max load of the winch, but if it does, the bumper will still hold up.
+These results also prove that A36 steel is a viable alloy to choose. Since the stress is below the
+yield strength of the A36, it does not make sense to make it out of a stronger alloy that would
+also be more expensive.
+
+Figure 5.1.1 – Stress Test 1
+
+Figure 5.1.2 – Displacement Test 1
+
+20
+
+Figure 5.1.3 – Stress Test 2
+
+Figure 5.1.4 – Displacement Test 2
+
+Figure 5.1.5 – Stress Test 3
+
+21
+
+Figure 5.1.6 – Displacement Test 3
+
+5.2 Prototype Assembly Results
+In order to physically test the bumper and how it was to be assembled, a prototype had to be
+made. The prototype was made from CNC cut cardboard that was cut on Cal Poly’s campus. The
+components, as shown in Figure 4.2.1 in the previous section, were assembled to match a
+production bumper’s assembly. Each piece was fitted together and tacked into place in order to
+get the initial shape of the bumper. A larger glue bead was then placed in order to fully attach the
+bumper components. This would be very similar to a tack weld, and a final finishing bead. In
+order for this prototype to be successful, each piece that does not have a locating tab has to be
+placed in the correct location, otherwise it will not work. Figure 5.2.1 and Figure 5.2.2 below
+shows the fully assembled prototype.
+Once the prototype bumper was assembled, it had to be fitted onto the vehicle. The stock bumper
+and tow hooks had to be removed in order to do this. With the bumper removed, the prototype
+could be lined up to get the top plate trimmed to the correct size and shape of the body. Overall,
+the bumper sat where it was supposed to go. Figures 5.2.3-5.2.5 show the bumper fitted on the
+vehicle. The front frame mounts were glued too close to the lower frame mount holes, causing
+them to not align by ¼”. This could have been prevented if they were placed with more accuracy.
+Another option would be to locate the front mounts farther away from the lower mounting holes
+and attach a shim to get it in the correct position. This would allow the bumper to be placed in
+the absolute correct positon since the end-user could have placed the new end cap at different
+spots in or out of the frame horns.
+The next issue with the prototype was the overall height. The bumper was too tall for the body of
+the car. It sat between ½” below the correct location. In order to fix this, the overall height of the
+vertical plates will have to be lowered. This is problematic if the user wants to install a winch
+though. The vertical plate will have to be completely redesigned in order to place the winch plate
+lower to account for the loss in height. There needs to be at least 9 ½” between the top of the
+
+22
+
+winch plate and the bottom of the top plate to place a winch inside of the bumper. The redesign
+will have to lower the overall height by at least 1” and dropping the location of the winch plate.
+This issue was unexpected since the height of the frame, and the body had an accurate
+measurement. These heights were checked with technical drawings and rechecked using a
+precise tape measure.
+The final thing that needs to be changed with the design is tucking in the front, far corners. Right
+now they stick out quite far, so in order to prevent the bumper from colliding with various
+objects, the angles will need to come in closer to the body. This was a little more expected since
+I didn’t know exactly how the body sat above the frame. This is a relatively easy modification in
+the design, done by just changing the angle of the top plate.
+
+Figure 5.2.1 – Prototype, Rear
+
+23
+
+Figure 5.2.2 – Prototype, Side
+
+Figure 5.2.3 – Assembly, Front
+
+24
+
+Figure 5.2.4 – Assembly, Top
+
+Figure 5.2.5 – Assembly, Side
+
+25
+
+5.3 Cost Analysis
+In order to making the bumper competitive on the market, it would need to be sold for less than
+the average price for a bumper on the market at $1,000. A full cost-analysis of the bumper had to
+be done in order to see whether or not the bumper is a viable option. Since waterjet and laser
+cutting would both provide tight enough tolerances and a good finish, the cutting cost will
+determine which one will be chosen. Various laser and waterjet cutting companies were asked to
+give a quote based off of the parts that needed to be cut out. They gave a quote in batch sizing of
+1, 10, and 100 sets of the bumper components in order to see how many would need to be bought
+to make the budget realistic. Table 1, 2, and 3 in the Appendix below shows the full cost analysis
+including the average price for the two types of cutting, the material cost of the steel, and the
+total cost to weld the bumper together. The cost analysis does not include the cost of the welding
+rig as well as the rent since the owner of the machine shop already has the space needed for this
+process and the Miller welding rigs.
+The total cost to make an infrequent, single bumper would be about $2,066 for waterjet cutting
+and $633 for laser cutting. This is a difference of $1433 between the two processes, and $367
+between the laser cutting process and the average bumper price. While this is not a sustainable
+business model, selling the bumper at $1,000 would still result in a 37% markup.
+Another study showed how much 10 bumpers would cost to manufacture. The cost for waterjet
+cutting is $1,440, while the cost for laser cutting is $566. Using the laser cutter, this would result
+in a 44% markup. This batch size is more sustainable than the previous one, and the final price of
+the bumper can also be decreased to make the customer happier in the end.
+The final batch sized used was a quantity of 100. Waterjet cutting would cost $1,353, and laser
+cutting would cost $531. This price is not much different than the batch size of 10, so either one
+would be beneficial to make. Both of these sizes have the potential to be profitable. Going
+further than 100 units per batch would not make sense for this type of product since it is already
+in a limited market, the shop would lose money in the end from not selling all of the bumpers
+they made. Since the difference between the batch sizes of 10 and 100 is only $34.69, it does not
+make much sense to take on the risk of buying enough materials for 100 bumpers. Once the 10
+are sold, another batch can be purchased to keep up with the demand. This will cut down on
+storage costs in the shop as well as clutter from the material.
+5.4 Final Remarks
+Besides the setbacks found through the physical bumper test on the vehicle, it went together
+extremely well with no major issues. By lowering the height of the vertical plate, and decreasing
+the approach angle to drop the winch plate further down. The biggest downside to this change
+would be roughly a 15o loss in the approach angle. The overall weight of the bumper is a little
+over the initial scope at 120 pounds; it is relatively close and should not over-stress the front
+
+26
+
+suspension. While I knew there would have to be some trimming done to the top plate, the
+results were not expected at all.
+These design changes are doable, but a second prototype will be needed to make sure each of the
+changes fixed the problem. The FEA analysis will not need to be conducted again since only the
+heights and angles of the components will need to be changed. The structural components are
+staying the same, and these are the most important of the bumper. None of the results from the
+finite element analysis and prototype build/analysis were difficult to understand. There was a
+learning curve to get the FEA up and running, but after it was completely set-up it was very easy
+to manipulate the inputs to get the data that was needed. The overall benefits of the bumper are
+also very similar to that of other competitors, and each of the objectives has also been met. These
+include a fully designed bumper, FEA and prototype analysis, and a full cost analysis.
+This design has the potential for success as long as the changes are implemented correctly. Once
+the height of the bumper is corrected in the design, a new prototype can be made to check for
+fitment one last time. A finite element analysis will have to be done again just to make sure the
+plates are acting in a similar way to the previous design. With the slightly modified design, the
+product can be marketed below the average cost of a current bumper while still making a profit
+on it in the medium volume of production. Not including the cost of the material, the only added
+cost to the shop is that of energy to run the welders.
+
+27
+
+6.0 Conclusions
+The 1996-2002 Toyota 4Runner and 1996-2004 Toyota Tacoma had many shortcomings in
+terms of the stock front bumper. Since it is extremely flimsy, the bumper would not take the
+abuse an off-road vehicle requires. The bumper also has a poor approach angle so it would rub
+on obstacles well before the wheels make contact with the rock or trail. While there are various
+companies that manufacture an aftermarket, off-road bumper, they are all extremely expensive
+and do not have a DIY kit for the people that want to fabricate their own bumper but not design
+it. Each of the objectives was met, including: reverse engineering the front end of the vehicle,
+modeling the bumper in CAD, performing a FEA, manufacturing and assembling a prototype,
+and finally conducting a full cost analysis.
+By making a working design, Maglio, Inc. is now able to start manufacturing a test bumper in
+order to see how close the FEA was to what will actually happen when the bumper gets winched
+on. Many design changes occurred along the way in order to make the bumper easier to
+assemble/manufacture, as well as be stronger. These changes were uncovered from the
+simulations done in SolidWorks, and having conversations with the client to determine what
+would make it easier to build.
+This project allowed me to apply all of the learnings I have had in the manufacturing classes as
+well as quite a few industrial engineering skills as well from the IME department at Cal Poly. By
+completing this project, I was able to become more familiar with SolidWorks that will help me
+much more in mu future careers. I also taught myself useful skills such as conducting a Finite
+Element Analysis in SolidWorks, and using CAD models to be brought to life with a 2-axis
+cardboard cutter for the prototype. Seeing a project all the way through, from inception to
+production, was a very neat experience, allowing me to see the numerous steps that are required
+in making a useful and quality product. Many changes happened along the way as I got more
+familiar with visualizing the easiest way to put together the product and trying to get rid of
+unnecessary components. Since there were many design changes, the overall design time took
+much longer than expected, but was more accurate to the final design than it would have if the
+mistakes were found during the manufacturing step.
+Prototyping the bumper proved to be very useful in order to see any design flaws, which did
+occur. Once the changes have been made to incorporate these fixes, a second prototype would
+have to be made to make sure everything was alright. It is tough to make the first prototype
+exactly right the first time, so one change I would make to this project would be to schedule
+more time to make a second, corrected prototype. The only reason I did not was due to time
+constraints on the cardboard cutter, which was being used by another class and could only be
+operated with the instructor present.
+
+28
+
+Overall, I learned a great deal about how to take a project from an idea to the design, and finally
+to a fully tested prototype. By doing this, I applied numerous skills I have learned from my time
+at Cal Poly in the Industrial Engineering major. Not only did I learn about how far I can push
+myself to finalize a product, but I enjoyed doing it.
+
+29
+
+7.0 Appendices
+Table 1 – Bill of Material
+
+Table 2 – Waterjet Cutting Costs
+
+30
+
+Table 3 – Laser Cutting Costs
+
+31
+
+2
+
+1
+
+B
+
+B
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+DRAWN
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+2
+
+MATERIAL
+
+COMMENTS:
+
+A36 Steel
+
+FINISH
+
+Black Powder Coat
+DO NOT SCALE DRAWING
+
+Overview
+
+DATE
+
+D Donlon
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:20 WEIGHT:
+
+1
+
+REV
+
+SHEET 1 OF 29
+
+A
+
+2
+Part Name
+
+B
+
+A
+
+Lower Frame Mount D
+Lower Frame Mount P
+Front Frame Mount
+Vertical Plate
+Winch Plate
+Center Gusset
+Side Frame Mount
+Side Frame Tube
+DRing Shackle Hanger
+Front Upper Plate
+Front Middle Plate
+Front Lower Plate
+Angled Upper Plate
+Angled Middle Plate
+Angled Lower Plate
+Side Upper Plate
+Side Middle Plate
+Side Lower Plate
+Rear Endcap
+Large Gusset
+Light Mount
+Light Gusset
+Light Tube
+Top Plate
+Tube Grille Guard
+Winch Support Plate
+
+1
+Quantity
+1
+1
+2
+2
+1
+1
+2
+2
+2
+1
+1
+1
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+1
+1
+1
+
+Thickness
+1/4
+1/4
+1/4
+1/4
+1/4
+1/4
+3/16
+
+B
+
+1/2
+3/16
+3/16
+3/16
+3/16
+3/16
+3/16
+3/16
+3/16
+3/16
+3/16
+3/16
+3/16
+3/16
+3/16
+
+Senior Project Design
+
+1/4
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+Bill of Materials
+
+D Donlon
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+A36 Steel
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black Powder Coat
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+DO NOT SCALE DRAWING
+PROHIBITED.
+
+2
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:20 WEIGHT:
+
+1
+
+REV
+
+SHEET 2 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+D Donlon
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+A36 Steel
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black Powder Coat
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+DO NOT SCALE DRAWING
+PROHIBITED.
+
+2
+
+Mounting
+Assembly
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:20 WEIGHT:
+
+1
+
+REV
+
+SHEET 3 OF 29
+
+A
+
+2
+
+1
+10.80
+1.38
+.95
+
+B
+
+54.00°
+
+B
+
+3.00
+
+.20
+
+8.67
+
+45.00°
+
+1.23 1.48
+.55
+.55
+
+.46
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+2
+
+DATE
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Lower Frame
+Mount D
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 4 OF 29
+
+A
+
+2
+
+1
+10.80
+
+1.38
+.95
+
+B
+
+54.00°
+
+3.00
+
+.20
+
+B
+
+8.67
+
+45.00°
+
+1.48 1.28
+
+.55
+.55
+
+.46
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+2
+
+DATE
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Lower Frame
+Mount P
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 5 OF 29
+
+A
+
+2
+
+1
+R.50
+
+R1.50
+
+3.55
+.75
+
+B
+
+B
+
+R.13
+
+.55
+6.30
+
+.50
+
+3.50
+1.57
+
+.75
+
+1.30
+
+A
+
+R.50
+
+1.28
+
+Senior Project Design
+
+2.80
+
+TITLE:
+NAME
+
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 1/4"
+
+2
+
+Overview
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 6 OF 29
+
+A
+
+2
+
+1
+
+4.88
+3.00
+1.65
+
+B
+
+B
+
+2.00
+2.02
+3.00
+
+7.04
+
+2.25
+12.75
+1.75
+5.00
+1.65
+
+4.24
+
+1.40
+2.25
+4.00
+
+A
+
+Senior Project Design
+TITLE:
+NAME
+
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 1/4"
+
+2
+
+DATE
+
+Vertical Frame
+Mount
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:20 WEIGHT:
+
+1
+
+REV
+
+SHEET 7 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+
+27.15
+10.00
+
+.25
+2.00
+
+4.00
+
+2.00
+
+4.00
+
+2.00
+1.25
+
+2.00
+3.50 4.50
+
+7.00
+2.00
+
+.50
+1.25
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+Winch Plate
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 1/4"
+
+2
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 8 OF 29
+
+A
+
+2
+
+1
+
+6.72
+
+B
+
+B
+
+1.75
+
+1.25
+
+3.30
+
+4.75
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+Center Gusset
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 1/4"
+
+2
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 9 OF 29
+
+A
+
+2
+
+B
+
+1
+
+B
+
+4.13
+
+.47
+2.00
+
+.64
+
+.50
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+Side Frame Plate
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 10 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+
+16.19
+
+1.25
+
+31.50°
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+Side Frame Tube
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 11 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+R1.20
+
+7.00
+
+1.00
+
+2.40
+1.20
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+DRing Shackle
+Hanger
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 12 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+
+.74
+
+.27
+
+27.65
+
+2.00
+
+.53
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+Front Upper
+Plate
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 13 OF 29
+
+A
+
+2
+
+B
+
+1
+
+B
+
+27.65
+R1.75
+
+4.00
+
+.27
+1.24
+
+3.50
+
+2.98
+
+8.34
+.52
+
+2.42
+
+.38
+
+.53
+
+8.00
+10.00
+
+1.00
+
+R.50
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+Front Middle
+Plate
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 14 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+27.65
+.74
+
+3.83
+
+5.00
+
+10.00
+
+.27
+1.75
+
+6.34
+
+.52
+
+3.08
+
+2.09
+2.50
+
+5.00
+
+5.00
+
+6.33
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+Front Lower
+Plate
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 15 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+21.16
+2.00
+
+1.91
+
+22.35
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+Angled Upper
+Plate
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 16 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+
+20.58
+2.50
+
+4.83
+
+1.75
+
+3.07
+
+8.34
+
+2.75
+
+3.50
+
+5" Diameter Hole
+105.18°
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+Angled Middle
+Plate
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 17 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+1.50
+
+21.33
+
+56.30°
+
+6.34
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+Angled Lower
+Plate
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 18 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+10.00
+
+2.00
+1.58
+
+11.22
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+Side Upper Plate
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 19 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+11.22
+
+1.00
+2.75
+
+11.36
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+Side Middle
+Plate
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 20 OF 29
+
+A
+
+2
+
+B
+
+1
+
+.50
+
+B
+
+10.64
+
+11.36
+
+1.50
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+Front Upper
+Plate
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 21 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+
+4.75
+3.85
+.50
+
+1.58
+
+1.00
+
+5.08
+.50
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+Rear Endcap
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 22 OF 29
+
+A
+
+2
+
+B
+
+1
+
+B
+
+9.26
+42.07°
+
+.88
+2.25
+44.01°
+
+1.50
+
+5.35
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+Large Gusset
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 23 OF 29
+
+A
+
+2
+
+1
+1.25
+.63
+
+B
+
+B
+
+.75
+
+4.95
+
+.63
+
+15.00°
+
+2.86
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+Light Mount
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 24 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+
+2.57
+
+.25
+
+.50
+10.00°
+
+1.15
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+Light Gusset
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 25 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+
+25.00°
+
+3.18
+
+.62
+5.50
+
+5" Inner Diameter
+
+A
+
+Senior Project Design
+TITLE:
+NAME
+
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+2
+
+Light Tube
+
+DATE
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 26 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+3.85
+
+R.13
+
+5.56
+
+.50
+
+10.00
+
+15.00°
+.01
+
+2.50
+
+27.65
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+Top Plate
+
+DATE
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 27 OF 29
+
+A
+
+2
+
+1
+
+16.74
+
+B
+
+B
+
+10.30
+10.03
+
+124.67°
+
+1.53
+TRUE R.63
+TRUE R.51
+27.75°
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 3/16"
+
+2
+
+DATE
+
+Tube Grille
+Guard
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 28 OF 29
+
+A
+
+2
+
+1
+
+B
+
+B
+
+27.15
+1.50
+
+Senior Project Design
+
+A
+
+TITLE:
+NAME
+PROPRIETARY AND CONFIDENTIAL
+
+DRAWN
+MATERIAL
+
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+FINISH
+REPRODUCTION IN PART OR AS A WHOLE
+Black
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+D Donlon
+
+A36 Steel
+Powder Coat
+
+Thickness: 1/4"
+
+2
+
+DATE
+
+Winch Support
+Plate
+
+SIZE DWG. NO.
+
+A
+
+Bumper
+
+SCALE: 1:10 WEIGHT:
+
+1
+
+REV
+
+SHEET 29 OF 29
+
+A
+
+8.0 Bibliography
+"3rd Gen. Toyota 4runner Products." CBI Offroad Fab RSS. Web. 18 Feb. 2016.
+Bumpers, Rock Sliders, Rocker Protection, Skid Plates, ShrockWorks. Web. 18 Feb. 2016.
+Davies, A. C. The Science and Practice of Welding. Cambridge: Cambridge UP, 1992. Print.
+DESIGN CONSIDERATIONS FOR WELDING (n.d.): n. pag. Wisconsin Madison Engineering.
+Web.
+"Design For Manufacturing (DFM) Guidelines - Engineers Edge." Engineers Edge - Design,
+Engineering & Manufacturing Solutions. Web. 09 June 2011.
+"Guide to Buying Alloy Steel Online | Online Metals Guide to Selecting Metals for Your
+Project." Guide to Buying Alloy Steel Online | Online Metals Guide to Selecting Metals for Your
+Project. Web. 16 Feb. 2016.
+Kidwell, Huw. "How to Pick the Right Size." Bolted 2009: 9-11. Print.
+"Metal Supermarkets | Buy Stainless Steel, Aluminum, Hot-Rolled, Cold-Rolled, Alloy, Bronze,
+Copper, Brass, Tool Steel, Galvanized." Metal Supermarkets Home Comments. N.p., n.d. Web.
+18 Feb. 2016.
+Oberg, Erik. Machinery's Handbook 29. New York, NY: Industrial, 2012. Print.
+"Obtainable Tolerances with Waterjets." Waterjets.org. N.p., n.d. Web. 21 Feb. 2016.
+Smith, William F., and Javad Hashemi. Foundations of Materials Science and Engineering.
+Boston: McGraw-Hill Higher Education, 2005. Print.
+Spitler, David, Jeff Lantrip, John G. Nee, and David A. Smith. Fundamentals of Tool Design.
+Dearborn, MI: Society of Manufacturing Engineers, 2003. Print.
+"Steel vs. Aluminum: Introduction." US Steel. 2 Apr. 2008. Web. 08 Nov. 2010.
+<http://xnet3.uss.com/auto/steelvsal/intro.htm>.
+Strienstra, David. "Introduction to Design for (Cost Effective) Assembly and Manufacturing."
+Georgia Tech. N.p., n.d. Web. 21 Feb. 2016.
+Strahl, Richard A. Introduction to Welding Engineering. Dubuque, IA: Kendall Hunt Pub, 2001.
+Print.
+
+60
+
+T., Laser Services Insight:, and Tolerances For Laser. TOLERANCES FOR LASER CUTTING &
+DRILLING MATERIAL (n.d.): n. pag. Laser Services USA. Web.
+"Topic: Tacoma End Cap Mod | Northwest Overland." Northwest Overland. N.p., n.d. Web. 18
+Feb. 2016.
+Wick, Charles H. Chipless Machining; Methods of Cold Forming Ferrous Metals, including
+Heading, Rolling, Spinning, Swaging, Extruding, and High-energy-rate Forming. New York:
+Industrial, 1960. Print.
+Zhao, T., J. Zhang, and Y. Jiang. "A Study of Fatigue Crack Growth of 7075-T651 Aluminum
+Alloy." International Journal of Fatigue 30.7 (2008): 1169-180. Web.
+
+61
+
+

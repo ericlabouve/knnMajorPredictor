@@ -1,0 +1,1244 @@
+Grain Orientation Effects on the Rotating-Bending Fatigue Properties of
+Forged 7050-T7452 Aluminum Alloy
+
+A Senior Project
+Presented to
+The Faculty of the Materials Engineering Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+Of the Requirements for the Degree
+Bachelor of Science in Materials Engineering
+
+By
+
+Matthew Cristler
+Jonas Zhang
+
+June 2016
+
+Abstract
+In order to investigate the effects of grain orientation on the high cycle fatigue properties of
+7050-T7452 aerospace grade aluminum, rotating-bending fatigue tests were performed on
+longitudinal (LG) and short transverse (ST) specimens taken from two sample sets
+(Method A and Method B) of open die forged 7050 aluminum. The fatigue specimens were
+machined to a 0.2" gage diameter and 4" length and subsequently hand polished to a mirror
+finish to minimize potential crack initiation sites. The tests were conducted on a Fatigue
+Dynamics RBF-300 HT tester in the fully reversed loading condition, with stress levels varying
+from 20 ksi - 45 ksi in 5 ksi increments, except the 25 ksi stress level. The applied stress
+amplitude and number of cycles to failure for each specimen were plotted to generate S-N curves
+comparing both Method A and B. The fatigue life was comparable between Method A samples
+and Method B sets and the fatigue life of longitudinal samples was greater than the fatigue life of
+short transverse samples. Runout tests were stopped at 107 cycles and set as 20 ksi for both
+orientations. There was no significant statistical difference between Method A and Method B on
+fatigue life of 7050-T7452 aluminum. There was a significant statistical difference between LG
+and ST specimen orientations on fatigue life due to the precipitate alignment and grain flow from
+forging.
+
+KEYWORDS
+7050-T7452 aluminum, open die forging, high-cycle fatigue, rotating-bending fatigue,
+S-N curve, grain orientation, grain flow, materials engineering
+
+Acknowledgements
+Thank you Weber Metals for sponsoring this project and for the continual investment in the
+education of Cal Poly materials engineers. Special thanks to Kyle Logan and Mark Timko of
+Weber Metals for providing quick and insightful feedback throughout every stage of our project.
+Thank you to our project advisor Professor Blair London for encouraging us to always do better
+and for teaching us the fundamentals of materials engineering. Thank you to the MATE
+Department for providing well-equipped labs, as well as Hans Mayer and Tom Featherstone for
+providing their expertise and time.
+
+Table of Contents
+I.
+
+Introduction ........................................................................................................................ 1
+1.1 Problem Statement ................................................................................................................ 1
+1.2 Fatigue Background .............................................................................................................. 1
+1.3 Open Die Forging .................................................................................................................. 4
+1.4 7050-T7452 Aluminum Alloy............................................................................................... 5
+1.5 Grain Orientation and Microstructural Effects on Mechanical Properties ............................ 5
+
+II.
+
+Experimental Procedure ................................................................................................... 6
+
+2.1 Safety..................................................................................................................................... 6
+2.2 Sample Preparation ............................................................................................................... 6
+2.3 Design of Experiments .......................................................................................................... 8
+2.4 Rotating-Bending Fatigue Testing ...................................................................................... 10
+2.5 Metallographic and Microscopic Techniques ..................................................................... 12
+2.6 Scanning Electron Microscopy ........................................................................................... 12
+III.
+
+Results ............................................................................................................................... 13
+
+3.1 Fatigue Testing .................................................................................................................... 13
+3.2 Grain Orientation................................................................................................................. 15
+3.3 SEM Imaging ...................................................................................................................... 17
+IV.
+
+Discussion.......................................................................................................................... 18
+
+4.1 Fatigue Life ......................................................................................................................... 18
+4.2 Outliers ................................................................................................................................ 18
+4.3 Statistical Analysis .............................................................................................................. 19
+V.
+
+Conclusions ....................................................................................................................... 20
+
+VI.
+
+References ......................................................................................................................... 21
+
+VII. Appendix ........................................................................................................................... 22
+
+List of Figures
+Figure 1 - Best fit S-N curves from MIL-HBK-5J for 7050-T7452 hand forgings in the
+longitudinal orientation3.................................................................................................................. 2
+Figure 2 - Graphical representation of the fully reversed loading condition. ................................. 3
+Figure 3 - Effects of open-die forging on the grain structure of 7050 aluminum5. ........................ 4
+Figure 4 - Longitudinal (X-axis) and short transverse (Y-axis) orientations of a rectangular
+hand forging. ................................................................................................................................... 7
+Figure 5 - Before and after the polishing procedure. Machining marks and other defects have
+been visibly removed. ..................................................................................................................... 7
+Figure 6 - Profilometer plots of an un-polished sample (top) and polished sample (bottom).
+and valleys denote surface roughness across a 1mm section. ......................................................... 8
+Figure 7 - 2x2 factorial design comparing forging method and specimen orientation. .................. 9
+Figure 8 - Number of tests conducted for each combination for 64 total tests. .............................. 9
+Figure 9 - Fatigue Dynamics RBT-300HT rotating-bending tester with labeled components9. .. 11
+Figure 10 - Detailed view of a sample loaded in the fatigue tester............................................... 11
+Figure 11 - Sectioning plane of samples used in metallographic analysis. .................................. 12
+Figure 12 - The longitudinal grain orientation does not show any difference between Method A
+and Method B (I). The short transverse orientation also shows no difference between the two (II)
+....................................................................................................................................................... 14
+Figure 13 - All mean values on the same S-N plot showing the difference between the
+longitudinal and short transverse orientations. ............................................................................. 15
+Figure 14 - Microstructures of 7050-T7452 aluminum etched using Keller’s Reagent. .............. 16
+Figure 15 - SEM fractographs with crack initiation sites highlighted in red. Scale is set at 2.0mm
+with the exception of 35 ksi at 500 microns since only one large crack origin was located in the
+sample. .......................................................................................................................................... 17
+Figure 16 - Internal defect at 1000x and 5271x of 20 ksi Method A-ST outlier. ......................... 19
+Figure 17 – All 64 data points from Table IV collected over the course of this experiment… …24
+
+List of Tables
+Table I. Poise Weight Values………………………………………………………….…………10
+Table II. Mean Values of Cycles to Failure……………………………………………………...13
+Table III. Tukey Comparison Groupings……………………………...…………………………20
+Table IV. Fatigue Data for All Combinations in Randomized Run Order………………………22
+
+I.
+
+Introduction
+
+1.1 Problem Statement
+Weber Metals (Paramount, CA) currently has limited data on the fatigue properties of
+their forged aluminum alloys. An understanding of fatigue life is critical to the design of
+components that may be subjected to cyclic loading during their lifetime. In the past, the method
+of addressing fatigue has been to overdesign the part to withstand the stresses in the component,
+rather than attempt to test the material and determine the actual fatigue characteristics. However,
+the emphasis today is on reducing weight, minimizing material usage, and qualifying new
+materials, all of which require a more scientific approach. The purpose of this project is to
+provide Weber Metals with stress-life curves, also known as S-N curves, in order to compare
+fatigue properties of different grain orientations and different processing methods for their 7050T7452 aluminum open die (hand) forgings. SEM fractographs and metallography microstructures
+will also be provided to highlight differences between failure modes. In conducting this project,
+Weber Metals will be provided with a series of stress-life curves to compare their processing
+methods so that they may continue to provide the highest quality forgings to their customers.
+1.2 Fatigue Background
+Fatigue is defined as the fracture of a material by loading under repeated cycles1. Fatigue
+cracks often cause failures which remain undetected until a catastrophic fracture occurs suddenly
+and without warning. This results in the potential for devastating financial losses and even
+endangers lives. Fatigue comes in many different modes, most notably high and low cycle
+fatigue. High cycle fatigue is generally considered to be cases in which the part fractures at
+greater than 50,000 cycles at low to moderate stresses1. The low stresses mean that the part stays
+mostly within its elastic regime during stable crack growth until it breaks. This is the more
+unpredictable mode of fatigue, as it is much harder to detect than low cycle fatigue due to its
+slow crack propagation. Low cycle fatigue occurs in cases where the part has failed at less than
+10,000 cycles under moderate to high stresses. The higher stresses mean that the part was
+undergoing much more plastic deformation during stable crack growth. The other types of
+fatigue include thermal, surface, impact, corrosion, fretting, erosion, cavitation, hydrogenembrittlement, biological attack, and stress-corrosion fatigue1. Each of these types can occur
+under either high or low cycle fatigue circumstances, and are all dependent upon their
+surrounding environment.
+In order to quantitatively measure fatigue, stress-life (S-N) curves are used to relate stress
+on the y-axis to the number of cycles the part can be expected to endure before failure on the xaxis2 (Figure 1). However, fatigue is an extremely unpredictable failure mode, and predicting
+1
+
+failure within a factor of two is considered a good estimate for a component. Therefore, the
+prediction of fatigue behavior in the form of S-N curves is critical in determining whether or not
+a part might fail at stresses well below the yield strength. Performing these tests can become
+expensive quickly, as fatigue testing is always destructive and may take anywhere from hours to
+weeks to complete one test. As a result, companies must decide how many tests they want to run
+in order to determine the amount of variance in the final curves.
+
+Figure 1 – Best fit S-N curves from MIL-HBK-5J for 7050-T7452 hand forgings in the longitudinal orientation3.
+
+An important factor in understanding the information provided by S-N curves is the stress
+ratio (R value). An R value is determined by the minimum stress experienced divided by the
+maximum stress experienced by the specimen. Normally, the maximum is in tension since
+fatigue cracks are allowed to grow on the plane of maximum tensile stress, while the minimum
+may be either tension or compression. In compression, the crack is forced back together and
+unable to propagate. This process occurs multiple times per second depending on the frequency
+of the testing apparatus. Due to the limitations set on the equation for R, the ratio can never
+exceed 1. The R value used in rotating-bending fatigue testing is R= -1. This mode is also known
+as fully reversed loading since for R to be -1, the compressive forces must equal the tensile
+forces (Figure 2). Instead of the specimen being loaded axially as in tensile testing, rotatingbending testers are designed solely for the purposes of testing fatigue by cyclic loading. By
+fixing one end of a cylindrical test coupon to a drive shaft and the other to a cantilever poise
+weight, fully reversed loading is achieved. As the specimen is rotating, one half of the specimen
+is bending in tension while the other half is simultaneously in compression. This constant 180º
+stress reversal results in at least one side of the specimen being in maximum tensile load, where a
+2
+
+crack is most likely to form. This makes a -1 R value have the lowest fatigue life out of all the
+possible R values1.
+
+Figure 2 - Graphical representation of the fully reversed loading condition.
+
+The majority of the time in high cycle fatigue is spent initiating a crack, while the
+remaining portion is spent propagating the crack until a critical size is reached and overload
+fracture occurs. Microstructural defects initiate the onset of permanent damage with the
+nucleation of microscopic cracks. This leads to the growth and coalescence of micro-cracks into
+a dominant crack plane. Eventually, stable crack growth occurs as evidenced by striations and
+river lines until spontaneous crack propagation causes ductile rupture of the specimen in most
+cases. Therefore, the key to preventing cracks from initiating near the surface during the early
+stages is by minimizing surface defects and other potential stress concentration sites.
+The mechanism behind crack propagation in crystalline materials can be attributed to
+persistent slip bands (PSBs). PSBs are the areas of intensive cyclic plastic strain in the shape of
+thin lamellae due to cyclic straining of crystalline materials4. Cyclic loading of engineering
+alloys introduces cyclic stress and cyclic strain in a material. While cyclic stress in an isotropic
+specimen is distributed evenly, non-uniform cyclic strain can develop during cyclic loading. This
+is reflected in the internal dislocation structure of the material where cyclic strain is concentrated
+into the bands of intensive cyclic straining, resulting in the formation of PSBs. As a PSB moves
+through a material, it will form a profile in the location where it emerges on the surface and is
+called a persistent slip markings (PSM). The bands and their respective surface markings are
+called “persistent” since, after removing all surface features (e.g., etching or polishing), repeated
+cyclic loading produces PSMs in the same locations where they were located before polishing.
+The importance of PSBs and related PSMs stems from the fact that fatigue cracks nucleate at
+PSMs and propagate initially along PSBs4. This occurs due to the PSBs and PSMs being in the
+same plane with which cracks will normally form and travel along.
+
+3
+
+1.3 Open Die Forging
+Forging has evolved from a simple hammer and anvil system into a highly engineered
+process capable of producing much stronger and reliable parts compared to their cast
+counterparts. Forging is the application of thermal and mechanical energy to metal ingots or
+billets to cause the material to plastically deform while in a solid state. It also allows selection
+from a large range of alloys that can be forged to control the internal grain structure. Forging is a
+process in which a high degree of grain orientation and compositional uniformity occurs as a
+result of grain flow during deformation processes. This highly refined microstructure improves
+the final product’s mechanical properties in terms of strength, toughness, and fatigue life. Forged
+components are generally stronger and more reliable compared to cast materials due to the
+phenomena known as ‘grain flow,’ or the ability of the grains in the metal to conform to the
+shape of the final part (Figure 3). This allows the control of the microstructure so that the grains
+are oriented in the direction requiring maximum strength.
+
+Figure 3 - Effects of open-die forging on the grain structure of 7050 aluminum5.
+
+In an open die forging, the material is heated to increase its malleability and then
+deformed by a reduction of area until a desired thickness is achieved. This results in mechanical
+advantages not present in the original material such as high impact resistance, increased wear
+resistance, and a tightly controlled microstructure free of porosity, cavities, and defects.
+Furthermore, this inherent strength eliminates the need for as many expensive alloying additions
+compared to equivalent strength castings. Lastly, most forged components can be further heat
+treated and machined to the tight tolerances desirable for its intended application5.
+
+4
+
+1.4 7050-T7452 Aluminum Alloy
+Aluminum alloys can be categorized into various groups based on particular material
+characteristics, such as the ability to respond to thermal or mechanical treatment, or the primary
+alloying elements added to aluminum. Typical alloying elements include copper, magnesium,
+manganese, silicon, tin and zinc. Aluminum alloys are used extensively in aerospace applications
+due to their high strength-to-weight ratio. Pure aluminum metal is too soft and does not possess
+the high tensile strength needed for demanding structural applications. The development of these
+high strength alloys starts by hot working a metal ingot with mechanical processes such as
+rolling, forging or extruding. This is followed by thermal processes such as the heat treatment
+and aging condition.
+The alloy being investigated is 7050 aluminum that is solution heat treated, quenched,
+compression stress relieved, and overaged to the T7452 condition. T74 is the age cycle that
+provides the strength and corrosion resistance. Txx52 signifies the stress relief needed to
+minimize residual stresses after quenching the forgings. This results in a typical tensile strength
+of 80 ksi and yield strength of 70 ksi. 7xxx series alloys can be precipitation hardened to the
+highest strengths of any aluminum alloy and are characterized by the primary alloying element
+zinc, with the addition of solid-substitutional elements such as magnesium and copper to increase
+strength through strain hardening. Along with high strength and fracture toughness, 7050
+aluminum also exhibits an increased resistance to stress-corrosion cracking and fatigue, leading
+to its extensive use in aerospace applications.
+1.5 Grain Orientation and Microstructural Effects on Mechanical Properties
+The current literature is inconclusive on how grain orientation may affect the mechanical
+properties of alloys. However, another way to look at grain orientation is to look at dendritic
+structures, which, in our case, have been deformed by forging. So while grain orientation has not
+been specifically looked at, dendrites left over from casting, a relatively similar structure, have
+been covered extensively.
+Hot working a sample will cause its grains and dendrites to elongate in the forging
+direction, but the grains recrystallize under the heat of the hot working. This means that looking
+solely at the grains would provide no discernable difference between forging orientations.
+However, the forging process does not provide enough energy to dissolve the dendritic structures
+into the surrounding metal. The result is grain sizes and shapes remain relatively unchanged
+across different orientations, but different dendritic elongation in each axis of forging. It is these
+dendrites that can cause the different mechanical properties across each of the different
+orientations7.
+By applying what we know about dendrites, we can make some inferences on how the
+mechanical properties may change according to grain orientation. In the short transverse grain
+orientation, perpendicular to the plane of stress from forging, the mechanical properties should
+5
+
+be expected to be relatively low for the alloy because of the stress is applied perpendicularly to
+the dendrite alignment. However, in the longitudinal direction, the properties may rely more
+heavily on the dendrites for support. In this direction, the stress from mechanical testing pulls
+parallel with the dendrites7. The dendrites provide strength to the material through precipitation
+hardening, as they inhibit dislocation movement through the material. The preferential alignment
+of the dendritic structures gives the forged alloy an anisotropic behavior8. It is due to this
+behavior that the dendritic structures should be aligned perpendicular with any applied load
+during the use of the part. Having this alignment is important since customers will often ask for
+parts to be forged from a certain orientation.
+
+II.
+
+Experimental Procedure
+
+2.1 Safety
+All fatigue tests using the Fatigue Dynamics RBF-300 HT tester were conducted at room
+temperature in a controlled lab environment. Personal Protective Equipment (PPE) included
+safety glasses while inside the mechanical testing lab while PPE in the metallography lab
+included gloves, safety goggles, face shield, apron, and lab coat. A Standard Operating
+Procedure (SOP) was set in place when etching samples with Keller’s Reagent, which involves
+the hazardous chemicals hydrofluoric acid, hydrochloric acid, and nitric acid. Lastly, an
+Environmental Health & Safety (EH&S) form was filed with the Cal Poly Materials Engineering
+department documenting the training and safety plan associated with the use of these hazardous
+materials.
+2.2 Sample Preparation
+The fatigue samples were provided by Weber Metals using open die forgings from two
+data sets, denoted as Method A and Method B1. The fatigue specimens were taken from the
+longitudinal (LG) and short transverse (ST) directions in the hand forging (Figure 4). In addition,
+Weber Metals machined the fatigue specimens to a 0.250 inch gage diameter and 4 inch length to
+match the collet diameter of the Fatigue Dynamics RBF-300 HT machine. Precautions such as
+avoiding hot cutting techniques were also taken to limit microstructural changes due to heat as
+well as reduce possible sources of variability. The main factor was the as-machined finish which
+showed radial scratches that could become possible crack initiation sites at the microscopic level.
+
+1
+
+Details of the processing methods are proprietary to Weber Metals
+
+6
+
+Figure 4 - Longitudinal (X-axis) and short transverse (Y-axis) orientations of a rectangular hand forging.
+
+A standard polishing procedure was developed and implemented to remove machining
+marks and produce a uniform surface finish in the gage section of each specimen. The specimens
+were mounted in the drive collet of the fatigue testing machine with the other end mounted, but
+unloaded. With the machine turned off, the specimens were abraded with 600 grit silicon carbide
+paper in the longitudinal direction of the sample, followed by 800 and 1200 grit paper with the
+machine turned on and rotating at 2000 RPM, providing a radial finish with increasingly fine
+surface roughness. The specimens were also cleaned thoroughly with soap and water between
+each stage of the polishing process. After a final longitudinal pass with 1200 grit paper, the
+specimens were polished with a 1 µm diamond compound applied to a medium nap cloth until a
+mirror finish was achieved. This entire process took roughly 10 minutes and was conducted
+immediately prior to each test. Figure 5 shows the difference between an un-polished (top) and
+polished (bottom) sample.
+
+Figure 5 - Before and after the polishing procedure. Machining marks and other defects have been visibly removed.
+
+By alternating the direction of polishing from longitudinal to circumferential, a majority
+of macroscopic defects such as machining marks were removed. A representative sample set of
+polished and unpolished samples were analyzed using a surface profilometer to obtain a surface
+roughness (RA) value. The ends of the samples were polished instead of the gage section in
+order to accommodate the horizontal path of the profilometer probe. A one millimeter section of
+7
+
+each sample was analyzed to produce plots of vertical probe displacement versus horizontal
+probe distance (Figure 6). A surface roughness of RA-0.2 was achieved for the polished sample
+while the as-machined had a value of RA-2 with significantly more scatter.
+1
+
+Displacement (μm)
+
+0.5
+0
+0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1
+
+-0.5
+-1
+
+-1.5
+-2
+
+Distance (mm)
+
+Figure 6 - Profilometer plots of an un-polished sample (top) and polished sample (bottom). Peaks and valleys denote
+surface roughness across a 1mm section.
+
+2.3 Design of Experiments
+For this experiment, a 2x2 factorial design was used to compare the two independent
+variables: processing method and specimen orientation (Figure 7). Since this project investigates
+high cycle fatigue, stress levels were chosen based on practical applications, where fatigue
+failures often occur well below the expected yield strength of the material. The high stress was
+8
+
+taken at around 65% of the yield strength of the alloy while the low stress was taken at around
+25%. The tests were conducted in the fully reversed loading condition, with stress levels varying
+from 20 ksi to 45 ksi in 5 ksi increments, excluding the 25 ksi stress level (Figure 8). Less
+variance was expected at the higher stress levels according to some preliminary data, where a 45
+ksi test took around 10 minutes to fracture while a 20 ksi tests took upwards of two days to reach
+runout at the same frequency. Because of the lower amount of variance, fewer tests were done at
+45 ksi, while the 35 ksi stress level was added toward the end of testing with only enough time to
+conduct 3 tests per orientation. Runouts were established as any test greater than 10 million (107)
+cycles, and the number of runout tests was limited to 2 per stress level. The applied stress and
+number of cycles to failure for each specimen were plotted to generate S-N curves for both
+orientations.
+
+Figure 7 - 2x2 factorial design comparing forging method and specimen orientation.
+
+Figure 8 - Number of tests conducted for each combination for 64 total tests.
+
+9
+
+2.4 Rotating-Bending Fatigue Testing
+In order to apply a load to one end of the fatigue specimen using the Fatigue Dynamics
+RBT-HT 300 machine, a poise weight was adjusted along a lever arm beneath the sample. The
+desired stress levels were first converted to moment values, taking into account the geometry of
+the specimens. The equation for calculating the moment values was provided in a manual that
+came with the fatigue testing machine (Equation 1)9.
+
+𝑀=
+
+𝜋𝑆𝐷3
+
+(1)
+
+32
+
+Where M is the set poise weight in pounds, S is the desired stress amplitude in psi, and D is the
+minimum gage diameter of the sample. By applying a minimum gage diameter of 0.250" and
+converting psi to ksi, Equation 1 was used to calculate the poise weights shown below in Table I.
+Table I. Poise Weight Values
+S (ksi)
+
+20
+
+30
+
+35
+
+40
+
+45
+
+M (lb-in)
+
+30.7
+
+46.0
+
+53.7
+
+61.4
+
+69.0
+
+The instruction manual also provided a SOP for the mounting and running of samples.
+For reference, the left side from the operator’s perspective was denoted the “drive side” and the
+right side was the “weight side” (Figure 9). First, the sample was mounted into collet extenders
+which could then be mounted into the collets of the machine. The drive side collet was set in
+place before the weight side. The safety guard was then placed back into position. Post polish,
+the cut-off screw was backed off enough so that it would not contact the cut-off switch when the
+load was applied. The automatic cut-off mechanism consists of an adjustable screw that cuts
+electricity to the motor upon contact with a metal plate. Therefore, the test automatically comes
+to a stop when a partial or complete fatigue failure causes the weighted end of the specimen to
+drop down. Partial failure can occur when a crack causes the specimen to deform slightly, but
+rebound to normal once the cut-off switch is toggled and the load is removed. During testing,
+the motor was set at a moderate speed between 60 and 70 Hertz. Frequency does not have an
+effect on fatigue failure as long as heat in not being generated in the specimen. After the poise
+weight was set at the desired magnitude, the cycle counter was reset to zero and the test was
+10
+
+allowed to run until the automatic cut-off switch indicated a fatigue failure. Removing a sample
+from the machine followed these same steps in reverse, with care taken to avoid contact with the
+fracture surfaces. The number of cycles until failure was recorded with a built-in cycle counter.
+The fatigue halves were then labeled, sectioned on a cold saw, and prepared for metallography
+and SEM imaging.
+
+Figure 9 - Fatigue Dynamics RBT-300HT rotating-bending tester with labeled components9.
+
+Furthermore, a 4-inch specimen length was required in order to accommodate the two collet
+extenders used, as well as a 0.250” gage diameter to ensure a secure fit during testing
+(Figure 10).
+
+Figure 10 – Detailed view of a sample loaded in the fatigue tester.
+
+11
+
+2.5 Metallographic and Microscopic Techniques
+A standard metallographic procedure was used to collect micrographs of each methodorientation combination. One sample randomly selected from each combination (Figure 7) was
+imaged, with a fifth preliminary sample used to optimize etching times and polishing procedures.
+The metallography samples were sectioned from the ends of fatigue coupons in order to obtain a
+uniform circular microstructure for each image (Figure 11). Therefore, the metallography
+samples were not subjected to any deformation processes that may have occurred during fatigue
+testing.
+
+Figure 11 - Sectioning plane of samples used in metallographic analysis.
+
+The samples were sectioned using a cold cut-off saw and then mounted in a quick setting acrylic.
+They were abraded with the same papers and grit sizes that were used in the previous polishing
+procedure, with an additional 400 grit paper beforehand to remove saw marks. Each sample was
+then polished with the same pad and 1 µm diamond compound that had been used for final
+polishing on the fatigue testing machine.
+Keller’s reagent was used to etch each sample for 15-20 seconds. The etchant consisted
+of 2.5 mL nitric acid (HNO3), 1.5 mL hydrochloric acid (HCl), 1.0 mL hydrofluoric acid (HF),
+and 95 mL distilled water (H2O).
+Each sample was then examined using bright-field optical microscopy at 200x
+magnification. At 200x magnification, aluminum grains as well as dendritic structures leftover
+from the casting process were visible as light and dark regions in the microstructure,
+respectively.
+2.6 Scanning Electron Microscopy
+SEM imaging was used to compare differences, if any, in failure modes between longitudinal
+and short transverse orientations, Method A and Method B forging processes, and high stress and
+low stress test levels. In order to obtain fractographs using the SEM, representative fatigue
+12
+
+specimens were first cut at the gage section to isolate the fracture surface. They were then lightly
+cleaned using compressed air before being examined in the SEM. Overview images of the
+fracture surfaces were taken at around 40x while close-ups were taken between 1000x-5000x.
+
+III.
+
+Results
+
+3.1 Fatigue Testing
+Once all 64 tests had been completed, the mean values of the cycles to failure were
+averaged (Table II). For a full list of the data collected in this experiment and its corresponding
+graph, see Appendix I.
+Table II. Mean Values of Cycles to Failure
+20 ksi
+
+30 ksi
+
+35 ksi
+
+40 ksi
+
+45 ksi
+
+Method A-LG
+
+20,646,150
+
+197,450
+
+67,800
+
+44,725
+
+23,133
+
+Method B-LG
+
+16,357,500
+
+177,000
+
+96,967
+
+52,300
+
+27,500
+
+Method A-ST
+
+18,656,900
+
+77.725
+
+39,667
+
+23,825
+
+13,400
+
+Method B-ST
+
+15,735,350
+
+50,950
+
+35,633
+
+18,950
+
+12,433
+
+The 20 ksi stress level tests all reached runout at over 10,000,000 cycles, with the
+exception of one Method A-ST outlier that failed at 339,500 cycles. The longitudinal specimens
+outperformed the short transverse specimens across all stress levels, with the assumption that
+cycles over 10,000,000 no longer counted for the 20 ksi stress levels. The second and last outlier
+occurred at 30 ksi, where a Method B-LG specimen reached 12,244,100 cycles without failing.
+In accordance with ASTM Standard E739-1010, the mean values of each stress amplitudes data
+sets were averaged and plotted (Figure 12). The short transverse and longitudinal grain
+orientations were plotted separately with logarithmic best fit curves help examine if there was
+any difference between Method A and Method B.
+
+13
+
+Figure 12 - The longitudinal grain orientation does not show any difference between Method A and Method B (I).
+The short transverse orientation also shows no difference between the two (II)
+
+After seeing no visible difference between the two processing methods, all four curves
+were overlaid on the same graph (Figure 13).
+14
+
+Figure 13 - All mean values on the same S-N plot showing the difference between the longitudinal and short
+transverse orientations.
+
+3.2 Grain Orientation
+Grain orientation caused by the forging of the alloy resulted in visible differences in the
+microstructure of the alloy. Changes in grain shape, grain size, or grain orientation were not
+observed across each method-orientation combination. The real difference between each was the
+preferential alignment of the dendritic structures left over from casting (Figure 14). These dendritic
+structures appear as darker regions in the microstructure. In the longitudinal orientations, the
+precipitates are grouped in elongated clusters, whereas in the short transverse orientations, they
+are grouped with either a lesser degree of alignment or a more randomized arrangement. Both
+longitudinal and short transverse orientations were taken from the same ingot but due to the way
+the fatigue specimen microstructures are aligned, their corresponding fatigue life and materials
+properties were affected.
+
+15
+
+Figure 14 - Microstructures of 7050-T7452 aluminum etched using Keller’s Reagent.
+
+Method A-LG and Method B-ST show significant dendrite alignment, as evidenced by the darker
+bands dispersed between the lighter aluminum grains. Method A-ST also shows some degree of
+alignment, but the dendrites are too spread apart to produce the same properties as the
+longitudinal samples. Finally, Method B-ST shows no degree of alignment at all.
+
+16
+
+3.3 SEM Imaging
+From SEM imaging, it is evident that specimens at higher stresses failed after multiple
+relatively small cracks had initiated. In contrast, the specimens tested at lower stresses contained
+fewer cracks arising from one or two crack initiation points (Figure 15).
+
+2
+
+1
+1
+
+3
+2
+
+3
+
+4
+
+1
+
+2
+
+5
+
+4
+
+1
+
+Figure 15 - SEM fractographs with crack initiation sites highlighted in red. Scale is set at 2.0mm with the exception of
+35 ksi at 500 microns since only one large crack origin was located in the sample.
+
+17
+
+Some cracks were located near the surface of the specimens with a small defect or oxide
+inclusion as the root cause of failure. Overall, 30 and 35 ksi stress level fractographs displayed
+larger crack planes due to the increased time for crack growth under lower loads. The 40 and 45
+ksi stress level fractographs displayed smaller crack areas all around the sample due to the rapid
+nature of fracture under high loads.
+
+IV.
+
+Discussion
+
+4.1 Fatigue Life
+The short transverse orientations displayed overall lower fatigue strengths than the
+longitudinal orientations. This correlates to the microstructure in the samples with high
+concentrations of dendritic structures in line with the plane of crack growth being stronger than
+the lower concentration areas. The precipitate clusters from the longitudinal specimen orientation
+provide less effective area of the softer aluminum grains to move through, thus inducing
+anisotropic behavior. The Method A and Method B processes did not produce enough of a
+difference in the microstructure of each specimen resulting in each method having little to no effect
+on the fatigue behavior of the material. The overall S-N curve data agrees with the assumptions
+that can be drawn from the microstructural images.
+4.2 Outliers
+Both a 20 ksi and 30 ksi test were outliers in the data and excluded from the S-N curves.
+Upon SEM analysis, internal defects were determined as the origin for both failures (Figure 16).
+This defect is expected to be an aluminum oxide inclusion approximately 40 microns in length and
+occurred as a leftover flaw from the ingot casting process. The Method A-ST specimen was
+retested at 20 ksi and reached runout in accordance to the rest of the 20 ksi stress level tests. The
+second outlier was a Method B-LG specimen tested at 35 ksi that reached runout. Since no fracture
+occurred, SEM imaging could not be conducted on this sample. Another Method B-LG specimen
+was retested at 30 ksi and failed at 144,100 cycles which was used in generating the S-N curve.
+
+18
+
+Figure 16 - Internal defect at 1000x and 5271x of 20 ksi Method A-ST outlier.
+
+4.3 Statistical Analysis
+A Tukey confidence interval was conducted to see if the null hypothesis was valid or
+invalid. The data sets were divided by stress amplitude, as there is no real way to compare the
+curves. However, if the same pattern was observed across each of the stress levels, it could be
+concluded that the curves were in fact statistically different. In general, the datasets were grouped
+by their specimen orientations (Table III). The confidence interval concluded that there was no
+statistical difference between Method A and Method B data groups. The identical groupings under
+the 40 ksi stress level may be attributed to a mean value being slightly too low, hence skewing the
+curve. If many more tests were done for each grouping, distinct differences between specimen
+orientations may be seen.
+
+19
+
+Table III. Tukey Comparison Groupings
+30 ksi
+
+Grouping
+
+35 ksi
+
+Grouping
+
+40 ksi
+
+Grouping
+
+45 ksi
+
+Grouping
+
+Method A-LG
+
+A
+
+Method A-LG
+
+C
+
+Method A-LG
+
+E
+
+Method A-LG
+
+G
+
+Method B-LG
+
+A
+
+Method B-LG
+
+C
+
+Method B-LG
+
+EF
+
+Method B-LG
+
+G
+
+Method A-ST
+
+B
+
+Method A-ST
+
+D
+
+Method A-ST
+
+F
+
+Method A-ST
+
+H
+
+Method B-ST
+
+B
+
+Method B-ST
+
+D
+
+Method B-ST
+
+F
+
+Method B-ST
+
+H
+
+V.
+
+Conclusions
+1. There was no significant statistical difference between Method A and Method B on
+fatigue life of 7050-T7452 aluminum.
+2. There was a significant statistical difference between the LG and ST specimen
+orientations on fatigue life due to the dendritic structure alignment and grain flow from
+forging.
+
+20
+
+VI.
+
+References
+
+1. Anderson, T. L. Fracture Mechanics: Fundamentals and Applications. Boca Raton: CRC,
+1995. Print.
+2. ASTM International. "Elements of Metallurgy and Engineering Alloys." ASTM
+International. ASTM International, 2008. Web. 2015.
+3. MIL-HBK-5J, 31 January, 2003, Pg. 350
+4. Wane, Jane Q. "Encyclopedia of Tribology." SpringerLink. Springer New York
+Heidelberg Dordrecht London, 2013. Web. 23 Nov. 2015.
+5. “Forging 101: The Open Die Forging Process” Scot Forge. Web. 5 June 2016.
+<http://www.scotforge.com/Learning-Center/Forging-101/Open-Die-Forging>.
+6. http://www.alcotec.com/us/en/education/knowledge/techknowledge/understanding-thealloys-of-aluminum.cfm
+7. Nagarjuna, S., K. Balasubramanian, and D. S. Sarma. "Effect of Prior Cold Work on
+Mechanical Properties, Electrical Conductivity and Microstructure of Aged Cu-Ti
+Alloys." Journal of Materials Science 34 (1999): 2929-942. SpringerLink. Web. 23 Nov.
+2015.
+8. Hu, B., G. Trotter, Ian Baker, M. K. Miller, L. Yao, S. Chen, and Z. Cai. "The Effects of
+Cold Work on the Microstructure and Mechanical Properties of Intermetallic
+Strengthened Alumina-Forming Austenitic Stainless Steels." METALLURGICAL AND
+MATERIALS TRANSACTIONS 3773 (2015): n. pag. SpringerLink. The Minerals,
+Metals & Materials Society and ASM International 2015, 2015. Web. 23 Nov. 2015.
+9. Fatigue Dynamics RBF-300HT Operating Manual
+10. ASTM Standard E739, “Statistical Analysis of Linear or Linearized Stress-Life (S-N) and
+Strain-Life (ε-N) Fatigue Data,” ASTM International, West Conshohocken, PA, 201,
+DOI: 10.1520/E0739-10R15, www.astm.org
+
+21
+
+VII. Appendix
+Table IV. Fatigue Data for All Combinations in Randomized Run Order
+Date
+
+Method
+
+Grain Orientation
+
+Stress Level
+
+Run Order
+
+Cycles
+
+3/10
+3/12
+3/16
+3/18
+4/8
+4/22
+4/29
+5/2
+3/14
+3/29
+4/1
+4/3
+4/5
+4/5
+4/7
+4/7
+4/7
+4/11
+4/11
+4/8
+4/12
+4/12
+4/13
+4/13
+4/20
+4/20
+4/20
+4/20
+4/21
+4/21
+4/21
+4/21
+4/25
+4/25
+
+B
+B
+A
+B
+A
+A
+B
+A
+B
+A
+A
+B
+B
+B
+A
+A
+B
+B
+B
+A
+A
+A
+A
+B
+A
+B
+A
+A
+B
+B
+A
+A
+B
+B
+
+LG
+ST
+LG
+LG
+ST
+LG
+ST
+ST
+LG
+LG
+LG
+ST
+ST
+LG
+ST
+LG
+LG
+LG
+ST
+ST
+ST
+LG
+ST
+ST
+LG
+LG
+ST
+ST
+ST
+ST
+LG
+ST
+LG
+ST
+
+20
+20
+20
+20
+20
+20
+20
+20
+30
+30
+30
+30
+30
+30
+30
+30
+30
+30
+30
+30
+30
+30
+30
+30
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+
+1
+2
+3
+4
+5
+6
+7
+8
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+12308100
+13901900
+14838500
+20406900
+21464900
+26453800
+1756880
+15848900
+98800
+276400
+216500
+47200
+53100
+12244100
+83000
+127300
+233200
+231900
+59400
+72300
+75900
+169600
+79700
+44100
+32300
+78500
+37900
+45900
+33600
+41800
+84600
+35200
+137800
+31500
+
+22
+
+4/25
+4/25
+4/13
+4/14
+4/14
+4/14
+4/14
+4/14
+4/18
+4/18
+4/18
+4/18
+4/18
+4/19
+4/19
+4/19
+4/19
+4/19
+4/26
+4/26
+4/26
+4/26
+4/27
+4/27
+4/27
+4/27
+4/28
+4/28
+4/28
+4/28
+
+B
+A
+A
+A
+B
+B
+B
+A
+A
+B
+A
+B
+B
+A
+B
+A
+A
+B
+A
+B
+A
+B
+B
+A
+B
+A
+B
+A
+A
+B
+
+LG
+LG
+LG
+ST
+LG
+ST
+LG
+ST
+ST
+ST
+LG
+LG
+LG
+LG
+ST
+LG
+ST
+ST
+ST
+ST
+ST
+LG
+LG
+LG
+ST
+ST
+ST
+LG
+LG
+LG
+
+35
+35
+40
+40
+40
+40
+40
+40
+40
+40
+40
+40
+40
+40
+40
+40
+40
+40
+45
+45
+45
+45
+45
+45
+45
+45
+45
+45
+45
+45
+
+23
+
+11
+12
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+74600
+86500
+33100
+26100
+43900
+20800
+88300
+23100
+21100
+17000
+49700
+39300
+37700
+49400
+18800
+46700
+25000
+19200
+12100
+14900
+14200
+30600
+27700
+24300
+9600
+13900
+12800
+22800
+22300
+24200
+
+Figure 17 – All 64 data points from Table IV collected over the course of this experiment.
+
+24
+
+

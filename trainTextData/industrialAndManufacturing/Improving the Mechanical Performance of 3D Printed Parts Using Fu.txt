@@ -1,0 +1,1281 @@
+Improving the Mechanical Performance of 3D Printed Parts Using
+Fused Filament Fabrication
+
+A Senior Project Submitted in Partial Fulfillment of the
+Requirements for the Degree of
+Bachelor of Science in Industrial Engineering
+
+California Polytechnic State University,
+San Luis Obispo
+
+by
+Inderpreet Binning
+June 2016
+
+Graded by:__________________________ Date of Submission____________________
+Checked by:_________________________ Approved by:_________________________
+
+Abstract
+
+The 3D printing industry has seen rapid growth in the last 10 years and has been called
+the next industrial revolution. There are several different processes used in 3D printing,
+but the most popular process is called Fused Filament Fabrication (FFF) or Fused
+Deposition Modeling (FDM). This is the process where (most commonly) plastic
+filament enters a nozzle, is heated to a semi-liquid state, and then deposited into a pattern
+to create a print. One major drawback to this process is that the prints are anisotropic.
+This means that the strength of the part varies on the orientation that it was created. This
+project experimented to determine if a proposed post processing method would decrease
+the anisotropy in the FFF process. The proposed process involved using a high intensity
+lamp to flash the print after each layer is printed. The theory was that this would decrease
+the gap between deposited filaments and from research this was a proven way to make
+prints stronger.
+For this project, a Xenon Sinteron 2000 was used as the high intensity lamp and a
+Printrbot Simple Metal Plus was used as the 3D printer. Three experiments were done to
+determine if the Sinteron would be successful in reducing the gap between deposited
+filaments. The first experiment was done by flashing the surface of completed prints and
+then using a portable microscope to measure the height of the surface layer and necking
+between deposited filaments. The data were analyzed using a two-way ANOVA and the
+results did not conclude that the Sinteron was successful in reducing the gap. The second
+experiment was analyzed visually using an optical microscope and revealed that Sinteron
+might be able to reduce the gap on parts that are solid. The third experiment was analyzed
+using an optical microscope and the area of the gaps were measured using ImageJ
+software. The results concluded that the Sinteron was not successful in reducing the gap.
+The quantitative data from these experiments suggest that the proposed processing
+method would not be successful in reducing the anisotropy of 3D printed parts created by
+the FFF process. The recommendation is to investigate post processing methods such as a
+heat gun that would apply heat evenly across a layer.
+
+1
+
+Acknowledgments
+
+Thank you to Dr. Xuan Wang, Dr. Xiaoying Rong, Dr. Kathy Chen, Dr, Richard Savage,
+and Eric Beaton. All of these individuals helped me in completing my senior project.
+
+2
+
+Table of Contents
+
+List of Tables •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+List of Figures ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+1. Introduction ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+2. Background ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+2.1 Vocabulary ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+3. Literature Review •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+4. Proposed Post Processing Method •••••••••••••••••••••••••••••••••••••••••••••••••••••
+5. Theory ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+4
+5
+6
+10
+11
+13
+16
+18
+
+6. Experimentation •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.1 Trial Experiment ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.2 Experiment 1••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.2.1 Manufacturing ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.2.2 Exposure •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.2.3 Measurement ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.2.4 Discussion •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.2.5 Analysis •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.2.6 Results •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+20
+20
+21
+22
+22
+23
+23
+24
+25
+
+6.2.7 Scanning Electron Microscope Analysis •••••••••••••••••••••••••••••••••••
+6.3 Experiment 2 ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.3.1 Manufacturing ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.3.2 Exposure •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.3.3 Measurement ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.3.4 Results •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.4 Experiment 3 •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.4.1 Manufacturing ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.4.2 Exposure ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+6.4.3 Measurement ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+25
+31
+31
+32
+33
+33
+34
+34
+34
+35
+
+6.4.4 Analysis •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+7. Conclusion •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+8. References •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+9. Appendix •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+36
+38
+40
+42
+
+3
+
+List of Tables
+
+Table 1: Factors and respective levels for experiment 1. •••••••••••••••••••••••••••••••••
+Table 2: ANOVA for the entire model. ••••••••••••••••••••••••••••••••••••••••••••••••••••
+Table 3: Effects of each factor. •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+Table 4: Detailed information about each sample. •••••••••••••••••••••••••••••••••••••••
+Table 5: ANOVA table comparing control and treatment sample. ••••••••••••••••••••••
+
+4
+
+21
+24
+24
+27
+36
+
+List of Figures
+
+Figure 1: FDM process with nozzle extruding material onto print. •••••••••••••••••••••
+Figure 2: Printrbot Simple Metal with heated bed. •••••••••••••••••••••••••••••••••••••••
+Figure 3: Single layer of a part created by the FFF process. •••••••••••••••••••••••••••••
+Figure 4: Step by step breakdown of proposed manufacturing process. ••••••••••••••••
+Figure 5: Illustration of a cross section for a part created using the FFF process. •••••
+Figure 6: Illustration of a cross section for a part created using the FFF process. •••••
+Figure 7: Cross section of a single layer. •••••••••••••••••••••••••••••••••••••••••••••••••
+
+7
+11
+12
+16
+18
+18
+18
+
+Figure 8: Layer after being exposed to high intensity lamp •••••••••••••••••••••••••••••
+Figure 9: Test specimens from the screening experiment. •••••••••••••••••••••••••••••••
+Figure 10: Layer height measurement from a sample. •••••••••••••••••••••••••••••••••••
+Figure 11: Cross section of part treated with high setting of factors. •••••••••••••••••••
+Figure 12: Sputtering Machine used to deposit gold on the surface of the print. ••••••
+Figure 13: Screenshot from the SEM.••••••••••••••••••••••••••••• ••••••••••••••••••••••••
+Figure 14: Visual representation to illustrate how each sample was cut. •••••••••••••••
+Figure 15: Gold coating applied to the cross section of the sample. ••••••••••••••••••••
+Figure 16: Cross section of the sample. •••••••••••••••••••••••••••••••••••••••••••••••••••
+Figure 17: Cross section of the sample. •••••••••••••••••••••••••••••••••••••••••••••••••••
+
+19
+20
+23
+25
+26
+26
+28
+28
+29
+30
+
+Figure 18: Cross section of the sample. •••••••••••••••••••••••••••••••••••••••••••••••••••
+Figure 19: Visual representation of the sample created. •••••••••••••••••••••••••••••••••
+Figure 20: Photograph taken before exposure and after exposure. ••••••••••••••••••••••
+Figure 21: Image taken from the optical microscope. ••••••••••••••••••••••••••••••••••••
+Figure 22: Side by side comparison of control sample and exposed sample. ••••••••••
+Figure 23: Control sample compared to sample with treatment. ••••••••••••••••••••••••
+Figure 24: Boxplot and mean diamond for both sample groups. ••••••••••••••••••••••••
+
+30
+31
+32
+33
+34
+35
+36
+
+5
+
+1. Introduction
+Type in 3D printing on google and click on the news tab. You will be amazed at the
+amount of creativity and innovation being done currently using this technology. From
+printing houses [1] to guns [2], 3D printing allows user to create anything they can
+imagine and model. In the past few years, the industry has grown tremendously.
+Crowdfunding has increased the number of desktop printers owned by hobbyists and
+continues to push the boundaries on the affordability and capability of these machines.
+The most popular process for desktop printing is Fused Filament Fabrication (FFF) or
+Fused Deposition Modeling (FDM). This is the process where filament is heated and then
+deposited side by side then layer by layer. The advantages to FFF/FDM vary depending
+on what process it is compared to, but overall these machines have good resolution, are
+inexpensive, and material changeover is done easily. The disadvantages to FFF/FDM
+include the surface finish, the consistency between prints, and the biggest disadvantage
+which is mechanical performance. Surface finish can be resolved with exterior finishing
+techniques, and the consistency issue can be fixed by properly calibrating the machine.
+Mechanical performance however, still does not have a clear solution.
+So how is mechanical performance an issue in the FFF/FDM process? The process
+creates prints that are anisotropic, so the strength varies on the direction of the print. This
+can be better explained using wood as an example. Wood is anisotropic because it is
+easier to cause a failure if you apply a force against the grain versus along the grain.
+Similar to wood, 3D prints have individual deposited fibers called rasters. An illustration
+of the FFF/FDM process can be seen below (Figure 1). As explained previously, filament
+is extruded side by side and the process is repeated layer by layer.
+
+6
+
+Figure 1: FFF/FDM process with nozzle extruding material onto print. (Source: www.3devo.eu)
+
+Similar to the wood analogy, parts produced using the FFF/FDM process are anisotropic.
+The anisotropy is not as extreme as in the wood example, but industry and researchers
+agree that it is present. For example, Shaffer et al. (2014) write that the mechanical
+performance is limited due to the anisotropic properties of the process. The anisotropy
+occurs because of the way the parts are created. The process requires filament to be fed
+into a nozzle, heated, and then extruded and deposited onto a print. The material that is
+extruded is thin and “deposited in a criss-cross manner resulting in direction dependent,
+or anisotropic, material properties” (Ahn et al. 2002).
+Loading along the raster is fairly strong but loading perpendicular to the raster (across the
+joints) will cause a part to fail much earlier. This is because the strength of the joint is
+weaker than the strength along the filament. Another issue is that “an FDM part can be
+considered as laminated composite structure with vertically stacked layers of bonded
+fibres” (Casavola et al, 2015). What this means is that the layers are stacked above one
+another. First one entire layer is printed, then the nozzle is moved up, and then another
+layer is printed. This process repeats until the print is finished. The issue with this is that
+the bond in between layers is very weak.
+Researchers have investigated the issues and currently there are two distinct solutions.
+The first solution is optimization of the printing parameters. These parameters include
+raster angle, nozzle temperature, air gap, build orientation, material, layer height, and
+many other factors (Lanzotti, Sood, Sung-Hoon Ahn, Bagsik). Most researchers have
+7
+
+found that certain factors are more significant than others, but mechanical performance is
+still limited and lacking when compared to other manufacturing methods such as
+injection molding (Sung-Hoon Ahn et al, 2002). This has resulted in industry turning to
+post processing to address this issue.
+Post processing is a method of adding a process after the part is printed to improve the
+mechanical performance. One post processing method is resin infiltration. In this process,
+the surface of the part is coated with a resin. The resin infiltrates the part and hardens to
+create a part that is stronger. Some even submerge the entire print in a resin bath to make
+it stronger [3]. Resin infiltration is the most accepted post processing method used in
+industry but is time consuming. The curing time is dependent on the size of the part but is
+often longer than the time required to print the part.
+Another post processing method developed by researchers is using fill compositing
+(Belter et al, 2014). In this method, the parts are printed with intentional voids. These
+voids are then later injected with a resin to strengthen them. This method was able to
+improve the part strength up to 45%.
+Hobbyists often submerge the part in an acetone bath to improve the surface finish, and it
+is also believed that this method increases the strength of the part. Research was very
+limited until 2015, when Rao et al, investigated the effects of post processing with
+acetone and methyl ethyl ketone (MEK) on the tensile strength. The results concluded
+that there was an increase on the tensile strength due to post processing with these
+chemicals.
+All of these post processing methods might seem very different from each other but they
+are similar in one important aspect. The reason why these methods work is because what
+they are effectively doing is filling in gaps between rasters and layers. The resin
+infiltration method fills in these gaps, and then hardens similar to glue. Fill compositing
+does the same thing but the gaps are filled in where the voids are intentionally made. The
+acetone and MEK method works by eating away at the surface of the part and leaving a
+smooth surface finish. This surface finish is smooth and the adhesion between rasters is
+stronger.
+
+8
+
+These methods have the ability to improve the mechanical performance, but it should be
+noted that these methods also increase the processing time for each part. In order to make
+3D printing a technology that is used to manufacture on a larger scale, a solution needs to
+be produced that will improve the mechanical performance while also minimizing the
+total process time. Due to these requirements demanded by industry, this paper is focused
+on experimenting with a new post processing method to improve the mechanical
+performance of 3D printed parts.
+My interest in 3D printing and experimentation is what led me to this project. The idea
+for this project was introduced to me by Dr. Xuan Wang. Dr. Wang previously
+experimented with a high intensity lamp to see the effects that it would have on a part
+that was created with ABS. The result of his experiment concluded that the lamp did have
+enough energy to melt the surface of an ABS part.
+This new processing technique will involve exposing layers to a high intensity lamp. This
+high intensity lamp will melt each layer to form a stronger bond between adjacent rasters
+and layers. This would hopefully create layers that are homogenous and reduce the
+anisotropic properties of the FFF/FDM process.
+
+9
+
+2. Background
+There are several different technologies used in 3D Printing. An overview of some of the
+technologies is given below
+
+
+Fused Deposition Modeling (FDM) or Fused Filament Fabrication (FFF) is the
+process where filament is heated, then deposited side by side and layer by layer.
+This is the most popular printer technology among hobbyists because of its
+affordability. There are two names for this technology because of a trademark on
+FDM by Stratasys, a large 3D printer manufacturer. For this report FFF and FDM
+will be used interchangeably.
+
+
+
+Selective Layer Sintering (SLS) is the process of using a high power laser to fuse
+powders together. Powder is laid across a bed and the laser draws a pattern on the
+bed. The powders fuse together and then the bed is lowered. A new layer of
+powder covers the print and the process is repeated.
+
+
+
+Laminate object manufacturing (LOM) is a process where sheets of paper with
+glue on one side are cut and then stacked layer by layer. These cuts are made
+wither by knife or laser.
+
+
+
+PolyJet is a process similar to inkjet printing. In the 3D printing process though,
+the inkhead jets a resin and UV light is used to instantly cure the resin.
+
+There are just some of the 3D printing technologies being used in industry today. The
+scope of this project will focus on FFF/FDM technology. Specifically, this project will be
+using a Printrbot Simple Metal with a heated bed. A picture of this machine is shown
+below (Figure 2)
+
+10
+
+Extruder
+r
+Fan
+Nozzle
+
+Z
+Y
+
+Bed
+
+X
+
+Figure 2: Printrbot Simple Metal with heated bed. (Source: www.printrbot.com)
+
+The image above (Figure 2) outlines the important features and components that make up
+the printer. The extruder motor is responsible for feeding the filament into the nozzle.
+The fan is used to cool down the material as it is deposited onto the print. The bed is the
+surface that the first layer adheres to. There are stepper motors for each axis of the
+printer. The X-axis motor is responsible for the movement of the bed. The Y-axis motor
+is responsible for the movement of the nozzle. The Z-axis is responsible for the height of
+the nozzle.
+2.1 Vocabulary
+An explanation of technical terms is given below.
+
+
+Anisotropic: Having varying properties depending on direction.
+
+
+
+Layer thickness: Also referred to as filament height, bead height, or raster height.
+This is the height of the filament when it is extruded onto a print.
+
+
+
+Raster: The filament that occupies the internal space of a part.
+
+
+
+Raster width: Thickness of the filament that occupies the internal space of a part.
+
+11
+
+
+
+Raster angle: Also referred to as infill orientation. This is the angle the raster is
+laid down in respect to an axis.
+
+
+
+Shell: The filament that makes up the perimeter or outline of the part. The
+difference between raster and shell is that the shell looks like the outline of the
+part.
+
+
+
+Air gap: Usually refers to the raster-to-raster air gap. This is the distance in
+between two adjacent rasters.
+
+
+
+Shell width: Width of the shell. Similar to raster width.
+
+
+
+Perimeter-to-raster air gap: Distance between the shell and the raster.
+
+Shell
+Air Gap
+
+θ
+
+Raster Angle
+Raster Width
+Figure 3: Single layer of a part created by the FFF process.
+
+12
+
+3. Literature Review
+Researchers agree that the shortcomings of FFF include the lack of strength. In one
+research paper Shaffer et al. (2014) write that “FFF 3D printing is increasingly becoming
+a vital tool in many industries for its ability to produce a wide range of physical parts
+quickly, but the quality of the printed parts are lacking the strength, toughness, and
+reliability of parts manufactured through injection molding or milling”. Researchers
+across the world recognize that this is an issue and there are numerous experiments that
+have been conducted to learn about what parameters affect the mechanical performance
+of these parts.
+Lanzotti et al. (2015) researched the impact of process parameters on the mechanical
+properties of PLA parts printed by an open-source 3D printer. A FFF desktop printer was
+used in this experiment to investigate the effects of layer thickness, raster angle, and shell
+perimeters on the Ultimate Tensile Strength (UTS). The experiment concluded that all
+three factors had a significant effect on the UTS. Analysis revealed that UTS increased
+when; raster angle decreased (parallel to loading line), number of shells increased, and
+layer thickness increased up to 20mm. Optimization was done and the parameter settings
+to maximize UTS for layer thickness, raster angle, and shell perimeters are 0.20mm,
+0.00° (parallel to loading line), and 2.645 shells.
+Raster angle is one of the parameters that significantly affects the mechanical
+performance. The optimization result for raster angle obtained by Lanzotti et al, (2015),
+agrees with the research done by Sood et al. (2011). In this experiment, the effects of
+orientation, layer thickness, raster angle, raster width and air gap were investigated on the
+compressive strength. The results concluded that raster width does not have a significant
+effect on the compressive strength. The remaining factors had interactions with one
+another so the main effects could not be interpreted. Optimization was done using
+Particle Swarm Optimization (PSO). The maximum compressive strength is achieved
+with setting layer thickness, orientation, raster angle, raster width, and air gap as
+0.254mm, 0.036 °, 59.44°, 0.422mm, and 0.00026mm respectively.
+Sung-Hoon Ahn et al. (2002) investigated the effects that process parameters have on the
+anisotropic properties. An experiment was conducted to test the effects of air gap, raster
+13
+
+width, nozzle temperature, ABS color, and raster angle on the tensile strength. Results
+concluded that air gap and raster angle are the only factors that significantly affect the
+tensile strength. All other factors were removed and focus was shifted to air gap and
+raster angle. The raster angle that resulted in the highest tensile strength regardless of the
+air gap setting was 0° (parallel to loading line). The raster angle setting that had the
+lowest tensile strength was 90° (perpendicular to the loading line). This is intuitive
+because the tensile load in these specimens only need to overcome the joint between
+filaments which is weak. Decreasing the air gap to -0.003inch (overlap) increased the
+tensile strength across all raster angle settings. However, it is important to note that a
+negative air gap can result in imperfections. This is due to the overlap of material causing
+raised heights on the layer surface. Another consideration is that the results of this
+experiment only valid for air gap between 0.000inch and -0.0003inch. The results should
+not be extended beyond this range.
+Bagsik et al. examined the effects of raster angle, raster width, raster to raster air gap,
+perimeter to raster air gap, and build orientation on the tensile strength. The material used
+in this experiment was Polyetherimide. The experiment concluded that the maximum
+tensile strength was achieved using a negative air raster air gap. One major drawback to
+this experiment is that statistical analysis was not performed with the data. The analysis
+was performed by plotting points on a radar chart. Therefore the only conclusion that will
+be drawn from this experiment is that build direction plays a significant effect on the
+tensile strength.
+Dawoud et al. (2015) investigated the effect of printing parameters on the mechanical
+behavior of virgin ABS. Part samples were made either by an injection molding (IM)
+process or FDM process. The density, tensile strength, flexural strength, impact strength,
+and dimensional accuracy were compared between these processes. In addition some
+printing parameters were varied for different tests. When density was compared between
+the processes, it was concluded that using a FDM process with negative airgap (-0.05m)
+resulted in a density that 98% of the maximum IM density. FDM parts produced with a
+positive air gap resulted in the lowest density.
+
+14
+
+Research has been done all over the globe on the printing parameters and most
+researchers will agree that raster angle and air gap are the most important parameters that
+affect the mechanical performance. In 2002, Ahn et al. were the early researchers who
+investigated the anisotropic properties of FDM printed parts. Their experimentation led
+them to develop build rules for designing FDM parts. These build rules said to “build
+parts such that the tensile loads will be carried axially along the fibers” and to “use a
+negative air gap to increase both strength and stiffness”. Both of these statements have
+been fully supported by research done in the 3D-Printing industry. All of the literature
+review concluded that air gap is one of the most critical parameters to creating strong
+prints. Prints that were created with smaller air gaps outperformed those that were created
+with larger gaps.
+
+15
+
+4. Proposed Post Processing Method
+This project will be investigating a new post processing method to improve the
+mechanical performance of 3D-Printed parts. This method would use a high intensity
+lamp to sinter each layer after printing. After sintering, we expect each layer to be
+homogeneous and a reduction in the anisotropic properties of the FDM process. The
+illustration below shows the step by step process of how this new process would work.
+
+Figure 4: Step by step breakdown of proposed manufacturing process
+
+In step 1, we see the cross section of the 1st (or bottom) layer of a print. This print would
+be exposed to a high intensity lamp as shown in step 2. After exposure, we expect the
+layer to be more homogenous as shown in step 3. In step 4 we print a new layer on top of
+the first layer. In step 5, the layer is exposed to the high intensity lamp. In step 6 we print
+another layer on top of the second layer. In step 7 we expose the top layer to the lamp.
+Step 8 would be the finished product. The step by step process detailed above only
+
+16
+
+demonstrates a 3 layer part. This new post processing method could be used for any
+number of layers.
+
+17
+
+5. Theory
+Resin infiltration is a successful for improving the mechanical performance because the
+resin fills gaps between rasters and layers. A detailed explanation is given in the
+illustrations below.
+
+Figure 5: Illustration of a cross section for a part created
+using the FFF process. Post processing has not been done
+to this part.
+
+Notice the gaps between rasters and layers in Figure 5. The circles represent raster. The
+white space between each raster and layer represent empty space. These gaps are present
+in parts that do not undergo any post processing. Failures are caused by applying enough
+force to break apart these bonds.
+
+Figure 6: Illustration of a cross section for a part created
+using the FFF process. Post processing has been done to
+this part.
+
+Figure 6 illustrates a part that has undergone resin infiltration. The gaps are now filled
+with resin and the part is much stronger. The red coloring in this illustration represents
+the resin. The resin fills in the empty space between rasters and layers, strengthening the
+part. This project used a different approach to improve the mechanical performance.
+
+Figure 7: Cross section of a single layer.
+
+As mentioned previously, parts that are not post processed have gaps between rasters.
+This is illustrated for a single layer in Figure 7. It is believed that the high intensity lamp
+will sinter the layer, creating a better bond between rasters and layers. The single layer is
+expected to look like Figure 8 after being sintered.
+
+18
+
+Figure 8: Layer after being exposed to high intensity lamp.
+
+There might still be a gap from layer to layer adhesion, but if this post processing
+methods works, it will greatly reduce the gap.
+
+19
+
+6. Experimentation
+Three experiments were conducted and a breakdown of each experiment is listed in the
+respected section. A trial experiment was first conducted to find the operating window for
+the factors. There are several different input factors that could be changed for these
+experiments. In order to avoid scope creep, four factors were originally planned for the
+experiments. These factors are exposure time, exposure height, exposure voltage and
+number of pulses.
+6.1 Trial Experiment
+Since this method has not been tested before, a screening experiment was conducted to
+determine the operating window for the various factors.
+This experiment was done with the help of Samuel Vierra,
+who volunteered to help in exchange for credit in another
+class. After reading documentation on the machine, it was
+determined that the exposure time was fixed and could not
+be changed. A decision to fix the exposure distance to 1.5
+inches was also made because changing the exposure
+distance requires significant time. This left 2 factors to
+experiment with; voltage and number of pulses. The
+machine had a low voltage setting at 1600V and a high
+voltage at 3600V. The number of pulses was manually
+controlled so there was no limit to this factor.
+
+Figure 9: Test specimens from the screening
+experiment.
+
+Test specimens used for the trial experiment were older parts that were printed for an
+earlier experiment. Voltage and number of pulses were varied until there was a visual
+effect on the surface of the print. This screening experiment was very beneficial to
+understanding the process and all of the variables that could affect our results. The
+following are the key takeaways from the screening experiment.
+
+20
+
+
+
+Contamination of oils and ink on the part surface increases the likelihood of a
+burn occurring.
+
+
+
+High voltage causes burns on the surface.
+
+
+
+High number of pulses combined with a low voltage creates a smooth surface.
+
+The screening experiment gave us valuable information for the final experiment. Figure 9
+is a picture of the specimens used in the screening experiment. Factor levels were raised
+until a burn occurred to determine the appropriate levels for the factors.
+6.2 Experiment 1
+Final design of the experiment resulted in two factors and four levels for each of those
+factors. The two factors chosen for the experiment were voltage and number of pulses.
+This resulted in 16 treatments. The response for this experiment was layer height and
+neck height. This would be measured using an optical microscope. We chose a sample
+size of 2 for this experiment. The decision to use two replicates instead of just one was
+made because the process was not stable and very sensitive to contamination. Using one
+replicate could give us results that are not representative of the process. Using JMP the
+runs were completely randomized. The decision to use four factors was a result of the
+screening experiment. This led us to believe that the window was actually somewhere
+between our low and high point.
+Table 1: Factors and respective levels for experiment 1.
+
+Number of Pulses
+
+Voltage
+(v)
+
+10
+
+13
+
+17
+
+20
+
+1600
+
+Treatment 1
+
+Treatment 5
+
+Treatment 9
+
+Treatment 13
+
+1850
+
+Treatment 2
+
+Treatment 6
+
+Treatment 10
+
+Treatment 14
+
+2100
+
+Treatment 3
+
+Treatment 7
+
+Treatment 11
+
+Treatment 15
+
+2350
+
+Treatment 4
+
+Treatment 8
+
+Treatment 12
+
+Treatment 16
+
+21
+
+6.2.1 Manufacturing
+All of the test samples were created on the same day. Lots of 16 samples were printed
+each time. To prevent contamination, gloves were used when handling each sample.
+After each lot was printed, they were cooled and then removed from the bed. They went
+into a plastic bag to prevent contamination during handling. An image of the
+manufacturing process is shown in the appendix (Figure A)
+6.2.2 Exposure
+Due to the burns observed on screening test samples, care was taken prevent
+contamination from oils and inks. Throughout the experiment, gloves were worn and only
+one experimenter ever handled the test samples pre-flash. Samuel handled all of the
+samples. Samuel loaded each sample onto the test bed and placed it under the lamp.
+Samuel then positioned himself at the door away from the test flashing. This allowed him
+to turn off the overhead lights during the flashing process and to prevent anyone else
+from walking in during the flash testing. Inderpreet adjusted the voltage and number of
+pulses for each sample. Upon confirmation of the test, Inderpreet would pull the test bed
+out of the machine while Samuel prepared an envelope marked with the voltage and
+number of pulses. The samples were cooled and Samuel would place it in the envelope
+with his right hand and tape it with his left hand. This was to ensure that the hand
+exposed to tape adhesive never touched the samples directly. An image of the Sinteron
+can be seen in the appendix (Figure B)
+
+22
+
+6.2.3 Measurement
+The envelopes were shuffled and measurements were taken with a portable microscope.
+Gloves were worn during this process to make sure that contamination did not affect the
+results. The following is the procedure for measurement
+1. Remove sample from envelope
+2. Use scalpel to cut sample perpendicular to
+filament direction (Figure 14)
+3. Place sample with cross section exposed up
+4. Place microscope on top of cross section
+5. Focus microscope to get clear image
+6. Capture image and get measurements
+7. Record measurement in computer
+
+Figure 10: Layer height measurement from a
+sample.
+
+6.2.4 Discussion
+During the measurement process a major flaw was discovered in our experiment. The
+microscope that was used did not have the capability to tell the user what the exact
+magnification was at a specific time. This was very crucial to our experiment because
+measurements could not be compared to other measurements if we did not know the
+magnification. The microscope manufacturer was contacted about this issue and they
+confirmed this was an issue that most people had. They recommended purchasing a new
+tool that would solve this issue. Due to the time limitations, we had to determine another
+response that could be used.
+As discussed in the earlier sections, the response was going to be layer height and neck
+height. Due to the issue with the microscope capabilities, we decided to change the
+response to be the neck height divided by the layer height. In the optimal case we would
+want the layer height and the neck height to be equal or a value of 1 for the response.
+This would result in a homogenous level layer. Samples can now be compared regardless
+of magnification
+
+23
+
+6.2.5 Analysis
+ANOVA test will be used for this experimental analysis. Assumption for ANOVA were
+validated and the results are in the appendix (Figure C,D,&E). Normal quantile plot of
+the residuals revealed that the residuals do not appear to be normally distributed.
+ANOVA is very robust so analysis will continue with all data points. Scatterplot of
+residuals did not reveal any trend. Independence was assumed. Residuals by predicted
+graph did not reveal any violations to the assumption for constant variance. The
+RSquared value was 0.07 indicating that the model was not very useful.
+Table 2: ANOVA for the entire model.
+
+Source
+
+DF
+
+Sum of Squares
+
+Mean Square
+
+F Ratio
+
+Model
+
+3
+
+0.00878737
+
+0.002929
+
+0.7040
+
+Error
+
+28
+
+0.11649917
+
+0.004161
+
+Prob > F
+
+C. Total
+
+31
+
+0.12528654
+
+0.5576
+
+From Table 2 above, the p value is greater 0.05. This indicates that the model is not
+significant. The parameters will still be analyzed.
+Table 3: Effects of each factor.
+
+Source
+
+DF
+
+Sum of Squares
+
+F Ratio
+
+Prob > F
+
+Voltage
+
+1
+
+0.00806690
+
+1.9388
+
+0.1748
+
+# Pulses
+
+1
+
+0.00043997
+
+0.1057
+
+0.7475
+
+Interaction
+
+1
+
+0.00028050
+
+0.0674
+
+0.7970
+
+Table 3 above reveals that none of the factors seems to be significant. The p values are
+greater than 0.05
+
+24
+
+6.2.6 Results
+The analysis revealed that none of the factors were significant. This was not the result
+that we were expecting, but do believe that with a different response we could get a result
+that is more useful. The measurement of the current response was not as accurate as we
+hoped and this was due to the limitation of the microscope. There was not a statistical
+significance on the response, but there was a physical response on the test specimens. The
+treatment with both factors on the high
+setting caused buckling on the surface
+of the part. This is illustrated in Figure
+11 which is a zoomed in photograph of
+the cross section. The top surface was
+exposed to the lamp. Notice the
+buckling that occurred. This was also
+noticeable in the second replicate.
+Figure 11: Cross section of part treated with high setting of
+factors.
+
+6.2.7 Scanning Electron Microscope Analysis
+The previous experiment was revisited and in order to increase the resolution of the
+image, a Scanning Electron Microscope (SEM) was used to look at the cross section of
+the part. The SEM had advantages over the previous microscope that was used, including
+higher magnification and the ability to see depth of field. Dr. Richard Savage was
+contacted from the Biomedical Engineering department. Dr. Savage assisted with the
+operation of the machinery and gave suggestions for the experiment.
+One major difference from the last experiment was that it was not be possible to look at
+each of the 32 samples with the SEM. This was due to a constraint in time and resources.
+It was decided to first look at a single control sample (no treatment applied) under the
+SEM and then determine if it is worth the resources to look at other samples. Since the
+SEM only works with conductive materials, a sputtering machine was used to deposit a
+
+25
+
+thin gold layer on the cross section of the part. The sputtering machine is seen below in
+Figure 12.
+
+Figure 12: Sputtering Machine used to deposit gold on the surface of the print. This is
+done so that the SEM can be used in this experiment.
+
+Once the thin layer was deposited on the part, we were able to insert the sample into the
+SEM and look at the cross section. Below is a screen shot of the control sample under the
+SEM.
+
+Figure 13: Screenshot from the SEM. This is the control sample at 70X
+magnification. The lighting on the image is corrupted but is still useful for
+examination.
+
+26
+
+After looking at the control sample, it was determined that the SEM would be appropriate
+for this experiment. The following week, four more samples were brought in to the lab
+for examination, resulting in a total of five samples (including the control sample from
+the previous week). Preparation and setup of each sample for the SEM took over an hour.
+Therefore, looking at all 32 samples from the experiment would not be feasible. Below is
+a table with information about each sample.
+Table 4. Detailed information about each sample.
+
+Sample Number
+
+Number of Pulses
+
+Voltage (V)
+
+1
+
+Control (Not Exposed)
+
+Control (Not Exposed)
+
+2
+
+10
+
+1600
+
+3
+
+13
+
+1850
+
+4
+
+17
+
+2100
+
+5
+
+20
+
+2350
+
+The samples were brought into the lab and then cut to expose the cross section. Many
+different cutting applications were thought of, but the one that worked best was using a
+medical grade scalpel. This resulted in the cleanest cut and did not leave any burrs on the
+sample. The illustration below (Figure 14) shows how the cuts were made for each
+sample. The samples were 3mm squares and had a height of about 15 layers. The cut
+made on each sample was perpendicular to the direction of the raster. Once cut, the inner
+layers were exposed for examination.
+
+27
+
+Figure 14: Visual representation to illustrate how each sample was cut.
+
+After all four samples were cut, they were transferred to the sputtering machine so that
+they could become conductive. The sputtering machine used for these samples was much
+larger. An image of two samples is shown below.
+
+Figure 15: Gold coating applied to the cross section of the sample.
+
+After the samples were coated with gold, they were transferred to the SEM for imaging.
+Three images were taken for each sample. This was the left, middle, and right side. The
+
+28
+
+comparisons for all samples are shown below. The top layer is the one that was exposed
+to the Sinteron, so we want to examine and determine if the top layer differs from sample
+to sample.
+
+Figure 16: Cross section of the sample. The top layer was exposed to the Sinteron.
+Numbering on top right of each photograph corresponds to number of pulses and
+voltage. This is the image for the left side of each sample at 25-27 magnification.
+
+29
+
+Figure 17: Cross section of the sample. The top layer was exposed to the Sinteron.
+Numbering on top right of each photograph corresponds to number of pulses and
+voltage. This is the image for the middle of each sample at 80-90 magnification.
+
+Figure 18: Cross section of the sample. The top layer was exposed to the Sinteron.
+Numbering on top right of each photograph corresponds to number of pulses and
+voltage. This is the image for the right side of each sample at 23-27 magnification.
+
+30
+
+The results from this experiment visually revealed that there was not a significant effect
+on the top layer due to the Sinteron. Air gap was still visible in all of the images and was
+not reduced with any of the exposures. However, something that was of interest is that if
+we look at the “13-1850” sample in the photos above, we can see that the bottom most
+layer is very distinct. The rasters are very well formed and the adhesion from the top
+layer is visible. At this point all of the evidence for the project supported that the Sinteron
+is not successful in reducing the air gap between layers. To ensure that this was in fact
+true, another experiment was conducted. This was to investigate the effect of the Sinteron
+on all of the layers.
+6.3 Experiment 2
+In this experiment, Dr. Wang and I decided to print three samples with 100% infill
+(solid). Since our previous experiments had no significant effect on a single layer, it was
+decided to print a sample with only three layers. One of these sample would be the
+control sample (no treatment) and the other two samples would be treated with the high
+treatment (20-2350).
+6.3.1 Manufacturing
+The dimensions for these samples were kept similar to the previous experiment. The
+length and width were 20mm and the height was changed to 0.7mm so that only three
+layers would print.
+
+Figure 19: Visual representation of the sample created.
+
+31
+
+The samples were printed individually at the sample location and not simultaneously.
+This was done so that the location of where the sample was created on the print bed
+would not have an effect on the experiment. Simply put, this was to reduce noise in the
+experiment due to the manufacturing properties of the printer. Gloves were also worn
+during the manufacturing procedure to prevent contamination.
+6.3.2 Exposure
+Two samples were exposed with the number of pulses set at 20 and the voltage at 2350V.
+This setting was chosen because if the results of this experiment shows no effect, than it
+would be highly unlikely that a lower setting would cause an effect. The first sample was
+exposed to the Sinteron and a burn mark appeared on the surface of the print. Along with
+this, the print was no longer sitting flat on the bed. It was warped in a concave up
+position. Note of this was taken and a photograph was taken for the next sample. The
+photograph can be seen below.
+
+Figure 20: Photograph taken before exposure and after exposure. Notice the warping that occurred due to the
+treatment.
+
+Further research was done to determine why this warping occurred. An article [4] was
+found online where Colin Hindle, Polymer Technology Lecturer at Napier University,
+speaks about warping of ABS. Hindle says that the thermal expansion and contraction of
+polymers is very high. As the print is heated it expands, but as cooling occurs, the
+polymers contract and this is what causes the warping. The layers beneath are cooler than
+the top and so the Sinteron will heat up the layer but the contraction pulls the side by side
+rasters together.
+
+32
+
+6.3.3 Measurement
+The samples were brought into the Material Engineering lab and the optical microscope
+was used to examine the cross section. This was done with the help of Eric Beaton,
+Materials Engineering Support Technician. The sample with a burn mark was not
+examined because of potential noise it could add to the experiment. The parts were cut
+with a scalpel perpendicular to the filament direction like the previous experiment.
+
+Figure 21: Image taken from the optical microscope. The control sample is on the left
+and the exposed sample is on the right.
+
+6.3.4 Results
+The image comparison might look as if the air gap was eliminated, but you can still see
+the distinction between side by side rasters. Technical Advisor, Dr. Xuan Wang was
+contacted and his recommendation was to try and sand or polish the sample and get
+another image. The exposed sample was brought into the lab the following week and was
+sanded down. The image revealed that the cross section was very smooth. This was not
+due to the exposure, but the sanding procedure actually smoothed the surface of the cross
+section. A polisher was then used on the surface of the cross section. The sample was
+examined in the microscope and an image was captured. This is shown below.
+
+33
+
+Figure 22: Side by side comparison of control sample and exposed sample. Exposed sample was polished.
+
+The image above shows that the air gap due to the treatment was not eliminated. There is
+also not a visual significant effect on any other layer. Comparing the two images, it does
+seem that the gap in the treatment sample is smaller.
+6.4 Experiment 3
+In order to get a quantifiable conclusion, additional samples were printed and then the
+area of the gap was measured using ImageJ software. Two sample groups were
+compared, one control group and one treatment group. The levels for the treatment group
+were set to 20 pulses and 2350V. The sample size was 7.
+6.4.1 Manufacturing
+The dimensions of the sample for this print were kept the same as experiment 2. Gloves
+were used throughout the entire manufacturing and exposure process. Prints were made
+one at a time and all prints were put into a plastic bag after manufacturing.
+6.4.2 Exposure
+Similar to experiment 2, the samples in this experiment also had warping issues. All
+samples that were manufactured were randomly mixed in a bag. Seven samples were
+removed and one by one they were exposed to the Sinteron. Gloves were worn during the
+entire process.
+
+34
+
+6.4.3 Measurement
+The samples were cut perpendicular to the raster direction to expose the cross section
+(Figure 14). An optical microscope was used to look at the cross section. A photograph of
+the setup is shown in the appendix (Figure F&G). All 14 samples were examined under
+the microscope and an image was taken with the scale. The images were then analyzed in
+ImageJ. The area of each gap was measured in ImageJ and recorded.
+
+Control
+
+20-2350
+
+Figure 23: Control sample compared to sample with treatment. Red callouts are areas that were measure for experiment.
+
+The image above is one comparison of a control sample and a treatment sample. The gaps
+are indicated by red circles in the image. The areas of these gaps were measured for all 14
+samples. The data were then analyzed in JMP.
+
+35
+
+6.4.4 Analysis
+Since we are only investigating one factor with two levels in this experiment, we can use
+a One Way ANOVA. This test will be able to tell us if the sample groups are statistically
+different from one another.
+
+Figure 24: Boxplot and mean diamond for both sample groups.
+
+The boxplot above illustrates the data visually. From the box plot we can see that
+the variation was similar for both sample groups (outlier excluded). The treatment sample
+group does have a mean area that is smaller, but it does not seem significantly different.
+Table 5: ANOVA table comparing control and treatment sample.
+
+Source
+
+DF
+
+Control/Treatment (C/T)
+
+1
+
+1020879
+
+1020879
+
+Error
+
+54
+
+37914322
+
+702117
+
+C. Total
+
+55
+
+38935201
+
+Sum of Squares Mean Square F Ratio
+1.4540
+
+Prob > F
+0.2331
+
+The ANOVA table above has a P-Value greater than 0.05. From this analysis, we cannot
+conclude that the control sample and the treatment sample are statistically significant.
+
+36
+
+This concluded that using the Sinteron does not have a significant effect on reducing side
+by side or layer to layer air gap.
+
+37
+
+7. Conclusion
+This project aimed to experiment and determine if a proposed post processing method
+would decrease the anisotropy in the FFF/FDM process. The proposed process involved
+using a high intensity lamp to flash the print after each layer is printer. The theory was
+that this would decrease the gap between deposited filament and from research this was a
+proven way to make prints stronger.
+For this project, a Xenon Sinteron 2000 was used as the high intensity lamp and a
+Printrbot Simple Metal Plus was used as the 3D printer. Three experiments were done to
+determine if the Sinteron would be successful in reducing the gap between deposited
+filaments. The first experiment was done by flashing the surface of completed prints and
+then using a portable microscope to measure the height of the surface layer and necking
+between deposited filaments. The data were analyzed using a two-way ANOVA and the
+results did not conclude that the Sinteron was successful in reducing the gap. The second
+experiment was analyzed visually using an optical microscope and revealed that Sinteron
+might be able to reduce the gap on parts that are solid. The third experiment was analyzed
+using an optical microscope and the area of the gaps were measured using ImageJ
+software. The results concluded that the Sinteron was not successful in reducing the gap.
+The quantitative data from these experiments suggest that the proposed processing
+method would not be successful in reducing the anisotropy of 3D printed parts created by
+the fused filament process. The theory of the proposed project seemed as though it would
+work, but one major shortcoming is that the Sinteron is not able to evenly apply its
+intensity. The recommendation is to investigate post processing methods such as a heat
+gun that would apply heat evenly across a layer.
+The findings of this experiment cannot be discarded though. As Engineers, investigations
+to improve products or systems are always ongoing, and most experiments give us results
+that are not desirable. The experimental process for this project was followed and the
+experiments grew as the results from previous experiments were analyzed.
+If this project was successful, it would have had a significant social. The social impact
+would be revolutionizing how we buy certain products. Instead of waiting for things to be
+38
+
+mailed to us, we could download files and print products inside of our homes. Lead times
+would have been drastically reduced and entire supply chains would have been changed.
+Common households across the world could build parts with strengths acceptable for
+their application and this would have been a contender for the injection molding process.
+This project was done using a step by step method as mentioned previously. Since this
+project was mainly involved with research of a new post processing method, the only
+change that I could have done was involving either a different response or different
+sample specimens. Instead of using imaging as a response, structural tests could have
+been done to get quantifiable results. This response though, would require much more
+time since samples would have to have been much larger and the testing procedure would
+take longer as well. Physical dimensions of the samples could have also been changed for
+the experiments. Instead of going from large to small dimensions, I could have went from
+small sample dimensions to get a result and then work on to larger samples dimensions.
+This entire project has been a learning experience. Prior to this project, I had little
+knowledge about 3D printing. I learned about the different processes in 3D printing and
+got very well versed in what the advantages and downfalls to FDM printing were. My
+senior project was able to identify a problem, investigate a possible solution to the
+problem, and then use my engineering background to experiment and determine if this
+solution worked. This project lived up to the Cal Poly motto of “Learn By Doing”.
+
+39
+
+8. References
+[1] "Watch This Giant 3D Printer Build a House." Wired Cities. N.p., n.d. Web.
+<www.wired.co.uk/article/giant-3d-printer-builds-houses>.
+[2] Estes, Adam Clark. "3D-Printed Guns Are Only Getting Better, and Scarier."
+Gizmodo. N.p., n.d. Web. <http://gizmodo.com/3d-printed-guns-are-only-getting-betterand-scarier-1677747439>.
+[3] Topjian, Dan. "3D Printing Tough, Durable Parts." (n.d.): n. pag. Web
+[4] "The Science of Temperature and 3D Printing" 3D Print Works. N.p., n.d. Web.
+<http://www.3d-print-works.com/temperature-and-3d-printing/>.
+Ahn, Sung‐Hoon, Michael Montero, Dan Odell, Shad Roundy, and Paul K. Wright.
+"Anisotropic Material Properties of Fused Deposition Modeling ABS." Rapid
+Prototyping Journal 8.4 (2002): 248-57. Web.
+Bagsik, A., and V. Schoeppner. "Mechanical Properties of Fused Deposition Modeling
+Parts Manufactured with Ultem*9085." (2011): n. pag. Web
+Belter, Joseph T., and Aaron M. Dollar. "Strengthening of 3D Printed Robotic Parts via
+Fill Compositing." 2014 IEEE/RSJ International Conference on Intelligent Robots
+and Systems (2014): n. pag. Web.
+Casavola, Caterina, Alberto Cazzato, Vincenzo Moramarco, and Carmine Pappalettere.
+"Orthotropic Mechanical Properties of Fused Deposition Modelling Parts
+Described by Classical Laminate Theory." Materials & Design 90 (2016): 453-58.
+Web
+Dawoud, Michael, Iman Taha, and Samy J. Ebeid. "Mechanical Behaviour of ABS: An
+Experimental Study Using FDM and Injection Moulding Techniques." Journal of
+Manufacturing Processes 21 (2016): 39-45. Web.
+
+40
+
+Lanzotti, Antonio, Marzio Grasso, Gabriele Staiano, and Massimo Martorelli. "The
+Impact of Process Parameters on Mechanical Properties of Parts Fabricated in
+PLA with an Open-source 3-D Printer." Rapid Prototyping Journal 21.5 (2015):
+604-17. Web.
+Lee, B.h., J. Abdullah, and Z.a. Khan. "Optimization of Rapid Prototyping Parameters for
+Production of Flexible ABS Object." Journal of Materials Processing Technology
+169.1 (2005): 54-61. Web.
+Rao, Addanki Sambasiva, Medha A. Dharap, and J. V. L. Venkatesh. "Experimental
+Study of the Effect of Post Processing Techniques on Mechanical Properties of
+Fused Deposition Modelled Parts." International Journal of Manufacturing,
+Materials, and Mechanical Engineering 5.1 (2015): 1-20. Web.
+Shaffer, Steven, Kejia Yang, Juan Vargas, Matthew A. Di Prima, and Walter Voit. "On
+Reducing Anisotropy in 3D Printed Polymers via Ionizing Radiation." Polymer
+55.23 (2014): 5969-979. Web.
+Sood, Anoop K., Raj K. Ohdar, and Siba S. Mahapatra. "Experimental Investigation and
+Empirical Modelling of FDM Process for Compressive Strength Improvement."
+Journal of Advanced Research 3.1 (2012): 81-90. Web.
+Tymrak, B.m., M. Kreiger, and J.m. Pearce. "Mechanical Properties of Components
+Fabricated with Open-source 3-D Printers under Realistic Environmental
+Conditions." Materials & Design 58 (2014): 242-46. Web.
+
+41
+
+9. Appendix
+
+Figure A: Manufacturing Process for experiment 1.
+
+42
+
+Controller
+
+Lamp
+
+Insert Sample Here
+
+Figure B: Sinteron machine used in all experiments.
+
+43
+
+Figure C: Testing for normality of residual for experiment 1 using the portable microscope. Data seems to be a bit
+skewed.
+
+Figure D: Independence test for experiment 1 using the portable microscope. There does not appear to be a trend.
+
+44
+
+Figure E: Constant variance test for experiment 1 using a portable microscope.
+
+45
+
+Figure F: Optical microscope used for experiment 2 and 3.
+
+46
+
+Figure G: Mounting setup for experiment 2 and 3.
+
+47
+
+Figure H: Normal Quantile Plot for Experiment 3.
+
+Figure I: Independence test for experiment 3.
+
+48
+
+Figure J: Equal variance test for experiment 3.
+
+49
+
+

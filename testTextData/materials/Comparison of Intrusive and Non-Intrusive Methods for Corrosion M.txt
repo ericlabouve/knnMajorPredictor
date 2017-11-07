@@ -1,0 +1,624 @@
+Comparison of Intrusive and Non-Intrusive Methods for Corrosion Monitoring of Fuel
+Processing Systems
+
+A Senior Project
+presented to
+the Faculty of the Materials Engineering Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree
+Bachelor of Science; Materials Engineering
+
+by
+
+Armando Jacob Espinoza
+Thomas Conner Field
+
+June, 2017
+© 2017 Armando J Espinoza, Thomas Conner Field, Trevor Harding, Dan Chapman, Chevron
+
+Table of Contents
+
+1.
+
+Abstract ............................................................................................................................................1
+
+2.
+
+Background ......................................................................................................................................3
+Corrosion Background
+Corrosion Monitoring Equipment: Intrusive ER Probes
+Corrosion Monitoring Equipment: Non-Intrusive Ultrasonic Sensor
+Cause for ER Probe Alternatives
+
+3.
+
+Experimental Procedure ...................................................................................................................9
+Design Considerations
+Materials
+Construction
+Installation of Monitoring Devices
+Testing/Usage
+Draining and Cleaning
+
+4.
+
+Results ............................................................................................................................................14
+
+5.
+
+Discussion ......................................................................................................................................16
+
+6.
+
+Conclusion .....................................................................................................................................17
+
+7.
+
+Future Recommendations ..............................................................................................................19
+
+8.
+
+Acknowledgments..........................................................................................................................20
+
+9.
+
+References ......................................................................................................................................21
+
+10.
+
+Appendix ........................................................................................................................................23
+
+1
+
+1. Abstract
+This presentation contains an assessment of the best overall corrosion monitoring device,
+intrusive or non-intrusive, for use in the petrochemical industry. Corrosion in the petrochemical
+industry is a large issue because it causes a deterioration of pipe integrity in fuel processing
+systems. A reduction of pipe wall integrity due to corrosion could result in a leak or an explosion
+of fuel processing lines since those systems function at high pressures. The use of corrosion
+monitoring systems in the petrochemical industry helps to detect early signs of corrosion prior to
+failure so that proper maintenance can be performed to prevent catastrophe. To simulate those
+types of systems a test cell was designed to adequately fit two corrosion monitoring devices.
+Each device determines corrosion rate by measuring pipe wall thickness over time using
+ultrasonic technology or by measuring resistance across a degrading reference element. The
+corrosive medium used to corrode the inside of the test cell is glacial acetic acid (>99.7% purity).
+Measurements of pipe wall thickness were taken before and after testing and are used as a
+reference point to compare against each device’s measurement. Relative accuracy, response time,
+safety, and reliability are used as criteria for determining the best monitoring device. Overall, the
+Microcor ER probe proved to be the better of the two devices as determined by the criteria listed
+above and the time allowed for testing.
+
+2
+
+2. Background
+Corrosion Background
+Corrosion is a chemical or electrochemical reaction between a material, usually a metal, and its
+environment that invokes a deterioration of a material and its properties [1]. Environmental
+factors that induce the deterioration of a material include a combination of physical state (liquid,
+gas, or solid), chemical composition, and temperature. Once a material has deteriorated
+extensively enough, it will fail. Depending on the application, this could cause major issues. For
+example, a severely corroded fuel pipeline could spring a leak or explode because the system is
+at such a high pressure. As a result, there would be a major monetary loss from halt of
+production or even serious injury/death to on-site personnel.
+
+Corrosion Monitoring Equipment: Intrusive ER Probes
+All facilities that transport corrosive mediums must have various corrosion monitoring systems
+installed throughout their pipeline network to detect and provide accurate information on the
+integrity of the wall thicknesses. These systems work to provide critical information on the rate
+of corrosion which can be further used to increase the cost effectiveness of plant operations. The
+cost effectiveness of plant operations can be increased since the devices provide data on
+corrosion trends associated with changes in process parameters. These in turn aid in identifying a
+specific corrosion problem, assess the effectiveness of corrosion prevention techniques, and
+generate interpretive data for maintenance requirements [2]. Facilities have several variations of
+monitoring systems available to choose from, but the two most common monitoring systems are
+intrusive electrical resistance (ER) probes and non-intrusive automated thickness monitoring
+(ATM) systems [2]. Both methods are effective in providing accurate and reliable data on the
+
+3
+
+corrosion rates, but as effective as each system is, there are drawbacks that have to be
+considered.
+
+Intrusive ER probes function by exposing an element on the probe head to the corrosive fluid and
+measuring the resistance across that exposed element. The reduction in the element’s crosssection will be proportional to the increase in the electrical resistance of the element, given by
+equation 1:
+𝐿
+
+𝑅 = 𝑟∗( )
+𝐴
+
+(1)
+
+R representing the electrical resistance, r being the specific resistance of the given material, L
+being the element length, and A being the cross sectional area. ER probes are characterized as an
+intrusive method because it requires a direct insertion of the probe into the pipeline to expose it
+to the corrosive medium. An access fitting hole is drilled into the pipe with a specific diameter to
+accommodate the device plus special mounting flanges that have to be bored and welded to
+ensure a seamless fit after installation . The main drawback for this system is that the probes
+have a finite lifespan of about 3 years and the replacement process has proven to be a high-risk
+task and at times even fatal due to the high pressure environments they are installed in [3].
+
+Despite its drawbacks, ER probes have remained the gold standard for measuring corrosion rate
+since they have proved to be highly accurate and reliable in measuring corrosion rate. As a result
+of their high use, there has been substantial development into the variations of probe head type
+and probe design. Probe design variations include fixed, retractable, and retrievable probes[3].
+Fixed probes are screwed or bolted into the pipelines, resulting in the pipeline being shut off
+
+4
+
+during installation or removal. This allows access to the ER probe head and will prevent any
+serious accidents. Retractable probes are more advanced than fixed probes in that they feature a
+safer retractable system for replacement or removal of the probe head. Specifically, there is a
+locking ferrule and an adjustable safety chain that function in concert with each other to prevent
+the probe from shooting out during replacement (Figure 1). However, these variants are usually
+only designed for lower pressure piping systems. On the other hand, retrievable probes are
+installed with special fittings and modifications to account for monitoring at high pressures
+(Figure 1)[3].
+
+Figure 1. Typical designs for a retractable (left) and retrievable (right) corrosion monitoring ER
+probe variant. [http://www.alspi.com/erintro.htm]
+
+The various head types (exposed elements) available vary greatly depending on the type of
+system it will function in (Figure 2). Each head type is designed to be chosen based on the need
+for probe life and probe response time [3]. Variations include:
+
+5
+
+1. Wire loop: most common, high sensitivity, equipable velocity shield
+2. Cylindrical: welded reference tube inside of tube element, suited for harsher
+environments
+3. Tube loop: high sensitivity applications, rapidly detect low corrosion rates
+4. Strip loop: flat loop geometry, low flow applications
+5. Spiral loop: high-flow applications, high resistance means high signal-to-noise ratio →
+sensitive
+6. Flush mount (large/small): flush with vessel wall, effective in simulating true corrosion,
+used in pigging operations with high velocity systems
+7. Atmospheric/Surface strip: large surface area exposed element, ideal for measurements in
+inhomogeneous corrosive environments
+
+Figure 2. Different variations head type of exposed elements for ER probe (from left).
+[http://www.alspi.com/erintro.htm]
+
+6
+
+Corrosion Monitoring Equipment: Non-Intrusive Ultrasonic Sensors
+The variety of non-destructive ATM systems that can safely and efficiently measure the
+corrosion rate of pipelines vary depending on the requirements. However, the primary focus of
+this literature review will be placed on fixed ultrasonic thickness monitoring (UTM) systems.
+UTM systems function to measure a localized thickness through the use of sound waves. UTM
+systems normally include a transducer, pulser/receiver, and a display [5]. The type of transducer
+used for this application is the ultrasonic transducer, which can either be piezoelectric or variable
+capacitive [6]. The pulser generates short electric pulses of energy at a constant rate which are
+converted by the transducer into short high frequency ultrasonic sound pulses [7]. These pulses
+are then directed into the material, any discontinuation or impurity in the path of the ultrasonic
+sound wave will be reflected by the impurities surface to be received by the transducer,
+transformed into an electric signal, and amplified by the receiver to be projected onto the display
+(Figure 3). Depending on the intensity shown on the display, information about the
+impurity/discontinuity such as size, orientation, and location can be accurately derived [5].
+One such procedure was conducted by the Ship Materials Engineering Department of the Naval
+Surface Warfare Center detailing the process thoroughly: After mechanical measurements were
+made using either a deep throat micrometer and calipers. The resulting thickness information was
+used to determine which sections on the piping would be tested to acquire a desired thickness.
+All of the ultrasonic measurements were made at the center of the grid location of interest. For
+the four thickness gages evaluated, the transducer used was the one recommended by the
+manufacturer for measurements in the thickness range of interest [8].
+
+7
+
+Figure 3. How a simple ultrasonic measuring devices records pipeline thickness.
+[http://www.hitachi.com/businesses/infrastructure/product_site/compressor/service/rr/equipment.htm
+l]
+
+These types of monitoring systems have an accuracy up to +/-0.01 mm on metallic materials
+(varies depending on metal type) and can provide accurate readings with metal thicknesses
+ranging from 3 mm up to 50 mm [9]. UTM systems do not require access to both sides of the
+sample to measure thickness and can measure thickness over a layer of paint up to 1.0 mm thick
+without damaging it. The types of UTM systems available are permanently installed fixed and
+permanently installed magnetically mounted. The fixed and magnetic UTM systems have the
+capacity to wirelessly transmit data to a computer through a network of sensors and a gateway.
+The fixed sensor can be permanently mounted on the pipeline by a clamp or studs welded onto
+the pipe [10]. This allows for mounting orientation in the vertical position or horizontal to the
+ground. As long as it maintains good contact with the surface it will provide highly accurate data
+to the user. The magnetic sensor is mounted magnetically and fastened by a strap around the pipe
+allowing for multiple sensors to be attached on that same strap around the same pipe [10- 11].
+Some of the drawbacks that come with the use for both systems is the inaccuracy of measuring a
+
+8
+
+layer of rust and the frequent replacement of the battery. Additionally, both types require
+seamless contact with the metal and requires trained personnel to interpret data [4].
+
+Cause for ER Probe Alternatives
+ER Probes have been used by the oil and gas industry since the 1960’s due to their reliability and
+effectiveness in pipe thickness monitoring [3]. However, due to sensing elements being a
+consumable in nature they have a finite lifetime and have to be replaced periodically. Requiring a
+dangerous removal and replacement process in a high pressure environment, which includes a
+probability of the probes ejecting at high velocity due to residual pressure in the pipes.
+Unfortunately, over the years there have been multiple cases of severe injury due to the
+unavoidable replacement procedures [3]. As a result, considerable research has been done to
+effectively improve safety by redesigning the model or by placing more emphasis on the use of
+non-intrusive methods which theoretically output the same effectiveness and reliability as ER
+Probes. The importance of non-intrusive designs is to provide a safer means of measuring
+corrosion rate inside the pipeline. One key benefit to mention is its improved ease-of-use, due to
+its fixed design variants [12]. A technician can easily measure the thickness of pipes across the
+plant in roughly a minute. The recent push towards automated non-intrusive forms of thickness
+monitoring is slowed by the concern that the alternatives might not be as reliable as ER Probes.
+
+3. Experimental Procedure
+Design Considerations
+A test cell is designed to simulate high corrosion conditions similar to those found in fuel
+processing lines minus the high pressures, temperatures, and external environmental conditions.
+
+9
+
+To replicate the corrosive conditions found in fuel processing systems two types of system were
+considered: dynamic and static. The dynamic system that was considered consisted of a
+corrosion resistant pump to pump a corrosive medium through a circular system of PVC Type I
+pipes and through a test section at low velocity (Figure 4). In addition to that, the design also
+included two access valves where the corrosive medium could be drained or filled. The corrosive
+medium would be pumped at a low velocity to reduce the possible effects of erosion corrosion.
+Unfortunately, due to the complexity of the build and strict time constraints, this system was
+dropped for a similar design.
+
+Figure 4. Dynamic low flow system considered to replicate a corrosive environment found in fuel
+processing systems (Test section = red circle, access valves = blue circle, pump = green circle).
+
+An alternative to the dynamic system is a static system in which the devices are attached or
+inserted into a plain carbon steel pipe that is sealed on one end and filled with a corrosive
+medium. The ultrasonic monitoring device would be magnetically attached to the outside while
+the ER Probe would be attached directly via an access fitting to the exterior of the pipe. Each
+
+10
+
+sensor is subsequently connected to either a tablet or laptop where the corrosion data can be
+obtained (Figure 5).
+
+Figure 5. Schematic of static system for the testing of corrosion monitoring.
+
+Materials
+● 2 ft tall plain carbon stainless steel ASTM A106 Grade B (test section)
+● A516 carbon steel plate
+● 1” NPT male stainless steel nipple
+● JB Weld Epoxy
+● 6 x 2.50 L bottles of glacial acetic acid (>99.7%)
+● Teflon tape
+● 3 ton jack stand
+● Jack stand rubber pads
+● Spill bin (PE= Fair to Poor, Aluminum= Good, 316 Stainless Steel= Excellent)
+Construction
+Building Test Section
+1. Using a bandsaw cut the steel pipe to a height of 1.5 ft.
+
+11
+
+2. Drill/tap a 1” diameter hole 13” up from the base of the steel pipe using a mill.
+3. Manually thread the hole using a 1” NPT tap and tap oil.
+4. Coat one end of the nipple threads with an epoxy (i.e. JB Epoxy Weld).
+5. Screw in the epoxy end of the nipple into the pipe until the nipple is flush with the outer
+pipe.
+6. Using an angle grinder grind out an 8” by 8” square section of steel plate.
+7. Clean the steel plate for MIG welding by wire brushing away any dirt or rust from weld
+area.
+8. Place the pipe in the center of the steel plate and tack weld at the four cardinal directions.
+9. Fully MIG weld the pipe to the steel plate and ensure a watertight weld (Recommended:
+Run two more passes over the original weld, one on the upper and lower edge of the
+bead)
+10. Optional: To further seal the test cell, brush away any slag from the welds and coat the
+beads with an epoxy.
+11. Fill with a non-reactive liquid (i.e. water) and let sit for 30 minutes - 1 hour to test for any
+leaks.
+Installation of Monitoring Devices
+Microcor ER Probe
+1. Wrap the threaded portion of the male nipple with teflon tape.
+2. Carefully insert the ER Probe through the male nipple into the pipe (do not hit against
+edge of nipple or pipe during installation).
+3. Bring down the stuffing box that has the 1” female NPT connection and securely screw
+into place (hand tight).
+
+12
+
+4. Once all fittings have been tightened fill with a nonreactive liquid (i.e. water), check for
+any leaks, and tighten as necessary.
+5. Attach the Microcor ER wireless transmitter at the end of the ER Probe.
+6. Attach the rubber pads on the top of the jack stand, place stand under Microcor
+transmitter, and raise until the stand supports the transmitter.
+ET-210 WiHART Sensor
+1. Remove protective cap from the bottom of the ET-210 Sensor.
+2. Attach appropriate shoe to the bottom of the sensor (Shoe is chosen based on how close it
+matches the curvature of the pipe).
+3. Magnetically mount to desired location from the edge of transmitter (Do not attach
+directly because it could damage the bottom of the sensor).
+4. Thread strap through strap slot and wrap around pipe.
+5. Tighten strap until the bands are taunt (Reference ET-210 WiHART Sensor Installation
+Guide).
+6. Cut off excess strap length.
+Testing/Usage
+1. Prior to starting corrosion monitoring, download and install the appropriate software for
+each device to a laptop or portable tablet.
+2. Set up gateways to each device and set up the network (if needed).
+3. Measure initial wall thickness of the pipe prior to testing using.
+4. Under the fume hood, place the test cell inside the spill bin.
+5. Fill with acetic acid until the sensing element from the ER Probe has been submerged.
+6. Leave under fume hood for one test cycle (suggested test cycle 4 weeks minimum).
+
+13
+
+7. Periodically check on test cell for leaks.
+8. Pipe wall thickness measurements are recorded periodically over a 4 week period.
+Draining and Cleaning
+See Appendix A.1 Draining
+
+4. Results
+Post testing the probe recorded an estimated material loss on the pipe wall of 0.07 mils within a
+79 hour test period. The ET-210 sensor, on the other hand, recorded a total of 0 mils of pipe loss
+for the duration of the initial testing period, data collected from both can be seen in Table I. It’s
+important to note that the probe readings do not indicate a direct measurement but merely an
+estimation based on how much material the reference element loses while submerged in the
+acetic acid.
+
+Table I. Metal loss over a 79-hour period at a fixed location around the test cell.
+ER Probe Metal Loss
+
+ET-210 Sensor Metal
+
+(mil)
+
+Loss (mil)
+
+0
+
+0
+
+0
+
+49
+
+0.039773
+
+0
+
+51
+
+0.042559
+
+0
+
+52
+
+0.045069
+
+0
+
+72
+
+0.06582
+
+0
+
+73
+
+0.067304
+
+0
+
+Hour
+
+14
+
+75
+
+0.069434
+
+0
+
+79
+
+0.074285
+
+0
+
+The Microcor ER Probes trendline has a moderate rise in detected metal loss with the slope being
+close to 1 at around ~9.447, while the ET-210 WiHart Sensor has a slope of exactly 1. Both
+devices, indicated a linear trend of corrosion with relatively minimal scatter (Figure 6).
+
+Figure 6. Data showing metal loss over time measured by the two devices.
+
+Post testing, additional wall thickness measurements were taken at 27 locations over 3 cross
+sections of the test cell and averaged. The first cross section being 2 inches from the bottom, the
+second being 7 inches from the bottom, and the third being 13 inches from the bottom. Once
+those 27 measurements are averaged it is shown that the ET-210 WiHART sensor measured a
+total wall thickness loss of 3.67 mils (Figure 7).
+
+15
+
+Figure 7. Depiction of additional wall thickness measurements using the ET-210 WiHART Sensor.
+
+5. Discussion
+During the duration of testing, the ER probe showed a fairly linear trend of data while the ET210 sensor showed no change in pipe wall thickness. An explan for this lack of readings includes
+the sensor not functioning properly. Another possibility is that since the ET-210 sensor is fixed
+in a single position during the testing period, it measured pipe wall loss and corrosion product
+buildup simultaneously, resulting in the wall loss and corrosion build up canceling each other
+out. Which is expected in some form due to the nature of the static system in which the devices
+were tested in. As it stands, the data gathered from initial testing was wholly inconclusive mainly
+due to the short testing period and the corrosion build up.
+Table II lays out several logistical aspects that were not a part of the main criteria used to
+influence the verdict. However, provided additional information to the logistical use of each
+device and can be treated as secondary criteria. With that being said, logistically, the ET-210
+sensor tends to be somewhat easier to maintain, due to its non-intrusive nature.
+
+16
+
+Table II. Logistics Comparison of ER Probe and ET-210 WiHART Sensor.
+Battery Life
+Installation
+
+Maintenance
+
+Magnetically attached
+
+Battery Replacement
+
+and strapped
+
+Only
+
+Drill a 1” access fitting
+
+3 Year**
+
+(Years)
+
+ET-210 WiHart
+6.5*
+Sensor
+
+Microcor ER
+1
+Probe
+*BP20/BP20E Battery Pack and assumes acquisition every 12 hours at a temperature of 95 ℉
+**Replacement of sensing element
+
+6. Conclusion
+Taking all of the literature, device specifications, and available data into account, it is determined
+that the Microcor ER probe is the superior of the two devices based on points awarded from the
+initial criteria.
+
+In terms of overall safety, the ET-210 sensor surpassed its counterpart in this category due to its
+non-intrusive nature in that the sensor is magnetically attach to outside of the pipe wall. In
+addition to only requiring a battery replacement every 6.5 years. While the ER probe takes an
+intrusive approach for installation. Which makes it more hazardous to operate and maintain and
+often times in a large scale refinery setting these devices can prove to be dangerous or fatal. The
+reason being that the devices are installed in pipelines subject to high pressure and velocity fluids
+running through them, often at elevated temperatures. Points for this criteria can be seen in Table
+III.
+
+17
+
+A response time “point” is given to the Microcor ER Probe while zero points were awarded to
+the ET-210 sensor. Since over the course of 79 hours the Microcor ER Probe outputted mil loss
+readings. Whilst the ET-210 WiHART Sensor outputted a zero change in wall thickness over the
+same time period. However, it worth mentioning that the data each device collected had a close
+to linear trendline and experienced relatively little scatter. Points for this criteria can be seen in
+Table III.
+
+As far as reliability is concerned, the probe proved to be more reliable than the ET-210 sensor,
+due to the simple fact that the probe yielded readings indicating a change in pipe wall thickness
+while the ET-210 sensor did not. Points for this criteria can be seen in Table III.
+
+It is important to note that because a true physical measurement of pipe wall thickness proved to
+be more difficult than previously theorized, it is assumed that both devices performed accurately
+based on their respective technical specifications and measurement methods. Thus accuracy was
+not a heavily weighted criteria that influenced the final verdict. Points for this criteria can be
+seen in Table III.
+
+18
+
+Table III. Comparison of Each Device Based by the Assigning of Criteria Points.
+Overall Safety
+
+Response Time
+
+Reliability
+
+Accuracy
+
+ET-210 WiHart
+X
+
+X
+
+Sensor
+
+Microcor ER
+X
+
+X
+
+X
+
+Probe
+
+The verdict that was decided however does not discount the effectiveness and utility of the ET210 sensor. Further testing is needed to confirm whether the ER probe is truly superior to the ET210 sensor.
+
+7. Future Recommendations
+For future testing it is recommended that an extend the testing period is the best option, ideally
+testing should last about 4 weeks. Anything less than 2 weeks might be too short to yield any
+sufficient data. Additionally, modifying the test cell design from static to dynamic, choosing a
+different corrosive medium, and or attaching multiple ET-210 sensors to the outside of the test
+section might yield a more complete and conclusive comparison of these two devices. It is
+possible that all of the aforementioned recommendations could in some way shape or form affect
+the data acquisition of further testing.
+
+19
+
+8. Acknowledgments
+This work was funded by Chevron Corporation. We would like to extend a special thanks to
+Professor Trevor Harding and Dan Chapman for their guidance and support this past year, in
+addition to several other people who made this project possible:
+Chevron Device Assistance: Brandon Janak and Orin Wakefield
+Tech Support: Laura Swart
+EH&S: Tom Featherstone
+Shop Advice and Other Help: Eric Beaton, Virgil Threlkel, Trian Georgeou and all student shop
+technicians.
+
+20
+
+9. References
+1. Davis, J. R. "Chapter 1/ Many Forms of Corrosion." Corrosion: Understanding the
+Basics. Materials Park, OH: ASM International, 2000. N. pag. Print.
+2. Metals Samples Company. "Introduction to Corrosion Monitoring." Introduction to
+Corrosion Monitoring. Alabama Specialty Products, Inc., n.d. Web. 03 Dec. 2016.
+3. "Electrical Resistance (ER) Monitoring." Introduction to Electrical Resistance (ER)
+Monitoring. Metal Samples Company, n.d. Web. 30 Nov. 2016.
+4. Permasense. "Comparison of Corrosion Monitoring Systems." (n.d.): n. pag. Permasense,
+Aug. 2015. Web. 30 Nov. 2016.
+5. "Manual Ultrasonic Testing- NDT Techniques." TWI Global. The Welding Institute, n.d.
+Web. 30 Nov. 2016.
+6. Agarwal, Tarun, Ejoku Daniel Says, and Tarun Agarwal Says. "Different Types of
+Transducers in Practical Applications." Edgefxkits International. N.p., 08 May 2015.
+Web. 30 Nov. 2016.
+7. "Pulser-Receivers." NDT Resource Center. Collaboration for NDT Education, n.d. Web.
+30 Nov. 2016.
+8. Leowitz, Carol A., and Lawerence M. Brown. "Ultrasonic Measurement of Pipe
+Thickness." Review in Progress of Quantitative Nondestructive Evaluation 12 (1993):
+1987-994. Iowa State Universitiy. Web.
+9. "Resources Ultrasonic Thickness Gaging." An Introduction to Ultrasonic Thickness
+Gaging. Olympus, n.d. Web. 02 Dec. 2016.
+10. Permasense. "Datasheet - WT210 WiHART Sensor." (2016): n. pag. Permasense
+Ltd.Web. Nov. 2016.
+
+21
+
+11. Permasense. "Datasheet - ET210 WiHART Sensor." (2016): n. pag. Permasense
+Ltd.Web. Nov. 2016.
+12. Saluja, Amit, James Costain, and Edwin Van Der Leden. Non-Intrusive Online Corrosion
+Monitoring (2009): 44-49. 10 Dec. 2009. Web. 2 Dec. 2016.
+
+22
+
+10. Appendix
+A.1 Draining*
+*Draining is to be performed in spill bin under a fume hood and requires two people.
+
+1. Properly label waste container (See: Waste Disposal and Cleanup Section) and wear the
+proper gear when handling acetic acid (See: Personal and Protective Equipment Section).
+2. Remove the ET-210 WiHART Sensor, Microcor ER Wireless Transmitter, and the jack
+stand from the test cell.
+3. Turn test cell until ER Probe is sticking out of the fume hood.
+4. With two hands one person tips the test cell slightly over until the acetic acid starts to
+drain into the waste container. While the second person holds a chemically resistant
+funnel over the waste container opening. Drain until the acetic acid until it is 3” below
+the ER Probe/male nipple.
+5. Carefully unscrew and remove ER Probe from test cell.
+6. Recommended: Seal male nipple.
+7. Turn test cell until male nipple is facing away from waste container.
+8. With two hands one person tips the test cell slightly over until the acetic acid starts to
+drain into the waste container. While the second person holds a chemically resistant
+funnel over the waste container opening.
+9. Clean up any spilled acetic acid that did not make it into waste container.
+
+23
+
+

@@ -1,0 +1,752 @@
+Characterization of the 15-5 Stainless Steel Electric Discharge
+Machining Recast Layer
+
+A Senior Project
+presented to
+the Faculty of the Materials Engineering Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree
+Bachelor of Science, Materials Engineering
+
+by
+
+Rhys Gilmore, Julian Lohser
+Advisor: Prof. Blair London
+Sponsor: Aerojet Rocketdyne
+June, 2017
+
+© 2017, Rhys Gilmore, Julian Lohser
+
+Abstract
+Electric discharge machining (EDM) is a non-conventional machining process that is used for tough, hard
+materials or materials that require no tool force. Wire EDM produces a recast layer and heat-affected zone
+as a result of rapid melting and quenching at the surface of the cut. A secondary machining operation has
+been required to remove this layer. Previous estimates of the depth of the recast layer are likely too
+conservative due to improvements in the technology; therefore, the goal of this study is to characterize
+and more accurately investigate the size of the layer. Two EDM machine parameters, voltage and pulse
+on-time, were varied for the machining of 15-5 PH stainless steel. Three levels of each factor were
+investigated: recommended machine settings, -25%, and -50%. Average recast layer thickness was
+evaluated using a scanning electron microscope (SEM). Microhardness testing was also performed on
+ground, polished, and etched samples. Compared to previous studies and industry specifications, the
+recast layer was significantly smaller or not observed at all. SEM imaging generally indicated an oxide
+layer with porosity and microcracking near the surface. Microhardness results showed no difference
+between the surface and base material at maximum voltage, but significant difference between recast
+layer and base material for all lower voltages. However, a secondary machining operation is still
+recommended to remove any recast or oxide layers, but less material must be removed than prior industry
+estimates.
+
+Keywords: Electric Discharge Machining, Recast Layer, Microhardness, Stainless Steel,
+Scanning Electron Microscopy, Materials Engineering
+
+i
+
+Acknowledgements
+We would like to acknowledge Christopher Shipley at Aerojet Rocketdyne for his wealth of
+information and assistance as the project transformed. We would also like to thank Professor
+Blair London of the Cal Poly Materials Engineering Department for his guidance and advice
+throughout the project.
+
+ii
+
+Table of Contents
+Abstract ............................................................................................................................................ i
+Acknowledgements ......................................................................................................................... ii
+List of Figures ................................................................................................................................ iv
+List of Tables .................................................................................................................................. v
+I. Introduction ................................................................................................................................. 1
+i. Background .............................................................................................................................. 1
+ii. Alloy Information ................................................................................................................... 1
+iii. Electric Discharge Machining ............................................................................................... 2
+iv. EDM History.......................................................................................................................... 3
+v. Wire-cut versus Sinker EDM .................................................................................................. 5
+vi. Dielectric Fluid ...................................................................................................................... 5
+vii. EDM Sparking ...................................................................................................................... 6
+viii. Surface Produced ................................................................................................................. 7
+ix. EDM Recast Layer................................................................................................................. 7
+II. Experimental Procedure ............................................................................................................. 8
+III. Results ..................................................................................................................................... 11
+i. Microhardness ........................................................................................................................ 11
+ii. Recast Layer Thickness ........................................................................................................ 13
+IV. Discussion ............................................................................................................................... 14
+i. Microhardness ........................................................................................................................ 14
+ii. Recast Layer Thickness ........................................................................................................ 15
+V. Conclusions .............................................................................................................................. 17
+Works Cited .................................................................................................................................. 18
+
+iii
+
+List of Figures
+Figure 1: 15-5 is commonly used in flanges for aerospace components.2 ...................................... 2
+Figure 2: Rough cut wire electric discharge machining process being performed on a metallic
+material.9 ......................................................................................................................................... 3
+Figure 3: Early EDM experiment of US scientists; the electrode is attached to a movable quill.7 4
+Figure 4: A diagram depicting the process by which the sparking occurs between the electrode
+and the workpiece during the EDM process.11 ............................................................................... 6
+Figure 5: SEM images of rough surface of steel immediately following the EDM process.16....... 7
+Figure 6: Large recast layer from experiment performed in 2005.16 .............................................. 8
+Figure 7: Microstructure of the surface of IN-718 post-EDM, depicting the depth of the recast
+layer and HAZ.11 ............................................................................................................................. 8
+Figure 8: 15-5 PH bar stock was bisected with EDM for this experiment. .................................... 9
+Figure 9: Example recast layer thickness measurements on 8V, 13 µs on-time samples............. 10
+Figure 10: Effects of on time, voltage on the hardness (HV) of the recast layer. ......................... 11
+Figure 11: (a) 6V, 13 µs on-time, blunted indenter near recast layer. (b) 4V, 7 µs on-time,
+microhardness test performed directly on crack. .......................................................................... 12
+Figure 12: Average calculated recast layer thicknesses overlayed on representative SEM images
+for each sample. ............................................................................................................................ 13
+Figure 13: A 13 µs, 8V sample exhibits variability in recast layer thickness. .............................. 16
+
+iv
+
+List of Tables
+Table I: Mechanical Properties of 15-5 PH……………………………………………………….1
+Table II: Composition of 15-5 Stainless Steel……………………………………...……………..2
+Table III: Experimental Design…………………………………………………...………………9
+Table IV: Average Microhardness Data for EDM Samples………..……………..………..……11
+Table V: P Values for Difference Between Hardness Readings………..…………………..……12
+Table VI: ANOVA Analysis of Parameter Effect On Recast Thickness……………...…………14
+
+v
+
+I. Introduction
+i. Background
+Aerojet Rocketdyne designs and manufactures rocket engines for government clients such as
+NASA and the Air Force. The company has developed numerous groundbreaking engines, such
+as the F-1 for the Saturn V and the RS-25 for the Space Shuttle. Due to the high temperature and
+stress encountered during operation, rocket engines require advanced alloys and precise
+geometries. Non-conventional machining techniques, such as electric discharge machining
+(EDM), are increasingly relevant because these alloys are too tough and hard for conventional
+machining. Industry partner Aerojet Rocketdyne requires information regarding the effects of the
+EDM recast layer on 15-5 precipitation hardenable stainless steel. It is known that increased
+surface roughness caused by the EDM recast layer can negatively affect mechanical properties,
+notably fatigue strength. As a result, a secondary machining operation is required to eliminate the
+recast layer. However, as the EDM process has improved technologically, the recast layer
+thickness has reduced. Prior estimates of the recast layer thickness are likely too conservative.
+Aerojet Rocketdyne requires a modern characterization of the EDM recast layer to investigate its
+size and potential effects.
+
+ii. Alloy Information
+15-5 (15% chromium, 5% nickel) is a martensitic, precipitation
+hardenable stainless steel useful for its high strength, good
+
+Table I: Mechanical
+Properties of PH 15-51
+
+corrosion resistance, and relatively high temperature use. This
+
+Tensile Strength
+
+190 ksi
+
+alloy is similar to the most common precipitation hardenable
+
+Yield Strength
+
+175 ksi
+
+Elongation
+
+9%
+
+Hardness
+
+43 HRC
+
+stainless steel, 17-4, except it lacks the ferrite phase. Like 174, 15-5 is weldable with common fusion and resistance
+techniques. Its mechanical properties are generally favorable
+(Table I). As a result of its advantageous properties, 15-5
+
+finds versatile use in the aerospace, chemical, and food processing industries (Figure 1).
+
+1
+
+Figure 1: 15-5 is commonly used in flanges for aerospace
+components.2
+
+Stainless steels are typically classified by their microstructure: austenitic, martensitic, ferritic,
+duplex, or precipitation hardenable. Although 15-5 is martensitic, it is classified as precipitation
+hardenable because precipitates are its primary strengthening mechanism. The iron-nickel
+martensite structure is body centered cubic. During aging, copper compounds form precipitates
+within the martensitic matrix. These precipitates effectively inhibit dislocation movement,
+increasing strength.3
+
+The composition of the alloy includes a significant amount of chromium, which enhances the
+corrosion resistance of the alloy (Table II).
+Table II: Composition of 15-5 Stainless Steel1
+wt%
+
+C
+
+Si
+
+Mn
+
+15-5 0.07 1.0
+
+1.0
+
+P+S max
+
+Cr
+
+Ni
+
+Cu
+
+Nb
+
+Fe
+
+Mo
+
+0.03P 0.015S 14.0-15.50 3.50-4.50 2.50-4.50 0.45 Bal 0.50
+
+Stainless steels typically have at least 12% chromium to provide corrosion resistance. 15-5 forms
+the BCC iron-nickel martensite structure. A low carbon content ensures the martensite is not too
+strained or brittle, like that of plain carbon steels. The copper atoms form the precipitates,
+contributing to the high strength of the alloy.
+
+iii. Electric Discharge Machining
+Electrical Discharge Machining (EDM) is the process of machining electrically conductive
+materials by using precisely controlled sparks that occur between an electrode and a workpiece
+
+2
+
+in the presence of a dielectric fluid (Figure 2). The electrode may be considered the cutting tool.7
+EDM is a thermoelectric process. Loss of material from the workpiece occurs due to the high
+heat produced by the electrical discharge between the electrode and the workpiece. The removed
+material then forms a chip in the dielectric fluid. EDM is different than most chip-making
+machining, because the electrode does not physically contact the workpiece during material
+removal. This means that EDM has no tool force, making it preferable for complex geometries.7
+Due to the large heat generation in EDM, melting and evaporation can occur at the surface of the
+workpiece, and the rapid cooling that follows forms a detrimental recast layer. This recast layer
+has significantly different properties compared to the parent structure, and many micro-cracks
+due to the thermal and tensile stress during the rapid cooling process. This leads to a reduction in
+fatigue properties of the metal.8 In most applications, the reduction in fatigue strength properties
+means that a secondary machining operation must be performed on the workpiece to remove the
+layer.
+
+Figure 2: Rough cut wire electric discharge machining process being performed on a metallic material. 9
+
+iv. EDM History
+Sinker EDM was developed in the beginning of World War II, by both the USSR and the USA.
+The USSR discovered EDM in their attempt to suppress sparking between tungsten used as
+electrical contact material and other metals. They immersed the tungsten in oil, which did not
+suppress sparking, but they realized that it allowed for predictable sparking compared to air.
+
+3
+
+Through further experimentation, they discovered that the sparks could be used to remove
+material from the tungsten. They used resistors and capacitors in their system, thus earning the
+name R-C type EDM. The R-C type EDM system they developed to control material removal is
+still in use today.7
+
+At the same time, scientists in the US discovered EDM in their attempt to erode taps and drills
+that were breaking inside hydraulic valves with aluminum bodies. They initially produced an
+etching tool that involved placing an electrode on the material to be removed, and lifting it away.
+This produced a spark that removed material, but their process was too slow to be useful. They
+increased the power, and started using water to remove the material. This made the process
+practical, but to make it more efficient, they decided to automate it. The system they developed
+involved a movable quill with an electrode attached, and an electromagnet above it. When
+electricity was flowing, the electromagnet would pull the quill up, bringing the electrode with it
+(Figure 3). The separation of the electrode and workpiece caused sparking. Once the electrode
+was far enough from the workpiece, the electricity would shut off, allowing the quill to fall, and
+return the electrode to the surface of the workpiece, repeating the process. While their exact
+process is not used today, the American scientists showed that sparking could occur thousands of
+times per second.
+
+Figure 3: Early EDM experiment of US scientists; the electrode is attached to a movable quill. 7
+
+4
+
+Wire-cut EDM was developed sometime in the early 60s or early 70s, as a solution to the laborintensive and expensive sinker EDM. Stationary wire was considered at first, but spark erosion
+meant that the wire would be easily broken. The solution was to have a continuously traveling
+wire. However, this process did not become practical until the arrival of a series of technological
+advancements, like computer-numerical control, ball screws, and servo motors in the early 70s.
+
+v. Wire-cut versus Sinker EDM
+Both wire-cut and sinker EDM use sparking to remove material. Wire EDM (WEDM) is a
+process in which the electrode is a continuously moving electrically conductive wire, while
+sinker EDM is a single electrode.10 WEDM has a better material removal rate than sinker EDM.
+However, sinker EDM is better at producing three-dimensional shapes, because the wire used for
+WEDM must pass through the workpiece being machined. WEDM does not usually submerge
+the workpiece in dielectric fluid, while in sinker EDM, the workpiece is submerged.
+
+vi. Dielectric Fluid
+The Dielectric fluid used in EDM machines provides important functions in the EDM process.
+The fluids provide a known electrical barrier between the electrode and workpiece, cooling for
+the electrode, workpiece, and vaporized material that becomes the EDM chip, and removal of the
+EDM chip. A dielectric fluid is an electrical insulator that resists electricity until a high enough
+voltage is applied, at which point it becomes an electrical conductor. The applied voltage at
+which the fluid changes is called the ionization point. The ionization point occurs locally in the
+fluid, meaning only the area that the voltage is applied to will become conductive, while the rest
+of the dielectric fluid remains an insulator. This allows for the controlled sparking between the
+electrode and workpiece, because the voltage potential can be applied to the area to be removed,
+leaving the rest of the workpiece insulated from the electricity.
+
+Dielectric fluids are generally either hydrocarbon oil or deionized water. The deionized water has
+any electrically conductive impurities removed. In general, wire cut EDM machines use
+deionized water, while plunge machines use hydrocarbon oil, but wire cut sometimes uses
+hydrocarbon oils as well. Hydrocarbon fluids maintain their electrical integrity throughout the
+machining process, making them the fluid of choice for submerged machining. On the other
+
+5
+
+hand, deionized water readily absorbs materials that can change its ionization point and
+conductivity, such as material removed from the workpiece or the electrode. To counteract this, a
+high velocity flow of fresh deionized water over the workpiece is used.
+
+vii. EDM Sparking
+Sparking occurs as the electrode moves across the workpiece. The electrode removes material
+until a prescribed distance between the electrode and workpiece is reached, and then it moves
+onto the next area, which can be seen in Figure 5. Sparking occurs at 2-500 kHz.7 The ionization
+
+Figure 4: A diagram depicting the process by which the sparking occurs
+between the electrode and the workpiece during the EDM process.11
+
+point of the dielectric fluid determines the sparking voltage. Workpieces with high melting
+temperatures will have less material removed per spark than those with lower melting
+temperatures. Sparking also produces a significant temperature gradient in the workpiece. There
+are five main temperature zones that should be considered; the first is the surface that gets hot
+enough to be vaporized. The second temperature zone is partially part of the first zone, because
+they are small amounts of vapor that are separated from the main cloud; these do not have any
+effect on properties. The third zone is material that is melted, but does not get hot enough to
+escape from the surface, and thus re-solidifies. The fourth and fifth zones are similar in that they
+both experience heat that is not enough to melt them, but differ in responses to the heat. The
+material in the fourth temperature zone may experience enough heat to change some properties,
+but the material in the fifth zone experiences so little heat it is considered the beginning of the
+parent material. The first, third, and fourth zones are often combined in literature and referred to
+as the heat-affected zone (HAZ).12
+
+6
+
+viii. Surface Produced
+The surface of any electro-discharge machined workpiece appears as a distribution of craters.13
+The size of craters, and the quality of the workpiece, are mainly controlled by the melting
+temperature of the workpiece, electrical power, and the amount of time the electrical power is
+applied to the workpiece. The structure of the electrode also plays a significant role. The surface
+condition of the electrode will be reproduced on the machined surface of the workpiece. The
+surface is a combination of redeposited and re-solidified layers. Re-deposited layers form from
+the small amounts of EDM chips that are close enough to the surface to re-deposit themselves.
+Figure 5 shows how rough the surface produced can be. Re-solidified layers are formed where
+the workpiece gets hot enough to melt, but is still unable to separate from the surface. When the
+spark is turned off, it re-solidifies.
+
+Figure 5: SEM images of rough surface of steel immediately following the EDM process. 16
+
+ix. EDM Recast Layer
+Recast layers form due to the combination of the re-deposited layer and the re-solidified layer.
+The recast layer formed is thus composed of re-solidified metallic materials, elements of the
+electrode material, and oxides and other byproducts of the dielectric fluid.14 When working with
+steel, if enough carbon is accumulated, the rapid cooling once the spark is turned off can cause
+the recast layer to form martensite.15 Recast layers have a high propensity to cracking when
+subjected to fatigue loads. The recast layer used to be much larger, as seen in Figure 6.
+
+7
+
+Figure 6: Large recast layer from experiment performed in 2005.16
+
+There are considerably more defects when compared to the parent microstructure, which can be
+seen in Figure 7. The recast layer seen in this image is somewhat small because this work was
+done recently. The heat affected zone is of average depth. These all act as sites for crack
+propagation, causing the material to fail due to multiple, smaller cracks, rather than one large
+crack.5 Due to the rough surface produced, the recast layer is extremely detrimental to the
+mechanical properties of materials and must be removed. Removal is usually performed using a
+chemical etching process, or by polishing.
+
+Figure 7: Microstructure of the surface of IN-718 post-EDM, depicting the depth of the recast layer and
+HAZ.11
+
+II. Experimental Procedure
+Two six foot lengths of 0.5″ diameter rods of 15-5 precipitation hardenable martensitic stainless
+steel were obtained for this study. Rods were sectioned into 6″ lengths and bisected with electric
+
+8
+
+discharge machining at varying levels of pulse on-time and peak voltage (Figure 8). Both pulse
+on-time and peak voltage were set at the manufacturer recommended specifications initially. The
+recommended setting was 8V peak voltage and 13 µs on-time. These parameters were then
+reduced by 25% and 50%, to obtain a three-by-three test matrix (Table III).
+Table III: Experimental Design
+8V
+
+6V
+
+4V
+
+Pulse on-time
+13 µs
+Pulse on-time
+10 µs
+Pulse on-time
+7 µs
+
+1.5 inches
+Figure 8: 15-5 PH bar stock was bisected with EDM for
+this experiment.
+
+The 6” lengths were sectioned into metallography specimens and nickel plated using Buehler
+Edgemet electro-less nickel plating solution to retain the recast layer, as well as provide lateral
+support for microhardness testing directly on the layer. Samples were then mounted in Bakelite,
+ground, and polished to a 0.5 µm diamond finish. After polishing, some samples were etched
+with glyceregia.
+Microhardness measurements were performed on the polished samples using a microhardness
+indenter across the recast layer, as well as into the base metal. The indenter was used at 500 kgf.
+The diagonals of the diamond indent were measured. The Vickers hardness (HV) was then
+determined from Equation 1, where D is the average of the two diagonals, and the load is in
+Newtons.
+𝐸𝑞𝑢𝑎𝑡𝑖𝑜𝑛 1: 𝐻𝑉 = 0.1891 ∗ (
+
+𝐿𝑜𝑎𝑑
+)
+𝐷2
+
+A minimum of four readings were obtained per sample for both the recast layer and base
+material.
+
+9
+
+Scanning electron microscopy was performed using an FEI Quantum 400 with an EverhartThornley detector for topography, and backscatter detector for compositional analysis.
+Representative images of the recast layer at magnifications varying from 40x-3500x were taken
+for at least two samples per sample group. Backscatter images were used to confirm the
+boundary between nickel plating and recast layer. Recast layer thicknesses were calculated using
+these images.
+Recast layer thicknesses for each sample group were calculated from microscopy images.
+Because no technical standard for measuring average recast thickness exists, a method was
+adapted from a similar study (Figure 9).
+
+Figure 9: Example recast layer thickness measurements on 8V, 13 µs on-time samples.
+
+Rectangles were drawn around areas of similar thicknesses, and a weighted average thickness,
+measured by the width and weighted by the length, was calculated. Calculations were performed
+on multiple SEM images at varying magnifications to obtain weighted recast layer thickness
+values for each sample group.
+
+10
+
+III. Results
+i. Microhardness
+Microhardness testing was conducted to investigate the difference in hardness between the base
+material and the recast layer. Tests were performed across the recast layer as well as into the base
+material to produce average hardness values for the base material and the recast layer (Table IV).
+Table IV: Average Microhardness Data for EDM Samples
+8V
+Pulse on-time
+13 µs
+Pulse on-time
+10 µs
+Pulse on-time
+7 µs
+
+6V
+
+4V
+
+BASE: 342.9 HV
+
+BASE: 364.7 HV
+
+BASE: 354.1 HV
+
+RECAST: 349.9 HV
+
+RECAST: 307.3 HV
+
+RECAST: 295.7 HV
+
+BASE: 338.0 HV
+
+BASE: 368.5 HV
+
+BASE: 347.1 HV
+
+RECAST: 324.2 HV
+
+RECAST: 308.4 HV
+
+RECAST: 311.1 HV
+
+BASE: 334.1 HV
+
+BASE: 355.2 HV
+
+BASE: 342.8 HV
+
+RECAST: 308.6 HV
+
+RECAST: 338.6 HV
+
+RECAST: 294.6 HV
+
+A two-sample t-test was performed to investigate the statistical significance of the difference
+between the recast and base material hardness values for each sample. Main effect plots for on
+time and voltage were produced (Figure 10).
+
+MICROHARDNESS VS
+ON TIME
+6V
+
+4V
+
+7 ON
+
+360
+350
+340
+330
+320
+310
+300
+290
+
+HARDNESS (HV)
+
+HARDNESS (HV)
+
+8V
+
+MICROHARDNESS VS
+VOLTAGE
+
+7
+
+10
+
+13
+
+10 ON
+
+13 ON
+
+360
+350
+340
+330
+320
+310
+300
+290
+4
+
+PULSE ON TIME (SECONDS E-6)
+
+6
+VOLTAGE (V)
+
+Figure 10: Effects of on time, voltage on the hardness (HV) of the recast layer.
+
+11
+
+8
+
+At an α level of 0.05, this analysis indicates there is a significant difference for samples below
+the maximum voltage (Table V).
+Table V: P Values for Difference Between Hardness Readings
+8V
+
+6V
+
+4V
+
+0.651
+
+0.001
+
+0.012
+
+0.449
+
+0.006
+
+0.037
+
+0.254
+
+0.036
+
+0.002
+
+Pulse on-time
+13 µs
+Pulse on-time
+10 µs
+Pulse on-time
+7 µs
+
+However, microscopy suggests that testing may have produced unreliable data. Micrographs
+depict blunting near the indent towards the recast layer, indicating that it may be harder than the
+base material (Figure 11). Due to the prevalence of cracks in the recast layer, some
+microhardness tests were performed on cracks, which may have led to reduced hardness readings
+as well.
+
+Figure 11: (a) 6V, 13 µs on-time, blunted indenter near recast layer. (b) 4V, 7 µs on-time, microhardness test performed
+directly on crack.
+
+Microhardness indents in areas of equal hardness should produce a diamond with equal side
+lengths.
+
+12
+
+ii. Recast Layer Thickness
+Using the rectangle weighted average method, recast layer thicknesses were measured for each
+sample group (Figure 12).
+
+Figure 12: Average calculated recast layer thicknesses overlayed on representative SEM images for each sample.
+
+Statistical analysis was also conducted on these data to understand its significance. Two-way
+analysis of variance (ANOVA) was used to investigate main effects and interaction effects
+(Table V).
+
+13
+
+Table VI: ANOVA Analysis of Parameter Effect on Recast Thickness
+
+Source P-Value
+Voltage 0.001
+Pulse On-Time 0.015
+Interaction Effects 0.203
+
+At α=0.05, the voltage and pulse on-time main effects are statistically significant and the
+interaction effects are not significant. This indicates that the factors do not interact to produce
+effects not already predicted by the main effects.
+
+IV. Discussion
+i. Microhardness
+Due to the instantaneous melting and quenching process that occurs at the surface during EDM,
+it was hypothesized that the recast layer hardness would be significantly different from the base
+material. This was only the case for the samples below the maximum voltage.
+All the recast layers below the maximum voltage were softer than the base material. This is most
+likely due to the precipitation hardenable nature of 15-5 stainless steel. As received, the sample
+had been aged to a higher hardness. Upon re-solidification at the surface, the material was most
+likely closer to the annealed state, leading to it being softer than the base material. However, it is
+possible that the steel was instead over-aged. However, this would make it softer as well.
+Being significantly different in hardness to the base material would lead to changes in the
+mechanical properties between the two, leading to reduced performance in service life. While a
+softer steel generally has more favorable fatigue properties, the fatigue life of steel is greatly
+dependent on its surface condition, meaning the recast layer would reduce fatigue life. As seen in
+the microhardness tests along the recast layer, it also fractures extremely easily under a low
+applied load. Again, this would reduce the service life of the part considerably.
+While there is no doubt that the presence of the recast layer is detrimental to mechanical
+properties, there were multiple issues with the microhardness tests performed in this study.
+
+14
+
+Firstly, the SEM images of the microhardness tests near the recast layer showed a difference in
+the amount of area the indenter was indenting; it was indenting less area near the recast layer,
+meaning the area near the recast layer was harder than the base material. If the recast layer was
+truly softer than the base material, the portion of the indenter diamond closer to the recast layer
+would indent more area, not less. Secondly, tests directly on the recast layer may have produced
+softer readings due to the microcracking and porosity present in the recast layer. When indented,
+the microcracks easily propagate and fail, leading to less force required by the indenter to indent
+the material, resulting in reduced hardness readings.
+A final flaw of the tests is the size of the indenter. The indenter is larger than the recast layer,
+meaning tests would always include some amount of base material or nickel plating, no matter
+how well aimed. Therefore, the microhardness measurements do not agree with the scanning
+electron microscope images and it is not possible to fully conclude that the recast layer is indeed
+significantly different in hardness when compared to the base material. To produce more
+accurate results, nanohardness testing would be more appropriate.
+
+ii. Recast Layer Thickness
+Recast layer measurements suggests a reduction in recast layer thickness as both testing
+parameters were reduced. This is expected, as a decreased voltage and pulse on-time produces a
+lower overall energy input. However, the interaction of the two is not significant in producing a
+smaller recast layer. This is most likely due to the way the parameters were reduced. A reduction
+of 25% for peak voltage is a much larger reduction than the same in pulse on-time. As the two
+parameters are reduced together, decrease in voltage becomes the controlling variable.
+The recast thickness values were typically less than values reported by prior studies, especially
+because previous studies had a much larger heat affected zone than seen in this study. This
+means that less material needs to be removed with a secondary machining process. The rough
+nature of the layer implies negative effects on mechanical properties. The recast layer also
+contains a significant amount of residual stresses due to the rapid cooling which contribute to the
+lessened mechanical properties as well. Although decreased recast layer thickness means less
+surface material requires removal, defects present in the layer are nevertheless harmful. SEM
+
+15
+
+imaging depicted large voids and microcracks visible throughout the recast layer (Figure 13).
+These defects are sites in which cracks can propagate through the material, causing premature
+fracture and failure. Variability in the thickness of the recast layer can be observed here – just a
+few microns at the base of the image, increasing to a local maximum of about ten microns.
+Base
+Material
+
+Nickel
+Plating
+
+Figure 13: A 13 µs, 8V sample exhibits variability in recast layer thickness.
+
+The roughness of the recast layer also presents an issue in corrosive environments. These voids
+can act as craters in which pitting and crevice corrosion will readily occur.18 These counteract the
+effects of the stainless steel, which is typically extremely resistant to both types of corrosion due
+to the passive oxide layer. With the combination of reducing the corrosion resistance as well as
+the mechanical properties, the recast layer still needs to be removed.
+No evidence of a significant heat affected zone was present. There was no grain coarsened region
+visible, and little local melting at grain boundaries. Similar to the small size of the recast layer,
+this is due to the low energy input of the EDM process. Only a small amount of material at the
+surface is heated to a temperature hot enough to be vaporized, resulting in the negligible size of
+the heat affected zone observed in this study. While the energy density of the process is high, the
+energy input is not sustained long enough to significantly alter material below. The area affected
+by the sparking is small, and after the material is removed, dielectric fluid rushes into the cavity
+produced by the vacating material. This allows for a significant amount of heat transfer to occur
+16
+
+with the dielectric fluid, preventing all the heat input to the material from being transferred
+further. This cooling process does produce the defect filled recast layer, but controls the
+damaging of the workpiece to the surface, instead of penetrating deeper into the material.
+Therefore, after removal of the recast layer, a short heat treatment should be sufficient to fully
+restore the steel to a sufficiently homogeneous state.
+
+V. Conclusions
+1. A reduction in the pulse on-time on the EDM machine yields a smaller recast layer due to
+reduced energy input.
+2. Lowering the EDM machine voltage parameter also yields a smaller recast layer.
+3. The EDM recast layer has a rough surface and contains many voids, pores, and microcracks.
+
+17
+
+Works Cited
+1. "15-5 PH Stainless Steel" AK Steel. Web.
+2. "Best Stainless & Alloys." Web. <http://www.beststainless.com/valve-manufacturing.html>.
+3. Boeing. "Fatigue Properties of 17-4 PH and 15-5 PH Steel in the H-900 and H-1050
+Condition." Dtic.mil: Web. 27 Aug. 1969.
+4. DiMatteo, Nikki D. ASM Handbook: Vol. 19: Fatigue and Fracture. Ed. Steven R. Lampman.
+Alexandria, VA, United States: ASM International, 1996. Print.
+5. Ashby, “Chapter 17: Fatigue Failure,” Engineering Materials.
+6. "MMPDS-03: Metallic Materials Properties Development and Standardization." Introduction
+and Steel Alloys 1 (2007).
+7. Jameson, Elman C. Electrical Discharge Machining. Dearborn, MI: Society of Manufacturing
+Engineers, 2001. Print.
+8. Chen, “Surface Integrity and Fatigue Performance of Inconel 718 in Wire Electrical Discharge
+Machining” Procedia CIRP 45 (2016): 307-310.
+9. "Wire EDM Image." Web. <https://4.bp.blogspot.com>.
+10. Puri, A.B., and B. Bhattacharyya. "Modeling and Analysis Of White Layer Depth In A WireCut EDM Process Through Response Surface Methodology." International Journal of Advanced
+Manufacturing Technology 25.3/4 (2005): 301-307.
+11. Imran, M., et al. "Assessment of Surface Integrity of Ni Superalloy After ElectricalDischarge, Laser And Mechanical Micro-Drilling Processes." International Journal of Advanced
+Manufacturing Technology 79.5-8 (2015): 1303-1311.
+12. Mower, Todd M. "Degradation of Titanium 6Al–4V Fatigue Strength Due to Electrical
+Discharge Machining." International Journal of Fatigue 64. (2014): 84-96
+13. Kiyak, Murat, Bilal Aldemir, and Erhan Altan. "Effects of Discharge Energy Density on
+Wear Rate And Surface Roughness In EDM." International Journal of Advanced Manufacturing
+Technology 79.1-4 (2015): 513-518.
+
+18
+
+14. Newton, Thomas R., et al. "Investigation of The Effect Of Process Parameters On The
+Formation And Characteristics Of Recast Layer In Wire-EDM Of Inconel 718." Materials
+Science & Engineering: A 513-514. (2009): 208-215.
+15. Klocke, F., et al. “Structure and Composition of the White Layer in the Wire-EDM Process.”
+Procedia CIRP 42 (2016): 673-678.
+16. Amorim, F. L., & Weingaertner, W. L. Die-sinking electrical discharge machining of a highstrength copper-based alloy for injection molds. Journal of the Brazilian Society of Mechanical
+Sciences and Engineering, 26(2), (2004). 137-144.
+17. Lee, H. T., and C. Liu. "Calibration of Residual Stress Measurements Obtained From EDM
+Hole Drilling Method Using Physical Material Properties." Materials Science & Technology
+24.12 (2008): 1462-1469. Academic Search Premier. Web. 10 Feb. 2017.
+18. Khalaj Amineh, Sasan, et al. "Improving the Surface Quality in Wire Electrical Discharge
+Machined Specimens by Removing the Recast Layer Using Magnetic Abrasive Finishing
+Method." International Journal of Advanced Manufacturing Technology, vol. 66, no. 9-12, June
+2013, pp. 1793-1803.
+
+19
+
+

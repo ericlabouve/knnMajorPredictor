@@ -1,0 +1,1871 @@
+Development of Low Cost Braze Alloys for Aerospace Applications
+
+A Senior Project
+presented to
+the Faculty of the Materials Engineering Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree
+Bachelor of Science
+
+by
+Sandy Babich, Alyssa Elliott, Blake Whitmee
+June, 2017
+
+© 2017 Sandy Babich, Alyssa Elliott, Blake Whitmee
+
+Abstract
+Non-precious metal braze alloys can help lower the cost of brazing, which is a commonly-used joining
+process in the aerospace industry. A-286, a stainless steel superalloy, and Inconel© 718, a nickel-based
+superalloy, are both commonly used alloys at Aerojet Rocketdyne. Both alloys were brazed as butt joints
+using nickel-based braze alloys: AMS 4776, 4777, and 4778. The brazed samples were machined into a
+modified version of the ASTM E8 subsize specimen sample and tensile tested to compare the strength and
+calculated elongation of the brazed samples to the base metals’ properties. All of the brazed samples
+fractured at the joint, and a higher amount of braze alloy on the surface corresponded with a higher
+strength of the joint. The 718 samples brazed with AMS 4776 and 4778 were not strong enough to be
+machined into tensile samples and the 718 brazed with AMS 4777 reached strengths below 1 ksi due to
+poor wetting of the braze alloy on the base metal. The average tensile strengths for A-286 brazed with
+AMS 4776 (A286-76), A286-77, and A286-78 were 30.83 ksi, 93.95 ksi, and 94.91 ksi, respectively. For
+reference, the base metal had a tensile strength of 145.93 ksi. The average calculated elongations for
+A286-76, A286-77, and A286-78 were 8.86%, 12.30%, and 15.14%, respectively, and the base metal had
+a calculated elongation of 58.43%. Metallography along with energy dispersive X-ray spectroscopy
+revealed interdiffusion regions, grain pinning, voids, and brittle compounds at the center of the joint.
+Scanning electron microscopy revealed the brazed samples broke in a brittle manner at the joint.
+
+Key Words: materials engineering, aerospace, braze, low cost, Inconel© 718, A-286 stainless steel,
+nickel-based braze alloy, tensile test, interdiffusion layer, voids, grain pinning, metallography, scanning
+electron microscopy
+
+Acknowledgements
+Thank you to Aerojet Rocketdyne for supporting our project through funding. We would like to especially
+thank Christopher Shipley at Aerojet Rocketdyne who guided us through our project and answered our
+questions throughout the year. Thank you to Professor Blair London for encouraging us this year to
+achieve our goals and excel in our endeavors. We would also like to thank Tom Sandin at Morgan
+Advanced Materials for donating the braze alloys and the furnace time to braze in as well as his time and
+expertise to help us finish our project. Thanks to Carl Anderson at Proto-Quick for machining our tensile
+samples. Additionally, we would like to thank Eric Beaton, Lisa Rutherford, Victor Granados, and
+Professor Trevor Harding of the Cal Poly Materials Engineering Department for their help on our project.
+
+Table of Contents
+1.
+
+Introduction ........................................................................................................................................... 1
+1.1.
+Company Background................................................................................................................... 1
+1.2.
+Project Synopsis ............................................................................................................................ 1
+1.3.
+Applications .................................................................................................................................. 1
+1.4.
+Technical Background .................................................................................................................. 2
+1.4.1.
+Brazing Overview ................................................................................................................. 2
+
+2.
+
+1.4.2.
+
+Advantages and Limitations.................................................................................................. 3
+
+1.4.3.
+
+Heating Process of Brazing ................................................................................................... 3
+
+1.4.4.
+
+Brazing Procedure ................................................................................................................. 5
+
+1.4.5.
+
+Base and Braze Alloys .......................................................................................................... 7
+
+1.4.6.
+
+Joint Design ........................................................................................................................ 11
+
+1.4.7.
+
+Physical Principles of Brazing ............................................................................................ 12
+
+1.4.8.
+
+Testing and Inspection ........................................................................................................ 16
+
+Experimental Procedure ...................................................................................................................... 18
+
+2.1.
+Sample Preparation ..................................................................................................................... 18
+2.2.
+Braze Process .............................................................................................................................. 18
+2.3.
+Heat Treatments .......................................................................................................................... 19
+2.4.
+Machining of Test Samples......................................................................................................... 19
+2.5.
+Testing......................................................................................................................................... 20
+2.6.
+Metallography ............................................................................................................................. 20
+2.7.
+Scanning Electron Microscopy ................................................................................................... 21
+2.8.
+Statistics ...................................................................................................................................... 21
+3. Results ................................................................................................................................................. 21
+3.1.
+Tensile Test Results .................................................................................................................... 21
+3.2.
+Statistical Analysis ...................................................................................................................... 25
+3.3.
+Microscopy ................................................................................................................................. 26
+4. Analysis............................................................................................................................................... 34
+5.
+
+Conclusions ......................................................................................................................................... 37
+
+List of Figures
+Figure 1. Space shuttle main engines (RS-25) manufactured by Aerojet Rocketdyne containing superalloy
+components joined with advanced braze alloys.3 ........................................................................ 1
+Figure 2. Examples of nozzle geometry including cone and bell shapes where brazing would occur near
+the throat.6 ................................................................................................................................... 2
+Figure 3. Diagram of capillary action of a braze alloy with good wetting ability during brazing.8 .............. 2
+Figure 4. Schematic of a retort furnace with an electric-fired box used to maintain an inert atmosphere.7 . 4
+Figure 5. Schematic of a cold wall furnace with side-loading, double-wall insulation, and a water-cooling
+system.7 ....................................................................................................................................... 4
+Figure 6. Schematic of a vacuum brazing furnace with a double wall vessel, cooling motor, and vacuum
+pump.10 ........................................................................................................................................ 5
+Figure 7. Knife-edge and pin-point fixtures used to reduce the amount of contact with a braze assembly.12
+.................................................................................................................................................... 6
+Figure 8. Various solid forms of braze alloys used in industry.18 ................................................................. 9
+Figure 9. Commonly used braze joints: a) lap joint, b) butt joint, and c) scarf joint.31 ............................... 11
+Figure 10. A simple braze fixture that holds a T-joint together using a dead weight.12.............................. 12
+Figure 11. Diagram of capillary action of a braze alloy with good wetting ability.33 ................................. 13
+Figure 12. Relationship between contact angle and wetting for a liquid on a solid surface.35.................... 13
+Figure 13. Graph of the ideal thickness for a brazed joint to achieve the highest strength.37 ..................... 14
+Figure 14. Process of diffusion brazing resulting in a homogeneous joint.7 ............................................... 14
+Figure 15. Image of a nickel-brazed joint with a brittle centerline eutectic phase resulting in a continuous
+fracture line down the center of the joint.40............................................................................... 16
+Figure 16. A typical binary phase diagram defining the solidus and liquidus temperature lines.41 ............ 16
+Figure 17. Brazing heat cycle for the three braze alloys. The temperatures shown are the liquidus
+temperatures for each respective braze alloy. ........................................................................... 19
+Figure 18. Machining stages in tensile sample production, starting from brazed blocks (left) and finishing
+with tensile samples (right). The brazed joint is highlighted with the red rectangles. .............. 20
+Figure 19. Subsize specimen geometry and dimensions of samples according to ASTM E8/E8M – 16A:
+Standard Test Methods for Tension Testing of Metallic Materials.43 ....................................... 20
+Figure 20. Tensile stresses plotted against percent elongation for samples of un-brazed A-286. .............. 21
+Figure 21. Tensile stresses plotted against percent elongation for samples of A-286 brazed with AMS
+4776. The dashed line represents sample 1 where the grips slipped during testing. Samples 2,
+3, and 5 did not pass the elongation criterion............................................................................ 22
+Figure 22. Tensile stresses plotted against percent elongation for samples of A-286 brazed with AMS
+4777........................................................................................................................................... 22
+Figure 23. Tensile stresses plotted against percent elongation for samples of A-286 brazed with AMS
+4778........................................................................................................................................... 22
+Figure 24. Tensile stresses plotted against percent elongation for samples of un-brazed 718.................... 23
+Figure 25. Tensile stresses plotted against percent elongation for samples of 718 brazed with AMS 4777.
+Both samples had the lowest tensile strengths of all the brazed joints. .................................... 23
+Figure 26. Box and whisker plots for tensile strength and percent elongation of A-286 brazed with AMS
+4777 and AMS 4778. ................................................................................................................ 26
+Figure 27. Stereoscopic images of the braze coverage of the AMS 4776 on A-286 of (a-e) the five
+fractured tensile samples. Sample 2 (b) had the lowest tensile strength, and sample 4 (d) had
+the highest tensile strength. ....................................................................................................... 27
+Figure 28. Stereoscopic images of the braze coverage of the AMS 4777 on A-286 of (a-e) the five
+fractured tensile samples. Sample 4 (d) had the lowest tensile strength, and sample 1 (a) had
+the highest tensile strength. ....................................................................................................... 28
+
+Figure 29. Stereoscopic images of the braze coverage of the AMS 4778 on A-286 (a-e) the five fractured
+tensile samples. Sample 3 (c) had the lowest tensile strength, and sample 1 (a) had the highest
+tensile strength. ......................................................................................................................... 29
+Figure 30. Stereoscopic images of the braze alloy coverage of the AMS 4777 on 718 of (a) sample 1 and
+(b) sample 2. Both samples resulted in low tensile strength due to poor braze alloy coverage.29
+Figure 31. SEM image of A286-78-4 fracture surface at 4083x magnification showing brittle fracture. .. 30
+Figure 32. SEM image of A286-76-2 at 426x magnification highlighting the melted braze alloy............. 30
+Figure 33. EDS mapping of A286-76-2 fracture surface (a) highlighting distinct areas of braze alloy and
+base metal. Elements highlighted are (b) iron, (c) nickel, (d) chromium, and (e) silicon, which
+are indicated by the white pixelated regions. ............................................................................ 31
+Figure 34. EDS point-identification at the red circle of A286-76-2 fracture surface. ................................ 32
+Figure 35. Metallographic images taken at 200x of the cross-sectional braze alloy of A-286 brazed with
+(a) AMS 4776, (b) AMS 4777, and (c) AMS 4778. Grain pinning is shown at point A,
+interdiffusion layers at point B, brittle compounds at point C, and voids at point D. ............... 33
+Figure 36. Metallographic image taken at 200x of the cross-sectional braze alloy of 718 brazed with AMS
+4777 showing a crack at point E and base metal erosion at point F. ........................................ 33
+Figure 37. The three locations that EDS was taken on the A286-78 metallographic sample. Point 1 is at
+the center of the joint where the brittle compounds are, point 2 is between the center of the
+joint and the interdiffusion layer, and point 3 is in the interdiffusion layer. ............................. 34
+
+List of Tables
+Table I – Nominal Compositions of 718 and A-286 Expressed in Weight Percent...................................... 7
+Table II – Nominal Compositions of Braze Alloys Expressed in Weight Percent ..................................... 10
+Table III – Tensile Tests Results for Brazed and Un-Brazed 718 and A-286 ............................................ 24
+Table IV – Tensile Test Results of A-286 Used for Statistical Analysis .................................................... 25
+Table V – Averages and Standard Deviations of the A-286 Tensile Data .................................................. 25
+Table VI – Composition of a Selected Point on the A286-76 Fracture Surface by Atomic Percent .......... 32
+Table VII – Compositions of the Three Points on the A286-78 Metallographic Sample by Weight Percent
+.................................................................................................................................................. 34
+
+1. Introduction
+1.1. Company Background
+Aerojet Rocketdyne is an aerospace and defense leader that provides propulsion and energetics to space
+and defense systems. Aerojet started in the early 1940s by supplying the U.S. Armed Forces a new
+technology known as Jet Assisted Take Off (JATO), which allows heavier aircraft to take off using
+shorter distances.1 Over the next few decades, Aerojet would work on various missile propulsion systems,
+the TITAN program, and the Space Shuttle Columbia’s engine systems. One of Aerojet Rocketdyne’s
+most well-known projects is the RS-25 engine, which has powered 135 Space Shuttle flights and has
+enabled the construction of the International Space Station and the deployment of the Hubble Space
+Telescope (Figure 1).2 In 2013, Aerojet Rocketdyne Holdings, Inc. acquired Pratt & Whitney’s
+Rocketdyne division to form the company as it exists today.1
+
+Figure 1. Space shuttle main engines (RS-25) manufactured by Aerojet Rocketdyne containing superalloy
+components joined with advanced braze alloys.3
+
+1.2. Project Synopsis
+Aerojet Rocketdyne uses brazing to join components in their rocket systems using precious metal braze
+alloys as the filler metal. However, due to the high cost of precious metals like silver and gold, alternative
+non-precious metals are desired to reduce the overall cost of brazing. This project aims to compare the
+tensile strengths of joints brazed with non-precious braze alloys to the strengths of the chosen base
+metals. Typical base metals used in AR’s rocket systems include Inconel© 718 and A-286 stainless steel.
+The following nickel-based alloy filler metals were chosen based on compatibility with the base metals:
+AMS 4776, AMS 4777, and AMS 4778. Each sample will be tensile tested and visually inspected for
+void content, and final recommendations will be based on ideal braze joints where the tensile strength is
+similar to or higher than the base metal.
+
+1.3. Applications
+Brazing is a highly attractive form of joining in the aerospace industry, specifically for high-temperature
+applications in engines. Liquid fuel rocket engines are powered by gas turbines that ingest air from their
+surrounding environment and compress it. Fuel is added to the air and consecutively burned to produce
+hot gases, above 750°C, that drive the turbine. These turbines are prone to oxidation, corrosion, creep,
+high cycle fatigue, and thermal fatigue.4 By using materials that can withstand higher temperatures and
+the stresses associated with this process, more air is made available for propulsion rather than cooling,
+resulting in increased efficiency of the engine. Such materials include superalloys joined with advanced
+braze alloys, providing a superior thermal barrier. One particular joining process is done through active
+1
+
+metal brazing (AMB), which removes the need for a metal coating to join dissimilar metals. Adding
+titanium or another active element to the braze alloy will react with metal to form oxides, carbides, or
+nitrides in an intermetallic layer with increased wettability.5
+Space shuttle main engines, such as the RS-25, are manufactured by Aerojet Rocketdyne and contain
+superalloy components joined with advanced braze alloys.3 Aerojet Rocketdyne employs brazing
+processes on engineering alloys used for the rocket nozzles and combustion chambers of these engine
+systems. The throat connects the combustion chamber to the rocket’s nozzle. The design of the
+combustion chamber-nozzle system can vary among multiple designs, such as the cone and bell
+geometries. The rocket nozzle typically has a bell geometry, making brazing the optimal joining method
+(Figure 2).
+
+Figure 2. Examples of nozzle geometry including cone and bell shapes where brazing would occur near the throat. 6
+
+1.4. Technical Background
+1.4.1. Brazing Overview
+Brazing is a metallic joining process that allows for the joining of both similar and dissimilar metals as
+well as metals to ceramics and ceramics to ceramics. Brazing is similar to soldering and welding, but
+there are key differences that set the three joining processes apart. Soldering is a mechanical joining
+process while welding and brazing are both metallurgical joining processes. Unlike welding, the base
+metal does not melt during brazing and it occurs at a higher temperature than soldering, above 450°C.
+Brazing uses a braze alloy with a lower melting point than the base material that flows into the joint via
+capillary action when heated to the melting temperature of the braze alloy (Figure 3). The assembly can
+either be heated locally at the joint or it can be placed in a furnace and heated as a whole.7
+
+Figure 3. Diagram of capillary action of a braze alloy with good wetting ability during brazing.8
+
+2
+
+1.4.2. Advantages and Limitations
+Brazing is used in many industries because it is an economic process that can produce complex and multicomponent joints. Brazing can be used to join cast metals, wrought metals, dissimilar metals, porous
+metals, ceramics, and components of various thicknesses. Since the base metals do not melt during the
+process, part alignment is much simpler than welding, and the final product has a more even stress
+distribution and better heat transfer abilities. When brazing is done properly, the braze alloy solidifies in a
+natural fillet shape, which is ideal for resisting fatigue. The strength of an ideal joint is similar to or
+greater than the base metal’s strength.
+There are, however, some disadvantages or limitations with the brazing process. The elevated
+temperatures required to melt the braze alloy can cause undesired heat treatments in the base metal or the
+removal of previous heat treatments. Additionally, the braze alloy typically has a different composition
+than the base metals, in which partial dissolution and diffusion at the interface between the braze alloy
+and base metals can cause a heterogeneous joint to form with different properties than the braze alloy and
+base metals. The additional heterogeneous zone will not be able to evenly distribute loads transferred
+from homogeneous sections of a part, which may lead to sources of fracture.7
+
+1.4.3. Heating Process of Brazing
+There are many methods to heat the assembly to brazing temperatures. The main types include torch,
+exothermic, induction, and furnace brazing. Torch brazing uses a gas flame as the heat source, typically
+fueled by acetylene, propane, or methane. This process is useful for local heating of assemblies but often
+leaves residual oxides on the surface on the joint. Exothermic brazing uses the heat produced from a
+solid-state chemical reaction to heat the assembly. This is a quick heating method, but experimentation is
+required to get the correct feed ratio. Furnaces are most commonly used in the aerospace industry because
+they can be used for mass production. The heating rates, temperatures, and times can all be easily
+controlled, and the brazing can be performed in an inert or vacuum environment. The main drawbacks
+with furnace brazing are the high costs associated with purchasing the equipment and heating the
+furnace.7
+Furnaces used for brazing can be categorized into retort or bell type, continuous or semi-continuous type,
+or batch type. Each type is capable of a vacuum, inert, or reducing environment. Retort and bell type
+furnaces have an inner container that shields the assembly from outside air and typically use purified
+hydrogen gas to act as a reducing environment (Figure 4). The retort prevents the gas from combusting or
+becoming contaminated. Continuous and semi-continuous brazing furnaces have a conveyor belt that
+moves the assembly through multiple heat zones in the brazing process. The entryway and exit of these
+furnaces have flame curtains to help maintain the inert environment in the furnace.
+
+3
+
+Figure 4. Schematic of a retort furnace with an electric-fired box used to maintain an inert atmosphere. 7
+
+Batch type furnaces are used mostly in smaller companies and with specialty brazing products because
+each group of assemblies must be removed from the furnace before the next batch can be brazed. The two
+main types of batch furnaces are hot wall and cold wall furnaces. Hot wall furnaces are no longer
+manufactured, but the ones that still work are still producing pieces. Cold wall furnaces have side- and
+top-loading components with clamshell doors to form the vacuum chamber. They are insulated with a
+double-wall system, heated directly with electricity, and cooled with water (Figure 5).9
+
+Figure 5. Schematic of a cold wall furnace with side-loading, double-wall insulation, and a water-cooling system.7
+
+The main concern with furnaces is the possibility of the surface of the base metal reacting with oxygen in
+the surrounding environment and forming an oxide layer. These reactions are accelerated at the higher
+temperatures associated with the brazing process. Oxides prevent the braze alloy from flowing freely into
+the joint, but this can be avoided with the use of flux. After brazing, the flux cools and forms a glassy
+residue. This residue must be removed since it contains corrosive elements. Removing the flux can be as
+simple as placing the assembly in warm water and brushing off the residue. Brazing furnaces with
+environments that do not require flux are called “fluxless” or “protective atmosphere furnace brazing”
+processes.9
+4
+
+Any of the furnace types are capable of an active or reducing environment, an inert gas environment, or a
+vacuum environment. Active or reducing environments do not fully prevent oxidation and therefore
+require flux. These environments typically produce hydrogen or carbon monoxide gases that then react
+with metal oxides to form contaminating gases. The gases can be pushed away with a positive gas flow,
+but some oxides get left behind on the surface of the joint. An inert gas environment is commonly
+comprised of argon or helium gas because they are not reactive and therefore will not form an oxide with
+the assembly. Flux is not necessary in this case. Nitrogen is technically a reactive gas, but it usually will
+not react with the metals being brazed. It can be used as a purging gas or backfill gas to aid in cooling.
+Vacuum furnaces are the most popular because there are no chemical reactions that can occur due to the
+lack of air particles in the chamber (Figure 6). However, the low pressures and high temperatures can
+cause metal oxides to physically dissociate from the surface of the joint.9 Alloys containing elements with
+a low vapor pressure like zinc cannot be used because they will contaminate the vacuum.
+
+Figure 6. Schematic of a vacuum brazing furnace with a double wall vessel, cooling motor, and vacuum pump. 10
+
+1.4.4. Brazing Procedure
+The process of brazing requires some important initial preparation steps prior to the actual joining. The
+material preparation includes cleaning and fluxing, if necessary, as well as joint and fixture design for the
+heating process. Once the material is prepared, the actual brazing can take place followed by cleaning
+procedures.
+The surfaces of the base metal must be cleaned before coming into contact with the braze alloy. Any
+residual oil, grease, dust, rust, or dirt can cause oxidation and poor flow and spreading of the braze alloy.
+Oil and grease are removed first by dipping the part or assembly in a degreasing solvent. Residual oxides,
+such as rust or scale, can be removed chemically with an acid treatment, sometimes called pickling, or
+mechanically using an abrasive such as grit blasting or a grinding wheel. Any chemicals used for cleaning
+must be compatible with the base metal to not cause further damage, and they must be rinsed out from
+any crevices or blind holes to prevent corrosion.
+Once the base metal is cleaned, the flux can be applied if it is necessary for the process. The American
+Welding Society (AWS) defines flux as a mineral compound that “prevents, dissolves, or facilitates the
+removal of oxides” from an assembly.11 Fluxes usually contain borates, elemental boron, fluoroborates,
+fluorides, chlorides, and water. Each component plays a specific role and is used for specific metal
+systems to prevent oxidation. Fluxes typically come in a liquid form in furnace brazing so that once the
+5
+
+braze alloy is applied, the flux can be easily displaced by the braze alloy as it flows over the joint. Brazing
+in an inert atmosphere does not require flux, but it may help improve wettability of the braze alloy. Flux
+most commonly comes as a paste that can be brushed onto the part. In facilities with a high production
+rate, a faster process may be to dip the part in the flux or apply a pre-measured amount of high-viscosity
+flux from an applicator gun. Having a pre-measured amount improves consistency and reduces the
+amount of waste. The amount of flux being used depends on how large the part is. It is safer to apply a
+greater amount of flux than to have a smaller amount that may quickly become saturated with oxides.
+Brazing works due to capillary action, so the joint will almost always require a tight clearance. The
+thickness of the gap may range from 0.002-0.005 inches to achieve the highest strength joint. Anything
+thinner or wider affects the flow of the braze alloy resulting in lower strength joints or voids. Since
+brazing takes place at high temperatures, the joint design must consider thermal expansion of each metal.
+If the parts are flat they can be held together by utilizing gravity with extra weight if necessary. More
+complex assemblies may require a fixture. The best-designed fixtures have a low mass and the fewest
+contact points with the metal to be brazed to not conduct heat away from the part. One way to accomplish
+the least amount of contact is to use a fixture with a knife-edge or pin-point design (Figure 7). Tack
+welding can also be utilized to hold simple assemblies together. The fixture should be made from a
+material with low conductivity and a similar thermal coefficient of expansion as the part.
+
+Figure 7. Knife-edge and pin-point fixtures used to reduce the amount of contact with a braze assembly. 12
+
+After the preparation is complete, the assembly is ready to be brazed. A smaller assembly can be placed
+entirely in a furnace, whereas a large part may only be heated at the area around the joint being brazed.
+The joint is raised to the flow point of the braze alloy, just above the liquidus line, until the joint is fully
+wetted by braze alloy. Molten braze alloy tends to flow toward areas of higher temperatures, so it is
+important to heat the joint area evenly to ensure the braze alloy flows evenly. The system may be held at
+the elevated temperature for an extended period of time to encourage diffusion between the braze alloy
+and base metal. Otherwise, the part is cooled at an appropriate rate for the desired properties of the base
+metal and joint.
+The final step is to clean the brazed joint to remove any flux or scale leftover after heating. This step is
+important for the performance of the joint as flux is chemically corrosive. Flux can be removed in a hot
+water bath or with an abrasive, and scale can be removed using a pickling solution.12
+
+6
+
+1.4.5. Base and Braze Alloys
+Base Metal
+Brazing can be performed on virtually any metal if the appropriate braze alloy is chosen. Common base
+material systems include copper alloys, low carbon steels, low alloy steels, stainless steels, tool steels,
+cast irons, nickel-base alloys, alloys containing cobalt, aluminum alloys, refractory metals, and ceramic
+materials. Each system requires specific brazing alloys and brazing procedures to ensure proper joint
+strength.9 Two common base metals used at Aerojet Rocketdyne are Inconel© 718, a nickel-base
+superalloy, and A-286, an iron-nickel-chromium superalloy in the stainless steel family. Both metals
+contain a variety of alloying elements (Table I).
+Table I – Nominal Compositions of 718 and A-286 Expressed in Weight Percent
+
+Inconel 71813
+
+A-28614
+
+Nickel
+
+50-55
+
+24-27
+
+Chromium
+
+17-21
+
+13.5-16
+
+Iron
+
+11-22*
+
+49-56*
+
+Niobium
+
+4.75-5.5
+
+-
+
+Molybdenum
+
+2.8-3.3
+
+-
+
+Titanium
+
+0.65-1.15
+
+1.9-2.35
+
+Cobalt
+
+1.00 max
+
+1.00 max
+
+Silicon
+
+0.35 max
+
+1.00 max
+
+Manganese
+
+0.35 max
+
+2.00 max
+
+Aluminum
+
+0.2-0.8
+
+0.35 max
+
+Carbon
+
+0.08 max
+
+0.08 max
+
+Phosphorous
+
+0.015 max
+
+0.025 max
+
+Copper
+
+0.30 max
+
+-
+
+Tantalum
+
+0.05 max
+
+-
+
+Vanadium
+
+-
+
+0.1-0.5
+
+Sulfur
+
+0.015 max
+
+0.025 max
+
+Boron
+
+0.006 max
+
+0.003-0.010
+
+*Iron stated as a remaining balance and calculated using minimum and maximum values
+
+7
+
+Superalloys
+Superalloys earned their name because they can be used at high temperatures while maintaining a
+significant amount of strength. They also have excellent oxidation and corrosion resistance at elevated
+temperatures. Superalloys are typically iron-, nickel-, or cobalt-base. Iron-base superalloys can be used up
+to 650°C, and nickel and cobalt superalloys can be used up to 1100°C; however, nickel-base superalloys
+tend to be higher in strength than cobalt-base superalloys. The strength of superalloys is usually measured
+in terms of stress rupture strength and creep resistance along with tensile strength. Good oxidation and
+corrosion resistance is a result of the high chromium content in the superalloys.15
+Inconel 718
+Inconel 718 is a precipitation hardenable nickel-base superalloy used in the aerospace industry for high
+temperature fasteners, pressure vessels, or gas turbines. This alloy has excellent strength, creep resistance,
+stress-rupture strength, and oxidation resistance at high temperatures. 718 can be used at temperatures
+ranging from cryogenic to 1100°C.13 718 can be strengthened by solid-solution strengthening,
+precipitation, or dispersion. Refractory metals are often added to aid in solid-solution strengthening, and
+small amounts of carbon, hafnium, or zirconium are added to strengthen grain boundaries.
+The strength of 718 is a result of the formation of two different compounds. The first is the Ni(Al,Ti)
+precipitate that forms from aluminum and titanium present in the alloy. The second is the formation of
+Ni3Nb, an intermetallic compound. Both forms are known as γ′.15 Ni(Al,Ti) has an FCC structure similar
+to the 718 matrix but with different lattice parameters. This difference forms a coherency strain in the
+system. These strains stop the movement of dislocations and strengthen the material. The Ni3Nb
+compounds are cubic crystals that can stop slip and creep. Both types of γ′ form over time from exposure
+to heat.16
+When brazing, some considerations must be taken into account with the aluminum and titanium
+components. Both elements oxidize easily, decreasing the wettability of the alloy; therefore, it is ideal to
+braze the 718 in a vacuum environment and with an extremely clean surface. The surface can also be
+nickel coated if there is a possibility of re-brazing the assembly. Brazing should not be done on any
+precipitation hardened metals to prevent over aging. The stresses in 718 from the precipitates make the
+alloy susceptible to liquid metal embrittlement when in contact with molten silver or copper-silver alloys.
+Typically, when brazing nickel-base alloys, the material is solution aged and brazed at one temperature
+and then the whole assembly is aged. This means that the braze alloy must melt at or above the solution
+temperature.9
+A-286
+A-286 is an austenitic age hardenable iron-base stainless steel superalloy. It is also used in aerospace
+applications for aircraft turbines, high strength fasteners, and nonmagnetic cryogenic equipment. 200
+series stainless steels are iron-nickel-chromium base alloys.14 They are austenitic and therefore contain
+enough nickel or manganese to stabilize the austenite phase at room temperature.15 A-286 is strongest if it
+has been heat treated at 980°C, rapidly quenched, aged between 720-730°C for 16-18 hours, and then air
+cooled. A-286 can be used at temperatures between -195°C to 540°C for long exposure periods and up to
+705-815°C for shorter periods of time.14
+
+8
+
+The strength of A-286 is a result of carbide phases that take the form of M23C6, M6C, or MC where M is
+either chromium, titanium, molybdenum, or tungsten. These carbides primarily affect the creep strength,
+but the effect varies depending on which carbide is formed.4 Ni3(Al,Ti) precipitates form as FCC γ′ during
+aging at 730°C also give A-286 its strength. However, this phase is metastable if aged for short periods of
+time. The γ′ phase will become a more stable phase of η, an HCP Ni3Ti phase, which degrades the
+mechanical properties of the alloy.17
+Braze Alloys
+There are over a thousand different brazing alloys in production that can be chosen using selection
+criteria. One criteria is the form of the braze alloy. Braze alloys can be purchased as paste, powder, wires,
+strips, rods, foils, tapes, or pre-forms in any desired shape (Figure 8). Foils are most used in aerospace
+applications because they can be wrapped around conical sections that would be found in nozzles.5
+
+Figure 8. Various solid forms of braze alloys used in industry.18
+
+The selection of a braze alloy depends on its compatibility with the base metal and the brazing process
+requirements. A brazing alloy must have a liquidus temperature below the melting point of the base metal
+to avoid degradation of the properties of the base metals when melting the braze alloy. For example, if a
+base metal has been work hardened, the braze temperature should not anneal the base metal. Furthermore,
+if the base metal is precipitation hardenable care must be taken to avoid over aging. The braze alloy must
+also be able to wet the base metal to provide good adhesion and reduce the chance of forming voids, and
+it must not erode the base metal at the interface. This can include forming brittle intermetallic phases
+between elements in the base metal and braze alloy or leaving the grain boundaries susceptible to
+corrosion.19
+Other selection criteria for choosing a braze alloy includes the assurance that the joint will have similar or
+improved strength and ductility compared to the base metal and can withstand service temperatures
+required by the assembly. Intermetallic compounds and shrinkage during solidification may cause stress
+concentrations in the design and should be avoided. In addition, braze alloy should comply with health
+codes. For example, cadmium, which is sometimes used as an alloying element, is toxic and special
+measures must be taken to ensure that it will not cause any harm.19
+Braze alloy families can be divided into two categories: precious and non-precious alloys. Precious metal
+braze alloys typically contain gold, silver, or platinum. Silver and gold are the most widely used due to
+9
+
+their excellent properties. Pure silver has excellent fluidity and oxidation properties and is compatible
+with most base metals excluding iron-base alloys. Pure silver is not used often due to its high cost,
+approximately $20 per ounce.20 To cut costs and improve its compatibility with iron-base alloys, the pure
+silver is alloyed with copper. The silver-copper alloy has a eutectic point of 779°C, at which it takes on a
+lamellar structure of a silver-rich phase with interspersed copper-rich phases upon cooling.19 Copper is
+considerably cheaper than silver at $3 per ounce and is better at joining low carbon content steels in
+vacuum furnaces. However, copper has poor oxidative properties at the high temperatures.21 Silver can
+also be alloyed with zinc and cadmium. However, zinc is volatile and cannot be used in vacuum brazing
+while cadmium is toxic and can be harmful when not handled properly.
+Gold is another braze alloying element with excellent corrosion resistance and wetting ability. However,
+gold costs approximately $1,200 per ounce and is not used extensively.22 It is often alloyed with copper,
+silver, zinc, and nickel, and is used primarily to join iron-, nickel-, and cobalt-base metals because it can
+help improve the ductility of the joint.9
+Non-precious braze alloys are categorized as containing any elements except silver, gold, and platinum.
+They tend to be nickel-, copper-, or titanium-based. Nickel is approximately $5 per ounce and has
+excellent corrosion resistance, so no oxides will form to impede the flow of the melt.23 Engine starters
+experience high temperatures, high stresses, and the joint has tight tolerance. Therefore, a free-flowing
+alloy, such as AMS 4777 or AMS 4778, is well-suited for the joint.24 A unique trait of nickel is that it has
+good solubility with iron, which can be used for diffusion between the base metal and braze alloy in
+brazing.25 Nickel braze alloys are used in applications that require corrosion resistance, high temperature
+service properties, and use at subzero temperatures as low as -269oC (-452oF).26 Titanium is usually used
+in active metal brazing and to join ceramic materials.19
+Morgan Advanced Materials (previously Wesgo) in Hayward, California is a manufacturer of braze alloys and
+provides suggestions for which braze alloy should be paired with the desired base metal. For example, 718 and A286 can be joined using braze alloys containing a majority of copper or nickel, such as AMS 4776, AMS 4777, and
+AMS 4778 (
+
+Table II).
+Table II – Nominal Compositions of Braze Alloys Expressed in Weight Percent
+
+Ni
+
+Cr
+
+Fe
+
+Si
+
+B
+
+AMS 477627
+
+73.9
+
+14
+
+4.5
+
+4.5
+
+3.1
+
+28
+
+82.4
+
+7
+
+3
+
+4.5
+
+3.1
+
+AMS 477829
+
+92.4
+
+-
+
+-
+
+4.5
+
+3.1
+
+AMS 4777
+
+Each of the braze alloys listed also contain trace amounts of zinc, lead, phosphorus, cadmium, and
+carbon. These five elements cannot be used in great amounts when furnace brazing because they are
+volatile at low pressures and would cause contamination in the furnace and the joint. Silicon is added to
+some of these alloys to help lower the melting temperature and promote flowing. However, when too
+much silicon is added, it can cause intergranular embrittlement, especially in nickel alloys.19 Boron is
+added because it can also lower the melting point of the alloy. Additionally, if in low concentrations,
+boron can improve the wetting of nickel. Boron’s distinctive trait is that is diffuses quickly into base
+10
+
+metals making it popular for diffusion brazing.19 Chromium has excellent corrosion and oxidation
+resistance, which is why it is often added to braze alloys that will be used in high temperature
+applications.19
+
+1.4.6. Joint Design
+The two major joint designs used in brazing applications are lap joints and butt joints. Lap joints are
+characterized as two parts joined by an overlapping cross section (Figure 9a). Typically, the overlapping
+section is at least three times the length of the thickness of the thinnest member.30 The larger the overlap,
+the greater the surface interaction between the joined parts, therefore increasing the strength of the joint.
+This increased strength coupled with ease of fabrication is what makes lap joints the preferred joint.
+However, lap joints increase the thickness of the joint and produce a stress concentration at the end of the
+overlapping section where there is a sudden change in the cross section. Stress concentrations can lead to
+a source of failure under extreme service conditions.
+The other major brazed joint, the butt joint, is characterized as a joint in which the pieces of metal are
+joined end-to-end (Figure 9b). The strength of butt joints relies on maximizing the joined surface areas, as
+this maximizes the tensile load the joint can withstand. A variation of the butt joint, the scarf joint, joins
+parts together using angled edges (Figure 9c). However, the scarf joint has several disadvantages,
+including difficult fabrication due to aligning the angled edges and a decrease in tensile loading capacity
+due to the loss of a joint surface perpendicular to the axis of loading. Overall, butt joints are used if joint
+thickness is a consideration and if the strength of the brazed joint meets the final requirements of the
+completed part. Other joints that are considered variants of the butt joint are the T-joint, corner joint, and
+the lap-butt joint.
+
+Figure 9. Commonly used braze joints: a) lap joint, b) butt joint, and c) scarf joint. 31
+
+One important factor in the design of a brazed joint is its clearance. Clearance is the distance between the
+two surfaces that will be joined together. These surfaces are called faying surfaces. The clearance gap is
+dependent on the brazing temperature; clearance gaps are different at room temperature than they are at
+brazing temperature due to thermal expansion. The metal with the higher coefficient of thermal expansion
+will experience a greater dimensional change that alters the clearance gap.30 Room temperature clearance
+is a sufficient guide for similar metals of approximately equal size since their coefficients are the same.
+To maximize joint strength, clearances should be minimized while still providing enough space for
+adequate flow of the braze alloy. This is especially important when brazing in unprotected atmospheres
+where strength may be sacrificed for the better flow behavior associated with larger clearances.
+11
+
+Clearance can be affected by the surface finish. If the surface finish on the base metal is too smooth, less
+braze alloy is able distribute itself throughout the entire joint, which can produce voids and lower the
+strength of the joint.30 Surface roughness is necessary for the braze alloy to be drawn into the joint by
+capillary action; however, if the faying surfaces are too rough, the average clearance is too large because
+the braze filler metal only interacts with the higher points of the surface. In general, a range of surface
+roughness from 0.75 to 2.0 microns root mean square (RMS) is acceptable.30 Other factors that affect
+clearance are the interaction between the base metal and braze filler metal. The solubility of the braze
+alloy into the base metal causes interactions between the two metals, such as diffusion, to occur. The
+higher the probability of either interaction to occur, the larger the clearance needs to be in order to
+accommodate the higher flow rate and the higher level of diffusion. In addition, longer joints require
+larger clearances to prevent the braze alloy from solidifying before completely wetting the joint.
+Joint clearance has a significant effect on the mechanical performance of the braze part, such as its fatigue
+strength, impact strength, and other mechanical properties. For example, the mechanical restraint to
+plastic flow increases because of the greater strength of the base metal.30 Furthermore, the void content,
+flux entrapment, and braze alloy distribution influence the strength of the joint due to capillary action.
+In addition to the brazed joint clearance, the assembly and fixtures must be taken into consideration when
+designing a brazed joint. Brazed components are often assembled and held together by various types of
+welds, rivets, or straps made of thin foils.30 These techniques require the use of flux or an inert
+atmosphere to prevent the surfaces from oxidizing and inhibiting the flow of the braze alloy. Furthermore,
+the brazing fixture should also be considered when designing the braze joint. A braze fixture is typically a
+custom structure that holds the brazed joint together during the heating process. Fixture designs should
+have a simple design with minimal contact points with the part and avoid the use of bolts and screws
+(Figure 10). Materials used in the fixture should have uniform thicknesses and similar thermal expansion
+coefficients. Additionally, the material should be able to withstand frequent thermal cycles without
+warping. If localized pressure is required, flexible refractory blanket pads, steel balls, pins, bellows, or
+weighted levers can be used.30
+
+Figure 10. A simple braze fixture that holds a T-joint together using a dead weight.12
+
+1.4.7. Physical Principles of Brazing
+Capillary Action
+The basic principle of brazing is capillary action. The success of capillary action is dependent on how
+well a braze alloy bonds to the base metal. This, in turn, is based on the phenomena of cohesion and
+surface energy. In the liquid braze alloy, there are internal cohesive forces between the atoms, which are
+12
+
+strongest at the surface. Liquid drops ball up on a surface in a spherical shape when no other forces are
+present to minimize surface area and achieve the lowest energy state possible. Adhesion is the attraction
+of the internal liquid molecules to those of an adjacent solid material. The forces of adhesion can be
+greater than the forces of cohesion with sufficient energy from heat. The bond is enhanced when the
+adjacent solid has a clean surface free from contaminants. When the forces of adhesion overcome the
+forces of cohesion, the liquid is said to “wet” the solid material by spreading out across the surface
+(Figure 11).32
+
+Figure 11. Diagram of capillary action of a braze alloy with good wetting ability.33
+
+There are a couple of other conditions that measure how well the braze alloy wets the base metal
+including the contact angle and thickness of the joint. The contact angle (𝛳C) in Young’s equation (Eq. 1)
+is determined by the interfacial energies between the solid and vapor phases (𝛾sv), the solid and liquid
+phases (𝛾sl), and the liquid and gas phases (𝛾lv).34
+
+𝛾sv – 𝛾sl = 𝛾lv cos𝛳C
+
+Eq. 1
+
+A contact angle larger than 90° indicates that the cohesive forces are stronger than the adhesive forces,
+and the liquid will not wet the solid surface. An angle less than 90° means the adhesive forces are
+stronger than the cohesive forces, and the liquid will wet the solid surface (Figure 12).
+
+Figure 12. Relationship between contact angle and wetting for a liquid on a solid surface. 35
+
+Oxygen in the atmosphere is highly reactive with a clean base metal surface and forms areas the braze
+alloy cannot wet. The presence of flux on the base metal surface helps improve capillary action by
+preventing an oxide layer from forming and lowering the surface energy of the molten braze alloy; a
+lower surface energy allows for better wettability.
+
+13
+
+The gap of the joint between base metals should be around 0.002-0.005 inches for the braze alloy to be
+most effectively distributed along the joint. A larger gap between the two surfaces of the solid causes the
+joint strength to fall toward the strength of the braze alloy and too thin of a joint will not allow for good
+flow of the braze alloy (Figure 13). The most ideal joints have a higher strength than the base metal.36
+
+Figure 13. Graph of the ideal thickness for a brazed joint to achieve the highest strength. 37
+
+Diffusion
+Diffusion bonding is a component of some brazing processes that can produce joints with stability at
+higher temperatures than the original braze alloy melting temperature. The process requires a joint with
+uniform width and the application of a load, typically 10-100 MPa, during the heating cycle. The applied
+load ensures good metal-to-metal contact to allow for sufficient diffusion. The assembly is held above the
+liquidus temperature of the braze alloy to fully wet the surface and fill the joint. Then it is held at that
+temperature for an extended period of time to get full diffusion between the braze alloy and base metals.
+Diffusion occurs by means of alloying elements diffusing into the bulk of base metal grains, along grain
+boundaries, or by penetrating grain boundaries as a liquid. Alloying elements are impurities that lower the
+liquidus or melting point of the braze alloy. The resulting joint has a higher melting point than the original
+braze alloy and is essentially homogeneous with the base metal (Figure 14).19
+
+Figure 14. Process of diffusion brazing resulting in a homogeneous joint.7
+
+14
+
+The amount of diffusion that occurs depends on a few factors including: mutual solubility between the
+braze alloy and base metal, the amount of braze alloy present, and the temperature and length of the
+heating cycle. The most ideal systems are based on simple binary or ternary systems that produce as few
+intermetallic compounds as possible. Intermetallic compounds reduce the ductility of the brazed joint
+since they are brittle in nature.38 The base metal should allow for a wide range of solid solubility of any
+other elements present to reduce the risk of forming intermetallic compounds. In some cases less diffusion
+may be desired. Systems with long joints should not be joined by diffusion brazing since the composition
+change can cause the braze alloy to solidify before reaching the end of the joint. To reduce the amount of
+diffusion, less braze alloy should be used, the system should only be held at the melting temperature of
+the braze alloy for as long as it takes to fill the joint, and braze alloy and base metals with low mutual
+solubility should be chosen.39
+Phase Diagrams
+Braze alloy selection is highly dependent on the phase diagram of the main elements or compounds while
+taking into account effects from alloying elements in the metal. Alloying elements act as melting
+temperature depressants and typically make the alloy more brittle depending on how they interact with the
+base metal constituents to form intermetallic compounds.
+When analyzing the melting and solidifying behavior of a joint, a good place to start is the eutectic
+composition. The eutectic composition is the first to melt upon heating, and it flows easily since it has the
+same liquidus and solidus temperature and will go directly from a solid to a liquid. There are many
+advantages to choosing a braze alloy with eutectic composition. The eutectic composition has superior
+spreading ability and low viscosity since no solid phases are present above the eutectic temperature. Less
+energy is needed to melt the braze alloy since the heating process can occur just above the eutectic
+temperature, which helps reduce the cost of brazing. A joint formed from this composition will also have
+superior mechanical properties because the grains are small and more evenly dispersed.19
+During solidification, the joint will begin to solidify at the edges then moved toward the center with the
+lowest melting temperature phases solidifying last. In an alloy without alloying elements, the eutectic
+composition solidifies last in what is called the “centerline eutectic” in the middle of the joint. In nickelbase braze alloy systems, phosphorus, boron, and silicon are alloying elements used to lower the melting
+temperature, and they become hardeners upon cooling. Solidification begins at the edges of the joint and
+the phases containing the phosphorus, boron and silicon get pushed to the center since they have the
+lowest melting points. This results in a brittle phase at the center of the joint, which can become an issue
+if the structures form a continuous matrix. Under severe conditions, such as shock, fatigue, or vibrations,
+the joint may fracture at the brittle centerline (Figure 15). The formation of the brittle centerline phase can
+be avoided by maintaining tight clearances during brazing. The alloying elements become more evenly
+dispersed throughout the joint since less of the centerline eutectic phase can form.40
+
+15
+
+Figure 15. Image of a nickel-brazed joint with a brittle centerline eutectic phase resulting in a continuous fracture
+line down the center of the joint.40
+
+If the system is not at the eutectic composition, there will be a range of temperatures between the solidus
+and liquidus line where two phases are present: solid and liquid (Figure 16). If the composition of the
+braze alloy has a large gap between the solidus and liquidus temperatures the joint may be in danger of
+liquation. In processes with slow heating rates, like furnace brazing, constituents with lower melting
+points can separate from the braze alloy and flow away from remaining solid constituents. This
+phenomenon can be identified by a lumpy appearance along the joint fillet. Joints that experience
+liquation may still have high strength and sufficient bonding, but they are not suitable for applications that
+require smooth air flow or good aesthetics. The selection of braze alloys should be aimed toward eutectic
+compositions to reduce the risk of liquation and take advantage of the low costs and high strength
+associated with that composition.
+
+Figure 16. A typical binary phase diagram defining the solidus and liquidus temperature lines. 41
+
+1.4.8. Testing and Inspection
+Nondestructive Testing
+Several nondestructive evaluation methods exist for the quality control of brazed assemblies. These
+nondestructive inspection methods address common flaws found in brazed joints including: a lack of fill
+(voids), flux entrapment, a non-continuous braze fillet, and base metal erosion.42 Voids can be the result
+of several non-ideal conditions, such as improper cleaning of the joining surfaces, improper clearances,
+
+16
+
+insufficient brazing temperatures, improper braze alloy, or an insufficient amount of braze alloy. Flux
+entrapment occurs when the braze alloy traps the flux within the joint. This flaw is developed when
+reducing atmospheres are not employed during torch brazing, induction brazing, or furnace brazing. A
+non-continuous fillet is characterized as a braze fillet with a void that is large enough to discern through
+visual inspection, although the fillet may be deemed acceptable depending on the stress requirements for
+the application. Base metal erosion occurs when certain braze alloy readily alloy with the base metals
+providing the conditions for the faying surfaces to erode. This form of erosion is influenced by brazing
+temperature, duration at that temperature, and the amount of braze alloy used to produce the joint.42
+The most common nondestructive method is visual inspection. Although some cases render visual
+inspection ineffective, this method is often used as a preliminary test to other inspection methods. One
+major limitation of visual inspection is that it is a surface inspection and cannot be used to assess the
+internal integrity of a brazed joint. Visual inspection is effective for evaluating any external evidence of
+voids, porosity, surface cracks, other surface features, and geometry.30 The inspection can be performed
+with optical microscopy and scanning electron microscopy.
+Destructive Testing
+The most common destructive testing methods of brazed joints are tensile and shear testing. Peel, fatigue,
+and torsion tests can also be performed along with metallographic examination. A peel test is performed
+by holding one side of the joint rigid and peeling off the other side. This test is typically performed on lap
+joints and helps determine the general quality of the joint. Peel tests check for voids or leftover flux in the
+joint. Fatigue testing requires a substantial amount of time, so it is not often used for quality control.
+However, it can be useful because it tests for the strength of the base metal along with the strength of the
+joint. Torsion testing is used for samples of round base metals brazed together. Metallographic
+examination can be used to visually examine the joint for porosity, braze alloy metal flow, and base metal
+erosion.9
+Tensile and shear testing of brazed joints are governed by the American Welding Society’s “Standard
+Method for Evaluating the Strength of Brazed Joints.” Shear testing is typically performed on single-lap
+joints, while double-lap joints are used to analyze creep or stress rupture. Both types are pin-loaded to
+account for the differences on the longitudinal axis between the two base metals that are joined together.
+It is important to note the thickness of the joint as well as the amount of overlap between the two base
+metals. These two factors will alter the mechanical response of the joint.11
+Tensile testing is performed on butt brazed joints using a subsize flat tensile sample from ASTM
+E8/E8M-16A.43 ASTM E8/E8M-16A is the standard test method for tensile testing of metals and their
+alloys. Typical subsize specimens have an overall length of 4 inches.
+Brazing produces high-strength joints between similar or dissimilar base materials; however, commonly
+used braze alloys contain expensive precious metals. Low-cost, non-precious metal braze alloys, such as
+nickel-based braze alloys, are an alternative to the precious metal alloys. This project aims to test the
+tensile strength of brazed butt-joints to ensure non-precious metal braze alloys are a viable option for
+Aerojet Rocketdyne’s applications.
+
+17
+
+2. Experimental Procedure
+The ASTM Standard E8/E8M-16A for subsize specimen was used to perform tensile tests for each
+pairing of base metal with the three braze alloys. Due to the size of the original base metal blocks, the
+overall length of the tensile samples could be no greater than 3 inches. The length of the grip sections at
+either end was reduced to account for this constraint. The thickness was chosen to be 5 mm, which is
+below the maximum allowable thickness for subsize specimen and ensured that the maximum load placed
+on the samples would not exceed the load cell in the Instron testing system.
+
+2.1. Sample Preparation
+The base metals of 718, provided by Rolled Alloys per AMS 5596, and A-286, provided by Tri-Tech
+Metals per AMS 5525, were received as rectangular blocks in the hot-rolled condition with dimensions of
+1.5 inches by 1.25 inches by 3.125 inches. The A-286 had a layer of oxide over the entire surface,
+whereas the 718 did not. The A-286 blocks were cleaned in an ultrasonic tank to remove paint markings
+and residual contaminants. The oxide layer was removed using a polishing wheel with low grit emery
+paper. The 718 blocks did not require any cleaning.
+The braze filler alloys were measured to cover the 1.25 by 3.125 inch surface of the base metal blocks
+with a slight overhang. The extra braze alloy helps to ensure full wetting of the joint. The blocks to be
+joined were stacked with the braze filler metal in between and tack welded using resistance welding to
+prevent the pieces from moving out of place during transport. The final brazed block dimensions are 3.0
+inches by 1.25 inches by 3.125 inches.
+
+2.2. Braze Process
+All of the brazing heat cycles were performed at Morgan Advanced Materials. All of the brazed samples
+were placed on graphite plates sprayed with boron nitride to prevent sticking before being placed in the
+vacuum furnace. The brazed assemblies were heat treated with different temperature conditions due to the
+different liquidus temperatures of the braze alloys (Figure 17). During the entirety of the braze cycle, the
+furnace was kept at low pressure, approximately 10-5 torr. All of the samples were heated to 1700°F and
+held for ten minutes. Each sample was then brought to the braze alloys’ respective liquidus temperatures
+at a rate of 17°F per minute and held for five minutes at that temperature. Samples brazed with AMS
+4776 were held at 1990°F, AMS 4777 samples were held at 1890°F, and AMS 4778 samples were held at
+1920°F. All samples were cooled to 1750°F at a rate of 10°F per minute. At 1750°F, the vacuum was
+removed and the samples were fan cooled to room temperature. Witness samples of pure base metal were
+used to provide a reference for the base metal properties to compare to the braze samples. The witness
+metals were heat treated at the AMS 4776 condition because this cycle reached the highest temperature of
+any of the cycles.
+
+18
+
+Figure 17. Brazing heat cycle for the three braze alloys. The temperatures shown are the liquidus temperatures for
+each respective braze alloy.
+
+2.3. Heat Treatments
+The brazing cycle served as the solutionizing portion for the brazed blocks and witness metal heat
+treatments. The blocks and witness metal were then aged using two different heat treatments. The A-286
+blocks were aged at 1330°F for 16 hours and then furnace cooled. The 718 blocks were aged at 1350°F
+for 8 hours, cooled to 1150°F for another 8 hours, and then furnace cooled.
+
+2.4. Machining of Test Samples
+The samples were machined using wire electric discharge machining (wire EDM). EDM is a controlled
+metal-removal process that removes metal using an electric spark to erode the workpiece to produce the
+desired geometry. In wire EDM, the electrode is a continuously-traveling vertical wire under tension with
+a diameter similar to that of a needle. Wire EDM was selected for machining the tensile bars due to the
+difficulty of machining Inconel 718. The tensile samples were machined based on ASTM E8/E8M-16A
+subsize specimens and were modified to accommodate the height of the brazed blocks (Figure 18). The
+modified dimensions include the overall length and grip section lengths (Figure 19Error! Reference s
+ource not found.). The samples of 718 brazed with AMS 4776 (718-76) and 718 brazed with AMS 4778
+(718-78) did not withstand the machining process, but as many samples as possible were machined from
+the block of 718 brazed with AMS 4777 (718-77). Three tensile samples were machined from each block
+of base metal. Five tensile samples were machined from each of the three A-286 brazed blocks (A286-76,
+A286-77, A286-78), and two tensile samples were machined from the 718-77 brazed block.
+
+19
+
+Figure 18. Machining stages in tensile sample production, starting from brazed blocks (left) and finishing with
+tensile samples (right). The brazed joint is highlighted with the red rectangles.
+
+L
+B
+A
+R
+W
+C
+T
+G
+
+3.00 in
+0.75 in
+1.25 in
+0.25 in
+0.250 in
+0.375 in
+0.196 in
+1.14 in
+
+Overall length
+Grip section length
+Length of reduced section
+Radius of fillet
+Width of reduced section
+Grip section width
+Thickness
+Gage length
+
+Figure 19. Subsize specimen geometry and dimensions of samples according to ASTM E8/E8M – 16A: Standard
+Test Methods for Tension Testing of Metallic Materials.43
+
+2.5. Testing
+Tensile testing was performed on an Instron 5584. A crosshead displacement rate of 1.5 mm per minute
+was applied to the samples and the following data was recorded using the Bluehill software: maximum
+load (kN), tensile stress (ksi), and extension at maximum (mm). Percent elongation was calculated using
+the reported extension and the measured gage length. An extensometer was not used during testing
+because the sample was not homogenous due to the brazed joint.
+
+2.6. Metallography
+Optical metallography was performed on the brazed joint for each of the tested braze alloys and base
+metals. The metallography samples were taken from the excess material of the tensile samples that had
+the highest measured tensile stresses. Once the samples had been cut to size, they were mounted into one
+inch Bakelite mounts. Each sample was rough polished on emery paper going from 240 to 320 to 400 to
+600 grit. After rough polishing, the samples were polished on 6 µm, 3 µm, and 1 µm pads using a glycol
+based monocrystalline diamond suspension abrasive with the correct crystal size for each pad. The metal
+
+20
+
+was etched using a solution of 30 mL of 12M hydrochloric acid, 3 mL of deionized water, and 3 grams of
+copper(II) chloride.
+
+2.7. Scanning Electron Microscopy
+Scanning electron microscopy (SEM) was performed on the fractured surfaces using an FEI Quanta 200.
+To ensure that the samples would fit in the SEM, the grip sections of the tensile bars were removed using
+a cut off saw. The samples were then rinsed with water and blown with air to remove any cutting fluid or
+abrasives that may have been left on the samples. They were then placed in a beaker filled with acetone
+and run in an ultrasonic bath for five minutes. The SEM was operated using a 20 kV accelerating voltage
+and a spot size of four. Energy dispersive X-ray spectroscopy (EDS) was performed on tensile bar
+fracture surfaces and on optical metallography samples using Oxford Instruments’ INCA software. The
+tensile bar fracture surface samples underwent the same preparation as the samples examined using SEM.
+
+2.8. Statistics
+Statistical analysis was completed on the tensile sample data that had a calculated elongation values
+above 10% as this is a minimum standard set by Aerojet Rocketdyne for brazed joints. This criterion
+removed many data points so only descriptive statistics were completed. Averages and standard
+deviations were calculated for the tensile strength and percent elongation for each data set, as well as box
+and whisker plots.
+
+3. Results
+3.1. Tensile Test Results
+Tensile testing was performed on all of the tensile samples and the results were plotted as tensile stresses
+versus percent elongations. The un-brazed samples of A-286 had little variability in the data and resulted
+in expected values from literature, and the brazed samples had a large amount of scatter for the maximum
+tensile stresses reached (Figure 20-23). The un-brazed samples of 718 also achieved expected values from
+literature, but the 718-77 samples failed prematurely (Figure 24-25).
+
+Figure 20. Tensile stresses plotted against percent elongation for samples of un-brazed A-286.
+
+21
+
+Figure 21. Tensile stresses plotted against percent elongation for samples of A-286 brazed with AMS 4776. The
+dashed line represents sample 1 where the grips slipped during testing. Samples 2, 3, and 5 did not pass the
+elongation criterion.
+
+Figure 22. Tensile stresses plotted against percent elongation for samples of A-286 brazed with AMS 4777.
+
+Figure 23. Tensile stresses plotted against percent elongation for samples of A-286 brazed with AMS 4778.
+
+22
+
+Figure 24. Tensile stresses plotted against percent elongation for samples of un-brazed 718.
+
+Figure 25. Tensile stresses plotted against percent elongation for samples of 718 brazed with AMS 4777. Both
+samples had the lowest tensile strengths of all the brazed joints.
+
+The results from the tensile tests were recorded and tabulated (Table III). Aerojet Rocketdyne uses a
+minimum percent elongation standard of 10%. Based on this criterion provided by Aerojet Rocketdyne,
+the 718-77 and A286-76 were not considered acceptable for industry use. The samples that did not meet
+the elongation standard are highlighted in gray.
+
+23
+
+Table III – Tensile Tests Results for Brazed and Un-Brazed 718 and A-286
+Maximum
+Sample
+Maximum
+Tensile Stress
+Elongation
+Displacement
+Number
+Load (kN)
+(ksi)
+(%)
+(mm)
+1
+37.72
+181.67
+14.04
+48.41
+718-Base
+
+718-77
+
+A286-Base
+
+A286-76
+
+A286-77
+
+A286-78
+
+2
+
+37.79
+
+182.14
+
+13.18
+
+45.45
+
+3
+
+37.75
+
+181.18
+
+13.25
+
+45.69
+
+1
+
+0.15
+
+0.71
+
+0.71
+
+2.45
+
+2
+
+0.11
+
+0.51
+
+0.19
+
+0.66
+
+1
+
+30.23
+
+145.04
+
+16.73
+
+57.69
+
+2
+
+30.53
+
+147.18
+
+16.65
+
+57.41
+
+3
+
+30.21
+
+145.57
+
+17.45
+
+60.17
+
+1*
+
+3.05
+
+14.87
+
+6.16
+
+21.24
+
+2
+
+0.45
+
+2.19
+
+0.6
+
+2.07
+
+3
+
+4.82
+
+23.51
+
+1.01
+
+3.48
+
+4
+
+19.24
+
+93.38
+
+3.84
+
+13.24
+
+5
+
+4.15
+
+20.19
+
+1.24
+
+4.28
+
+1
+
+22.28
+
+108.6
+
+4.56
+
+15.72
+
+2
+
+19.66
+
+94.55
+
+3.37
+
+11.62
+
+3
+
+21.65
+
+103.09
+
+4.16
+
+14.34
+
+4
+
+15.64
+
+75.97
+
+2.48
+
+8.55
+
+5
+
+17.89
+
+87.52
+
+3.27
+
+11.28
+
+1
+21.31
+103.31
+5.07
+2
+19.42
+94.3
+3.91
+3
+17.92
+86.75
+3.4
+4
+18.77
+91.13
+4.79
+5
+20.48
+99.06
+4.79
+*grip slipped during testing resulting in heightened elongation
+
+17.48
+13.48
+11.72
+16.52
+16.52
+
+The samples that did not meet Aerojet Rocketdyne’s percent elongation standards were excluded from
+further analysis (
+). Sample 1 of A286-76 is also excluded because the grips slipped during testing, resulting in an
+inaccurate value for the recorded percent elongation. Since only one sample in the A286-76 data set met
+Aerojet Rocketdyne’s percent elongation standard; the entire data set was not considered for further
+statistical analysis. The brazed samples of 718 were also not considered because the samples did not meet
+the minimum percent elongation standard.
+
+24
+
+Table IV – Tensile Test Results of A-286 Used for Statistical Analysis
+Maximum
+Sample
+Tensile
+Elongation
+Displacement
+Number
+Strength (ksi)
+(%)
+(mm)
+1
+145.04
+16.73
+57.69
+A286-Base
+
+A286-77
+
+A286-78
+
+2
+
+147.18
+
+16.65
+
+57.41
+
+3
+
+145.57
+
+17.45
+
+60.17
+
+1
+
+108.6
+
+4.56
+
+15.72
+
+2
+
+94.55
+
+3.37
+
+11.62
+
+3
+
+103.09
+
+4.16
+
+14.34
+
+5
+
+87.52
+
+3.27
+
+11.28
+
+1
+2
+3
+4
+5
+
+103.31
+94.3
+86.75
+91.13
+99.06
+
+5.07
+3.91
+3.4
+4.79
+4.79
+
+17.48
+13.48
+11.72
+16.52
+16.52
+
+The A-286 base metal samples achieved expected maximum tensile strengths seen in literature. The A286 brazed samples considered for statistical analysis reached approximately 50 ksi below the base metal
+tensile strengths along with approximately 45% lower percent elongation values.
+
+3.2. Statistical Analysis
+The averages and standard deviations of this reduced data set were calculated (Table V). Box and whisker
+plots were also produced to show the amount of variability in the data in the brazed A-286 samples
+(Figure 26).
+Table V – Averages and Standard Deviations of the A-286 Tensile Data
+Avg TS
+(ksi)
+
+StdDev TS
+(ksi)
+
+Avg Elong
+(%)
+
+StdDev Elong
+(%)
+
+A286-Base
+
+145.93
+
+1.12
+
+58.43
+
+1.52
+
+A286-77
+
+98.44
+
+9.3
+
+13.24
+
+2.15
+
+A286-78
+
+94.91
+
+6.5
+
+15.14
+
+2.43
+
+25
+
+Figure 26. Box and whisker plots for tensile strength and percent elongation of A-286 brazed with AMS 4777 and
+AMS 4778.
+
+The averages of the two A286-77 and A286-78 were not statistically different when considering the range
+of the data and the standard deviations. The standard deviations of the tensile strengths are larger in the
+brazed samples than in the base metal, which is reflected in the tensile test outputs. The standard
+deviations of the elongations are similar in magnitude since the samples fractured at the joint. Further
+statistical analysis could not be completed due to the small sample size.
+
+3.3. Microscopy
+Fracture Surfaces
+Multiple imaging techniques were used to characterize the brazed joints and analyze the quality of the
+joints. The fracture surfaces of the joints were imaged using a stereoscope and a scanning electron
+microscope (SEM). Images taken on a Leica MZ 6 stereoscope show the amount of braze alloy coverage
+on the joint for the various braze alloys on A-286 and 718 (Figure 27-30). The light silver regions of the
+fracture surface are the braze alloy and the matte gray regions are the base metal. The fracture patterns are
+symmetric, where there is braze alloy on one surface there is base metal on the other.
+
+26
+
+a)
+
+b)
+
+c)
+
+d)
+
+e)
+Figure 27. Stereoscopic images of the braze coverage of the AMS 4776 on A-286 of (a-e) the five fractured tensile
+samples. Sample 2 (b) had the lowest tensile strength, and sample 4 (d) had the highest tensile strength.
+
+27
+
+a)
+
+b)
+
+c)
+
+d)
+
+e)
+Figure 28. Stereoscopic images of the braze coverage of the AMS 4777 on A-286 of (a-e) the five fractured tensile
+samples. Sample 4 (d) had the lowest tensile strength, and sample 1 (a) had the highest tensile strength.
+
+28
+
+a)
+
+b)
+
+c)
+
+d)
+
+e)
+Figure 29. Stereoscopic images of the braze coverage of the AMS 4778 on A-286 (a-e) the five fractured tensile
+samples. Sample 3 (c) had the lowest tensile strength, and sample 1 (a) had the highest tensile strength.
+
+a)
+
+b)
+
+Figure 30. Stereoscopic images of the braze alloy coverage of the AMS 4777 on 718 of (a) sample 1 and (b) sample
+2. Both samples resulted in low tensile strength due to poor braze alloy coverage.
+
+29
+
+SEM images were taken of the fracture surfaces to understand the fracture mechanism of the samples and
+to further evaluate the brazed joints’ integrity (Figure 31). Some of the fracture surfaces exhibit melted
+braze alloy that did not fully wet the base metal (Figure 32).
+
+Figure 31. SEM image of A286-78-4 fracture surface at 4083x magnification showing brittle fracture.
+
+Figure 32. SEM image of A286-76-2 at 426x magnification highlighting the melted braze alloy.
+
+Energy dispersive X-ray spectroscopy (EDS) was performed on the fracture surfaces to analyze the
+composition of the brazed joints (Figure 33). EDS spectra show the presence of iron, nickel, chromium,
+and silicon on the fracture surfaces. Distinct areas of iron were observed where the base metal was not
+wetted by the braze alloy. In addition, distinct areas of nickel and chromium were observed from the
+braze alloy. Silicon was observed in slightly greater concentrations in the areas of braze alloy. Pointidentification EDS of the A286-76 fracture surface was also performed to acquire the composition of the
+joint after fracture (Figure 34). Elements detected were boron, chromium, and iron (Table VI).
+
+30
+
+a)
+
+b)
+
+c)
+
+d)
+
+e)
+Figure 33. EDS mapping of A286-76-2 fracture surface (a) highlighting distinct areas of braze alloy and base metal.
+Elements highlighted are (b) iron, (c) nickel, (d) chromium, and (e) silicon, which are indicated by the white
+pixelated regions.
+
+31
+
+Figure 34. EDS point-identification at the red circle of A286-76-2 fracture surface.
+Table VI – Composition of a Selected Point on the A286-76 Fracture Surface by Atomic Percent
+
+Element
+
+Atomic percent
+
+B
+
+56.82
+
+Cr
+
+42.7
+
+Fe
+
+0.48
+
+Metallography
+Metallography was performed on cross sections of the brazed joint to examine the quality of the joint.
+One sample from each of the base metal-braze alloy combination was imaged. The A-286 samples all had
+similar features of grain pinning, interdiffusion layers, brittle compounds at the center of the joint, and
+voids (Figure 35). The 718-77 sample had unique features that resulted in the lower tensile properties
+(Figure 36).
+
+32
+
+B
+
+B
+
+C
+C
+
+a)
+
+b)
+
+B
+D
+
+A
+C
+
+c)
+Figure 35. Metallographic images taken at 200x of the cross-sectional braze alloy of A-286 brazed with (a) AMS
+4776, (b) AMS 4777, and (c) AMS 4778. Grain pinning is shown at point A, interdiffusion layers at point B, brittle
+compounds at point C, and voids at point D.
+
+E
+
+F
+
+Figure 36. Metallographic image taken at 200x of the cross-sectional braze alloy of 718 brazed with AMS 4777
+showing a crack at point E and base metal erosion at point F.
+
+33
+
+EDS was performed on the mounted metallographic samples to analyze the compositions of the different
+features in the brazed joints. EDS was taken at three points in the A286-78 metallography sample (Figure
+37) and the data was put in Error! Reference source not found. for all three points.
+
+Point 1
+Point 2
+
+Point 3
+
+Figure 37. The three locations that EDS was taken on the A286-78 metallographic sample. Point 1 is at the center of
+the joint where the brittle compounds are, point 2 is between the center of the joint and the interdiffusion layer, and
+point 3 is in the interdiffusion layer.
+Table VII – Compositions of the Three Points on the A286-78 Metallographic Sample by Weight Percent
+
+Weight percent
+Element
+
+Point 1
+
+Point 2
+
+Point 3
+
+C
+
+3.93
+
+2.31
+
+4.17
+
+O
+Si
+S
+
+0.98
+4.29
+-
+
+0.97
+0.37
+
+-
+
+Ti
+Cr
+
+0.46
+10.7
+
+0.9
+16.97
+
+1.42
+13.55
+
+Fe
+
+7.7
+
+41.2
+
+55.41
+
+Ni
+V
+
+70.94
+-
+
+36.92
+0.36
+
+24.75
+-
+
+4. Analysis
+None of the brazed samples achieved a tensile strength or percent elongation close to the base metal, but,
+on average, the A-286 brazed with AMS 4777 and 4778 did meet the minimum percent elongation
+requirement of 10%. The 718 brazed joints show poor wetting of the braze alloys, which may be
+attributed to the non-uniform thickness of the joint gap. The blocks of A-286 were machined prior to
+brazing producing a much more uniform joint gap.
+
+34
+
+Inconel 718
+The joint gap thickness of the 718 joints ranged from the thickness of the braze foil, 0.002 inches, up to
+0.08 inches. The 718-78 block broke apart after heat treating, and the 718-76 tensile samples fractured
+during machining. Both samples show poor wetting of the braze alloy with large sections of the base
+metal still visible, but it is most clearly seen on the 718-78 fracture surface (Figure 30). The poor wetting
+of the brazed joint is due to the large and uneven joint clearance that was present because the base metal
+was not machined flat enough. Both fracture surfaces have poor braze alloy coverage, which contributed
+to the low tensile properties.
+Only two tensile samples were able to be machined from the blocks of 718 brazed with 4777 without the
+parts fracturing at the joint. Those two samples had low elongation and failed under low tensile strength
+of less than 1 ksi due to poor wetting of the braze alloy. An etched sample of 718-4777 reveals a large
+crack running through the center of the brazed joint where there was poor wetting due to the uneven joint
+clearances. There was also base metal erosion that occurred since the nickel in the braze alloy has similar
+properties to the nickel in the base metal (Figure 36). It is likely that the tested samples had some
+connection of the braze alloy across the joint, which allowed for the piece to be held together, but there
+were few connections resulting in the low tensile strengths.
+Since an ideal brazed joint is largely dependent on the setup of the assembly, it is inconclusive if Inconel
+718 can be successfully brazed with nickel-based braze alloys AMS 4776, 4777, or 4778. The joint gap
+thickness was non-uniform and did not allow for proper wetting of the base metal with the braze alloy.
+A-286
+The samples with base metal A-286 withstood machining and had good wetting of the braze alloy;
+however they did not achieve strengths similar to or greater than the base metal. The A286-77 and A28678 samples met the minimum 10% elongation standard. The A286-76 did not meet this standard and also
+had poor wetting. The braze alloy coverage of the samples can be seen in the fracture surfaces. The light
+silver regions of the fracture surfaces are the braze alloy and the matte gray regions are the base metal
+(Figure 27-29). The A286-76 sample with the most braze alloy coverage had the highest tensile strength
+of the data set (Figure 27d). The other samples had much poorer coverage, resulting in lower tensile
+strengths. The same trend occurred in the A286-77 samples. Figure 28c had better braze alloy coverage
+than Figure 28d, which is why sample 4 had a higher tensile strength in the data set. The A286-78
+samples did not follow the same conclusive trend with the braze coverage and tensile properties.
+Metallography of the brazed joints is used to analyze the quality of the A-286 brazed joints. Favorable
+qualities include an interdiffusion layer and grain pinning while unfavorable features include voids and
+brittle compounds at the center of the joint. The quality of the brazed joint greatly affects the strength of
+the joint.
+The interdiffusion layer is found at the interface between the base metal and braze alloy and is formed
+during the braze heat cycle. This layer is made up of nickel, chromium, iron, and silicon which are
+sourced from the base metal, the braze alloy, or both. During the heat cycle the elements in the braze alloy
+and base metal diffuse from areas of high concentration to low concentration. AMS 4778 does not contain
+any chromium, so the only source of chromium for the interdiffusion layer is the base metal resulting in
+35
+
+this alloy have the smallest interdiffusion layer of the three (Figure 35c). AMS 4776 had the largest
+amounts of chromium and iron of the three braze alloys, 14% and 4.5% respectively, which hinders the
+diffusion of nickel into the diffusion layer. The relatively high amounts of chromium and iron in AMS
+4776 resulted in the least uniform interdiffusion layer (Figure 35a). The largest and most uniform
+interdiffusion layer was seen in the samples brazed with AMS 4777. The uniformity of this interdiffusion
+layer is a result of the smaller amounts of chromium and iron, 7% and 3.5% respectively. The nickel was
+not prevented from diffusing into the interdiffusion layer (Figure 35b).
+The other favorable feature in the A-286 brazed joints is grain pinning. Grain pinning occurs when molten
+braze alloy penetrates the grain boundaries of the base metal via capillary action. During the aging heat
+treatment, the base metal’s grains near the brazed joint cannot grow due to the braze alloy surrounding
+them. The A286-78 most distinctly shows grain pinning in the base metal (Figure 35c). The grains remain
+relatively small in comparison to the rest of the base metal, which effectively prevents the movement of
+dislocations as the joint is placed under tensile stress.
+An unfavorable feature is the presence of voids, which are a lack of material either at the edge of the joint
+or in the center. All of the A-286 brazed joints had voids, but the presence of voids is most prevalent in
+the A286-78 metallography image (Figure 35c). Voids are the result of poor wetting and decrease the
+strength of a brazed joint as the tensile stress becomes more concentrated in the bonded areas of the braze
+alloy.
+The final feature seen in the metallography samples that contributes to the low strength of the A-286
+brazed samples is brittle compounds from elements added to the braze alloy. Silicon and boron are added
+to braze alloys to lower the melting point, however, this places them at the center of the joint upon
+solidification. Silicon bonds with nickel and chromium to form brittle nickel-chromium silicides as well
+as chromium silicides. Boron bonds with chromium to form CrB or Cr3B, which are also brittle
+compounds.44 EDS results indicate that this region at the center of the joint contains a high concentration
+of silicon and chromium in comparison with the rest of the brazed joint - 4.29 wt% silicon and 10.7 wt%
+chromium. Carbon is present in the EDS results; however, carbon and boron are small elements with
+similar K-α emission lines. Therefore, it is possible that the detector was reporting the boron K-α
+emission lines as carbon K-α emission lines. Furthermore, boron was detected on the fracture surfaces of
+the 286-76 samples, suggesting the presence of borides.
+A-286 brazed with AMS 4776 has a continuous line of brittle compounds since this braze alloy has the
+highest amount of chromium meaning more is available to form CrB or Cr3B (Figure 35a). This line of
+brittle compounds found at the center of the joint in the AMS 4776 braze alloy resulted in the low tensile
+properties of the joint. The line of brittle compounds in the samples brazed with AMS 4777 is smaller and
+more broken up than the 4776 samples (Figure 35b). The samples brazed with AMS 4778 did not have a
+continuous line but rather smaller circular regions of the brittle compounds, which can be explained by
+the lack of chromium in the braze alloy (Figure 35c). These two alloys had higher tensile properties due
+to the reduced amount of brittle compounds at the center of their joint since they have less chromium in
+them.
+
+36
+
+The SEM images of the fracture surfaces indicate that the samples broke in a brittle manner in the joint.
+Figure 31 shows transgranular cleavage since the fracture remains all in one plane and there are no grains
+present. This indicates that the brittle compounds found at the center of the joint contributed to the
+fracture mechanism during testing. The fracture surface in Figure 32 indicates that there was poor wetting
+of the braze alloy on the base metal because some of the melted braze alloy can still be seen indicating the
+braze alloy never bonded on the other side of the joint resulting in weaker joints.
+
+5. Conclusions
+1. None of the joints produced with either base metal were able to achieve a high enough joint strength
+according to Aerojet Rocketdyne’s standards since all of the samples fractured at the joint rather than
+in the base metal.
+2. The A-286 brazed with AMS 4777 and 4778 were able to reach the elongations required by Aerojet
+Rocketdyne, but there was no statistical difference between the two since they had such similar
+tensile properties.
+3. The joints failed in both the 718 and A-286 due to brittle compounds at the center of the joint as well
+as voids that were present. Additionally, the 718 experienced poor joints due to non-uniform joint gap
+thickness.
+
+37
+
+References
+1. "Company History." Aerojet Rocketdyne. Aerojet Rocketdyne, n.d. Web. 8 Feb. 2017.
+2. "RS-25 Engine." Aerojet Rocketdyne. Aerojet Rocketdyne, n.d. Web. 8 Feb. 2017.
+3. Scott, Clare. "NASA Gives Aerojet Rocketdyne $1.6 Billion Contract for New, Improved, 3D Printed
+RS-25 Engines." 3DPrint. 24 Nov. 2015. Web. 04 Dec. 2016.
+4. Reed-Hill, Robert E., and Reza Abbaschian. Physical Metallurgy Principles. 3rd ed. Boston:
+Thomson, 1994. Print.
+5. Sandin, Tom. "Aerospace Brazing Today and Tomorrow." Morgan Advanced Materials (2012).
+6. Huzel, Dieter K., and David H. Huang. "Chapter IV: Design of Thrust Chambers and Other
+Combustion Devices." Design of Liquid Propellant Rocket Systems. 2nd ed. N.p.: National
+Aeronautics and Space Administration, 1967. 92. PDF.
+7. "Fundamentals of Brazing and Soldering." ASM Handbook. Vol. 6. Materials Park: ASM
+International, 1993. ASM Handbooks Online. ASM International. Web. 4 Dec. 2016.
+8. Sulzer Metco. An Introduction to Brazing: Fundamentals, Materials, Processing. Issue 3. August
+2011.
+9. Brazing Handbook. Miami, FL: American Welding Society, 1991. Print.
+10. Kowalewski, Janusz. "High-vacuum Brazing." Issues in Vacuum Brazing (2006): n. pag. Seco
+Warwick. Web. 8 Dec. 2016.
+11. “Standard Method for Evaluating the Strength of Brazed Joints.” AWS C3.2M/C3.2:2008. American
+Welding Society, 4th edition, 2008.
+12. "Proper Brazing Procedure." Lucas MilHaupt. Lucas MilHaupt. Web. 04 Dec. 2016.
+13. "718." Rolled Alloys, Inc. Web. 07 Dec. 2016.
+14. "A-286." Rolled Alloys, Inc. Web. 07 Dec. 2016.
+15. Brady, George S., and Henry R. Clauser. Materials Handbook. 13th ed. New York: McGraw Hill,
+1991. Print.
+16. "Inconel." CHEMEUROPE.com. CHEMIE.DE Information Service, 2016. Web. 05 Dec. 2016.
+17. Cicco, H. De, M.i Luppo, L.m Gribaudo, and J. Ovejero-GarcÌa. "Microstructural Development and
+Creep Behavior in A286 Superalloy." Materials Characterization 52.2 (2004): 85-92. Web.
+18. "Brazing Alloys, Solders and Fluxes." TSI Technologies. Web. 05 Dec. 2016.
+19. Jacobson, David M., and Giles Humpston. Principles of Brazing. Materials Park, NY: ASM
+International, 2005. Print.
+20. "Silver Spot Prices & Charts." JM Bullion. 28 Oct. 2016. Web. 04 Dec. 2016.
+21. "US Copper Coin Melt Values." US Copper Coin Melt Values. USA Coin Book. Web. 04 Dec. 2016.
+22. "Gold Prices Today." APMEX. Web. 04 Dec. 2016.
+23. "Nickel Prices." InvestmentMine. 01 Dec. 2016. Web. 05 Dec. 2016.
+24. Weinstein, Michael. "How to Choose Nickel-Based Filler Metals for Vacuum Brazing." Welding
+Journal (2009): n. pag. Web.
+25. "Iron-Nickel Phase Diagram." Phase Diagrams. Computational Thermodynamics, n.d. Web. 09 Dec.
+2016.
+26. "High Temperature Nickel Alloys: Prince & Izant." High Temperature Nickel Alloys: Prince & Izant |
+The Prince & Izant Companies. Prince Izant Company, n.d. Web. 06 Feb. 2017.
+27. "AMS 4776." The Prince & Izant Companies. N.p., n.d. Web. 08 Feb. 2017.
+28. "AMS 4777." The Prince & Izant Companies. N.p., n.d. Web. 08 Feb. 2017.
+38
+
+29. "AMS 4778." The Prince & Izant Companies. N.p., n.d. Web. 08 Feb. 2017.
+30. "Brazement Design and Drafting Room Practice." ASM Handbook. Vol. 6. Materials Park: ASM
+International, 1993. ASM Handbooks Online. ASM International. Web. 4 Dec. 2016.
+31. "Brazing." Fundamentals of Professional Welding. Free Education. Web. 07 Dec. 2016.
+32. Henson, Bob. "How Brazing Works." The Harris Products Group. Web. 05 Dec. 2016.
+33. "Brazing Services." Atmosphere Brazing. Franklin Brazing and Metal Treating, n.d. Web.
+34. Kles, Keren. "Contact Angles." Chemistry LibreTexts. UCD, 21 July 2016. Web. 05 Dec. 2016.
+35. Stave, Jean. "Wetting and Contact Angle." Teach Engineering. Web. 05 Dec. 2016.
+36. "Brazing and Soldering." Frequently Asked Questions. Bellman Melcor. Web. 05 Dec. 2016.
+37. Kay, Dan. "Joint-Strength vs. Joint-Clearance." Vacaero. 05 Apr. 2016. Web. 05 Dec. 2016.
+38. Kohl, Walter H. Handbook of Materials and Techniques for Vacuum Devices. New York: Reinhold,
+1967. Print.
+39. Schwartz, M. Brazing: For the Engineering Technologist. London: Chapman & Hall, 1995. Print.
+40. Kay, Dan. "Eutectics." Vac Aero. 05 Apr. 2016. Web. 07 Dec. 2016.
+41. "Liquidus vs. Solidus." Lucas Milhaupt. 26 Mar. 2014. Web. 07 Dec. 2016.
+42. "Nondestructive Inspection of Weldments, Brazed Assemblies, and Soldered Joints." ASM Handbook.
+Vol. 17. Materials Park: ASM International, 1993. ASM Handbooks Online. ASM International.
+Web. 4 Dec. 2016.
+43. “Standard Test Methods for Tension Testing of Metallic Materials.” ASTM E8/E8M-16A. ASTM
+International Standards Worldwide, 2015.
+44. Chen, Yunxia, Haichao Cui, Binfeng Lu, and Fenggui Lu. "The Microstructural Evolution of Vacuum
+Brazed 1Cr18Ni9Ti Using Various Filler Metals." Materials 10.4 (2017): 385. Web. 30 May
+2017.
+
+39
+
+

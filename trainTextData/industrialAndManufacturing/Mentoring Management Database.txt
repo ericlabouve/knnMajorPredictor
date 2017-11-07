@@ -1,0 +1,519 @@
+MENTORING MANAGEMENT DATABASE
+by
+Alexandra Cava
+Samantha Kin
+
+A Senior Project submitted
+In Partial Fulfillment
+of the Requirements for the Degree of
+Bachelor of Science in Industrial Engineering
+
+California Polytechnic State University
+San Luis Obispo
+
+Graded by:______________ Date of Submission__________________________
+Checked by:_____________ Approved by:_____________________________
+
+Abstract
+A new mentoring program is set to begin next year pairing children from Kindergarten
+through 12th grade with college students as their mentors. Keeping track of the mentor
+information, mentee information, pairings, stipend disbursements, interview question results,
+events, and final assessments by hand would be extremely difficult, therefore, a database would
+be a great asset to the program.
+Creating a database in Microsoft Access allows a user to have all this information in one
+convenient location, therefore, ensuring there is a good user interface is a key component to
+this project. Using Perach’s “Guide to the Perplexed” as the base information for the program,
+the database is modeled to include the necessary interview results and post-mentoring
+assessments outlined in the guide. Furthermore, the type of program includes mentor stipends
+and encourages other events to be held besides strictly one-on-one mentoring time which
+needs to be kept track of well. Designing these forms and tables requires the information to be
+easily recordable and accessible. After every milestone or significant revision, the database was
+reviewed with the client to ensure her satisfaction since she will likely be the sole or co-user.
+Ultimately, the database was a success by being straightforward, user-friendly, and
+including all necessary capabilities. Naturally, there are concerns of the durability of the
+database over time and Access only being designed for one user, but this can be assessed over
+time and use of the database after a round of the mentoring program has been completed.
+
+TABLE OF CONTENTS
+Page
+LIST OF FIGURES ……………………………………………………………....
+
+1
+
+I.
+
+Introduction ………………………………………………………………...
+
+2
+
+II.
+
+Literature Review ………………………………………………………..…
+
+3
+
+III.
+
+Design (or Theory)……………………………………………………….…
+
+9
+
+IV.
+
+Methodology ……………………………………………………………….
+
+21
+
+V.
+
+Results ………………………………………………………………….…..
+
+21
+
+VI.
+
+Conclusion ………………………………………………………….………
+
+23
+
+REFERENCES (or BIBLIOGRAPHY)……………………………………….……
+
+25
+
+LIST OF FIGURES
+Figure
+
+Page
+
+Figure 1…………………………………………………………………….……………
+
+10
+
+Figure 2…………………………………………………………………….……………
+
+11
+
+Figure 3…………………………………………………………………….……………
+
+11
+
+Figure 4…………………………………………………………………….……………
+
+12
+
+Figure 5…………………………………………………………………….……………
+
+12
+
+Figure 6…………………………………………………………………….……………
+
+13
+
+Figure 7…………………………………………………………………….……………
+
+13
+
+Figure 8…………………………………………………………………….……………
+
+14
+
+Figure 9…………………………………………………………………….……………
+
+14
+
+Figure 10…………………………………………………………………….…………… 15
+Figure 11…………………………………………………………………….…………… 15
+Figure 12…………………………………………………………………….…………… 16
+Figure 13…………………………………………………………………….…………… 16
+Figure 14…………………………………………………………………….…………… 17
+Figure 15…………………………………………………………………….…………… 18
+Figure 16…………………………………………………………………….…………… 19
+Figure 17…………………………………………………………………….…………… 20
+Figure 18…………………………………………………………………….…………… 20
+
+I. Introduction
+The Perach Tutorial Project is a mentoring program that originated in Israel in 1974,
+pairing underprivileged children in Kindergarten to 12th grade with university students as their
+mentors. The guidance that these children receive from their tutor ultimately helps them realize
+their potential and increase their intrinsic motivation. The subject of this report describes how
+Microsoft Access was used to design a database for management of U.S. mentoring programs
+similar in structure to Perach. The target mentoring programs are that of Kindergarten to 12th
+grade students that are mentored by college students in an effort to improve the children’s
+current performance in school. In order to run the mentoring programs smoothly, administrators
+need a way to efficiently manage and keep an accurate track of all relevant information. The
+objectives of this project are to create a database that will allow the user to:
+●
+
+Input and edit all mentor and mentee information
+
+●
+
+Monitor stipends, survey results, events, interview responses, expenses, and mentoring
+progress
+Conducive to developing a user-friendly database, all knowledge and skills regarding
+
+Microsoft Access gained in “IME 312: Data Management and System Design” was reviewed
+extensively. Additional research was also done on existing mentoring programs in order to
+develop a concrete understanding of all the elements needed in the final design of the
+database. The primary problem solving methodology used in this project was trial and error due
+to the nature of creating databases via Access. The database was constantly evaluated and
+modified to fit the guidelines and goals of mentoring programs such as Perach. The remainder
+of the report will thoroughly detail each milestone made in arriving to our final database design.
+
+II. Background
+Mentor management databases are used in a variety of mentoring programs. Large
+national organizations, such as Big Brothers Big Sisters, would not be able to operate without a
+database to keep track of their programs and the people in these programs. Software products
+like American Learns supports a variety of companies and organizations that have different
+needs anywhere from small community to nation-wide organizations such as AmeriCorps.
+Innovative Mentoring is another company that offers a customizable software package based on
+the need of the customer and boasts that their software products are based on proven tactics
+for the success of mentoring programs.
+Perach’s “Guide to the Perplexed” is the document that will be used to set up the
+mentoring program for the Atascadero Fine Arts Academy. According to the guide, the goal for
+the mentee is to establish a connection with the mentor in order to foster self-esteem, solidify
+academics and achievements, and inspire the children in regards to their future. Additional
+benefits for the community and general society includes more supported youth, more effective
+educations, and increased happiness. Furthermore, establishing good relationships with the
+school, principals, parents, and teachers as well as having interviews with key stakeholders
+including the children is key for a successful foundation.
+Literature Review
+The literature review regarding the creation of a mentoring management database has
+two significant parts. The first discusses the psychology behind youth mentoring and how it
+relates to the design of the database. The second part discusses the steps in making a
+database user-friendly and the importance of doing so.
+
+Psychology of Youth Mentoring
+Over the years, mentoring has increased in popularity due to the decreases in support
+via family. Mentoring is a less-intensive alternative to therapy and other more serious measures,
+and it provides a variety of benefits simultaneously that cannot be achieved effectively
+otherwise. As mentoring programs have grown in popularity, there has been an increasingly
+wide breadth of what mentorship includes. That being said, it is important to have a definition in
+order to measure and lie out expectations so long-term goals can be met (Situational Mentor xvxvi).
+Mentoring programs are often initiated or developed with the hopes of benefitting the
+mentee, however, mentoring has proved to be a mutual relationship benefitting both the mentor
+and the mentee as the two often gain valuable knowledge from one another. In today’s age of
+mentoring, mentors and mentees are encouraged to establish a collaborative relationship with a
+constant focus on reflection. Topics to reflect on include progress made towards a goal,
+continuation of the learning process, and achievements made thus far. Along with an openness
+and willingness to learn, reflection allows both partners in the relationship to inherit new skills
+that they might not have acquired otherwise (Trepanier-Street, 2007).
+In developing a mentoring program, the description of the program needs to be clearly
+articulated and it must express the issues it wishes to solve with the relationships formed. In
+addition, with a structured curriculum, any change in knowledge or skills can be seen as a
+measured, positive impact (DuBois & Karcher, 2005).
+Mentoring children has its advantages over mentoring an adolescent or teenager. Since
+children are less likely to have already experienced any serious risks or trauma in their young
+lives, mentors have a greater chance of providing a greater preventive impact than with an
+adolescent. In addition, mentors can often help guide children through key transition stages in
+their lives, however, the child’s lack of verbal and cognitive abilities could also inhibit them from
+fully benefiting from the experience and relationship (DuBois & Karcher, 2005). As for the
+
+mentor, working with young children results in an increased knowledge and understanding of
+child development and proper developmental practices in education (Trepanier-Street, 2007).
+Several studies have been conducted to investigate the best conditions for a successful
+mentoring relationship. A study done in 1997 by Stein showed that longer mentoring
+relationships established with adults as mentors had more positive outcomes due to the ongoing
+nature of the relationship. Another study done by Grossman and Rhodes in 2002 exhibited that
+mentoring lasting a year or more had more academic, psychosocial and behavioral outcomes
+while relationships ending too soon concluded in a lower perceived academic competence and
+lower valued self-worth for the mentee (DuBois & Karcher, 2005).
+A recent mentoring program, Jumpstart, paired young children with college students. At
+both the start and the end of the program, the mentors were asked to complete a survey that
+questioned them on their knowledge of childhood development. The responses that were made
+at the end of the program showed a significant gain in knowledge and understanding in various
+areas in comparison to the responses given before the mentoring began. After working in the
+Jumpstart program, more than half of college mentors indicated that the experience had helped
+them academically and several expressed an interest in pursuing a career in education or their
+preexisting interest was reinforced. Overall, the program demonstrated that children had a
+positive impact on the college students in a personal and professional aspect. The mentors
+expressed the development of leadership, communication, and teamwork skills along with an
+understanding and respect for others as a result of the program (Trepanier-Street, 2007).
+Surveys, like those given in the Jumpstart program, are extremely crucial in assessing
+the effectiveness of a mentoring program. A software catered to carrying out the functionalities
+of a mentoring program needs to be able to record any interview and survey information, along
+with a place to record direct observations as well. In order to measure a mentee’s progress
+accurately, the database should allow for standardized ratings to be recorded by the user from
+
+parents, teachers, peers, mentors, and mentees. Observational coding systems could also be
+another way of assessing a change in a child’s affective responses (DuBois & Karcher, 2005).
+The Perach Tutorial Project incorporates several of the principles that have been found
+to be most effective in child mentoring which is why the program has been known to be so
+successful. It was started by Dr. Rony Attar and Amos Carmelli in Israel in 1974 and has since
+spread to about 20 other countries worldwide and is the largest organization of its kind in the
+world (The Perach Tutorial Project). Underprivileged children are able to grow academically and
+socially through a compassionate relationship with their personal mentor; in contrast, the
+university students gain a desire to work towards reducing social gaps and receive an incentive
+for their time and dedication that can be put towards their college tuition (Rehovot, 2008).
+Creating a User-Friendly Database
+Databases are widely used throughout mentoring programs. Different companies need
+different levels of database functionality. MENTOR offers a database called MentorCore with 3
+target audiences: Youth, Higher Education, and Workplace mentoring. The youth and higher
+education editions have four price points depending on the number of mentors and mentees in
+the system. The lowest level is $75/month for 100 matches. InnovativeMentoring simply has
+three tiers of their software packages based on size of the program and how many functions the
+customers want access to. The lowest level has a setup fee of $200, a monthly cost of $25, and
+includes some of the follow features: 1-5 users, unlimited matches, customization, mass email,
+training, and support. However, this option does not include surveys like the tier two option
+does. Assessing these costs and options helps narrow down features to include and what
+applications to consider.
+Several programs currently exist that could be used in building a database, but it should
+be noted that spreadsheet programs, like Microsoft Excel, have a lot of room for potential error
+due to the fact that all data must be manually tabbed through using arrow keys. In addition, only
+
+about 20 variables can be seen at a time on a spreadsheet program which could be another
+possible cause for error during scrolling or reorientation. Microsoft Access eliminates these
+potential causes for error by allowing automatic tabbing from one variable to the next and
+through its format design which allows all variables to be seen on the screen at the same time
+(Schneider, Schneider, & Laurenz, 2005). Therefore, Microsoft Access was the database
+management system application chosen due to the increased functionality compared to Excel
+and the simplicity. A standalone version of Microsoft Access, not a part of a suite package as it
+has typically been in the past, is valued at $109.99 according to the Microsoft website. However,
+the California Polytechnic State University, San Luis Obispo licenses the program, so there
+were no costs accrued in making the database.
+In creating any database, it is extremely essential that a plan is set in place that outlines
+the desired functions and capabilities of the database before first diving straight into Microsoft
+Access. Making a plan will save time and will help easily outline the tables and forms needed
+and how each data field will need to relate. When drafting the plan, the future user of the
+database should always be kept in mind, along with the tasks they will need to perform. By
+doing so, the creator of the database will be able to determine just how user-friendly it needs to
+be (Black & Vernetti, 2015).
+There are three major components in creating a database through Microsoft Access:
+tables, queries, and forms. All data in Access is stored in tables, which are formatted as
+spreadsheets. Often times, each table will possess a primary key, which identifies each record
+in the table by a unique value. This is important because repeating groups of data within a table
+can create null values (Black & Vernetti, 2015). By setting a primary key, it will be impossible for
+any duplicate data within that field to be entered into the table (Schneider, Schneider, &
+Laurenz, 2005). Lastly, there are two relationships between tables: one-to-one and one-tomany. A one-to-one relationship relates two separate tables by joining the same exact field in
+each one while a one-to-many relationship relates two separate tables by connecting the
+
+primary field in one table to a field in another table that is not a primary key and therefore can
+have multiple values (Black & Vernetti, 2015).
+A query in Microsoft Access pulls together specific records from one or more tables and
+consolidates all of them information onto a single datasheet. Queries are extremely useful
+because they allow the user to view only the fields he or she is interested in analyzing within a
+given table. In addition, append queries, a specific type of query, make data entry easier by
+facilitating edits made to specific data tables without ever having to open the table itself (Black &
+Vernetti, 2015).
+Lastly, a form is used to create the user interface within Access and often has black
+spaces open for entering and modifying data (Schneider, Schneider, & Laurenz, 2005). A form
+is extremely essential because it allows the user to enter new information into previously
+created tables (Black & Vernetti, 2005). Luckily, Microsoft Access makes it fairly simple to make
+a form user-friendly by allowing automatic tabbing from field to field and record to record. In
+addition, the Form Wizard allows users to format the layout so that all data fields can be placed
+on the same screen and to change the background, color, or font of the form (Schneider,
+Schneider, & Laurenz, 2005).
+
+III. Design
+Requirements, Specifications, & Constraints
+The purpose of the database is to keep track of and easily manage a variety of data.
+This includes personal information for both mentors and mentees, mentor tuberculosis test and
+fingerprinting dates, pairings, meeting dates and times, stipend amounts and disbursement
+information, event details, interview question responses, and end-of-program assessments.
+Creating a user-friendly way of organizing and interacting with this data will allow administrators
+to have a more successful mentoring program and run it more smoothly. Using the Perach’s
+“Guide to the Perplexed” gives further insight as to the specific goals and methods of the
+program. Using this document further assists in outlining what to include in the database and
+especially the forms where data is input.
+A major constraint for this project is the lack of a multi-user database. By using Access,
+only one user can input or utilize the data at a time, and sharing the file would require either a
+cloud drive or other method such as email or dropbox. This can be highly inconvenient if, for
+example, multiple coordinators of the program wanted to access and edit the data
+simultaneously in preparation for an event.
+User-Interface Design
+The user-interface is such an important aspect of the design because a poorly designed
+user-interface will only result in confusion and frustration for the user. Therefore, for the
+database to be fully functional, it must be user-friendly. The program coordinator plans on being
+able to carry out several operations through the database. These operations include inputting
+new mentors and mentees, pairing mentors and mentees, recording interview questions, and
+recording stipends, to name a few. For this reason, it was best to incorporate a main form that
+opens automatically each time the database is opened by the user. The main form has buttons
+
+linking to each of the operations, which in turn all have their own separate form with a button
+linking back to the main form. This will make it extremely useful for the user to navigate from
+operation to operation. A screenshot of the main form can be seen in Figure 1.
+
+Figure 1: Main Form
+The individual forms that were included were “Add New Mentee”, “Add New Mentor”, “Add
+Mentor TB & Fingerprinting”, “Pair Mentor & Mentee”, “Mentor Interview Questions”, “Record
+Stipends”, “Record Events”, “Record “Activities”, “Record Incident”, “Mentor Experience
+Assessment” and “Assessment of Mentee” for mentors, teachers, and parents (Figures xx - xx).
+
+Figure 2: Add Mentee Form
+
+Figure 3: Add Mentor Form
+
+Figure 4: Mentor TB Test and Fingerprinting Dates Form
+
+Figure 5: Pairing Form
+
+Figure 6: Mentor Interview Questions Form
+
+Figure 7: Stipend Disbursement Form
+
+Figure 8: Events Form
+
+Figure 9: Activity Form
+
+Figure 10: Incident Form
+
+Figure 11: Mentor Experience Assessment Form
+
+Figure 12: Mentor Assessment of Mentee Form
+
+Figure 13: Teacher Assessment of Mentee Form
+
+Figure 14: Parent Assessment of Mentee Form
+For each of the individual forms, drop-down menus and date pickers were incorporated
+wherever possible to spare the user from having to type things in manually each time. In
+addition, the format, background, and font of each form was made to be aesthetically-pleasing
+to the user’s eye to give the user additional ease in using the database.
+Database Design
+After establishing a solid understanding of the client’s wants and requirements for the
+database, all of the tables, queries, and their corresponding relationships were strategically
+planned out with one another within Microsoft Access. Tables were quickly made to record basic
+mentor and mentee information, interview questions responses, TB test and fingerprinting
+dates, and a table that would hold all the pairings in the program. Tables were also made to
+record stipends, events, expenses, and incidents as each of these has a corresponding form to
+go along with it in the database. Figures 15 and 16 below are screenshots of the MENTORS
+
+and STIPEND tables. The MENTORS table has 5 different fields: ID, LastName, FirstName,
+PhoneNumber, and Email, with the primary key being ID. The STIPEND table has 4 different
+fields: MentorName, IssueDate, IssuedAmount, and CheckNumber, with the primary key being
+CheckNumber. Each mentor is given an autonumber from ID, ensuring that each ID is only used
+once. CheckNumber is used as the primary key for the STIPEND table so that multiple stipends
+for a particular mentor can be added but the same check number can never be duplicated.
+
+Figure 15: MENTORS Table
+
+Figure 16: STIPEND Table
+Queries were made to create concatenated expressions of first and last names of all the
+students so that their names could be found more easily in a drop-down menu within a form.
+Append and update queries were also made to help add new information and edit any pre
+existing information within the table so that the user does not have to enter the table and edit or
+delete the record manually. See Figure 17 and 18 below.
+
+Figure 17: Activities Append Query
+
+Figure 18: Add Mentee Update Query
+
+IV. Methodology
+The method to designing the database was based off of the client-provided documents,
+background, and information regarding the mentoring program. This mostly entailed following
+Perach’s “Guide to the Perplexed” in order to describe the goals of the program and where the
+database fits in with accomplishing these goals. Design and details of what to include were up
+for more personal interpretation while consulting our client during the process.
+Creating the database did not have a specific procedural method since databases are
+custom-designed for the client and purpose. Researching how to design a good user interface
+and thinking of the client’s purpose for the database were the motivations for creating the
+database as it is. The database and contents were reviewed with the client at each milestone to
+ensure functionality and ease of use as well as to confirm all necessary mentoring program
+information can be stored.
+An example of how the database was made user-friendly, practical, and functional is
+adding an edit feature for adding mentors and mentees. If there is an update in information or a
+misspelling, the user can easily select the entry from the subform, edit the information in the
+populated text boxes, and click update.
+
+V. Results & Discussion
+The results from the final design of the database were as expected, considering that the
+design was customized every step of the way with the client in mind. The methodology used to
+carry out the project allowed the design to be executed perfectly. The overall design of the
+database is fairly complex while still offering a simple and appealing interface; it allows the user
+to easily manage data and carry out any operations that may need to be done as a coordinator
+of a mentoring program.
+
+The database created saves mentoring program coordinators a considerable amount of
+time. Instead of digging through emails and notes, all the necessary information can be easily
+input and recalled with the simple user interface. Given the benefits our software package has
+to offer, the level of simplicity, and the minimal upkeep, the Access-based mentoring
+management database created has an assessed value of $100 flat-rate cost plus a $10 monthly
+fee for customer assistance and other ongoing upkeep.
+Any quality expectations discussed at the beginning of the project were easy to meet
+with the final design of the database as it was very clear what the client wanted. Anything not
+meeting her expectations or any faulty operations in the database would have been seen as
+poor quality, therefore, it was ensured that everything worked correctly. Productivity was also
+consistently on track as both deadlines set by the advisor and self-created deadlines were met
+as a team. The final design of the database adhered very closely to the original plans for the
+design, so nothing in that section would need to be changed quite yet in regards to the results.
+Though some minor issues arose during the creation of the database, no unusual
+conditions were present as this was to be somewhat expected due to Microsoft Access’s
+sensitive nature. In addition, no results were particularly difficult to interpret as the results are
+mainly subjective observations. An issue that continues to somewhat remain unanswered is the
+idea of multiple users for the database. More research would need to be conducted regarding
+the implementation of a different software or an additional program that could update the file
+consistently via the internet.
+Though the program coordinator had no current way of recording all of the data she
+needed as the mentoring program had not yet begun, it is safe to assume that the database
+would save her a significant amount of time than if she were to use Microsoft Excel to manage
+all of the data. However, the use of the design should be somewhat limited until the database
+
+has been used for a full cycle of the mentoring program. After those 18 weeks, some issues
+may arise where a query may not run correctly or a realization is made that some components
+to the mentoring program are missing. Upon the arrival of these issues, adjustments will need to
+be made accordingly and operations will need to be added or slightly modified.
+
+VI. Conclusion
+Before the start of this project, the client needed a way of efficiently managing
+information for her future mentoring program. For this reason, the overall objectives were to
+create a database that would allow its user to input and update all mentor and mentee
+information and monitor stipends, survey results, events, interview responses, expenses, and
+mentoring assessments. The primary methodology used in approaching a solution to this
+problem was trial and error; countless versions of a database were created to ensure that the
+final design would possess all the needs and desires of the client. As a result, the final design of
+the database incorporated:
+●
+
+A simple and user-friendly interface to navigate between countless mentoring
+coordinator operations
+
+●
+
+The ability to carry out all tasks that were addressed by the client with ease
+
+●
+
+Fully functioning tables capable of holding all mentoring data
+The project was very successful as each objective was achieved and the program
+
+coordinator was very pleased with the final design of the database. More importantly, she now
+has a way of accurately and efficiently monitoring all of the information for her mentoring
+program.
+Overall, the project team learned that there is a lot of psychology behind the concept of
+youth mentoring and it was very important to understand those theories and information before
+
+proceeding with the design of the database. In addition, it was reinforced that trial and error was
+a useful methodology to use in regards to reaching a solution to the problem using Microsoft
+Access. Next time, the team would like to further research a way to make the database
+accessible by multiple users from different computers while still accurately updating and
+maintaining all of the information. Based on the findings, the team would recommend that the
+database be updated after being in use for one full cycle of the mentoring program, as the
+coordinator may wish to add specific operations or change any form or table layouts.
+
+REFERENCES
+Buy Microsoft Access 2016 - Microsoft Store. Microsoft Store. N.p., n.d. Web. 01 June 2016.
+Black, N. H., & Vernetti, B. J. (2015). Root-cause analysis: Creating & utilizing a functional
+database. Professional Safety, 60(2), 60-62. Web. 1 Mar. 2016.
+DuBois, David L., and Michael J. Karcher. "Mentoring Children." Handbook of Youth Mentoring.
+Thousand Oaks, CA: Sage Publications, 2005. N. pag. Print.
+Dubois, David L., Nelson Portillo, Jean E. Rhodes, Naida Silverthorn, and Jeffrey C. Valentine.
+"How Effective Are Mentoring Programs for Youth? A Systematic Assessment of the
+Evidence." Psychological Science in the Public Interest 12.2 (2011): 57-91. Web. 2 Feb.
+2016.
+Garringer, Michael, and Patti MacRae. Foundations of Successful Youth Mentoring. Portland:
+National Mentoring Center, 2008. Print.
+MentorCore Program Management Software. MENTOR. N.p., n.d. Web. 01 June 2016.
+Mentoring Software Pricing. Innovative Mentoring Software. N.p., n.d. Web. 01 June 2016.
+Rehovot. Perach's Guide to the Perplexed N.p.: n.p., 2008. Print.
+Situational Mentor. Abingdon, GB: Gower, 2012. ProQuest ebrary. Web. 2 February 2016.
+"Six Ways to Measure Mentoring - TALENT MANAGEMENT." Talent Management. Human
+Capital Media, 08 Apr. 2013. Web. 14 May 2016.
+Schneider, Joanne Kraenzle, Joseph F. Schneider, and Rebecca A. Lorenz. "Creating userfriendly databases with Microsoft Access." Nurse Researcher 13.1 (2005): 57+.
+Academic OneFile. Web. 1 Mar. 2016.
+The Perach Tutorial Project. ‫דף הבית‬. N.p., n.d. Web. 12 March 2016.
+Trepanier-Street, Mary. "Mentoring young children: impact on college students." Childhood
+Education 84.1 (2007): 15+. Academic OneFile. Web. 1 Mar. 2016.
+Ueno, Nachi, Ryota Hashimoto, Hisaharu Ishii, Hiroyuki Makino, and Yuzuru Kitayama. "Filterbased Access Control Model: Exploring A More Usable Database Management."
+Proceedings of the 4th Symposium on Computer Human Interaction for the Management
+of Information Technology - CHiMiT '10 (2010): n. pag. Web. 2 Feb. 2016.
+
+

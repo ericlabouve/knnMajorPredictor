@@ -1,0 +1,1083 @@
+WIRELESS CHARGING FOR BLUETOOTH EARPHONES
+
+by:
+Daniel Carlson
+
+Advisor: Taufik
+
+Senior Project
+
+ELECTRICAL ENGINEERING DEPARTMENT
+
+California Polytechnic State University
+
+San Luis Obispo
+
+May 2017
+
+Table of Contents
+
+Section
+
+Page
+
+List of Tables and Figures……………………………………………………………………........2
+Abstract…………………………………………………………………………………................4
+I.
+
+Introduction……………………………………………………………………………5
+
+II.
+
+Background……………………………..……………………………………………..8
+
+III.
+
+Design Requirements…………………………..…………...………………………..12
+
+IV.
+
+Design and Simulation Results………………………………………………………16
+
+V.
+
+Hardware and Test Results...…………………………………………………….......22
+
+VI.
+
+Conclusion…………………………………………………………………………...35
+
+Appendices
+A. References…………………………………………………………………………………….37
+B. Analysis of Senior Project Design……………………………………………………………38
+
+1
+
+List of Tables and Figures
+
+Title
+
+Page
+
+Tables
+3-1: Wireless Earphone Charger Requirements and Specifications……………………………..15
+5-1: Raw Efficiency Data………………………………………………………………………...24
+B-1: Bill of Materials…………………………………………………………………………….39
+
+Figures
+1-1: Wireless Charging Concept…………………………………………………………………..6
+2-1: Global Headphone Sales……………………………………………………………………...9
+3-1: Level 0 Block Diagram……………………………………………………………………..12
+3-2: Level 1 Block Diagram……………………………………………………………………..13
+4-1: Stereo Bluetooth Headset V4.1……………………………………………………………..17
+4-2: Transmitter and Receiver Circuitry…………………………………………………………17
+4-3: Expected Efficiency vs Current for 1W Coil……………………………………………….20
+5-1: Transmitter and Receiver PCBs before Efficiency Testing………………………………...22
+
+2
+
+5-2: Side View of Tx and Rx PCBs with View of Coil Spacing………………………………...23
+5-3: Lab Test Setup for Efficiency Measurements………………………………………………23
+5-4: Measured Efficiency vs Current for 1W Coil (coil spacing: 1.5mm)………………………25
+5-5: Micro-USB Charging Port on Headphones…………………………………………………26
+5-6: “Under the Hood” of the Headphones………………………………………………………26
+5-7: Wireless Power Receiver PCB with 1W Coil Attached………………………………….....27
+5-8: Receiver Circuitry Interface with Headphones……………………………………………..28
+5-9: Headset with Receiver Attached……………………………………………………………28
+5-10: Bottom Half of Base Station……………………………………………………………….29
+5-11: Top Half of Base Station…………………………………………………………………..30
+5-12: Top View of Base Station………………………………………………………………….31
+5-13: Base Station Assembly………………………………………………………………….....32
+5-14: 3-D Printed Base Station Parts…………………………………………………………….32
+5-15: Base Station with Transmitter Circuitry Installed…………………………………………33
+5-16: Headphones being Charged by Base Station………………………………………………34
+
+3
+
+Abstract
+
+This project involves designing and building an inductive charging system for Bluetooth
+earphones. This system provides a charging dock for a pair of retrofitted Bluetooth earphones
+and focuses on ease-of-use and convenience for the user. The motivations for this project include
+providing charging compatibility to changing audio technology and trends. Smart phones and
+other audio products are increasingly leaning towards wireless (Bluetooth) audio, and wireless
+headphones/headsets are naturally becoming more prevalent to match this trend. A small, easy to
+use, and efficient charging dock for these earphones seems like a necessary accessory for this
+technology to seem attractive to consumers. The end-product includes a charging station along a
+pair of headphones with a receiver coil and necessary receiver circuitry installed. The charging
+station is designed using SolidWorks and 3D printed to both house the transmitter circuitry as
+well as provide a platform for the headphones to be placed on.
+
+4
+
+Chapter 1: Introduction
+
+In the past several decades, society has seen advances in technology unmatched by any
+other time in history. With these advances comes changes to people’s lifestyles, namely in the
+things they buy. With technology being capable of so much, people are relying on it more and
+more in their everyday life. The result is the massive and growing market of consumer
+electronics. Companies are selling products that range from communication to entertainment to
+navigation to fitness monitoring to music to sleep monitoring. The list can go on and on. In many
+cases, it is favorable (or even vital) for these products to be portable and/or wireless. For
+example, only 35% of Americans owned a smart phone in 2011. As of 2015, that number rose to
+64% [1].
+As portable consumer electronics get more advanced, they require more power supplied
+to their components. This results in the use of components and batteries that are designed to be
+highly efficient. Lithium ion batteries are the current leading battery technology, primarily for
+their ability to hold a large amount of charge per unit volume. Volumetric energy density for Li
+Ion batteries ranges from 250 to 620 W*h/L, as compared to 60 to 110 W*h/L for lead-acid
+batteries [2]. A major customer requirement for most portable electronic devices is battery life.
+But no matter how efficient the battery, the device will always need to be recharged at some
+point. Traditionally, this means plugging the device into a wall outlet or other power source and
+waiting for the charging process to complete.
+Advancements made to traditional charging have included portable battery packs, solar
+chargers, and charge ports that use inductive coupling to charge devices. Inductive charging is a
+method that is fairly new to the market, and it is the most unique out of any charging method
+5
+
+because it does not require any wires. This charging method is being seen more and more on the
+market because of the popularity of mobile devices needing to be charged. The core concept of
+the technology has been around for a while. For example, electronic toothbrushes made by the
+Braun company have used inductive charging since the early 1990’s [3]. Figure 1-1 provides a
+basic diagram showing how wireless power transfer works on a high level. The receiver device
+does not need to contact the charger at all, although power transmission efficiency decreases as
+distance increases. A more detailed description will be given later in the report on the operation
+of wireless charging.
+
+Figure 1-1: Wireless Charging Concept [4]
+
+This method involves placing a device within close proximity (usually on top of) a
+charging port/station. Without the need for any wires, power is transferred over the air. This
+entails several advantages, the most notable being convenience. Another advantage is that
+electronic devices can be hermetically sealed, meaning no risk of connector damage/failure. The
+possibilities of wireless charging are extensive, and are only beginning to be explored. The
+technology has applications ranging from consumer electronics to electric vehicles to
+6
+
+commercial/industrial systems. The leading standard for wireless charging is QI, which is
+developed by the Wireless Power Consortium and is used in over 900 products worldwide [4].
+
+7
+
+Chapter 2: Background
+
+The technology of inductive charging is not without its disadvantages, however. Most
+notably, charging efficiency is less than that of charging with a wire. With an ideal wire,
+charging efficiency would be 100%. When transmitting power wirelessly, efficiency will be
+significantly reduced, resulting in slower charging times. Another disadvantage is the system’s
+higher cost; extra electronics are required in transmitter and receiver, increasing complexity and
+manufacturing cost [1]. These disadvantages are important to consider because they can help
+identify which applications are right for wireless charging. In some cases, inductive charging is a
+clear winner over using a wire. In general, systems in which wireless charging is the appropriate
+method involve a portable device, such as a mobile phone or tablet. If a device is not portable,
+then there would be no disadvantage of keeping it plugged in with a cord.
+The power involved in charging earphones is small, so efficiency is not a key concern.
+Also, wireless earphones are such small devices that plugging a wire into them would be a
+hassle. For these reasons, wireless charging seems to be a proper fit for this application. In the
+market for headphones and earbuds, the trend of wires and cords is disappearing. These devices
+are becoming increasingly wire-free, which presents the problem of how these products will be
+charged. My project is an attempt to maintain this trend, making a simple, easy, and wire-free
+method to charge wireless earphones. The headset/headphone market has been constantly
+growing and evolving. Figure 2-1 depicts the increasing global sales of all types of
+headphones/headsets over the past few years [5]. Considering that the average American listens
+to just over 4 hours of audio a day [6], along with the fact that Bluetooth headsets are the most
+popular wearable device worldwide, it is convincing that improvements to this technology will
+
+8
+
+be widely beneficial. To continue adapting to customer needs, there are potentials and
+opportunities for improvements in the charging category.
+
+Figure 2-1. Global Headphone Sales [5]
+
+Inductive charging technology has been investigated more and more in recent years, as
+both new applications are explored and the technology itself is improved and optimized.
+Wireless charging is used for portable electronics such as mobile phones, tablets, laptops, and
+wearables. Another popular application is for electric vehicles (EVs). In fact, wireless charging
+for EVs continues to be one of the most researched areas of wireless power transfer [4]. A
+common goal among recent projects to improve this technology is to maximize efficiency.
+Power losses involved in power transfer from one coil to another are a significant downside to
+inductive charging in general. This lowered efficiency could potentially be the reason that wired
+9
+
+charging is chosen over wireless for a particular application. Naturally, there have been many
+attempts to keep this charging method competitive in the market by devising clever ways to
+achieve very high efficiency with inductive power transfer. In an article by the IEEE
+Transactions on Power Electronics, two engineers designed and implemented an inductive
+power transfer system with an efficiency of 87% [7]. This was accomplished by using
+compensating capacitors in both the transmitter and receiver coils in order to control the
+frequency to achieve resonance. Resonance in inductive coupling allows for maximum power
+transfer between coupled inductors.
+This concept of resonance is taken advantage of in most typical usage of inductive
+charging. Nearly every integrated circuit on the market that is part of a wireless power solution
+contains control circuitry that monitors and adjusts the operating frequency in order to maximize
+efficiency. This aims to keep efficiency at its maximum level regardless of the position of the
+receiver coil in relation to the transmitter coil. The QI wireless power standard is conformed to
+by almost every company that sells wireless power products. The QI standard mandates that
+systems have certain communication between the receiver and transmitter. This communication
+ranges from foreign object detection, to initialization, to frequency adjustment [8]. A 2016
+project from the IEEE Transactions on Magnetics [9] involved using multiple other “assistive”
+coils for power transmission, instead of just having two coils. With basic inductive charging
+systems, the highest efficiency point is away from the point of maximum power transfer. This
+project aimed to reach an operating point that yielded high efficiency as well as high output
+power.
+Wireless headphones are becoming increasingly popular, but they still rely on outdated
+charging methods. They still require a wire to charge: typically with a micro-USB cable. The
+10
+
+goal of this project is to apply existing relevant technology of inductive charging to a pair of
+wireless headphones; thus, completely removing the need to use a wire to charge them. A coil
+and charging electronics may be installed onto a pair of headphones, and make them compatible
+with a charging port that will designed and constructed in this project. Another goal of the
+project is to make the charging process effective in terms of the time required to charge and the
+charging efficiency. Lastly, the end product of this project should make the overall wireless
+headphone system convenient and easy to use.
+
+11
+
+Chapter 3. Design Requirements
+
+Level 0 Block Diagram
+The level 0 diagram is a simplified overview of the system. It only contains the main
+inputs and outputs of the system as a whole. The diagram is shown in Figure 3-1. The power
+transmission circuitry (along with transmitter coil) will be located inside of a base station. It will
+get its input via a micro USB cable and will transmit an alternating electromagnetic field that is
+to be picked up by the receiver coil. The receiver coil (along with the receiver electronics) will
+be built into the Bluetooth earphones and will attach directly to the pre-existing charging
+circuitry in the device.
+
+5V
+
+Transmitter
+
+Alternating
+
+Receiver
+
+EM field
+
+Figure 3-1. Level 0 Block Diagram
+
+Level 1 Block Diagram
+Figure 3-2 shows the level 1 block diagram for the transmitter and receiver. This diagram
+includes the main functional blocks of the system. The input to the power charging port will be a
+5VDC micro-USB cable. This cable can come from an adapter from a wall outlet, or from the
+USB port on a computer/laptop. The transmitter converts this DC signal to a high frequency AC
+signal that is applied to a transmitter coil. The output is an alternating electromagnetic field at a
+frequency ranging from 100-200 kHz. This is picked up by a receiver coil built into a pair of
+12
+
+Bluetooth earphones. The receiver circuitry communicates with the transmitter in an effort to
+maximize efficiency. Its output is 5VDC.
+
+Figure 3-2. Level 1 Block Diagram
+
+The LED indicators on the power transmitter have adjustable functionalities. The default
+setting is that both LEDs are off during standby mode, and that the green LED is on during
+power transfer. The red LED will blink only when there is a fault in the system (overtemperature or over-current). The green LED in the receiver blinks when power transfer is
+occurring. The amount of power transferred from the receiver to the transmitter is 1W. This is at
+the very low end of the range of power transmitted in common inductive charging systems. The
+value of 1W was chosen because this allows for the transmitter and receiver coils to be very
+small (transmitter and receiver coils have diameters of 15mm and 12mm, respectively). Having
+small coils will result in a solution that is compact and is minimally noticeable on the
+headphones. The other option considered for power transfer was 2W, but this results in the coils
+
+13
+
+being twice as large. This would charge the headphones twice as fast, but the extra charging
+speed is not as important because the battery size is 85 mAh and will charge fast anyway.
+A major need for a potential customer is that the device is small and easy to use. Also, the
+charging must happen relatively fast. The reason that simplicity and ease of use are so important
+is that this technology will be competing with the traditional earbuds with an audio jack. Since
+charging may seem like a hassle to some users, it is imperative that charging is made to be as
+simple as possible for consumers to favor wireless earbuds over traditional earbuds. Additional
+customer needs are that the charge dock is lightweight and inexpensive.
+The marketing requirements focus on ease of use because this represents the primary
+motivation for customers to use the product. Each engineering specification can be found in
+Table 3-1, with its respective justification and marketing requirement that it adheres to. The first
+two specifications focus on the specific size and weight of the product. The third and fourth
+specifications in the table involve performance. Charging speed and efficiency are highlighted to
+not only conserve power, but also to conform with the customer need of convenience. The
+efficiency goal aims at 50% because this is approximately the expected efficiency for the
+transmitter IC used at for the coil to be used for this project. In wireless power transfer, the
+alignment of the transmitter and receiver coil is very important in achieving the maximum
+possible efficiency. With typical inductive charging systems, the total system efficiency is 60%
+power transferred to the charger. If the losses in the battery charger electronics are also
+considered, the efficiency will be even lower. It is important to note that high efficiency is not
+imperative because of the low amount of power used; losses will be minimal.
+
+14
+
+Each specification in the Table 3-1 describes a particular goal the product aims to achieve. The
+justification column provides the reasoning behind the respective spec.
+
+Table 3-1. Wireless Earphone Charger Requirements and Specifications
+Marketing
+Requirements
+
+Engineering
+Specifications
+
+1, 2
+
+Charging dock is no larger than 3”x2” and 1”
+tall
+
+PCB area for transmitter is only 22x21 mm,
+so it will easily fit. Charging dock should be
+small for convenience and ease of use
+
+Charging dock is no heavier than 7 ounces
+
+Aligns with customer needs. Someone doesn’t
+want to carry around a heavy dock to charge
+earphones.
+
+3
+
+Wireless charging has efficiency of no lower
+than 50%. (efficiency = power transferred to
+earphones / power that enters charging dock)
+
+Necessary for efficient operation and minimal
+power wasted. Since this system will not be
+dissipating large amounts of power, high
+efficiencies are not necessary
+
+4, 6
+
+Earphones can be charged from 0% to 100%
+in less than 45 mins
+
+Charging speed is a key care-about for
+customers.
+
+4
+
+Receiver Electronics output 5V at 200 mA to
+the earphone charger
+
+This will result in relatively fast charging
+
+3
+
+Charging dock has a switch to turn charging
+on and off. LED indicator light will tell the
+user that the dock is outputting EM waves.
+
+This limits wasted power and means that the
+customer does not have to unplug the
+charging dock to make it stop outputting
+
+2, 1
+
+Justification
+
+Marketing Requirements
+1. Small
+2. Light-weight
+3. Power-efficient
+4. Fast-charging
+5. Inexpensive
+6. Convenient and easy to use
+
+15
+
+Chapter 4. Design and Simulation Results
+
+To accomplish the task of interfacing wireless charging with Bluetooth headphones, I
+first had to find an appropriate pair of headphones to work with. Specifically, I was planning on
+using a headphone pair with two earbuds that are attached with a wire, and have a battery located
+in a small compartment somewhere on the wire. I originally considered doing this project on
+Bluetooth earbuds that are not connected with a wire, but I threw out the idea because of how
+much more difficult it would be to interface wireless charging receivers with two separate units
+with their own separate batteries. All the Bluetooth earphones on the market that I’ve seen use a
+micro-USB charger, and their batteries are on the order of 85mAh. My plan was to hook up a
+small receiver coil on the plastic compartment that holds the battery and charging circuitry. This
+coil would then be attached to wireless charging circuitry whose output would go directly to the
+battery-charging electronics in the headphones. Figure 4-1 shows the headphones that will be
+used for this project.
+These headphones are charged via a micro-USB port that provides 150mA at 5 VDC to
+the battery. According to the user manual, they have a charge time of 1.5 hours. They also have a
+blue LED that lights up while the battery is being charged, and a red LED that lights up once
+charging is complete.
+The circuitry to interface with the selected headphones was a pair of PCBs (one receiver
+and one transmitter) utilizing chips made by Integrated Device Technology (IDT). The boards
+work together in tandem to create a wireless power solution for low-power applications (0.5 to
+3W). IDT’s wireless power reference kit (WP3W-RK) [10] consists of the transmitter (P9235AR-EVK) and the receiver (P9027LP-R-EVK) with three different coil size options for different
+16
+
+levels of power transmittal. Figure 4-2 shows both the transmitter PCB (left) and the receiver
+PCB (right). The coils on the boards is the 2W coil, but the kit also comes with 1W and 2W
+coils.
+
+Figure 4-1. Stereo Bluetooth Headset V4.1
+
+Figure 4-2. Transmitter Circuitry (left) and Receiver Circuitry (right). (Quarter for Scale)
+
+17
+
+The smallest coil size is for 1W, and its diameter is 12mm. The next size up is the 2W
+coil, which is 20mm in diameter. The 1W coil was the best option for my project because of how
+little space it will take up on the headphones. The 2W coil could charge the battery twice as fast,
+but its size would cause the coil to stick out on the headphones and be an annoyance. I chose to
+use these boards to build my solution for several reasons. Primarily, they are designed for lowpower applications, which is ideal for charging earphones. The circuitry on the boards is very
+compact, which will allow for a smaller and sleeker final product. The active board space on the
+transmitter board is 22.7mm x 21.2mm, while the active board space on the receiver board is
+only 5.7mm x 5.7mm. The boards have perforations in them so the excess board area can simply
+be snapped off. Additionally, the transmitter and receiver IC’s come with built-in functionality
+that will be very useful in my final product for both usage and safety reasons. These include
+over-temperature and over-current protection as well as LED output pins that indicate charge
+status. Also, the receiver and transmitter communicate with each other to improve their
+performance.
+The IC’s were designed to adhere to QI specifications [8], which outline how wireless
+power transmitters and receivers must function. One of these requirements is communication.
+There are several reasons why this communication is necessary: establishing and initiating a
+connection, maintaining maximum performance, and notifying the other component of a
+fault/error. The power receiver communicates to the power transmitter using backscatter
+modulation. To do this, the Power Receiver modulates the amount of power that it draws from
+the power signal. The transmitter detects this as a modulation of the current through and/or
+voltage across the coil. In other words, the receiver and transmitter use an amplitude modulated
+power signal to provide a Tx-Rx communications channel. The way the transmitter
+18
+
+communicates back to the receiver is by using frequency shift keying, in which the transmitter
+modulates the operating frequency of the power signal.
+One major purpose of receiver-transmitter communication is to maintain the operating
+point consisting of the amplitude, frequency, and duty cycle of the AC voltage that is applied to
+the transmitter coil. Changing the operating point is necessary to maintain maximum efficiency
+when the coupling coefficient of the Rx and Tx coil changes. Overall, the wireless
+communication between the transmitter and receiver will keep power transfer efficiency at a
+maximum no matter what position the receiver is in relative to the transmitter. In addition, the
+communication scheme allows for the transmitter to sense and identify the receiver in order to
+establish a connection and begin transmitting power. Once the receiver is removed or if the
+power transfer is complete (battery is fully charged), the transmitter will detect this and stop
+transmitting power. Power transfer will also cease if any type of fault is detected. A red light in
+the transmitter will turn on if there are any faults in the system. All this functionality makes
+IDT’s power transfer kit an ideal solution for implementing inductive charging in the
+headphones.
+Figure 4-3 shows a typical efficiency curve from the P9235A-R (transmitter) datasheet of
+the efficiency when the 1W coil is used. The expected output current of this project will be from
+150 to 200 mA, and so the expected efficiency is expected to be 50-55%.
+Interfacing the headphones with the receiver will involve removing the plastic casing on
+the headphones containing the battery and the charging electronics. The receiver IC (P9027LPR) will be inserted inside the plastic casing in the place where the USB port used to be. The 1W
+coil will be soldered on to the inductor pins on the PCB, and the coil will be positioned on the
+
+19
+
+outside of the plastic casing on the earphones. The coil will be covered by electrical tape to hold
+it in place and to protect it from damage. To connect the receiver to the earphone’s built-in
+battery charging electronics, disconnect the power wires coming from the USB-port will be
+connected and then soldered onto the output of the receiver PCB.
+
+Figure 4-3. Expected Efficiency vs Current for 1W Coil
+
+The next design step is to come up with a way of housing the transmitter electronics to
+provide a charging port or “base station” that the headphones will rest on. To do this,
+SolidWorks will be used to design a small housing to hold the transmitter PCB and transmitter
+coil. The housing will be approximately 3x2 inches in area, and no more than one inch tall. The
+SolidWorks model will also be utilized to 3D-print a plastic casing for the transmitter
+electronics. This base station needs to have a few key components:
+20
+
+1) A rectangular hole in the side for plugging a micro-USB cable into the PCB.
+a. This will provide 5VDC from a laptop USB cable or an AC-DC converter from a wall
+outlet.
+2) Two small holes for two LED’s to stick out (one red and one green).
+a. Green indicates the power-transfer phase. Red indicates a fault.
+3) One switch on the side, hooked up to the transmitter IC’s ENABLE pin.
+a. The EN pin is active-low, so I will connect one end of the switch to the PCB’s ground
+and the other end to the 5V supply. This switch will allow the user to cease
+functionality of the device whenever he/she chooses.
+4) Four small plastic knobs on the top on the port, allowing the user to accurately position
+the headphones. This will ensure the coils are lined up closely.
+Inductive charging on small electronic devices is done a lot in the technology market,
+although mobile phones are usually the receiver device. However, on the market you will find
+that the type of Bluetooth earphones used for this project exclusively use wired-charging. The
+design presented in this project will introduce wireless charging to a new type of product.
+
+21
+
+Chapter 5. Hardware Test and Results
+
+Before integrating the charging circuitry with the headphones, efficiency testing needs to
+be conducted to see how the designed PCB’s performs. Result of the efficiency test will then be
+compared with the expected efficiencies from the datasheet to get a better idea of how the final
+product will perform. Before the testing, the 1W coils were soldered onto the transmitter and
+receiver PCBs. Wires were also soldered onto the ground and input voltage Vin test points of the
+transmitter, as well as wires onto the ground and output points of the receiver. Finally, electrical
+tape holds the receiver in place so that its coil was exactly on top of the transmitter coil. Figure
+5-1 shows the transmitter and receiver circuitry after they have been prepared for testing.
+
+Figure 5-1. Transmitter and Receiver PCBs before Efficiency Testing
+
+Figure 5-2 shows the side view of the coils. The green PCB on top of the clear acrylic
+material makes an air gap that was measured to be 1.5 mm. The coils were kept in this exact
+position throughout testing to ensure consistency.
+22
+
+Figure 5-2. Side-view of Tx and Rx PCBs, with View of Coil Spacing
+
+The test setup for efficiency measurements is shown in Figure 5-3. The transmitter coil is
+powered via a micro-USB cable that has been cut to allow its current to be measured. DMM #1
+will measure input voltage Vin, DMM #2 will measure input current Iin, DMM #3 will measure
+output voltage Vout, and the electronic load will control and measure load current Iout.
+
+Figure 5-3. Lab Test Setup for Efficiency Measurements
+
+23
+
+Load current was set from 0 to 200 mA in increments of 20 mA. A load current of 150
+mA is also measured because that is the expected current that the headphones will draw. The raw
+data are tabulated in Table 5-1. Input power Pin is calculated as Iin*Vin, and output power Pout
+is calculated as Iout*Vout. Efficiency is simply (Pout/Pin)*100%.
+
+Table 5-1. Raw Efficiency Data (Coil Spacing: 1.5mm)
+Load Current
+(mA)
+
+Vout
+(V)
+
+Input Current
+(mA)
+
+Vin (V)
+
+Pin (W)
+
+Pout
+(W)
+
+Efficiency
+(%)
+
+0
+
+4.79
+
+211
+
+5.011
+
+1.06
+
+0.00
+
+0.00
+
+20
+
+5.00
+
+240
+
+5.01
+
+1.20
+
+0.10
+
+8.32
+
+40
+
+5.00
+
+262
+
+5.00
+
+1.31
+
+0.20
+
+15.27
+
+60
+
+5.00
+
+265
+
+5.00
+
+1.36
+
+0.30
+
+22.64
+
+80
+
+5.00
+
+272
+
+5.00
+
+1.36
+
+0.40
+
+29.41
+
+100
+
+5.00
+
+291
+
+4.99
+
+1.45
+
+0.50
+
+34.43
+
+120
+
+4.99
+
+314
+
+4.99
+
+1.57
+
+0.59
+
+38.22
+
+140
+
+4.99
+
+338
+
+4.98
+
+1.68
+
+0.69
+
+41.50
+
+150
+
+4.99
+
+357
+
+4.98
+
+1.78
+
+0.75
+
+42.10
+
+160
+
+4.99
+
+369
+
+4.97
+
+1.83
+
+0.80
+
+43.54
+
+180
+
+4.96
+
+383
+
+4.97
+
+1.90
+
+0.89
+
+46.90
+
+200
+
+4.96
+
+415
+
+4.96
+
+2.06
+
+0.99
+
+48.19
+
+Another data point was taken at 150 mA, when the coil spacing was increased to 3mm.
+The efficiency recorded at these parameters was 36.758%. When the coil spacing was increased
+to over 5 mm, the receiver ceased to remain connected to the transmitter and power transfer
+stopped entirely.
+24
+
+Figure 5-4 shows the tabulated data showing efficiency as a function of load current.
+These results mostly agree with the efficiency results in the datasheet. The shape is consistent;
+however, the measured efficiencies at every point are lower than the expected efficiencies by 510%. In the final product, the headphones will draw 150 mA so the overall efficiency should be
+expected about 42%. These numbers are slightly off from the engineering specifications in
+Chapter 3 (200 mA charge current and 50% efficiency). The efficiency difference is minor, and
+one reason for the difference in charging current is due to the battery requirements in the
+headphones.
+
+Figure 5-4. Measured Efficiency vs Current for 1W Coil (coil spacing: 1.5mm)
+
+At this condition, one Watt of power is being “wasted”. This means that during the time it
+takes for the headphones to fully charge (90 minutes), 5400 Joules of energy will be wasted. To
+put this in perspective, this energy will raise the temperature of 1.3 kg of water by 1 degree C.
+25
+
+The next step is to interface the receiver circuitry and receiver coil with the headphones.
+Currently, the headphones have a micro-USB input, as seen in Figure 5-5.
+
+Figure 5-5. Micro-USB Charging Port on Headphones
+
+Figure 5-6 shows the inner-workings of the headphones. Upon removing the plastic
+casing, the inside contains the battery (yellow), the USB port (right), and the headphone’s PCB
+which houses battery charging circuitry (left). The goal is to remove the USB port, detaching it
+from the headphone’s PCB and replacing it with the wireless power receiver circuitry as
+illustrated in Figure 5-7.
+
+Figure 5-6. “Under the Hood” of the Headphones
+26
+
+Figure 5-7. Wireless Power Receiver PCB with 1W Coil Attached (Quarter for Scale)
+
+In Figure 5-7, the output pads of the receiver PCB are highlighted with red arrows. These
+pads need to be soldered to the wires that the USB input port was previously attached to. The
+wires are de-soldered from the output of the USB port, and that small PCB section is removed.
+The wires are then carefully soldered to the output pads on the receiver circuitry, making sure
+that no solder makes contact with any other components. Figure 5-8 shows the result. Once this
+is done, the receiver circuitry will take the place of the USB input. It is small enough to fit
+completely inside the plastic headphone compartment, so the wires leading to the receiver coil
+will be fed out through the hole previously used to plug in the micro-USB cable.
+
+27
+
+Figure 5-8. Receiver Circuitry Interface with Headphones
+
+When all the connections are made, the plastic casing is sealed back up, with the receiver
+coil sticking out of the USB hole. Electrical tape is used to cover this hole and hold the coil in
+place. Figure 5-9 shows the headset after this is done. The small hole in the casing (highlighted
+with red arrow) is where an LED will light up when the device is charging. To confirm
+everything has been interfaced correctly, a quick test was performed by plugging the transmitter
+in and holding the coils close together. The green LED on the transmitter lit up, and the red LED
+on the headphones lit up, confirming that inductive power transfer was occurring as expected.
+
+Figure 5-9. Headset with Receiver Attached
+28
+
+The next task is to design the base station in SolidWorks which will later be 3D printed.
+The general goal is to make a rectangular box that will enclose the transmitter PCB and have a
+curved slot on the top so that the headphones will slide down into place, aligning the Tx and Rx
+coils. This slightly deviates from a design detail mentioned in Chapter 4. Instead of a flat surface
+with knobs to keep the headphones in place, there will be a curved slot. In addition, the base
+needs a micro-USB port, holes for LED indicators, and a switch to turn the device on and off.
+The base station was designed by making two halves of a box that would slide into each other.
+The bottom part of the box is shown in Figure 5-10. The front face has the holes required for the
+switch, LEDs and USB input. The rectangular walls on the inside of the box are to hold the
+transmitter PCB in place. The notches protruding from part of this wall are to be shaved off after
+the box is printed to a point where the PCB fits perfectly and snugly inside. This is so the circuit
+board will not shift or move when the user plugs in the micro-USB cable.
+
+Figure 5-10. Bottom Half of Base Station
+
+29
+
+The next piece is the top half of the box, which is shown in Figure 5-11. The top half will
+slide onto the bottom half from the top. It will be removable, but it can be glued if a permanent
+attachment is desired. The curved slot in the top is for the headphones to slide down into and fit
+snugly inside. The receiver coil will be positioned in the center of the plastic piece of the
+headphones, so that it will be at the exact middle (and bottom) of the slot. In Figure 5-11, a small
+disk is cut out of the slot from the bottom side. This is where the transmitter coil will be placed.
+The thickness at this point is approximately 1.5 mm, which is the separation distance used in
+testing.
+
+Figure 5-11. Top Half of Base Station
+
+30
+
+Figure 5-12 shows the top view of the transmitter base station. The profile of the slot is
+clearly visible, and was specifically designed to exactly match the shape of plastic piece on the
+headphones. When the headphones are inserted into this slot, the coils will be exactly aligned.
+Because of the snug fit, the user will not have to worry about how he/she positions the
+headphones; the accuracy of the positioning is ensured by the geometry.
+
+Figure 5-12. Top View of Base Station
+
+Figure 5-13 shows the base station when both halves are connected. The overall
+dimensions of the base station are 4in x 2in x 1.32in (length x width x height). This is slightly
+larger than the engineering specification mentioned in Chapter 3 of 3in x 2in x 1in, but the
+increase in size is necessary to ensure the headphones stay in the slot well. Figure 5-14 displays
+the completed 3D printing of the base station.
+
+31
+
+Figure 5-13. Base Station Assembly
+
+Figure 5-14. 3D-printed Base Station Parts
+
+32
+
+The transmitter PCB is inserted into the bottom half of the base station, with the USB
+input port lined up with the hole in the front face. Figure 5-15 shows the PCB fully installed into
+the charger box. External LEDs are attached and are left protruding out of holes in the front face.
+The green LED stays green while power transfer is occurring, and the red LED flashes when
+there is a coil alignment error. It will also light up when there are other types of errors in the
+system. The switch sticking out the front connects the “enable” pin to either ground or 5V. This
+will effectively turn the system off or on. The transmitter coil is extended with two more wires so
+it can reach the top half of the box. After this setup is complete, the top half is slid down onto the
+bottom half, forming one compact unit: a rectangular box of volume 10.5 cubic inches.
+
+Figure 5-15. Base Station with Transmitter Circuitry Installed
+
+33
+
+Once everything is assembled and plugged in, the headphones are placed into the slot to
+confirm functionality of the system. Figure 5-16 shows the headphones resting in the charging
+slot, with the small red LED lit up to indicate that they are charging. The green LED on the base
+station also confirms this.
+
+Figure 5-16. Headphones being charged by Base Station
+
+34
+
+Chapter 6. Conclusion
+
+The goal of this project was to create a small, easy to use wireless charging port for
+Bluetooth earphones as a replacement charging method for their micro-USB port. After
+identifying the circuitry and components required to complete this task, a charging port was
+designed and 3D printed to both house the circuitry as well as act as a base station for the
+headphones to be placed on. The headphones were confirmed to be charging when placed on this
+charging port. Therefore, the overall goal of the project was accomplished. Because of the output
+characteristics of the receiver circuitry, the battery is charged with the same voltage and current
+(5V at 150mA) as it did previously with the micro-USB cable. This means that the battery takes
+the same amount of time to charge now as it did before it had inductive charging capabilities (90
+minutes). There are several benefits of the updated charging method. Primarily, the user will not
+have to plug in a small cable into the small USB port in the side of the headphones; he/she will
+simply have to place the headphones onto the top of the charging port. This also allows for the
+headphones to be completely sealed, leaving no holes to accumulate dust or dirt. Additionally,
+mechanical wear/fatigue of the USB port is not an issue since it is not being used. The standby
+power of the transmitter base is very low, so a negligible amount of power is wasted.
+One of the biggest issues encountered was that with such small coils, the coil spacing
+needs to be very close (within ~4mm) for a connection to even be established. This just means
+that the interfaces between receiver and transmitter need to make sure the coils are precisely
+aligned and very close together. One observation I noted with my project is that both transmitter
+and receiver coils got very hot after just a few minutes of power transfer. They did not get too
+hot to touch, but it is possible they could get hot enough to damage the material they are in
+35
+
+contact with. Because of this, an improvement to the system I built would be to make sure that
+the materials in contact with the coils can withstand high temperatures.
+Based on these results, inductive power transfer has potential to be a viable solution
+many types of small electronics, wearable or otherwise. The most important factors for these
+products to be successful in the market is that the charger ports are small and easy to use, and
+that the charge time is equivalent to that of traditional charging.
+
+36
+
+Appendix A: References
+
+[1]. Aaron Smith. “U.S. Smartphone Use in 2015.” Pew Research Center. 1 Apr. 2015. Web. 3
+Feb. 2017.
+[2]. Wikipedia contributors. "Lithium-ion Battery." Wikipedia, The Free Encyclopedia.
+Wikipedia, The Free Encyclopedia. Web. 3 Feb. 2017.
+[3]. Wikipedia contributors. "Inductive charging." Wikipedia, The Free Encyclopedia.
+Wikipedia, The Free Encyclopedia, 19 Sep. 2016. Web. 21 Oct. 2016.
+[4]. Author unknown. “Wireless Charging.” Power by Proxi. January 2017.
+[5]. Author Unknown. “Worldwide Sales of Headphones and Headsets”. Statista. Web. Feb. 20
+2014.
+[6]. Colin Stutz. “The Average American Listens to Four Hours of Music Every Day”. Spin. 19
+June 2014. Web. Feb 20 2014.
+[7]. Li, Qifan, and Yung C. Liang. "An Inductive Power Transfer System with a High-Q
+Resonant Tank for Mobile Device Charging." IEEE Transactions on Power Electronics
+30.11 (2015): 6203-212. Web. 21 October 2016.
+[8]. Author unknown. “The QI Wireless Power Transfer System.” Wireless Power Consortium.
+April 2016.
+[9]. Shuo Wang, David G Dorrell, Youguang Guo, and Min-Fu Hsieh. “Inductive Charging
+Coupler with Assistive Coils.” IEEE Transactions on Magnetics 52.7 (2016). Web. 20 Oct
+2016.
+[10]. Integrated Device Technology, “Wireless Power Reference Solution for 0.5W to 3W
+Applications”, May 2016.
+
+37
+
+Appendix B: Analysis of Senior Project Design
+
+Project Title: Wireless Charging for Bluetooth Earphones
+Student’s Name: Daniel Carlson
+
+Student’s Signature:
+
+Advisor’s Name: Taufik
+
+Advisor’s Initials:
+
+Date:
+
+Summary of Functional Requirements
+The system charges wireless earphones via electromagnetic induction. The charging
+method involves placing the earphones on a small dock, where they will begin charging without
+having to plug anything in. An AC adapter will connect the system to a wall plug (120 Vrms)
+and will supply the system with a DC voltage of 5V. On the receiving end, the input to the
+headset battery charging electronics will be 5V at 150 mA. The charging dock is no larger than
+4in x 2in and 2in tall. It completely charges the headphones within 90 minutes.
+
+Primary Constraints
+A significant challenge associated with this project is the task of creating a charging dock
+that interfaces well with a pair of headphones. This will be difficult because the spacing between
+the two coils must be no greater than 4mm in order for the system to work. Another challenge
+will be coming up with a design for how the charging dock will look. Making the dock small and
+stylish is important; this makes for a significant deciding factor for users when choosing between
+wireless earphones and traditional earphones. Other challenges include making the charging port
+durable and placing the receiver coil on the headphones in a secure way.
+
+Economic
+An economic issue related to this project entails people spending more on their electric
+bill because they are using power that otherwise would not have been used. This puts more of a
+burden on the electric companies because it causes people to use more energy. The primary costs
+
+38
+
+of the project are the money and energy the consumer uses to buy and continue to use it. Buying
+this product will not pay off for a customer money-wise; the primary benefit they will receive is
+added convenience. If mass-produced, manufacturing companies would benefit from the added
+profit they make from building the device. The input required is the energy needed to run the
+device. If sold commercially, high profits would be seen at higher volumes of production. This is
+because the individual unit price would be low as to not discourage customers. A bill of material
+for this project is shown in Table B-1.
+
+Table B-1: Bill of Materials
+Item
+IDT wireless power reference kit
+
+Cost
+$60
+
+(WP3W-RK)
+Dylan wireless Bluetooth headset V4.1
+
+$29
+
+3D printer usage fee
+
+$20
+
+Miscellaneous electronics (LEDs, switch,
+solder, wires, electrical tape, etc.)
+
+~$5
+TOTAL: $114
+
+If manufactured on a commercial basis
+If my project was manufactured commercially, an estimate for the devices sold per year
+would be 100,000. Estimated manufacturing costs are $10 per device, and the purchase price
+would be $30. Estimated profit per year would be $1 million and an estimate for the cost of a
+consumer to use the device would be around $10 per year with regular usage. The cost for
+regular use comes entirely from the user’s electric bill. If the charger uses 2 Watts of power
+while in use, and is used every other day (for one hour per use), then the amount of energy used
+in a year amounts to 1.3 mJ. At an electricity cost of 12 cents per kilowatt-hour, the total comes
+out to only 4 cents per year.
+39
+
+Environmental
+Environmental issues related to this project involve using a charging dock system for
+earphones when regular earphones require no charging system at all. This means that natural
+resources are used for the sole purpose of making a product slightly easier for a consumer to use.
+The end product is small and relatively inexpensive, which means that high volumes would
+likely be made if manufactured. It also means that many might end up thrown away. This could
+result in negative environmental impacts unless the units are properly recycled after their
+lifecycle is over. Fortunately, this product will not use materials that would deplete any scarce
+natural resources. This system would directly use certain elements extracted from the earth (ex:
+copper and other metals used for wires). Indirectly, it would rely on whichever power source the
+energy companies use to power the grid (mostly coal). This product can potentially harm other
+species by polluting the environment if the charging docks are thrown into landfills.
+
+Manufacturability
+A difficulty that will be associated with manufacturing this product is attempting to make
+the manufacturing process as cheap as possible while still maintaining quality. Because this
+product would be sold at low prices, it is imperative that manufacturing is as efficient as possible
+to achieve profits. This also means that very little waste will be allowed while manufacturing.
+With the goal of low cost in mind, it would be difficult to implement a way to test each charging
+dock for functionality. Each product must be tested before being sold, as to ensure that it works
+properly. A potential challenge associated with manufacturing might be making the coils of wire
+in the transmitter in a consistent manner.
+
+Sustainability
+Using the device over a long period of time requires minimal (if any) maintenance due to
+the lack of moving parts. This project will promote the sustainable use of resources by being
+made from recyclable materials, whenever possible. When not possible, limited natural resources
+
+40
+
+must be used. In this case, it is imperative that all resources are used as sparingly and efficiently
+as possible.
+Upgrades to this project would probably be making the dock charge the earphones faster.
+Challenges to upgrading the design will be the physical limits of the small charging dock.
+Another potential upgrade would be to install a battery in the charging dock as to make it
+portable. This way, you could charge your earphones on the go. Additionally, changes to the
+design can be made to prevent the transmitter and receiver coils to heat up so much during power
+transfer.
+
+Ethical
+An ethical question that could be raised regarding this project is as follows: is it ethical to
+use energy and resources to upgrade a product (wired headphones) that does not use any of those
+resources? The only upgrade from wired headphones is convenience, so some people may say
+that it’s not worth it.
+This project complies with and embraces the values of the IEEE code of ethics. First of
+all, the exploration of a new technology comes with risks and responsibilities. My project accepts
+these responsibilities as well as seeking “honest criticism of technical work” and using these
+points of criticism to improve. Wireless charging is an area that has lots of potential for future
+growth, so I explored an application of this to improve its understanding, appropriate application,
+and potential consequences. By weighing the pros and cons of this type of technology, the
+welfare of the public is maximized.
+
+Health and Safety
+The main health concern that could be related to the project would be the high voltage
+coming from the wall outlet. This needs to be converted to a lower voltage for the device to use.
+If the system is not properly grounded or if a short occurs, fire can result. For this reason, the
+adapter that converts the AC voltage from the wall outlet will be purchased separately. Another
+concern is how much the coils heat up during charging. If this temperature is ensured to be below
+41
+
+a safe limit, it will not be an issue. Also, the materials in contact with the coils must be able to
+withstand their temperature. Once successfully built, the product will be completely safe for
+consumers if used properly. During the manufacturing process, all necessary steps will be taken
+to ensure safety of the workers.
+
+Social and Political
+The stakeholders involved that would benefit would be companies that sell wireless
+earphones. This is because the product would make their products easier for customers to use.
+The widespread use of this product could negatively impact the profits of companies that make
+wired earphones. Competition in the tech industry is very high and if wireless earphones can be
+sold at affordable prices, it would be hard for wired earphones to compete with them.
+
+Development
+Over the course of this project, I have learned techniques for transmitting power via
+inductive coupling in the most efficient and optimal way possible. Through research of similar
+products, I have discovered customer needs and trends that are important to know in order to
+build a useful product. I also implemented a subsystem that allows the user to switch the
+charging dock on and off while still plugged into the wall (an LED indicates to the user that the
+device is outputting power).
+Another key skill I have developed is mechanical design through the development of the
+base station in SolidWorks. This requires precise planning and measurement, as well as
+creativity. This will be very helpful in the future regardless of whether I will use SolidWorks in
+my professional career.
+
+42
+
+

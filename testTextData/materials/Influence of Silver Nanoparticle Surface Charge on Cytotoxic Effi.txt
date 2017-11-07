@@ -1,0 +1,1357 @@
+Influence of Silver Nanoparticle Surface Charge on
+Cytotoxic Efficacy against Cancer Cells
+
+A Senior Project
+Presented to the Faculty of the Materials Engineering Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree
+Bachelor of Science
+
+By
+
+Elliot Christian Frey
+June 16, 2017
+
+© 2017 Elliot Christian Frey
+
+Table of Contents
+Abstract & Keywords ………………………………………………………………..... 1
+I.
+
+Introduction
+A. Background ...........................................................................................……..... 2
+B. Problem Statement …………………………………………………………..... 2
+C. Hypothesis ……………………………………………………………….......... 2
+D. Literature Review ………………………………………………...…………… 3
+E. Design of Experiment ………………………………………………………..... 5
+F. Objectives …………………………………………………………………….. 5
+
+II.
+
+Methods and Materials
+A. Cell Culture …………………………………………………...…………..…... 6
+B. Treatment Preparation ……………………………………………….………... 8
+C. alamarBlue® Viability Assay ……………………………………………….... 10
+D. Dynamic Light Scattering …………………………………………………… 14
+
+III.
+
+Results and Discussion
+A. Viability Assay ………………………………………………………….…… 15
+B. LD50 Values …………..……………………………………………………… 19
+C. AgNP Aggregation …………………...…………………………………….... 20
+
+IV.
+
+Conclusions …………………………………………………………………………........ 23
+
+V.
+
+Recommendations ……………………………………………………………….…….... 24
+
+VI.
+
+Future Work …………………………………………………………….……………..… 24
+
+VII.
+
+Acknowledgments ……………………………………………………………………….. 25
+
+VIII.
+
+References …………………………………………………………………………..…… 26
+
+IX.
+
+Appendix
+A. Safety and Handling Protocols……………………………………………..… 29
+B. Sample DLS Data ……...………………………………………………..…… 31
+
+Abstract
+Silver and silver-based products are known to cause cytotoxic effects to both microbes and
+eukaryotic cells. Because of this property, silver nanoparticles (AgNPs) are being studied for their
+potential in targeted tumor treatments. Previous studies with microbes suggest that AgNPs with
+cationic capping agents possess enhanced cytotoxicity by virtue of Coulombic attraction between
+the nanoparticle and the negatively-charged cell wall. Since animal cells possess similar
+negatively-charged plasma membranes, this research hypothesized that human cells would be
+more susceptible to positively-charged AgNPs than to negatively-charged AgNPs. To investigate
+this theory, cancerous cervical cells (HeLa) and healthy fibroblast cells (3T3) were subjected to
+treatments of 40 nm diameter AgNPs with branched polyethylenimine (AgBPEI, ζ = + 69 mV)
+and citrate (AgCit, ζ = - 49 mV) capping agents. AgNO3 was also tested to compare AgNP toxicity
+to that of ionic silver (Ag+). An alamarBlue® viability assay was used to quantify the cytotoxicity
+of the treatments relative to an untreated control group. AgBPEI displayed a lower LD50 than did
+Ag+ and AgCit to both cell lines. This suggests AgNP toxicity is not solely from Ag+ dissolution,
+and also ostensibly supports the initial hypothesis. However, significant AgCit aggregation was
+observed in culture media, which obfuscates surface charge-based toxicity effects because larger
+diameter AgNPs are less cytotoxic. Thus size-dependent toxicity must also be considered, although
+this is not expected to negate surface charge effects. Moreover, since AgBPEI is more stable than
+AgCit under in vitro conditions, these results suggest that researchers investigating AgNPs for
+targeted tumor treatments should utilize AgBPEI over AgCit on the premise of enhanced
+biovailability.
+Keywords:
+silver nanoparticles, surface charge, cytotoxicity, cancer cells, tumor, targeted therapy, capping
+agent, Coulombic, branched polyethylenimine, citrate, viability assay, aggregation, media
+
+1
+
+I.
+
+Introduction
+
+A. Background
+
+Nanosilver, or silver nanoparticles (AgNPs), are silver particles that do not exceed 100 nanometers
+in any dimension. Within a medical context, AgNPs are known for their anti-bacterial, anti-fungal,
+anti-viral, and anti-inflammatory [1] properties. For example, AgNPs are used as germicidal agents
+in everyday items such as socks, cosmetics, washing machines, food packaging, water
+disinfectants, sponges, and toothbrushes [2]. AgNPs are also increasingly used in the biomedical
+field for diagnostics and imaging, wound dressings, and medical device coatings [3], and are
+recently being investigated for their potential4as therapeutic5agents6for tumor7treatments [4-8].
+Because targeted tumor treatments hope to isolate and selectively destroy cancerous tissue, they
+offer a potentially enormous advantage over the widespread side effects caused by traditional
+chemotherapy methods.
+B. Problem Statement
+The continually increasing list of applications of AgNPs necessitates a deeper understanding of
+the way in which nanosilver interacts with biological matter. However, the relative novelty of
+silver nanotechnology has limited definitive conclusions and consensus within the scientific
+community. For example, research into the consequences of long-term exposure to nanosilver by
+both humans and the environment is ongoing; the only thing agreed upon is that silver
+nanomaterials should be evaluated on a case-by-case basis [9] and that cytotoxic effects are
+contingent on their physicochemical properties [10]. Most researchers agree that while the release
+of Ag+ ions is the predominant mechanism of cytotoxicity, this alone does not account for the
+totality of the biological response to AgNPs, and that other nanoparticle-specific mechanisms exist
+[10,11]
+. These cytotoxic mechanisms may be aided or hindered by altering the size, shape, and
+surface properties of13AgNPs [12-14]. It is within this context, and encouraged by current interest in
+AgNPs for cancer treatments, that the effect of AgNP surface charge on cytotoxic efficacy is being
+studied in this work.
+C. Hypothesis
+While research indicates that surface charge plays a pivotal role in the cytotoxicity of AgNPs on
+prokaryotes [14], little is known about the eukaryotic response to AgNP surface charge. Since
+eukaryotic cells are surrounded by a negatively-charged phospholipid membrane, it is expected
+that AgNPs with cationic capping agents will display superior cytotoxicity over anionic capping
+agents by virtue of increased nanoparticle interaction. This trend was explicitly pointed out in a
+2013 study that measured cytotoxicity of different AgNPs towards planktonic crustacean samples
+[15]
+, which share similar animal cell membrane physiology with humans. Further study—especially
+with human cells—is required before categorical inferences about surface charge dependent
+cytotoxicity in eukaryotes can be made. If this hypothesis holds true, then this discovery may be
+of value to those developing AgNPs for targeted tumor treatments. In other words, utilizing
+positively charged capping agents may enhance the efficacy of silver nanoparticles in killing
+cancerous cells.
+
+2
+
+D. Literature Review
+AgNPs engender cytotoxic effects in both microbes and eukaryotic cells through a variety of
+mechanisms. These include: activation of cell signaling pathways, which can inhibit proliferation
+[16]
+; damage to cellular constituents, such as destabilization of the cell membrane or mitochondria
+[11]
+; induction of reactive oxygen species (ROS) from mitochondrial dysfunction [17], which can
+initiate DNA fragmentation, chromosomal aberrations, and ultimately cell cycle arrest and/or
+apoptosis [12,18]; direct interruption of the electron transport chain, subsequent metabolic arrest, and
+hindered viability [11]; and lastly AgNP endocytosis and subsequent Ag+ ion release into the
+cytoplasm, which attacks thiol-containing proteins and binds with chlorine ligands [19]. These
+mechanisms are graphically summarized in Figure 1. It should be noted that the severity of these
+deleterious effects are contingent on a variety of factors, ranging from nanoparticle size, shape,
+and surface properties to environmental stability and bioavailability to the target cell, cell type,
+and duration of cell exposure [20].
+
+Figure 1. Proposed AgNP toxicity mechanisms on animal cells [16].
+
+Because cytotoxic AgNPs can be functionalized to specifically target tumor cells, they are being
+studied by cancer researchers [4-8]. AgNPs have been found to be preferentially cytotoxic to cancer
+cells over healthy cells because cancerous cells have impaired DNA repair pathways, making them
+more susceptible to ROS-mediated genotoxicity [18]. Moreover, the tumor environment is more
+acidic than healthy cells, which may encourage silver ion dissolution and engender further
+preferential toxicity [8].
+
+3
+
+Although an investigation into the exact mechanisms in which silver nanoparticles cause cancerous
+cell death is beyond the scope of this work, it is feasible to isolate and study a single parameter of
+AgNP tumor treatments. In 2011, El Badawy et al. found that AgNPs grafted with cationic polymer
+branched polyethylenimine (AgBPEI) were more cytotoxic to Bacillus species than those grafted
+with anionic citrate (AgCit) [14]. It was speculated that this was the result of Coulombic attraction
+between the positive surface charge of the AgBPEI and the negative surface charge of teichoic
+acids in the peptidoglycan cell wall of Bacillus microbes. This hypothesis was supported by a 2013
+study where AgBPEI was more toxic than AgCit to E.coli microbes with similar Gram negative
+cell wall compositions as Bacillus species. Atomic force microscopy was performed to illustrate
+the outcome of enhanced AgBPEI interaction with the microbes’ cell walls (Figure 2) [10]. Because
+of this enhanced interaction, cytotoxic effects—regardless of mechanism—were increased. This
+trend was independently confirmed by researchers studying the influence of AgNP surface charge
+in other microbial treatments [15,21], showing that surface charge is influential in the cytotoxicity of
+AgNPs on prokaryotes.
+
+Figure 2. Atomic force microscope images showing AgCit (left) and AgBPEI (right) interacting with E.
+coli cells. Significantly more AgBPEI is deposited on E. coli cell walls than AgCit. The scale bar denotes 1
+micron [10].
+
+However, mammalian cell response to changes in AgNP surface charge is unknown. Mammalian
+cells possess a negatively charged phospholipid membrane [22,23], so it is not unreasonable to
+speculate that AgNPs with positively-charged capping agents will interact with and kill
+mammalian cells more so than those with negatively-charged capping agents. In support of this
+hypothesis, it was found that gold nanoparticles with cationic coatings displayed significantly more
+interaction with a model cell membrane than those with anionic coatings [24]. Should this
+hypothesis hold, it would be of particular interest in regards to cancer cells, which have a more
+negative surface charge than healthy cells [22,25]. A 2013 study into the ecotoxicity of AgNPs with
+varying capping agents revealed that the eukaryote Daphnia magna, a planktonic crustacean, was
+indeed more susceptible to AgBPEI (ζ = +28.8 mV, pH 7.1) treatments than AgCit treatments (ζ
+= -20.08 mV, pH 7.2) [15]. Considering both crustaceans and humans share the same general animal
+cell physiology, a similar cytotoxic response to AgNP surface charge should be observed.
+
+4
+
+E. Design of Experiment
+Cancerous HeLa cells and healthy 3T3 fibroblast cells were subjected to AgNP treatments of
+varying surface charge and concentration. The AgNPs were spherical, of identical diameter, and
+sterilized to limit confounding cytotoxic effects of shape, size, and biological contaminants. To
+achieve AgNPs with opposite surface charge, branched polyethylenimine (BPEI) and citrate (Cit)
+were chosen as AgNP capping agents—each of which was tested as a cytotoxicity control. Also
+tested was silver nitrate (AgNO3) to provide comparison to the cytotoxicity of ionic silver (Ag+).
+Cytotoxicity testing was performed via the alamarBlue® viability assay. Lethal dose 50% (LD50)
+values were calculated to quantify cytotoxicity trends. Cell culture morphology was inspected with
+light microscopy before and after treatment to detect contamination and to ensure culture growth.
+Lastly, the nanoparticles were characterized for diameter and size distribution with dynamic light
+scattering (DLS) to verify nanoparticle stability in media. Transmission electron microscope
+(TEM) images and zeta potential data for the AgNPs were collected from the manufacturer to
+ensure product quality.
+Once the data was collected, the response of healthy and cancerous human cells to oppositely
+charged AgNPs could be compared and screened against BPEI, Cit, and Ag+ ions. If results show
+that AgBPEI is more cytotoxic than AgCit, and neither the negative controls nor the aggregation
+study indicate confounding affects, conclusions regarding the influence of surface charge on
+cytotoxicity can be made. It may then also be beneficial to utilize cationic capping agents over
+anionic capping agents for future AgNP cancer research and other inherent toxicity applications.
+F. Objective(s)
+This study endeavored to explicitly determine if positively-charged AgNPs are more cytotoxic
+than negatively-charged AgNPs when applied to both healthy and cancerous human cells. To do
+so, the cytotoxicity of positively-charged, cation-capped AgNPs (ζ > 0) was compared to that of
+negatively-charged, anion-capped AgNPs (ζ < 0). This was done in hopes of finding a more
+suitable AgNP for targeted tumor research.
+This experiment was setup in a way that allows for several other auxiliary objectives to be
+investigated. First, by also testing silver nitrate at the same concentrations as the AgNPs, the
+toxicity of AgNPs can be compared to that of Ag+. This allows insight into how much of AgNP
+toxicity is due to ion dissolution. Second, by performing DLS on the AgNPs at relevant treatment
+concentrations in media, aggregation effects may be elucidated. This is not only crucial for
+properly interpreting toxicity results, but also for determining which capping agent provides more
+AgNP stability in media.
+
+5
+
+II.
+
+Methods and Materials
+
+A. Cell Culture
+1. Cell Culturing
+Cancerous HeLa cells were cultured in Dulbecco’s Modified Eagle Medium (DMEM)
+supplemented with 10% fetal bovine serum (FBS) and 1% penicillin streptomycin. (HeLa
+cells, a human cervical cancer cell line, are commonly utilized in biotechnology and
+pharmaceutical research as a generic cancer cell line.) Healthy 3T3 fibroblast cells were
+maintained in the same media. (Although 3T3 cells are derived from mice, they are a valid
+and recommended substitution for human fibroblasts in nanotoxicology studies because of
+their wide availability and their similarity to human fibroblasts.) Cultures were maintained
+in a 5% CO2 incubator at 37oC. Cell lines were maintained in aerated, sterilized T25
+polystyrene flasks (25 cm2 bottom) and were split biweekly with fresh media to ensure
+nutrient availability, to limit population constraints, and to remove toxic metabolic
+products. Sterile cell culturing protocols were followed to prevent bacterial or chemical
+contamination [26]. A sample flask is shown in Figure 3.
+
+Figure 3. The HeLa cell culture forms a monolayer in a T25 polystyrene flask. The lid is slightly
+ajar to allow for gas exchange between the culture and the environment.
+
+2. Cell Splitting
+Adherent mammalian cultures were split during the logarithmic phase of population growth
+to prevent confluent (contact) inhibition of further growth. This was roughly every three
+days, as determined by medium turbidity and a pH drop caused by lactic acid buildup
+(measured using litmus paper). This procedure is required to ensure the long-term survival
+of the cell culture. It replenishes media nutrients, removes dead cells and accumulated
+metabolic products, and prevents the cell concentration within the flask from increasing to
+levels where nutrient and physical space requirements cannot be met. Protocols are listed
+in the cell culturing handbook [26].
+
+6
+
+3. Cell Counting
+Cell lines were split into two fresh flasks before experimental use. The parent flask was
+kept for the creation of the cell stock designated for AgNP treatments, whereas the two
+fresh flasks were placed back into the incubator to be maintained for future experiments.
+The parent flask was then subjected to a cell count using hemocytometry. A suitable
+amount of DMEM was added to this flask to create a cell stock solution with a
+concentration of 1x105 cells/mL.
+4. Cell Incubations
+100 µL of cell stock was allocated into each well of a sterile, optically transparent,
+polystyrene 96-well plate. Plates were left to incubate for 24 hours. This was done to
+eliminate false cytotoxicity positives caused by the biological shock of extensive pipetting.
+In this way, cell cultures could stabilize before treatment testing. Before treatments were
+applied, plates were inspected with a light microscope for contamination and culture
+growth.
+5. Cell Handling
+All cell handling was performed in a Class II biosafety cabinet (Figure 4). Appropriate
+safety protocols were followed (see Appendix A for details).
+
+Figure 4. Tissue culture laboratory, Cal Poly Biology Department. The biosafety cabinet UV
+light is on to sterilize the work surface before use. The light microscope was used for cell culture
+inspections and hemocytometry. Separate biohazard disposal bins are present to contain either
+pipette tips and flasks or biological liquids.
+
+7
+
+B. Treatment Preparation
+1. In-House AgNP Synthesis
+For preliminary work, AgCit and AgBPEI were synthesized in-house. This provided
+inexpensive, readily available reagents for preliminary testing while experimental
+protocols were being established, as well as an opportunity to learn the fundamentals of
+AgNP chemistry. However, while cheaper and faster than ordering commercial AgNPs,
+these in-house AgNPs were not suitable for academic research. The AgNPs used in this
+study must be of the same diameter, have precise concentrations, and be contaminant-free.
+Significant time investment in experimentation and financial investment in outsourced
+characterization would have been required to develop a reliable, reproducible AgNP recipe
+suitable for academic use at Cal Poly. Therefore, rather than try to synthesize and
+characterize AgNPs in-house, it was a more prudent allocation of time and money to
+purchase small quantities of fully characterized, contaminant-free commercial AgNPs.
+2. Commercial AgNPs
+2 mL quantities of 1 µg/mL AgBPEI and AgCit solutions were purchased from
+NanoComposix (Figure 5). AgNPs arrived with manufacturer-provided characterization
+information (Table I). AgBPEI is electrosterically stabilized by a coating of BPEI that
+adsorbs onto the silver surface [27]. AgCit is surrounded by citrate anions that adsorb to the
+silver core through polar interactions and maintain colloidal stability through electrostatic
+repulsion [28]. Both types of AgNPs were purchased in 40 nm diameter size to deconvolute
+size-related cytotoxicity effects from surface charge. TEM images were provided by the
+manufacturer (Figure 6) to confirm AgNP size and morphology. The AgNPs were
+subjected to the manufacturer’s “BioPure” screening, meaning that residual reactants were
+removed, that endotoxin levels were confirmed to be below 2.5 EU/mL, and that solutions
+were sterilized.
+
+Figure 5. 1 µg/mL vials of AgCit (left) vs AgBPEI (right). Because the diameters are the same in
+both types of AgNP, the slight difference in color can be attributed to visible light interference by
+the capping agents.
+
+8
+
+Table I. Data for AgNPs Purchased from nanoComposix
+AgNP
+
+Size (TEM)
+
+Zeta Potentialc
+
+Capping Agent
+
+Stabilization
+
+AgCita
+
+40 nm
+
+ζ = - 49 mV (pH 7.2)
+
+Citrate
+
+electrostatic
+
+AgBPEIb
+
+40 nm
+
+ζ = + 69 mV (pH 8.1)
+
+Branched PEI
+
+electrosteric
+
+a
+
+AgCit prepared in solution with excess Na3C6H5O7
+AgBPEI suspended in Milli-Q water
+c
+|ζ| ≥ 20 mV is considered a stable colloidal suspension
+b
+
+Figure 6. TEM images of AgCit (left) and AgBPEI (right) provided by nanoComposix.
+
+3. AgNP Treatment Preparation
+AgBPEI and AgCit stock solutions of 100 µg/mL and 25 µg/mL were prepared in sterilized
+glass bottles by dilution with Millipore water. The Millipore water was micro-filtered in a
+sterile vacuum hood and then autoclaved to eliminate biological contamination.
+4. AgNO3
+Silver nitrate stocks of 100 µg/mL and 25 µg/mL were prepared in an identical fashion to
+the AgNPs. Because AgNO3 dissociates into Ag+ and NO3- in polar solutions, it is
+commonly used as a reagent for Ag+ toxicity. AgNO3 was chosen as a reference against
+which to compare the cytotoxicity of Ag+ versus AgNPs. Free NO3- in AgNO3 treatments
+is known to have negligible effects on mammalian cells at the concentrations used in this
+study [29].
+5. Capping Agents
+Trisodium citrate and BPEI treatments were prepared as cytotoxicity controls to
+deconvolute the cytotoxic effects of the capping agents on cells.
+
+9
+
+C. alamarBlue® Viability Assay
+1. Theory
+Dye-based viability assays, such as alamarBlue® are an industrial and scientific standard
+for preliminary cytotoxicity screening [30]. The alamarBlue® assay was performed as a
+simple means of determining the extent to which mitochondrial activity was affected by
+the treatment. This test uses an indicator molecule—resazurin— that is reduced by
+metabolic activity to resorufin, a pink and highly fluorescent molecule. This chemical
+reduction occurs inside the host cell’s mitochondrial electron transport chain, where
+resazurin substitutes for O2 as a terminal electron receptor. The intensity of fluorescence
+produced is proportional to the number of living cells respiring, so fluorescence
+measurements can determine if the AgNP treatments hindered metabolic processes.
+Because metabolic activity is a primary indicator of cell viability, this assay can be used to
+measure the treated cells’ likelihood to survive and reproduce. alamarBlue® was chosen
+because it is non-toxic to both organisms and the experimenter, requires relatively few
+steps, and can be measured with fluorescence, which is more accurate than absorbancebased assays. While the alamarBlue® assay can provide information regarding the
+proliferative capacity and overall “health” of the cells, it cannot provide direct information
+distinguishing the number of necrotic cells and those undergoing apoptosis. However,
+because dead or dying cells will display minimal reduction of the dye agent, and because
+rendering oncogenic cells non-viable is still considered a sign of an effective treatment,
+this viability assay is suitable for initial testing regarding cytotoxicity of various AgNP
+treatments.
+2. Day 1: Plate Preparation
+The two cell culture stocks were pipetted into separate 96-well plates to avoid crosscontamination. A total volume of 115 µL was set for each well to mitigate volumetric
+fluorescent quenching effects during spectrophotometry. To accomplish this, 100 µL of
+cell culture stock was pipetted into treatment-designated wells, thus achieving the optimal
+cell count (1x104 cells/well) for the viability assay [31] and leaving 15 µL for treatment
+addition. After incubation at 37oC for 24 hours, plates were observed under a light
+microscope to inspect for cell growth and potential contamination.
+3. Day 2: Apply Treatments
+DMEM, and the corresponding treatments, were added to achieve the designated total well
+volume of 115 µL. Plate well allocation was determined by the fluorescent protocol
+employed for measurement. Thus, each cell plate had its own controls and blanks, thus
+minimizing experimental error between plates. The pertinent details of plate allocation are
+as follows:
+i. Silver Treatments. AgCit, AgBPEI, and AgNO3 treatments of 0.5, 1, 2.5, 5, 7.5,
+and 10 µg/mL concentrations were achieved through application of various stock
+volumes to the experimental wells. This range was chosen because initial studies
+with in-house nanoparticles, as well as prior work with commercial AgNPs,
+suggested an LD50 within this concentration range. This concentration range was
+also selected because it optimized plate well utilization for maximum data
+collection.
+
+10
+
+ii. Capping Agents. Citrate and BPEI were tested at 10 µg/mL to allow observation
+of any cytotoxicity of the polymers themselves. The highest concentration of AgNP
+treatments was 10 µg/mL, but this concentration accounts only for the mass of the
+AgNPs’ silver cores and not their capping agents. Because of the small volume of
+capping agent needed to cover the surface of the silver core, and because the density
+of silver is much higher than the polymeric capping agents, it can reasonably be
+assumed that the capping agent concentration in the AgNP treatments was
+considerably less than 10 µg/mL. Assuming an increase in potential toxicity with
+concentration, using 10 µg/mL of pure capping agent was more than sufficient to
+illustrate any potential toxicity of the capping agents.
+iii. Triplicate. Each AgNP treatment was prepared in triplicate for redundancy and to
+account for potential variance in cell density amongst wells delegated for the same
+treatment. Mean reduction values and standard deviation per treatment were
+collected from these three readings.
+iv. Positive Control. Positive control wells had 100 µL of cell culture and were subject
+to a 15 µL DMEM treatment to maintain consistency in well volumes. These wells
+represent optimal growth conditions for cells, as no cytotoxic treatments were
+applied. Their metabolic activity, as determined by the alamarBlue® dye agent,
+corresponds to the fluorescence ceiling to which the fluorescence of treated cells
+was compared.
+v. Media Blank. Each plate was designated at least one well of pure media to blank
+out fluorescent effects of media alone.
+vi. Cell Blank. In preliminary research, it was confirmed that both the media and the
+nanoparticles caused limited reduction of resazurin. For example, a well with
+media, dye, and AgCit at 10 µg/mL induced a fluorescent output of 639.7 relative
+fluorescence units (RFU). Therefore, it was decided that all treatments in the
+present study were to be accompanied by one well of their corresponding “cell
+blank,” wherein the same treatment was applied in the absence of cells. This
+fluorescent output was subtracted from the average fluorescence of treatments
+containing cells to cancel out the fluorescence noise unique to that treatment.
+4. Day 3: Fluorescence Inspection
+i. Fluorescence Theory. Fluorescence occurs when a molecule (here, resazurin) in
+its ground state absorbs an incident photon, causing the molecule to enter an
+electronically excited state. The molecule will then undergo non-vibrational
+relaxation, collisional quenching, and/or heat release until it reaches the lowest
+vibrational level of its respective excited electronic state. Once this non-radiative
+decay is over, a photon is emitted to return the molecule back to one of the
+vibrational levels within its ground state. This emitted photon must be of a longer
+wavelength, or have less energy, than the incident photon because non-radiative
+decay occurred prior to its emission. This is the principle behind the Stokes Shift,
+or the wavelength difference between absorption and emission peaks.
+ii. alamarBlue® Dye Addition. 24 hours after AgNP treatments and controls were
+added, experimental plates were inspected again for contamination. This is to
+circumvent the possibility of microbial contamination creating false positives for
+metabolic activity. 11.5 µL of 10x alamarBlue® reagent was added to all test wells
+
+11
+
+on experimental plates besides those allocated for media fluorescence blanking. In
+addition, alamarBlue® reagent was added to a control plate to determine the
+quenching behavior of the treatments and the media. Plate lids were covered in
+sterilized aluminum foil to prevent light-induced reduction, and then returned to the
+incubator for another 8 hours to allow maximum resazurin reduction to take place.
+This optimum incubation period was chosen because it maximizes the amount of
+reduction that can take place, but isn’t so long that the positive control reduction
+reaction goes to completion such that relative fluorescence comparisons are skewed
+[31]
+.
+iii. Plate Reader. After 8 hours, the plates were simultaneously removed from the
+incubator to ensure uniform incubation times with the alamarBlue® reducing agent
+(Figure 7). They were then allowed 30 minutes to return to room temperature before
+being inserted into a SpectraMax 360 fluorescent plate reader (Figure 8). This was
+done because increased temperature can influence fluorescence emissions by either
+raising the vibrational level of the fluorescent molecule, or by inducing
+conformational changes in the media proteins so that they cause quenching. The
+fluorescence excitation wavelength was chosen to be 555 nm, since the excitation
+range is 540–570 nm. The fluorescence cutoff was set to 570 nm, which truncates
+excitation radiation so it does not get picked up by the detector. Fluorescence peak
+emission was measured at 585 nm, since the total emission spectrum is 580–610
+nm. Fluorescence intensities were recorded in Excel.
+
+Figure 7. 96-well plate after eight hours of incubation with the viability dye. The more pink
+a well appears, the more resazurin reduction into resofurin has taken place, and thus the
+more metabolically active the well is. All the treated wells were initially blue, as this is the
+color of resazurin.
+
+12
+
+Figure 8. SpectraMax 360 plate reader with plate drawer open. Excitation and emission
+wavelengths were set to 555 nm and 585 nm, respectively.
+
+iv. Reduction Calculations. Because resazurin reduction to resofurin is caused by
+cellular metabolic activity in the cell, and because metabolic activity is used to
+measure cell viability, results from this assay are quantified as % cell viability. This
+value represents the viability of treated cells relative to untreated cells. Specifically,
+relative chemical reduction of resazurin, and thus viability, was calculated by
+dividing the average fluorescence emission of the treatment wells by the average
+emission of the untreated, positive control wells. This is shown in Equation 1,
+% Cell Viability =
+
+𝑭𝒂𝒗𝒈 (𝟓𝟖𝟓𝒏𝒎) 𝒐𝒇𝒕𝒓𝒆𝒂𝒕𝒆𝒅 𝒄𝒆𝒍𝒍𝒔 (𝑹𝑭𝑼)
+𝑭𝒂𝒗𝒈 (𝟓𝟖𝟓𝒏𝒎) 𝒐𝒇 𝒖𝒏𝒕𝒓𝒆𝒂𝒕𝒆𝒅 𝒈𝒓𝒐𝒘𝒕𝒉 𝒄𝒐𝒏𝒕𝒓𝒐𝒍 (𝑹𝑭𝑼)
+
+x 100% (1)
+
+where Favg(585nm) is the average 585 nm fluorescence emission of the treatment
+series eight and half hours after dye addition, and RFU is the fluorescence unit in
+which this average is measured. A cell viability value of 100% means the treatment
+had no effect on its target cell population, since these cells are just as metabolically
+active as the untreated control group. Conversely, a value of 0% means zero
+reduction of the dye agent occurred. This means the cells are either dead or nonviable, which in either case means the treatments were effective at inhibiting the
+cell line.
+v. LD50 Calculation. The LD50 endpoint was calculated by linear interpolation
+between the two toxicity concentrations above and below the 50% cell viability
+point. LD50 calculations, even with the help of advanced software, are at best an
+estimate. However, LD50 values provide suitable quantifications of toxicity trends.
+
+13
+
+D. Dynamic Light Scattering (DLS)
+To verify AgNP diameters and test stability in biological media, AgCit and AgBPEI samples of 5
+µg/mL were subjected to temporal DLS testing (Figure 9). If the AgNPs aggregate when suspended
+in media, then size-dependent toxicity mechanisms can obfuscate the effects of surface charge.
+Therefore, AgNPs must maintain similar diameters in vitro for valid toxicity comparisons based
+on surface charge.
+
+Figure 9. The Wyatt Technologies DynaPro NanoStar in the Cal Poly Chemistry Department was
+used for DLS testing.
+
+1. DLS Theory
+DLS provides the size and number distribution of particles in a solution by applying laser
+light scattering principles. For example, smaller particles exhibit enhanced Brownian
+motion over larger particles, so this increases Doppler shift effects in the light they scatter.
+A photon counter correlates these fluctuations in light scatter to their diffusion constant,
+which is used to calculate their hydrodynamic diameter (HDD) through the Stokes-Einstein
+equation.
+2. Sample Preparation
+Concentrations of 5 µg/mL were prepared for AgCit and AgBPEI in glass cuvettes
+containing either Milli-Q water or media. Because toxicity results indicated LD50s below
+5 µg/mL, and because aggregation effects usually increase with concentration, 5 µg/mL
+was chosen as the concentration above which aggregation behavior would be irrelevant
+because potential treatments would be confined to lower concentration ranges. The total
+volume of each cuvette was held to 0.8 mL. AgNP solutions in Milli-Q water were prepared
+to obtain baseline HDDs, whereas those in DMEM were prepared to test for aggregation.
+The DMEM solution contained the same FBS, penicillin streptomycin, amino acid, and
+
+14
+
+vitamin concentrations as the cell culturing media. In this way, the AgNP aliquots in media
+reflect the in vitro conditions experienced by the AgNPs during toxicity testing.
+3. pH Measurement
+Before testing, the DMEM solution was measured using a pH probe and found to have a
+pH of 7.27. This correlates well to the pH range of human blood, which is between 7.35 to
+7.45. In this way, there is an accurate model of physiological pH.
+4. Aggregation Kinetics
+Measurements were taken every five minutes for 45 minutes after the samples were
+prepared. This was done to allow sufficient time for nanoparticle aggregation to occur, as
+well as to detect any time-dependent stabilization behavior. Time t=0 min. represents a
+DLS reading immediately following the dispersal of AgNPs into the medium of interest (a
+process that took less than 1 minute).
+5. Parameters
+A reference sample consisting of polystyrene nanoparticles of known diameter was run to
+ensure DLS accuracy. When the DLS passed this control, the AgNPs were then tested. 10
+individual tests were run per time period, per AgNP. Each test consisted of 5
+measurements. Therefore, the HDDs presented are the average of 10 averages.
+III.
+
+Results and Discussion
+A. Viability Assay
+1. Trend of Superior AgBPEI Cytotoxicity
+Dose-dependent curves for HeLa and fibroblast cells are shown in Figures 10 and 11,
+respectively. Both figures illustrate a general trend in which AgBPEI is more cytotoxic
+than AgCit. This trend holds for both cell lines, as AgBPEI effectively induces total cell
+death at concentrations less than 5 µg/mL. This supports the initial hypothesis that AgBPEI
+would display enhanced cytotoxicity because AgBPEI’s positive surface charge facilitates
+increased Coulombic interactions with the negatively-charged cell surface. On the
+contrary, AgCit’s negative surface charge discourages interaction with cells, thus
+attenuating cytotoxic response.
+
+15
+
+Figure 10. Dose-response curve for AgNP treatments on the cancerous cell line. AgBPEI displays
+superior toxicity to AgCit for all concentrations except 7.5 and 10 µg/mL where toxicity
+differences become statistically insignificant. The increase in cell viability as these latter
+concentrations is likely caused by AgNP aggregation.
+
+Figure 11. Dose-response curve for AgNP treatments on the fibroblast cell line. The 2.5 µg/mL
+treatment suggests that disparities in AgNP toxicity are evident mostly between 1 and 5 µg/mL.
+Outside of this concentration range, differences in AgNP toxicity are minimal.
+
+16
+
+It should be noted that while the differential AgNP toxicity trend ostensibly reverses in the
+HeLa line at 7.5 and 10 µg/mL concentrations, this difference is not statistically significant
+(t-test, p < 0.05) and can be attributed to AgNP aggregation and polydispersity.
+2. HeLa Trends
+i. Toxicity Decrease after 5 µg/mL. The general decrease in AgNP toxicity in the
+HeLa line above 5 µg/mL is likely due to concentration-enhanced aggregation
+effects. Aggregation diminishes AgNP cytotoxicity through several mechanisms
+[13]
+. First, because many AgNPs coalesce, there are less net particles in the treatment
+to cause toxic effects: there are less “bullets” to kill the cells. Second, because there
+are fewer small AgNPs and more large AgNPs, there is a net reduction in surface
+area available for Ag+ dissolution. Because ion dissolution is the predominant
+toxicity mechanism of AgNPs, this decreases AgNP toxicity. Third, larger, bulkier
+AgNPs have worse chances of permeating through the cell membrane or being
+endocytosed by the cell, thus decreasing the likelihood of AgNP interaction with
+the cell. Aggregation would also increase AgNP polydispersity, which exacerbates
+size-dependent toxicity effects and allows for increased deviation in toxicity
+between wells. This explains the large standard error bars on either treatment at
+these concentrations.
+Another potential cause is that since both capping agents can be metabolized
+as food for the cells, metabolic increases to any surviving cells is possible. This
+would artificially increase fluorescence and subsequently cell viability.
+ii. HeLa Cell Sensitivity to Surface Charge Effects. The disparity in toxicity
+between AgNPs is especially prevalent in the HeLa cell line. It is speculated that
+this is because surface charge effects are more pronounced in cancer cells, since
+cancer cells have a more negative surface charge than normal cells at physiological
+pH [22,25] . This is mostly because cancerous cells display enhanced glycolytic
+metabolism, meaning lactate anion secretion is increased significantly [32].
+3. Fibroblast Trends
+i. No Toxicity Decrease after 5 µg/mL. Interestingly, the fibroblast cell line did not
+display the same reversal in toxicity with concentration that the HeLa line did.
+AgNP aggregation probably also occurred in the 3T3 treatments because of the
+similarity of in vitro environments between cell lines. Potential environmental
+discrepancies could be caused by the enhanced metabolic activity and population
+size of the cancer cell line, which would decrease pH [8] and increase lactate anion
+secretion. Nevertheless, because the media is buffered to prevent pH fluctuations
+and because the media has a high ionic strength, slight increases in H+ or anion
+presence would have minimal effect. However, the cytotoxicity-diminishing effect
+of AgNP aggregation would have been obfuscated in the 3T3 line because
+fibroblast cells divide less rapidly than do cancer cells, so the smaller fibroblast
+population was more sensitive to any toxic treatment of the same concentration.
+
+17
+
+ii. Differential Toxicity Window Between 1 and 5 µg/mL. Unlike HeLa cells, the
+3T3 cells displayed differential AgNP toxicity mostly in the concentration range
+between 1 and 5 µg/mL. The cause of this is presently unknown. Further testing of
+3T3 cells with AgNP treatments within this concentration range would help
+elucidate the nature of this trend.
+4. Comparing Cell Line Sensitivity
+i. Cancer Cells are Inherently More Viable. The HeLa cells were more robust to
+AgNP treatments for two reasons: the first is difference in population size. Given
+that approximately 1x104 cells were pipetted into each well, and that each well
+population had an equal amount of time for stabilization and growth, it can be
+assumed that the cell density per well is relatively constant per cell line. However,
+this assumption does not hold when comparing different cell lines because of
+differences in growth rates. Both HeLa and 3T3 lines are immortalized cell lines,
+meaning that they have specific mutations that allow them to grow and divide
+indefinitely under suitable in vitro conditions. However, as verified by light
+microscope inspection during culturing, the HeLa cells used in this study displayed
+a faster rate of division than did the 3T3 cells. (This difference is caused by various
+genomic discrepancies, such as the HeLa cells’ dysregulated cell cycle and
+endogenous viral genes.) Consequently, after two days of incubation, the HeLa cell
+density per well was higher than the 3T3 cell density. This means there were fewer
+3T3 targets than HeLa targets for the same treatment concentration; in other words,
+the 3T3 line experienced a higher AgNP:cell ratio. Thus the 3T3 population was
+more susceptible to AgNP treatments purely on a numbers basis.
+The second reason is that cancer cells have accelerated metabolic rates. This
+artificially increases viability measurements due to increased dye reduction and
+subsequently increased fluorescence. This means not only are there more cancer
+cells than fibroblasts per well, but each cancer cell is more metabolically active
+than a fibroblast cell. Therefore, even if cell populations were identical at the time
+of alamarBlue® addition, the HeLa cells would consistently reduce more resazurin
+and appear more viable.
+Taking these two considerations together, cancer cells are inherently harder
+to kill than healthy cells because they have more effective metabolisms and higher
+division rates. These effects must be taken into account when comparing the two
+cell lines, especially within the context of a dye-based viability assay. Even if
+individual cancer cells are mechanistically more susceptible to AgNP treatments,
+as suggested by past toxicity research [8,18], it would not appear that way because of
+the nature of this test.
+ii. Low Concentration Trends. The toxicity explanation concerning AgNP:cell
+ratios and metabolic differences suggests toxicity towards 3T3 cells should be
+enhanced across all treatment concentrations. However, this is not always the case.
+AgCit toxicity from 0.5-2.5 µg/mL is comparable in both cell lines. Since
+low concentration treatments imparted fewer overall particles to elicit cytotoxic
+
+18
+
+response, the AgNP:cell ratio was low in both cell lines—regardless of differences
+in population. At such low concentrations, there might be insufficient therapeutic
+agents to cause detectable metabolic effects in the whole cell population. In this
+way, AgNP concentration may be more of a toxicity factor than population size
+because it scales multiplicatively.
+Similarly contrary to expectations, AgBPEI is more toxic towards the HeLa
+cells than towards 3T3 cells at these lower concentrations. Again, this is likely a
+byproduct of the HeLa cells’ more negative surface charge, a factor that could
+supersede the toxicity-buffering effects of increased population size and
+metabolism.
+B. LD50 Values
+1. Superior AgBPEI Toxicity
+LD50 values for the silver treatments were calculated by linear interpolation to quantify the
+trends depicted in the dose-response curves (Table II). Results reveal the superior toxicity
+of AgBPEI over both AgCit and Ag+ to either cell line. Compared to AgCit, AgBPEI was
+approximately 84% more cytotoxic to HeLa cells and about 65% more cytotoxic to
+fibroblast cells. (These values are estimates due to the approximate nature of LD50
+calculations, the non-linearity of the dose-response curves, and the limited number of data
+points.) However, while the veridical LD50 may be, for example, +/- 10% of the calculated
+values, the trend of superior AgBPEI cytotoxicity would not disappear. In this way, these
+values serve as a useful tool to compare cytotoxicity, though they should not obviate the
+need for high-throughput calculations before integration into clinical applications.
+Table II. Calculated LD50 Values of Silver Treatments
+Cell
+HeLa
+
+Treatment
+
+LD50 (µg/mL)
+
+AgBPEI
+
+3.2
+
+AgCit
+
+5.9
+
++
+
+3T3
+
+Ag
+
+3.5
+
+AgBPEI
+
+2.3
+
+AgCit
+
+3.8
+
++
+
+Ag
+
+3.3
+
+2. Ag+ Toxicity
+It is interesting to note that the Ag+ control treatment was less toxic than the AgBPEI to
+either cell line. This contradicts the widely-held belief that the toxicity of AgNPs is due to
+ion dissolution alone, and instead supports more recent work showing that physical
+interactions between AgNPs the target cell also contribute to toxicity. This controversy
+originated from a landmark 2012 paper by Alvarez et al. claiming that negligible
+nanoparticle-specific toxicity mechanisms exist [33].
+
+19
+
+Any Ag+ treatment will have more free ions in solution than will a AgBPEI
+treatment at any given concentration, so if ionic silver release were the sole toxicity
+mechanism of AgNPs, then Ag+ should be more cytotoxic than AgBPEI, not less.
+Therefore, there must be some physical toxicity factor unique to AgNPs. This agrees with
+recent research indicating that toxicity mechanisms differ between ionic silver and AgNPs
+[10]
+. Moreover, the fact that AgBPEI is more toxic than Ag+, whereas AgCit is less toxic,
+provides further evidence that surface charge-influenced physical interactions between the
+AgNP and the cell membrane may be the foundation of nanoparticle-specific toxicity
+mechanisms.
+3. Capping Agent Toxicity
+Capping agent treatments, at effective concentrations (10 µg/mL) much higher than would
+be seen by a AgNP treatment of the same concentration, had either negligible cytotoxic
+effects or increased the metabolic activity of the treated cells (Table III). The % cell
+viability after treatment with capping agents is near or over 100%. This means that even at
+the highest concentration of AgNPs, the presence of capping agent has no confounding
+effect on the cytotoxicity measurements. Citrate is a known substrate for energy generation
+in mammalian glycolytic and Krebs cycle pathways [34], so it makes sense that it seemed to
+increase the viability of treated cells. Similarly, results suggest polyethylenimine also
+stimulates metabolic activity, potentially as a base molecule for catabolic breakdown.
+Table III. Capping Agent Cytotoxicity
+Cell
+
+Capping Agent Cell Viability
+BPEI
+108.2 %
+HeLa
+Citrate
+97.2 %
+BPEI
+119.2 %
+3T3
+Citrate
+111.6 %
+
+This means AgNP toxicity results from nanoparticle and Ag+ mechanisms, and that capping
+agents alone have no considerable obfuscating effect on toxicity measurements. If
+anything, because free BPEI in the growth media seems to increase cell viability moreso
+than citrate, AgBPEI could be slightly more toxic than the viability assay suggests.
+However, such a conclusion is unnecessary because the trend of superior toxicity of
+AgBPEI is already well established and because the concentration of free floating BPEI at
+AgBPEI treatments of 5µg/mL is far less than BPEI treatments at 10 µg/mL.
+C. AgNP Aggregation
+1. DLS Results
+To isolate surface charge as the only independent variable capable of influencing
+cytotoxicity comparisons, AgBPEI and AgCit were ordered at the same diameter.
+However, because the AgNPs were then placed in media—a solution different than that in
+which the AgNPs were synthesized and characterized—it was necessary to remeasure
+
+20
+
+AgNP size in media. To deconvolute the effects of potential aggregation on cytotoxicity
+and model AgNP stability, HDD was measured for both types of AgNP in test media at 5
+µg/mL using DLS (Table IV). While it would appear thus far that surface charge was the
+only toxicity parameter that varied between AgBPEI and AgCit, DLS results suggest
+otherwise.
+Table IV. Hydrodynamic Diameters of AgNPs
+Time (min) Watera (nm) % Intensityb
+0
+44.2
+96.8
+AgBPEI
+10
+46.3
+98.3
+25
+46.0
+94.8
+0
+46.1
+97.1
+AgCit
+10
+49.7
+98.2
+25
+49.3
+96.5
+AgNP
+
+Media (nm) % Intensity
+119.6
+94.3
+141.8
+94.2
+140.5
+95.5
+polydisperse
+N/A
+polydisperse
+N/A
+polydisperse
+N/A
+
+a
+
+Water controls (blue) were used to verify AgNP stock HDD and to act as a reference to which
+aggregation in media can be compared.
+b
+% Intensity, or the relative amount of scattering intensity, was used to determine the true HDD
+average within the size distribution chart. See Appendix B for sample size distributions and
+autocorrelation curves for details on how % Intensity was used.
+
+Once diluted to 5 µg/mL in Milli-Q water, both types of AgNPs showed slight
+aggregation to the effect of a several nanometer HDD increase. However, HDDs
+stabilized after 25 minutes. Since size is indirectly calculated from an experimentally
+derived diffusion coefficient rather than direct measurement, and because HDD includes
+the radius of the protruding capping agents, an increase of three nanometers can be
+considered negligible. This supports the 40 nm diameter TEM measurements provided by
+nanoComposix, which only measure the silver core.
+However, both AgNPs aggregated in media. Whereas the AgBPEI HDD
+stabilized at roughly 140 nm after 10 minutes, AgCit rapidly agglomerated into a wide
+range of large HDDs that increased with time (Appendix B). (Here agglomerated is
+defined as rapid aggregation behavior that will continue indefinitely until the nanoparticle
+falls out of suspension.) This means that AgCit is not stable in the test media, and that the
+AgNP treatment HDDs in the viability assay were not constant. Thus, cytotoxicity
+differences between the types of AgNPs cannot be attributed solely to surface charge, and
+size-dependent toxicity effects must be taken into account when interpreting the toxicity
+results.
+2. AgBPEI more Bioavailable than AgCit
+As previously mentioned, an increase in AgNP diameter corresponds to reduced particle
+count, reduced surface area for ion dissolution, and hindered ability to enter the cell: all of
+which result in decreased cytotoxic effects [13]. It should be noted that because of the
+limitations of HDD measurements, it is not known whether individual AgNPs aggregated
+into a multi-particle cluster or physically coalesced into a single, large particle. The
+21
+
+cytotoxic differences between the two are also unknown, although in either case toxicity
+would still decrease. Therefore, if AgNP aggregation occurs, its mechanisms of interaction
+with the target cells are attenuated. This is especially the case if the AgNP becomes so
+large that it falls out of suspension and is not available to physically interact with the target
+cells. So not only was there a repulsive Coulombic force between the AgCit and the target
+cells’ membrane, but AgCit’s agglomeration in vitro further reduced its likelihood of
+interacting with the cells. In this way, AgBPEI is more “bioavailable” than AgCit because
+AgBPEI is more available in the biological environment to interact with cells. Although
+surface charge effects are not solely responsible, this increased bioavailability directly
+correlates to increased cytotoxicity. Therefore, AgBPEI’s enhanced bioavailability makes
+it a superior nanoparticle over AgCit for targeted tumor therapies and other such inherent
+toxicity applications.
+3. Aggregation Mechanisms
+The stability of colloidal nanosilver is contingent on surface interactions with its solution.
+Specifically, the physico-chemical properties of the AgNP capping agents determines how
+salts, proteins, and other biomolecules in media will interact with the AgNPs. Similarly,
+solution properties such as pH, solvent polarity, and solute composition and concentration
+influence AgNP aggregation [35].
+i. Capping Agents. Both capping agents are physisorbed onto the silver core through
+secondary bond interactions.
+BPEI, a heavily branched dendrimer, stabilizes AgBPEI by providing a treelike network of polymer chains that mechanically obstructs AgBPEI from
+coalescing. This steric hindrance can utilize osmotic pressure gradients and coil
+compression mechanisms to discourage AgBPEI aggregation [36]. Additionally,
+BPEI also offers electrostatic repulsion by virtue of the net positive charge imparted
+by its amine groups, which are protonated in solution. This means the AgBPEI
+Coulombically repels other positively-charged AgBPEI.
+On the other hand, citrate capping agents are limited to electrostatic
+repulsion. Citrate is a derivate of citric acid, and is a polyatomic anion (C6H5O73− )
+in solution. Its negative charge repels other negatively charged AgCit. Because the
+silver nanoparticle core also has a slight negative charge, citrate binds more weakly
+to the silver nanoparticle than BPEI [27].
+Since BPEI provides electrosteric repulsion, as opposed to simply
+electrostatic repulsion, it is generally considered a more stable capping agent than
+citrate [35].
+ii. AgBPEI. In the case of AgBPEI aggregation, two explanations are possible: either
+counterions and proteins from the media formed complexes with the nanoparticles,
+or they initiated PEI bridging behavior that joined the nanoparticles through an
+anion intermediate [35]. This would reflect an effective increase of AgBPEI size,
+rather than AgBPEI aggregation. While the ionic strength of the media may have
+diminished electrostatic stability mechanisms, steric hindrance would have
+remained unaffected. Since AgBPEI retained at least one mechanism of
+maintaining colloidal stability, agglomeration did not occur.
+
+22
+
+iii. AgCit. Conversely, cations present in the media could have been sufficient to
+initiate AgCit agglomeration. In accordance to DLVO theory [37], compression of
+AgCit’s diffuse double layer would weaken electrostatic repulsion and increase the
+likelihood of macroscopic van der Waals interactions (Hamaker attraction). The
+weak polar association of citrate with the silver core exacerbates this trend by
+providing negligible steric hindrance. Additionally, because citrate is easily
+displaced, this allows for temporary exposures of the silver core to the surrounding
+media. If enough surface area is exposed, then surface energy can provide sufficient
+driving force to encourage nanoparticle coalescence.
+It should be noted that in some cases AgCit does not show the aggregation
+effects found in this study. This is due to the variability of in vitro conditions, such
+as cell byproducts or test media’s pH, dilution strength, or composition.
+4. Surface Charge vs. Size Effects on Toxicity
+Because of the competing effects of surface charge and size on cytotoxicity, the viability
+data cannot be used to support the hypothesis regarding the surface charge dependent
+cytotoxicity of AgNPs. Without definitive knowledge concerning their relative impacts,
+these two toxicity variables cannot be decoupled. That being said, although the initial
+hypothesis cannot be explicitly supported, DLS results don’t negate its validity. Prior
+research still supports surface charge dependent cytotoxicity, and AgBPEI’s significantly
+enhanced toxicity is most likely at least partially due to its surface charge.
+
+IV.
+
+Conclusions
+
+AgBPEI is more toxic to human cells than AgCit. AgBPEI’s superior cytotoxicity can be explained
+by enhanced bioavailability to the target cells. Compared to AgCit, AgBPEI has a Coulombic
+propensity, rather than an aversion, to interact with mammalian cell membranes. Moreover, AgCit
+agglomerated to large sizes in test media, hindering the likelihood of cell association and
+diminishing cytotoxic effects. While this prevents conclusions regarding surface charge-dependent
+toxicity from being made, it reveals that AgBPEI is a more stable nanoparticle than AgCit under
+in vitro conditions.
+Additionally, AgBPEI was more toxic than Ag+ to both HeLa cells and 3T3 cells. Therefore,
+AgBPEI toxicity mechanisms cannot be confined to Ag+ dissolution alone, because otherwise this
+toxicity trend would be reversed. Although an auxiliary objective of this research, this is of interest
+to the nanosilver academic community and should be considered when evaluating AgNP toxicity
+mechanisms.
+Lastly, because cancer cells have more negatively charged membranes than healthy cells, the
+difference in toxicity between AgBPEI and AgCit was more apparent in the HeLa line than the
+fibroblast line. Apparent discrepancies in susceptibility to AgNP treatments between the two cell
+lines should be attributed to differences in population size and metabolic activity, and does not
+necessarily reflect preferential toxicity.
+
+23
+
+V.
+
+Recommendations
+
+Cancer researchers investigating AgNPs for targeted tumor applications should use AgBPEI over
+AgCit on the premise of increased physiological stability and toxicity. Citrate is a commonly used
+capping agent for AgNP inherent toxicity studies because of its pre-existing wealth of data and the
+relative ease of AgCit synthesis. However, BPEI is a more stable capping agent that has been
+shown to increase the biocidal effects of nanosilver in both microbes and eukaryotes.
+VI.
+
+Future Work
+
+The next step in this research is to retest AgBPEI against a negatively-charged AgNP that is stable
+in test media. This would isolate surface charge as the only independent variable and eliminate
+aggregation effects as a source of error. For the sake of economy, AgCit will be retested in a
+different, more dilute culture media before other AgNPs are explored. Once a stable, negativelycharged AgNP has been identified, the alamarBlue® viability assay will be run with high
+throughput techniques to improve LD50 accuracy. Once this is complete, a complementary toxicity
+assay should be pursued to corroborate the viability assay results. To this end, the Annexin V
+propidium iodide stain has been chosen and its necessary lab equipment (such as a flow cytometer)
+has been secured. This assay will also help differentiate apoptotic from necrotic effects, and can
+provide additional information regarding the cytotoxicity mechanisms of AgNPs.
+If the hypothesis regarding surface charge-dependent cytotoxicity holds, AgNP researchers should
+begin comparing the cytotoxicity of various positively-charged AgNP to determine an optimal
+AgNP for inherent toxicity applications. With the optimal capping agent found, the tumor targeting
+phase of this research can begin. It may then also be beneficial for targeting moieties to maintain
+a net positive surface charge to enhance their likelihood of cellular interaction. However, it should
+not endanger cancer cell specificity, so as not to deliver AgNPs to healthy tissue. At the very least,
+targeting moieties should avoid highly negative surface charges at physiological pH to enhance
+the likelihood of interaction with cells of interest.
+Lastly, investigations into the physical interaction with the nanoparticle and the cell membrane
+will not only help facilitate targeting research, but can also provide insight into toxicity
+mechanisms that differentiate AgNPs from Ag+.
+
+24
+
+VII.
+
+Acknowledgments
+
+Funding for this research was provided by the Baker & Koob Endowment, a Cal Poly alumnifunded grant designated for undergraduate research and project-based learning.
+Dr. Amro El Badawy (Cal Poly, Environmental Engineering) deserves recognition for providing
+the very inspiration for this research, as well as experimental guidance, data interpretation, and
+technical management of project deliverables. His contributions cannot go understated.
+Similarly, my appreciation goes to Dr. Jean Lee (Cal Poly, Materials Engineering) for her
+personal investment in both me and my research. She encouraged me to pursue my passions,
+even when that meant taking a more “out-of-the-box” approach to a Materials Engineering senior
+project. Her administrative facilitation, editorial oversight, and patient support was instrumental
+to the success of this work.
+Also, special thanks goes to Dr. Sandra Clement (Cal Poly, Biology) for offering her laboratory
+for the biological aspects of this research effort, and to her and Alice Hamrick (Cal Poly,
+Biology) for sharing their resources and expertise. This research would not have been possible
+without their assistance.
+Last but not least, thanks to Jennah and Selsabeel Elghandour for their eager help with lab
+activities. Best of luck on your college applications!
+
+25
+
+VIII.
+
+References
+
+(1)
+
+Hebeish, A.; El-Rafie, M. H.; EL-Sheikh, M. A.; Seleem, A. A.; El-Naggar, M. E.
+Antimicrobial Wound Dressing and Anti-Inflammatory Efficacy of Silver Nanoparticles.
+Int. J. Biol. Macromol. 2014, 65, 509–515.
+
+(2)
+
+Varmer, K.; El Badawy, A.; Venkatapathy, R.; Feldhake, D. State of the Science Literature
+Review : Everything Nanosilver. Office of Research and Development Publications, U.S.
+Enviromental Protection Agency. 2010.
+
+(3)
+
+Ge, L.; Li, Q.; Wang, M.; Ouyang, J.; Li, X.; Xing, M. M. Q. Nanosilver Particles in Medical
+Applications: Synthesis, Performance, and Toxicity. Int. J. Nanomedicine 2014, 9 (1),
+2399–2407.
+
+(4)
+
+Austin, L. A.; Kang, B.; Yen, C. W.; El-Sayed, M. A. Nuclear Targeted Silver Nanospheres
+Perturb the Cancer Cell Cycle Differently than Those of Nanogold. Bioconjug. Chem. 2011,
+22 (11), 2324–2331.
+
+(5)
+
+Sriram, M. I.; Kanth, S. B. M.; Kalishwaralal, K.; Gurunathan, S. Antitumor Activity of
+Silver Nanoparticles in Dalton’s Lymphoma Ascites Tumor Model. Int. J. Nanomedicine
+2010, 5, 753–762.
+
+(6)
+
+Jeyaraj, M.; Sathishkumar, G.; Sivanandhan, G.; MubarakAli, D.; Rajesh, M.; Arun, R.;
+Kapildev, G.; Manickavasagam, M.; Thajuddin, N.; Premkumar, K.; Ganapathi, A.
+Biogenic Silver Nanoparticles for Cancer Treatment: An Experimental Report. Colloids
+Surfaces B Biointerfaces 2013, 106, 86–92.
+
+(7)
+
+Foldbjerg, R.; Dang, D. A.; Autrup, H. Cytotoxicity and Genotoxicity of Silver
+Nanoparticles in the Human Lung Cancer Cell Line, A549. Arch. Toxicol. 2011, 85 (7),
+743–750.
+
+(8)
+
+Urbanska, K.; Pajak, B.; Orzechowski, A.; Soko, J.; Grodzik, M.; Sawosz, E. The Effect of
+Silver Nanoparticles (AgNPs) on Proliferation and Apoptosis of in Ovo Cultured
+Glioblastoma Multiforme (GBM) Cells. Nanoscale Res. Lett. 2015, 10 (98).
+
+(9)
+
+Nowack, B.; Krug, H. F.; Height, M. 120 Years of Nanosilver History: Implications for
+Policy Makers. Environ. Sci. Technol. 2011, 45 (4), 1177–1183.
+
+(10)
+
+Ivask, A.; El Badawy, A.; Kaweeteerawat, C.; Boren, D.; Fischer, H.; Ji, Z.; Chang, C. H.;
+Liu, R.; Tolaymat, T.; Telesca, D.; Zink, J. I.; Cohen, Y.; Holden, P. A.; Godwin, H. A.
+Toxicity Mechanisms in Escherichia Coli Vary for Silver Nanoparticles and Differ from
+Ionic Silver. ACS Nano 2014, 8 (1), 374–386.
+
+(11)
+
+McShan, D.; Ray, P. C.; Yu, H. Molecular Toxicity Mechanism of Nanosilver. J. Food
+Drug Anal. 2014, 22 (1), 116–127.
+
+(12)
+
+Ahamed, M.; Karns, M.; Goodson, M.; Rowe, J.; Hussain, S. M.; Schlager, J. J.; Hong, Y.
+DNA Damage Response to Different Surface Chemistry of Silver Nanoparticles in
+Mammalian Cells. Toxicol. Appl. Pharmacol. 2008, 233 (3), 404–410.
+
+(13)
+
+Park, M.; Neigh, A. M.; Vermeulen, J. P.; de la Fonteyne, L.; Verharen, H. W.; Briedé, J.
+J.; van Loveren, H.; de Jong, W. H. The Effect of Particle Size on the Cytotoxicity,
+Inflammation, Developmental Toxicity and Genotoxicity of Silver Nanoparticles.
+26
+
+Biomaterials 2011, 32 (36), 9810–9817.
+(14)
+
+El Badawy, A. M.; Silva, R. G.; Morris, B.; Scheckel, K. G.; Suidan, M. T.; Tolaymat, T.
+M. Surface Charge-Dependent Toxicity of Silver Nanoparticles. Environ. Sci. Technol.
+2011, 45 (1), 283–287.
+
+(15)
+
+Silva, T.; Pokhrel, L. R.; Dubey, B.; Tolaymat, T. M.; Maier, K. J.; Liu, X. Particle Size,
+Surface Charge and Concentration Dependent Ecotoxicity of Three Organo-Coated Silver
+Nanoparticles: Comparison between General Linear Model-Predicted and Observed
+Toxicity. Sci. Total Environ. 2014, 968–976.
+
+(16)
+
+AshaRani, P.; Hande, M. P.; Valiyaveettil, S. Anti-Proliferative Activity of Silver
+Nanoparticles. BMC Cell Biol. 2009, 10 (1), 65.
+
+(17)
+
+Roh, J. Y.; Eom, H. J.; Choi, J. Involvement of Caenohabditis Elegans Mapk Signaling
+Pathways in Oxidative Stress Response Induced by Silver Nanoparticles Exposure. Toxicol.
+Res. 2012, 28 (1), 19–24.
+
+(18)
+
+AshaRani, P. V.; Mun, G. L. K.; Hande, M. P.; Valiyaveettil, S. Cytotoxicity and
+Genotoxicity of Silver Nanoparticles in Human Cells. ACS Nano 2009, 3 (2), 279–290.
+
+(19)
+
+Choi, O.; Clevenger, T. E.; Deng, B.; Surampalli, R. Y.; Ross, L.; Hu, Z. Role of Sulfide
+and Ligand Strength in Controlling Nanosilver Toxicity. Water Res. 2009, 43 (7), 1879–
+1886.
+
+(20)
+
+Karlsson, H. L.; Toprak, M. S.; Fadeel, B. Metal and Metal Oxide Nanoparticles; 2015.
+
+(21)
+
+Abbaszadegan, A.; Ghahramani, Y.; Gholami, A.; Hemmateenejad, B.; Dorostkar, S.;
+Nabavizadeh, M.; Sharghi, H. The Effect of Charge at the Surface of Silver Nanoparticles
+on Antimicrobial Activity against Gram-Positive and Gram-Negative Bacteria: A
+Preliminary Study. J. Nanomater. 2015, 16 (1), Article ID: 720654.
+
+(22)
+
+Dobrzynska, I.; Skrzydlewska, E.; Figaszewski, Z. a. Changes in Electric Properties of
+Human Breast Cancer Cells. J Membr Biol 2012, 161–166.
+
+(23)
+
+Weiss, L.; Zeigel, R. Cell Surface Negativity and the Binding of Positively Charged
+Particles. J. Cell. Physiol. 1971, 77 (2), 179–185.
+
+(24)
+
+Tatur, S.; MacCarini, M.; Barker, R.; Nelson, A.; Fragneto, G. Effect of Functionalized
+Gold Nanoparticles on Floating Lipid Bilayers. Langmuir 2013, 29 (22), 6606–6614.
+
+(25)
+
+Abercrombie, M.; Ambrose, E. The Surface Properties of Cancer Cells: A Review. Cancer
+Res. 1962, 525–548.
+
+(26)
+
+Cell Culture Basics Handbook. GibcoTM. 2016.
+
+(27)
+
+Tan, S.; Erol, M.; Attygalle, A.; Du, H.; Sukhishvili, S. Synthesis of Positively Charged
+Silver Nanoparticles via Photoreduction of AgNO3 in Branched Polyethyleneimine/HEPES
+Solutions. Langmuir 2007, 23 (4), 9836–9843.
+
+(28)
+
+Ratyakshi; Chauhan, R. P. Colloidal Synthesis of Silver Nano Particles. Asian J. Chem.
+2009, 21 (10), 113–116.
+
+(29)
+
+Mcguigan, C. F. Nitrates, Protein Expression, and Cytotoxicity in Human Cell Lines. 2007,
+p 102.
+
+27
+
+(30)
+
+Riss, T. L.; Moravec, R. A.; Niles, A. L.; Benink, H. A.; Worzella, T. J.; Minor, L. Cell
+Viability Assays. 2015, 1–31.
+
+(31)
+
+Invitrogen. alamarBlue® Assay. U.S. Patent No. 5,501,959.
+
+(32)
+
+Chen, B.; Le, W.; Wang, Y.; Li, Z.; Wang, D.; Ren, L.; Lin, L.; Cui, S.; Hu, J. J.; Hu, Y.;
+Yang, P.; Ewing, R. C.; Shi, D.; Cui, Z. Targeting Negative Surface Charges of Cancer
+Cells by Multifunctional Nanoprobes. Theranostics 2016, 6 (11), 1887–1898.
+
+(33)
+
+Xiu, Z.; Zhang, Q.; Puppala, H. L.; Colvin, V. L.; Alvarez, P. J. J. Negligible ParticleSpecific Antibacterial Activity of Silver Nanoparticles. Nano Lett. 2012, 12 (8), 4271–4275.
+
+(34)
+
+Mycielska, M. E.; Patel, A.; Rizaner, N.; Mazurek, M. P.; Keun, H.; Patel, A.; Ganapathy,
+V.; Djamgoz, M. B. a. Citrate Transport and Metabolism in Mammalian Cells: Prostate
+Epithelial Cells and Prostate Cancer. Bioessays 2009, 31 (1), 10–20.
+
+(35)
+
+El Badawy, A. M.; Luxton, T. P.; Silva, R. G.; Scheckel, K. G.; Suidan, M. T.; Tolaymat,
+T. M. Impact of Environmental Conditions (pH, Ionic Strength, and Electrolyte Type) on
+the Surface Charge and Aggregation of Silver Nanoparticles Suspensions. Environ. Sci.
+Technol. 2010, 44 (4), 1260–1266.
+
+(36)
+
+Peula, J. M.; Fernández-Barbero, a.; Hidalgo-Álvarez, R.; de las Nieves, F. J. Comparative
+Study on the Colloidal Stability Mechanisms of Sulfonate Latexes. Langmuir 1997, 13 (11),
+3938–3943.
+
+(37)
+
+Stebounova, L. V.; Guio, E.; Grassian, V. H. Silver Nanoparticles in Simulated Biological
+Media: A Study of Aggregation, Sedimentation, and Dissolution. J. Nanoparticle Res. 2011,
+13 (1), 233–244.
+
+(38)
+
+Approach to Nanomaterial ES & H. Department of Energy: Nanoscale Science Research
+Centers. 2008.
+
+(39)
+
+Theodorou, I. G.; Ryan, M. P.; Tetley, T. D.; Porter, A. E. Inhalation of Silver
+Nanomaterials--Seeing the Risks. Int. J. Mol. Sci. 2014, 15 (12), 23936–23974.
+
+28
+
+IX.
+
+Appendix
+
+A. Safety and Handling Protocols
+1. Disposal & Handling of Nanoparticles
+Because of their large surface-to-volume ratio, nanoparticles are very reactive. AgNPs in
+particular can cause adverse environmental impacts, and exhibit a cytotoxic effect to both
+microbial and animal cells [2]. Therefore, it is imperative that AgNPs are handled and
+disposed of properly. Environmental, safety, and health standards of nanoparticle
+handling were followed according to protocols developed by the Department of Energy
+Nanoscale Science Research Centers [38].
+The nanoparticles utilized in this study are contained within an aqueous solution,
+so respiratory issues are not of concern [39]. Still, protective equipment such as gloves, lab
+coats, and closed toed shoes were worn to prevent AgNP interactions with exposed
+skin. Surfaces in the vicinity of AgNP handling (lab tabletops, benches, chairs, fume
+hood, and other various lab equipment) were wiped with a damp rag to encourage
+entrapment and coagulation of any lingering nanoparticles. This rag was soaked in water
+and then rinsed and washed with conventional methods. This contaminated water was
+then treated with dilute amounts of HNO3 and poured into the AgNP waste container. In
+the event of a spill over 50 mL, a chloride containing solution would have been poured
+over the spill and wiped up with the rag. Chloride ions encourage AgNP agglomeration to
+microscopic sizes, which diminishes cytotoxic effects and makes cleanup easier.
+When the experiment was finished, all glassware in contact with silver
+nanoparticles was rinsed with deionized water, which was then poured into a designated
+AgNP waste container. Once sufficient rinses were conducted, HNO3 was added to the
+glassware to dissolve any remaining bulk silver and poured into the AgNP waste
+container. The glassware was then washed and dried per usual laboratory procedure. The
+designated waste container was flagged with an EHS (Cal Poly Environmental Health
+and Safety) chemical waste disposal form, placed under a fume hood, and scheduled for
+disposal.
+2. AgNP Storage
+AgNPs are most stable (least likely to aggregate) at reduced temperatures and minimal
+lighting. AgNPs were cold shipped and upon arrival stored, sealed, and wrapped in
+aluminum foil in a laboratory refrigerator (4o C). All nanoparticle handling was
+conducted in sterile atmospheres to eliminate the chances of endotoxin contamination,
+which might have interfered with the toxicity profile of the nanoparticle.
+3. Biological Handling
+Because all biological agents are eukaryotic mammalian cells, there was no immediate
+biosafety hazard [26]. However, the possibility of microbial contamination necessitated
+adherence to anti-microbial protocols.
+Cell lines were only exposed to sterile environments to prevent contamination. To
+accomplish this, cell line flasks were opened only in a vacuum hood after the hood
+surface and all its contents were subject to 20 minutes of UV radiation and a 70% ethanol
+29
+
+spray. (A stronger solution would encourage protein coagulation before the alcohol could
+reach and kill all the cytoplasmic constituents of the contaminating microbe, and would
+thus be less effective). Disposable nitrile gloves were worn during all times and replaced
+every time a new biological item was handled to mitigate chances of crosscontamination.
+Cal Poly’s Institutional Review Board guidelines for the protection of human
+subjects were not applicable to this research since the provided cells were not from living
+sources.
+
+30
+
+B. Sample DLS Data:
+
+Dataset 1. The size distribution (top) of AgBPEI in
+media after 25 minutes reveals how % intensity (y-axis)
+peak was used to determine the average HDD reported
+in Table IV. This sample’s respective auto-correlation
+curve (bottom) was included to illustrate data validity.
+
+Dataset 2: The 25 minute, AgCit in water sample
+showed the same small signal at 2-3 nm as in Dataset
+1. This illustrates an experimental artifact of DLS
+testing.
+
+Dataset 3. AgCit agglomeration immediately following dilution in media (top left) and after 25 minutes (top right).
+These size distributions are polydisperse, as indicated by multiple % intensity peaks. It is evident that the size
+distribution continues to widen with time. Respective autocorrelation graphs (bottom left, bottom right) contain two
+curves each, revealing the polydispersity of the samples.
+
+31
+
+

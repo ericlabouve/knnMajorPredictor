@@ -1,0 +1,8520 @@
+Intro to ME 128 Lab
+by
+Daniel Miranda
+Nikhitha Byragani
+Nicholas Loey
+
+Project Advisor:
+Sarah Harding
+Instructor’s Comments:
+
+Instructor’s Grade:
+Date:
+
+California Polytechnic State University, San Luis Obispo
+
+-1-
+
+C ALIFORNIA P OLYTECHNIC S TATE U NIVERSITY
+
+D EPARTMENT OF M ECHANICAL E NGINEERING
+
+Introduction to ME 128: Thermodynamics, Fluid
+Mechanics, and Heat Transfer Activity
+
+Daniel Miranda, dmiran01@calpoly.edu
+Nikhitha Byragani, nbyragan@calpoly.edu
+Nicholas Loey, nloey@calpoly.edu
+
+Sponsored by
+Dr. Steffen Peuker
+
+June 4, 2017
+
+Statement of Disclaimer
+Since this project is a result of a class assignment, it has been graded and accepted as fulfillment of the course
+requirements. Acceptance does not imply technical accuracy or reliability. Any use of information in this report is
+done at the risk of the user. These risks may include catastrophic failure of the device or infringement of patent or
+copyright laws. California Polytechnic State University at San Luis Obispo and its staff cannot be held liable for any
+use or misuse of the project.
+
+California Polytechnic State University, San Luis Obispo
+
+-1-
+
+Contents
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+Introduction
+
+1
+
+1.1
+
+1
+
+Stakeholders . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Background
+
+1
+
+2.1
+
+Introduction to ME Curriculum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1
+
+2.2
+
+ASEE Research . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1
+
+2.3
+
+Cal Poly Senior Projects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4
+
+2.4
+
+PASCO Products . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+
+Objectives
+
+5
+
+3.1
+
+Problem Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+
+3.2
+
+Customer Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+
+3.3
+
+Quality of Function Development Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+6
+
+3.4
+
+Engineering Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+6
+
+Idea Development
+
+7
+
+4.1
+
+Ideation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+7
+
+4.2
+
+Concepts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+7
+
+4.3
+
+Concept Refinement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+9
+
+Final Concept Comparison
+
+10
+
+5.1
+
+Joule House . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+10
+
+5.2
+
+Energy Conversion and Losses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+11
+
+5.3
+
+Recommended Choice . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+13
+
+5.4
+
+Final Overall Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+13
+
+Final Design
+
+14
+
+6.1
+
+Housing and Base Subsystems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+15
+
+6.2
+
+Pulley and Mass Subsystem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+16
+
+6.2.1
+
+Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+16
+
+6.2.2
+
+Durability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+19
+
+6.2.3
+
+Concept Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+20
+
+Power Transfer Subsystem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+20
+
+6.3.1
+
+20
+
+6.3
+
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+California Polytechnic State University, San Luis Obispo
+
+-i-
+
+6.3.2
+
+Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+21
+
+6.3.3
+
+Concept Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+21
+
+Potential Energy Conversion Subsystem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+23
+
+6.4.1
+
+Concept Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+23
+
+Pump Subsystem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+24
+
+6.5.1
+
+Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+25
+
+6.5.2
+
+Concept Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+27
+
+6.6
+
+Electrical Subsystem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+27
+
+6.7
+
+Heat Engine Subsystem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+27
+
+6.4
+
+6.5
+
+7
+
+Manufacturing
+
+28
+
+7.1
+
+Manufacturing Timeline . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+28
+
+7.2
+
+Baseplate and Acrylic Housing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+29
+
+7.3
+
+Drivetrain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+31
+
+7.4
+
+Pump and Pump Shaft . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+37
+
+7.5
+
+Mass, Winch, and Pulley . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+38
+
+7.6
+
+Final Assembly . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+39
+
+8
+
+Testing and Validation
+
+41
+
+9
+
+Cost Analysis
+
+42
+
+9.1
+
+Bill of Materials . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+42
+
+9.2
+
+Ordering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+42
+
+9.3
+
+Final Order Specs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+42
+
+10 Design and Manufacturing Improvements and Recommendations
+
+43
+
+11 Conclusion
+
+45
+
+12 Attachments (12)
+
+46
+
+California Polytechnic State University, San Luis Obispo
+
+- ii -
+
+List of Figures
+1
+2
+3
+4
+5
+
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+
+Bench top free and forced convection experiment [5]. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Jet flow inside an enclosure experimental setup [6]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Flow over a backward facing step experimental setup [6]. . . . . . . . . . . . . . . . . . . . . . . . . . .
+The HVAC house simulation project. This project was largely controls based, and was meant to
+simulate and record housing heating and cooling in various popular configurations. . . . . . . . . . .
+A hydroelectric energy storage facility uses the same building to both pump water up a hill and pull
+energy from water falling down the hill. During low demand, excess grid energy is used to pump
+water to the upper reservoir. During peak hours, water is run down into a turbine. Not much power
+can be generated from a small scale version of this facility, but the concepts scale well. . . . . . . . . .
+Similar to the hydroelectric storage unit, this rail cart stores potential energy by running up a hill
+during low demand, and falling down the hill with a cable or regen brake during peak hours. This
+device could work to teach thermodynamic laws on in a more hands-on way than water can. . . . . .
+A generalized concept sketch of the house apparatus used in the Joule House experiment. Components
+shown would be removable, allowing students to observe fluid changes due to hardware configuration.
+The hydro-powered version of the energy conversion experiment. This version uses a double-tank
+energy input to pull water through a turbine via gravity. . . . . . . . . . . . . . . . . . . . . . . . . . .
+This alternative energy conversion and losses experiment uses air instead of water to power the input
+shaft. Not shown is the necessary gearing required to turn the input fan at a high RPM to achieve
+maximum airflow under human power. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+The final concept sketch completed before solid modeling began. Note the full gearbox and belt
+drive, which were later omitted to reduce costs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+CAD model of the overall experiment. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Housing subsystem placed onto the base subsystem. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+CAD model of the mass-pulley system. Attachment of mass is shown by the red line while the red
+circle outlines winch drum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Relationship between input mass and output RPM. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Relationship between input weight and the estimated input power supplied to the various subsystems.
+The power transfer subassembly. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+The dogtooth insert inside a modern racing gearbox. These parts are crucial to the design of the
+gearbox, as they allow for power transfer between gear reductions withing a very small footprint. . .
+Potential energy conversion subsystem. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+The pump subsystem. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Exploded view of the pump.The three components include the main housing, the impeller, and the
+housing cover. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Isolated view of the electrical subsystem, which passively converts mechanical motion into electricity.
+A model temperature differential engine similar to that which will be purchased for demonstration
+purposes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Baseplate of the experiment with locating rectangular through slots. . . . . . . . . . . . . . . . . . . .
+Outer acrylic housing wall. From left to right the holes are as follows: shaft hole (left), lever hole
+(middle), and lock-nut hole (right). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Top view of drive train with all power transmission components from mass-pulley to pump and cart
+subsystems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Keyed driveshaft. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Rotating 4-jaw chuck head that can be set up on a knee mill. . . . . . . . . . . . . . . . . . . . . . . . .
+First attempt at creating the dogtooth.The five cuts are clearly not centered on the part. . . . . . . . .
+Second attempt at creating the dogtooth. Better centering resulted in a better cutting pattern. . . . . .
+Finished dogtooth gear. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Pump and ramp pulleys with dogteeth milled out. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+The extrusion on the drivetrain gear was faced down to fit within the subassembly. . . . . . . . . . . .
+3D printed pump with filleted edges. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Mass-Pulley Subsystem to produce initial potential energy input . . . . . . . . . . . . . . . . . . . . .
+Fully assembled experiment on top of one of the HVAC tables. . . . . . . . . . . . . . . . . . . . . . . .
+
+California Polytechnic State University, San Luis Obispo
+
+3
+3
+4
+4
+
+8
+8
+10
+11
+12
+13
+14
+15
+16
+18
+19
+20
+22
+23
+24
+25
+27
+28
+29
+30
+31
+32
+32
+33
+34
+35
+36
+36
+38
+39
+40
+
+- iii -
+
+36
+
+One concept that utilizes the modular experimental setup, demonstrating only fluid energy transfer
+through a pump using a drill-driven pump and a small custom made turbine. This is essentially what
+the pump side of the project design covered, but broken out to create an easier to make assembly.
+Small experimental stations like these would be made for the other forms of energy conversion. . . . 44
+A1 The Heat Engine Efficiency Lab by PASCO. This lab is rather complex mechanically, but covers all
+the relevant topics desired by the customer. It also contains a DAQ (data acquisition) device that
+specializes in thermodynamic process graphing. Sadly, the price is rather inflated, and some of the
+parts are rather delicate. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+A2 The PASCO Stirling Engine catalog entry. While engaging on a visual and mental level, this product
+is rather single-dimensional, targeting only simple conduction and an isothermal/isochoric process. .
+2
+A3 The PASCO fluid flow lab, which highlights various fluid properties by changing cross sectional
+areas, pressures, and surfaces. This lab is rather large in size, and requires fluids in open containers
+that must be prepared before lab. However, it does have numerous DAQ sources, making data
+collection of the fluid properties easy for users. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+A4 The catalog excerpt for the PASCO Thermal Conductivity Apparatus. This product offers a hands-on
+way to observe the conductive properties of various materials, but is very slow as it relies on ice
+melting to demonstrate heat transfer. It also requires ice to be frozen and water to be boiled, hindering
+setup times. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+B1 Quality of Function Development Chart for this proposal phase, correlating customer requirements
+to create engineering specifications. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+C1 Experiment ideas compared in a Pugh matrix. The insulated house was used as a datum since it is a
+relatively common demonstration or example used in universities, including Cal Poly. . . . . . . . . .
+1
+C2 A concept component refinement Pugh matrix looking at the various heat transfer and HVAC component
+possibilities and their use to the project. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+C3 Another concept component refinement matrix, this time looking at potential energy conversion
+components compared to heat transfer and HVAC components from the house idea. . . . . . . . . . .
+2
+D1 Safety checklist for the recommended double tank energy conversions and losses experiment. This
+checklist is subject to change if the experiment concept is modified. . . . . . . . . . . . . . . . . . . . .
+1
+D1 Calculations for torque output of the winch. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+D2 Calculations for the RPM output of the winch. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+D3 Calculations for torque output of the winch. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+H1 Page one of the Gantt chart leading up to the current date. We have completed the design phase... . .
+2
+H2 ...and are moving onto the build and testing phase (page two). . . . . . . . . . . . . . . . . . . . . . . .
+3
+
+List of Tables
+1
+2
+
+Engineering specifications, with their risk and compliance. . . . . . . . . . . . . . . . . . . . . . . . . .
+Maximum pump head as a function of initial mass. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+California Polytechnic State University, San Luis Obispo
+
+7
+26
+
+- iv -
+
+Executive Summary
+This report describes the development of a prototype lab experiment intended to introduce mechanical engineering
+students at California Polytechnic State University to concepts in the realms of thermodynamics, fluid mechanics,
+and heat transfer. These topics have been neglected in the introduction class for multiple reasons, but the instructing
+group feels it is possible to integrate a lab into the class demonstrating basic concepts from these subjects. The
+proposed prototype is a self-sufficient energy generating and transfer mechanism. Unfortunately, the primary
+project goals of being producible on-campus and for under a specified $500 per unit were not obtained with the
+included proposed design. Recommendations for future development, therefore, are also included.
+
+California Polytechnic State University, San Luis Obispo
+
+-v-
+
+1. Introduction
+Introduction to Mechanical Engineering (ME 128) is a class targeted at first year students in the mechanical
+engineering department, with the intent of briefly exposing students to each of the major components of the
+Mechanical Engineering coursework and potential career opportunities. Aside from an HVAC concentration
+introductory lab, this class has neglected to include a specific experiment focused on the subjects of thermodynamics,
+fluids, or heat transfer, and these topics represent a significant amount of the ME curriculum. This report describes
+a proposed solution, the process of developing the design, and also includes any educational documents required
+for the sustainability of the activity.
+1.1
+
+Stakeholders
+
+The sponsor of this senior project is Dr. Steffen Peuker. During his time as an instructor, he has noticed that the
+current Introduction to ME course lacks completeness in content related to thermodynamics, fluid mechanics, and
+heat transfer. He, along with the other ME professors involved in ME 128, have called for a team to create a new
+experiment, which will replace the current spring lab.
+The customers for this project are the future mechanical engineering students who will use the experiment. It is
+assumed that they have very little to no experience in dealing with these concepts, therefore it will be important
+that the designed experiment covers a contemporary and simple experiment that they can understand.
+
+2. Background
+The team conducted extensive research in order to fully understand the proposed project and define a customer
+need. This research included reviewing current material in the Introduction to Mechanical Engineering class,
+finding effective experiments at other schools, and looking at commercial products.
+2.1
+
+Introduction to ME Curriculum
+
+The Introduction to Mechanical Engineering class, ME 128, is the first major-related course that students take at Cal
+Poly. It is a hands-on class that gives an overview of what mechanical engineers do at Cal Poly and in the workplace.
+ME 128 provides this overview through a series of interactive lab experiments that students complete in groups of
+four. The current labs include the disassembly and reassembly of a drill and lawn mower motor, programming a
+robot, analyzing an air conditioner, and measuring the spring constant of different springs. While these labs do a
+good job of introducing freshman students to mechanical design, mechatronics, and HVAC, they fail to introduce
+the students to thermodynamics, fluid mechanics, and heat transfer.
+This is a problem since these topics are considered a core part of mechanical engineering and can be found in
+roughly 40% of the undergraduate curriculum at Cal Poly. On top of that, many students come in with interests in
+thermodynamics, fluid mechanics, and heat transfer but do not know how their interests apply to their major. A
+solution to this problem would be the creation of an introductory experiment, similar to the labs currently in ME
+128, that introduces these missing topics.
+2.2
+
+ASEE Research
+
+To understand how engineering educators are dealing with introducing these topics, references can be drawn
+from articles published in ASEE, the American Society for Engineering Education. Numerous professors have
+reported on hundreds of experimental education environments, which aim to improve academic practices or,
+more importantly, approach a topic from a new angle. To understand difficulties and practices in introducing
+thermodynamics and fluids, papers mainly authored by Dr. Michael J. Prince of Bucknell University were found to
+be the most relatable.
+In one of his papers, Dr. Prince cites the four most commonly misconceived topics in this area as: "(1) temperature
+vs. energy, (2) temperature vs. perceptions of hot and cold, (3) factors that affect the rate vs. amount of heat
+transferred and (4) the effect of surface properties on thermal radiation" [2]. These are familiar concepts to most
+engineering academia, but for incoming students properties such as these can be difficult to grasp or modify
+California Polytechnic State University, San Luis Obispo
+
+-1-
+
+existing misconceptions. Prince proposes that by using a hands-on laboratory based experiment, students better
+understand the concepts behind the fundamentals of thermodynamics-based classes. In follow-up reports, he notes
+that universities that adopted the proposed curriculum without allowing students to get hands on experience (the
+professor does the experiment as a demonstration instead) saw little to no change in the perceptions in students on
+the concepts covered [2].
+To understand how other universities are achieving similar goals, either with or without Dr. Prince’s advice, ASEE
+papers revolving around specific experiments were pulled and referenced. Many of these experiments are or were
+designated for a traditional single-topic class, not an introductory class; however the ideas and concepts behind
+each experiment have the potential to be combined and modified to meet the ME 128 requirements.
+One paper, authored by Dr. Katharyn E. K. Nottis, proposes multiple experiments separated into activities that
+exemplify common thermodynamic properties. Each of these activities has a write-up broken down into three
+phases: "written prediction (I), an action (II, either experiment or simulation), and written post-processing (III)"
+[3]. This is necessary, Nottis explains, as many students "too easily dismiss the results as ’Oh, sure, I thought that
+would happen," without a predictory and post-process phase. While Dr. Nottis’ process is seemingly ideal for ME
+128, the actual activities proposed in her paper do not reflect the general style of Learn-by-Doing and weekly topic
+coverage. The experiments, ranging from entropy to enthalpy to Carnot engines, are round-robin style activities
+with short write-ups, not group-centered lab activities with a formal lab write-up as is traditional with ME 128.
+Another paper, by Dr. Adrienne Minerick, recommends the use of a Desktop Experiment Module (DEMo) to teach
+students. The DEMo system illustrates conduction of various materials, thermal energy generation, thermal contact
+resistance, heat dissipation and convection across surfaces through multiple desk size experiments. According to
+Dr. Minerick, learning is achieved because "1) each student can closely examine and manipulate the apparatus, 2)
+student teams can progress through experiment discovery at their own learning pace, and 3) all learning styles are
+stimulated" [4]. Even though the DEMo experiments follow Cal Poly’s Learn-by-Doing philosophy, they overlap
+with heat transfer experiments in later courses which is not desired.
+Timothy C. Scott’s paper describes a bench top experiment that demonstrates the concepts of free and forced
+convection [5]. His experiment setup, which can be found in Figure 1, is notable due to its low cost allowing
+multiple units to be built so that students could work in small groups. The low cost aspect of Dr. Scott’s experiment
+would be desirable since students in ME 128 work in group of four throughout the quarter. However, his experiment
+looks aesthetically lacking and does not match the quality of the current ME 128 experiments.
+
+California Polytechnic State University, San Luis Obispo
+
+-2-
+
+Figure 1. Bench top free and forced convection experiment [5].
+In regards to fluid mechanics, Dr. Afshin Goharzardeh’s paper provides an overview of two experiments that
+investigate fluid flow [6]. These experiments use Particle Image Velocimetry (PIV) to capture the dynamics of a jet
+flow inside a cylindrical enclosure and single phase flow over a backwards facing step (see Figures 2 and 3). Unlike
+some of the previous experiments mentioned, the cameras required to implement PIV data collection are extremely
+expensive and would not be a feasible option for small groups. Due to this and the complex nature of the topic itself
+for Freshman, Dr. Goharzadeh’s experiments were considered not suitable for ME 128.
+
+Figure 2. Jet flow inside an enclosure experimental setup [6].
+
+California Polytechnic State University, San Luis Obispo
+
+-3-
+
+Figure 3. Flow over a backward facing step experimental setup [6].
+Reading through the ASEE articles offered the team valuable insight on what methods and experiments professors
+from other universities have used to teach thermodynamics, fluids, and heat transfer. However, all of the researched
+methods proved to be either too difficult, too specialized, or too expensive for the ME 128 class. Thus, the team
+turned to researching commercial educational products in hopes of finding better scoped experiments.
+2.3
+
+Cal Poly Senior Projects
+
+In an attempt to find more relatable experiments, previous Cal Poly senior projects were researched. The most
+notable project was a lab experiment created in 2015 for the Fundamentals of HVAC class. In the experiment,
+students analyze the thermal response of a building under various heating and cooling loads. The apparatus,
+shown in Figure 4, consists of a scaled-down model of a building, its control system, and various data acquisition
+tools [8].
+
+Figure 4. The HVAC house simulation project. This project was largely controls based, and was meant to simulate
+and record housing heating and cooling in various popular configurations.
+California Polytechnic State University, San Luis Obispo
+
+-4-
+
+This experiment is great since it is a straightforward model of a real world problem, but the total cost is roughly
+$5,000 which is way over the budget given. However, most of the cost can be attributed to the advanced control and
+data acquisition systems. Overall, this experiment would be an effective way to demonstrate heat transfer concepts
+to incoming freshman if a more cost effective and simplified solution is developed.
+2.4
+
+PASCO Products
+
+The main (if not only) commercial competitor in this area, which provides mass-manufactured lab experiments,
+is PASCO engineering [7]. PASCO provides numerous modular products that cover a wide variety of mechanical
+engineering concepts. Their relevant thermodynamics, fluid dynamics, and heat transfer lab products are located
+in Attachment A. Figure A1 shows the most complex and encompassing lab experiment, the Heat Engine Efficiency
+lab. This experiment uses a hot and cold water bath to expand and contract air within an enclosed chamber, causing
+a piston-cylinder to do work on a mass. While this experiment is a fantastic way to demonstrate isobaric cycles, p-V
+diagrams, convection, conduction, and fluid statics, the total price for one unit is well over $1,000. Buying six of
+these is well outside of the given budget. Additionally, the equipment needed is very bulky and not user friendly,
+requiring numerous parts to be set up each time the experiment is to be performed.
+PASCO has other well-produced products that are smaller and cheaper, but do not cover as many topics as the
+heat engine. Figures A2 , A3, and A4 show some of these products. The Stirling Engine is a single apparatus that
+demonstrates fluid work and changes in temperature causing an isochoric system to expand or contract. The Fluid
+Flow experiment demonstrates flow rates across different cross sectional areas, as well as drag and reactive changes
+in pressure. The Thermal Conductivity Apparatus demonstrates the concept of a thermal circuit for conduction
+through various solid materials by melting ice over sample squares. All of these products are either too short in
+interaction time, cover too few topics to validate a lab report, or are too expensive for their academic value to Cal
+Poly. This sentiment is valid for most of PASCO’s products: While generally "cool," the cost of these experiments is
+highly inflated, the content is not dense enough, and there are too many additional product required to make one
+product fully functional as a lab. A better solution can be tailor-made here, at Cal Poly, for a much lower cost.
+
+3. Objectives
+Based on the team’s research, a problem statement was created to clearly define the need for an introductory
+thermodynamic, fluids, and heat transfer experiment. Additionally, input from the team’s sponsor, adviser, and
+customer was used to create a list of requirements and specifications for the project.
+3.1
+
+Problem Statement
+
+To reiterate, current students in the Introduction to Mechanical Engineering class have no introduction to
+thermodynamics and fluid mechanics. These topics represent a significant amount of both future coursework and
+are a critical component of engineering problems in the workplace. A new experiment must be designed to excite,
+engage, and stimulate students with a contemporary problem. This experiment must be manufactured by the Cal
+Poly machine shops and should be relatively low cost compared to on-the-market options.
+3.2
+
+Customer Requirements
+
+Aside from the main project sponsor’s requirements, the mechanical engineering professors who traditionally teach
+the introductory course have all submitted their own requirements and desires for this project. These ideas have
+been solidified into the requirements presented in this section.
+The most important aspect of the final product is its durability and reproducibility. The experimental apparatus
+will be in the hands of 24+ students for multiple labs a week, every fall quarter. These students are both curious
+and unacquainted with lab equipment handling, so the apparatus must account for this. Since there are six stations
+in the classroom, an additional five apparatus must be produced following the design documents from the final
+project report. This must be done in-house at the Cal Poly machine shops, and with relative ease.
+The educational value and "fun-factor" of the experiment succeed these requirements. Being an
+
+California Polytechnic State University, San Luis Obispo
+
+-5-
+
+introductory class, each and every one of the labs should engage and excite the incoming students, encouraging
+them to pursue each of the covered subjects. The ideal way to do this is to mimic an issue or concept commonly
+seen in industry. By doing this, the lab introduces the students to not just the upcoming curriculum, but a possible
+career path. However, if the lab fulfills this goal, but is boring and uninteresting, this project will have not fulfilled
+its purpose.
+The final customer requirements involve the lab’s academic quality-of-life. The final project should include an
+introductory presentation and a lab report guide for the professor to present to the students before and after the
+experiment, respectively. The presentation should outline the concepts behind the upcoming experiment, and
+introduce multiple applications of the concepts in the engineering workplace. The lab report guide can have
+multiple forms, such as a short document of requirements, or an empty data table which can be investigated with
+supplemental questions.
+It must be gradable, meaning that the results should be easy to follow and predictable each time the experiment is
+performed. Finally, the experiment must be easy to set-up by the professor, and should not over encumber both the
+storage area and the lab tables.
+3.3
+
+Quality of Function Development Analysis
+
+To generate these engineering specifications, the quality function deployment method was applied to the given
+customer requirements. This method allows the project team to materialize high quality engineering specifications
+and gauge their importance in the final product and any prototypes. From these generated specifications, correlations
+can be formed and levels of importance or focus can be developed. It also allows the project to compare itself to
+already existing related products, further solidifying the scope and definition of the final engineering requirements.
+Specifications can be drawn out onto a separate table and their risks can be assessed.
+The QFD chart for this project is included in Attachment B. The goal of having each engineering specification
+correlating with at least one customer requirement in some aspect was achieved, with each specification having a
+quantifiable target. Ideally, the specifications generated are the most concentrated and important ones, however
+they may change with further input from the sponsor. This QFD iteration is the first of multiple, as the process
+is applicable to each phase of the project, up into manufacturing. These future iterations will be appended as the
+project progresses.
+3.4
+
+Engineering Specifications
+
+The final engineering specifications generated from the QFD are listed in Table 1.
+Interestingly but appropriately, the most critical specifications seen by the team are educationally based. Not only
+are the times required for each phase of the lab relatively important, but the content of the lab should be valuable.
+This means that there should be a distinct number of topics covered, and that they should all be easily observable,
+recordable, and presentable.
+The manufactured apparatus for the lab is constrained by human abilities and the pre-existing lab stations used
+for the class, which are found in Building 13, Room 124. The height, width, and length of the apparatus must not
+exceed the maximum safe capabilities of the lab tables. Additionally, the weight of the apparatus must not exceed
+that of a medium parcel, so the lab instructor or students can easily transport them from storage to the lab tables.
+Since there is no power available at or near these tables, the apparatus should not utilize external power.
+Total costs for this project should not exceed $500. This cost includes the price for one experimental apparatus,
+any supplemental lab equipment that is shared by the class but is required for the experiment to operate, and any
+prototype material. This project budget can be modified if outside funds are acquired, but all successive iterations
+of at least the experimental apparatus must cost less than $500. Costs can be curbed by keeping manufacturing
+in-house, so the entirety of the project must be manufactured by either the Mustang ’60 or Aero Hangar shops.
+Each lab experiment should last more than five years of normal operation, enduring over 40 uses per year during
+the fall quarter. During this entire span of operation, it must maintain safety standards seen by all Cal Poly ME lab
+
+California Polytechnic State University, San Luis Obispo
+
+-6-
+
+equipment. There should be no sharp edges that can expose themselves over time, nor any live wires or moving
+parts that are easily accessible.
+Table 1. Engineering specifications, with their risk and compliance.
+Spec. #
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+Parameter Description
+Materials Cost
+Manufacturability at Cal Poly
+Weight
+Height
+Width
+Length
+Safety
+Max Uses
+Quantifiable Data Points
+Cords
+Lifetime
+Experimental Time
+Presentation Time
+Report Making Time
+Concepts Covered
+
+Requirement or Target
+$ 500
+100%
+15 lb
+2’
+2’
+5’
+100%
+40/year
+2
+0
+5 yrs
+2 hrs
+.5 hrs
+.5 hrs
+3
+
+Tolerance
+
+Risk*
+
+Max
+Min
+±5
+Max
+Max
+Max
+Min
+Min
+Min
+Max
+Min
+Max
+Max
+Min
+Min
+
+M
+L
+L
+L
+L
+L
+L
+L
+L
+M
+L
+L
+L
+L
+L
+
+Compliance†
+A
+A, T
+A, I
+A, I
+A, I
+A, I
+A, T, I
+A, T
+A, I, S
+A
+A, T
+T
+T
+T
+A, T
+
+∗: Medium Risk(M) and Low Risk (L) of feasibility
+†: Verification through Analysis(A), Testing(T), Inspection(I), Similarity to Existing Designs(S)
+All of these requirements are summarized in Table 1. This table describes the constraints, risks, and validation
+methods for each specification. Note that almost all of them are low risk goals, with the only possible issues arising
+from the need for more funds or power. The funding could overrun the $500 cap due to the desire for more high-tech
+analysis instruments, but this can be remedied if MESFAC funds are allocated for the project. The need for power
+is of mild concern since heat transfer without fire or electricity is rather slow or requires a material with high heat
+capacity, impacting rapid experimental repeatability. Even with these mild risks, the end product as defined by the
+customer is a definite possibility in terms of engineering.
+
+4. Idea Development
+With the requirements and specifications locked in, idea generation could begin, with experiment concepts
+undergoing testing and comparison against the requirements. From this ideation, a refined final experimental
+concept could be molded.
+4.1
+
+Ideation
+
+The team performed multiple ideation sessions based on the techniques learned in class. The first session focused
+on brainstorming contemporary problems related to thermodynamics, fluid mechanics, and heat transfer. Some of
+the proposed problems included keeping a train or car engine cool, insulating an average household, measuring
+work done by a piston, and simulating thermocline in a water tank. From this session, the team discovered that
+almost all contemporary problems would require a significant amount of simplification so that incoming students
+would be able to understand them. Additionally, these problems would have to be scaled-down is size in order to
+fit within the required footprint.
+4.2
+
+Concepts
+
+The first experiment concept was the simulation of a hydroelectric energy plant, seen in Figure 5, by having water
+flow from tanks at different heights. This two tank experiment revolves around the contemporary problem of
+storing energy during low demand so that it can be used during high demand. The experiment itself introduces
+California Polytechnic State University, San Luis Obispo
+
+-7-
+
+incoming students to the first law of thermodynamics and fluid flow. Ideally, this experiment builds on students
+basic knowledge of potential and kinetic energy while introducing dynamic concepts of pipe flow. Students collect
+data to analyze efficiency in the system and determine where sources of losses could be found.
+
+Figure 5. A hydroelectric energy storage facility uses the same building to both pump water up a hill and pull
+energy from water falling down the hill. During low demand, excess grid energy is used to pump water to the
+upper reservoir. During peak hours, water is run down into a turbine. Not much power can be generated from a
+small scale version of this facility, but the concepts scale well.
+For the next concept, a different method of energy transfer was considered. This experiment concept would use a
+cart on an incline to power an attached wind turbine. As seen in Figure 6 this system models an Advanced Rail
+Energy Storage (ARES) facility which uses elevated carts to provided additional energy during peak use. Again,
+students learn about the first law of thermodynamics and build on their knowledge of potential and kinetic energy.
+This experiment aims to stimulate interest in future thermodynamic classes by demonstrating one use of turbine
+work. Data similar to the hydroelectric experiment would be recorded and analyzed.
+
+Figure 6. Similar to the hydroelectric storage unit, this rail cart stores potential energy by running up a hill during
+low demand, and falling down the hill with a cable or regen brake during peak hours. This device could work to
+teach thermodynamic laws on in a more hands-on way than water can.
+The team created a modified concept of the HVAC senior project mentioned in Section 2.3. The experiment apparatus
+would be similar to the one in the report, except that the advanced controls system would be removed and the walls
+of the modified house would have interchangeable material. The reasoning for this is interchangeable material
+would give students a hands on introduction to two modes of heat transfer: conduction and convection. Students
+would record data such as change in temperature and compare how different materials affect that measurement.
+California Polytechnic State University, San Luis Obispo
+
+-8-
+
+During this process, students would also be introduced to material properties, such as thermal conductivity and
+thermal resistivity, and the necessary equations to find them.
+4.3
+
+Concept Refinement
+
+Although the ideas created went through judgment during the ideation that tested them against larger customer
+requirements, the process of choosing the final project requires a more defined approach. To select an idea as the
+seed for the project design, a quantitative weighing technique called a Pugh matrix was used. Pugh matrices weigh
+concepts with respect to a set of criterion defined by the customer requirements and engineering specifications. To
+simplify later analysis, each concept is weighed against a datum as either better, worse, or the same in terms of the
+criteria in question.
+To refine the concept pool, an initial Pugh matrix was used to challenge each project concept from ideation against
+the others, seen in Figure C1.
+The two top contenders were the downhill cart with wind turbine attachment and the double tank fluid flow energy
+experiment. These two perform higher than the datum in most categories, but lack in experiment flexibility and
+measurement variety. The downhill cart fairs worse, as it does not have much report worthy material aside from
+frictional losses and turbine efficiency. Both experiments have the potential to cost the same or more than an
+insulated house experiment.
+The other designs ranked poorly compared to these two. Radiator efficiency scored third highest against the datum,
+but did poorly in the educational sector since it provides no good base knowledge for students to branch off
+from. The data center convection cooling experiment, as expected, scored similarly to the datum. It only differs
+in the number of data points available to measure and complexity of the assembly due to the need for forced air
+convection. The worst scoring concept was the wave generator. While interesting on paper, everything but the
+educational content, laboratory recycle time, and data availability were worse than the datum.
+With the outcome of the analysis uncertain, a second round of Pugh matrices focused on experimental components
+were created. To do this, the top concepts, as well as the datum, were reconfigured and blended. Since the data
+center ventilation and insulated house experiments were so similar, they could be easily combined. The result of this
+combination is similar to the HVAC building senior project from Section 2.3. The double tank fluid flow experiment
+could be used to power the turbine in the potential energy experiment, pulling the cart up the hill.
+The double tank fluid flow experiment matrix analyzed the moving car, the incline, the pump impeller, and piping.
+To keep the comparison similar to the previous matrix, the insulated wall was also used as the datum. Overall,
+the results showed that the components of the two tank system were almost indistinguishable to the components
+of the house system. The biggest variations occurred when comparing the relatability and the cleanliness of the
+components. It was found that the car on an incline scored better than the insulated wall in relatability since
+students could see what was physically happening in the system. On the other hand, the piping in the two tank
+system scored worse in cleanliness since the system uses water instead of air.
+Using these Pugh matrix results, a final complete system could be conceptualized and presented as a potential
+project solution.
+
+California Polytechnic State University, San Luis Obispo
+
+-9-
+
+5. Final Concept Comparison
+The final two overarching concepts, while both within the scope of the project, are very different in character. While
+the project is currently leaning towards one over the other, the numbers from the Pugh matrix demand that both be
+given equal light before a final decision is made.
+5.1
+
+Joule House
+
+Figure 7. A generalized concept sketch of the house apparatus used in the Joule House experiment. Components
+shown would be removable, allowing students to observe fluid changes due to hardware configuration.
+The Joule House experiment introduces incoming freshman to heat transfer, fluid flow, and basic HVAC components.
+This experiment is capable of demonstrating the concepts of convection, conduction, radiation, and incompressible
+flow using common components such as ducting, windows, wall insulation, and venting. The experimental
+apparatus would be a scaled-down model of a house, similar to the senior project presented in Section 2.3.
+In order to focus students on one subject at a time, the house would be modular, so that the experimental components
+of the house (i.e. walls, duct size, windows, etc.) would be interchangeable. This modularity would also allow
+students to see how changing components effects different engineering parameters like air velocity, temperature
+change, thermal conductivity, and thermal resistance. Additionally, it would promote an iterative, inquiry based
+experiment, where students predict the effect of the change, observe the change as it physically occurs, and analyze
+what actually happened.
+Specific component modules in this experiment are insulated walls and windows, venting through horizontal
+multi-level surfaces, ducting placement along a thermocline, and radiation from surrounding surfaces. Most all
+of these use a warm object in the center of the room, simulating heat-generating objects inside of an enclosure
+(such as a human, computer, or appliance). By changing certain component configurations, either one at a time or
+in various combinations, the student can predict and observe changes in the object and it’s surrounding’s energy
+state. These observations can be made through infrared temperature measurements, or in a more visually appealing
+manner with a thermal imaging camera.
+
+California Polytechnic State University, San Luis Obispo
+
+- 10 -
+
+Lecture material for this class would introduce the three modes of heat transfer, general HVAC practices and
+principles, and how they are applied and measured in construction. Efficiency, energy from heat, and fluid density
+could also be glossed over as introductory interesting points in coursework. The introductory lecture should also
+include report writing guidelines to help guide students through the experiment with the mindset of recording their
+observations.
+5.2
+
+Energy Conversion and Losses
+
+Figure 8. The hydro-powered version of the energy conversion experiment. This version uses a double-tank
+energy input to pull water through a turbine via gravity.
+The energy conversion and losses experiment would function as a scaled-down model of an energy storage plant.
+The experiment could work in two possible ways: by having fluid flow from an upper tank to a lower tank, or by
+having air from a high speed fan move through a pipe, with both methods turning a turbine. With the gears in
+the first position, the rotation of the turbine shaft would turn a pulley which moves a small weighted car up an
+incline. The gears would then be switched to a second position connecting the pulley shaft to a generator shaft,
+releasing the car into a gravity-assisted fall. The rotation of the generator shaft would then power a device that
+could measure the energy output of the generator. For the water powered system, this could be done by powering
+a pump to pump water back to the input tank, where the change in volume can be measured. In the air powered
+system, a lamp, kill-a-watt, or fan can be used to measure energy output. A picture of the described apparatus can
+be seen in 8, with the air-type system shown in Figure 9.
+
+California Polytechnic State University, San Luis Obispo
+
+- 11 -
+
+Figure 9. This alternative energy conversion and losses experiment uses air instead of water to power the input
+shaft. Not shown is the necessary gearing required to turn the input fan at a high RPM to achieve maximum
+airflow under human power.
+This experiment introduces students to the first and second law of thermodynamics, conservation of mass, and
+pipe flow. By measuring energy at multiple points, students can estimate and observe energy loss through a simple
+mechanical system. Using the first law of thermodynamics and basic energy equations, students can predict the
+ideal energy transfer without losses. Then, using various velocities, masses, and power measurements, students
+can measure actual energy loss as power is transmitted through the system. If possible, students can try to rig up a
+"potential energy machine" by connecting the input fluid flow to the output fluid flow (or by letting water continue
+to pump if water is used). By doing this, students can inquire about and observe the second law of thermodynamics
+in a physical example. By observing fluid flow at the input and output (through pressure or velocity), advanced
+students can answer questions on fluid losses and laminar pipe flow.
+The introductory lecture would introduce the first two laws of thermodynamics, and provide students with enough
+background to start the experiment. It may also introduce report writing guidelines, to ensure that the instructor
+does not need to rush the end of the period. The concluding lecture can consist of examples of systems who see
+problems similar to those in the lab constantly, and can discuss hydroelectric storage options which use energy
+storage and conversion to supply high demand energy periods.
+
+California Polytechnic State University, San Luis Obispo
+
+- 12 -
+
+5.3
+
+Recommended Choice
+
+While these two choices for the experimental concept are conceptualized and can be manufactured with relative
+ease, a final decision had to be made. The team recommended the pursuance of the energy conversion and losses
+experiment. The main reason for this choice is the tangibility of the experiment; the student changes multiple
+physical variables throughout the experiment, directly observing the consequences of the choices, allowing for open
+questions in the lab manual. In contrast, the house experiment uses solely air as its dependent variable generating
+material, which is not visible, even in a thermal imaging camera. While less modular than the house experiment, the
+energy conversion experiment’s single iteration loop can help students focus on the concepts being covered rather
+than the procedure of the experiment. It also anchors onto high school level physics concepts that are expanded
+upon in college, while the house experiment introduces mostly brand new law, equations, and theory.
+5.4
+
+Final Overall Selection
+
+Figure 10. The final concept sketch completed before solid modeling began. Note the full gearbox and belt drive,
+which were later omitted to reduce costs.
+While the team decided to go with the overall energy conversion theme, a few changes had to be made to ensure that
+the experiment would work properly. Instead of having the fluid fall to power a closed loop system, a mass would
+be dropped to power three separate subsystems. The final proposed system, sketched in Figure 10 is explained in
+detail in the following section.
+
+California Polytechnic State University, San Luis Obispo
+
+- 13 -
+
+6. Final Design
+The final design of the experiment introduces incoming students to the conservation of energy. It does this by
+converting potential energy to kinetic energy, rotational energy, and electrical energy. The experiment starts by
+dropping a mass at a specific height to turn a shaft. The rotational motion of the shaft is then transfered through a
+series of gears and pulleys to either pull the cart up the ramp, turn the pump impeller, or power the light bulb. The
+final design of the experiment can be seen in Figure 11.
+
+Figure 11. CAD model of the overall experiment.
+As seen from above, the experiment includes six subsystems: housing, pulley and mass, power transfer, potential
+energy conversion, pump, and electrical. Additionally, the experiment includes a heat engine subsystem that is not
+pictured. A detailed description of each subsystem can be found in the following sections.
+
+California Polytechnic State University, San Luis Obispo
+
+- 14 -
+
+6.1
+
+Housing and Base Subsystems
+
+Figure 12. Housing subsystem placed onto the base subsystem.
+The base and housing subsystems, while separate on paper, are closely related. Both act together to create a safe
+and fun tool for students to utilize without contributing much to the actual engineering being observed.
+The base subsystem is constructed completely with 0.125" thick 6061-T6 sheet metal. High strength aluminum was
+chosen for its durability and weight, which are important for constant handling and storage. The main plate is a
+CNC-slotted for precision location of the housing walls and other components. Holes for the pulleys, winch, and
+oil drain screw are also machined on. Welded to the base are cleats which allow the system to rest on the edge of a
+table in a manner that restricts it from tipping when a large mass is dropped. These cleats are attached using a TIG
+fillet weld.
+One edge of the base hangs off the side to allow the pulley-mass system to drop its mass off the side of the table.
+This cantilever section has the potential to deflect, however since it is so close to the anchored base at 0.95", the
+shear stresses experienced by the aluminum plate are minimal. With a 30lb weight, the maximum deflection seen
+by the plate would by under 0.001". This is the only loading concern with this subsystem.
+The housing subsystem, which consists of any walls and most supports, is made entirely out of sheet acrylic. This
+material was chosen over the main competitor, polycarbonate, due to its manufacturability and material properties,
+and over metals for its transparency and weight. Additionally, acrylic is one of the cheapest options for this
+subassembly.
+It is important that the walls remain as transparent as possible so data and observations can be recorded by students
+for many years. Polycarbonate yellows after some time, while acrylic does not. Polycarbonate also has the ability
+to become toxic under some circumstances, while acrylic remains inert.
+Acrylic can be cut on the laser cutters at Mustang ’60, an important factor in respects to meeting our customer
+requirement of complete in-house manufacturing. Polycarbonate does not break cleanly when cut by a laser, and
+must be deburred imprecisely, which also mars the surface transparency.
+California Polytechnic State University, San Luis Obispo
+
+- 15 -
+
+All like sides of the walls will be cemented using acrylic glue, which chemically reacts with the acrylic to melt the
+edges and create a permanent, airtight bond. To attach to metals, a silicon caulking will be used. Note that this
+method forbids any lifting of the system from the walls, which will be included in a warning on the final device.
+If necessary, a hinged door can be added to the lid, allowing for maintenance of the pump. This can be added
+with ease, however it would compromise the airtightness of the pump system. If maintenance is required, it is
+recommended that the acrylic be pried from the base since there is already an opening allowing access to the gear
+system.
+6.2
+
+Pulley and Mass Subsystem
+
+The power input for the experiment is falling weights. For the weight to transmit their gravitational potential
+energy a pulley and winch system must be used. For this there is a range of different sized weights, which fall at
+the same height. The vertical falling motion is converted to rotary motion through a winch system as can be seen in
+Figure 13.
+
+Figure 13. CAD model of the mass-pulley system. Attachment of mass is shown by the red line while the red circle
+outlines winch drum
+6.2.1
+
+Analysis
+
+The main analysis that needed to be completed was to see if enough energy was produced from the falling mass to
+power the three subsystems. Basic dynamics was performed to get the output rpm of the winch gear that would go
+into the power transmission system. The main values that were needed to do this analysis were the drum diameter
+and the gear ratio between the drum and the output shaft. The following set of equations show how the output
+rpm was derived from the falling weight.
+
+California Polytechnic State University, San Luis Obispo
+
+- 16 -
+
+First, knowing that the force on the drum is just the weight of the mass which is given by :
+f = m ag
+
+(1)
+
+T = f rD
+
+(2)
+
+Where:
+m = input mass
+a g = acceleration due to gravity
+f = force of mass on drum
+Putting that value into the equation for torque
+Where :
+T= Torque on drum
+r D = radius of drum
+Ix =
+
+m D r2D
+2
+
+(3)
+
+Where:
+Ix = moment of inertia of drum
+m D = mass of drum
+From using the calculated valued above to find angular acceleration
+α=
+
+T
+Ix
+
+(4)
+
+Where:
+From there finding the tangential acceleration using :
+atD = α r D
+
+(5)
+
+Where:
+atD = tangential acceleration on winch drum
+α= rotational acceleration
+Rearranging the kinematic equation of motion, the time of the fall can be estimated :
+s
+t=
+
+2
+
+2h
+atD
+
+(6)
+
+Where:
+h = height of falling mass
+
+California Polytechnic State University, San Luis Obispo
+
+- 17 -
+
+The number rotations made in each fall is simply found out by:
+N=
+
+h
+2 π rD
+
+(7)
+
+Where:
+N = no. of revolutions
+Finally the angular velocity of the drum can be found by :
+ωD =
+
+N 60s
+t 1min
+
+(8)
+
+Where:
+ω D = angular speed of the drum
+The final output to the shaft that will connect to the power transmission is simply found using the gear ratios :
+rpmos = ω D R
+
+(9)
+
+Where:
+R = gear ratio
+rpmos = output speed of the mass-pulley system
+From the above derivation, Figure 14 was plotted to show a relationship between the input mass that falls and the
+output rpm. With that relationship, the minimum mass required to power the system was be found. Additionally,
+the negative concavity of the graph showed that increasing the mass had diminishing return on rpm, thus giving
+the team an upper limit for mass.
+
+Figure 14. Relationship between input mass and output RPM.
+California Polytechnic State University, San Luis Obispo
+
+- 18 -
+
+Using excel to curve fit the data points with a power fit, an equation to relate input mass to output rpm is found to
+be :
+rpmos = 31.148 m0.5
+
+(10)
+
+The tachometer that will be purchased has a minimum reading of 50 rpm. With Equation 10 the minimum input
+mass required for that speed is around 2.5 lbs.
+The final estimated input power (in Watts) to the various energy converting subsystems is found by :
+Pin =
+
+rpmos T 745.7
+R
+33000
+
+(11)
+
+The relationship between estimated input power and the initial mass that is dropped can be seen below in figure 15
+.
+
+Figure 15. Relationship between input weight and the estimated input power supplied to the various subsystems.
+Using excel to fit a trend line to these data points the equation that will relate this parameters can be seen below in
+Equation 12 :
+Pin = 0.1283 m1.5
+6.2.2
+
+(12)
+
+Durability
+
+The winch is designed for a load capacity of 350 lbs (lowest size available) , however the maximum weight that the
+experiment will have is 10 lbs. This experiment would only be used 50 hours per year, so no significant lifetime
+calculations needed to be calculated. The gears on the winch will be adequately lubricated and should not undergo
+California Polytechnic State University, San Luis Obispo
+
+- 19 -
+
+any major wear. The only component of the mass-pulley system that will need maintenance is the rope for the
+winch. However, this is standard stock 3/16" Nylon rope which is cheap and can be easily replaced. Once students
+notice any fraying the professor can simply swap out the rope. This rope is rated to hold a 36lb load which is around
+300% heavier than the expected maximum mass of 10 lbs.
+6.2.3
+
+Concept Modeling
+
+Students can imagine the falling mass as a gravitational power source such as a hydroelectric dam, a counterweight
+on an elevator, or even a pile driver. All of these systems store energy by leaving it in a higher elevation energy
+state. This energy is then released and captured using some other mechanism. The mass in question does not have
+to be solid, nor does it have to be attached by a rope. Roller coasters, for example, constantly use potential energy
+to self propel. Certain gliders can power their electrical systems by falling towards the earth against the resistance
+of the air, spinning bladed turbines to generate shaft power. These are some of the examples that can be covered in
+the introduction presentation when discussing energy engineering applications.
+6.3
+
+Power Transfer Subsystem
+
+Figure 16. The power transfer subassembly.
+The heart of the assembly is the power transfer system, which acts as a pseudo gearbox that transfers rotational
+motion from the winch to the other three subsystems in the box. The goal of this system is to transfer power while
+introducing losses through multiple types of rotary components including gears, dogteeth, and pulleys.
+6.3.1
+
+Overview
+
+Power transfer is the largest subsystem, and is easiest to outline by following the path of the transmitted forces. The
+winch has a gear on the main spindle, which turns a pinion attached to the handle assembly. There is a clearance
+behind this winch assembly that allows a 32-tooth gear to be hooked up to the winch pinion. This gear has a
+keyway, which allows it to permanently attach itself to a steel shaft. The shaft is supported by delrin bushings
+glued to acrylic supports.
+This steel shaft is only keyed to the gear and a special dogtooth gear. This gear, which rotates with the shaft, has
+coarse teeth which require little precision to engage with any mating gears. This makes it easier for students to
+engage the different systems and reduces the amount of moving parts of the subassembly. The lever for this shifter
+is attached by a steel fork, which slides over the shifter. The lever and fork are supported by an acrylic mount with
+a delrin bushing.
+California Polytechnic State University, San Luis Obispo
+
+- 20 -
+
+To connect to the two systems, pulleys have been recycled from the old ME 128 lawnmower racers lab. These
+pulleys have a large cast iron outcropping with a set screw hole, which can be machined with teeth fairly easily,
+allowing for easy engagement with the opposing dogteeth. These pulleys will be allowed to spin freely on the shaft
+until engaged by the shifter. From these two, pulley power will be transfered by either rotational motion or spooling
+of wire.
+6.3.2
+
+Analysis
+
+The use of dogteeth not only makes manufacturing easier but reduces the worry of gear tooth stresses. Initial
+revisions of the subassembly used four different gears, the one input gear and three other gears used in a traditional
+shifter fashion along a translating shaft. This system, however, proved to have significant losses at the designed
+operating conditions. While a gear reduction would have been interesting for students to investigate, the chances
+of the final system not working as intended was too high. Thus, a direct power system works much better for us,
+and still allows students to perform a gear calculation on the input gearing (if so desired).
+For the input, the gearing has a 32-tooth gear on the winch going into a 10-tooth pinion. When an additional
+32-tooth gear is attached as the shaft input gear, the 10-tooth pinion becomes an idler gear, resulting in a 1:1 gear
+ratio. Students should be able to calculate and observe this fact by monitoring the speed of the gears as a mass falls,
+and by performing gear calculations which were introduced during the drills lab. Another added benefit of the 1:1
+system is the direct relationship between the height of the mass dropped and the travel distance of the cart. Ideally
+they would be the same, but the weight of the cart may sometimes forbid this from occurring.
+The input gear, made of hardened steel, is overbuilt for the system. AGMA calculations proved to be rather helpless,
+since most calculation constants expect much higher speeds and loads. Even for the maximum expected torque with
+a mild shock loading factor added, the shear factor of safety is well above the acceptable limit. For the gears on
+the winch, the manufacturer specifications rate them to lift at least 300 pounds vertically, more than enough for this
+system’s needs.
+The pulleys are made of zinc cast-iron, with the teeth of the dogtooth section measuring about 3/8" in thickness.
+Assuming the teeth are cantilever beams with a point load on the end, the overall bending stresses are negligible.
+If frictional wear from engagement shreds the teeth, the dogtooth design would have no issues engaging. If wear
+becomes serious, a manufactured replacement is recommended.
+6.3.3
+
+Concept Modeling
+
+By integrating multiple forms of rotary power transmission components, this system helps exemplify the many
+ways that rotary power is handled in numerous applications. The gear system calls back to the drills lab, and
+shows how gears can be power sources without requiring manual turning. The v-belt system demonstrates a simple
+accessory system used commonly in large machine parts where gearing does not fit, and where costs do not allow
+for a more complex system. Students can also be introduced to belts which are off-axis, attached to multiple pulleys
+(like in a modern car engine), or in lightweight designs in the place of a chain and sprocket.
+
+California Polytechnic State University, San Luis Obispo
+
+- 21 -
+
+Figure 17. The dogtooth insert inside a modern racing gearbox. These parts are crucial to the design of the
+gearbox, as they allow for power transfer between gear reductions withing a very small footprint.
+The dogtooth system introduces students to a common but rarely seen component inside modern day gearboxes.
+This critical component has allowed the design of a manual transmission to reduce its footprint significantly since
+the early days of automobiles. As seen in Figure 17, they are used in multiple locations with multiple shifting forks.
+By showing a very simple model of the dogtooth system, students can add a new tool in their design toolbox for
+use in future projects.
+This system is also important in that is creates the losses that students must analyze. These types of losses exist
+in powertrain systems everywhere, and are remedied many different ways (bearings, bushings, face width, tooth
+count, etc). Some of these methods and applications can be covered in the intro presentation. Conceptualizing
+and observing these types of losses, be it directly through this system or through comparison of other connected
+systems, is crucial to understanding the first and second law of thermodynamics and the idea of a non-reversible
+process.
+
+California Polytechnic State University, San Luis Obispo
+
+- 22 -
+
+6.4
+
+Potential Energy Conversion Subsystem
+
+Figure 18. Potential energy conversion subsystem.
+The potential energy conversion subsystem is the simplest energy conversion subsystem to understand in the
+experiment. Similar to the power transfer system, it introduces freshman to losses that occur from static and kinetic
+friction of rolling objects. When the system is engaged with the power transfer shaft, the pulley underneath the
+ramp gets spooled, thus pulling the cart up the track.
+Both the ramp and ramp base will be cut to size from .118" thick acrylic sheet. The ramp base will be located with a
+slot on the housing and bonded with an acrylic bonding agent. The ramp will then be bonded on to the ramp base
+at a 25◦ angle. The ramp will also be slotted towards the top to fit the 1/8" braided rope. Additionally, horizontal
+pulleys will be mounted on both the housing and ramp with 3/16" fasteners. The track will be purchased online
+as Code 80 Flextrack and glued onto the ramp. A standard Atlas boxcar was selected as the cart for the subsystem.
+Due to the difficulty to calculate the exact losses in the power transfer system, it was decided that the mass of the
+cart would be determined through testing.
+Through this subsystem, students would observe that the cart can never move up the ramp on its own. They would
+also see that the max height of the cart would never reach the height of the initial mass. Students can then compare
+the efficiency of the PE change to the efficiency of the rpm and determine what causes those differences if any.
+6.4.1
+
+Concept Modeling
+
+Although the conversion from potential energy to potential energy may seem pointless to the students, the first
+and second law of thermodynamics are easiest to demonstrate here. While the students are observing the first law,
+they can also see how the flow of energy could be reciprocated for practical use and real world applications. As
+mentioned in section 4.2 with the concept of the advanced rail energy storage, the idea of a cart (in this case a train
+car) running up the hill storing potential energy, can easily be related to the experimental model with the weighted
+toy car. The basic concept of storing potential energy (at a loss) can also be seen in the hydro storage plants seen in
+various high demand areas around the world.
+
+California Polytechnic State University, San Luis Obispo
+
+- 23 -
+
+6.5
+
+Pump Subsystem
+
+The pump subsystem aims to introduce students to the concept of fluid energy as well as show them what a
+miniature centrifugal pump looks like. It consists of the large pulley, the pump pulley, the pump shaft, the pump,
+and SAE 10W oil that submerges the pump. Additionally, a steel ruler will be attached to the back wall of the pump
+housing to measure head height. A picture of the subsystem without oil and the housing can be seen in Figure 19
+below.
+
+Figure 19. The pump subsystem.
+When the system is engaged, the large pulley turns the smaller pump pulley which is connected to the pump shaft.
+The shaft then turns the impeller which produces head. The large pulley will have a diameter of 3.5" while the
+pump pulley will have a diameter of 1" giving a ratio of 3.5:1. The pump shaft will be connected to the pump pulley
+by using a set screw and will be stepped down from .5" diameter to .25". This end will be glued into the pump
+impeller. A detailed breakdown of the pump and its components can be seen in Figure 20.
+
+California Polytechnic State University, San Luis Obispo
+
+- 24 -
+
+Figure 20. Exploded view of the pump.The three components include the main housing, the impeller, and the
+housing cover.
+As seen from above, the pump consists of three main components: the main housing, the impeller, and the housing
+cover. In order to get an initial estimate of the pump size, a 2.25"x2.625"x3" Little Giant 1-EUAA-MD aquarium
+pump was borrowed from Dr. Andrew Kean and referenced. During disassembly of the Little Giant, it was found
+that there was no easy way to attach the impeller shaft to the stepped down pump shaft. It was also found that most
+standard aquarium pumps operated though use of an electromagnetic motor which increased the overall size of the
+pump. With this information, it was decided that the best course of action would be to 3D print a pump similar
+to the Little Giant but with an easily accessible impeller shaft and smaller dimensions. The final dimensions of the
+pump are 1.88" long, .75" wide, and 2.38" tall.
+The pump was then analyzed to ensure that the falling mass would produce enough head for students to measure.
+The following equations detail the process used.
+6.5.1
+
+Analysis
+
+First, starting with Bernoulli’s Equation of motion when the fluid is at rest at state 1 and at the maximum height at
+state 2:
+V2
+V2
+P1
+P
++ 1 + z1 = 2 + 2 + z2 − h pump + h L
+ρg 2g
+ρg 2g
+
+(13)
+
+Where:
+P1 = Pressure at state 1
+P2 = Pressure at state 2
+V1 = Velocity at state 1
+V2 = Velocity at state 2
+z1 = Height at state 1
+z2 = Height at state 2
+h pump = Head created by the pump
+h L = Head loss
+ρ = Density of SAE 10W oil
+g = gravity
+For both states, the fluid is at atmospheric pressure and the velocity is at zero while the fluid height at state 1 is
+
+California Polytechnic State University, San Luis Obispo
+
+- 25 -
+
+zero. This leaves:
+z2 = h pump − h L
+
+(14)
+
+Ẇsha f t
+ṁ f luid g
+
+(15)
+
+Recall that h pump is equal to:
+h pump =
+Where:
+Wsha f t = Work of the shaft
+m f luid = mass of the SAE 10W oil
+Finally this leaves:
+z2 =
+
+Ẇsha f t
+− hL
+ṁ f luid g
+
+(16)
+
+For these calculations, it was assumed that the mass of the SAE 10W oil is equal to its density times the volume in
+the pump. It was also assumed that the head loss term could be dropped due to head losses being hard to quantify
+at low rpms. Instead, that loss was lumped into the overall inefficiencies of the power transfer through the system.
+A conservative value of 40% efficiency was used. The minimum head height was calculated to be 0.8 inches while
+the maximum head height was calculated to be 7.5 inches. Table 2 below shows the relationship between input
+mass and the height of pump head.
+Table 2. Maximum pump head as a function of initial mass.
+Mass (lbm)
+
+Pump Head (in)
+
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+4.0
+4.5
+5.0
+5.5
+6.0
+6.5
+7.0
+7.5
+8.0
+8.5
+9.0
+9.5
+10.0
+
+0.8
+1.1
+1.5
+1.9
+2.3
+2.6
+3.0
+3.4
+3.8
+4.2
+4.5
+4.9
+5.3
+5.7
+6.0
+6.4
+6.8
+7.2
+7.5
+
+Using the steel ruler mentioned previously, students will be able to record head height for various masses. Then by
+using the simplified version of Bernoulli’s (Equation 16), students can compare how much head the initial power of
+the mass falling before going through the power transfer subsystem to the actual head measured. Students would
+identify potential areas of loss in the system.
+California Polytechnic State University, San Luis Obispo
+
+- 26 -
+
+6.5.2
+
+Concept Modeling
+
+While the pump subsystem may seem very simplified, it has multiple real world applications that can be mentioned
+to students after the experiment is completed. Professors can describe this subsystem as part of an hydroelectric
+storage facility that takes cheap or unused energy and stores it for later. In this scenario, the falling mass would be
+imagined as the unused energy source and the resulting head would be the stored energy. Professors could then tell
+the students to imagine what would happen if all the pumped oil was saved in a higher reservoir and the system
+was ran in reverse. This would spark an open discussion on efficiency and feasibility of real world storage plants.
+Another topic for discussion would be the similarities and differences between the different types of pumps. Most
+students coming into college with a basic understanding of a positive displacement pumps, such as a bike pump,
+but lack knowledge of centrifugal pumps and their uses. This topic could be covered by a quick lecture at the start
+of class or through pictures found in the students experiment manual.
+6.6
+
+Electrical Subsystem
+
+Figure 21. Isolated view of the electrical subsystem, which passively converts mechanical motion into electricity.
+The LED light indicator is based off a simple rotating generator. Using a 12V laboratory motor placed in parallel
+with the main power transfer shaft, a small amount of current can be produced to power a low-wattage LED placed
+on the lid of the housing.
+The design of this system is relatively passive and isolated. The motor chosen offers almost no magnetic resistance,
+and the LED has a high efficiency, requiring less than 1 Watt. These factors combined turn on the light whenever
+the shaft is rotating at any of the designed operating speeds.
+If available, students can use an ammeter to measure current and voltage passing through the wires as the shaft
+turns. From these, power can be calculated and compared to the input shaft’s power.
+6.7
+
+Heat Engine Subsystem
+
+This subsystem is not part of the designed assembly, but is a deliverable required to meet the customer requirements
+for this specific design. To encompass the complete range of energy types, heat must also be covered in some form.
+Since the designed assembly cannot create heat energy in any form that is engaging or interesting (frictional wear),
+a more igniting example can be integrated into the lab.
+
+California Polytechnic State University, San Luis Obispo
+
+- 27 -
+
+Figure 22. A model temperature differential engine similar to that which will be purchased for demonstration
+purposes.
+To demonstrate the conversion of stored energy into heat and mechanical energy, a small model alcohol burning
+engine will be purchased online. These small engines are relatively cheap compared to lower differential engines,
+such as the Sterling engine. One or two engines will be placed on the back table of the room, where the lecturer
+will call up groups one by one, showing how the engine works and how the energy input creates a thermodynamic
+cycle within the piston-cylinder system.
+To help students quantify how much energy is being produced, a tachometer will be attached to the flywheel of the
+engine, reading RPMs of the engine. From this value, students can compare the power of the heat system to the
+main system and its various energy outputs.
+To ensure the engine is operated in a safe manner, students will be forbidden from contacting any part of the
+engine. This rule will be enforced by a small blast shield, or piece of sheet acrylic. The lecturer can reach from the
+side and demonstrate the kick start required to start the engine oscillations, and then allow the students to take
+measurements.
+Alcohol, if spilled onto the wooden table surfaces, combusts at a generally low temperature, giving anybody around
+a good amount of time to extinguish the flame before the table itself combusts (if it does combust at all). The multiple
+layers of errant hot glue strands on the tables should also protect them from any fire hazards.
+
+7. Manufacturing
+7.1
+
+Manufacturing Timeline
+
+As required by the customer, all manufacturing was done in-house by either the team or by a member of the Cal
+Poly Shop staff. A visual guide of the original plan is available as a Gantt Chart in Attachment H. However, due
+to many setbacks and delays, the original timing was not achieved. The biggest issue that the team faced was not
+finding a shop technician who was available to CNC the baseplate slots at the end of winter/start of spring quarter.
+This caused a chain of delays as the team had to find alternative methods to manufacture the baseplate correctly.
+The team took steps to limit the delay as mush as possible by focusing on manufacturing all of the other components
+California Polytechnic State University, San Luis Obispo
+
+- 28 -
+
+while the baseplate issue was being resolved. This helped considerably but the team was still unable to make up
+all of the lost time. The failure to get the baseplate slots CNC’d also created many problems during the assembly
+of the experiment since the slots were a critical feature for location and fit of the remaining components. These
+problems, along with the complexity of the initial experiment design lead to the team barely being able to complete
+the manufacturing in time.
+7.2
+
+Baseplate and Acrylic Housing
+
+The first component that was planned to be manufactured was the baseplate. Initially, the team wanted CNC-cut
+slots and holes for precision placement. It was estimated that CAM work and consultation would have taken
+approximately 30 minutes from when the shop tech received the CAD file. Machine setup would have taken another
+30 minutes, followed by the operation itself, which was estimated to take 20-30 minutes. All of this would have
+resulted in a manufacturing time of roughly 1.5 to 2 hours.
+However, since the team was not able to find someone to CNC the baseplate in an appropriate amount of time,
+other measures had to be taken. After consulting with the IT department, the team decided to cut the baseplate on
+the IT Department’s waterjet machine. The plate design was modified to make the locating slots go through the
+material since the waterjet does not regulate depth. This resulted in the cuts creating a path with tabs as seen in
+Figure 23.Using the waterjet was beneficial as the CNC operation would have caused chatter in the material as it cut
+a long thin strip. Additionally, the vice on the IT department’s CNC machines were too small for the baseplate to
+fit. Unfortunately, a mishap during the cutting caused one of the slots to become slightly misaligned, which made
+it harder to fit the acrylic housing in.
+
+Figure 23. Baseplate of the experiment with locating rectangular through slots.
+After the baseplate was cut, the gussets and cleats needed to be cut from the stock aluminum sheet. This could
+have been done on the vertical bandsaw and then sanded to a nice finish. However, after some consultation with
+the mustang 60 shop techs, it was found to be easier to simply just waterjet all the smaller pieces too. The gussets,
+cleats, ramp support, and bushing holders were all waterjet to achieve a precise cut.
+The actual cutting time required to waterjet all the aluminum components was relatively short. However, the IT
+Department lab, where the waterjet is located, is only open for a few hours a week and can become very crowded.
+This will not be a a problem in the future as a new (or refurbished) waterjet is said to be opened in the near future
+for the ME department.
+
+California Polytechnic State University, San Luis Obispo
+
+- 29 -
+
+The acrylic housing was primarily manufactured on a laser-cutter in the M60 shop. In order to use the laser-cutter,
+an appointment had to be set up in the M60 office beforehand. Preparation to use the laser-cutter was key since
+the operation window was limited to only 3 hours. First, a DXF file of the desired cut lines was created in Adobe
+Illustrator and placed on a USB drive. Then, the 24"x2" acrylic sheet was cut on the table saw into a 18"x24" piece
+and a 6"x24" piece since the laser-cutter bed is 18"x36". With these two steps complete, the acrylic was ready to be
+cut on the laser-cutter.
+The laser-cutter was able to cut all of the housing pieces successfully except one, which was the outer housing cover
+(pictured in Figure 24). For this piece, the cutter was unable to fully cut out the lever and lock-nut holes that helped
+locate the winch lever. The easiest method to fix this was to use a hole saw to remove the remaining material.
+However, more complications with the holes followed.
+
+Figure 24. Outer acrylic housing wall. From left to right the holes are as follows: shaft hole (left), lever hole
+(middle), and lock-nut hole (right).
+After placing the winch on the baseplate, it turned out that the lever hole and lock-nut hole were not correctly
+located on the acrylic. The team tried to fix this issue by widening the lever hole with the largest stepped drill bit
+possible but the lever was still unable to fit. The lock-nut hole was able to be re-drilled and was able to fit the nut but
+the winch lock was eventually removed (reasoning behind this decision is found in Section 7.5). Furthermore, the
+team used a hole saw to create an additional hole that allowed the driveshaft to be inserted easier during assembly.
+The final acrylic operations arose from the baseplate being cut out on the waterjet instead of CNC’d. Locating tabs
+had to be cut into the bottom of the acrylic so that the housing pieces could fit into the baseplate. These tabs were
+simple to make and were done on the wood bandsaw in the shops. The pieces of the acrylic housing were also
+slightly over-sized, so the edges were sanded down on the belt sander until proper fit was achieved.
+
+California Polytechnic State University, San Luis Obispo
+
+- 30 -
+
+7.3
+
+Drivetrain
+
+The manufacturing of the drivetrain was mainly completed through the use of manual machines in the shop. These
+machines include the lathe, mill, and drill press. The following paragraphs contain a detailed description of the
+processes required to manufacture all the components necessary to assemble the drivetrain. A picture of the fully
+assembled drivetrain can be seen in Figure 25.
+
+Figure 25. Top view of drive train with all power transmission components from mass-pulley to pump and cart
+subsystems.
+The driveshaft was manufactured first due to its critical role in locating all the other components in the system. To
+start, a 3/4" diameter 1045 carbon steel keyed shaft was faced to length on the manual mill. Part of the shaft was
+then turned down to 1/2" diameter in order to fit the pulleys and dogtooth gear. Due to the keyway causing an
+interrupted cut, both the facing and turning processes required a slower spindle speed. Once the lathe operations
+were complete, a keyway was milled into the 1/2" diameter portion of the shaft. This was achieved by securing the
+shaft on the vise with a v-block and a scrap piece of wood underneath. To create the 3/16" keyway a 1/8" endmill
+was used. The milled keyway ended up being slightly small so a Dremel was used to widen the slot to allow the
+key to fit. Finally, the entire shaft was sanded down to allow for all the the components to fit with some clearance.
+The driveshaft can be seen pictured in Figure 25.
+
+California Polytechnic State University, San Luis Obispo
+
+- 31 -
+
+Figure 26. Keyed driveshaft.
+The most difficult manufacturing operation was creating the dogtooth gear correctly. In order to prep for the final
+part, two practice pieces were cut out of 1" diameter 1018 carbon steel round bar stock on the steel chop saw. A
+rotating 4-jaw chuck head, pictured below, was then set up on the knee mill to allow the part to rotate 360 degrees.
+
+Figure 27. Rotating 4-jaw chuck head that can be set up on a knee mill.
+
+California Polytechnic State University, San Luis Obispo
+
+- 32 -
+
+A bore finder was used in order to center both the chuck head and part in relation to the spindle on the mill. This
+process was very tedious since the bore finder needed to be used twice while setting up. First, the chuck head had
+to be centered along the x and y axes by checking the inner diameter of the 4-jaw opening. Then, the part was be
+centered in the 4-jaws by checking the outer diameter of the part and adjusting the x and y axes accordingly. Once
+the part was centered, five cuts were made with a 5/16" endmill 72 degrees apart. The first attempt can be seen in
+Figure 28.
+
+Figure 28. First attempt at creating the dogtooth.The five cuts are clearly not centered on the part.
+As seen from above, the first attempt at creating the dogtooth was extremely poor. It turned out that the part was
+not completely centered in the 4-jaws which severely disoriented the part as it rotated during the operation. This
+problem stemmed from the part being placed off-center in the 4-jaw chuck when it was initially clamped which
+made it harder to center. To correct for this, the part was placed as close to the center before being clamped in the
+chuck in order to reduce the error at the start. Furthermore, after each rotation, the endmill was brought down over
+the part to check that it was still centered. These changes yielded much better results as evidenced by the second
+attempt pictured in Figure 28.
+
+California Polytechnic State University, San Luis Obispo
+
+- 33 -
+
+Figure 29. Second attempt at creating the dogtooth. Better centering resulted in a better cutting pattern.
+With the trial runs completed, the final part was ready to be made. The leftover round stock was placed on a lathe
+and then faced to ensure that the edge was flat. A 1/8" deep groove was then cut into the part using an 1/8" parting
+tool. The groove was widened to roughly 1/4" using the standard facing and turning tools available. Next, a 1/2"
+hole was drilled a little over an inch deep. Following that, the piece was cut to length (1") using a parting tool
+and the milling operations described previously were performed on both ends. Finally, a keyway was milled out
+between two of the dogteeth using an 1/8" endmill for the initial cut and a 1/16" endmill to reduce rounded corners.
+The finished dogtooth can be see in Figure 30.
+
+California Polytechnic State University, San Luis Obispo
+
+- 34 -
+
+Figure 30. Finished dogtooth gear.
+After the dogtooth was completed, the 2" pulley and 3.5" pulley corresponding to the ramp and pump subsystems
+respectively, were manufactured next. These pulleys, which were handed down by the ME Department, came with
+a setscrew extrusion that was to be modified into dogteeth. The manufacturing process was almost identical to the
+creation of the dogtooth gear except no lathe work was necessary. The pulleys were again placed in the 4-jaw chuck
+and centered using the bore finder method explained above. Like the dogtooth, the pulleys were cut five times 72
+degrees apart. However, a smaller 3/16" was used. The pulleys can be seen in Figure 31.
+
+California Polytechnic State University, San Luis Obispo
+
+- 35 -
+
+Figure 31. Pump and ramp pulleys with dogteeth milled out.
+One change that cannot be seen in the pictures above was that the setscrew dogtooth was was completely removed.
+This was because the area around the setscrew was thicker than the other four dogteeth and caused major fit
+problems with the dogtooth gear. The justification for removing the setscrew dogtooth completely was that the
+setscrew hole already impacted the structural strength of the tooth, the other four teeth provided enough engagement
+to the gear, and that there was no easier alternative to make all of the components fit.
+
+Figure 32. The extrusion on the drivetrain gear was faced down to fit within the subassembly.
+California Polytechnic State University, San Luis Obispo
+
+- 36 -
+
+Another important part of the drivetrain system was the large gear (pictured in Figure 32) that would serve to
+transmit the rotary motion of the winch to the subsystems. It was bought to mesh with the smaller gear in the
+winch. The gear however, had a keyway extrusion that needed to be removed. At first this seemed like a challenge
+since the gear was made out of hardened steel, but, after consultation with shop techs it could easily be faced down
+on a lathe using a carbide tip.
+The bushing supports were made using the rectangular pieces of aluminum cut from the waterjet. The two busing
+supports that supported the large gear were already the correct length, but the shifter bushing support and the
+pulley bushing support were not. These two supports were cut on the vertical bandsaw then filed so that the
+driveshaft and shifter would be correctly aligned. The holes in the bushing supports were drilled on the drill press.
+These holes had to be drilled in incrementally increasing steps as the finished hole size was 11/16".
+The four bushings were created out of 1" diameter PTFE delrin rod. These bushings were easily made on the lathe
+since delrin is very easy to cut. Each bushing was created with the same four steps. First, the rod was faced to create
+a flat surface. Next, the rod was turned down to the desired diameter. Then, a hole was drilled into the rod. Finally,
+the rod was parted to length.
+One of the components that was planned to be manufactured outside of ME Department shops was the shifter fork.
+Ideally, the shifter fork would have been waterjet in the IT Department at the same time as the other aluminum
+parts but was not done so. This lead to a time conflict since the waterjet was extremely busy towards the end of
+the quarter. This resulted in the shifter fork being cut to shape out of scrap aluminum on the vertical bandsaw and
+filed. A 1/4-20 tapped hole was then added so that the shifter knob could be screwed on. Alternatively, the shifter
+fork could have be manufactured on the plasma cutter in the hangar. The shifter fork took about 45 minutes of
+machining time to complete.
+7.4
+
+Pump and Pump Shaft
+
+The pump shaft was made out of the same 1" PTFE delrin rod used for the bushings. First, the rod was roughly cut
+on the miter saw. That piece was then faced to length on the lathe. Additionally, the shaft was turned down to 1/2"
+diameter and stepped down to 1/4" diameter halfway through. Some extra sanding was done on both halves of the
+shaft to allow for a clearance fit with the pump impeller and pump pulley.
+The pump itself was 3D printed in Building 13’s Stratasys 3D printer under Larry Coolidge’s supervision. Unlike
+some of the other 3D printing stations on campus, such as Innovation Sandbox, an appointment must be set up
+with Larry in advance in order to use the printer. Larry suggested some minor design modifications during the
+3D printing appointment to make the pump stronger and easier to manufacture. His suggestion was to add fillets
+to some of the sharp corners which the team abided by. Once the changes were made, the pump’s position in the
+printer bed was set on the computer and the job was run. Larry handled the dissolution of the support media and
+had the pump ready for pickup after 2 days. However, the total required time was influenced by other components
+that were being printed simultaneously. For this job alone, the three pump components would have taken roughly
+12 hours plus the time required to dissolve the support material. The final manufactured pump can be seen in
+Figure 33 below.
+
+California Polytechnic State University, San Luis Obispo
+
+- 37 -
+
+Figure 33. 3D printed pump with filleted edges.
+
+7.5
+
+Mass, Winch, and Pulley
+
+There was not much manufacturing involved with the Mass-Pulley subsystem since it consisted of buying the
+winch, the pulley, the rope, and the weights. The only notable manufacturing was done on the winch to allow it
+to turn easier as the weight falls. The spring loaded lock and lock-nut were removed so that the winch could turn
+without getting locked as the weight falls. On top of that, two washers were added to the shaft of the large gear
+to keep the gear engaged throughout the the weights entire fall. These modifications resulted in some additional
+noise as the weight falls but was deemed negligible. The purchased weights are small fishing weights which were
+chosen for their small size but heavy weight. The fishing weights also have a loop at the top of them so that they
+can easily be attached to a carabiner. Figure 34 shows the set up of this subsystem.
+
+California Polytechnic State University, San Luis Obispo
+
+- 38 -
+
+Figure 34. Mass-Pulley Subsystem to produce initial potential energy input
+
+7.6
+
+Final Assembly
+
+The experiment was assembled in multiple steps in an attempt to limit the amount of problems that could have
+arose from a rushed assembly. The acrylic housing was done first, followed by the drivetrain and mass pulley
+subsystems, then the pump subsystem, and finally the cart subsystem. The fully assembled project can be seen in
+Figure 35.
+
+California Polytechnic State University, San Luis Obispo
+
+- 39 -
+
+Figure 35. Fully assembled experiment on top of one of the HVAC tables.
+As mentioned above, the acrylic housing was assembled first. The finished acrylic pieces were inserted into their
+correct locations and fit was double checked. The team used a standard acrylic epoxy bought off Amazon to bond
+the acrylic together but found that the strength of the epoxy was not enough. The team then resorted to using
+Loctite silicone aquarium sealant which proved to be sufficient. At the same time, the ramp support was bonded
+with JB Weld to the baseplate so that the acrylic ramp could be epoxied to the back wall of the housing. The housing
+was then clamped and allowed to set for the required time.
+Following the completion of the housing, the team proceeded to assemble the drivetrain and mass pulley subsystems.
+These two subsystems were done in conjunction since the winch was needed to correctly align the large gear and
+driveshaft. With the winch bolted down to act as a guide, the large gear bushing supports were located in the
+baseplate so that the large gear could fully engage with the gear on the winch. These supports were bonded to the
+baseplate with JB Weld. After allowing the JB Weld set, the team discovered that the supports had shifted slightly
+which caused the driveshaft to seize. To fix this, the team removed the shaft and cleared out some material from
+the bushings using a Dremel. Once the alignment problem was verified to be fixed, the pulley bushing support was
+aligned with the other supports and welded onto the baseplate. The team had difficulty placing the pump pulley
+onto the shaft due to its sheer size and its location on the shaft. As a result, an additional hole was drilled into the
+outer housing so that assembly could be completed.
+The pump system was assembled by caulking the inner pump walls to the baseplate. Additional aquarium epoxy
+was added to the acrylic walls to ensure that the entire section was water tight. The small pump pulley was attached
+to the pump shaft by torquing the setscrew in place. The inside of the pump was sprayed with Flex Seal water
+sealant so that water would not be able to seep into the 3D printed layers. The casing of the pump was then
+bonded with the Loctite sealant to itself and to the baseplate. Similarly, the impeller was bonded with the pump
+shaft using the Loctite. Unfortunately, during the curing process, the pump and pump shaft shifted which caused
+the shaft to seize. This problem was unable to be fixed since the housing limited the space available to do any
+further manufacturing. Along with the pump shaft problems, the team had a lot of difficulty fusing the v-belt that
+California Polytechnic State University, San Luis Obispo
+
+- 40 -
+
+transfered energy from the large pump pulley on the driveshaft to the small pump pulley on the pump shaft. The
+team attempted to follow the recommended procedure of heating, or melting, the belt together but that method
+was unable to provide a strong bond. As a result, the team tried to use Gorilla brand super glue to bond the belt
+which proved to be more effective than heating. However, the team found that the super glue failed to hold when
+the pulleys were rotated. The v-belt was super glued to the large pump pulley itself which turned out to work well
+in comparison to the other methods but its strength was unable to be fully tested. Due to time constraints, the team
+deemed the pump subsystem to be unusable for testing.
+The cart subsystem was the last subsystem to be assembled since it was the easiest of all. The first step of the
+assembly required the two small cart pulleys to be bolted down, one to the baseplate and one to the ramp. Then the
+cart track was super glued onto the ramp. Finally, the rope was strung through the pulley system and tied to the
+cart.
+After fully assembling the experiment the team reflected on ways to make the assembly process easier for the future.
+It was concluded that placing the housing on first hurt the ability to adjust for problems that arose in the other
+subsystems. This problem could have been avoided if the slots were CNC’d, but they were not and the procedure
+was believed to work just as well. If the slots were to be waterjet again, the team would recommend to assemble the
+drivetrain and pump system (including the two inner pump walls) first so that more space is available to work on
+any issues. The acrylic could then be assembled afterward since they only affect the timing of assembling the ramp.
+
+8. Testing and Validation
+Due to the complications faced in the manufacturing stage and a lack of time, tests were not actually able to
+be performed on the experiment. However, a testing plan was made that details the steps required to test the
+experiment. The testing plan can be found in Attachment K. Most of the testing procedures that were planned to be
+performed would have to be iterated many times to get a consistent set of data that could have been replicated by
+the students. These tests would check each subsystem and the durability of their components.
+The main component that the team wanted to test was the mass-pulley system that produces the input power to
+run each subsystem. This system was to be tested so that the calculated values of rpm correlate with the values that
+are read from the digital tachometer. The predicted values of rpm would be calculated using equation 10. The team
+did not expect these values to exactly match but they should at least be on the same order of magnitude. The other
+calculation that needed to be verified would be the time of the fall, which can easily be done with a stopwatch. A
+final mass range would have been decided through extensive and repetitive falling mass tests. The lowest mass
+of that range will be equal to the minimum mass required to power all three subsystems. At the opposite end of
+the spectrum, the value for the maximum mass is dependent on the maximum height of the cart and pump head.
+Additionally, various safety measures will have to be taken into account as well as it’s overall compatibility with the
+system. These safety measures would include making sure the mass itself didn’t topple over the whole experiment,
+or break off of the attachment rope. The other safety measure to best tested out would have been to make sure the
+fall weight does not fall on students toes as it falls, or possibly swing around and hit them in the legs.
+As mentioned in the potential energy conversion subsection, testing will have to be done to determine the weight
+of the cart. In order to do so, the cart will start with no mass and the experiment will be run for dropped masses
+ranging from 1 to 10 lbs. If the mass of the cart is too low, it will then be increased by .5 lb increments until a usable
+range of heights for all dropped masses is found. It is important to note that the mass of the cart will also decrease
+or increase depending on the usable range for the pump. The heights produced for the ideal cart mass will then be
+tabulated and graphed for the ME 128 professors to reference.
+Testing would have also been done on the pump subsystem to validate the head height calculations since the losses
+were assumed. This testing will be done in a similar manner as the previous tests mentioned. The head height will
+be determined by dropping the initial mass and recording how much head is produced. Since the pump is the most
+difficult component to change, it will have the most influence on the usable operation range for the experiment.
+Again, the head heights will be tabulated and graphed for the ideal input mass range for professors to reference.
+Once subsystem testing is completed, the entire experimental procedure will be validated through simulated classroom
+trials. The team will run the experiment first to ensure that the students will have all the necessary equations and
+equipment to obtain consistent data. If the experiment performs satisfactorily, testing will move to student trials,
+using several sample groups to again run the full experiment. Any feedback will be recorded and taken into account
+California Polytechnic State University, San Luis Obispo
+
+- 41 -
+
+if modifications are required. Finally, the experiment will be tested by the faculty who will be teaching ME 128
+regularly. Again, feedback will be recorded and modifications will be completed if necessary.
+A set of preliminary tests should have been conducted with a possibly prototype to see if all the components would
+be able to be assembled as designed and if they would have given the results that were hoped for. The V belt should
+have been tested for strength before assembly, as it ended up breaking with student interface.
+
+9. Cost Analysis
+Part sourcing for this project was done with the idea that multiple experiments would be constructed in the years
+to come. The team also sourced the parts that would result in the cheapest overall costs, which include shipping.
+Item were ordered from a few large suppliers who have a history of lower shipping costs on bulkier orders.
+It must be noted that our final cost is just under $800. This is due to several one-off purchases not required for
+reproduction, and also due to the fact that producing a prototype of a product is costlier than a production run.
+It was thought that cheaper parts could be sourced to (such as those with educational deals), the total cost per
+unit may still fall above the specified $500 limit. However, no deals were found and with the cost remained above
+the $500 limit. Since these parts were no obtained from education resources due to the nature of the component
+no such educational deals or affiliation with the university could have helped in any sort of price reduction. It is
+because of this we are recommending all units be partially sponsored by MESFAC, the ME department student
+allocation committee. Their mission is to fund any purchase that enhances ME student learning here at Cal Poly,
+and this project provides learning for students from multiple aspects. Freshmen are handling the experimental part
+of the project, and upperclassmen shop techs are manufacturing the units, gaining experience in machining and
+fabricating processes. It is because of this that the team believes MESFAC will have no issue sponsoring a portion
+of these units, keeping the out-of-pocket costs under $500 per unit for the ME department. Preliminary discussions
+with the current 2016-2017 committee reflected this view. It was found to be quite easy to obtain MESFAC funds,
+since the experiment did not require an large amount of money compared to other projects the team was able to
+get a total of $360 in MESFAC funds. The committee was able to see the importance of a new experiment in the
+curriculum and the benefit it would have for anyone involved in the department.
+9.1
+
+Bill of Materials
+
+The bill of materials for this project, including cost and weights, is included in Attachment F. The final assembly
+weighs a total of 14.75 lbs, which is light enough for a normal person to lift and store in the closet of the room. This
+weight does not include the volume of water that would have been added to the system, but this weight will be
+small since the height required and the tank dimensions only require a small amount of water to be used.
+9.2
+
+Ordering
+
+All parts were ordered online once the design was approved. All parts arrived on campus between a day and a
+week from ordering, based on traditional turn around times from the sources picked. Some parts were ordered later
+than others to either try and find cheapest alternatives or the team was still contemplating the need for the material
+piece in the experiment. The most expensive shipping item was the lead fishing weights, however this particular
+vendor was chosen as they were the only vendor that did not sell these weights in bulk, but if bulk ordered of
+weights are bought they can be obtained from a vendor with a lower shipping cost.
+9.3
+
+Final Order Specs
+
+The following table below shows what was eventually ordered and used in the final assembly. Most of the costs
+were covered by the alloted budget but other external, larger one off purchase were bought with MESFAC funds.
+Further details can be seen in Attachment G for more information on the budget.
+Doing further analysis on these costs it was found that 76.9% of the project could be paid for using the alloted funds
+and 23.1% of the project was paid for using MESFAC funds. The majority of the cost come from the sheet orders,
+however if ordered in bulk the price per sheet can be reduced to possibly fit with the budget. Another way that
+California Polytechnic State University, San Luis Obispo
+
+- 42 -
+
+the total cost of production could be reduced would have been with CNCing the baseplate in the machine shops
+which could have been easily done by shop techs during the summer. This can prove for a simpler assembly the
+acrylic walls and aluminum parts with simpler methods can prove to be cost effective. Considering how fast all
+the material came and from accessible sources, it is entirely possible and simple for someone else to place an order.
+Hyperlinks to all materials and products used can also be found in the bill of materials
+
+10. Design and Manufacturing Improvements and Recommendations
+With the combination of over budget spending, difficulties in manufacturing, and non-operational status of the
+prototype, it can be quickly established that the concept for this project needs some improvements. The major
+constraint was the scope of the project with respect to the budget. For $500, it was very difficult to complete a device
+that covered all of the customer requirements. This was the main factor that led to the project’s complications. If
+this project is to be attempted again, this issue can be resolved using the following recommendations.
+One major flaw in the design was the pursuit of an all-in-one device that students could observe. Creating a single
+unit allowed for a large stack-up in design relationships, compatibilities, and tolerances. While a single unit would
+make an instructor’s and student’s time easier during lab time, the manufacturing and maintenance of a single unit
+that provides examples of thermodynamics, fluids, and heat transfer principles is overwhelmingly complex for the
+scope of the device. Even though we split the heat transfer demonstration up from the main unit, the complexity of
+the mechanism provided us with enough issues that we excluded the heat transfer apparatus from the deliverables.
+Splitting the current design into two or three separate modules would ease the complexity of the experiment setup.
+For example, the thermodynamics experiment could be fragmented into a single module that students could power
+with via a crank. Another module would demonstrate fluid flow through a pipe, and another would demonstrate
+heat to mechanical energy transfer. By splitting up the concepts, small frames of 8020 or similar could be used to
+simplify construction and reduce cost from buying raw materials. Since a stock winch is no longer being used,
+plastic gearing can be used all around. Each sub-frame would only require 3-4 components to be attached to the
+rails, and would be wholly contained inside themselves, allowing for simple storage.
+
+California Polytechnic State University, San Luis Obispo
+
+- 43 -
+
+Figure 36. One concept that utilizes the modular experimental setup, demonstrating only fluid energy transfer
+through a pump using a drill-driven pump and a small custom made turbine. This is essentially what the pump
+side of the project design covered, but broken out to create an easier to make assembly. Small experimental
+stations like these would be made for the other forms of energy conversion.
+Another option is to continue to use the concepts in the current design, but reduce the scope of both the data
+acquisition and relations to current industry energy problems and solutions. This concept, seen in Figure 36, is
+based off of a similar project done in ME 443, Turbomachinery. This design would, again, allow us to utilize more
+stock parts without the use of a restrictive stock input. Instead of printing a pump, this design would allow for use
+of a stock input and output pump/turbine combination. The open-aired design would allow for easy storage
+and maintenance of the fluid containment system. Additionally, the compact design would again allow for a
+self-contained design. Students would take data on digital tachometers and voltmeters, essentially simulating a
+hydroelectric dam. Power is inputted via a hand-powered drill, making recharging and replacing easy.
+While being highly interactive and educationally engaging, the data collection (which was a major customer requirement)
+in the aforementioned experiments is fairly sparse. To remedy this, students could also use more passive experimental
+devices, such as our original Joule House concept. While definitely less stimulating than a more visually appealing
+project, the data collection would be much more extensive. Students would be able to collect multiple data points
+in varying conditions, and would be able to practice basic statistical analysis which they could comment on in their
+memorandums. Maintenance and manufacturing would be minimal, as there are no moving parts and setup is
+largely reliant on sensor calibration. However, as mentioned before, this experiment would be largely uninteresting
+to incoming freshmen and may detract from the overall lab experience in a similar fashion to the current spring lab.
+These concepts are brief design iterations that may or may not be pursued in the future. In general, however, the
+following general notes should be taken into account:
+• Reduce the scale of the experiment in terms of energy used and footprint (for self-sustainability and storage).
+• Partition each concept covered into its own station within the lab environment.
+• Ensure all devices in the lab have something physical students can observe. This can be as simple as a
+pinwheel fan and as complex as a rotating flywheel.
+California Polytechnic State University, San Luis Obispo
+
+- 44 -
+
+• Formulate calculations that can be done by incoming freshmen students and that include direct relationships
+between one another.
+• Generate lab experiments that can be loosely tied back to a general mechanical component or assembly. The
+connection can be very loose, but it must allow students to make connections they can branch off of.
+• Specify separate budgets for the prototyping and mass-production of the experiments, to allow the project
+team some leeway to test various types of subsystems.
+• Unique manufacturing techniques must be accessible to the shop techs and must also be accessible by the
+project team members.
+
+11. Conclusion
+This project concept has great promise, and can be done. The design pursued in this iteration was overly complex
+in an attempt to capture the attention of the students and encapsulate all of the topics desired. As a result, the final
+product suffered from delayed manufacturing timelines, reliances, and quick-fixes resulting in a finished product
+that strayed too far from the original design.
+We recommend that this project be pursued again, with the lessons learned from this experiment. The refined scope
+and better idea of budgeting gathered from this project would greatly benefit any future iterations, and would
+reduce the time used during the PDR and CDR phases where formation of just the general experimental concept
+and lab execution was developed.
+While the final device was largely unsuccessful, the research and design development done in the first phases of
+the project offer valuable information for anybody pursuing a project similar to this, and we hope that it will be of
+use to all who read this paper,
+
+References
+[1] Michael J. Prince. "Best Paper PIC IV: The Use of Inquiry-based Activities to Repair Student Misconceptions
+Related to Heat, Energy, and Temperature". 2012 ASEE Annual Conference & Exposition, San Antonio, Texas, 2012,
+June. ASEE Conferences, 2012. https://peer.asee.org/21014 Internet. 18 Oct, 2016
+[2] Margot A Vigeant, Michael J. Prince, Katharyn E. K. Nottis, Milo Koretsky, and Thomas W Ekstedt. "Design
+For Impact: Inquiry-based Activities for Important Concepts in Heat Transfer that Faculty Will Actually
+Use". 2016 ASEE Annual Conference & Exposition, New Orleans, Louisiana, 2016, June. ASEE Conferences, 2016.
+https://peer.asee.org/26678 Internet. 16 Oct, 2016
+[3] Margot A. Vigeant, Michael J. Prince, and Katharyn E. K. Nottis. "Making their Brains Hurt: Quick and Effective
+Activities for Thermodynamics". 2012 ASEE Annual Conference & Exposition, San Antonio, Texas, 2012, June. ASEE
+Conferences, 2012. https://peer.asee.org/21667 Internet. 18 Oct, 2016
+[4] Adrienne Minerick. "A Desktop Experiment Module: Heat Transfer". 2009 Annual Conference & Exposition,
+Austin, Texas, 2009, June. ASEE Conferences, 2009. https://peer.asee.org/5443 Internet. 27 Sep, 2016
+[5] Timothy Scott. "Versatile, Low Cost External Convective Heat Transfer Apparatus". 2004 Annual Conference, Salt
+Lake City, Utah, 2004, June. ASEE Conferences, 2004. https://peer.asee.org/13626 Internet. 20 Sep, 2016
+[6] Afshin Goharzadeh, Peter Rodgers, and Christian Mandel. "Innovative Fluid Mechanics Experiments For
+Modern Mechanical Engineering Program". 2007 Annual Conference & Exposition, Honolulu, Hawaii, 2007, June.
+ASEE Conferences, 2007. https://peer.asee.org/2034 Internet. 18 Oct, 2016
+[7] PASCO Engineering. 2009 Catalog. Roseville, CA
+[8] Cameron Curtis, Katie Gregory, Cherie Nixon, Sehyun Oh. "ASHRAE Senior Undergraduate Project Grant:
+Table Top Building Controls and Building Physics Trainer". HVAC&R Concentration Senior Projects, Cal Poly, San
+Luis Obispo, CA, 2015,June. Dr. Jesse Maddren, 10 June 2015. Print.
+
+California Polytechnic State University, San Luis Obispo
+
+- 45 -
+
+12. Attachments (12)
+Attachment A - PASCO catalog excerpts
+Attachment B - Quality of Function Development Chart
+Attachment C - Pugh Matrices
+Attachment D - Safety Checklist
+Attachment E - Design Calculations
+Attachment F - Bill of Materials
+Attachment G - Final Budget and Costs
+Attachment H - Gantt Chart
+Attachment I - Design Verification Plan
+Attachment J - Drawings and Specification Sheets
+Attachment K - Proposed Testing Procedures
+Attachment L - Supplemental Academic Materials
+
+California Polytechnic State University, San Luis Obispo
+
+- 46 -
+
+Attachment A - PASCO Catalog Excerpts
+
+Figure A1. The Heat Engine Efficiency Lab by PASCO. This lab is rather complex mechanically, but covers all the
+relevant topics desired by the customer. It also contains a DAQ (data acquisition) device that specializes in
+thermodynamic process graphing. Sadly, the price is rather inflated, and some of the parts are rather delicate.
+
+California Polytechnic State University, San Luis Obispo
+
+- A-1 -
+
+Figure A2. The PASCO Stirling Engine catalog entry. While engaging on a visual and mental level, this product is
+rather single-dimensional, targeting only simple conduction and an isothermal/isochoric process.
+
+California Polytechnic State University, San Luis Obispo
+
+- A-2 -
+
+Figure A3. The PASCO fluid flow lab, which highlights various fluid properties by changing cross sectional areas,
+pressures, and surfaces. This lab is rather large in size, and requires fluids in open containers that must be
+prepared before lab. However, it does have numerous DAQ sources, making data collection of the fluid properties
+easy for users.
+
+California Polytechnic State University, San Luis Obispo
+
+- A-3 -
+
+Figure A4. The catalog excerpt for the PASCO Thermal Conductivity Apparatus. This product offers a hands-on
+way to observe the conductive properties of various materials, but is very slow as it relies on ice melting to
+demonstrate heat transfer. It also requires ice to be frozen and water to be boiled, hindering setup times.
+
+California Polytechnic State University, San Luis Obispo
+
+- A-4 -
+
+QFD: House of Quality
+Project:
+Revision:
+Date:
+
+Correlations
+
++
+−
++
+−
+
+Relationships
+
++
+
+Fits Tables
+
+9
+
+Storable in Closet
+
+6
+
+|||
+
+6%
+
+3
+
+8
+
+1
+
+9
+
+Additional Cirriclum
+
+7
+
+|||||
+
+10%
+
+10
+
+8
+
+1
+
+9
+
+Fun, Interactive
+
+8
+
+|||||
+
+10%
+
+10
+
+8
+
+1
+
+9
+
+Engaging
+
+9
+
+||||
+
+10%
+
+9
+
+8
+
+1
+
+9
+
+Contemporary
+
+○ ○
+
+○
+
+●
+
+●
+▽
+○
+
+○ ▽
+○
+
+○
+○ ●
+● ●
+
+●
+●
+●
+
+▽
+○
+○
+
+●
+● ○
+▽
+○
+
+▽
+
+1
+
+9
+
+4
+
+10
+
+1
+
+9
+
+Gradable Material/ Repeatability
+
+HOW MUCH: Target
+
+Max Relationship
+Technical Importance Rating
+Relative Weight
+
+9
+
+9
+
+128.71
+
+162.8
+
+5%
+
+7%
+
+6%
+
+9
+
+6%
+
+9
+
+6%
+
+9
+
+6%
+
+9
+
+5%
+
+9
+
+>=40
+
+8
+
+8%
+
+2 ft
+
+8
+
+11 |||
+
+○
+○
+●
+○
+●
+○
+
+○
+●
+●
+15 lbs
+
+9%
+
+Follow Sci/Eng Method
+
+100%
+
+10 ||||
+
+●
+
+3
+
+9
+
+3
+
+9
+
+9
+
+●
+○
+○
+○
+
+9
+
+● ○
+○ ●
+○ ●
+●
+● ○
+●
+
+9
+
+NOW: Current Product Assesment - Customer Requirements
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+4
+
+4
+
+3
+
+5
+
+1
+
+5
+
+2
+
+3
+
+2
+
+4
+
+5
+
+5
+
+3
+
+5
+
+4
+
+3
+
+2
+
+2
+
+5
+
+0
+
+5
+
+5
+
+0
+
+2
+
+5
+
+5
+
+5
+
+5
+
+4
+
+0
+
+3
+
+5
+
+5
+
+5
+
+5
+
+4
+
+1
+
+5
+
+5
+
+5
+
+2
+
+5
+
+0
+
+4
+
+5
+
+3
+
+5
+
+4
+
+1
+
+1
+
+5
+
+5
+
+5
+
+4
+
+5
+
+5
+
+5
+
+5
+
+5
+
+0
+
+4
+
+5
+
+5
+
+3
+
+5
+
+1
+
+5
+
+5
+
+5
+
+6
+
+5
+
+4
+
+2
+
+3
+
+5
+
+3
+
+2
+
+1
+
+2
+
+4
+
+4
+
+5
+
+7
+
+5
+
+5
+
+1
+
+4
+
+5
+
+4
+
+3
+
+1
+
+2
+
+3
+
+4
+
+3
+
+8
+
+5
+
+3
+
+1
+
+4
+
+2
+
+2
+
+5
+
+3
+
+4
+
+2
+
+2
+
+2
+
+9
+
+5
+
+4
+
+0
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+10
+
+5
+
+2
+
+0
+
+4
+
+5
+
+5
+
+5
+
+5
+
+5
+
+4
+
+4
+
+5
+
+11
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+Row #
+
+9
+
+1
+
+◇
+
+NASA Hot Air Balloon Lab
+
+1
+
+8
+
+◇
+
+Harvard Pistion Pump Lab
+
+4
+
+1
+
+▼
+
+NASA Drag Lab
+
+8
+
+5%
+
+◇
+
+Jacket Insulation Lab
+
+7%
+
+||
+
+▲
+
+PASCO Thermal Radiation Lab
+
+|||
+
+5
+
+▲
+
+PASCO Thermo Electric Heat Engine
+
+4
+
+◇
+
+PASCO FLUID FLOW
+
+Contained Fluidics
+
+▲
+
+PASCO HEAT ENGINE Effic.
+
+9
+
+▲
+
+PASCO TD-8579A: Therm Expansion
+
+1
+
+◇
+
+PASCO TD-551A: Mech Equiv of Heat
+
+6
+
+◇
+
+Engineering Concepts Covered
+
+7
+
+▼
+
+3
+
+8%
+
+▼
+
+Presentation Time
+
+|||
+
+▲
+
+Report Making Time
+
+3
+
+15
+
+▲
+
+.5 hrs
+
+Minimal Service
+
+14
+
+.5 hrs
+
+9
+
+13
+
+Lifetime
+
+6
+
+12
+
+Experimental Time
+
+7
+
+11
+
+2 hrs
+
+2
+
+10
+
+Cordless
+
+12%
+
+9
+
+5 yrs
+
+||||||
+
+8
+
+Quantifiable Data
+
+2
+
+7
+
+100%
+
+Reproducable (qty 6)
+
+6
+
+>=2 measurements
+
+9
+
+5
+
+Safety
+
+10
+
++
+
+4
+
+Max Uses
+
+1
+
++
+−
+
+3
+
+Width
+
+1
+
+−
+
+Height
+
+14%
+
++
+−
+
+−
+
+Weight
+
+|||||||
+
+WHAT: Customer
+Requirements
+(explicit & implicit)
+
++
+
++
++
+
+2
+
+Materials Cost
+
+CP SHOP TECH
+
+Maximum Relationship
+
+FACULTY
+
+Relative Weight
+
+1
+
+Weight Chart
+
+STUDENT
+
+HOW:
+Engineering
+Specifications
+
+Direction of Improvement
+
+WHO: Customers
+
++
+
+−
++
+
++
+
+1
+
+Mnfg by Mustang '60
+
+Column #
+
++
++
+
+−
+
+PASCO TD-8561: Thermal comd
+
++
++
++
+
+<$500
+
+Target
+Minimize
+
++
+
+−
+
+▲
+◇
+▼
+
+Our Ideal Product
+
+Direction of Improvement
+Maximize
+
+−
+
++
+
+Length
+
+Weak
+
+5 ft
+
+Moderate
+
+●
+○
+▽
+
+2 ft
+
+Strong
+
+100%
+
+Positive
+Negative
+No Correlation
+
+Row #
+
+California Polytechnic State University, San Luis Obispo
+
+Attachment B - Quality of Function Development Chart
+
+9
+
+136.21 157.13 157.13 157.13 109.57 36.385 217.84 45.744 109.16 274.88 140.58 270.86 315.35
+2%
+
+9%
+
+2%
+
+5%
+
+11%
+
+6%
+
+11%
+
+13%
+
+|||
+
+||
+
+|||
+
+|||
+
+|||
+
+||
+
+||
+
+|||||
+
+||
+
+|||||
+
+||||||
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+PASCO TD-8561: Thermal comd
+
+3
+
+2
+
+4
+
+5
+
+5
+
+5
+
+2
+
+4
+
+5
+
+0
+
+5
+
+5
+
+5
+
+5
+
+1
+
+PASCO TD-551A: Mech Equiv of Heat
+
+3
+
+4
+
+5
+
+5
+
+5
+
+5
+
+5
+
+3
+
+5
+
+5
+
+5
+
+2
+
+1
+
+1
+
+3
+
+PASCO TD-8579A: Therm Expansion
+
+1
+
+2
+
+5
+
+5
+
+5
+
+5
+
+2
+
+3
+
+5
+
+0
+
+3
+
+5
+
+3
+
+3
+
+5
+
+PASCO HEAT ENGINE Effic.
+
+0
+
+3
+
+4
+
+2
+
+5
+
+5
+
+3
+
+2
+
+5
+
+5
+
+3
+
+5
+
+5
+
+5
+
+5
+
+PASCO FLUID FLOW
+
+3
+
+1
+
+5
+
+3
+
+5
+
+2
+
+5
+
+4
+
+5
+
+0
+
+4
+
+3
+
+2
+
+2
+
+4
+
+PASCO Thermo Electric Heat Engine
+
+4
+
+0
+
+5
+
+5
+
+5
+
+5
+
+4
+
+5
+
+5
+
+0
+
+5
+
+3
+
+1
+
+3
+
+5
+
+PASCO Thermal Radiation Lab
+
+0
+
+0
+
+2
+
+5
+
+5
+
+5
+
+2
+
+5
+
+5
+
+0
+
+5
+
+5
+
+5
+
+5
+
+5
+
+Jacket Insulation Lab
+
+3
+
+5
+
+5
+
+5
+
+5
+
+5
+
+4
+
+3
+
+2
+
+3
+
+3
+
+2
+
+2
+
+2
+
+1
+
+NASA Drag Lab
+
+5
+
+5
+
+5
+
+5
+
+5
+
+5
+
+3
+
+3
+
+3
+
+4
+
+5
+
+3
+
+1
+
+1
+
+1
+
+Harvard Pistion Pump Lab
+
+4
+
+5
+
+5
+
+5
+
+5
+
+5
+
+4
+
+3
+
+4
+
+5
+
+5
+
+3
+
+2
+
+2
+
+3
+
+NASA Hot Air Balloon Lab
+
+5
+
+5
+
+5
+
+1
+
+1
+
+1
+
+3
+
+2
+
+3
+
+5
+
+2
+
+4
+
+2
+
+2
+
+4
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+5
+4
+3
+0
+
+1
+
+2
+
+Current Product Assesment - Engineering Specifications
+
+||||
+
+||
+
+Weight Chart
+
+Our Ideal Product
+
+Template Revision: 0.9
+
+Column #
+
+Date: 4/23/2010
+
+Christopher Battles
+
+- B-1 -
+
+Figure B1. Quality of Function Development Chart for this proposal phase, correlating customer requirements to create engineering specifications.
+
+Attachment C - Pugh Matrices
+
+Concept
+Criteria
+Cost
+Safety
+Turn Around Time
+NO. of Data Points
+Lifetime
+Power Req
+Lab Time (2hr)
+Reportable Material
+Educational Content
+Real World Problem
+
++
++
++
++
++
+-
+
+S
++
++
++
++
++
+-
+
+Σ⁺
+Σ₋
+ΣS
+
+5
+5
+0
+
+5
+4
+1
+
+D
+A
+T
+U
+M
+0
+0
+0
+
+S
+S
++
+S
+S
+S
+S
++
+
++
++
++
++
+
+2
+2
+6
+
+4
+6
+0
+
+Figure C1. Experiment ideas compared in a Pugh matrix. The insulated house was used as a datum since it is a
+relatively common demonstration or example used in universities, including Cal Poly.
+
+Concept
+
+Criteria
+
+Modular
+Real World
+Points of Interest
+Tangible
+Relatable
+Clean
+Easy Set Up
+Σ⁺
+Σ₋
+ΣS
+
+D
+A
+T
+U
+M
+
++
++
+S
+S
+S
+
++
++
++
+S
+S
+-
+
+S
+S
++
++
++
+
++
++
++
++
+S
+
++
++
++
+S
+
++
++
++
++
+-
+
++
++
++
++
+-
+
+2
+2
+3
+
+3
+2
+2
+
+4
+1
+2
+
+4
+2
+1
+
+3
+3
+1
+
+4
+3
+0
+
+4
+3
+0
+
+Figure C2. A concept component refinement Pugh matrix looking at the various heat transfer and HVAC
+component possibilities and their use to the project.
+
+California Polytechnic State University, San Luis Obispo
+
+- C-1 -
+
+Concept
+Criteria
+Modular
+Real World
+Points of Interest
+Tangible
+Relatable
+Clean
+Easy Set Up
+Σ⁺
+Σ₋
+ΣS
+
+Wall Insulation
+
+Fans
+
+Ducts
+
+Wall Radiation
+
+Moving Car
+
+Incline
+
+Pump Impeller
+
+Piping
+
+D
+A
+T
+U
+M
+
+S
++
++
+S
+
+-
+
+-
+
+S
++
+S
++
+S
+
++
++
++
++
+
+S
+-
+
+S
+-
+
+0
+0
+0
+
+2
+3
+2
+
+0
+7
+0
+
+0
+7
+0
+
+2
+2
+3
+
+4
+3
+0
+
+0
+6
+1
+
+0
+6
+1
+
+Figure C3. Another concept component refinement matrix, this time looking at potential energy conversion
+components compared to heat transfer and HVAC components from the house idea.
+
+California Polytechnic State University, San Luis Obispo
+
+- C-2 -
+
+Attachment D - Safety Checklist
+
+Figure D1. Safety checklist for the recommended double tank energy conversions and losses experiment. This
+checklist is subject to change if the experiment concept is modified.
+
+California Polytechnic State University, San Luis Obispo
+
+- D-1 -
+
+California Polytechnic State University, San Luis Obispo
+
+Attachment E - Design Calculations
+Design analysis for the pump and pulley subsystems, to solve for design variables.
+
+- E-1 -
+
+California Polytechnic State University, San Luis Obispo
+
+Mass (g)
+
+Mass (kg)
+
+Mass (lbm)
+
+Mass (slugs)
+
+Force (lbf)
+
+Energy (lbf*ft)
+
+Torque (gear/drum)(inlbf)
+
+Torque pinion
+
+453.7
+680.6
+907.4
+1134.3
+1361.2
+1588.0
+1814.9
+2041.7
+2268.6
+2495.5
+2722.3
+2949.2
+3176.0
+3402.9
+3629.8
+3856.6
+4083.5
+4310.3
+4537.2
+
+0.454
+0.681
+0.907
+1.134
+1.361
+1.588
+1.815
+2.042
+2.269
+2.495
+2.722
+2.949
+3.176
+3.403
+3.630
+3.857
+4.083
+4.310
+4.537
+
+1.00
+1.50
+2.00
+2.50
+3.00
+3.50
+4.00
+4.50
+5.00
+5.50
+6.00
+6.50
+7.00
+7.50
+8.00
+8.50
+9.00
+9.50
+10.00
+
+0.0311
+0.0466
+0.0622
+0.0777
+0.0932
+0.1088
+0.1243
+0.1399
+0.1554
+0.1709
+0.1865
+0.2020
+0.2176
+0.2331
+0.2486
+0.2642
+0.2797
+0.2953
+0.3108
+
+1.00
+1.50
+2.00
+2.50
+3.00
+3.50
+4.00
+4.50
+5.00
+5.50
+6.00
+6.50
+7.00
+7.50
+8.00
+8.50
+9.00
+9.50
+10.00
+
+3.00
+4.50
+6.00
+7.50
+9.00
+10.50
+12.00
+13.50
+15.00
+16.50
+18.00
+19.50
+21.00
+22.50
+24.00
+25.50
+27.00
+28.50
+30.00
+
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+2.00
+2.25
+2.50
+2.75
+3.00
+3.25
+3.50
+3.75
+4.00
+4.25
+4.50
+4.75
+5.00
+
+0.16
+0.23
+0.31
+0.39
+0.47
+0.55
+0.63
+0.70
+0.78
+0.86
+0.94
+1.02
+1.09
+1.17
+1.25
+1.33
+1.41
+1.48
+1.56
+
+- E-2 Figure D1. Calculations for torque output of the winch.
+
+California Polytechnic State University, San Luis Obispo
+
+alpha
+rad/s^2
+20
+30
+40
+50
+60
+70
+80
+90
+100
+110
+120
+130
+140
+150
+160
+170
+180
+190
+200
+
+atpulley
+(in/s^2)
+6
+9
+12
+15
+18
+21
+24
+27
+30
+33
+36
+39
+42
+45
+48
+51
+54
+57
+60
+
+atdrum
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+65
+70
+75
+80
+85
+90
+95
+100
+
+t (s)
+0.7746
+0.6325
+0.5477
+0.4899
+0.4472
+0.4140
+0.3873
+0.3651
+0.3464
+0.3303
+0.3162
+0.3038
+0.2928
+0.2828
+0.2739
+0.2657
+0.2582
+0.2513
+0.2449
+
+rad/s
+92.952
+113.842
+131.453
+146.969
+160.997
+173.897
+185.903
+197.180
+207.846
+217.991
+227.684
+236.981
+245.927
+254.558
+262.907
+270.998
+278.855
+286.496
+293.939
+
+rpm
+9.7339
+11.9215
+13.7658
+15.3906
+16.8596
+18.2104
+19.4677
+20.6487
+21.7656
+22.8279
+23.8430
+24.8166
+25.7534
+26.6573
+27.5315
+28.3789
+29.2016
+30.0018
+30.7812
+
+- E-3 Figure D2. Calculations for the RPM output of the winch.
+
+California Polytechnic State University, San Luis Obispo
+
+ft/s^2
+
+eq.force
+(lbmft/s^2)
+
+rpmos
+
+rpmpshaft
+
+Pin (W)
+
+Pout
+
+Energy
+
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+2.00
+2.25
+2.50
+2.75
+3.00
+3.25
+3.50
+3.75
+4.00
+4.25
+4.50
+4.75
+5.00
+
+31.67
+47.14
+62.35
+77.31
+92.02
+106.48
+120.70
+134.66
+148.37
+161.83
+175.04
+188.01
+200.72
+213.18
+225.39
+237.35
+249.07
+260.53
+271.74
+
+31.15
+38.15
+44.05
+49.25
+53.95
+58.27
+62.30
+66.08
+69.65
+73.05
+76.30
+79.41
+82.41
+85.30
+88.10
+90.81
+93.45
+96.01
+98.50
+
+36.34
+44.51
+51.39
+57.46
+62.94
+67.99
+72.68
+77.09
+81.26
+85.22
+89.01
+92.65
+96.15
+99.52
+102.78
+105.95
+109.02
+112.01
+114.92
+
+0.1283
+0.2357
+0.3629
+0.5072
+0.6667
+0.8401
+1.0265
+1.2248
+1.4345
+1.6550
+1.8857
+2.1263
+2.3763
+2.6354
+2.9033
+3.1797
+3.4643
+3.7570
+4.0574
+
+0.0513
+0.0943
+0.1452
+0.2029
+0.2667
+0.3361
+0.4106
+0.4899
+0.5738
+0.6620
+0.7543
+0.8505
+0.9505
+1.0542
+1.1613
+1.2719
+1.3857
+1.5028
+1.6230
+
+0.0398
+0.0596
+0.0795
+0.0994
+0.1193
+0.1391
+0.1590
+0.1789
+0.1988
+0.2187
+0.2385
+0.2584
+0.2783
+0.2982
+0.3180
+0.3379
+0.3578
+0.3777
+0.3975
+
+Possible
+Pump Head
+(m)
+Pump Head (in)
+0.0192
+0.0288
+0.0383
+0.0479
+0.0575
+0.0671
+0.0767
+0.0863
+0.0958
+0.1054
+0.1150
+0.1246
+0.1342
+0.1438
+0.1534
+0.1629
+0.1725
+0.1821
+0.1917
+
+- E-4 Figure D3. Calculations for torque output of the winch.
+
+0.755
+1.132
+1.509
+1.887
+2.264
+2.641
+3.019
+3.396
+3.773
+4.151
+4.528
+4.906
+5.283
+5.660
+6.038
+6.415
+6.792
+7.170
+7.547
+
+California Polytechnic State University, San Luis Obispo
+
+Attachment F - Bill of Materials
+Including sources, weights, and costs.
+
+- F-1 -
+
+California Polytechnic State University, San Luis Obispo
+
+Ordered Recieved Assym #
+100
+
+P/N
+
+200
+3‐2
+3‐2
+3‐2
+3‐2
+3‐2
+3‐2
+
+3‐6
+3‐6
+3‐6
+3‐6
+3‐6
+3‐6
+
+2‐25
+2‐25
+2‐25
+2‐25
+2‐25
+2‐25
+
+2‐28
+2‐28
+2‐28
+2‐28
+2‐28
+2‐28
+
+1‐21
+2‐25
+
+1‐25
+2‐28
+
+1‐21
+1‐21
+1‐21
+1‐21
+1‐21
+1‐21
+1‐21
+1‐21
+1‐21
+1‐21
+1‐21
+
+1‐28
+1‐28
+1‐28
+1‐28
+1‐28
+1‐28
+1‐28
+1‐28
+1‐28
+1‐28
+1‐28
+
+1‐21
+1‐21
+
+1‐28
+1‐28
+
+Component
+Student Station Assembly
+
+TYPE
+
+Op Sheet?
+
+Stock Desc
+
+Weight
+
+Qty
+
+Cost per
+
+Total Cost
+
+Vendor
+
+Serial/SKU/ASIN No.
+
+201
+202
+203
+204
+205
+206
+
+BASE
+Base plate
+Front cleat side
+Front cleat bottom
+Side cleat side
+Side cleat bottom
+Gusset
+
+DWG
+DWG
+DWG
+DWG
+DWG
+DWG
+
+Y
+N
+N
+N
+N
+Y
+
+6061 T6 sheet .125 thick 2x2
+6061 T6 sheet .125 thick 2x2
+6061 T6 sheet .125 thick 2x2
+6061 T6 sheet .125 thick 2x2
+6061 T6 sheet .125 thick 2x2
+6061 T6 sheet .125 thick 2x2
+
+2.09
+0.18
+0.06
+0.29
+0.09
+0.04
+
+1
+1
+1
+1
+1
+1
+
+0
+0
+0
+0
+0
+0
+
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+
+301
+302
+303
+304
+305
+306
+
+WALLS
+XY wall
+YZ wall
+Lid
+Fluid Divider Wall
+Rear wall
+Shifter holder
+
+DXF
+DXF
+DXF
+DXF
+DXF
+DXF
+
+N
+N
+N
+N
+N
+N
+
+.118 thick acryllic
+.118 thick acryllic
+.118 thick acryllic
+.118 thick acryllic
+.118 thick acryllic
+6061 T6 sheet .125 thick 2x2
+
+0.21
+0.54
+0.48
+0.21
+0.56
+0.01
+
+2
+2
+1
+1
+1
+1
+
+0
+0
+0
+0
+0
+0
+
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+
+401
+402
+
+Rope Winch
+Mass Pulley
+
+SPEC
+SPEC
+
+N
+N
+
+Hand Winch for Lifting with Wire Rope & Hook, 350 lb. Maximum Capacity
+Mounted Pulley, for 3/16ʺ Rope Diameter
+
+5
+0.56
+
+1
+1
+
+70
+7.02
+
+$70.00
+$7.02
+
+McMaster‐Carr
+McMaster‐Carr
+
+3099T34
+
+601
+614
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+
+GEARBOX
+Shaft
+Key
+Bushing Mount
+Gearbox Bushing
+Dogtooth
+Gear
+Bushing Mount 
+V belt
+Large Pulley
+Pump Pulley
+Cart pulley
+Shifter Fork
+Shifter
+Bushing
+
+DWG
+DWG
+DWG
+DWG
+DWG
+SPEC
+SPEC
+SPEC
+N/A
+N/A
+N/A
+DWG
+SPEC
+DWG
+
+Y
+Y
+Y
+Y
+Y
+N
+Y
+N
+Y
+N
+Y
+Y
+N
+Y
+
+Keyed Rotary Shaft 1045 Carbon Steel, 3/4ʺ Diameter, 9ʺ Long
+Oversized key stock
+6061 T6 sheet .125 thick 2x2
+PTFE‐Filled Delrin ® Acetal Resin Rod, 1ʺ dia
+Low‐Carbon Steel Rod, 1ʺ dia
+Metal Gear ‐ 14‐1/2 Degree Pressure Angle
+6061 T6 sheet .125 thick 2x2
+Type 3L V‐Belt with 3/8ʺ Wide Top
+128 Pulley 3.5ʺ
+128 pulley 1ʺ
+128 pulley 2ʺ
+6061 T6 sheet .125 thick 2x2
+10‐32 Thread, 3ʺ Handle Length, 3/4ʺ Ball Diameter
+Delrin
+
+0.82
+0.05
+0.05
+0.05
+0.08
+1.15
+0.03
+0.04
+0.62
+0.15
+0.23
+0.08
+0.1
+0.01
+
+1
+1
+2
+3
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+19.7
+0.93
+0
+0
+10.82
+97.81
+
+McMaster‐Carr
+McMaster‐Carr
+
+1497K116
+98830A150
+
+McMaster‐Carr
+McMaster‐Carr
+
+8920K231
+6867K79
+
+1.85
+0
+0
+0
+0
+5.21
+0
+
+$19.70
+$0.93
+$0.00
+$0.00
+$10.82
+$97.81
+$0.00
+$1.85
+$0.00
+$0.00
+$0.00
+$0.00
+$5.21
+$0.00
+
+McMaster‐Carr
+Provided by Department
+Provided by Department
+Provided by Department
+
+59735K31
+
+701
+702
+703
+704
+
+FLUID PUMP
+Pump main housing
+Pump housing end
+Pump blades
+Pump shaft
+
+SLT
+SLT
+SLT
+DWG
+
+N
+N
+N
+Y
+
+3D printed
+3D printed
+3D printed
+Delrin
+
+0.04
+0
+0
+0.04
+
+1
+1
+1
+1
+
+0
+0
+0
+0
+
+$0.00
+$0.00
+$0.00
+$0.00
+
+300
+
+400
+
+PULLEY
+
+600
+
+700
+
+McMaster‐Carr
+
+3196T55
+
+6303K3
+
+3‐7
+3‐7
+3‐7
+1‐21
+
+1‐28
+
+2‐2
+2‐2
+
+2‐6
+2‐6
+
+801
+802
+
+CART
+Ramp
+Ramp Support
+
+DXF
+DXF
+
+N
+N
+
+.118 thick acryllic
+6061 T6 sheet .125 thick 2x2
+
+0.24
+0.03
+
+1
+1
+
+0
+0
+
+$0.00
+$0.00
+
+5‐30
+1‐21
+
+803
+804
+
+Track
+Horizontal Pulley
+
+SPEC
+SPEC
+
+N
+N
+
+Bachmann Trains Snap‐Fit E‐Z Track 9 inch Straight Track
+Mounted Pulley for Fibrous Rope, Steel, for 1/4ʺ Rope Diameter, 11/16ʺ OD
+
+0.02
+0.1
+
+1
+1
+
+11.52
+8.22
+
+$11.52
+$8.22
+
+Amazon
+McMaster‐Carr
+
+B0000CGB3F
+
+1‐28
+
+5‐30
+1‐21
+
+805
+806
+
+Car
+String
+
+N/A
+SPEC
+
+N
+N
+
+Bachmann Chugginton Industries Flat Car
+Braided rope, 1/8
+
+0.35
+0.1
+
+1
+1
+
+19.22
+5.28
+
+$19.22
+$5.28
+
+Amazon
+Minerʹs 
+
+B00FK4Z0UQ
+
+1‐21
+
+807
+
+Rubber Feet
+
+SPEC
+
+N
+
+Guitar Amplifier Cabinet 
+
+0.05
+
+8
+
+0.61
+
+$4.88
+
+Amazon
+
+B00JJ191Z6
+
+1F1
+1F2
+1F3
+1F4
+1F5
+
+Fastners
+Lift pulley fastners
+Horiz pulley fastners (2)
+RTX caulking
+Epoxy Adhesive
+Winch Fasteners
+
+SPEC
+SPEC
+SPEC
+SPEC
+SPEC
+
+N
+N
+N
+N
+N
+
+10‐24 hex scew and bolts
+3/16 hex screws and bolts
+1 tube
+1 tube
+3/8 Hex Screws and Bolts
+
+XXXX
+XXXX
+XXXX
+XXXX
+XXXX
+
+4
+8
+1
+1
+3
+
+0.75
+0.53
+10
+5
+0.75
+
+$3.00
+$4.24
+$10.00
+$5.00
+$2.25
+
+Home Depot
+Home Depot
+Home Depot
+Home Depot
+Home Depot
+
+800
+
+5‐30
+1FF
+
+Provided by Department
+Provided by Department
+Provided by Department
+
+3071T7
+
+- F-2 -
+
+California Polytechnic State University, San Luis Obispo
+
+SHEET
+3‐2
+3‐2
+1‐21
+
+3‐6
+3‐6
+1‐28
+
+Y
+Y
+Y
+11000
+
+4‐25
+4‐25
+4‐25
+
+5‐8
+4‐28
+4‐28
+
+4‐25
+4‐25
+
+SHEET ORDERS
+Acryllic
+6061
+Delrin Round
+
+2x2ʹ sheet .25 thick, ultra scratch resistance
+.190 2x2
+PTFE‐Filled Delrin ® Acetal Resin Rod, 1ʺ dia
+
+XXXX
+XXXX
+XXXX
+
+1
+1
+1
+
+98.55
+72.12
+17.1
+
+$98.55
+$72.12
+$17.10
+
+McMaster‐Carr
+Aircraft Spruce
+McMaster‐Carr
+
+10.03
+3.26
+6.52
+
+$10.03
+$9.78
+$19.56
+
+Amazon
+The Greatful Lead
+The Greatful Lead
+
+03‐50002
+03‐29860
+
+WEIGHTS
+
+0.5 lb weights (2 pack)
+1 lb weight
+2 lb weight
+
+N
+N
+N
+
+Lead weight
+Lead weight
+Lead weight
+
+1
+3
+3
+
+4‐29
+
+5 lb weight
+
+N
+
+Cast iron weight plate
+
+2
+
+8.18
+
+$16.36
+
+Walmart
+
+RPG‐005#2
+
+4‐29
+
+10 lb weight
+
+N
+
+Cast iron weight plate
+
+1
+
+13.02
+
+$13.02
+
+Walmart
+
+RPG‐005#2
+
+Shipping+Tax
+
+21.05
+
+CURRENT TOTAL
+
+Total Weight
+
+14.75
+
+TOTAL
+
+564.52
+
+*Some costs include shipping and tax
+
+MESFAC Awarded
+
+$360.00
+
+Total‐MESFAC
+
+$204.52
+
+Budget
+
+$500.00
+
+Total MESFAC used
+
+$130.44
+
+B003CU51JK
+
+- F-3 -
+
+Attachment G - Final Budget and Costs
+
+California Polytechnic State University, San Luis Obispo
+
+- G-1 -
+
+Assym
+#
+100
+400
+
+P/N
+
+Component
+
+Qty
+
+Cost per
+
+Total
+Cost
+
+Vendor
+
+$70.00
+$7.02
+
+McMaster-Carr
+McMaster-Carr
+
+McMaster-Carr
+McMaster-Carr
+McMaster-Carr
+McMaster-Carr
+McMaster-Carr
+Provided by
+Department
+Provided by
+Department
+Provided by
+Department
+McMaster-Carr
+
+Student Station Assembly
+PULLEY
+401
+402
+
+Rope Winch
+Mass Pulley
+
+1
+1
+
+70
+7.02
+
+601
+614
+604
+605
+607
+608
+
+Shaft
+Key
+Dogtooth
+Gear
+V belt
+Large Pulley
+
+1
+1
+1
+1
+1
+1
+
+19.7
+0.93
+10.82
+97.81
+1.85
+0
+
+$19.70
+$0.93
+$10.82
+$97.81
+$1.85
+$0.00
+
+609
+
+Pump Pulley
+
+1
+
+0
+
+$0.00
+
+610
+
+Cart pulley
+
+1
+
+0
+
+$0.00
+
+612
+
+Shifter
+
+1
+
+701
+
+Pump main housing
+
+1
+
+0
+
+$0.00
+
+702
+
+Pump housing end
+
+1
+
+0
+
+$0.00
+
+703
+
+Pump blades
+
+1
+
+0
+
+$0.00
+
+803
+804
+805
+806
+807
+
+Track
+Horizontal Pulley
+Car
+String
+Rubber Feet
+
+1
+1
+1
+1
+8
+
+1F1
+1F2
+
+4
+8
+
+1F3
+1F4
+1F5
+
+Lift pulley fasteners
+Horizontal pulley
+fasteners (2)
+RTX caulking
+Epoxy Adhesive
+Winch Fasteners
+
+1
+1
+3
+
+Y
+Y
+Y
+
+Acrylic
+6061
+Delrin Round
+
+1
+1
+1
+
+GEARBOX
+
+600
+
+700
+
+5.21
+FLUID PUMP
+
+$5.21
+
+Provided by
+Department
+Provided by
+Department
+Provided by
+Department
+
+CART
+
+800
+
+1FF
+
+SHEET
+
+11000
+
+California Polytechnic State University, San Luis Obispo
+
+11.52
+8.22
+19.22
+5.28
+0.61
+FASTENERS
+
+$11.52
+$8.22
+$19.22
+$5.28
+$4.88
+
+Amazon
+McMaster-Carr
+Amazon
+Miner's
+Amazon
+
+$3.00
+$4.24
+
+Home Depot
+Home Depot
+
+10
+5
+0.75
+SHEET ORDERS
+
+$10.00
+$5.00
+$2.25
+
+Home Depot
+Home Depot
+Home Depot
+
+98.55
+72.12
+17.1
+WEIGHTS
+
+$98.55
+$72.12
+$17.10
+
+McMaster-Carr
+Aircraft Spruce
+McMaster-Carr
+
+0.75
+0.53
+
+- G-2 -
+
+0.5 lb weights (2 pack)
+1 lb weight
+2 lb weight
+5 lb weight
+10 lb weight
+
+1
+3
+3
+2
+1
+
+California Polytechnic State University, San Luis Obispo
+
+10.03
+3.26
+6.52
+8.18
+13.02
+
+$10.03
+$9.78
+$19.56
+$16.36
+$13.02
+
+Shipping+Tax
+
+21.05
+
+TOTAL
+
+564.52
+
+MESFAC
+Awarded
+
+$360.00
+
+Total-MESFAC
+
+$204.52
+
+Budget
+
+$500.00
+
+Total MESFAC
+used
+
+$130.44
+
+Amazon
+The Grateful Lead
+The Grateful Lead
+Walmart
+Walmart
+
+- G-3 -
+
+California Polytechnic State University, San Luis Obispo
+
+Attachment H - Gantt Chart
+
+The Gantt chart outlining the manufacturing process and the testing phase of the project.
+
+- H-1 -
+
+California Polytechnic State University, San Luis Obispo
+
+ID
+
+Task
+Mode
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+
+Project: Master Gantt
+Date: Wed 2/8/17
+
+Task Name
+
+Duration
+
+Design
+PDR
+Report
+Continue Background Research
+Lay Out Learning Goals
+Select Final Overall Concept
+Outline Report
+Write Report
+Turn in Report
+Presentation
+Prepare Presentation
+Complete Slides
+Rehersal
+Rehersal 2
+Schedule PDR
+In-class Presentation
+PDR
+CDR
+Start Initial CAD
+Finish CAD
+Order Long-Lead Parts
+Testing/Analysis
+Pulley-Mass Analysis
+Cart design and trials
+Gear conceptualization
+Heat Generation calcs
+Pump Sizing calc
+Pump modelling
+Report
+Revise PDR Report
+Outline New Sections
+Write Report
+Edit and Review
+Turn in Report
+Presentation
+Outline Slides
+Prepare Slides
+Schedule CDR
+Present to Class
+Present to Sponsor
+Build
+Order All Online Parts
+Shop Manufacturing
+Rough out base plate
+CAM base slots
+
+116.94 days? Thu 11/3/16
+25.06 days Thu 11/3/16
+24.06 days Thu 11/3/16
+7 days
+Thu 11/3/16
+1 hr
+Mon 11/7/16
+1 hr
+Mon 11/7/16
+1 day
+Mon 11/7/16
+14 days
+Mon 11/7/16
+1 day
+Thu 11/17/16
+17.94 days Mon 11/7/16
+10 days
+Mon 11/7/16
+1 day
+Mon 11/14/16
+1 day
+Mon 11/14/16
+1 day
+Tue 11/15/16
+8.56 days
+Sun 11/13/16
+1 day
+Thu 11/17/16
+1 day
+Thu 11/17/16
+91.88 days? Mon 11/28/16
+30 days
+Mon 11/28/16
+1 day
+Sat 1/21/17
+1 day
+Mon 11/28/16
+50.44 days? Sun 12/4/16
+46.31 days? Sun 12/4/16
+2.06 days? Mon 1/9/17
+2.06 days? Mon 1/9/17
+2.06 days? Tue 1/10/17
+2.06 days? Thu 1/19/17
+2.06 days? Fri 1/20/17
+30 days
+Sun 1/22/17
+5 days
+Sun 1/22/17
+1 day
+Tue 1/24/17
+20 days
+Wed 1/25/17
+4 days
+Mon 2/6/17
+1 day
+Tue 2/7/17
+25.31 days Wed 1/25/17
+1 day
+Wed 1/25/17
+15 days
+Wed 1/25/17
+1 day
+Fri 2/3/17
+1 day
+Tue 2/7/17
+0.5 days
+Tue 2/7/17
+170.88 days? Wed 2/8/17
+5 days
+Wed 2/8/17
+8.06 days? Sat 2/11/17
+1.13 days
+Sat 2/11/17
+2.06 days? Sat 2/11/17
+
+Start
+
+Qtr 4, 2016
+Oct
+
+Nov
+
+Dec
+
+Qtr 1, 2017
+Jan
+
+Feb
+
+Mar
+
+Qtr 2, 2017
+Apr
+
+May
+
+Jun
+
+11/7
+11/7
+
+11/17
+
+11/14
+
+11/17
+11/28
+
+1/22
+
+2/7
+
+2/7
+2/7
+
+Task
+
+Project Summary
+
+Manual Task
+
+Start-only
+
+Deadline
+
+Split
+
+Inactive Task
+
+Duration-only
+
+Finish-only
+
+Progress
+
+Milestone
+
+Inactive Milestone
+
+Manual Summary Rollup
+
+External Tasks
+
+Manual Progress
+
+Summary
+
+Inactive Summary
+
+Manual Summary
+
+External Milestone
+
+Page 1
+
+- H-2 Figure H1. Page one of the Gantt chart leading up to the current date. We have completed the design phase...
+
+Qtr 3, 2017
+Jul
+
+California Polytechnic State University, San Luis Obispo
+
+ID
+
+Task
+Mode
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+
+Project: Master Gantt
+Date: Wed 2/8/17
+
+Task Name
+
+Duration
+
+Start
+
+CNC Base
+Cut cleat sheet
+Prep welds
+Weld Cleats
+Inspect
+Manual Manufacturing
+Laser Cut Acryllic
+Begin Test Fits
+Machine shaft
+Machine Keys
+Waterjet Shift Fork
+Mill out Dogteeth
+3D Print Pump
+Schedule 3D printer
+Review SLT file
+Print Part
+Finish and clean part
+Mount shaft hardware
+Fasten Pump
+Secure Shaft
+Fasten Track to Ramp
+Fasten Ramp system
+Add V-belt
+Caulk acryllic
+Add Fastners
+Generate Instructions and Media
+Test
+Weigh Assembly
+Endurance Tests
+Gauge tests
+RPM tests
+Amperage Tests
+Pump tests
+Define pump curve
+Run through equations
+Time experiment
+Time presentaions
+Write mock report
+Generate grading critera
+
+1 day?
+1 day
+1 day
+2 days
+1 day
+28.5 days
+3 wks
+5 days
+3 days
+3 days
+6 days
+2 wks
+6.5 days
+1 day
+4 days
+1 day
+0.5 days
+2.06 days?
+2.06 days?
+2.06 days?
+2.06 days?
+2.06 days?
+2.06 days?
+2.06 days?
+2.06 days?
+170.88 days
+113.63 days
+1 day
+113.63 days
+5.25 days
+5.25 days
+1.13 days
+5.25 days
+11.56 days
+1.13 days
+26.13 days
+1.13 days
+35.19 days
+31.63 days
+
+Sun 2/12/17
+Mon 2/13/17
+Mon 2/13/17
+Tue 2/14/17
+Wed 2/15/17
+Wed 2/15/17
+Wed 2/15/17
+Fri 2/24/17
+Wed 2/15/17
+Fri 2/17/17
+Sun 2/19/17
+Wed 2/22/17
+Tue 2/28/17
+Tue 2/28/17
+Tue 2/28/17
+Thu 3/2/17
+Fri 3/3/17
+Fri 3/3/17
+Sat 3/4/17
+Mon 3/6/17
+Tue 3/7/17
+Wed 3/8/17
+Thu 3/9/17
+Thu 3/9/17
+Fri 3/10/17
+Wed 2/8/17
+Tue 4/4/17
+Tue 4/4/17
+Tue 4/4/17
+Wed 4/12/17
+Wed 4/12/17
+Fri 4/14/17
+Wed 4/12/17
+Fri 4/14/17
+Thu 4/20/17
+Mon 5/1/17
+Wed 5/10/17
+Mon 5/1/17
+Sat 5/20/17
+
+Qtr 4, 2016
+Oct
+
+Nov
+
+Dec
+
+Qtr 1, 2017
+Jan
+
+Feb
+
+Mar
+
+Qtr 2, 2017
+Apr
+
+Task
+
+Project Summary
+
+Manual Task
+
+Start-only
+
+Deadline
+
+Split
+
+Inactive Task
+
+Duration-only
+
+Finish-only
+
+Progress
+
+Milestone
+
+Inactive Milestone
+
+Manual Summary Rollup
+
+External Tasks
+
+Manual Progress
+
+Summary
+
+Inactive Summary
+
+Manual Summary
+
+External Milestone
+
+Page 2
+
+- H-3 Figure H2. ...and are moving onto the build and testing phase (page two).
+
+May
+
+Jun
+
+Qtr 3, 2017
+Jul
+
+California Polytechnic State University, San Luis Obispo
+
+Attachment I - Design Verification Plan
+For Critical Design Review...
+
+- I-1 -
+
+California Polytechnic State University, San Luis Obispo
+
+ME430 DVP&R Format
+CDR
+
+2/8/2017
+
+Sponsor
+
+Steffen Peuker
+
+TEST PLAN
+Item Specification or Clause
+Reference
+No
+1
+Must be under 15 lb
+Parts must be easy to
+2
+access
+Must last at least 1
+3
+quarter of use
+Data must be
+4
+consistent
+Data must be
+5
+consistent
+Data must be
+6
+consistent
+Data must be
+7
+recordable
+Data must be
+8
+recordable
+
+9
+10
+11
+
+Experiment must be
+completed in a lab
+period
+Presentations do not
+consume extra time
+Report is not too
+lengthy
+
+Test
+SAMPLES TESTED
+Test Description
+Acceptance Criteria
+Quantity
+Responsibility
+Weigh the final assembly
+~15lb
+NL
+1
+All parts within
+All
+Attempt full teardown and re-assembly housing accessible
+1
+Continuously run all sub-systems
+Failures within
+All
+~60
+accepted limit
+Record and compare RPM outputs
+RPM: 40%
+NB
+20
+using experimental masses
+Difference
+Record and compare amperage using
+A: 20% difference
+NB
+10
+experimental output
+Record and compare head of pump for
+Inches: 40%
+DM
+20
+multiple input masses
+difference
+Verify gauges using above tests
+Measureable data
+All
+60
+Pump has a defined operating scale
+Pump curve
+DM
+generated
+20
+Time the operation period for a
+<2.5 hours
+All
+complete system run-through
+5
+Run through presentations and time
+<.5 hours
+All
+5 - 10
+Write multiple mock reports based on
+2-3 pages
+All
+3
+instructions and requirements
+
+TEST REPORT
+TIMING
+TEST RESULTS
+Start date Finish date Test Result Quantity Pass Quantity Fail
+4/4/2017
+4/4/2017
+5/20/2017
+
+6/6/2017
+
+4/4/2017
+
+6/6/2017
+
+4/12/2017
+
+4/14/2017
+
+4/14/2017
+
+4/14/2017
+
+4/12/2017
+
+4/14/2017
+
+4/4/2017
+
+6/6/2017
+
+4/14/2017
+
+4/20/2017
+
+5/1/2017
+
+5/15/2017
+
+5/1/2017
+
+5/20/2017
+
+4/20/2017
+
+5/20/2017
+
+NOTES
+
+Only do once
+
+Input, pump, and
+engine
+
+Must be
+referenceable by
+students
+Use multiple groups
+of people
+Use multiple people
+(professors?)
+
+- I-2 -
+
+Attachment I - Assembly, Subassembly, and Part Drawings and Specification Sheets
+Drawings:
+100 - Assembly View
+100x - Exploded Assembly View
+200 - Base Plate Subassembly
+201 - Base Plate CNC Guide
+202 - Front Cleat Side
+203 - Front Cleat Bottom
+204 - Side Cleat Side
+205 - Side Cleat Bottom
+206 - Gusset
+2WW - Base Welds
+300 - Housing Subassembly
+400 - Pulley Subassembly
+500 - Electric Subassembly
+600 - Power Transfer Subassembly
+601 - Shaft
+602 - Bushing Mount
+603 - Gearbox Bushing
+604 - Dogtooth
+611 - Shifter Fork
+613 - Shifter Bushing
+700 - Pump Subassembly
+704 - Pump Shaft
+800 - Cart Subassembly
+
+Specifications:
+401 - Rope Winch
+402 - Mass Pulley
+501 - Motor/Generator
+502 - Housed LED, Amber
+601 - Main shaft
+604 - Dogtooh
+605 - Gear
+607 - V-belt
+612 - Shifter
+614 - Key
+901 - Hall Effect RPM Sensor
+902 - Analog Tachometer
+1001 - Heat Engine
+
+California Polytechnic State University, San Luis Obispo
+
+- J-1 -
+
+7
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+NOTES:
+TOTAL ESTIMATED WEIGHT: 11.3 LB
+ALL DIMENSIONS IN INCHES
+
+D
+
+16
+
+C
+
+D
+
+1.63
+.00
+
+C
+
+REAR ISOMETRIC
+
+1.06
+
+0
+
+10.0
+
+COVER OFF,INNER-FACING VIEW
+
+7.00
+
+California Polytechnic State University, San Luis Obispo
+
+8
+
+B
+
+B
+
+FRONT ISOMETRIC
+
+COVER ON
+
+A
+
+A
+UNLESS OTHERWISE SPECIFIED:
+
+4.0
+
+DIMENSIONS ARE IN INCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+
+0
+4.0
+
+0
+
+INTERPRET GEOMETRIC
+TOLERANCING PER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED IN THIS
+DRAWING IS THE SOLE PROPERTY OF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+8
+
+7
+
+6
+
+5
+
+4
+
+3
+
+MATERIAL
+
+USED ON
+
+NEXT ASSY
+
+FINISH
+
+APPLICATION
+
+DO NOT SCALE DRAWING
+
+2
+
+NAME
+DRAWN
+CHECKED
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+DATE
+
+NHL
+
+TITLE:
+
+ME 128
+THERMODYNAMICS AND
+FLUIDS LAB EXPERIMENT
+SIZE DWG. NO.
+
+D
+
+100
+
+SCALE: 1:2 WEIGHT:
+
+1
+
+REV
+
+SHEET 1 OF 1
+
+- J-2 -
+
+California Polytechnic State University, San Luis Obispo
+
+ITEM NO.
+1
+2
+3
+4
+5
+6
+7
+
+7
+
+PART NUMBER
+200
+300
+400
+500
+600
+700
+800
+
+DESCRIPTION
+BASE
+COVER
+PULLEY SYSTEM
+ELECTRICAL
+GEARBOX
+PUMP
+CART
+
+QTY
+1
+1
+1
+1
+1
+1
+1
+
+2
+4
+5
+3
+
+1
+
+6
+UNLESS OTHERWISE SPECIFIED:
+
+INTERPRET DRAWING
+PER ANSI Y14.5 2009
+
+DIMENSIONS ARE IN INCHES
+TOLERANCES:
+FRACTIONAL .5
+TWO PLACE DECIMAL .01
+.005
+THREE PLACE DECIMAL
+
+MATERIAL:
+
+MULTIPLE
+
+DRAWN BY:
+
+- J-3 -
+
+NHL
+
+CAL POLY
+SAN LUIS OBISPO
+
+TITLE:
+
+ME128 ASSM. (EXPLODED)
+SHEET 1 OF 2
+
+DRAWING NUMBER
+
+100-X
+
+SCALE: 1:8
+
+REV
+
+SIZE
+
+A
+
+California Polytechnic State University, San Luis Obispo
+
+4
+
+ITEM NO.
+
+PART NUMBER
+
+DESCRIPTION
+
+QTY
+
+1
+
+201
+
+BASE PLATE
+
+1
+
+2
+
+202
+
+FRONT CLEAT SIDE
+
+1
+
+3
+
+203
+
+FRONT CLEAT BOTTOM
+
+1
+
+4
+
+204
+
+SIDE CLEAT SIDE
+
+1
+
+5
+
+205
+
+SIDE CLEAT BOTTOM
+
+1
+
+6
+
+206
+
+GUSSET
+
+2
+
+1
+5
+
+6
+6
+
+UNLESS OTHERWISE SPECIFIED:
+
+2
+
+INTERPRET DRAWING
+PER ANSI Y14.5 2009
+
+DIMENSIONS ARE IN MM
+TOLERANCES:
+FRACTIONAL .5
+TWO PLACE DECIMAL .01
+.005
+THREE PLACE DECIMAL
+
+3
+
+MATERIAL:
+
+6061 T6
+
+DRAWN BY:
+
+- J-4 -
+
+DANIEL MIRANDA
+
+CAL POLY
+SAN LUIS OBISPO
+
+TITLE:
+
+PART NUMBER:
+
+BASE
+
+200
+
+SHEET 1 OF 1
+
+SCALE: 1:4
+
+REV
+
+SIZE
+
+A
+
+1
+1.990
+
+6X 0.189 THRU
+#10 CLEARANCE
+
+1.500 .005
+
+B
+
+B
+
+1.375
+
+.005 A
+8.750 .010
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1/4-20 Tapped Hole
+
+1.438
+
+0.309 .005
+
+0.781
+0.688
+
+0.309 .005
+
+2.594
+
+A
+
+A
+
+NOTES:
+-ALL SLOTS ARE 0.060" DEPTH OF CUT
+-HOLE LOCATIONS ARE CRITICAL RELATIVE TO
+EACH OTHER
+-SLOTS CIRITICALLY PARALLEL/PERPENDICULAR
+TO EACH OTHER
+
+MACHINIST
+NAME&#:
+MATERIAL
+6061-T6
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+6061-T6 .125" THICK
+PLATE
+
+BASE PLATE
+
+SIZE
+
+A
+
+DWG#
+
+201
+
+SCALE: 1:8 QTY:
+
+- J-5 -
+
+2
+
+A
+
+PART NAME:
+
+1
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+
+B
+
+B
+10.00
+
+1.50
+
+A
+
+NOTES:
+TOLERANCES UNLESS OTHERWISE STATED
+X.XX = .01
+
+.125 .001
+MACHINIST
+NAME&#:
+MATERIAL
+6061 T6
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+6061 T6 SHEET .125"
+THICK
+
+PART NAME:
+
+SIZE
+
+A
+
+FRONT CLEAT
+SIDE
+DWG#
+
+202
+
+SCALE: 1:2 QTY:
+
+- J-6 -
+
+2
+
+1
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+A
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+
+B
+
+B
+
+9.875
+
+.125
+.500
+
+A
+
+NOTES:
+TOLERANCES UNLESS OTHERWISE STATED
+X.XXX = .005
+
+MACHINIST
+NAME&#:
+MATERIAL
+6061 T6
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+6061 T6 SHEET .125"
+THICK
+
+PART NAME:
+
+SIZE
+
+A
+
+FRONT CLEAT
+BOTTOM
+DWG#
+
+203
+
+SCALE: 1:2 QTY:
+
+- J-7 -
+
+2
+
+1
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+A
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+
+B
+
+.125
+
+B
+
+1.500
+
+15.875
+
+A
+
+NOTES:
+TOLERANCES UNLESS OTHERWISE STATED
+X.XXX = .005
+
+MACHINIST
+NAME&#:
+MATERIAL
+6061 T6
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+6061 T6 SHEET .125"
+THICK
+
+SIZE
+
+A
+
+SIDE CLEAT
+SIDE
+
+DWG#
+
+204
+
+SCALE: 1:2 QTY:
+
+- J-8 -
+
+2
+
+A
+
+PART NAME:
+
+1
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+
+15.375
+
+B
+
+.500
+
+B
+
+.125
+
+A
+
+NOTES:
+TOLERANCES UNLESS OTHERWISE STATED
+X.XXX = .005
+
+MACHINIST
+NAME&#:
+MATERIAL
+6061 T6
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+6061 T6 SHEET .125"
+THICK
+
+SIZE
+
+A
+
+SIDE CLEAT
+BOTTOM
+
+DWG#
+
+205
+
+SCALE: 1:2 QTY:
+
+- J-9 -
+
+2
+
+A
+
+PART NAME:
+
+1
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+
+B
+159°
+
+1.500
+
+B
+
+PART NAME:
+
+A
+
+.125
+
+4.000
+
+A
+
+NOTES:
+TOLERANCES UNLESS OTHERWISE STATED
+X.XXX = .005
+ANGLES = 2
+
+MACHINIST
+NAME&#:
+MATERIAL
+6061 T6
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+6061 T6 SHEET .125"
+THICK
+
+GUSSET
+
+SIZE
+
+A
+
+DWG#
+
+206
+
+SCALE: 1:2 QTY:
+
+- J-10 -
+
+2
+
+1
+
+2
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+
+.125
+
+B
+
+B
+
+.125
+.125
+
+MACHINIST
+NAME&#:
+MATERIAL
+6061-T6
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+
+A
+
+BASE WELDS
+
+SIZE
+
+A
+
+DWG#
+
+2WW
+
+SCALE: 1:8 QTY:
+
+- J-11 -
+
+2
+
+A
+
+PART NAME:
+
+1
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+California Polytechnic State University, San Luis Obispo
+
+ITEM NO. PART NUMBER
+DESCRIPTION
+1
+301
+SIDE WALL
+2
+302
+PULLEY WALL
+3
+303
+PORT WALL
+4
+304
+STARBOARD WALL
+5
+305
+LID
+6
+306
+PUMP WALL
+7
+307
+FLUID DIVIDER
+8
+308
+SHIFTER HOLDER
+
+5
+3
+
+QTY
+1
+1
+1
+1
+1
+1
+1
+1
+
+2
+
+4
+
+8
+
+7
+6
+UNLESS OTHERWISE SPECIFIED:
+
+1
+
+INTERPRET DRAWING
+PER ANSI Y14.5 2009
+
+DIMENSIONS ARE IN INCHES
+TOLERANCES:
+FRACTIONAL .5
+TWO PLACE DECIMAL .01
+.005
+THREE PLACE DECIMAL
+
+MATERIAL:
+
+ACYLLIC SHEET
+
+DRAWN BY:
+
+- J-12 -
+
+NHL
+
+CAL POLY
+SAN LUIS OBISPO
+
+TITLE:
+
+HOUSING SUBASSEMBLY
+SHEET 1 OF 1
+
+PART NUMBER:
+
+300
+
+SCALE: 1:4
+
+REV
+
+SIZE
+
+A
+
+California Polytechnic State University, San Luis Obispo
+
+ITEM NO. PART NUMBER
+1
+401
+2
+402
+
+DESCRIPTION
+WINCH
+MASS PULLEY
+
+QTY.
+1
+1
+
+1
+
+2
+
+UNLESS OTHERWISE SPECIFIED:
+
+INTERPRET DRAWING
+PER ANSI Y14.5 2009
+
+DIMENSIONS ARE IN MM
+TOLERANCES:
+FRACTIONAL .5
+TWO PLACE DECIMAL .01
+.005
+THREE PLACE DECIMAL
+
+MATERIAL:
+
+MULTIPLE
+
+DRAWN BY:
+
+- J-13 -
+
+DANIEL MIRANDA
+
+CAL POLY
+SAN LUIS OBISPO
+
+TITLE:
+
+PULLEY-MASS SYSTEM (EXPLODED)
+
+SHEET 1 OF 1
+
+DRAWING NUMBER:
+
+400
+
+SCALE: 1:4
+
+REV
+
+SIZE
+
+A
+
+California Polytechnic State University, San Luis Obispo
+
+ITEM NO
+1
+2
+3
+
+PART
+NUMBER
+501
+502
+503
+
+DESCRIPTION
+MOTOR
+LED
+RUBBER PLUG
+
+QTY
+1
+1
+1
+
+2
+
+1
+
+3
+
+UNLESS OTHERWISE SPECIFIED:
+
+INTERPRET DRAWING
+PER ANSI Y14.5 2009
+
+DIMENSIONS ARE IN INCHES
+TOLERANCES:
+FRACTIONAL .5
+TWO PLACE DECIMAL .01
+.005
+THREE PLACE DECIMAL
+
+MATERIAL:
+
+MULTIPLE
+
+DRAWN BY:
+
+- J-14 -
+
+NHL
+
+CAL POLY
+SAN LUIS OBISPO
+
+TITLE:
+
+ELECTRICAL SUBASSEMBLY
+SHEET 1 OF 1
+
+PART NUMBER:
+
+500
+
+SCALE: 2:3
+
+REV
+
+SIZE
+
+A
+
+California Polytechnic State University, San Luis Obispo
+
+3
+
+6
+
+ITEM NO. PART NUMBER
+1
+601
+2
+602
+3
+603
+4
+604
+5
+605
+6
+606
+7
+607
+8
+608
+9
+609
+10
+610
+11
+611
+12
+612
+13
+613
+
+8
+
+10
+4
+
+1
+
+DESCRIPTION
+SHAFT
+BUSHING MOUNT
+BUSHING
+DOGTOOTH
+GEAR
+EXTERIOR MOUNT
+V BELT
+LARGE PULLEY
+PUMP PULLEY
+CART PULLEY
+SHIFTER FORK
+SHIFTER
+SHIFTER BUSHING
+
+QTY
+1
+2
+3
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+5
+
+12
+
+2
+
+3
+13
+
+7
+
+11
+
+2
+
+UNLESS OTHERWISE SPECIFIED:
+
+9
+
+INTERPRET DRAWING
+PER ANSI Y14.5 2009
+
+DIMENSIONS ARE IN INCHES
+TOLERANCES:
+FRACTIONAL .5
+TWO PLACE DECIMAL .01
+.005
+THREE PLACE DECIMAL
+
+MATERIAL:
+
+MULTIPLE
+
+DRAWN BY:
+
+- J-15 -
+
+NHL
+
+3
+
+CAL POLY
+SAN LUIS OBISPO
+
+TITLE:
+
+POWER TRANSFER
+SHEET 1 OF 1
+
+PART NUMBER:
+
+400
+
+SCALE: 1:2
+
+REV
+
+SIZE
+
+A
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+6.000
+
+1.000
+
+A
+
+.650
+
+A
+.188
+
+B
+
+B
+
+B
+
+B
+SECTION B-B
+SCALE 1 : 1.5
+
+.056 X 45°
+
+.500
+
+8.500
+5.000
+
+.082
+
+3.000
+.076
+
+SECTION A-A
+SCALE 1 : 1.5
+
+A
+
+NOTE:
+TOLERANCES UNLESS OTHERWISE SPECIFIED
+X.XXX = .005
+ANGLES = 2
+
+MACHINIST
+NAME&#:
+MATERIAL
+1045
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+
+1045 Carbon Steel, 3/4"
+Diameter, 9" Long
+
+SHAFT
+
+SIZE
+
+A
+
+DWG#
+
+601
+
+SCALE: 1:2 QTY:
+
+- J-16 -
+
+2
+
+A
+
+PART NAME:
+
+1
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+
+.938
+
+B
+
+B
+3.750
+
+2.185
+
+.625
+
+.118
+
+1.250
+
+A
+
+NOTE:
+TOLERANCES UNLESS OTHERWISE SPECIFIED
+X.XXX = .005
+
+MACHINIST
+NAME&#:
+MATERIAL
+ACRYLLIC
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+.118" THICK ACRYLLIC
+
+SYSTEM
+LEAD:
+
+SIZE
+
+A
+
+BUSHING
+MOUNT
+
+DWG#
+
+SCALE: 1:1
+
+- J-17 -
+
+2
+
+A
+
+PART NAME:
+
+1
+
+602
+QTY:
+
+2
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+1.125
+
+0.975
+
+B
+
+0.750
+
+A
+
+NOTE:
+TOLERANCES UNLESS OTHERWISE SPECIFIED
+X.XXX = .005
+
+B
+
+0.313
+0.125
+
+MACHINIST
+NAME&#:
+MATERIAL
+DELRIN
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+1" DELRIN ROD
+
+SIZE
+
+A
+
+GEARBOX
+BUSHING
+
+DWG#
+
+603
+
+SCALE: 2:1 QTY:
+
+- J-18 -
+
+2
+
+A
+
+PART NAME:
+
+1
+
+3
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+
+5x.360
+
+B
+
+SECTION A-A
+A
+
+B
+
+.094
+
+4x72°
+.112
+
+.594
+
+A
+
+.500
+.750
+1.000
+
+A
+
+NOTE:
+TOLERANCES UNLESS OTHERWISE SPECIFIED
+X.XXX = .005
+ANGLES = 2
+
+MACHINIST
+NAME&#:
+MATERIAL
+1018
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+
+1" 1018 LOW CARBON STEEL
+ROD
+
+1.000
+
+DOGTOOTH
+
+SIZE
+
+A
+
+DWG#
+
+604
+
+SCALE: 2:1 QTY:
+
+- J-19 -
+
+2
+
+A
+
+PART NAME:
+
+1
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1
+10-32 UNF THRU ALL
+SIZE 21 TAP DRILL
+
+.200
+
+R.380
+
+B
+
+B
+.750
+1.260
+.630
+.250
+
+120°
+
+.255
+
+.600
+1.375
+
+.200
+
+A
+
+1.750
+NOTES:
+TOLERANCES UNLESS OTHERWISE SPECIFIED
+X.XXX = .005
+ANGLES = 2
+
+MACHINIST
+NAME&#:
+MATERIAL
+1018
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+1018 .25" THICK 2X2
+
+PART NAME:
+
+SHIFTER FORK
+
+SIZE
+
+A
+
+DWG#
+
+SCALE: 1:1
+
+- J-20 -
+
+2
+
+1
+
+611
+QTY:
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+A
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+0.255+.005
+
+1
+0.250
+
+THRU
+
+B
+
+B
+
+0.500
+0.625
+
+A
+
+NOTE:
+UNLESS OTHERWISE SPECIFIED:
+TOLERANCES: X.XXX = .005
+
+0.130
+MACHINIST
+NAME&#:
+MATERIAL
+DELRIN
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+1" DELRIN ROD
+
+SIZE
+
+A
+
+SHIFTER
+BUSHING
+
+DWG#
+
+613
+
+SCALE: 4:1 QTY:
+
+- J-21 -
+
+2
+
+A
+
+PART NAME:
+
+1
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+California Polytechnic State University, San Luis Obispo
+
+ITEM NO. PART NUMBER
+1
+2
+3
+4
+
+4
+
+2
+
+3
+
+UNLESS OTHERWISE SPECIFIED:
+
+701
+702
+703
+704
+
+DELRIN, ABS
+
+DRAWN BY:
+
+- J-22 -
+
+NHL
+
+QTY
+
+PUMP MAIN HOUSING
+PUMP REAR HOUSING
+PUMP BLADES
+PUMP SHAFT
+
+1
+1
+1
+1
+
+1
+
+INTERPRET DRAWING
+PER ANSI Y14.5 2009
+
+DIMENSIONS ARE IN INCH
+TOLERANCES:
+FRACTIONAL .5
+TWO PLACE DECIMAL .01
+.005
+THREE PLACE DECIMAL
+
+MATERIAL:
+
+DESCRIPTION
+
+CAL POLY
+SAN LUIS OBISPO
+
+TITLE:
+
+PUMP SUBASSEMBLY
+SHEET 1 OF 1
+
+PART NUMBER:
+
+700
+
+SCALE: 2:3
+
+REV
+
+SIZE
+
+A
+
+1
+NOTES:
+-ALL DIMENSIONS
+
+0.005
+
+B
+
+B
+
+0.500
+
+40
+.0
+
+0.250
+
+R0
+
+California Polytechnic State University, San Luis Obispo
+
+2
+
+1.250
+3.500
+
+MACHINIST
+NAME&#:
+MATERIAL
+DELRIN
+DATE STARTED
+DATE COMPLETED
+STOCK SIZE & LOCATION:
+
+A
+
+1" DELRIN ROD
+
+PART NAME:
+
+PUMP SHAFT
+
+SIZE
+
+A
+
+DWG#
+
+SCALE: 1:1
+
+- J-23 -
+
+2
+
+1
+
+704
+QTY:
+
+1
+
+REV
+
+A
+
+SHEET 1 OF 1
+
+A
+
+California Polytechnic State University, San Luis Obispo
+
+ITEM NO.
+1
+2
+3
+4
+
+PART NUMBER
+801
+802
+803
+804
+
+DESCRIPTION
+RAMP
+RAMP SUPPORT
+TRACK
+HORIZONTAL PULLEY
+
+QTY.
+1
+1
+1
+2
+
+4
+
+3
+
+4
+
+2
+
+1
+
+UNLESS OTHERWISE SPECIFIED:
+
+INTERPRET DRAWING
+PER ANSI Y14.5 2009
+
+DIMENSIONS ARE IN MM
+TOLERANCES:
+FRACTIONAL .5
+TWO PLACE DECIMAL .01
+.005
+THREE PLACE DECIMAL
+
+MATERIAL:
+
+MULTIPLE
+
+DRAWN BY:
+
+- J-24 -
+
+DANIEL MIRANDA
+
+CAL POLY
+SAN LUIS OBISPO
+
+TITLE:
+
+CART SUBSYSTEM
+SHEET 1 OF 1
+
+PART NUMBER:
+
+800
+
+SCALE: 1:4
+
+REV
+
+SIZE
+
+A
+
+PART 401
+
+California Polytechnic State University, San Luis Obispo
+
+- J-25 -
+
+PART 402
+
+California Polytechnic State University, San Luis Obispo
+
+- J-26 -
+
+PART 501
+
+California Polytechnic State University, San Luis Obispo
+
+- J-27 -
+
+PART 502
+
+California Polytechnic State University, San Luis Obispo
+
+- J-28 -
+
+PART 601
+
+California Polytechnic State University, San Luis Obispo
+
+- J-29 -
+
+PART 604
+
+California Polytechnic State University, San Luis Obispo
+
+- J-30 -
+
+PART 605
+
+California Polytechnic State University, San Luis Obispo
+
+- J-31 -
+
+PART 607
+
+California Polytechnic State University, San Luis Obispo
+
+- J-32 -
+
+PART 612
+
+California Polytechnic State University, San Luis Obispo
+
+- J-33 -
+
+PART 614
+
+California Polytechnic State University, San Luis Obispo
+
+- J-34 -
+
+PART 901
+
+\
+
+California Polytechnic State University, San Luis Obispo
+
+- J-35 -
+
+PART 902
+
+California Polytechnic State University, San Luis Obispo
+
+- J-36 -
+
+PART 1001
+Alcohol Engine
+
+California Polytechnic State University, San Luis Obispo
+
+- J-37 -
+
+Detailed Testing Procedures: Intro to ME 128 Team
+
+Item 1: Weighing the final assembly
+1. Place the experiment on a flat scale, such as the large blue digital scale in the engines lab.
+2. Ensure that the bottom pulley is taken off it is a floor scale. This weight should be 20
+pounds or less.
+3. Ensure that there are no external masses attached
+
+Item 2: Must last at least 1 quarter of use
+To withstand a quarter of use we may not have time to do the testing for the whole quarter ,
+however we will do as many runs of the experiment as we can. For this all subsystems must be
+continuously run for a period of time
+
+Test Procedure
+1. Set up experiment
+a. Lay down the experiment on the table with pulley hanging off ledge
+b. Attach it to table with clamps
+c. Have the all the string spooled around
+2. Make sure water levels in pump enclosure are constant to ensure all other factors remain
+3. Make sure cart is at bottom of track
+4. Attach ruler to backside of pump with markings facing towards front
+5. Make sure water levels in pump part are constant to ensure all other factors remain
+6. Attach desired weight to the end of the rope, record this weight
+7. Release mass once secured to end of rope, gear may need to be slightly pushed dot
+induce the fall
+8. Record and compare head of pump, by visually inspecting pump height with ruler
+9. Release mass once secured, gear may need to be slightly pushed dot induce the fall
+10. Using shifter fork pull to change the settings to the ramp subsystem
+11. Repeat steps 7 and 8
+12. Once cart has come to stand still record vertical position on track
+13. Repeat steps 4-12 at each different weight 10 times per weight
+14. Listen for any unwanted vibrations in the housing while mass is falling
+15. Check for any loose components after a few trials of the heavier weights
+
+Item 3: Data must be consistent for falling masses and resulting RPMS’s
+Test Procedure
+1. Set up experiment
+a. Lay down the experiment on the table with pulley hanging off ledge
+b. Attach it to table with clamps
+c. Have the all the string spooled around
+2. Attach analog tachometer to shaft
+3. Make sure water levels in pump part are constant to ensure all other factors remain
+4. Attach desired weight to the end of the rope, record this weight
+5. Release mass once secured, gear may need to be slightly pushed dot induce the fall
+6. Record RPM of shaft with analog tachometer
+7. The acceptable limit is 20% difference between each RPM at the same weight
+8. Perform this test 20 times per weight
+9. Compare recorded data by plotting a graph of RPM vs weight for each run of this test
+procedure then using a visual comparison and the slope of the graphs will show any
+inconsistencies between data sets
+
+Item 4 : Data Must be Consistent and recordable for Pump Subsystem
+Test Procedure
+1. Set up experiment
+a. Lay down the experiment on the table with pulley hanging off ledge
+b. Attach it to table with clamps
+c. Have the all the string spooled around
+2. Attach analog tachometer to shaft
+3. Attach ruler to backside of pump with markings facing towards front
+4. Make sure water levels in pump part are constant to ensure all other factors remain
+5. Attach desired weight to the end of the rope, record this weight
+6. Release mass once secured, gear may need to be slightly pushed dot induce the fall
+7. Record and compare head of pump, by visually inspecting pump height with ruler and
+noting down value
+8. Record RPM of shaft with analog tachometer
+9. Perform steps 4-8 20 times per weight
+10. A difference of 40% in the pump height readings is acceptable
+11. Take average of these readings per weight
+
+12. Plot a curve with head height vs RPM to generate pump curve
+13. Plot head height vs Input mass
+14. Once curves are generated these values can be referenced by seeing if a new data point
+with generated curves
+
+Item 5: Experiment must be completed in a lab period
+This would require running the experiment fully through multiples times. The time is takes for
+the team to do a full run through of the experiment will be recorded every time
+A full run through of the experiment should be performed at least 5 times and each system runthrough should last for a maximum of 2.5 hrs.
+Refer to the Test Procedure in Item 2 for a full run through of the experiment
+
+Item 6: Presentation does not consume extra time
+The pre-lab presentation will be run through around 5-10 times and each presentations should
+fall within the maximum time limit of 30 minutes.
+A timed run-through of the presentations will be done by the teams once the pre-lab
+presentation is finalized.
+
+ME 128
+ME 229
+Energy Conversion and
+Heat Transfer
+
+California Polytechnic State
+University, San Luis Obispo
+Mechanical Engineering
+Updated 2017
+
+Introduction
+The transfer of energy through multiple domains is a critical part of mechanical
+engineering. We use various ways of manipulating energy to power systems,
+change the state of a design, or move from one point to another.
+As you already know, energy is always transferred from one component to another,
+and never created. This can be through a belt, lever, piston, fluid, gas, and many
+other objects. In mechanical engineering the study of energy transfer is largely
+divided into three areas: mechanical energy, fluid energy, and heat transfer. These
+three areas cross over each other in many ways, however they also act as standalone
+areas of expertise for many mechanical engineers.
+This transfer is never an ideal, and engineers must account for this in their designs.
+Whether it is a car drive train, a wind or wave turbine, or a piezoelectric mechanism,
+energy is constantly dissipated by other elements of a system or the environment
+surrounding it. As a mechanical engineer, you must understand how these losses
+form and how to calculate and quantify them. This is important in understanding
+how energy behaves in a system, and must be communicated to a customer as
+precisely as possible to allow for proper and ethical engineering.
+In the development of clean energy, the losses seen by electrical systems are
+becoming more and more important. Clever methods of energy storage and
+generation are constantly being developed, however transfer of this energy to
+the national grid can result in unfavorable returns if the system is inefficient or
+designed poorly.
+One example of this is the water-powered car, where hydrogen gathered from
+water molecules is used to power a hydrogen-combustion engine to power a
+vehicle. This concept is flawed in that it requires more energy to break apart
+the molecules of water than it produces as horsepower to the tires. Ideally this
+system may produce enough raw energy to balance the energy used to break the
+hydrogen out, but the dissipation from the motor, gearbox, drive shaft, and tires
+is enough to make this concept unusable with current technology.
+Wind powered turbines are one of the most efficient methods to generate power,
+but are power-limited in that the wind can only spin the turbine blades so fast
+before the generator begins to resist any faster rotation. To overcome this issue,
+engineers installed gearboxes and elevated the turbines. This allowed the system
+to generate higher torque within the generator, and at a higher speed, creating
+more electricity than before. In this case, engineers used an intermediate system
+to overcome an energy limit.
+This experiment has some basic systems that do not necessarily represent a single
+device, but rather generalize many systems seen in industries across the field
+of engineering. The following are relationships you may wish to draw while
+running this experiment:
+
+-1-
+
+Mass-Pulley Subsystems
+This subsystem, which consists of a large mass being dropped from a height,
+represents every any form of potential to kinetic energy storage and generation.
+Potential energy storage is commonly used on a large scale in hydroelectric systems,
+where fluids can be stored in reservoirs to supplement energy demands. Elevators
+utilize weights to balance the energy usage during travel, where a counterweight
+changes the effective weight of the elevator car. In our case, the main subsystem
+the weight turns a pulley which can power other systems. This is the source of
+the system. There is also a massive cart on a track that can be pulled or dropped
+on its incline as dictated by the tension of the rope and pulley it is attached to.
+This acts a a coupled system to the dropped mass.
+Geartrain
+Geartrains are used in many different applications to reduce speed or increase
+torque. One you may instantly recall is the gearbox in a car. This geartrain
+converts the torque-limited high engine speed into a lower speed but higher
+torque wheel output. All servo motors have a built-in gearbox that produces
+a much higher shaft torque than the voltage would normally allow, making most
+robotic and electric motion possible. As mentioned before, wind turbines use
+a gearbox to reduce the torque requirement seen by the fan blades to turn the
+generator. In our system, the geartrain drives a shaft that provides power to other
+rotary elements: a v-belt, a generator, and another winch pulley. The geartrain
+is important in that it transfers energy from the mass-pulley to the other systems
+in 3D space, however due to its inertia, friction between systems, and tolerances
+between parts there is a significant amount of energy lost in the transfer process.
+This is what we will investigate today.
+Pump
+Fluid has been used to generate energy since the dawn of time. Waterwheels
+have powered rotational systems to grind, saw, and machine various substances.
+Pumps have allowed us to move fluids to locations and heights once impossible
+in short amounts of time. One easy way to characterize a pump’s performance,
+besides horsepower measurements, is to measure the height the pump can move
+fluid straight up. This height is typically called a pump head. In essence, this
+measurement is equivalent to a maximum pressure the pump can output, but in
+a form that allows the user to understand their maximum elevation for a fluid
+system. Like other rotary systems, pumps fall ill to friction losses in the shaft, the
+pump blades, and the pipe flow along the walls. We will attempt to calibrate the
+pump in our experiment to create a specification sheet for interested parties.
+
+-2-
+
+Procedure
+This lab involves the collection of data as a group in order to write a formal
+engineering report. Each student must participate in measuring and calculating
+the energy transfered from each subsystem.
+I. Potential to Rotational Energy
+Mass released from a height will transform its potential energy into kinetic energy.
+In the case of the experimental apparatus, this energy is also converted into
+energy stored by rotational inertia by the rope.
+1. Using the lever on the ramp side of, push the shifting mechanism inwards
+to engage the large pulley (you can visibly check to see if the teeth are
+engaging). This will run the system in the pump mode, which is safer to
+run than the ramp since it does not have a hard stop.
+2. Choose a mass or combination of masses that you think will provide enough
+energy to overcome stiction (stationary friction within the system) and start
+the gearing system. Record this mass.
+3. Attach the masses via the carabiner(s) at the end of the winch rope and place
+them on the surface of the table. Do not drop the masses until the system is set
+up.
+4. Ensure the Hall sensor is on and drop the masses. Record the fall time
+and the max RPM readout on the Hall sensor. WARNING: Do not stand
+directly underneath the pulley, and mind your toes as the mass drops.
+5. If the masses do not fall, increase the amount of mass until stiction is overcome.
+6. Once you mind a minimum mass required, repeat steps 3-4 with at least
+two more masses.
+Energy can be calculated for both sides of the system using the appropriate equations
+found in the Reference Information section. You will compare these values in
+your report.
+II. Rotational Energy to Pump Head
+1. In a fashion similar to Part I, set up the machine to transfer power to the
+pump. If you are moving on directly from Part I this should already be
+done.
+2. Begin dropping the same masses you used from Part I and measure the
+maximum pump head (the height the water reaches). Record these in your
+table.
+
+-3-
+
+III. Rotational Energy to Potential Energy
+1. Using the shifting knob, switch the gears around so power is transfered to
+the cart ramp. Pull the lever out and rotate the shaft partially until the teeth
+engage for the pulley-cart system.
+2. Drop your lowest usable mass and record the height gain of the cart. Note
+you will have to account for the slope of the ramp when you do your energy
+calculations.
+IV. Comparison to a Thermal System
+1. Your instructor will demonstrate an alcohol engine and measure the flywheel
+RPM. Be sure to record this for comparison in your memo.
+
+Report Requirements
+Your team will turn in your results and calculations in a formal engineering
+report. The formatting and presentation of data in this report is important. It
+communicates to the person reading the report what your findings were, and
+how they can replicate the experiments if they so desire.
+The report format and guidelines will be provided by your instructor. Use your
+data and the relationships presented in the introduction to generate the requested
+results.
+
+-4-
+
+Reference Information
+Table 1. Elemental Relationships for Ideal Elements in Multiple Domains.
+Element
+
+Energy
+
+Stationary Mass
+
+E = mgh
+
+Translational Mass
+
+E = 12 mv2
+
+Rotating Inertia
+
+E = 12 JΩ2
+
+Fluid Capacitance
+
+E = 12 C f P2
+
+Fluid Inertance
+
+E = 12 I f Q2
+
+Table 2. Elemental Relationships for Ideal Dissipators in Multiple Domains.
+Element
+
+Power Dissipated (P =
+
+Translational Damper
+
+P=
+
+Rotating Damper
+
+P=
+
+Fluid Resistance
+
+P=
+
+-5-
+
+1 2
+2
+B F = Bv
+1 2
+2
+b T = BΩ
+Q2 R = R1 p2
+
+E
+t
+
+)
+
+

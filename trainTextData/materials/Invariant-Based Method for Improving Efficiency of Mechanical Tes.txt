@@ -1,0 +1,989 @@
+Abstract
+The current challenge with qualification of carbon fiber composites in the aerospace industry
+would be the low efficiency of testing hundreds of samples. The Trace Theory strives to
+streamline the qualification process by utilizing a material’s Trace to predict properties of
+composites using Excel programs and basis data. To test this theory, predicted properties from
+the program, QuickLam, were compared to experimental data. Unidirectional 0° (T1),
+unidirectional 90° (T2), quasi-isotropic (T3), and hard quasi-isotropic (T4) laminates were made
+using HexTowⓇ carbon fiber and TC250 resin provided by TenCate Advanced Composites.
+Tensile and compression tests were done according to ASTM D3039 and ASTM D695. Five
+samples were tensile tested for each orientation, with tensile strengths ranging from 39 MPa to
+1806 MPa across T1-T4. Six samples were compression tested for each composite orientation
+with strengths varying from 236 MPa to 1198 MPa across all the laminates. The experimentally
+measured tensile and compressive strengths were then compared to the values predicted using T1
+laminate results as a basis in QuickLam. The most accurate prediction from the program was for
+the hard quasi-isotropic layup, T4, which yielded a percent difference of 3.6% for tensile
+strength and 6.7% for compressive strength. It was concluded that although more testing would
+need to be done, the Trace Theory can be accurate in predicting properties for certain laminates.
+
+Key Words
+Materials Engineering, aerospace certification, Trace Theory, carbon fiber composite materials,
+tensile tests, compression tests, stiffness matrices, composite failure modes, delamination, strain
+gages, equivalency testing, laminate configurations
+
+i
+
+Acknowledgments
+This project was made possible by the generous donation of time and material by our sponsors at
+TenCate Advanced Composites. Jimmy Shedden and Amy Lautenbach provided guidance and
+knowledge throughout the year to make our project possible. We would like to thank Barry
+Meyers for taking the time to share his extensive knowledge and experience with the Trace
+Theory. Professor Blair London also provided guidance throughout the year and helped to keep
+our project on schedule. Without his insight and encouragement this project would not have been
+possible. We would also like to thank our colleagues Joshua Brinkmann and Kenneth Ainslie for
+helping us understand and produce results using the StrainSmart software.
+
+ii
+
+Table of Contents
+Abstract........................................................................................................................................... i
+Acknowledgments ......................................................................................................................... ii
+1. Introduction ............................................................................................................................... 1
+1.1 Problem Statement.................................................................................................................. 1
+1.2 Material Qualification .......................................................................................................................1
+1.3 Trace Theory ......................................................................................................................................3
+1.4 Testing .................................................................................................................................................5
+1.5 Material Background.........................................................................................................................7
+1.5.1 Fiber .............................................................................................................................................7
+1.5.2 Matrix...........................................................................................................................................9
+1.6 Industry Sponsor ..............................................................................................................................10
+
+2. Experimental Procedure ........................................................................................................ 11
+2.1 Preparing the Laminates .................................................................................................................11
+2.2 Tensile Testing ..................................................................................................................................12
+2.3 Compression Testing .......................................................................................................................15
+2.4 Equivalence Testing .........................................................................................................................16
+2.5 QuickLam Program .........................................................................................................................16
+
+3. Results ...................................................................................................................................... 17
+3.1 Tensile Tests .....................................................................................................................................17
+3.2 Compression Tests ...........................................................................................................................21
+3.3 Equivalence Testing .........................................................................................................................24
+2.4 QuickLam Predicted Values ...........................................................................................................24
+
+4. Discussion ................................................................................................................................ 25
+4.1 Equivalency Testing .........................................................................................................................25
+4.2 Prediction Comparisons and Trace Theory ..................................................................................26
+4.3 Compression Testing .......................................................................................................................27
+
+5. Conclusions .............................................................................................................................. 28
+6. References ................................................................................................................................ 29
+
+iii
+
+List of Figures
+Figure 1. Robust sampling method for specimen testing for both A-basis and B-basis.2..............................3
+Figure 2. Reduced sampling method for material qualification for B-basis.2 ...............................................3
+Figure 3. Two materials are shown with different laminate configurations. For both, the Trace was found
+from the normalized extensional stiffness matrix.4........................................................................................4
+Figure 4. Schematic of tensile test specimen configuration based on parameters listed in ASTM D3039.7 .6
+Figure 5. Example of a compression test fixture for ASTM D695.9 .............................................................7
+Figure 6. Covalently bonded carbon atoms in parallel planes in a graphite crystal.8 ....................................8
+Figure 7. The random molecular arrangement of polyacrylonitrile.8 ............................................................8
+Figure 8. Rigid ladder structure formed after heat stabilization.8 ..................................................................9
+Figure 9. Epoxide functional group found in epoxy resin starting material.8 ..............................................10
+Figure 10. Composite panels on a steel plate under a vacuum bag following the proper lay-up method.
+The steel plate is loaded into an autoclave for the curing process. ..............................................................12
+Figure 11. Uniaxial strain gage attached to the T1 sample. Wires are soldered on the leads of the strain
+gage and taped down to avoid being broken off. .........................................................................................13
+Figure 12. Set up for tensile testing on the Shimadzu test frame. A vacuum was attached to a chamber that
+surrounded the test samples. ........................................................................................................................14
+Figure 13. A tabbed compression sample is clamped into the ASTM D695 fixture using a torque wrench.
+The sample remains flush with the bottom of the fixture to ensure the load is applied evenly across the top
+of the sample. ...............................................................................................................................................15
+Figure 14. Section 1 of the QuickLam program. Ex represents the longitudinal elastic modulus. X
+represents the tensile strength and X' represents the compressive strength. ................................................17
+Figure 15. Section 2 of the QuickLam program. The ply angle and number of plies can be adjusted. .......17
+Figure 16. Section 3 of the QuickLam program that reports the predicted values for tensile strength (X)
+and compressive strength (X')......................................................................................................................17
+Figure 17. Stress versus strain graph for the unidirectional 0° laminate T1 plotted by the Trapezium
+software. .......................................................................................................................................................18
+Figure 18. Raw strengh values were plotted against Strainsmart values to produce a stress versus strain
+plot. The slope of the line was found and used as the elastic modulus. This is a plot for sample 1 of the T1
+laminate. .......................................................................................................................................................18
+Figure 19. T1 tensile sample fractured within the gage length explosively during testing. ........................19
+Figure 20. Stress versus strain plot for the laminate T2 reported by the Bluehill software.........................20
+Figure 21. Stress versus strain plot for T3 laminate reported by the Bluehill program. The negative values
+for strain is a result of the extensometer being removed during the test. ....................................................20
+Figure 22. Stress versus strain plot for T4 laminate reported by the Bluehill software. .............................20
+Figure 23. (Left) Delamination occured under the tabs of the compression sample. (Right) Correct failure
+mode within the gage length of a compression sample. ..............................................................................21
+Figure 24. Stress versus displacement of the laminate T1. ..........................................................................22
+Figure 25. Stress versus displacement of the T2 laminate samples. ............................................................23
+Figure 26. Stress versus displacement of the laminate T3. ..........................................................................23
+Figure 27. Stress versus displacement for T4 laminate samples. ................................................................24
+
+iv
+
+List of Tables
+Table I. Laminate Configurations ................................................................................................................11
+Table II. Modulus Data for T1 Samples ......................................................................................................19
+Table III. Average Values for Load, Modulus, and Strength for Four Laminate Tested in Tension ..........21
+Table IV. Average Load and Strength Values for Four Laminates Tested in Compression .......................22
+Table V. QuickLam Predicted Values Compared to Average Experimental Values for Laminates T2, T3,
+and T4 ..........................................................................................................................................................25
+
+v
+
+1. Introduction
+1.1 Problem Statement
+The aerospace industry continues to expand and evolve with new technologies and revolutionary
+materials. Every innovation must undergo thorough qualification processes to meet set
+requirements. The current challenge with material qualification for the aerospace industry is the
+large amount of money and time required to test hundreds of samples. Some materials, such as
+metals, can be mechanically characterized to reduce the amount of samples needed for testing.
+Composites are difficult to mechanically characterize due to their anisotropy and complicated
+failure mechanisms. Therefore, composites are expensive and can take years to qualify for use in
+aerospace applications. Dr. Stephen Tsai, from Stanford University, and his colleagues have
+worked extensively to develop Trace Theory. This theory would cut down on the amount of
+testing for composite materials. It is based on the concept that by using invariants in a stiffness
+matrix and applying Hooke’s law, the strength of that composite material can be predicted. Since
+the 1960s this theory has evolved to use scaling factors to predict various specific mechanical
+properties of unique orientations of composites. Different versions of programs have been
+developed to output these predicted mechanical properties using the Trace Theory.
+To address the current problem of costly and time consuming composite qualification, tensile
+and compressive testing will be performed and compared to the Trace Theory predicted values
+for different orientations of a carbon fiber composite. The goal of this project is to prove that the
+Trace Theory can correctly predict the properties of carbon fiber composites. Testing methods
+and analysis techniques to accomplish the project goals include tensile and compressive tests, as
+well as statistical analysis to document the differences between the experimental data and the
+program’s predicted values.
+
+1.2 Material Qualification
+Composites used in aircraft components carry a large liability. These materials must withstand
+harsh conditions and maintain specific standards. For example, a material used in an airplane
+wing must keep its strength for the lifetime of the airplane in order to ensure safety of all those
+on board. Thus, material qualification is an integral part of designing aircraft components.
+Material qualification requires extensive testing, large amounts of money, and years to
+accomplish. For example, a unidirectional ply of a composite has four stiffness properties as well
+as five strength properties. Furthermore, when composite laminates with several orientations are
+made from unidirectional plies, there are numerous combinations of these properties that all must
+be reported.
+
+1
+
+Before 1995, individual companies used customized qualification programs that were extremely
+expensive and differed between companies.1 This led to companies solely relying on accepted
+materials instead of innovating and spending the time and money to qualify a new material. In
+1995, a central material qualification database was developed to prevent this problem. By 2005,
+the Federal Aviation Administration (FAA) and the National Aeronautics and Space
+Administration (NASA) came together along with the National Institute for Aviation Research
+(NIAR), to form a recognized database called the National Center for Advanced Materials
+Performance (NCAMP).1 This national database is still in use today, and follows regulations and
+procedures set by the FAA to ensure reliability and consistency across all materials.
+Although qualifying materials, specifically composites, became faster and cheaper due to the
+formation of NCAMP, materials still must go through a rigorous procedure set by the FAA. This
+procedure specifies everything from the layout of each composite panel, to the form of testing
+and amount of samples needed to qualify the composite. In general, the amount of testing
+required is based on the purpose for the material system. The FAA explains two routes of testing:
+an A-basis and a B-basis. An A-basis would be used for a material system exposed to a single
+load path, whereas a B-basis would be used if multiple load paths exist in the design.2 For an Abasis and a B-basis, a robust sampling method can be used shown in Figure 1. Only a B-basis can
+use a reduced sampling method (Figure 2). The robust sampling method, A-basis, would require
+five unique batches of material to produce 55 samples for each environmental condition and test
+method. For example, this would mean 55 samples would be administered to tensile test a
+material at a dry, elevated temperature condition. A reduced sampling method would have 18
+samples per environmental condition and test method. There are four environmental conditions
+outlined by the FAA: cold temperature dry, room temperature dry, elevated temperature dry, and
+elevated temperature wet.2 Even if the reduced method of testing can be applied to a material,
+this would still add up to hundreds of samples, a great expense, and many years to complete.
+Continuous research is being conducted to produce a way to generate the mechanical properties
+for composite materials in order to reduce this extensive testing process.
+
+2
+
+Figure 1. Robust sampling method for specimen testing for both A-basis and B-basis.2
+
+Figure 2. Reduced sampling method for material qualification for B-basis.2
+
+1.3 Trace Theory
+Carbon fiber reinforced composites have become an integral part of the aircraft industry due to
+their unique specific weight, specific modulus and high corrosion resistance. However, because
+composites are anisotropic and have complicated failure mechanisms, the mechanical
+characterization of the material is difficult3. Efforts have been made in an attempt to predict
+properties of composites. One theory, known as Trace Theory, strives to do so. For a given
+material, much like Young’s modulus, Trace is a material property. The Trace is an invariant of a
+normalized stiffness matrix of that specific material. It is the sum of the diagonal components of
+the normalized extensional matrix (Equation 1)3.
+
+3
+
+T = A*11 + A*22 + 2A*66
+
+(Equation 1)
+
+The matrix [A*] simply represents a normalized extensional stiffness matrix for a laminate. The
+stiffness of the laminate [A] can be normalized by thickness so that the material properties are
+useful for direct comparison with other materials. This also allows for the units of the [A*]
+matrix to be in GPa rather than N/m. Trace (T) is a linear combination of three terms:
+longitudinal modulus (A*11), transverse modulus (A*22), and shear modulus (A*66). In carbon
+fiber-reinforced polymers, longitudinal modulus makes up 88% of the Trace value, whereas
+transverse and shear modulus combine to make up the remaining 12%. This is due to several
+properties being dependent mostly on the fiber of the composite. An example of how Trace
+works can be seen in Figure 3. The two materials, AS4/MTM45 and IM7/997-3, are represented
+in two different stacking sequences, [π/4] and [05/±452/90]. The normalized stiffness matrix [A*]
+was determined through testing for each material and stacking sequence and normalizing by
+thickness. By applying Equation 1 to these values, the Trace was determined for each
+combination. The Trace value was calculated to be the same for each material regardless of the
+stacking sequence.
+This shows how the Trace of the material is an invariant property and is independent of the
+stacking sequence. Before discovering Trace, each of the four stiffness matrices would be unique
+and independent. Now, there is a connection.
+
+Figure 3. Two materials are shown with different laminate configurations. For both, the Trace was found from the
+normalized extensional stiffness matrix.4
+
+Another connection can be made between stacking sequences. By taking the diagonal values of
+the stiffness matrix, and dividing them by the Trace value (e.g., 53/142 = 0.37), a fraction is
+determined (Figure 3). This fraction remains the same for each stacking sequence.4 For example,
+for the quasi-isotropic stacking sequence, the longitudinal stiffness of AS4 divided by its Trace
+value, gives the fraction of 0.37; which is the same value as the longitudinal stiffness of IM7
+divided by its Trace. For each stacking sequence, this fraction of Trace remains the same. This
+
+4
+
+mathematical connection is what allows the Trace Theory to have such an impact. These
+fractions have evolved to incorporate many other stacking sequences.4
+These connections prove important for testing. A laminate’s stiffness matrix only needs to be
+solved for once. If a new material is developed, it is not necessary to perform hundreds of tests.
+The predicted properties for the material can be derived from simple mathematical calculations
+of the material’s Trace and various other fractions.5 Each stacking sequence has a specific
+fraction that remains the same and can be applied to solve for all variations for the new material.4
+Other mathematical factors, known as scaling factors, that can be applied to a material’s Trace
+include vibration and stress concentrations, buckling and natural frequencies, and deformation.4
+A scaling factor is a numerical value that represents a certain orientation or condition that is then
+multiplied by the material’s Trace.6
+All of these mathematical relationships are compiled and used to produce outputs through
+different programs developed by Dr. Tsai, et al. One program developed by Dr. Jose Melo, called
+QuickLam, utilizes these mathematical relationships to predict compressive and tensile strengths
+of various laminates. For this specific program, the material’s longitudinal modulus,
+unidirectional tensile strength and compressive strength are used to provide the material’s Trace
+as well as predicted properties. Therefore, values from tensile tests and compression tests of one
+unidirectional laminate could be used to produce predicted tensile and compressive properties for
+numerous combinations of orientations and environmental conditions. In theory, two tests
+(tensile and compression) can be performed for a room temperature condition of a unidirectional
+laminate, and predict properties for all other orientations and conditions. This would cut down on
+the amount of testing needed for these important properties.
+The basic idea behind Trace Theory is to perform minimal tests on a composite laminate to
+produce the material’s Trace and a basis value for the desired property (i.e., compressive
+strength). These values are then entered into a program and complex mathematical relationships
+calculate the predicted desired properties of different orientations and environmental conditions.
+
+1.4 Testing
+The performance of composites is characterized by conducting hundreds of standardized
+mechanical tests. However, Trace Theory focuses on minimizing the number of mechanical tests
+used to characterize composites. Mechanical properties determined by Trace Theory are
+predominantly based on the longitudinal modulus of a material (88%). Transverse and shear
+moduli also make up the Trace value; however, these properties, when combined only make up
+the minority of the Trace value (12%).5 To obtain the longitudinal modulus, several tension tests
+following ASTM D3039 are performed on 0° unidirectional laminates.7 In accordance with this
+standard, the tensile specimen is shaped as a rectangular coupon with a constant cross section
+
+5
+
+(Figure 4). To improve the quality of the tensile test, fiberglass‒epoxy tabs are bonded to the grip
+ends (Figure 4).8 The tabs are typically non-woven, [0/90] laminates that are beveled up to where
+the gage length of the coupon begins (ASTM D3039). This reduces stress concentrations which
+therefore lowers the likelihood of failure in the grip ends of the sample during testing.8 Strain
+gages are applied on the gage length of the coupon in both the longitudinal and transverse
+directions to measure the strain that occurs as the sample deforms.7 The use of the strain gages
+optimizes the accuracy of the test while the material deforms in its elastic loading behavior.
+
+Figure 4. Schematic of tensile test specimen configuration based on parameters listed in ASTM D3039.7
+
+Tensile strength, longitudinal tensile modulus and Poisson’s ratio can be determined from the
+tension test of a unidirectional laminate that is run until failure. Tensile strength and modulus for
+unidirectional laminates are greatly dependent on the fiber orientation angle, θ.8 As the angle of
+the fiber orientation increases, both tensile strength and modulus decrease.8 The maximum
+tensile strength of a composite occurs in 0° specimens, while 90° specimens demonstrate the
+lowest values. The stress-strain curve of a tensile specimen has a linear elastic region, which
+begins to drop rapidly where the specimen fractures.
+Compressive properties also play an integral part of basic design for composite materials.
+Although Trace itself does not require compressive properties, compression testing is necessary
+in understanding material properties of a composite. Compression tests following ASTM D695
+can obtain the compressive strength and modulus of a composite.9 It has been observed that
+unlike tensile stress-strain curves, the compressive stress-strain curves of 0° laminates may not
+be linear.8 This is because compressive strength is dependent not just on fiber orientation, but
+fiber type, fiber volume fraction, matrix yield strength, and other properties of the matrix.
+Therefore, compressive properties can be difficult to determine through testing. Buckling of
+samples can occur, giving false strength and modulus properties. ASTM standards recommend
+using a test fixture (Figure 5) to secure the sample to prevent this.
+
+6
+
+Figure 5. Example of a compression test fixture for ASTM D695.9
+
+1.5 Material Background
+1.5.1 Fiber
+This project investigates mechanical properties of carbon fiber reinforced composites. However,
+to understand the properties, the structures of the fiber and matrix must be known. The graphitic
+form of carbon has a high tensile modulus due to the way the carbon atoms are arranged in the
+crystallographic structure of the parallel planes.8 Within a plane, the carbon atoms are covalently
+bonded, while the parallel planes are bonded together by secondary Van der Waals bonding
+(Figure 6). This specific atomic structure results in highly anisotropic physical and mechanical
+properties of the carbon fiber.8
+
+7
+
+Figure 6. Covalently bonded carbon atoms in parallel planes in a graphite crystal.8
+
+These fibers are produced in a continuous operation where the fiber precursor, polyacrylonitrile
+(PAN), undergoes three stages: stabilization, carbonization and graphitization. PAN is the most
+commonly used precursor for carbon fiber composites. The molecular structure of PAN contains
+highly polar CN groups that are randomly arranged following syndiotactic stereochemical
+configuration (Figure 7).
+
+Figure 7. The random molecular arrangement of polyacrylonitrile.8
+
+The PAN solution is spun into filaments, which are further elongated at an increased temperature
+to initiate alignment of the polymer chains. The filaments are stabilized through heat treatments
+at 200°C to 300°C to form a rigid ladder structure (Figure 8). Carbonization then takes place at
+the next stage, where the PAN filaments are heated to 1000°C to 2000°C in an inert atmosphere
+to eliminate oxygen and nitrogen atoms.8 Tension on the filaments is held constant to prevent
+shrinkage and improve alignment in polymer chains. With the removal of oxygen and nitrogen
+atoms, the filaments now contain mostly carbon atoms arranged in an aromatic ring pattern in
+parallel planes. To improve properties further heat treatment at above 2000°C is done to assist in
+the alignment of the graphitic parallel planes.8 The final carbon fiber structure is then produced,
+which gives the fiber its high strength and modulus properties.
+
+8
+
+Figure 8. Rigid ladder structure formed after heat stabilization.8
+
+Subsequent surface treatments and fiber sizing further enhance bonding ability to the polymer
+matrix as well as ensure the fibers do not fracture or deform during the manufacturing of the
+composite.
+This project uses HexTow carbon fiber manufactured by Hexcel. Hexcel is a leading
+manufacturer of carbon fibers that are certified to meet specific aerospace and industrial
+specifications. The specific carbon fiber type used in this study is designated as AS4C-GP, 12k
+tow. Alone, this fiber has excellent tensile strength and elastic modulus, with values measuring
+4482 MPa and 231 GPa, respectively.10 The fiber would be best used as a weave or prepreg tape,
+while sizing levels range from 0.2-1.2. The AS4C-GP continuous fiber is compatible with epoxy,
+phenolics, vinyl ester, polyurethane, and cyanate ester.9
+1.5.2 Matrix
+The matrix material of fiber-reinforced composites is primarily used to transfer applied loads to
+the fibers, as well as protect the fibers and keep them in place. Although the matrix does not
+heavily influence the tensile properties of the composite, it does influence the compressive,
+interlaminar shear and inplane shear properties.8 Epoxy is one of the most commonly used resin
+materials, especially in aerospace and aircraft applications. The molecules of the thermoset
+polymer are held together by a cross-linked network structure containing epoxide groups, shown
+in Figure 9. The presence of the functional group classifies this material as an epoxide; however,
+the base molecular structure to which it is attached is chemically compatible with most
+substrates, which which gives them good processing versatility.11 Modifiers are easily
+incorporated to improve the properties, such as impact strength, of the cured epoxy matrix.
+
+9
+
+Figure 9. Epoxide functional group found in epoxy resin starting material.8
+
+To transform the liquid epoxy resin to a solid, a curing reaction is initiated by adding a curative
+just before the fibers are incorporated into the liquid mix.8 As the reaction proceeds, the curing
+agent forms cross-links and a three-dimensional structure is slowly formed.
+Some manufacturing processes require a partially cured resin system. The curing reaction can be
+hindered by lowering the reaction temperature, so that not all the molecules of the resin are
+cured, and the resin would exist in a B-stage form and can be completed at another time.8 The
+hardness, tackiness, and curative reactivity of the material depends on the degree of cure once
+the reaction has been delayed.
+As the crosslinking density increases, the tensile modulus, glass transition temperature, and
+thermal stability are enhanced.11 However, because of the cross-linked structure, the strain-tofailure and fracture toughness are considerably reduced. To compensate for these low properties,
+a liquid elastomer or thermoplastic can be blended in to toughen the epoxy, forming a second
+phase in the cured matrix that can impede microcracking.8 This modified form of epoxy has
+higher toughness compared to unmodified epoxy.
+The epoxy matrix used in this project is manufactured by TenCate Advanced Composites,
+designated TC250, which is typically used for aircraft structures and space structures. TC250 is a
+toughened epoxy resin system that provides good toughness, mechanical property translation,
+and hot/wet performance. The resin system is easily processed using vacuum bag/oven,
+autoclave, or press curing operations, at a 265°F cure.12
+
+1.6 Industry Sponsor
+TenCate Advanced Composites is an industry leader specializing in the production of advanced
+composite and prepreg materials.12 TenCate emerged from the Dutch company, Royal TenCate,
+which focused on textiles for over 300 years.12 Over time, TenCate has become a leading
+innovator in thermoset and thermoplastic composites in the aerospace and industrial sectors.
+Their thermoset materials have been used in aircraft components and radomes, as well as missile
+applications, while thermoplastics have been used as structural materials for commercial
+
+10
+
+aircrafts.12 The company is also known for their unique resin systems that are integrated into
+their composite materials. TenCate has successfully dedicated the last 20 years to incorporating
+thermoset and thermoplastic technologies into European and North American markets.12 They
+are currently working to develop new technologies and grow as a company. With the high
+demand for innovative materials, especially in the aerospace industry, TenCate would benefit
+greatly with a reduced testing method for material qualification. By implementing the Trace
+Theory, the amount of time and money TenCate spends on material qualification would
+significantly decrease.
+
+2. Experimental Procedure
+2.1 Preparing the Laminates
+TenCate Advanced Composites provided 100 yards of prepreg material containing HexTow
+carbon fiber and TC250 prepreg. Four orientations were predetermined to be used for testing and
+named T1, T2, T3, and T4 laminates (Table I). To prepare these laminates, plies of the prepreg
+were cut into 12x12” pieces. Four plies were debulked for 15 minutes in a vacuum chamber to
+remove excess air and encourage a more even resin flow during curing. After all the plies were
+debulked and stacked together in the proper orientation, they were layed-up on a large steel plate
+and prepared according to LU-1 lay-up method. Dams were placed around the panels with nonporous FEP beneath and on top of the panel. A layer of porous Teflon and a caul plate was
+placed on top to ensure resin flow throughout the panel. A layer of breather covered the top of
+the panels and the entire steel plate was vacuum bagged. The laminates were cured in an
+autoclave up to 265°F (Figure 10). After curing, the laminates were C-scanned to assure the resin
+spread evenly during the curing process. All panels were approved, and then machined using a
+table top grinding saw into the proper sizes per ASTM D3039 and ASTM D695 for coupon
+testing. All coupons were tabbed using fiberglass and TC263 adhesive provided by TenCate.
+This was to provide better grip for tensile testing and is necessary for compression testing
+following ASTM D695. After the preparation of the samples was complete, the samples were
+brought to Cal Poly for testing.
+Table I. Laminate Configurations
+
+11
+
+Figure 10. Composite panels on a steel plate under a vacuum bag following the proper lay-up method. The steel
+plate is loaded into an autoclave for the curing process.
+
+2.2 Tensile Testing
+For tensile testing, ASTM D3039 specified sample dimensions based on the orientation of the
+laminate. As stated, all samples had fiberglass tabs attached using adhesive. For all four
+laminates, five test coupons were tested in compliance with ASTM D3039. For the T1 laminates,
+the test coupons were cut to 254 mm long and 12.7 mm wide, with a gage length of 127 mm. The
+remaining laminates measured to be 254 mm long, 25.4 mm wide, with a gage length of 127
+mm. To prepare the T1 test coupons for tensile testing, uniaxial strain gages were applied to the
+surface to obtain a more precise elastic modulus value. The elastic modulus data for the T1
+samples must be more exact because this modulus will be used in the Quicklam program to
+determine the material’s Trace value and predict properties of other laminates.
+Strain gage application was done by roughening the gage area with emery paper and cleaning the
+area using isopropyl alcohol. Next, the gage length was measured and marked at the exact
+halfway point. A conditioning acid was applied to the area using gauze and followed with
+neutralizing base to ensure no remaining acid was left on the sample. The strain gage was
+aligned in the proper area using cellophane tape. A catalyst was then applied to the back of the
+strain gage and left to dry for several minutes. Once dry, the adhesive was applied and the strain
+
+12
+
+gage was pressed down on the sample with light pressure. Wires were soldered onto the leads of
+the strain gages to connect with the strain measurement software (Figure 11).
+
+Wire
+
+Uniaxial strain gage
+
+Wires soldered to leads
+Figure 11. Uniaxial strain gage attached to the T1 sample. Wires are soldered on the leads of the strain gage and
+taped down to avoid being broken off.
+
+Once the strain gages were applied, the test method was produced on the Shimadzu Trapezium
+software following ASTM D3039, setting the crosshead speed to 2 mm/min until fracture. The
+test reported the maximum load, which calculated the maximum stress based on the dimensions
+of the specimen. The specimen geometry was measured using a caliper. The width, thickness,
+and length of the sample was measured and recorded. Before the specimen was placed in the
+tensile grips, the machine was calibrated and the alignment was inspected using a steel plate. The
+specimen was then secured into the machine, making sure the it was aligned within the grips. A
+HEPA filter vacuum was attached to a 3D-printed chamber that enclosed the sample during
+testing to ensure that no broken fiber particles circulated in the air after testing (Figure 12). A
+polycarbonate shield was placed in front of the fixture for added protection. For each sample, the
+wiring from the strain gage was connected to the StrainSmart strain software, which measures
+the strain every ten milliseconds. Once connected, the software was calibrated with the strain
+gage to secure the connection and to verify the strain gage was functioning properly. During
+calibration, if the meter in the software read above 1 µstrain and below 35,000 µstrain, the test
+was ready to run. However, because the StrainSmart software was not connected with the
+Trapezium software, there was a time delay between recording the strain data and recording the
+strength data from the tensile test. In order to solve for the precise modulus after testing was
+completed, the strain and strength data were directly compared. Therefore, the time between
+starting the StrainSmart software and beginning the tensile test was recorded to account for the
+delay in the data.
+
+13
+
+3D printed vacuum chamber
+
+Figure 12. Set up for tensile testing on the Shimadzu test frame. A vacuum was attached to a chamber that
+surrounded the test samples.
+
+To calculate the elastic modulus of the T1 samples, raw strain and stress data were extracted and
+compiled into an Excel spreadsheet. Both the Strainsmart software and Trapezium software
+records data points every 10 milliseconds, so therefore the data points were able to match. The
+strain data measured from the Strainsmart software was recorded in microstrain, therefore this
+was accounted for by dividing by 106. Then all the data points were plotted against each other in
+a stress vs strain graph. Four graphs were produced for four test coupons. Unfortunately, one test
+coupon did not produce strain data and therefore five test coupons did not produce graphs due to
+an error in the StrainSmart software. A best fit line was attached and the equation of the line was
+displayed. This is using Hooke’s Law (Equation 2) to solve for the elastic modulus from the
+stress (σ) and strain (ε) data. The average of the four moduli was taken to be the average elastic
+modulus for T1.
+E=σ/ε
+
+(Equation 2)
+
+The remaining T2, T3, and T4 laminates were tensile tested on the Instron test frame. For these
+tests, the elastic modulus values did not have to be as precise, so an extensometer was used. The
+Instron test frame is equipped with an extensometer, whereas the Shimadzu is not. A test method
+was produced in the BlueHill software following ASTM D3039. The crosshead speed was set to
+2.00mm/min. The dimensions of each test coupon for the three laminates were measured three
+times, averaged, and recorded. The test frame and extensometer were calibrated before loading
+
+14
+
+the specimen into the tensile grips. In order to prevent any harmful exposure to composite
+splinters, the vacuum chamber apparatus and polycarbonate shield were used for all tensile tests
+performed on the Instron. After dimensioning and set up was complete, the coupons were loaded
+into the test frame. For T2, the extensometer was set to be removed at 1% extension. However,
+the samples started to break before the 1% extension, so the extension was reduced to 0.5% for
+the T3 and T4 samples. The load and extension were recorded by the Instron software and the
+modulus and strength were calculated based on the specimen geometry.
+During all tensile tests and handling of the test coupons, nitrile gloves and safety glasses were
+worn to protect from harmful carbon fiber splinters.
+
+2.3 Compression Testing
+The test coupons were prepared per ASTM D695. To comply with this standard, the coupons
+were cut using a precision machine to 79mm long and 2.75mm wide. Each had 37mm tabs
+leaving a gage length of 4.8mm. The ASTM D695 calls for five samples to be tested, so for this
+project six were tested for more representation. All the laminates (T1-T4) were compression
+tested using a fixture (Figure 13). The use of this fixture is to provide stability and to encourage a
+failure in the gage length of the sample. Before testing, all six samples for each of the four
+laminates were measured using a caliper. The width and thickness was taken in three places,
+averaged, and recorded. The thickness of the samples was measured in the gage length of the
+samples.
+
+Compression plate
+
+Fixture clamps
+Compression sample
+
+Figure 13. A tabbed compression sample is clamped into the ASTM D695 fixture using a torque wrench. The
+sample remains flush with the bottom of the fixture to ensure the load is applied evenly across the top of the sample.
+
+The compression tests were performed using the Shimadzu test frame. A test method was
+produced in the Trapezium software following ASTM D695. For this compression test, each
+sample was loaded in the fixture and carefully tightened using a torque wrench so that the bottom
+
+15
+
+of the sample laid flat with the bottom of the jig. The torque wrench was set to 15 in-lbs. This
+was determined after preliminary testing proved that the 10 in-lbs. stated by the ASTM D695
+was not enough torque to hold the samples in place and produce a failure in the gage area.
+Preliminary tests were performed on extra samples that were also cut to the standard size. These
+tests were run to determine the proper torque as well as to set a crosshead speed that was in range
+of the ASTM standard. The crosshead speed was set to 1.27mm/min. After preliminary tests
+were completed, and the sample information for all the test coupons were recorded the test
+coupons for each of the laminates were loaded into the fixture and tested in the Shimadzu load
+frame. The maximum load of the compression samples was recorded as well as the displacement.
+The compressive strength was calculated and recorded based on the sample dimensions.
+At all times while handling the test coupons, nitrile gloves and safety glasses were worn. This is
+to prevent any composite splinters from causing any harm.
+
+2.4 Equivalence Testing
+After collecting the data from the tensile and compression tests, an equivalency test was
+performed to verify if the data was comparable to values TenCate Advanced Composites had
+recorded. This was done using a program called HYTEQ (Hypothesis Testing of Equivalence)
+that was produced by Wichita State University in 2007 for polymer matrix composite material
+systems. HYTEQ is used for a comparison of an acceptance or equivalence data set to data
+generated by the qualification data set as material basis values. TenCate provided the basis data
+for 0° tensile strengths, elastic modulus, and compressive strength data for the same Hextow®
+carbon fiber and TC250 resin system from a previous qualification project. The HYTEQ
+program compares the qualified and equivalence data using the t-test of the mean for modulus
+properties and a t-test of mean and minimum values for strength properties. The mean, standard
+deviation, coefficient of variance, minimum, maximum values, and number of specimen are
+entered into the program. The tests are performed for equivalence at α=.05 and acceptance at
+α=.01. Therefore, for strength values, the data set has two equivalence tests and two acceptance
+tests. For modulus values, there is one equivalence and one acceptance test run on the data sets.
+TenCate as well as other companies use this HYTEQ tool to compare a small data set to a data
+set of the qualified material to ensure that the small data set can be considered accepted or
+equivalent. T1 tensile and compressive strengths, as well as elastic modulus were compared to
+the data provided by TenCate to either prove or disprove equivalence or acceptance.
+
+2.5 QuickLam Program
+To validate the Trace Theory for this project, the recorded data must be compared to the
+QuickLam program predicted data. Quicklam is an Excel-macro that was produced by Dr. Daniel
+Melo in August of 2015. This program applies the complex mathematical relationships between
+a materials Trace and other properties. QuickLam produces predicted compressive, tensile
+strengths, and elastic modulus. In order to do so, the modulus, compressive strength, and tensile
+strength of a 0° unidirectional laminate must be input into the program in section 1 (Figure 14).
+This provides the elastic modulus to determine the material’s Trace, as well as provides
+16
+
+reference data for tensile and compressive strength. Then, by adjusting the number of plies in
+different orientations in section 2 (Figure 15), the compressive strength (X’) and tensile strength
+(X) are calculated through the program and displayed in section 3 (Figure 16). The elastic
+modulus is calculated using the reduced stiffness matrix (Q) and applying the fraction of plies in
+each orientation. This then produces a predicted elastic modulus based on the orientation. To
+check the calibration of the program, after the 0° unidirectional T1 data was input into section 1,
+8 plies of 0° was entered into section 2. The output in section 3 should equal the input in section
+1, if the program is calibrated correctly. After performing this check, the program indeed
+produced an output that matched the input for the T1 laminate.
+The other orientations were entered into section 2 and the outputs were recorded. After T2, T3,
+and T4, were all documented, these values were compared to the actual data produced for those
+laminates during tensile and compression testing. A percent difference between the QuickLam
+predicted values and the experimental values was calculated by taking the experimental data as
+the basis data and the QuickLam predicted values as objective data.
+
+Figure 14. Section 1 of the QuickLam program. Ex represents the longitudinal elastic modulus. X represents the
+tensile strength and X' represents the compressive strength.
+
+Figure 15. Section 2 of the QuickLam program. The ply angle and number of plies can be adjusted.
+
+Figure 16. Section 3 of the QuickLam program that reports the predicted values for tensile strength (X) and
+compressive strength (X').
+
+3. Results
+3.1 Tensile Tests
+The five tensile samples from laminate T1 were plotted on a graph of stress versus strain (Figure
+17). The Shimadzu’s Trapezium software offsets the curves to be more visible, so that the
+samples appear to not start at zero strain. The strain for the T1 samples were measured using the
+Strainsmart software. An example of the raw strength data was extracted from the Trapezium
+
+17
+
+software and plotted against the raw Strainsmart data to produce a stress versus strain graph
+where the elastic modulus could be found from the slope (Figure 18). The modulus data for the
+four T1 samples are shown in Table I. The T1 test coupons fractured violently, however the
+failure occurred within the gage length (Figure 19). This confirmed that the tensile tests followed
+the correct failure mechanism as stated by ASTM D3039.
+
+Figure 17. Stress versus strain graph for the unidirectional 0° laminate T1 plotted by the Trapezium software.
+
+Figure 18. Raw strengh values were plotted against Strainsmart values to produce a stress versus strain plot. The
+slope of the line was found and used as the elastic modulus. This is a plot for sample 1 of the T1 laminate.
+
+18
+
+Table II. Modulus Data for T1 Samples
+
+Figure 19. T1 tensile sample fractured within the gage length explosively during testing.
+
+The Bluehill software from the Instron test frame produced stress versus strain graphs of T2, T3,
+and T4 (Figures 20, 21, 22). The extensometer produced the strain values of the elastic modulus
+for each sample. Each of the five samples from T2, T3, and T4 failed within the gage length of
+the coupon.
+
+19
+
+Figure 20. Stress versus strain plot for the laminate T2 reported by the Bluehill software.
+
+Figure 21. Stress versus strain plot for T3 laminate reported by the Bluehill program. The negative values for strain
+is a result of the extensometer being removed during the test.
+
+Figure 22. Stress versus strain plot for T4 laminate reported by the Bluehill software. The points where the lines
+move vertically up indicate that the test reached the 0.5% strain rate and the extensometer was removed.
+
+20
+
+The average load, tensile strength, elastic modulus, and standard deviation of the tensile strength
+values were determined and recorded in Table II. The coefficients of variance were also
+calculated for the strength data. Both the standard deviation and coefficient of variance were
+used to show that the amount of variability around the mean.
+Table III. Average Values for Load, Modulus, and Strength for Four Laminates Tested in Tension
+
+Tensile Samples
+Laminate
+T1
+T2
+T3
+T4
+
+Avg. Max Load
+(kN)
+28.40
+2.60
+39.70
+68.30
+
+Avg. Modulus
+(GPa)
+125.50
+7.83
+51.60
+63.71
+
+Avg. Strength
+(MPa)
+1806.79
+39.00
+602.00
+842.84
+
+Std. Dev.
+(MPa)
+48.88
+7.00
+30.00
+88.36
+
+Coeff. of
+Var. (%)
+2.70
+17.90
+4.98
+10.48
+
+3.2 Compression Tests
+Preliminary testing was done on several laminates to ensure proper failure mechanisms during
+the test. A proper failure mechanism typically fractures across the gage length of the sample.
+During preliminary testing, however, delamination occurred under the tabs (Figure 23). After
+increasing the torque of the compression fixture, the coupons fractured within the gage area
+(Figure 23).
+
+Correct failure
+
+Delamination
+
+Figure 23. (Left) Delamination occurred under the tabs of the compression sample. (Right) Correct failure mode
+within the gage length of a compression sample.
+
+Six compression samples were tested for each laminate orientation using standard compression
+testing procedures. The results were extracted from the Shimadzu’s Trapezium software that
+produced stress versus displacement curves, along with reported maximum stress values based
+on the geometry of the specimen. The average maximum stresses have been compiled into Table
+III, along with the standard deviation and coefficient of variance of the data. The corresponding
+stress-displacement graphs are shown in Figures 24, 25, 26, 27.
+
+21
+
+Table IV. Average Load and Strength Values for Four Laminates Tested in Compression
+
+Compression Samples
+Laminate
+T1
+T2
+T3
+T4
+
+Avg. Max Load (kN)
+22.90
+8.70
+25.20
+32.00
+
+Avg. Strength (MPa)
+1198.00
+236.00
+755.00
+675.00
+
+Std. Dev. (MPa)
+186.00
+30.00
+89.00
+48.00
+
+Figure 24. Stress versus displacement of the laminate T1.
+
+22
+
+Coeff. of Var. (%)
+15.52
+12.65
+11.70
+7.11
+
+Figure 25. Stress versus displacement of the T2 laminate samples.
+
+Figure 26. Stress versus displacement of the laminate T3.
+
+23
+
+Figure 27. Stress versus displacement for T4 laminate samples.
+
+3.3 Equivalence Testing
+After the results of the tensile and compression testing for T1 were collected, it was compared to
+0° tensile strength, elastic modulus, and compressive strength data provided by TenCate using
+the HYTEQ program. The average, standard deviation, coefficient of variance, minimum value,
+and maximum values of the five T1 tensile strength values were compared to a data set of 47.
+The T1 tensile strength values passed all four equivalence tests. Therefore, the T1 tensile
+strength values can be considered equivalent to data that had passed qualification according to
+NIAR standards. This process was also done for T1 elastic modulus data, comparing the four
+values calculated through Strainsmart to a data set of 47 provided by TenCate. The modulus data
+failed the equivalence test at α=.05 and failed the acceptance test at α=.01. The 6 values of the
+T1 compressive strength data were compared to a data set of 51 provided by TenCate. The data
+set failed both equivalency and acceptance for the mean and minimum of the data sets. After
+looking at the T1 data, there was one data point that fell well below the rest of the data. After
+consulting the ASTM D695, only 5 values are necessary for a set, so the lowest value was
+considered an outlier and was dropped. The new data set of 5 was compared with the qualified
+values, and the T1 results passed equivalency and acceptance for the mean values of the set, but
+failed for the minimum values of the set.
+
+3.4 QuickLam Predicted Values
+Once all the data was obtained from testing, the average elastic modulus, tensile strength, and
+compressive strength of the T1 samples were entered into the QuickLam program. The resulting
+predicted values for samples T2, T3, and T4 are shown in Table IV, along with the percent
+
+24
+
+differences. The general trend of the data set shows that the QuickLam predicted values were
+lower than the experimental values. Another trend within the data would be that the tensile
+strength values have a lower percent difference than the compressive strength data. The sample
+T2 shows the largest percent difference in both tensile strength and compressive strength, while
+the T4 (hard quasi-isotropic) laminate has the lowest difference in both values.
+The Trace of the material was also determined based on the elastic modulus of the T1 sample. As
+stated previously, Trace is composed of three values of the stiffness matrix but can be
+determined from the longitudinal modulus. The Trace of this Hextow® carbon fiber TC250
+laminate is 142.27 GPa.
+Table V. QuickLam Predicted Values Compared to Average Experimental Values for Laminates T2, T3, and T4
+
+4. Discussion
+4.1 Equivalency Testing
+The equivalency testing was performed to compare the 0° laminate data that was collected
+through experiments done at Cal Poly and previously qualified materials tested at TenCate
+Advanced Composites. The comparison was conducted to be exposed to equivalence testing used
+
+25
+
+in the aerospace and composite industry. The test was also performed to see if the means and
+minimums of the data were within range in order to be called “equivalent”. Although the data set
+did not pass equivalency for compressive strength and elastic modulus, it does not discredit the
+data used in this project. There are many factors that could lead to not passing equivalency. It is
+difficult to compare a set of four samples to a data set containing 50 samples. Definitive outliers
+could be exposed if more tests were performed, which could be appropriately eliminated during
+statistical analysis. This method can also apply to the compression test data. The mean of the
+data set passed equivalency, however the minimum value did not. This could be due to outliers,
+or the use of different standard methods while running the compression tests. Another reason for
+the differences would be that the material used for this project had been stored in a freezer for
+two years before being used. Prepreg materials are stored in a freezer to prevent curing at room
+temperature for thermoset resin systems. The freezer life is based on the resin system and can be
+unique to each resin. For TC250, the freezer life is less than 12 months at <0°F.13 By storing the
+material in the freezer longer than its conservative freezer life, the mechanical properties of the
+material may be affected.
+Despite the compressive strength data and the modulus data not passing equivalency, the Trace
+Theory results should not be affected. The Trace of the material that predicts properties using
+QuickLam is dependent on base data which was part of the same batch of material. Regardless of
+the amount of time in the freezer, the same batch of material is used as a basis to predict values
+of that material. Therefore, although the data set did not pass equivalence compared to TenCate’s
+data, the Trace Theory should still hold.
+
+4.2 Prediction Comparisons and Trace Theory
+After comparing the experimental data with the QuickLam data, certain trends were discovered.
+The first of these trends showed that the laminates with the most 0° plies (T4) had the most
+accurate predicted strength values. The more 45° and 90° plies that are in a laminate, the more
+influence the matrix has on the mechanical properties. While tensile strength is a fiber dominated
+property, compressive strength is influenced by both fiber and resin properties. Therefore,
+predicted values from QuickLam will be most accurate for the laminates including more 0° plies.
+The laminate that had the largest percent difference is T2 which has all 90° plies. This further
+confirms that QuickLam predictions will be the least accurate for orientations that are almost
+completely influenced by resin. Tensile tests and compression tests on all 90° plies, are almost
+completely testing the matrix rather than the carbon fiber. Therefore, it is more difficult to
+predict these properties using a program based on the properties of the carbon fiber in 0°
+laminate.
+The elastic modulus had low percent differences between the QuickLam predicted values and the
+experimental values. Predicting tensile and compressive strength at failure is difficult for
+composites due to their complicated failure mechanisms. However, the elastic modulus is
+determined before failure in the elastic portion of the stress-strain graphs. Therefore, the modulus
+can be more accurately predicted based on fiber properties because the factors that contribute to
+complicated failure mechanisms usually occur when the laminate first begins to fail. Therefore,
+QuickLam can accurately predict the elastic modulus of carbon fiber composites. Elastic
+
+26
+
+modulus data for composites is more consistent than strength data in general. In industry it is
+common to design components based on modulus data versus critical failure data. As a result,
+limiting the design using elastic modulus proves to be more reliable and consistent.
+Tensile strength proved to be more accurately predicted than compressive strength. Compression
+testing for composites is known to have more scatter and can be more unpredictable based on the
+testing methods used.14 Compression testing poses many complications such as general buckling,
+microbuckling, and slippage within fixtures. Also, compressive strength is affected by both the
+fiber and matrix properties as well as the interfacial strength.3 It is therefore more difficult to
+predict values for compressive strength.
+It was also discovered that the predicted values were all lower values than the experimental
+results. QuickLam provides conservative values for tensile and compressive strengths. As stated
+previously, composites have complicated failure mechanisms. Composite materials experience
+brittle failures with little margin of safety through ductility. Therefore, the propagation of brittle
+failure mechanisms must be understood. However, currently there are numerous theories of
+understanding failure mechanisms of composites because a composite laminate can develop local
+failures such as matrix cracks, fiber breakage, and fiber matrix delamination under normal
+loading conditions. All of which are difficult to predict and therefore predicting properties based
+on failure mechanisms is challenging. Therefore, it is understandable that QuickLam is
+conservative in the predictions for strength. Even with a larger percent difference, if a project is
+designed to what the Trace predicted properties are, there would be no compromise in the design.
+
+4.3 Compression Testing
+Determining the compressive strength of a thin material specimen has been a long-standing
+challenge because the specimen tends to buckle prior to compressive failure.15 Preliminary tests
+were done for compression testing to ensure correct failure mechanisms during the tests.
+Following the recommendation from ASTM D695, it was advised to use a torque wrench at 10
+in-lb to clamp the fixture, which resulted in delamination under the tabs. After discussing this
+incorrect failure with industry contacts, a 15 in-lb. torque clamping the fixture obtained the
+correct failure within the gage area. Although increasing the torque seems to be intuitive, a low
+clamping force was recommended by the standard. Because the thickness varied with the
+different laminate orientations, it is reasonable to believe that the results of compression testing
+may vary. If a thicker specimen is used, the gage length should be increased. However, endcrushing and tab delamination would present additional problems. Instead, tightening of the
+fixture accommodated for the thicker specimens, which prevented the tabs from slipping during
+the test.15 Additionally, the standardized geometry and tabbed ends forced the samples to have a
+limited gage length, which made it more difficult to obtain a fracture within the gage length of
+the samples.
+As previously stated the compressive strengths of the laminates were considerably off from the
+predicted QuickLam values. Discrepancies between the two sets are likely due to the use of the
+ASTM D695. The standard poses many complications that could potentially compromise the
+results.
+
+27
+
+Although the greater torque applied was successful in obtaining the correct failure mechanism in
+the experiment, it did not follow the procedure set out by the standard. This may have
+jeopardized the accuracy of the results, especially with the compressive strength from the
+unidirectional 90° samples (T2). The popularity of ASTM D695 has decreased considerably
+since the introduction of ASTM D6641, the Combined Loading Compression method.16 This
+new standard has shown to report more reliable results from testing with fewer complications.
+ASTM D695 is slowly being removed from testing procedures in industry because of the
+inconsistencies of the reported results.16 Compression testing for composites has proven to be
+complicated, and many methods are becoming outdated as the industry evolves and advances.
+
+5. Conclusions
+1. Trace provides conservative values for strength, and can therefore provide a more
+efficient way of coupon testing for material qualification for the aerospace industry
+without compromising the design.
+2. The Trace Theory is most accurate for predicting properties for laminates that are more
+dependent on fiber properties and less dependent on matrix properties.
+3. Experimental data for compressive strengths showed more scatter than for tensile
+strengths. Compression testing produced a larger standard deviation and less reliable
+results. This could be due to the complications from ASTM D695 and difficulties in
+reproducing compression failure modes.
+
+28
+
+6. References
+1
+
+"National Institute for Aviation Research - NCAMP." National Institute for Aviation Research NCAMP. N.p., n.d. Web. 17 Nov. 2016.
+2
+Tomblin, John S., Yeow C. Ng, and K. Suresh. Raju. Material Qualification and Equivalency
+for Polymer Matrix Composite Material Systems. Washington, D.C.: Office of Aviation
+Research, U.S. Federal Aviation Administration, 2001. Web. 18 Nov. 2016.
+3
+Tsai, Stephen W., and Jose Daniel D. Melo. An Invariant-based Theory of Composites.
+Composites Science and Technology 100 (2014): 237-43. Web.
+4
+Tsai, Dr. Stephen. "Trace: A Simple, Must-have Tool." CompositesWorld. CompositesWorld,
+29 June 2016. Web. 09 Feb. 2017.
+5
+Tsai, Stephen W., and JoseÌ Daniel D. Melo. Composite Materials Design and Testing:
+Unlocking Mystery with Invariants. Stanford: Stanford Aeronautics & Astronautics, 2015. Print.
+6
+"Rapid and Accurate Design Allowable and Certification." Composites World. N.p., n.d. Web.
+30 Nov. 2016.
+7
+"ASTM D3039: Standard Test Method for Tensile Properties of Polymer Matrix Composite
+Materials." TechStreet. ASTM International, n.d. Web. 07 Dec. 2016.
+8
+Mallick, P. K. Fiber-reinforced Composites: Materials, Manufacturing, and Design. New
+York: M. Dekker, 1988. Print.
+9
+"ASTM D695: Standard Test Method for Compressive Properties of Rigid Plastics”.
+TechStreet. ASTM International, n.d. Web. 07 Dec. 2016.
+10
+HexTow® Carbon Fiber Selector Guide (n.d.): n. pag. Hexcel. Web.
+11
+"Composite Constituents: Epoxy Resin." ASM Handbooks Online. N.p., n.d. Web. 04 Dec.
+2016.
+12
+"TenCate." TenCate Advanced Composites Manufacturing | Royal Ten Cate Divisions EMEA.
+N.p., n.d. Web. 08 Feb. 2017.
+13
+TC250 Information Sheet (n.d.): n. pag. TenCate. Web.
+14
+Sleight, David S. "Progressive Failure Analysis Methodology for Laminated Composite
+Structures." Langley Research Center, n.d. Web. 10 May 2017
+15
+Staff. "Testing Tech: The Modified D 695 Compression Test Method." CompositesWorld.
+CompositesWorld, 31 Aug. 2007. Web. 31 May 2017.
+16
+Adams, Dr. Donald. "Current Compression Test Methods." CompositesWorld. N.p., n.d. Web.
+31 May 2017.
+
+29
+
+

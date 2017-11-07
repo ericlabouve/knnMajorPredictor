@@ -1,0 +1,8611 @@
+The Design and Construction of a Rear Bumper
+with Incorporated Spare Tire Rack
+
+by
+
+Alan C. Isaacson
+
+BioResource and Agricultural Engineering
+BioResource and Agricultural Engineering Department
+California Polytechnic State University
+San Luis Obispo
+2016
+
+TITLE:
+
+:
+
+The Design and Construction of a
+Rear Bumper with Incorporated Spare
+Tire Rack
+
+AUTHOR
+
+:
+
+Alan Isaacson
+
+DATE SUBMITTED
+
+:
+
+June 2016
+
+Mark A. Zohns______________
+Senior Project Advisor
+
+____________________________
+Signature
+____________________________
+Date
+
+Charlie Crabb______________
+Department Head
+
+____________________________
+Signature
+____________________________
+Date
+
+ii
+
+ACKNOWLEDGEMENTS
+First and foremost I would like to express my sincerest gratitude to my parents Chris and
+Julia Isaacson for their gracious and loving support throughout my educational career. I
+would have not been able to make it this for without their guidance. Thanks for always
+being there for me.
+I would also like to thank Dr. Mark A. Zohns, P.E. for acting as the advisor over the
+duration of this project. Thank you for the educational experiences you have provided me
+both in and out of class. This project would not have been possible without your gracious
+assistance. You have inspired many and you leave a positive imprint on everyone you
+meet.
+I would like to thank Mr. Charlie Crabb for acting as Interim Department Head. Your
+support of the students and drive to get involved truly embodies the BRAE way. Thanks
+for being there to lead department.
+Lastly, I would like to extend my appreciation to Mr. Virgil Threkel for the countless
+hours he spends helping students like me with their shop projects as well as helping to
+solve many problems that arise within the department. You are a pivotal member of the
+department and you were a major factor in the success of this project.
+
+iii
+
+ABSTRACT
+This senior project outlines the design and construction of a rear bumper with
+incorporated spare tire and equipment rack for a 1946 Willys CJ2A Jeep. The spare tire
+rack is capable of swinging out away from the vehicle to allow for the use of the
+vehicle’s tailgate. The bumper was designed for strength, functionality and aesthetic
+qualities alike. Additionally, the bumper design considered all vehicle codes and
+regulations.
+
+iv
+
+DISCLAIMER STATEMENT
+
+The university makes it clear that the information forwarded herewith is a project
+resulting from a class assignment and has been graded and accepted only as a fulfillment
+of the course requirement. Acceptance by the university does not imply technical
+accuracy or reliability. Any use the information in this report is made by the user(s) at
+his/her own risk, which may include catastrophic failure of the device or infringement of
+patent or copyright laws.
+Therefore, the recipient and/or user of the information contained in this report agrees to
+indemnify, defend and save harmless the State its officers, agents and employees from
+any and all claims and losses accruing or resulting to any person, firm, or corporation
+who may be injured or damaged as a result of the use of this report.
+
+v
+
+TABLE OF CONTENTS
+Page
+
+ACKNOWLEDGEMENTS ........................................................................................... iii
+ABSTRACT .................................................................................................................. iv
+DISCLAIMER STATEMENT.........................................................................................v
+TABLE OF CONTENTS............................................................................................... vi
+LIST OF FIGURES ..................................................................................................... viii
+LIST OF TABLES ..........................................................................................................x
+INTRODUCTION ...........................................................................................................1
+LITERATURE REVIEW ................................................................................................4
+Overview .....................................................................................................................4
+Testing .........................................................................................................................4
+Materials ......................................................................................................................4
+Plastic .......................................................................................................................4
+Carbon Fiber ............................................................................................................5
+Aluminum ................................................................................................................5
+Steel .........................................................................................................................6
+Design ......................................................................................................................7
+PROCEDURES AND METHODS ................................................................................ 11
+Design ....................................................................................................................... 11
+Bumper .................................................................................................................. 12
+Spare Tire Rack ...................................................................................................... 13
+Spindle – Hub Assembly ........................................................................................ 14
+Latching ................................................................................................................. 16
+License Plate Mount ............................................................................................... 17
+Design Analysis ......................................................................................................... 18
+Hand Calculations .................................................................................................. 18
+SolidWorks FEA .................................................................................................... 18
+Construction............................................................................................................... 19
+Bumper .................................................................................................................. 19
+Rack ....................................................................................................................... 22
+Spindle – Hub Assembly ........................................................................................ 23
+Latching ................................................................................................................. 25
+vi
+
+License Plate Mount ............................................................................................... 27
+Paint .......................................................................................................................... 28
+Olive ...................................................................................................................... 28
+Red ......................................................................................................................... 28
+Black ...................................................................................................................... 28
+Installation ................................................................................................................. 29
+RESULTS ..................................................................................................................... 36
+Appearance ................................................................................................................ 36
+Cost ........................................................................................................................... 40
+Weight ....................................................................................................................... 41
+Functionality .............................................................................................................. 41
+DISCUSSION ............................................................................................................... 44
+RECOMMENDAITONS ............................................................................................... 45
+REFERENCES .............................................................................................................. 46
+APPENDIX A – How this Project Meets Requirements for the BRAE Major ................ 48
+APPENDIX B – Design Calculations and SolidWorks FEA Reports ............................. 52
+APPENDIX C – Bumper Parts and Assembly Drawings ................................................ 55
+APPENDIX D – Rack Part and Assembly Drawings...................................................... 56
+APPENDIX E – Indented Parts List ............................................................................... 57
+APPENDIX F – Receipts ............................................................................................... 61
+
+vii
+
+LIST OF FIGURES
+Page
+Figure 1. Alan Isaacson’s 1946 Willys CJ2A. .................................................................1
+Figure 2.Stock placement of the spare tire on a Willys CJ2A. .........................................2
+Figure 3. Rear tailgate on a Willys CJ2A. .......................................................................3
+Figure 4. An aftermarket bumper and spare tire rack currently produced by 4x4 Group
+Buy (2016). .....................................................................................................................3
+Figure 5. A stock plastic bumper on a Toyota 4runner (Toyota, 2015). ...........................5
+Figure 6. Carbon fiber bumper on a 2011 Austin Martin Vantage S (Top Speed, 2011). ..5
+Figure 7. Aluminum bumper with spare tire mount on a jeep (Under Cover Fabworks,
+2015). ..............................................................................................................................6
+Figure 8. A steel bumper with spare tire mount installed on a modern jeep (Rugged
+Ridge, 2015). ...................................................................................................................7
+Figure 9. Major bumper components (4x4 Group Buy, 2016)..........................................8
+Figure 10. Willys CJ2a frame shape (‘Jeep’ Universal, 1965). ........................................8
+Figure 11. The senior project of Morgan Defty (Defty, 2012). ...................................... 10
+Figure 12. Completed SolidWorks model (transport position). ...................................... 11
+Figure 13. Completed SolidWorks model (tailgate access position)............................... 11
+Figure 14. A stock CJ2A rear bumper (G503, 2007). .................................................... 12
+Figure 15. SolidWorks rendition of bumper design. ...................................................... 12
+Figure 16. Bumper flat pattern. ..................................................................................... 13
+Figure 17. SolidWorks rendition of rack design. ........................................................... 14
+Figure 18. SolidWorks rendition of the spindle-hub assembly. ...................................... 15
+Figure 19. Exploded view of the spindle-hub assembly. ................................................ 15
+Figure 20. Cross-section view of the spindle-hub assembly. .......................................... 16
+Figure 21. Spindle – Hub assembly with spring loaded latching in the open (tailgate
+access) position.............................................................................................................. 17
+Figure 22. Rack latching system for the closed (road transportation) position................ 17
+Figure 23. License Plate Mount..................................................................................... 18
+Figure 24. Bent channel of the bumper (back view). ..................................................... 20
+Figure 25. Bent channel of the bumper (top view). ........................................................ 21
+Figure 26. Bumper channel with side flanges, mounting plates and channel flanges
+welded in place. ............................................................................................................. 21
+Figure 27. Receiver tube welded into bumper channel. ................................................. 22
+Figure 28. Completed rack placed on top of bumper. .................................................... 23
+Figure 29. Jerry (fuel) can mounting bracket installed on rack. ..................................... 23
+Figure 30. Spindle – Hub assembly with bushing installed. ........................................... 24
+Figure 31. Spindle – hub assembly with spindle welded to bumper and rack installed. .. 24
+Figure 32. Spindle – Hub assembly with thrust washers, retaining nut and grease zerk
+visible. ........................................................................................................................... 25
+Figure 33. Delrin plastic strip added as a wear surface. ................................................. 26
+Figure 34. Toggle clamp and latching shelf for the “closed” position. ........................... 26
+Figure 35. Spring loaded pin and locking ramp for the “open’ position. ........................ 27
+Figure 36. License plate mount with light. .................................................................... 28
+viii
+
+Figure 37. Various parts with a primer coat applied. ..................................................... 29
+Figure 38. Bumper with its final coat of black paint dry. ............................................... 29
+Figure 39. “Open” position latch installed. .................................................................... 30
+Figure 40. Toggle clamp and Delrin installed. ............................................................... 30
+Figure 41. Bumper and Rack assembly installed. .......................................................... 31
+Figure 42. Bumper mounting plate bolted to frame. ...................................................... 31
+Figure 43. Taillight installed in bumper. ....................................................................... 32
+Figure 44. Flood light installed on rack below Jerry (fuel) can. ..................................... 32
+Figure 45. Trailer wiring pigtail installed on bottom side of bumper near receiver tube. 33
+Figure 46. Jerry (fuel) can installed with store-bought tray and strap. ............................ 33
+Figure 47. Clearance between rack and tailgate. ............................................................ 34
+Figure 48. Weighing the new bumper and rack assembly. ............................................. 35
+Figure 49. Bumper and rack in “closed” (road transportation) position. ......................... 36
+Figure 50. Rack open, tailgate closed. ........................................................................... 37
+Figure 51. Rack open, tailgate open. ............................................................................. 37
+Figure 52. View of the rack and tailgate open. .............................................................. 38
+Figure 53. Rack in “open” (tailgate access) position. ..................................................... 39
+Figure 54. Rack latched in the “opened” position. ......................................................... 39
+Figure 55. Jeep anchored at front to forklift for applied force test.................................. 42
+Figure 56. Jeep anchored at back to dead-man via come-along. ..................................... 42
+Figure 57. Load cell installed to take force measurements. ............................................ 43
+
+ix
+
+LIST OF TABLES
+Page
+Table 1. Willys CJ2a major frame dimensions (‘Jeep’ Universal, 1965). .........................9
+Table 2. SAE lamp standards for automotive vehicles (U.S. Department of
+Transportation, 1990). .....................................................................................................9
+Table 3: Itemized list of costs associated with this project. ............................................ 40
+Table 4. Itemized Bumper Weights ............................................................................... 41
+
+x
+
+1
+
+INTRODUCTION
+Prior to the engagement of the United States in World War II, the nation was tasked with
+the production of war supplies including weapons and vehicles. In 1940, the Willys
+Overland Company began production of a light duty general purpose vehicle known as
+the “Jeep.” The jeep was the first four-wheeled vehicle of its kind and was designed to
+transport troops and supplies over rugged terrain. The vehicle became a pivotal and
+trustworthy tool to many soldiers on the war fronts. As the war came to an end, Willys
+realized their war time vehicle could be introduced to the consumer vehicle market. The
+vehicle was an immediate success when the CJ2A model made its market debut in 1945.
+Figure 1 exhibits a Willy’s CJ2A. Over the years Willys evolved into Jeep, AMC and
+eventually Chrysler all producing a number of different vehicle models. Today, there are
+Jeep owners around the world who take pride in their four-wheel drive “grocery-getters.”
+
+Figure 1. Alan Isaacson’s 1946 Willys CJ2A.
+
+Alan Isaacson has been the proud owner of a 1946 CJ2A Willys jeep since 2010 and has
+spent countless hours rebuilding and maintaining the vehicle. The vehicle sits in a stock
+configuration including a side mounted tire and tailgate in rear which can be viewed in
+Figure 2 and Figure 3. When this vehicle is used, it is often loaded with people and
+supplies including fuel cans, a “Hi-Lift” jack and tool box; but space is limited. The
+limited space is often uncomfortable and at times unsafe for occupants. Additionally, the
+side mounted spare tire protrudes 12 inches beyond the side panel of the body making the
+vehicle a total of 72 inches wide. Often when in operation, the jeep must be negotiated
+through tight areas and therefore the operator must be mindful of the spare tire’s
+
+2
+proximity to objects along a trail as the tire can easily hit, snag or hang-up on hazards.
+The spare tire’s location can be harmful to the occupants, the vehicle and the
+environment because it can be easily snagged on trees and other foliage. To improve
+upon this problem, the spare tire and equipment must be relocated. The only practical
+option for storage in the current state is in the rear of the vehicle tub. Storage of
+equipment in this area is not ideal and would limit the use of the removable rear seat.
+Numerous aftermarket equipment companies have items available for purchase that
+address storage and spare tire relocation. These items are marketed for many of the
+modern vehicle models. Because of the age of this particular vehicle, there are few
+industry solutions to this problem and therefore other means must be taken to construct a
+device capable of fulfilling the owner’s needs.
+
+Figure 2.Stock placement of the spare tire on a Willys CJ2A.
+
+3
+
+Figure 3. Rear tailgate on a Willys CJ2A.
+
+The objective of this project is to design and construct, based on similar aftermarket
+solutions, a custom devise that relocates a 31 inch spare tire weighing 45 pounds and
+allows for storage of an additional 70 pounds of equipment (including two fuel cans and a
+“Hi-Lift” jack). See Figure 4 for a current aftermarket solution. The idea is to build a
+custom rear bumper with an integrated spare tire mount and equipment storage rack for a
+Willys CJ2A. This device will allow the spare tire and equipment to be relocated to the
+rear of the vehicle allowing for occupant comfort and safety as well as vehicle clearance
+and functionality. The tire is to be mounted on a rack with a heavy duty hinge that can
+swing out of the way for the use of the tailgate. The tailgate hinges along the bottom rear
+edge of the vehicle. To maintain the use of the tailgate, the rack must be capable of swing
+out of the path of the tailgate; this requires at least 90 degrees of rotation by the rack
+hinge. The rack itself must maintain a sufficient clearance (approximately 0.5 inches)
+from the rear of the vehicle when in its closed position. The rack must have a locking/
+latching system to hold its position in both the fully closed and fully opened position. The
+bumper on which the rack mounts must reach from the driver’s side finder to the
+passenger’s side fender and not protrude passed. The cost of the bumper is to not greatly
+exceed $500.
+
+Figure 4. An aftermarket bumper and spare tire rack currently produced by 4x4 Group
+Buy (2016).
+
+4
+LITERATURE REVIEW
+Overview
+When someone says off-roading one likely thinks Jeep. Jeep has been mastering rugged
+terrain around the world since its birth in 1941(Allpar, 2015). Since its birth 75 years ago,
+the past time of off-roading has greatly grown. From 1982 to 1995, participants in offroading increased 43.8% equating to a total of about 23 million people (Cordell, et. al.
+1999). This number has continued to grow since 1995; with such interest many off road
+vehicle accessories such as spare tire mount incorporated bumpers have emerged in the
+market. The majority of these accessories are marketed for new model Jeeps, leaving few
+options for the early models.
+Testing
+The U.S. Government and the National Highway Traffic Safety Administration (NHSTA)
+requires that all highway vehicles be fitted with a bumper that meets the 5 mph Federal
+Motor Vehicle Safety Standards (FMVSS) impact Standard 581 (Evans and Haddad,
+1983). A bumper is tested via two pendulum tests. These tests require that a dynamic
+pendulum of identical curb weight strike a vehicle at the bumper’s foremost surface and
+at the corners, and the vehicle must absorb the impact with no damage to the vehicle and
+minimal to the bumper system (McCormick, 1991). These testing situations will be
+considered during the design of the bumper and can me simulated in via a SolidWorks
+analysis.
+Materials
+Passenger car bumper systems typically consist of a steel, aluminum, or reinforced plastic
+bumper beam which spans the width of the vehicle (King et. al., 1993) but can also be
+made of wood or composite materials such as carbon fiber. At times, numerous materials
+are combined into a single bumper system. Although bumpers are designed to protect a
+vehicle and its occupants from an impact, many aftermarket bumpers add other utilities
+like towing hitches, spare tire mounts and equipment storage. Bumpers are constructed of
+a wide variety of materials and these materials are selected based on the features of the
+bumper and the characteristics the material provides.
+Plastic . A common material of today’s bumper systems, plastic and large sections of
+foam are often utilized in many small to medium cars, trucks and SUVs. These types of
+bumpers maximize the weight to strength ratio while reducing cost and improving
+aesthetic appeal. Plastic bumpers are not ideal in load bearing situations including the use
+of tow packages or spare tire mount and therefore not ideal for larger trucks, off road
+vehicles, or for the use in aftermarket bumpers with a spare tire mount. A plastic bumper
+can be viewed in Figure 5.
+
+5
+
+Figure 5. A stock plastic bumper on a Toyota 4runner (Toyota, 2015).
+
+Carbon Fiber . Carbon fiber, like plastic, maximizes the strength to weight ratio. Carbon
+fiber utilizes millions of small fibers bonded together with an epoxy resin. These bumpers
+are often very light weight, strong and non-flammable but can be brittle and quite pricey.
+These types of bumpers are widely utilized on super cars or other applications where
+weight is more important than the piece for the bumper itself (doityourself.com). An
+image of a carbon fiber bumper can be viewed in Figure 6.
+
+Figure 6. Carbon fiber bumper on a 2011 Austin Martin Vantage S (Top Speed, 2011).
+
+Aluminum . Aluminum is becoming increasingly common in the automotive industry for
+both body panels as well as bumpers. Ford is currently producing its F150 model with
+fully aluminum body panels saving over 700 pounds from previous models (Ford, 2015).
+Aluminum is much lighter but has similar strength characteristics when compared with
+
+6
+steel. Aluminum is corrosion resistant but requires special equipment and tools to work
+with and additionally requires specific skills to fabricate, and therefore may be less
+desirable for a “one-off” design. Aluminum is typically more expensive than steel. An
+aluminum bumper can be viewed in Figure 7.
+
+Figure 7. Aluminum bumper with spare tire mount on a jeep (Under Cover Fabworks,
+2015).
+Steel . Steel is a widely used material for both original equipment manufacturing and
+aftermarket bumpers. Steel has a large weight bearing capacity, performs well with minor
+to intermediate collisions, and is widely available and is easy to work with. Some
+downsides of steel include that it has low corrosion resistance and is heavier than
+aluminum. The majority of large trucks and utility vehicles use steel bumpers because
+they perform well in collisions on and off-road. They also allow for the use of tow
+packages and equipment storage and are easy to produce. An example of a steel bumper
+can be viewed in Figure 8.
+
+7
+
+Figure 8. A steel bumper with spare tire mount installed on a modern jeep (Rugged
+Ridge, 2015).
+
+Design . There are many different spare tire mount incorporated bumper designs on the
+market. The bumpers in Figure 8 and Figure 9 essentially perform the same task, but this
+task is done with some significant differences. Publications like 4Wheel Drive Hardware
+(2015) provide many design ideas. Ultimately, a bumper must be designed to meet the
+characteristics, necessities and restraints of a specific vehicle while being safe and road
+legal. Most of the current bumper designs utilize a cantilevered beam with a hub
+assembly to allow for the spare tire to swing out of the way. Methods for the analysis of
+such conditions can be found in AISC (2011), Budynas and Nisbett (2008) and Ryerson
+Data Book (1975). These sources provide specific formulas and methods for correctly
+sizing structural members by calculating the stresses produced under various conditions.
+Potential conditions that must be analyzed include bending and shear stress in the
+cantilevered beam, the spindle (pivot) and the bumper to frame mounts; view Figure 9 for
+the identification of these items.
+
+8
+
+Figure 9. Major bumper components (4x4 Group Buy, 2016)
+‘Jeep’ Universal (1965) provides many dimensions and drawings of early jeep vehicles.
+Figure 7 provides an image of the frame and Table 1 provides frame specifications and
+dimensions. This will prove useful in the sizing and shape of the bumper as well as how it
+will attach to the frame. Aftermarket bumpers are often welded and therefore should
+follow guidelines put for by the American Welding Society (2014). All bumpers must be
+designed with the guidelines and requirements put for by NHSTA (2015), FMVSS and
+SAE. Specific lamp standards for passenger vehicle bumpers are listed in Table 2.
+
+Figure 10. Willys CJ2a frame shape (‘Jeep’ Universal, 1965).
+
+9
+Table 1. Willys CJ2a major frame dimensions (‘Jeep’ Universal, 1965).
+
+Table 2. SAE lamp standards for automotive vehicles (U.S. Department of
+Transportation, 1990).
+
+A bumper of similar function and design was constructed by Morgan Defty, a Cal Poly
+graduate of the BioResource and Agricultural Engineering Department. The bumper was
+to include a spare tire mount and be fitted for a Chevy Suburban. The designs and
+methods of Mr. Defty’s project will be referenced and considered in the construction of
+the bumper at hand. A picture of Morgan Defty’s final product can be viewed in Figure 8.
+There are some specific differences to note in the design of Mr. Defty’s bumper as
+compared to the parameters of the design laid out in this report. First and foremost, Mr.
+Defty’s bumper was designed for a vehicle much larger than a Willys CJ2A thus making
+the over bumper design much larger as well. Additionally, the design in Figure 8 only
+allows for the mounting of a spare tire and no equipment and is hinged on the driver’s
+side. The design of this project is to incorporate the storage of a spare tire and equipment
+(including fuel cans and a “Hi-Lift” jack) onto a bumper and have it hinge on the
+passenger’s side of the vehicle.
+
+10
+
+Figure 11. The senior project of Morgan Defty (Defty, 2012).
+
+11
+PROCEDURES AND METHODS
+Design
+All design work for this bumper was conducted via SolidWorks, a 3D computer modeling
+software. The design was driven by two main factors: 1) the size, shape and location of
+the vehicle and its components to be equipped and 2) the size of the spare tire to be
+mounted on the rack. Other factors also contributed to the design of the bumper
+including: 1) ascetics, 2) location of license plate and tail lights, 3) location and function
+of a latching system, 4) location of a receiver hitch, 5) incorporation of Jerry (fuel) cans
+and 6) overall weight. Additionally, force calculations were conducted to ensure the
+proposed bumper was safely and adequately built. The finished SolidWorks model can be
+viewed in Figure 12 and Figure 13.
+
+Figure 12. Completed SolidWorks model (transport position).
+
+Figure 13. Completed SolidWorks model (tailgate access position).
+
+12
+
+Bumper . The bumper is the main body that spans the width of the vehicle that not only
+protects the vehicle from impacts but also supports the spare tire rack. The bumper was
+designed to mimic some of the characteristics of the stock bumper including tapering
+outer end, see Figure 14. The bumper also had to incorporate a hitch receiver and be
+capable of towing a small, single axle trailer. Flush mounted taillights were also desired.
+To combine all of this into a single design, SolidWorks was utilized. In Figure 15, the
+SolidWorks rendition exhibits tapering outer edges and cut outs for the taillights and
+hitch receiver. To incorporate strength, save weight and maximize the number of
+available metal working tools, 10 gauge (0.135”) sheet steel was chosen. The bumper was
+designed to be cut out of a sheet of hot rolled 10 gauge via plasma cutter and then bent
+into shape via press brake. The bumper flat pattern can be viewed in Figure 16. The
+bumper was to be bent into a channel and because of this the constraints of the press
+brake had to be considered. Because of such constraints, the bumper’s main channel was
+sized to have a top flange of 5 inches, web of 5 inches and a bottom flange of 4 inches.
+The bumper to frame mounts were designed to be made out of 0.25 inch plate and bolted
+directly to the frame using two 0.5 inch bolts per mount.
+
+Figure 14. A stock CJ2A rear bumper (G503, 2007).
+
+Figure 15. SolidWorks rendition of bumper design.
+
+13
+
+Figure 16. Bumper flat pattern.
+Spare Tire Rack . The spare tire rack is the device that allows for the mounting of a full
+sized spare tire. It had to be designed so that the use of the vehicle’s rear tailgate would
+not be limited. Additionally is had to incorporate mounts for Jerry (fuel) cans, the license
+plate, and a latching system. The rack was designed to utilize a spindle – hub type
+assembly that would allow the rack to swing open and out of the way when the use of the
+vehicle’s tailgate was desired. A 2 inch x 3 inch x 0.125 inch tube was utilized as the
+main body of the rack. A hub was placed on one side and the other side was tapered to fit
+into a latching shelf. In the center of the tube, a riser and mounting flange was placed to
+allow the spare tire to be bolted onto the rack. See Figure 17 for the rack design.
+
+14
+
+Figure 17. SolidWorks rendition of rack design.
+Spindle – Hub Assembly . The spindle – hub assembly is designed to allow for the
+swinging action of the rack enabling it to be moved out of the way when the use of the
+vehicle’s tailgate is desired. The spindle was designed from a 1.25 inch diameter hot
+rolled stock with 1 inch – NF – 14 threads cut to allow for a retaining nut. The hub was
+produced from a piece of 2 inch DOM tubing with a 0.25 inch wall pressed fit oilimpregnated brass bushing. Grease passages were added in the spindle to allow for
+lubrication between the spindle and the bushing. The spindle had to be correctly size to
+be capable of withstanding the bending and shear forces produced by the weight and
+movement of the rack including the spare tire and Jerry (fuel) cans. See Figure 21
+through Figure 20 to view the spindle-hub assembly.
+
+15
+
+Figure 18. SolidWorks rendition of the spindle-hub assembly.
+
+Figure 19. Exploded view of the spindle-hub assembly.
+
+16
+
+Figure 20. Cross-section view of the spindle-hub assembly.
+
+Latching . Two different latching systems were designed for the rack. One system keeps
+the rack in a “closed” position keeping it locked in a position parallel with the bumper.
+The tapered end of the rack is designed to be lock within a shelf unit. This self prevents
+any vertical or horizontal movement of the rack when locked. To lock the rack within the
+shelf, a toggle clamp was used. See Figure 22. The second system uses a spring-loaded
+pin that locks into place when the rack swing 122 degrees form the “closed” position to
+the “open” position. The pin runs up a ramp and then falls into a locking slot. When the
+rack is to be replaced to the “closed” position, the pin must be manually lifted out of the
+slot unlocking the rack and allowing it to swing.
+The latch “closed” design was designed to keep the rack locked in place when driving
+down the road. Because failure of this latch could be catastrophic and harmful to motorist
+or pedestrians, it was designed to handle large loads. The toggle clamp sized for this
+application is rated for 500 pounds. The latch “open” design was designed to prevent the
+rack from swinging toward the closed direction when this action was not desired.
+Because the rack will see minimal loads when in this position, this latch was not designed
+to handle large loads.
+
+17
+
+Figure 21. Spindle – Hub assembly with spring loaded latching in the open (tailgate
+access) position.
+
+Figure 22. Rack latching system for the closed (road transportation) position.
+
+License Plate Mount . A mount was designed to allow the license plate to be bolted in
+front of the spare tire using the spare tire studs. This location allows for proper visibility
+of the license plate, protects the license plate from objects on the trail and doesn’t limit
+
+18
+the visibility of other items including the taillights. See Figure 23 for the placement and
+design of the license plate mount.
+
+Figure 23. License Plate Mount.
+
+Design Analysis
+Hand Calculations . A hand calculation was conducted to analyze the allowable and yield
+load of the bumper. This test was set up as a simply supported beam analysis. To simplify
+the analysis and find the “worst-case scenario,” the mid span cross-section of the bumper
+design was taken as the uniform cross-section of the bumper in its entirety. Yield and
+allowable stress were established as 36,000 psi and 15,000 psi respectively. It was
+determined that the yield and allowable loads are 2200 pounds and 900 pounds
+respectively. Additionally the maximum deflection caused by the allowable load was
+determined to be 0.006 inches. SeeAPPENDIX B – Design Calculations and SolidWorks
+FEA for the step by step analysis of the above.
+SolidWorks FEA . SolidWorks offers a Fundamental Element Analysis simulation that
+allows the user to apply various loading situations to a part or assembly. FEA was used to
+analyze the main body of the bumper with a top load (straight down) of 900 pounds. This
+analysis determined that the 900 pounds induced a 12,000 psi stress and 0.014 inches of
+deflection at mid-span. These values are not far off from the hand calculations and the
+discrepancy between the two is likely caused by small variations in the conditions of the
+analysis including fixtures / supports and loading.
+Additionally, FEA simulations were conducted on the bumper in a draft condition, the
+Bumper to Frame Mounts and the Hub Spindle. See APPENDIX B – Design Calculations
+and SolidWorks FEA for the SolidWorks FEA report for each simulation.
+
+19
+
+Construction
+Bumper . The flat pattern of the bumper and rear plates was plasma cut from the 10 gauge
+sheet. Flanges 3 and 4 were cut off of the flat pattern so the channel could be bent in the
+press brake; see Figure 16. Bends at flanges 3 and 4 were not possible due to the
+constraints of the press break. Flange 1 was bent before flange 2. See Figure 24 and
+Figure 25 for a view of the channel made from bending flange 1 and 2. Once the channel
+was bent, flanges 3 and 4 that were originally cut off of the flat pattern, were welded into
+place. Additionally, the bumper mounting plates were plasma cut and welded into the
+bumper channel along with the receiver tube, D-rings and additional channel flanges.
+These can be viewed in Figure 26 and Figure 27. See
+
+20
+APPENDIX C – for all bumper part and assembly drawings and dimensions.
+
+Figure 24. Bent channel of the bumper (back view).
+
+21
+
+Figure 25. Bent channel of the bumper (top view).
+
+Figure 26. Bumper channel with side flanges, mounting plates and channel flanges
+welded in place.
+
+22
+
+Figure 27. Receiver tube welded into bumper channel.
+Rack . The main tube of the rack was cut to length and a fish mouth was cut into one side
+to allow for the hub. A taper was cut on the opposing end of the tube allowing it to fit
+within the latching structure. The hub was welded in and a cap was placed on the tapered
+tube end. The riser was welded with gussets to the main tube and a plasma cut spare tire
+flange was welded to the riser. The completed rack can be seen sitting on top of the
+bumper in Figure 28. Gussets were added to the spare tire riser to counteract the bending
+caused from the weight of the spare tire. Brackets were also added to the rear face of the
+rack to all for the mounting of the Jerry (fuel) cans and can been seen in Figure 29. See
+APPENDIX D – Rack Part and Assembly Drawings for all rack part and assembly
+drawings and measurements.
+
+23
+
+Figure 28. Completed rack placed on top of bumper.
+
+Figure 29. Jerry (fuel) can mounting bracket installed on rack.
+Spindle – Hub Assembly . A shaft was machined to act as a spindle in the pivot
+assembly. Threads were cut at the top of the spindle to allow for a retaining nut. A flat
+was machined on one side of the threaded portion to allow for a locking “D-washer”.
+Grease passages were also drilled to aid in the lubrication of the pivot. The hub was
+constructed out of a piece of DOM tube with a press fit, oil-impregnated brass bushing.
+The hub was welded to the fish mouthed end of the rack main tube and an additional
+strap was welded around the hub and across the welded joint to strengthen this
+connection. The bushing was machined on a lathe and pressed into the hub; see Figure
+
+24
+30. See APPENDIX D – Rack Part and Assembly Drawings for all Spindle - Hub part
+and assembly drawings and measurements.
+
+Figure 30. Spindle – Hub assembly with bushing installed.
+
+Figure 31. Spindle – hub assembly with spindle welded to bumper and rack installed.
+
+25
+
+Figure 32. Spindle – Hub assembly with thrust washers, retaining nut and grease zerk
+visible.
+Latching . The “closed” position latch used a stainless steel toggle clamp rated to 500
+pounds of force. Stainless steel was chosen for its corrosion resistant properties. 500
+pounds was seen as sufficient for this application. A shelf- type retaining structure was
+constructed and holes had to be drilled and taped in both the rack main tube and shelf to
+allow for the mounting of the toggle clamp. A Delrin plastic strip was added to the
+tapered end of the rack tube allowing for a wear surface for when the rack engages with
+the latching shelf. Close consideration had to be made in reference to the placement of
+the toggle clamp so that the toggling characteristics of the clamp were maintained. The
+toggle clamp and locking shelf can be viewed in Figure 34. The “open” position latch
+used a pin with a weld on collar in which the pin would slide. Holes had to be drilled in
+the pin to allow for retaining pins to be placed. The retaining pins hold the spring and the
+locking pin in place within the collar. The locking ramp was welded onto the top flange
+of the bumper and can be viewed in Figure 35. See APPENDIX D – Rack Part and
+Assembly Drawings for all latching part and assembly drawings and measurements.
+
+26
+
+Figure 33. Delrin plastic strip added as a wear surface.
+
+Figure 34. Toggle clamp and latching shelf for the “closed” position.
+
+27
+
+Figure 35. Spring loaded pin and locking ramp for the “open’ position.
+
+License Plate Mount . The License Plate Mount was constructed out of two plates and a
+small tube spacer. The rear plate allowed for the mounting to the spare tire studs. The
+front plate allowed for the mounting of the license plate and a small light to illuminate the
+license plate at night. The tube was welded between the two plates allowing the mount to
+fit within the offset of the rim. This mount is not structural and therefore the plates were
+plasma cut out of 20 gauge sheet steel. See Figure 36 for the finished mount. See
+APPENDIX D – Rack Part and Assembly Drawings for all license plate part and
+assembly drawings and measurements.
+
+28
+
+Figure 36. License plate mount with light.
+
+Paint
+All parts excluding any machined surfaces were chipped, sanded and wiped down with
+acetone prior to being painted. All painted parts were painted with Rustoleum oil-base
+enamel to prevent rust and add to the aesthetics of the finished product. All painted parts
+were initially shot with two coats of primer. The overall look of the bumper was not to be
+bright and flashy but rather to blend in and not reflect when on an off-road trail.
+Olive . The two Jerry (fuel) cans were painted a flat olive color to resemble a military
+issue type can. Black was not desired due to its thermal characteristics thus causing the
+vaporization and expansion of the fuel inside.
+Red . The “closed” and “open” positions latches were both painted red for their visibility
+to the user. Red allows the user to quickly identify the points of input. The color red not
+only sticks out against the black bumper but also signifies immediate user attention.
+Black . The remainder of the parts, including the overall bumper and rack assemblies
+were painted black to be consistent with the existing color scheme of the vehicle.
+Additionally, black is more likely to blend in with a natural atmosphere.
+
+29
+
+Figure 37. Various parts with a primer coat applied.
+
+Figure 38. Bumper with its final coat of black paint dry.
+
+Installation
+The instillation occurred once all parts were painted and the necessary materials were
+gathered. The instillation included the assembly of the bumper components, the assembly
+of the rack components, the placement of the rack on the bumper, the bolting on of the
+bumper assembly to the vehicle frame, instillation of the tail and flood lights and their
+wiring, the mounting of the spare tire and Jerry (fuel) cans and the mounting of the
+license plate and light. A trailer light pigtail was also wired in and mounted on the
+underside of the bumper.
+To mount the bumper to the frame, a forklift was used to align the bumper with respect to
+the bodylines and frame rails of the vehicle. A hand drill was used to place holes in the
+vehicle’s frame for the bumper mounting bolts. The bumper could then be mounted. Four
+1/2 in. – NC – 2” bolts were used and tightened with a numeric impact driver.
+The original bumper was removed for the purpose of the instillation of this project. The
+original bumper and spare tire mount was weighed. Additionally the new bumper with
+incorporated mount was weighed. The spare tire and Jerry (fuel) cans were not included
+in the weight calculations. The weights were obtained by hanging the items from an
+electronic load cell. The weight was recorded to ensure that the new bumper would not
+overload the vehicle.
+
+30
+
+Figure 39. “Open” position latch installed.
+
+Figure 40. Toggle clamp and Delrin installed.
+
+31
+
+Figure 41. Bumper and Rack assembly installed.
+
+Figure 42. Bumper mounting plate bolted to frame.
+
+32
+
+Figure 43. Taillight installed in bumper.
+
+Figure 44. Flood light installed on rack below Jerry (fuel) can.
+
+33
+
+Figure 45. Trailer wiring pigtail installed on bottom side of bumper near receiver tube.
+
+Figure 46. Jerry (fuel) can installed with store-bought tray and strap.
+
+34
+
+Figure 47. Clearance between rack and tailgate.
+
+35
+
+Figure 48. Weighing the new bumper and rack assembly.
+
+36
+RESULTS
+Appearance
+The overall appearance of the finished bumper is aesthetically pleasing. The shape flows
+well with the body lines. The paint scheme complements the existing scheme of the
+vehicle. The new location of the tire provides improved the symmetry of the vehicle and
+the tire is mounted parallel to the body. The license plate and tail lights have increased
+visibility. See Figure 49 thru Figure 53 for images of the completed design.
+
+Figure 49. Bumper and rack in “closed” (road transportation) position.
+
+37
+
+Figure 50. Rack open, tailgate closed.
+
+Figure 51. Rack open, tailgate open.
+
+38
+
+Figure 52. View of the rack and tailgate open.
+
+39
+
+Figure 53. Rack in “open” (tailgate access) position.
+
+Figure 54. Rack latched in the “opened” position.
+
+40
+Cost
+The cost of this project was $383.31 not including the cost of labor. The price of this
+bumper rivals other simpler type products on the market. Table 3 provides an itemized
+list of costs associated with the production of this project:
+
+Table 3: Itemized list of costs associated with this project.
+Itemized List of Project Costs
+Quantity
+
+Description
+
+Supplier
+
+1
+
+1/2 sheet, 10 Gauge, Hot Rolled
+
+B and B
+
+2
+
+Oil-Embedded Thrust Bearing
+
+McMaster
+
+1
+
+932 Bearing Bronze
+
+McMaster
+
+3
+
+1/2" Wheel Bolt / Stud
+
+Napa
+
+1
+
+2"x2"x6" Hitch Tube
+
+American Muffler
+
+2
+
+1/2" D-Rings
+
+American Muffler
+
+1
+
+Toggle Clamp, Right Angle
+
+McMaster
+
+1
+
+1.5"x1/8"x2' Black Delrin Strip
+
+McMaster
+
+2
+
+STT Kit, 3"x"5 Tail Light
+
+1
+
+Trailer Wire End
+
+1
+
+2 Wire Plug Connector
+
+1
+
+License Plate Light
+
+Napa
+O'Reilly Auto
+Parts
+O'Reilly Auto
+Parts
+O'Reilly Auto
+Parts
+
+1
+
+Paint and Supplies
+
+Home Depot
+
+2
+
+Jerry / Gas Can Straps
+
+Twin City Surplus
+
+1
+
+2 Pack Can Gaskets
+
+Twin City Surplus
+
+Part
+Number
+
+Cost
+$
+60.00
+$
+2879T13
+8.33
+$
+8911K325 24.93
+$
+641-1555
+6.25
+$
+22.48
+$
+17.48
+$
+5135A33
+45.47
+$
+8662K12
+13.02
+$
+45002R
+33.32
+$
+HOP 48030 8.39
+$
+HOP 47965 3.39
+$
+OPT LP31CS 4.39
+$
+58.03
+$
+15050
+67.16
+$
+39
+11.17
+$
+Total: 383.81
+
+41
+Weight
+The weights of the major components of the original and new bumper were taken with an
+electronic load cell. Table 4 provides an itemized list of the weight of the original and
+new bumper and spare tire mount:
+Table 4. Itemized Bumper Weights
+
+Bumper
+Rack
+Total
+
+Itemized Bumper Weights
+Original
+New
+(pounds)
+(pounds)
+35
+50
+10
+30
+45
+80
+
+Functionality
+The overall vehicle functionality and ability has improved because of the new bumper.
+The bumper allows for the storage of an additional ten gallons of fuel, allowed the
+vehicle to sit level due to the placement of the spare tire in the center of the vehicle and
+makes the overall width twelve inches smaller allowing for increased maneuverability.
+The spare tire no longer sticks out where it can catch or snag on objects. Additionally, the
+bumper did not hinder the use of the tailgate. The spare tire rack latches and unlatches
+from the opened and closed positions easily and firmly. The rack swings well and easily
+across its entire range of movement.
+As a real life proof of concept, an applied force test was conducted on the bumper. While
+the front of the vehicle was anchored to a heavy object, a come-along was hooked to a
+hitch placed in the bumper receiver. The opposite end of the come-along was anchored to
+the ground. A load cell was also added between the bumper and the come-along. The
+come-along was used to apply a force of 1200 pounds at an angle of 10 degrees from the
+ground to the hitch resulting in a vertical down load of 208 pounds and a draft load of
+1180 pounds. This test was designed to simulate the loading conditions that would occur
+from towing a small trailer or the removal of a stuck vehicle. The test resulted in the
+suspension compressing half of an inch with no other measureable deflection of the
+bumper itself. See Figure 55 thru Figure 57 for images of the applied force test.
+
+42
+
+Figure 55. Jeep anchored at front to forklift for applied force test.
+
+Figure 56. Jeep anchored at back to dead-man via come-along.
+
+43
+
+Figure 57. Load cell installed to take force measurements.
+
+With the spare tire rack in the open position, 200 pounds was applied to the end of the
+rack tube. This force resulted in a compression of the suspension and an increased gap
+between the body and the bumper. This gap was not caused by a deflection in the bumper
+but rather from a deflection in the frame rail of the vehicle. It appears the bumper is
+stronger than the strength of the vehicle frame.
+
+44
+DISCUSSION
+A major consideration in the bumper design was strength. The bumper had to be able to
+support weight cantilevered out on the spare tire rack and a trailer hooked to the receiver.
+The vehicle manufacture lists that maximum pay load as 800 pounds and the maximum
+continuous drawbar pull as 1200 pounds. The bumper produced is capable of such loads
+although a stronger bumper may be desired for more strenuous conditions. Some factors
+that limit the strength of the current design include the material thickness and the lack of
+plating on the backside of the bumper channel at mid span. Plating was not added in this
+area to allow access to the pinning hole of the receiver tube. The tapering of the bumper
+channel at mid span can also be identified as a limiting factor because this reduces the
+area moment of inertia.
+Initial designs included a mount for a Hi-Lift jack and a rack for the storage of an ice
+chest or other equipment. Later designs eliminated a Hi-Lift mount and storage rack
+because space was limited. The jack and rack would have added more weight to the
+bumper and were not seen as extremely necessary.
+When the rack is loaded down with full Jerry (fuel) cans and a spare tire the rack slides
+into the latching shelf easily. When the Jerry (fuel) cans are empty, the rack does not
+engage with the latching shelf straight on because the reduced load causes less deflection
+of the main rack tube and therefore more force must be applied to place the rack fully
+within the latching shelf.
+The ending cost of the bumper was $384 but this did not include labor. Although this is a
+custom one-off design, in terms of productivity, to make this bumper rival similar designs
+in the market place, the cost will likely need to be reduced to be competitive.
+The overall look of the bumper is very pleasing however the paint does show some
+imperfections. These imperfections include runs and ruff surface finish. The runs are
+caused by too thin of paint or too thick off application during painting and the ruff
+surface is attributed to the fact that the bumper was painted outdoors under a tree where
+pollen and other plant debris fell upon the wet paint.
+
+45
+RECOMMENDAITONS
+To improve upon the overall strength of the bumper design thicker material could be
+used. Plating the back of the channel at mid span would help as well. A deeper or wider
+channel could also be produced. The three options listed above would increase the area
+moment of inertia and decrease the stress and deflection. Although the bumper could
+withstand larger loads, the overall max loading of the vehicle must be considered as well.
+Although the Hi-Lift Jack was not included in this design, it could replace one of the
+Jerry (fuel) can. An adapter plate could be produced that adapts the Jerry (fuel) can
+mounting holes to those of the Hi-Lift. This would decrease the amount of fuel storage
+and overall weight and increase variability. An alternative would be to build a new
+bumper with a winch that incorporates a Hi-Lift Jack mount as well.
+To prevent the variation in the alignment of the rack tube within the latching shelf, a
+thicker walled tube or taller tube could be used to increase the area moment of inertia and
+decrease the deflection. Although the rack will engage with the latching shelf under all
+conditions, it would be nice for the rack to simply glide into place rather than forcedly
+pushing it so.
+To decrease cost and increase productivity if this bumper were to be massed produced,
+plasma cutting all parts to exact dimensions as well as setting up for mass production
+runs with equipment designed for such would significantly reduce the amount of labor
+involved with producing such a product. Fixtures and templates could be made allowing
+for swift and accurate production.
+To improve the finish quality of the paint, it is recommended that more attention to detail
+be paid to the thinning of the paint. This will decrease the occurrence of paint runs.
+Additionally, painting in a paint booth out of the elements would allow for a smoother,
+more professional finish. To improve upon the overall appearance of the bumper, powder
+coating should be considered. Although the cost increases, the labor time decreases and
+the finish quality increases.
+
+46
+REFERENCES
+
+4Wheel Drive Hardware. 2015. 4WD. 4Wheel Drive Hardware. Fall 2015.
+4x4 Group Buy. 2016. Rock Hard TJ,LJ,YJ,CJ Rear Bumper and Tire Carrier
+(Unfinished). < http://www.4x4groupbuy.com/store/rock-hard-tjljyjcj-rear-bumper-tirecarrier-unfinished-p-6343.html>. November 19, 2015.
+AISC. 2011. Steel Construction Manual. AISC. Volume 14
+Allpar. 2000. Austin, Bantam, and Willys: Birth of the Jeep.
+<http://www.allpar.com/history/bantam-jeep.html>. November 19, 2015
+American Welding Society, 2014, D8.8M:2014 Specification For Automotive Weld
+Quality Arc-welding of Steel, AWS
+Budynas, R.G. and J.K. Nisbett. 2008. Mechanical Engineering Design, McGraw Hill
+Cordell, K.H., C. Betz, M.J. Bowker, D.B. English, S.H. Mou, J.C. Bergstrom, J.R.
+Teasley, M.A. Tarrant, and J. Loomis. 1999. Outdoor recreation in American life: a
+national assessment of demand and supply trends. Sagamore Publishing. Champaign,
+IL, 449 p.
+Do It Yourself. 2015. Carbon Fiber Bumper: Pros and Cons
+<http://www.doityourself.com/stry/carbon-fiber-bumper-pros-and-cons#b>. November
+19, 2015
+Evans, W.J. and Haddad, C. 1983. Select Strength Steel Bumper System. SAE Technical
+Paper Series 830397
+F150. 2015. Ford.
+<http://www.ford.com/trucks/f150/?searchid=199279626|14984241426|76911479946|&e
+f_id=UnxlvwAAAKSGG5A@:20151119072213:s>. November 19, 2015
+G503 Military Vehicle Message Forums. 2007. 44 MB – 352520 – USN 133442. Ron
+Fitzpatrick Jeep Parts.
+<http://www.surfacezero.com/g503/data/500/medium/Frame_painted_01-2004_004.jpg>. April 30, 2016
+‘Jeep’ Universal. 1965. Service Manual. Original Reproductions, LLC
+King, D.J., Siegmund, G.P. and Bailey, M.N. 1993. Automobile bumper behavior in lowspeed impact. SAE Technical Paper Series. 930211
+
+47
+McCormick, S.A. 1991. Automotive Bumper System Design. American Society of
+Mechanical Engineers 91, 1-7 p.
+National Highway Traffic Safety Administration. 2015. Bumper Questions and Answers.
+<http://www.nhtsa.gov/cars/problems/studies/bumper/index.html>. October 28, 2015.
+Rugged Ridge. 2015. Spartacus Bumper Kits. <
+http://www.ruggedridge.com/blog/tag/bumper/>. November 19, 2015
+Ryerson data book. 1975. Steel and Aluminum Data Book. Joseph T. Ryerson & Son,
+INC
+Top Speed. 2011. 2011 Aston Martin V8 Vantage S.
+<http://www.topspeed.com/cars/aston-martin/2011-aston-martin-v8-vantage-sar104049.html>. November 19, 2015
+Toyota. 2015. Toyota 4Runner. <www.toyota-4runner.org>. November 19, 2015
+U.S. Department of Transportation, Naational Highway Traffic Safety Administration.
+1990. Laboratory Test Procedure for Regulation Part 581 Bumper Standard.
+Under Cover Fabworks. 2015. Aluminum Jeep Bumer. <www.undercoverfab.com>.
+November 19, 2015
+Defty, M. 2012. Design, Fabrication, and Cost Analysis of a Rear Bumper with a
+Swinging Spare Tire Rack. BioResource and Agricultural Engineering Department,
+California Polytechnic State University, San Luis Obispo, CA.
+
+48
+
+APPENDIX A – How this Project Meets Requirements for the BRAE Major
+
+49
+
+Major Design Experience
+The BRAE senior project must incorporate a major design experience. Design is the
+process of devising a system, component, or process to meet specific needs. The design
+process typically includes fundamental elements as outlined below. This project
+addresses these issues as follows.
+Establishment of Objectives and Criteria. Project objectives and criteria are
+established to meet the needs and expectations of the owner as well as meet the
+regulations and laws put out by the National Highway Traffic Safety Administration
+(NHTSA) and Department of Transportation (DOT). See Design Parameters and
+Constraints below for specific objectives and criteria for the project.
+Synthesis and Analysis. The project incorporates bending stress and displacement
+calculations of the main bumper member design, and the consideration of alternative
+materials and designs.
+Construction, Testing and Evaluation. The bumper was designed, constructed and
+evaluated under varying conditions.
+Incorporation of Applicable Engineering Standards. The project utilizes AISC
+standards for allowable bending stresses and National Highway Traffic Safety
+Administration regulations for license plate and taillight locations and bumper strength.
+Capstone Design Experience
+The BRAE senior project is an engineering design project based on the knowledge and
+skills acquired in earlier coursework (Major, Support and/or GE courses). This project
+incorporated knowledge/ skills from these key courses.
+ BRAE 129 Lab Skills/Safety
+ BRAE 133 Engineering Graphics/Drafting
+ BRAE 151 AutoCAD
+ BRAE 152 SolidWorks
+ BRAE 234 Mechanical Systems
+ BRAE 421/422 Equipment Engineering
+ ME 211/212 Engineering Statics/Dynamics
+ CE 204/207 Strength of Materials
+ ENGL 149 Technical Writing
+Design Parameters and Constraints
+This project addresses the categories and constraints listed below.
+Physical. The bumper was required to mount directly to the vehicle, incorporate a spare
+tire mount for a 29 inch tire that allowed for the use of the vehicle’s tailgate and allowed
+
+50
+for the mounting of “Jerry (fuel) cans,” a “Hi-Lift” jack and have a hitch receiver. The
+completed bumper is bolted directly to the frame of the vehicle, accommodates Jerry cans
+and a 31 inch tire. The design did not accommodate a Hi-Lift jack mount. The bumper
+spans the width of the vehicle and does not protrude passed or rub on the body of the
+vehicle.
+Economic. The cost of project was to not greatly exceed $500. The total cost of the
+project excluding the cost of labor was $384.
+Environmental. Moving the spare tire to the rear of the vehicle will reduce the
+destruction of brush and shrubs when the vehicle is in use by reducing the overall width
+of the vehicle. The overall width of the vehicle is now 12 inches narrower.
+Sustainability. Modifications to this vehicle will make it more suited to the owner and
+prevent the owner from selling the old vehicle and replacing it with a new one. The
+owner has found the vehicle more useful and better suited to his needs.
+Manufacturability. Although this is a one-off design, the physical constraints of the
+design and the equipment at hand had to be considered during the design. Through use of
+a CNC plasma cutter the time required to manufacture this bumper was reduced. The
+bumper channel was also sized so it could be accommodated in a press break. If this had
+not been conducted, the channel would have had to be outsourced.
+Health and Safety. The bumper had to be designed based on restrictions and regulations
+put forth by the NHTSA and DOT for public safety both on and off-road. The bumper
+has been built to sustain a 10 mph collision per NHTSA regulations, has allocated DOT
+certified tail lights and license plate lights and lights and the license plate have been
+located for proper visibility.
+Ethical. The construction of this bumper was to employ ethical safety factors at the
+probability of increased expense to ensure that the product is safely designed. The
+bumper was design with a loading safety factor of 2.4. These calculations were conducted
+using a simply supported beam analysis and SolidWorks Fundamental Element Analysis.
+Social. The construction of this bumper may affect the construction of similar products in
+the future which could cause a surge in the market in terms of sales and employment.
+Although the bumper has been recently completed, some jeep enthusiasts have been
+interested in the design and availability of such a bumper.
+Political. The reduced destruction in wildlife by relocating the rear tire was to help ease
+the controversy between environmentalists and four-wheel drive enthusiasts. The vehicle
+is now 12 inches narrower and therefore is less destructive to wildlife along off-road
+trails. This reduction in destruction will likely improve the look of four-wheel drive
+enthusiasts in the public eye.
+
+51
+Aesthetics. The finished product was to be painted with a paint gun utilizing high quality
+black enamel. The bumper was painted with black enamel which produced a pleasing
+look.
+Other – Design. The design must allow for easy access to the rear tailgate by employing
+a hinge and latching system. The bumper incorporated a rear rack to which the spare tire
+was mounted. The rack is capable of swinging 122 degrees which allows access to the
+tailgate.
+
+52
+APPENDIX B – Design Calculations and SolidWorks FEA Reports
+
+53
+GIVEN: The bumper pictured below:
+
+
+
+
+
+
+
+Distance between frame rails: 30 in.
+Assume small channel dimensions only for analysis
+Hot rolled mild steel
+σYield = 36,000 psi
+𝜎Allowable =15,000 psi
+𝐸 = 29,000,000 𝑝𝑠𝑖
+
+REQUIRED:
+a) Find the maximum and allowable loads, P.
+b) Find the maximum deflection, x.
+SOLUTION:
+a)
+𝜎=
+
+𝑀∗𝑐
+𝐼
+
+𝑃∗𝐿
+( 4 )𝑐
+𝜎=
+𝐼
+
+54
+
+𝐼=
+
+𝐼=
+
+𝐵𝐻3 𝑏ℎ3
+−
+12
+12
+
+(4.00𝑖𝑛. )(3.27𝑖𝑛.3 ) (3.865𝑖𝑛. )(3.00𝑖𝑛. )3
+−
+12
+12
+𝐼 = 2.96𝑖𝑛.4
+
+𝑃∗𝐿
+( 4 )𝑐
+𝜎=
+𝐼
+𝑃=
+
+4𝜎 ∗ 𝐼
+𝑐∗𝐿
+
+𝑃𝑀𝑎𝑥 =
+
+36,000𝑝𝑠𝑖 ∗ 2.96𝑖𝑛.4
+1.635𝑖𝑛.∗ 30𝑖𝑛.
+
+𝑷𝑴𝒂𝒙 = 𝟐𝟐𝟎𝟎 𝒍𝒃
+
+𝑃𝐴𝑙𝑙𝑜𝑤
+
+15,000𝑝𝑠𝑖 ∗ 2.96𝑖𝑛.4
+=
+1.635𝑖𝑛.∗ 30𝑖𝑛.
+
+𝑷𝑨𝒍𝒍𝒐𝒘 = 𝟗𝟎𝟎 𝒍𝒃
+
+b)
+𝑃𝐿3
+𝑥=
+48𝐸𝐼
+900𝑙𝑏.∗ 30𝑖𝑛.3
+𝑥=
+48 ∗ 29,000,000𝑝𝑠𝑖 ∗ 2.96𝑖𝑛.4
+𝒙 = 𝟎. 𝟎𝟎𝟔𝒊𝒏.
+
+Simulation of Bumper
+for Simulation
+Date: Tuesday, May 10, 2016
+Designer: Solidworks
+Study name: 900 Lb Load
+Analysis type: Static
+
+Table of Contents
+
+Description
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Description
+
+1
+
+Assumptions
+
+2
+
+Model Information
+
+2
+
+Study Properties
+
+3
+
+Units
+
+4
+
+Material Properties
+
+4
+
+Loads and Fixtures
+
+5
+
+Connector Definitions
+
+5
+
+Contact Information
+
+6
+
+Mesh information
+
+7
+
+Sensor Details
+
+8
+
+Resultant Forces
+
+9
+
+Beams
+
+9
+
+Study Results
+
+10
+
+Conclusion
+
+12
+
+Simulation of Bumper for Simulation
+
+1
+
+Assumptions
+
+Model Information
+
+Model name: Bumper for Simulation
+Current Configuration: Default
+
+Solid Bodies
+Document Name and
+Reference
+
+Treated As
+
+Analyzed with SOLIDWORKS Simulation
+
+Volumetric Properties
+
+Document Path/Date
+Modified
+
+Simulation of Bumper for Simulation
+
+2
+
+Boss-Extrude7
+
+Solid Body
+
+Mass:19.9459 kg
+Volume:0.00255716 m^3
+Density:7800 kg/m^3
+Weight:195.47 N
+
+E:\Senior
+Project\SolidWorks\Bump
+er\Bumper for
+Simulation.SLDPRT
+May 09 12:01:20 2016
+
+Study Properties
+Study name
+
+900 Lb Load
+
+Analysis type
+
+Static
+
+Mesh type
+
+Solid Mesh
+
+Thermal Effect:
+
+On
+
+Thermal option
+
+Include temperature loads
+
+Zero strain temperature
+
+298 Kelvin
+
+Include fluid pressure effects from SOLIDWORKS
+Flow Simulation
+Solver type
+
+Off
+
+Inplane Effect:
+
+Off
+
+Soft Spring:
+
+Off
+
+Inertial Relief:
+
+Off
+
+Incompatible bonding options
+
+Automatic
+
+Large displacement
+
+Off
+
+Compute free body forces
+
+On
+
+Friction
+
+Off
+
+Use Adaptive Method:
+
+Off
+
+Result folder
+
+SOLIDWORKS document (E:\Senior
+Project\SolidWorks\Bumper)
+
+Analyzed with SOLIDWORKS Simulation
+
+FFEPlus
+
+Simulation of Bumper for Simulation
+
+3
+
+Units
+Unit system:
+
+SI (MKS)
+
+Length/Displacement
+
+mm
+
+Temperature
+
+Kelvin
+
+Angular velocity
+
+Rad/sec
+
+Pressure/Stress
+
+N/m^2
+
+Material Properties
+Model Reference
+
+Properties
+Name:
+Model type:
+Default failure
+criterion:
+Yield strength:
+Tensile strength:
+Elastic modulus:
+Poisson's ratio:
+Mass density:
+Shear modulus:
+Thermal expansion
+coefficient:
+
+Components
+
+Plain Carbon Steel
+Linear Elastic Isotropic
+Unknown
+
+SolidBody 1(BossExtrude7)(Bumper for
+Simulation)
+
+2.20594e+008 N/m^2
+3.99826e+008 N/m^2
+2.1e+011N/m^2
+0.28
+7800 kg/m^3
+7.9e+010 N/m^2
+1.3e-005 /Kelvin
+
+Curve Data:N/A
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+4
+
+Loads and Fixtures
+Fixture name
+
+Fixture Image
+
+Fixture Details
+Entities: 2 face(s)
+Type: Fixed Geometry
+
+Fixed-1
+
+Resultant Forces
+Components
+Reaction force(N)
+Reaction Moment(N.m)
+
+Load name
+
+X
+-1.4224
+0
+
+Load Image
+
+Y
+4006.17
+0
+
+Z
+-1.18777
+0
+
+Resultant
+4006.17
+0
+
+Load Details
+Entities: 1 face(s)
+Type: Apply normal force
+Value: 900 lbf
+
+Force-1
+
+Connector Definitions
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+5
+
+Contact Information
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+6
+
+Mesh information
+Mesh type
+
+Solid Mesh
+
+Mesher Used:
+
+Standard mesh
+
+Automatic Transition:
+
+Off
+
+Include Mesh Auto Loops:
+
+Off
+
+Jacobian points
+
+4 Points
+
+Element Size
+
+0.927526 in
+
+Tolerance
+
+0.0463763 in
+
+Mesh Quality
+
+High
+
+Mesh information - Details
+Total Nodes
+
+16748
+
+Total Elements
+
+8370
+
+Maximum Aspect Ratio
+
+31.096
+
+% of elements with Aspect Ratio < 3
+
+0.765
+
+% of elements with Aspect Ratio > 10
+
+2.19
+
+% of distorted elements(Jacobian)
+
+0
+
+Time to complete mesh(hh;mm;ss):
+
+00:00:10
+
+Computer name:
+
+CAFES-8A-3C-07
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+7
+
+Sensor Details
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+8
+
+Resultant Forces
+Reaction forces
+Selection set
+
+Units
+
+Sum X
+
+Sum Y
+
+Sum Z
+
+Resultant
+
+Entire Model
+
+N
+
+-1.4224
+
+4006.17
+
+-1.18777
+
+4006.17
+
+Reaction Moments
+Selection set
+
+Units
+
+Sum X
+
+Sum Y
+
+Sum Z
+
+Resultant
+
+Entire Model
+
+N.m
+
+0
+
+0
+
+0
+
+0
+
+Beams
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+9
+
+Study Results
+Name
+
+Type
+
+Min
+
+Max
+
+Stress1
+
+VON: von Mises Stress
+
+6.66967 psi
+Node: 13127
+
+12027.7 psi
+Node: 15979
+
+Bumper for Simulation-900 Lb Load-Stress-Stress1
+
+Name
+
+Type
+
+Min
+
+Max
+
+Displacement1
+
+URES: Resultant Displacement
+
+0 in
+Node: 17
+
+0.013813 in
+Node: 920
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+10
+
+Bumper for Simulation-900 Lb Load-Displacement-Displacement1
+
+Name
+
+Type
+
+Min
+
+Max
+
+Strain1
+
+ESTRN: Equivalent Strain
+
+1.48315e-007
+Element: 7224
+
+0.000306519
+Element: 6598
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+11
+
+Bumper for Simulation-900 Lb Load-Strain-Strain1
+
+Conclusion
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+12
+
+Simulation of Bumper
+for Simulation
+Date: Monday, May 09, 2016
+Designer: Solidworks
+Study name: 1000 Lb Draft
+Analysis type: Static
+
+Table of Contents
+
+Description
+No Data
+
+Description
+
+1
+
+Assumptions
+
+2
+
+Model Information
+
+2
+
+Study Properties
+
+3
+
+Units
+
+3
+
+Material Properties
+
+4
+
+Loads and Fixtures
+
+4
+
+Connector Definitions
+
+5
+
+Contact Information
+
+5
+
+Mesh information
+
+6
+
+Sensor Details
+
+7
+
+Resultant Forces
+
+7
+
+Beams
+
+7
+
+Study Results
+
+8
+
+Conclusion
+
+Analyzed with SOLIDWORKS Simulation
+
+11
+
+Simulation of Bumper for Simulation
+
+1
+
+Assumptions
+
+Model Information
+
+Model name: Bumper for Simulation
+Current Configuration: Default
+
+Solid Bodies
+Document Name and
+Reference
+Boss-Extrude7
+
+Treated As
+
+Solid Body
+
+Analyzed with SOLIDWORKS Simulation
+
+Volumetric Properties
+
+Document Path/Date
+Modified
+
+Mass:19.9459 kg
+Volume:0.00255716 m^3
+Density:7800 kg/m^3
+Weight:195.47 N
+
+E:\Senior
+Project\SolidWorks\Bump
+er\Bumper for
+Simulation.SLDPRT
+May 02 16:20:24 2016
+
+Simulation of Bumper for Simulation
+
+2
+
+Study Properties
+Study name
+
+1000 Lb Draft
+
+Analysis type
+
+Static
+
+Mesh type
+
+Solid Mesh
+
+Thermal Effect:
+
+On
+
+Thermal option
+
+Include temperature loads
+
+Zero strain temperature
+
+298 Kelvin
+
+Include fluid pressure effects from SOLIDWORKS
+Flow Simulation
+Solver type
+
+Off
+
+Inplane Effect:
+
+Off
+
+Soft Spring:
+
+Off
+
+Inertial Relief:
+
+Off
+
+Incompatible bonding options
+
+Automatic
+
+Large displacement
+
+Off
+
+Compute free body forces
+
+On
+
+Friction
+
+Off
+
+Use Adaptive Method:
+
+Off
+
+Result folder
+
+SOLIDWORKS document (E:\Senior
+Project\SolidWorks\Bumper)
+
+FFEPlus
+
+Units
+Unit system:
+
+SI (MKS)
+
+Length/Displacement
+
+mm
+
+Temperature
+
+Kelvin
+
+Angular velocity
+
+Rad/sec
+
+Pressure/Stress
+
+N/m^2
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+3
+
+Material Properties
+Model Reference
+
+Properties
+Name:
+Model type:
+Default failure
+criterion:
+Yield strength:
+Tensile strength:
+Elastic modulus:
+Poisson's ratio:
+Mass density:
+Shear modulus:
+Thermal expansion
+coefficient:
+
+Components
+
+Plain Carbon Steel
+Linear Elastic Isotropic
+Unknown
+
+SolidBody 1(BossExtrude7)(Bumper for
+Simulation)
+
+2.20594e+008 N/m^2
+3.99826e+008 N/m^2
+2.1e+011N/m^2
+0.28
+7800 kg/m^3
+7.9e+010 N/m^2
+1.3e-005 /Kelvin
+
+Curve Data:N/A
+
+Loads and Fixtures
+Fixture name
+
+Fixture Image
+
+Fixture Details
+Entities: 2 face(s)
+Type: Fixed Geometry
+
+Fixed-1
+
+Resultant Forces
+Components
+Reaction force(N)
+Reaction Moment(N.m)
+
+Load name
+
+X
+0.525146
+0
+
+Load Image
+
+Y
+-0.193918
+0
+
+Z
+4394.35
+0
+
+Resultant
+4394.35
+0
+
+Load Details
+Entities: 1 face(s)
+Type: Apply normal force
+Value: -1000 lbf
+
+Force-1
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+4
+
+Connector Definitions
+No Data
+
+Contact Information
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+5
+
+Mesh information
+Mesh type
+
+Solid Mesh
+
+Mesher Used:
+
+Standard mesh
+
+Automatic Transition:
+
+Off
+
+Include Mesh Auto Loops:
+
+Off
+
+Jacobian points
+
+4 Points
+
+Element Size
+
+0.927526 in
+
+Tolerance
+
+0.0463763 in
+
+Mesh Quality
+
+High
+
+Mesh information - Details
+Total Nodes
+
+16748
+
+Total Elements
+
+8370
+
+Maximum Aspect Ratio
+
+31.096
+
+% of elements with Aspect Ratio < 3
+
+0.765
+
+% of elements with Aspect Ratio > 10
+
+2.19
+
+% of distorted elements(Jacobian)
+
+0
+
+Time to complete mesh(hh;mm;ss):
+
+00:00:05
+
+Computer name:
+
+CAFES-8A-4C-13
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+6
+
+Sensor Details
+No Data
+
+Resultant Forces
+Reaction forces
+Selection set
+
+Units
+
+Sum X
+
+Sum Y
+
+Sum Z
+
+Resultant
+
+Entire Model
+
+N
+
+0.525146
+
+-0.193918
+
+4394.35
+
+4394.35
+
+Reaction Moments
+Selection set
+
+Units
+
+Sum X
+
+Sum Y
+
+Sum Z
+
+Resultant
+
+Entire Model
+
+N.m
+
+0
+
+0
+
+0
+
+0
+
+Beams
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+7
+
+Study Results
+Name
+
+Type
+
+Min
+
+Max
+
+Stress1
+
+VON: von Mises Stress
+
+2.3853 psi
+Node: 13127
+
+7252.26 psi
+Node: 2117
+
+Bumper for Simulation-1000 Lb Draft-Stress-Stress1
+
+Name
+
+Type
+
+Min
+
+Max
+
+Displacement1
+
+URES: Resultant Displacement
+
+0 in
+Node: 856
+
+0.0050696 in
+Node: 904
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+8
+
+Bumper for Simulation-1000 Lb Draft-Displacement-Displacement1
+
+Name
+
+Type
+
+Min
+
+Max
+
+Strain1
+
+ESTRN: Equivalent Strain
+
+5.6713e-008
+Element: 6113
+
+0.000176684
+Element: 6598
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+9
+
+Bumper for Simulation-1000 Lb Draft-Strain-Strain1
+
+Name
+
+Type
+
+Displacement1{1}
+
+Deformed shape
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+10
+
+Bumper for Simulation-1000 Lb Draft-Displacement-Displacement1{1}
+
+Conclusion
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Bumper for Simulation
+
+11
+
+Simulation of Frame
+Bracket for Simulation
+Date: Monday, May 09, 2016
+Designer: Solidworks
+Study name: 1000 LB Draft
+Analysis type: Static
+
+Table of Contents
+
+Description
+No Data
+
+Description
+
+1
+
+Assumptions
+
+2
+
+Model Information
+
+2
+
+Study Properties
+
+3
+
+Units
+
+3
+
+Material Properties
+
+4
+
+Loads and Fixtures
+
+4
+
+Connector Definitions
+
+5
+
+Contact Information
+
+5
+
+Mesh information
+
+6
+
+Sensor Details
+
+7
+
+Resultant Forces
+
+7
+
+Beams
+
+7
+
+Study Results
+
+8
+
+Conclusion
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+10
+
+1
+
+Assumptions
+
+Model Information
+
+Model name: Frame Bracket for Simulation
+Current Configuration: Default
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+2
+
+Study Properties
+Study name
+
+1000 LB Draft
+
+Analysis type
+
+Static
+
+Mesh type
+
+Shell Mesh Using Mid-surfaces
+
+Thermal Effect:
+
+On
+
+Thermal option
+
+Include temperature loads
+
+Zero strain temperature
+
+298 Kelvin
+
+Include fluid pressure effects from SOLIDWORKS
+Flow Simulation
+Solver type
+
+Off
+
+Inplane Effect:
+
+Off
+
+Soft Spring:
+
+Off
+
+Inertial Relief:
+
+Off
+
+Incompatible bonding options
+
+Automatic
+
+Large displacement
+
+Off
+
+Compute free body forces
+
+On
+
+Friction
+
+Off
+
+Use Adaptive Method:
+
+Off
+
+Result folder
+
+SOLIDWORKS document (E:\Senior
+Project\SolidWorks\Bumper)
+
+FFEPlus
+
+Units
+Unit system:
+
+SI (MKS)
+
+Length/Displacement
+
+mm
+
+Temperature
+
+Kelvin
+
+Angular velocity
+
+Rad/sec
+
+Pressure/Stress
+
+N/m^2
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+3
+
+Material Properties
+Model Reference
+
+Properties
+Name:
+Model type:
+Default failure
+criterion:
+Yield strength:
+Tensile strength:
+Elastic modulus:
+Poisson's ratio:
+Mass density:
+Shear modulus:
+Thermal expansion
+coefficient:
+
+Components
+
+Plain Carbon Steel
+Linear Elastic Isotropic
+Unknown
+
+SolidBody 1(CutExtrude1)(Frame Bracket for
+Simulation)
+
+2.20594e+008 N/m^2
+3.99826e+008 N/m^2
+2.1e+011N/m^2
+0.28
+7800 kg/m^3
+7.9e+010 N/m^2
+1.3e-005 /Kelvin
+
+Curve Data:N/A
+
+Loads and Fixtures
+Fixture name
+
+Fixture Image
+
+Fixture Details
+Entities: 2 face(s)
+Type: Fixed Geometry
+
+Fixed-1
+
+Resultant Forces
+Components
+Reaction force(N)
+Reaction Moment(N.m)
+
+Load name
+
+X
+2224.12
+4.51765e-033
+
+Load Image
+
+Y
+0.00139618
+2.19702e-032
+
+Z
+-5.44928e-030
+2.2063e-006
+
+Resultant
+2224.12
+2.2063e-006
+
+Load Details
+Entities: 1 face(s)
+Type: Apply normal force
+Value: -500 lbf
+
+Force-1
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+4
+
+Connector Definitions
+No Data
+
+Contact Information
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+5
+
+Mesh information
+Mesh type
+
+Shell Mesh Using Mid-surfaces
+
+Mesher Used:
+
+Standard mesh
+
+Automatic Transition:
+
+Off
+
+Include Mesh Auto Loops:
+
+Off
+
+Jacobian points
+
+4 Points
+
+Element Size
+
+0.266668 in
+
+Tolerance
+
+0.0133334 in
+
+Mesh Quality
+
+High
+
+Mesh information - Details
+Total Nodes
+
+2441
+
+Total Elements
+
+1150
+
+Time to complete mesh(hh;mm;ss):
+
+00:00:04
+
+Computer name:
+
+CAFES-8A-4C-13
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+6
+
+Sensor Details
+No Data
+
+Resultant Forces
+Reaction forces
+Selection set
+
+Units
+
+Sum X
+
+Sum Y
+
+Sum Z
+
+Resultant
+
+Entire Model
+
+N
+
+2224.12
+
+0.00139618
+
+-5.44928e-030
+
+2224.12
+
+Reaction Moments
+Selection set
+
+Units
+
+Sum X
+
+Sum Y
+
+Sum Z
+
+Resultant
+
+Entire Model
+
+N.m
+
+4.51765e-033
+
+2.19702e-032
+
+2.2063e-006
+
+2.2063e-006
+
+Beams
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+7
+
+Study Results
+Name
+
+Type
+
+Min
+
+Max
+
+Stress1
+
+VON: von Mises Stress
+
+0.046321 psi
+Node: 119
+
+3968.92 psi
+Node: 140
+
+Frame Bracket for Simulation-1000 LB Draft-Stress-Stress1
+
+Name
+
+Type
+
+Min
+
+Max
+
+Displacement1
+
+URES: Resultant Displacement
+
+0 in
+Node: 1
+
+0.000243532 in
+Node: 2245
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+8
+
+Frame Bracket for Simulation-1000 LB Draft-Displacement-Displacement1
+
+Name
+
+Type
+
+Min
+
+Max
+
+Strain1
+
+ESTRN: Equivalent Strain
+
+9.49706e-009
+Element: 805
+
+8.7765e-005
+Element: 59
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+9
+
+Frame Bracket for Simulation-1000 LB Draft-Strain-Strain1
+
+Conclusion
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+10
+
+Simulation of Frame
+Bracket for Simulation
+Date: Monday, May 09, 2016
+Designer: Solidworks
+Study name: 1000 LB Load
+Analysis type: Static
+
+Table of Contents
+
+Description
+No Data
+
+Description
+
+1
+
+Assumptions
+
+2
+
+Model Information
+
+2
+
+Study Properties
+
+3
+
+Units
+
+3
+
+Material Properties
+
+4
+
+Loads and Fixtures
+
+4
+
+Connector Definitions
+
+5
+
+Contact Information
+
+5
+
+Mesh information
+
+6
+
+Sensor Details
+
+7
+
+Resultant Forces
+
+7
+
+Beams
+
+7
+
+Study Results
+
+8
+
+Conclusion
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+10
+
+1
+
+Assumptions
+
+Model Information
+
+Model name: Frame Bracket for Simulation
+Current Configuration: Default
+
+Solid Bodies
+Document Name and
+Reference
+Cut-Extrude1
+
+Treated As
+
+Solid Body
+
+Analyzed with SOLIDWORKS Simulation
+
+Volumetric Properties
+
+Document Path/Date
+Modified
+
+Mass:1.28376 kg
+Volume:0.000164585 m^3
+Density:7800 kg/m^3
+Weight:12.5809 N
+
+E:\Senior
+Project\SolidWorks\Bump
+er\Frame Bracket for
+Simulation.SLDPRT
+May 09 10:58:08 2016
+
+Simulation of Frame Bracket for Simulation
+
+2
+
+Study Properties
+Study name
+
+1000 LB Load
+
+Analysis type
+
+Static
+
+Mesh type
+
+Solid Mesh
+
+Thermal Effect:
+
+On
+
+Thermal option
+
+Include temperature loads
+
+Zero strain temperature
+
+298 Kelvin
+
+Include fluid pressure effects from SOLIDWORKS
+Flow Simulation
+Solver type
+
+Off
+
+Inplane Effect:
+
+Off
+
+Soft Spring:
+
+Off
+
+Inertial Relief:
+
+Off
+
+Incompatible bonding options
+
+Automatic
+
+Large displacement
+
+Off
+
+Compute free body forces
+
+On
+
+Friction
+
+Off
+
+Use Adaptive Method:
+
+Off
+
+Result folder
+
+SOLIDWORKS document (E:\Senior
+Project\SolidWorks\Bumper)
+
+FFEPlus
+
+Units
+Unit system:
+
+SI (MKS)
+
+Length/Displacement
+
+mm
+
+Temperature
+
+Kelvin
+
+Angular velocity
+
+Rad/sec
+
+Pressure/Stress
+
+N/m^2
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+3
+
+Material Properties
+Model Reference
+
+Properties
+Name:
+Model type:
+Default failure
+criterion:
+Yield strength:
+Tensile strength:
+Elastic modulus:
+Poisson's ratio:
+Mass density:
+Shear modulus:
+Thermal expansion
+coefficient:
+
+Components
+
+Plain Carbon Steel
+Linear Elastic Isotropic
+Unknown
+
+SolidBody 1(CutExtrude1)(Frame Bracket for
+Simulation)
+
+2.20594e+008 N/m^2
+3.99826e+008 N/m^2
+2.1e+011N/m^2
+0.28
+7800 kg/m^3
+7.9e+010 N/m^2
+1.3e-005 /Kelvin
+
+Curve Data:N/A
+
+Loads and Fixtures
+Fixture name
+
+Fixture Image
+
+Fixture Details
+Entities: 2 face(s)
+Type: Fixed Geometry
+
+Fixed-1
+
+Resultant Forces
+Components
+Reaction force(N)
+Reaction Moment(N.m)
+
+Load name
+
+X
+0.125763
+0
+
+Load Image
+
+Y
+2223.88
+0
+
+Z
+0.0513856
+0
+
+Resultant
+2223.88
+0
+
+Load Details
+Entities: 1 face(s)
+Type: Apply normal force
+Value: 500 lbf
+
+Force-1
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+4
+
+Connector Definitions
+No Data
+
+Contact Information
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+5
+
+Mesh information
+Mesh type
+
+Solid Mesh
+
+Mesher Used:
+
+Standard mesh
+
+Automatic Transition:
+
+Off
+
+Include Mesh Auto Loops:
+
+Off
+
+Jacobian points
+
+4 Points
+
+Element Size
+
+0.215819 in
+
+Tolerance
+
+0.0107909 in
+
+Mesh Quality
+
+High
+
+Mesh information - Details
+Total Nodes
+
+16999
+
+Total Elements
+
+9736
+
+Maximum Aspect Ratio
+
+7.094
+
+% of elements with Aspect Ratio < 3
+
+99.8
+
+% of elements with Aspect Ratio > 10
+
+0
+
+% of distorted elements(Jacobian)
+
+0
+
+Time to complete mesh(hh;mm;ss):
+
+00:00:08
+
+Computer name:
+
+CAFES-8A-4C-13
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+6
+
+Sensor Details
+No Data
+
+Resultant Forces
+Reaction forces
+Selection set
+
+Units
+
+Sum X
+
+Sum Y
+
+Sum Z
+
+Resultant
+
+Entire Model
+
+N
+
+0.125763
+
+2223.88
+
+0.0513856
+
+2223.88
+
+Reaction Moments
+Selection set
+
+Units
+
+Sum X
+
+Sum Y
+
+Sum Z
+
+Resultant
+
+Entire Model
+
+N.m
+
+0
+
+0
+
+0
+
+0
+
+Beams
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+7
+
+Study Results
+Name
+
+Type
+
+Min
+
+Max
+
+Stress1
+
+VON: von Mises Stress
+
+0.182865 psi
+Node: 3982
+
+25101.3 psi
+Node: 1122
+
+Frame Bracket for Simulation-1000 LB Load-Stress-Stress1
+
+Name
+
+Type
+
+Min
+
+Max
+
+Displacement1
+
+URES: Resultant Displacement
+
+0 in
+Node: 16
+
+0.00518173 in
+Node: 9274
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+8
+
+Frame Bracket for Simulation-1000 LB Load-Displacement-Displacement1
+
+Name
+
+Type
+
+Min
+
+Max
+
+Strain1
+
+ESTRN: Equivalent Strain
+
+8.04025e-009
+Element: 4605
+
+0.000687159
+Element: 3473
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+9
+
+Frame Bracket for Simulation-1000 LB Load-Strain-Strain1
+
+Name
+
+Type
+
+Displacement1{1}
+
+Deformed shape
+
+Frame Bracket for Simulation-1000 LB Load-Displacement-Displacement1{1}
+
+Conclusion
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Frame Bracket for Simulation
+
+10
+
+Simulation of Spindle
+for Simulation
+Date: Monday, May 09, 2016
+Designer: Solidworks
+Study name: 10000 In-Lb
+Analysis type: Static
+
+Table of Contents
+
+Description
+No Data
+
+Description
+
+1
+
+Assumptions
+
+2
+
+Model Information
+
+2
+
+Study Properties
+
+3
+
+Units
+
+3
+
+Material Properties
+
+4
+
+Loads and Fixtures
+
+4
+
+Connector Definitions
+
+5
+
+Contact Information
+
+5
+
+Mesh information
+
+6
+
+Sensor Details
+
+7
+
+Resultant Forces
+
+7
+
+Beams
+
+7
+
+Study Results
+
+8
+
+Conclusion
+
+Analyzed with SOLIDWORKS Simulation
+
+10
+
+Simulation of Spindle for Simulation
+
+1
+
+Assumptions
+
+Model Information
+
+Model name: Spindle for Simulation
+Current Configuration: 91257A998
+
+Solid Bodies
+Document Name and
+Reference
+Cut-Extrude18
+
+Treated As
+
+Volumetric Properties
+
+Solid Body
+
+Mass:0.569187 kg
+Volume:7.29727e-005 m^3
+Density:7800 kg/m^3
+Weight:5.57803 N
+
+Analyzed with SOLIDWORKS Simulation
+
+Document Path/Date
+Modified
+E:\Senior
+Project\SolidWorks\Bump
+er\Spindle for
+Simulation.SLDPRT
+May 09 11:52:02 2016
+
+Simulation of Spindle for Simulation
+
+2
+
+Study Properties
+Study name
+
+10000 In-Lb
+
+Analysis type
+
+Static
+
+Mesh type
+
+Solid Mesh
+
+Thermal Effect:
+
+On
+
+Thermal option
+
+Include temperature loads
+
+Zero strain temperature
+
+298 Kelvin
+
+Include fluid pressure effects from SOLIDWORKS
+Flow Simulation
+Solver type
+
+Off
+
+Inplane Effect:
+
+Off
+
+Soft Spring:
+
+Off
+
+Inertial Relief:
+
+Off
+
+Incompatible bonding options
+
+Automatic
+
+Large displacement
+
+Off
+
+Compute free body forces
+
+On
+
+Friction
+
+Off
+
+Use Adaptive Method:
+
+Off
+
+Result folder
+
+SOLIDWORKS document (E:\Senior
+Project\SolidWorks\Bumper)
+
+FFEPlus
+
+Units
+Unit system:
+
+SI (MKS)
+
+Length/Displacement
+
+mm
+
+Temperature
+
+Kelvin
+
+Angular velocity
+
+Rad/sec
+
+Pressure/Stress
+
+N/m^2
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Spindle for Simulation
+
+3
+
+Material Properties
+Model Reference
+
+Properties
+Name:
+Model type:
+Default failure
+criterion:
+Yield strength:
+Tensile strength:
+Elastic modulus:
+Poisson's ratio:
+Mass density:
+Shear modulus:
+Thermal expansion
+coefficient:
+
+Components
+
+Plain Carbon Steel
+Linear Elastic Isotropic
+Max von Mises Stress
+
+SolidBody 1(CutExtrude18)(Spindle for
+Simulation)
+
+2.20594e+008 N/m^2
+3.99826e+008 N/m^2
+2.1e+011N/m^2
+0.28
+7800 kg/m^3
+7.9e+010 N/m^2
+1.3e-005 /Kelvin
+
+Curve Data:N/A
+
+Loads and Fixtures
+Fixture name
+
+Fixture Image
+
+Fixture Details
+Entities: 1 face(s)
+Type: Fixed Geometry
+
+Fixed-1
+
+Resultant Forces
+Components
+Reaction force(N)
+Reaction Moment(N.m)
+
+Load name
+
+X
+202.999
+0
+
+Load Image
+
+Y
+-172.291
+0
+
+Z
+1.42664
+0
+
+Resultant
+266.261
+0
+
+Load Details
+Entities: 2 face(s)
+Type: Apply normal force
+Value: 6700 lbf
+
+Force-1
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Spindle for Simulation
+
+4
+
+Connector Definitions
+No Data
+
+Contact Information
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Spindle for Simulation
+
+5
+
+Mesh information
+Mesh type
+
+Solid Mesh
+
+Mesher Used:
+
+Curvature based mesh
+
+Jacobian points
+
+4 Points
+
+Maximum element size
+
+0 in
+
+Minimum element size
+
+0 in
+
+Mesh Quality
+
+High
+
+Mesh information - Details
+Total Nodes
+
+26676
+
+Total Elements
+
+16984
+
+Maximum Aspect Ratio
+
+53.648
+
+% of elements with Aspect Ratio < 3
+
+79.9
+
+% of elements with Aspect Ratio > 10
+
+10.4
+
+% of distorted elements(Jacobian)
+
+0
+
+Time to complete mesh(hh;mm;ss):
+
+00:00:12
+
+Computer name:
+
+CAFES-8A-4C-13
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Spindle for Simulation
+
+6
+
+Sensor Details
+No Data
+
+Resultant Forces
+Reaction forces
+Selection set
+
+Units
+
+Sum X
+
+Sum Y
+
+Sum Z
+
+Resultant
+
+Entire Model
+
+N
+
+202.999
+
+-172.291
+
+1.42664
+
+266.261
+
+Reaction Moments
+Selection set
+
+Units
+
+Sum X
+
+Sum Y
+
+Sum Z
+
+Resultant
+
+Entire Model
+
+N.m
+
+0
+
+0
+
+0
+
+0
+
+Beams
+No Data
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Spindle for Simulation
+
+7
+
+Study Results
+Name
+
+Type
+
+Min
+
+Max
+
+Stress1
+
+VON: von Mises Stress
+
+3.08359 psi
+Node: 18027
+
+871307 psi
+Node: 1154
+
+Spindle for Simulation-10000 In-Lb-Stress-Stress1
+
+Name
+
+Type
+
+Min
+
+Max
+
+Displacement1
+
+URES: Resultant Displacement
+
+0 in
+Node: 956
+
+0.0273917 in
+Node: 18112
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Spindle for Simulation
+
+8
+
+Spindle for Simulation-10000 In-Lb-Displacement-Displacement1
+
+Name
+
+Type
+
+Min
+
+Max
+
+Strain1
+
+ESTRN: Equivalent Strain
+
+1.35617e-007
+Element: 3348
+
+0.0163701
+Element: 10628
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Spindle for Simulation
+
+9
+
+Spindle for Simulation-10000 In-Lb-Strain-Strain1
+
+Conclusion
+
+Analyzed with SOLIDWORKS Simulation
+
+Simulation of Spindle for Simulation
+
+10
+
+55
+APPENDIX C – Bumper Parts and Assembly Drawings
+
+2
+
+1
+
+B
+
+B
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+USEDON
+
+NEXTASSY
+
+APPLICATION
+
+2
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+MAain Assembly1
+SCALE: 1:16 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+ITEMNO.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+
+PART NUMBER
+Tailgate
+Bumper, Main
+Bumper, Step
+Rack, Arm
+Rack, Arm,Cap
+Rack, Hub
+Rack, Hub,Strap
+Rack, StudPlate
+91257A748
+Rack, SpindleBushing
+Tire
+Rack, Toggle Clamp,
+Bracket
+Rack, Toggle Clamp
+91251A337
+Jerry Can mount
+Jerry Can mount offhand
+Jerry Can
+Rack, Corner Gusset,
+Large
+Rack, Corner Guesset,
+Small
+Rack, Flood Light,
+Bracket
+Rack, LockPin, Pin
+Rack, LockPin, Collar
+98296A883
+9657K293
+Rack, Wareplate
+91257A998
+2879T13
+95030A320
+6in Reciver Tube
+Rack, Spindle,Gusset
+Back Plate
+Bumper, Main, Light
+Back
+Rack, Shelf, Plate2
+
+DESCRIPTION
+
+QTY.
+1
+1
+1
+1
+1
+1
+1
+1
+3
+1
+1
+1
+1
+6
+2
+2
+2
+2
+2
+2
+1
+1
+2
+1
+1
+1
+2
+1
+1
+1
+2
+2
+1
+
+34
+35
+36
+37
+38
+39
+40
+
+41
+42
+43
+44
+45
+46
+47
+48
+
+Rack, Sheft, Plate1
+Rack, Toggle Clamp,
+Clasp
+Rack, Shelf, Plate3
+Bumper, Main,
+Gussett
+Frame Bracket
+Bumper, D-ring,Ring
+Bumper, D-ring,Weld
+Link
+Bumper Tail Light,
+Light
+Bumper, Tail Light,
+Gromet
+Rack, Flood Light,
+Bucket
+Rack, Flood Light,
+Lense
+Rack, License Plate,
+Stud Plate
+Rack, License Plate,
+Back Plate
+Rack, LicensPlate,
+Standoff
+Rack, LockPin, Ramp
+
+1
+1
+1
+2
+2
+2
+2
+
+2
+2
+2
+2
+1
+1
+1
+1
+
+2
+
+1
+
+11
+
+B
+
+17
+
+B
+
+46
+
+4
+
+44
+
+2
+
+43
+
+39
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+USEDON
+
+NEXTASSY
+
+APPLICATION
+
+2
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+MAain Assembly1.1
+SCALE: 1:16 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+14
+
+34
+
+1
+
+33
+
+41
+
+2
+
+40
+
+35
+
+B
+
+29
+
+42
+B
+
+2
+38
+
+36
+
+B
+
+39
+
+28
+
+27
+
+3
+
+32
+
+26
+48
+31
+
+37
+DETAIL B
+SCALE 1 :4
+
+A
+
+A
+
+TITLE:
+
+SIZE DWG. NO.
+
+REV
+
+MAain Assembly2
+SCALE: 1:16 WEIGHT:
+
+2
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+26
+
+B
+
+B
+
+A
+
+B
+
+A
+
+28
+
+B
+
+30
+
+27
+
+38
+
+31
+
+29
+
+SECTION A-A
+SCALE 1 :4
+
+SECTION B-B
+SCALE 1 :4
+
+2
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+MAain Assembly3
+SCALE: 1:12WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE:
+10 GAUGE HOTROLLED
+CNC PLASMACUT
+2
+
+B
+
+B
+
+57.74
+
+20.74
+
+DOWN 90° R .03
+5.09
+
+DOWN 90° R
+.03
+
+4.92
+DOWN 90° R .03
+
+DOWN
+90°
+
+R
+.03
+
+3
+
+DOWN 90° R .03
+
+3.92
+
+4
+
+42.74
+1
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+ABumper, Main
+SCALE: 1:12WEIGHT:
+
+1
+
+REV
+
+SHEET 1 OF 1
+
+2
+
+1
+
+4.88
+
+B
+
+.13
+
+B
+
+5.42
+UP 21.5° R .03
+
+16.86
+NOTE:
+10 GAUGE HOTROLLED
+CNC PLASMACUT
+
+UP 21.5° R .03
+
+5.42
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+ABumper, Step
+SCALE: 1:4 WEIGHT:
+
+1
+
+REV
+
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE;
+0.25IN. HOT ROLLED PLATE
+CNC PLASMA CUT
+HOLLED DRILLED VIA MILL
+
+B
+
+B
+11.63
+4.63
+
+.25
+.56
+
+1.00
+
+5.00
+
+1.00
+
+3.00
+2.42
+
+7.04
+135.00°
+
+1.00
+
+3.63
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+AFrame Bracket
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE:
+10 GAUGE HOTROLLED
+SHEAR CUT
+
+B
+
+B
+
+4.94
+
+.14
+3.87
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+BumAper, Main, Gussett
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE:
+10 GAUGE HOTROLLED
+SHEAR CUT
+
+B
+
+B
+
+6.50
+
+.14
+
+5.00
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+BumpAer, Main, Light Back
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+1.25
+
+B
+
+1.25
+
+.13
+.63
+
+.66
+
+R.50
+
+B
+
+7.00
+
+1.50
+
+111.80°
+.13
+
+NOTE:
+1.25IN. HOT ROLLED ROUND STOCK
+THREADS CUT TO 1"-NF-14
+MACHINED ON LATHE
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+ARack, Spindle
+SCALE: 1:4 WEIGHT:
+
+1
+
+REV
+
+SHEET 1 OF 1
+
+2
+
+1
+
+B
+
+B
+
+.24
+
+1.73
+
+1.50
+
+NOTES:
+1IN. - NF - 14
+STEEL
+CASTLE NUT
+SEE MCMASTER PART #95030A320
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+A Spindle Nut
+
+REV
+
+SHEET 1 OF 1
+
+1"-14 Thread
+
+1 1/2"
+
+55/64"
+
+0.24"
+
+0.241"
+
+PART
+NUMBER
+
+For 3/16" Cotter Pin Diameter
+
+http://www.mcmaster.com
+© 2015 McMaster-Carr Supply Company
+Information in this drawing is provided for reference only.
+
+95030A320
+
+Slotted Locknut
+for use with Cotter Pins
+
+2
+
+1
+
+B
+
+B
+R.20
+
+.14
+
+1.56
+
+3.75
+NOTE:
+10 GAUGE HOTROLLED
+SHEAR CUT
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RacAk, Spindle, Gusset
+SCALE: 1:1 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+2.00
+.13
+
+B
+
+B
+
+1.26
+
+NOTE:
+OIL INPREGNATED BRONZE THRUST WASHER
+SEE MCMASTER PART # 2879T13
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+AThrustWasher
+
+REV
+
+SHEET 1 OF 1
+
+For 1 1/4"
+Shaft Dia.
+
+2"±0.015
+
+1/8"±0.005
+
+1.257"±0.005
+
+PART
+NUMBER
+http://www.mcmaster.com
+© 2015 McMaster-Carr Supply Company
+Information in this drawing is provided for reference only.
+
+2879T13
+
+High-Load Oil-Embedded
+Thrust Bearing
+
+2
+
+1
+.75
+
+R.75
+1.00
+
+B
+
+B
+
+206.57°
+.25
+1.25
+.50
+.50
+
+.50
+
+NOTE:
+0.25IN. HOT ROLLED PLATE
+HOLE DRILLED VIA DRILLPRESS
+RAMP ANGLE HAND GROUND VIA BENCH GRINDER
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RacAk, Lock Pin, Ramp
+SCALE: 2:1 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+1
+
+B
+
+B
+
+2
+
+ITEMNO.
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+PART NUMBER
+
+QTY.
+
+1
+
+Rack, Shelf, Plate 2
+
+1
+
+2
+
+Rack, Sheft, Plate 1
+
+1
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+A Rack, Shelf
+SCALE: 1:1 WEIGHT:
+
+1
+
+REV
+
+SHEET 1 OF 1
+
+2
+
+1
+
+B
+
+B
+2.18
+
+1.93
+
+.14
+
+2.00
+
+UP 22.5° R
+.03
+
+DOWN 90° R
+.03
+
+R1.00
+
+NOTE:
+10 GAUGE HOTROLLED
+CNC PLASMA CUT
+BENT VIA PRESS BRAKE
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RaAck, Shelf, Plate 2
+SHEET 1 OF 1
+
+2
+
+1
+2.13
+
+.25
+
+B
+
+B
+.61
+
+.56
+
+1.89
+
+.94
+
+NOTE:
+0.25IN. HOT ROLLED PLATE
+HOLES DRILLED AND TAPPED TO 10-32
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RaAck, Sheft, Plate 1
+SCALE: 2:1 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+B
+
+B
+
+.14
+
+R1.00
+
+2.00
+NOTE:
+10 GAUGE HOTROLLED
+CNC PLASMACUT
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RaAck, Shelf, Plate 3
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE:
+CNC PLASMACUT
+10 GAUGE HOTROLLED
+
+B
+
+B
+5.86
+8.10
+157.84°
+
+5.10
+90.00°
+
+2.04
+
+90.00°
+
+.13
+13.36
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+A Back Plate
+SCALE: 1:4 WEIGHT:
+
+1
+
+REV
+
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE:
+PURCHASED FROM AMERICAN MUFFLER.
+
+B
+
+B
+
+6.00
+
+3.00
+
+.50
+
+3.00
+
+2.50
+
+.25
+
+2.00
+
+.25
+
+.50
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+USEDON
+
+NEXTASSY
+APPLICATION
+
+2
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+6AinReciver Tube
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE:
+PURCHASED FROM AMERICAN MUFFLER
+
+B
+
+B
+
+3.63
+.63
+
+1.24
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+ABumper, D-ring
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE:
+REAR TAIL LIGHT ASSEMBLY
+PUCHASED FROM NAPA AUTO PARTS
+PART #
+
+B
+
+B
+
+1.13
+
+5.98
+
+3.98
+
+2
+ITEMNO.
+
+1
+
+1
+2
+
+PART NUMBER
+Bumper TailLight,
+Light
+Bumper, TailLight,
+Gromet
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+DESCRIPTION
+
+QTY.
+
+LIGHT BUCKET / LENS
+
+1
+
+RUBBER MOUNTING GROMET
+
+1
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+BAumper, Tail Light
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+56
+APPENDIX D – Rack Part and Assembly Drawings
+
+2
+
+1
+
+B
+
+B
+
+A
+
+A
+
+TITLE:
+
+SIZE DWG. NO.
+
+REV
+
+RAackAssembly1
+APPLICATION
+
+DO NOT SCALE DRAWING
+
+SCALE: 1:12WEIGHT:
+
+1
+
+2
+
+1
+ITEMNO.
+
+8
+
+14
+
+B
+
+C
+
+A
+
+1
+
+2
+19
+10
+18
+
+A
+
+9
+
+DETAIL A
+SCALE 1 :4
+
+12
+17
+13
+
+APPLICATION
+
+18
+DETAIL C
+SCALE 1 :4
+
+DO NOT SCALE DRAWING
+
+Rack, Arm
+Rack, Arm, Cap
+
+1
+1
+
+3
+
+Rack, Hub
+
+1
+
+4
+
+Rack, Hub, Strap
+
+1
+
+5
+
+Rack, Stud Plate
+
+1
+
+6
+
+91257A748
+
+3
+
+7
+
+Rack, SpindleBushing
+
+1
+
+8
+
+Tire
+
+1
+
+9
+
+Rack, Toggle Clamp,
+Bracket
+
+1
+
+10
+
+Rack, Toggle Clamp
+
+1
+
+11
+
+91251A337
+
+4
+
+12
+13
+
+Jerry Can mount
+Jerry Can mount offhand
+
+2
+2
+
+14
+
+Jerry Can
+
+2
+
+15
+
+Rack, Corner Gusset,
+Large
+Rack, Corner Guesset,
+Small
+Rack, Flood Light,
+Bracket
+
+2
+
+18
+
+Rack, Lock Pin
+
+1
+
+19
+
+Rack, Wareplate
+
+1
+
+17
+4
+
+QTY.
+
+1
+2
+
+16
+
+18
+
+PART NUMBER
+
+2
+2
+
+3
+SIZE DWG. NO.
+
+REV
+
+RAackAssembly2
+SCALE: 1:12WEIGHT:
+
+1
+
+B
+
+A
+
+2
+
+1
+
+B
+
+A
+
+B
+
+B
+
+8
+
+3
+
+7
+
+16
+
+4
+
+15
+
+B
+
+A
+
+SECTION A-A
+
+SECTION B-B
+SCALE 1 :2
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+USEDON
+
+NEXTASSY
+APPLICATION
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RAackAssembly3
+SCALE: 1:12WEIGHT:
+
+1
+
+2
+
+1
+7.00
+
+3
+
+1
+
+12.00
+
+B
+
+3.00
+
+2
+
+B
+
+50.00
+50.00
+
+1.00
+R1.00
+
+24.51
+
+135.00°
+2.50
+3.00
+
+1.50
+
+A
+
+A
+
+TITLE:
+
+ITEMNO.
+
+QTY.
+
+DESCRIPTION
+
+LENGTH
+
+1
+
+1
+
+TUBE, RECTANGULAR 3.00 X 2.00 X .14
+
+50
+
+2
+
+1
+
+TUBE, SQUARE 2.00 X 2.00 X .13
+
+12
+
+3
+
+1
+
+TUBE, SQUARE 2.00 X 2.00 X .13
+
+7
+
+SIZE DWG. NO.
+
+A Rack, Arm
+SCALE: 1:12WEIGHT:
+
+1
+
+REV
+
+2
+
+1
+
+1.68
+
+.19
+
+B
+
+B
+R3.50
+.63
+
+5.94
+
+NOTE:
+3/16IN. HOT ROLLED PLATE
+5 ON 5.5IN. HOLEPATTERN
+CNC PLASMACUT
+
+5.35
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+USEDON
+
+NEXTASSY
+APPLICATION
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RAack, Stud Plate
+SCALE: 1:2 WEIGHT:
+
+1
+
+2
+
+B
+
+1
+
+1.75
+
+B
+
+2.00
+
+3.00
+NOTE:
+2IN. DOM TUBE
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+USEDON
+
+NEXTASSY
+APPLICATION
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+A Rack, Hub
+SCALE: 1:2 WEIGHT:
+
+1
+
+REV
+
+2
+
+B
+
+1
+
+R1.00
+
+2.00
+
+B
+
+3.00
+
+2.27
+
+2.00
+
+NOTE:
+10 GAUGE HOTROLLED
+EDGE RADIUSES GROUND TOSHAPE
+HAMMER FORMED
+
+2.00
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+USEDON
+
+NEXTASSY
+APPLICATION
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RAack, Hub, Strap
+SCALE: 1:2 WEIGHT:
+
+1
+
+2
+
+B
+
+1
+
+1.25
+
+1.75
+
+B
+
+3.00
+
+NOTE :
+OIL IMPREGNATED BRONZE BUSHING
+TURNED ON BORED ON LATHE
+PURCHASED FROM MCMASTER CARR
+PART #
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+USEDON
+
+NEXTASSY
+APPLICATION
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RacAk, Spindle Bushing
+SCALE: 1:2 WEIGHT:
+
+1
+
+2
+
+1
+
+NOTE:
+10 GAUGE HOTROLLED
+CNC PLASMA CUT
+BENT VIA PRESS BRAKE
+
+B
+
+B
+1.50
+
+1.41
+
+2.01
+
+UP 45° R
+.03
+
+DOWN 90° R
+.03
+
+.14
+1.73
+
+6.00
+R.50
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+USEDON
+
+NEXTASSY
+APPLICATION
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RAack, Arm, Cap
+SCALE: 1:2 WEIGHT:
+
+1
+
+1"
+1/2"
+
+7/8"
+
+1 3/8"
+
+13/64"
+3 1/2"
+
+3 23/32"
+
+2"
+
+3/32"
+
+11/64"
+2"
+1/2"
+Adjustment
+
+1"
+
+9/16"
+
+1 5/8"
+Travel
+
+17/32"
+
+PART
+NUMBER
+
+3/16"
+http://www.mcmaster.com
+© 2012 McMaster-Carr Supply Company
+Information in this drawing is provided for reference only.
+
+5135A33
+Pull-Action
+Toggle Clamp
+
+2
+
+1
+
+B
+
+B
+1.50
+.50
+
+1.50
+
+.25
+
+.25
+
+R.75
+
+.88
+
+.31
+.16
+NOTE:
+0.25IN. HOT ROLLED PLATE
+DRILL AND TAP HOLES TO10-32
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+Rack, TAoggle Clamp, Brack
+SCALE: 2:1 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+B
+
+B
+
+.50
+
+NOTE:
+10-32 THREADS
+STEEL
+ALLEN HEAD
+
+.31
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+Rack, AToggle Clamp, Scre
+SCALE: 4:1 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+0.312"
+
+0.19"
+
+3/8"
+
+0.19"
+
+5/32"
+Hex
+
+#10-32 Thread
+
+PART
+NUMBER
+http://www.mcmaster.com
+© 2014 McMaster-Carr Supply Company
+Information in this drawing is provided for reference only.
+
+90128A940
+
+Zinc-Plated Alloy Steel
+Socket Head Cap Screw
+
+2
+
+1
+2.13
+
+B
+
+B
+DOWN 90° R
+.03
+
+2.00
+
+2.04
+
+DOWN 90° R
+.03
+
+2.04
+
+1.00
+
+.63
+
+5.81
+
+NOTE:
+0.125IN BLACK DELRINPLASTIC
+HEATED TO FORM BENDS
+HOLES TO PASS A 6-32
+SEE PART #91263A506
+
+1.64
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RAack,Wareplate
+SCALE: 1:1 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+5/16"
+0.307"
+
+0.097"
+
+82°
+
+0.138"
+
+#6-32 Thread
+5/64"
+Hex
+
+PART
+NUMBER
+http://www.mcmaster.com
+© 2014 McMaster-Carr Supply Company
+Information in this drawing is provided for reference only.
+
+91263A506
+Alloy Steel Flat-Head
+Socket Cap Screw
+
+2
+
+1
+
+B
+
+B
+1
+
+3
+
+2
+3
+
+4
+ITEMNO.
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+PART NUMBER
+
+QTY.
+
+1
+
+Rack, Lock Pin, Pin
+
+1
+
+2
+
+Rack, Lock Pin,Collar
+
+1
+
+3
+
+98296A883
+
+2
+
+4
+
+9657K293
+
+1
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+ARack, Lock Pin
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+.13
+
+B
+
+B
+2.88
+
+.31
+
+1.13
+
+.40
+
+.50
+
+3.44
+NOTE:
+RING ISA WASHER WELDED TO PINEND
+0.5IN. HOT ROLLED BAR
+HOLES DRILLED VIA MILL
+
+.75
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RaAck, Lock Pin, Pin
+SHEET 1 OF 1
+
+2
+
+1
+1.00
+.50
+
+B
+
+B
+
+2.00
+
+NOTE:
+HOT ROLLED ROUND SROCK
+MILD STEEL
+BORED ON LATHE
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RacAk, Lock Pin, Collar
+SHEET 1 OF 1
+
+2
+
+1
+
+B
+
+B
+1.00
+R.07
+
+NOTE:
+STEELPIN
+PURCHASED FROMCMASTER CARR
+PART #98296A883
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RacAk, Lock Pin, Roll Pin
+SHEET 1 OF 1
+
+2
+
+1
+
+B
+
+B
+
+.75
+
+NOTE:
+STEELSPRING
+PURCHASED FROM MCMASTER CARR
+PART # 9657K293
+
+.58
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RacAk, Lock Pin, Spring 2
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE;
+10 GAUGE HOTROLLED
+SHEAR CUT
+
+B
+
+B
+
+2.00
+90.00°
+
+45.00°
+.14
+2.00
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+Rack, CAorner Guesset, Sm
+SCALE: 2:1 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+NOTE:
+10 GAUGE HOTROLLED
+SHEAR CUT
+
+B
+
+B
+.14
+45.00°
+4.00
+
+45.00°
+
+4.00
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+Rack, ACorner Gusset,Larg
+SCALE: 1:1 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE:
+10 GAUGE HOTROLLED
+CNC PLASMA CUT
+BENT VIA PRESS BRAKE
+
+B
+
+B
+R.63
+
+.14
+
+8.00
+1.30
+
+DOWN 90° R .03
+.44
+
+.44
+
+4.34
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+Jerry CAan mount - offhan
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE:
+10 GAUGE HOTROLLED
+CNC PLASMA CUT
+BENT VIA PRESS BRAKE
+
+B
+
+B
+8.00
+6.00
+
+R.63
+
+2.00
+.14
+
+1.30
+.44
+
+UP 90° R .03
+.44
+
+4.34
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+JAerryCan mount
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE:
+PURCHASED FROM ONLINE RETAILER
+MOUNTING BRACKET NOT SHOWN
+
+B
+
+B
+5.00
+
+3.00
+
+2.04
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RAack, Flood Light
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+2
+
+2
+
+1
+
+3
+
+B
+
+B
+
+1
+
+ITEMNO.
+
+Rack, License Plate,
+Stud Plate
+Rack, License Plate,
+Back Plate
+Rack, LicensPlate,
+Standoff
+
+1
+
+2
+3
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+PART NUMBER
+
+QTY.
+1
+
+1
+1
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+RaAck, License Plate
+SCALE: 1:4 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+1.43
+
+B
+
+B
+
+127.87°
+
+.19
+
+1.13
+
+.16
+.16
+
+.03
+
+4.00
+6.00
+
+2.50
+
+3.25
+
+.75
+
+2.50
+
+.31
+
+.63
+NOTE:
+22 GAUGE HOTROLLED
+CNC PLASMACUT
+
+12.00
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+Rack, LicAense Plate, Back Pl
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+B
+
+1
+
+B
+
+1.68
+
+R3.50
+.03
+
+NOTE:
+22 GAUGE HOTROLLED
+CNC PLASMACUT
+5 ON 5.5IN. BOLTCIRCLE
+
+.63
+
+5.35
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+Rack, LicAense Plate, Stud Pl
+SCALE: 1:2 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+2
+
+1
+
+B
+
+B
+2.00
+
+1.50
+
+2.00
+
+.13
+
+NOTE:
+2IN. SQUARE TUBE
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+Rack, ALicens Plate, Stando
+SHEET 1 OF 1
+
+2
+
+1
+
+NOTE
+10 GAUGE HOTROLLED
+SHEAR CUT
+HOLE DRILLED VIA DRILLPRESS
+
+B
+
+B
+
+2.38
+.50
+1.00
+
+.14
+
+.38
+
+4.75
+
+UNLESS OTHERWISE SPECIFIED:
+
+A
+
+DIMENSIONS ARE ININCHES
+TOLERANCES:
+FRACTIONAL
+ANGULAR: MACH
+BEND
+TWO PLACE DECIMAL
+THREE PLACE DECIMAL
+INTERPRETGEOMETRIC
+TOLERANCINGPER:
+
+PROPRIETARY AND CONFIDENTIAL
+THE INFORMATION CONTAINED INTHIS
+DRAWING IS THE SOLE PROPERTYOF
+<INSERT COMPANY NAME HERE>. ANY
+REPRODUCTION IN PART OR AS A WHOLE
+WITHOUT THE WRITTEN PERMISSION OF
+<INSERT COMPANY NAME HERE> IS
+PROHIBITED.
+
+MATERIAL
+
+NEXTASSY
+
+USEDON
+
+FINISH
+
+DO NOT SCALE DRAWING
+
+NAME
+
+DATE
+
+A
+
+DRAWN
+CHECKED
+
+TITLE:
+
+ENG APPR.
+MFG APPR.
+Q.A.
+COMMENTS:
+
+SIZE DWG. NO.
+
+REV
+
+Rack,AFlood Light, Bracke
+SCALE: 1:1 WEIGHT:
+
+1
+
+SHEET 1 OF 1
+
+57
+APPENDIX E – Indented Parts List
+
+58
+
+ITEM
+NO.
+1
+2
+2.1
+3
+3.1
+4
+4.1
+
+PART NUMBER
+Tailgate
+Bumper, Main
+
+Sheet
+
+Bumper, Step
+Sheet
+Rack Assembly
+Rack, Arm
+TUBE, RECTANGULAR 3.00 X 2.00
+X
+.14
+TUBE, SQUARE 2.00 X 2.00 X .13
+
+4.1.1
+4.1.2
+4.2
+4.2.1
+4.3
+4.4
+4.5
+4.5.1
+4.6
+4.7
+4.8
+4.9
+4.9.1
+4.1
+4.11
+4.12
+4.12.1
+4.13
+4.13.1
+4.14
+4.15
+
+DESCRIPTION
+
+Rack, Arm, Cap
+Sheet
+
+Rack, Hub
+Rack, Hub, Strap
+Rack, Stud Plate
+Sheet
+91257A748
+Rack, Spindle
+Bushing
+Tire
+Rack, Toggle Clamp,
+Bracket
+
+1
+1
+1
+1
+1
+50
+19
+1
+1
+1
+1
+3
+1
+1
+1
+
+Sheet
+
+Rack, Toggle Clamp
+91251A337
+Jerry Can mount
+Sheet
+Jerry Can mount offhand
+Sheet
+Jerry Can
+Rack, Corner Gusset,
+Large
+
+QTY.
+
+1
+4
+2
+2
+2
+2
+
+59
+4.15.1
+4.16
+
+4.16.1
+4.17
+4.17.1
+4.18
+4.18.1
+4.18.2
+4.18.3
+4.18.4
+4.19
+4.19.1
+5
+6
+7
+8
+9
+9.1
+10
+10.1
+11
+11.1
+12
+12.1
+12.1.1
+12.2
+12.2.1
+13
+14
+15
+15.1
+
+Sheet
+
+2
+
+Sheet
+
+2
+
+Sheet
+
+1
+1
+1
+
+Rack, Corner
+Gusset, Small
+Rack, Flood Light,
+Bracket
+Rack, Lock Pin
+Rack, Lock Pin, Pin
+Rack, Lock Pin,
+Collar
+98296A883
+9657K293
+Rack, Ware plate
+Sheet
+91257A998
+2879T13
+95030A320
+6in Receiver Tube
+Rack, Spindle, Gusset
+Sheet
+
+Back Plate
+Sheet
+Bumper, Main, Light
+Back
+Sheet
+Rack, Shelf
+Rack, Shelf, Plate 2
+Sheet
+Rack, Shelf, Plate 1
+
+Sheet
+Rack, Toggle Clamp,
+Clasp
+91251A337
+Rack, Shelf, Plate 3
+Sheet
+
+2
+1
+1
+1
+2
+1
+1
+1
+2
+2
+1
+1
+1
+1
+2
+1
+-
+
+60
+16
+16.1
+17
+17.1
+18
+18.1
+18.1.1
+18.2
+
+Bumper, Main,
+Gusset
+
+2
+Sheet
+
+Frame Bracket
+Sheet
+Bumper, D-ring
+Bumper, D-ring, Ring
+PIPE, SCH 40, .63 DIA.
+Bumper, D-ring, Weld
+Link
+
+2
+2
+1
+12.5
+1
+
+19
+19.1
+
+Bumper, Tail Light
+Bumper Tail Light,
+Light
+
+2
+1
+
+19.2
+
+Bumper, Tail Light,
+Grommet
+
+1
+
+20
+20.1
+
+Rack, Flood Light
+Rack, Flood Light,
+Bucket
+
+2
+1
+
+20.2
+
+Rack, Flood Light,
+Lenses
+
+1
+
+21
+21.1
+
+Rack, License Plate
+Rack, License Plate,
+Stud Plate
+
+1
+1
+
+21.1.1
+21.2
+21.2.1
+21.3
+21.3.1
+22
+
+Sheet
+
+1
+
+Sheet
+
+1
+
+TUBE, SQUARE 2.00 X 2.00 X .13
+
+1.5
+1
+
+Rack, License Plate,
+Back Plate
+Rack, License Plate,
+Standoff
+Rack, Lock Pin, Ramp
+
+61
+APPENDIX F – Receipts
+
+

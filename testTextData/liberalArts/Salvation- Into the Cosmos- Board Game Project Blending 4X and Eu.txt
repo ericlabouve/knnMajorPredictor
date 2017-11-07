@@ -1,0 +1,763 @@
+Salvation: Into the Cosmos: Board Game Project Blending 4X and Eurogame Styles
+
+A Senior Project
+Presented To:
+the Faculty of the Liberal Arts and Engineering Studies Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment of the Requirements for the Degree
+Bachelor of Arts in Liberal Arts and Engineering Studies
+
+by
+Zachary Griffith
+June 2017
+
+© Zachary Griffith 2017
+
+Griffith 1
+
+Table of Contents
+Introduction .................................................................................................................................................. 2
+How to Play................................................................................................................................................... 3
+Blending Eurogames and 4X ........................................................................................................................ 3
+Eurogames ....................................................................................................................................... 3
+4X Strategy ....................................................................................................................................... 4
+Putting it All Together ...................................................................................................................... 4
+Influences ..................................................................................................................................................... 4
+The Game Design Process ............................................................................................................................ 7
+Concept ............................................................................................................................................ 7
+Prototyping ...................................................................................................................................... 8
+Test, Analyze, Revise, Repeat .......................................................................................................... 9
+How to Sell.................................................................................................................................................. 20
+Marketing....................................................................................................................................... 20
+Construction/Manufacturing ......................................................................................................... 20
+Conclusion .................................................................................................................................................. 21
+Works Cited ................................................................................................................................................ 23
+
+Griffith 2
+
+I.
+
+Introduction
+
+The year is 2217. Earth is overpopulated, highly polluted, running out of resources.
+Virtually all governmental structure across the globe has collapsed. Future for humanity on Earth
+appears non-existent; many predict Earth will no longer be habitable in fifteen years.
+Fortunately, scientists have discovered a way to travel faster than the speed of light, allowing
+humanity to take advantage of the dozens of potentially habitable worlds discovered by
+astronomers in recent years. However, this technology is expensive, costing more than the
+economic production of what little countries remain. Thus, the players, the few corporations
+wealthy enough to produce star-faring ships, have each individually decided to set off into space
+and each create an empire a set of colonies from which to exploit and control humanity forge a
+new home for the entire human race.
+However, like today, humanity has insatiable desires, and will only settle in the territory
+that meets the most of these needs, abandoning the rest. The people of Earth want abundant
+resources of all types, an industrial infrastructure to support their daily needs and wants, a wide
+breadth of planets to explore and settle, and a strong military to protect them from aliens (if they
+exist). Thus, the players must compete to build, or take, the territory that will make humanity the
+happiest. She who accomplishes this will have complete control of humanity and its future.
+Salvation: Into the Cosmos is a competitive colonization game. Players take control of
+Corporations that are tasked with creating a new home for humanity among the stars. Players
+will colonize uninhabited systems and use the natural resources in these systems to construct
+buildings for gathering or storing more resources, and ships to settle or conquer more systems.
+The player with the “best” collection of systems wins the game.
+
+Griffith 3
+
+II.
+
+How to Play
+
+Each system produces a certain amount of each resource type, gathered by the owning
+player (if there is one). There are four resources that each colony can produce: Metals, Food,
+Exotic, and Labor. Players may trade resources with a centralized bank at any time at a set ratio.
+The corporation a player controls adjusts this ratio and provides a bonus to the corporation’s
+specified resource(s). Buildings allow a player to gain more of a resource on the colony they are
+built. Starships are a means of expanding territory that a player controls (Colony Ships) or
+blockading another player’s planet to slow progress (Warships).
+The game consists of six rounds. Each round consists of two phases: the Building Phase
+and the Actions Phase. During the building phase, players gather resources from colonies,
+buildings, and their Corporate bonus and then may use those resources to build buildings and/or
+ships. During the Actions phase, players may move their Colony Ships to take new colonies and
+their Warships to blockade other players or take colonies from aliens.
+After six rounds, the game stops. All stored resources, buildings, Warships, and Colonies
+are counted for each player and scored accordingly.
+III.
+
+Blending Eurogames and 4X
+A. Eurogames
+
+Salvation: Into the Cosmos would, categorically, fall into the Eurogame genre.
+Eurogames are named such as many originate from Europe, mainly Germany. Specifically, many
+are winners of the Spiel des Jahres, a major German award for board games. Narratively, they
+are mainly non-violent and feature peaceful competition. In terms of gameplay, Eurogames are
+characterized by having simple rules, complex strategic decision-making (Chabris),
+
+Griffith 4
+
+“information-rich environment[s],” and little, if any, chance-based mechanics (Hendrickson, 20).
+Eurogames reward players who make the better decisions (Chang, 17).
+B. 4X Strategy
+Salvation would also fall under the category of the 4X genre of games. Coined by Alan
+Emrich in a preview of Master of Orion in Computer Gaming World in the September 1993
+issue, 4X is a type of strategy game in which players “eXplore, eXpand, eXploit, and
+eXterminate.” In other words, players start out as a small city, settlement, or empire, venture into
+the world around them, grow their territory, gather the natural resources of their surroundings,
+and fight other players in a bid to become the largest and most powerful empire (Emrich, 92). A
+common example of this genre is the Civilization series of videogames (Habib).
+C. Putting it All Together
+Salvation: Into the Cosmos is a blend of the “Eurogame” and 4X traditions. It is a
+competitive colonization game with simple rules and multiple paths to winning, promoting
+planning and decision making. It follows the Eurogame tradition of being able to win without
+violence (Hendrickson, 20), as players can gain enough points from resources, colonies, and
+structures to outmatch points gained from building Warships. However, due to the nature of
+starting small, growing outward, and competing with other players to get bigger, this game is
+also naturally a 4X style of game.
+IV.
+
+Influences
+
+The primary influence for this game is Settlers of Catan. Set in a fictional version of the
+Medieval period, players represent settlements on a newly discovered resource rich island of
+Catan. Each settlement uses the natural resources on Catan to expand its infrastructure. However,
+
+Griffith 5
+
+the island is not large enough to support the expansion of every settlement, and thus the
+settlements are in a race to grow the largest fastest.
+Created by Klaus Teuber, Settlers of Catan is a famous game in which players compete
+for resources and infrastructure on an island. It is considered the first game of the so-called
+“Eurogame” genre. Each turn, two dice are rolled and compared with the numbers on the tiles.
+Players with settlements adjacent to each tile with a number matching the total die roll collects
+those tiles’ corresponding resource (Chaslot et al., 22-23). Players can then use those resources
+to build infrastructure and/or trade with other players (Siders). At the end of the game, players
+get points for infrastructure and bonuses for certain feats (Pfeiffer, 3).
+First, Settlers of Catan has a simple design that allows for complex gameplay. While
+Salvation: Into the Cosmos does not have the same rules as Settlers of Catan, it attempts to
+capture the spirit of the design (simple rules and layout, but complex gameplay). Next, Settlers
+has a hex tile layout that is randomized each game to ensure that each game is a unique
+experience for the players. To create a similar effect, Salvation: Into the Cosmos has a similar
+mechanic, the main difference being that each player starts on a colony that is designed to make
+initial expansion easier. Finally, Settlers of Catan, at the end of the game, gives specific bonuses
+for players who have achieved certain feats (Pfeiffer, 3). Salvation: Into the Cosmos employs a
+similar system, rewarding the player with the most colonies, the player with the largest number
+of Warships, the player with the most buildings on any one planet, and the player with the most
+resources that could be carried over for another turn. This is done to promote different playstyles
+and diversify gameplay.
+The game narrative of Salvation: Into the Cosmos is also loosely based upon, and
+expands upon, the narrative of Settlers of Catan. The main narrative of Settlers of Catan is
+
+Griffith 6
+
+imperialism and expansion up to the point of conflict, stopping when real civilizations would
+begin fighting (Veracini, 131). Salvation: Into the Cosmos is about imperialistic expansion and
+colonization including conflict. Players are in full competition to build the biggest, richest
+empire possible and can use Warships to hinder other player’s progress. In this competition,
+players may encounter Aliens, and are encouraged to wipe out any that appear in their path, like
+how many European civilizations treated the indigenous populations of the territories they took.
+This narrative combined with the dark, but slightly humorous, background text highlights and
+warns of the dark actions humans can, and still, take.
+The second main influence comes from the free-to-play online video game Shattered
+Plans by Jagex Ltd. Shattered Plans takes place in the far future, where a failed wormhole
+experiment destroyed Earth. Humanity escaped onto other worlds where it now thrives.
+However, now that humanity has fully recovered, different nations embroil themselves in
+conflict with one another. The players represent different (randomly generated) factions, each
+vying for control of known space.
+Shattered Plans is a competitive empire-building strategy game in which players take
+control of a spacefaring empire and build fleets to conquer neutral and opposing player’s
+systems. Each turn, players collect resources and use them to construct fleets. They then plan
+movements of those fleets to either attack or reinforce a system. Then, at the end of the turn, the
+fleets move and engage any enemy fleets in their designated system. Any leftover resources go
+into a pool for each respective resource that, once filled, gives a temporary or permanent effect
+on one or more desired systems (OrbFu et al).
+The main influences this game had on Salvation: Into the Cosmos were the Warship and
+initial attack mechanics, as well as the general resource layout. The most obvious influence was
+
+Griffith 7
+
+the ability to construct ships to attack other players. While this is the main gameplay in Shattered
+Plans, constructing Warships and taking other players’ colonies by force is only one possible
+mode of gameplay in Salvation: Into the Cosmos. In Shattered Plans, each system owned by a
+player supplies resources to that player, with the amount of each resource varying system by
+system. When designing Salvation: Into the Cosmos, this system seemed natural for a game
+where players took space colonies. Like Settlers of Catan, Shattered Plans also has a small
+number of different resource types. This correlation is the key reason I decided to have four
+resource types in Salvation: Into the Cosmos.
+However, there are several key differences between Salvation: Into the Cosmos and
+Shattered Plans. First, through the inclusion of Colony Ships, it is possible for players to get new
+colonies without attacking other players. Next, resources can be spent constructing buildings,
+which either provide more resources or allows some unused resources to carry over between
+turns. Finally, players are rewarded for investing in more Colony Ships and Buildings, as the
+player with the most colonies, the player with the most unused resources that could be carried
+over to another turn, and the player with the most buildings on a single planet all get bonus
+points at the end of the game.
+V.
+
+The Game Design Process
+A. Concept
+
+The initial concept for this game was a starter set for a potential miniatures game. It
+would have been a spaceship combat game focused on maneuvering, positioning, and distance.
+However, testing for balance for that type of game would have been lengthy enough to halt all
+development of the graphics of the game. Thus, the project was changed to a board game.
+
+Griffith 8
+
+The goal of this project is to create a 4X style strategy game that adds elements of
+“Eurogames” in order to shrink the game time to within a 1-2 hour timespan.
+B. Prototyping
+To make this game work, and to develop the core mechanics of the game, I had to make a
+simple prototype and test the game continuously throughout the quarter. I used paper cut outs for
+my prototype. I first made and cut out sixty-one equal sized hexagons for the planet tiles. I then
+drew some basic graphics for the resources, printed a bunch out at a decent size to represent the
+resource tokens, and made a final graphic for each of the tiles to represent the natural resources
+of that tile. Finally, I made some basic drawings of each building and ship in Paint.net, scaled
+them relative to the tiles, and printed them each in six different colors and in great quantity.
+
+Griffith 9
+
+Figures 1 and 2: Prototype Board and Pieces
+
+C. Test, Analyze, Revise, Repeat
+All tests during the first quarter were run during Captain Nemo’s Tuesday board game
+nights. For the first test, I had brought my paper cut-out prototype, unsorted, and attempted to set
+up the game. However, by the time I had the game set up, the game night time was over and
+everyone already left.
+Due to my inability to get the game started in the first place, I deduced that my game was
+too large and had too many moving parts. Thus, I removed a third, or one layer, of the planet
+
+Griffith 10
+
+tiles, cut the game time in half from twelve turns to six turns, and removed a third of the building
+markers for ease of sorting/gaming for the next test.
+The second test started late during the next game night. I finally had a chance to enlist
+some testers to test my game. However, time was limited as they were only able to test after
+finishing another game. The testers only played for three rounds. However, after the third round,
+not a single player had a colony.
+Among the testers who volunteered was a man who had experience in developing games,
+and so I took careful notes of his advice and added all of it to the game. He and I both concluded
+that the game as taking too long to play, and that having to plan for expansion on turn five was
+not fun. He suggested removing the buildings that specifically store resources and instead build
+that into the mechanics of the planet tiles themselves, making the stored resources scale with the
+number of colonies someone owns rather than the amount of certain building types. He also
+suggested that I cut the cost of the remaining buildings, allowing faster growth.
+I then asked all the testers if adding playable corporations with unique bonuses would
+both improve the speed of gameplay and add a little narrative and roleplay to the game; they
+unanimously agreed. Thus, I also added on the corporations as well.
+The third test took place the Tuesday the week before Thanksgiving. I had some new
+testers this time, and we played a full game as we started early. During the third turn, I built
+several Warships and, exploiting a hole in my rules regarding leapfrogging taken colonies to see
+the effect, snatched much of one tester’s territory. This started a back and forth chain reaction
+between him and I, ending with the third player building up a large fleet and taking us both out.
+
+Griffith 11
+
+Figure 3: Playtesters for the third and fourth playtest sessions.
+
+The first issue found was the turn order. I had it where the player who moved first one
+turn would move last the next turn. This was an attempt to solve the first turn advantage
+problem, where the player who goes first gains an inherent advantage by being able to set up
+what the second player must react to (Extra Credits). However, this caused confusion among the
+testers as to who would move first in each round. It also allowed someone to plan for moving
+first next round and possibly take advantage of moving before an opponent twice. This caused
+what the testers called “swing turns", where someone takes advantage of this and drastically
+changes the balance of power for the rest of the game. Thus, to make turn order less confusing
+and fix balance, I changed both the round and turn order. The round was changed from everyone
+taking turns building and moving to everyone building and then everyone moving. The turn
+
+Griffith 12
+
+order was changed so that the person with the least number of colonies moves first, allowing
+smaller players to gang up on a player who is far ahead of them.
+The biggest and most obvious issue to both myself and the testers was attacking. The
+ability to take away colonies from other players was too powerful. Even with fixing the
+“leapfrog” issue by only being able to send Warships to only one adjacent colony at a time, it
+was still too easy to knock another player of equal or lesser standing out of the game. Thus,
+attacking was replaced with blockading, where a player could blockade a colony and force that
+opponent to neither build on that colony nor gain the natural resources from that colony until the
+blockade is removed.
+The fourth test took place two weeks later, and included a new third tester. We only
+played for five rounds as I had gotten ahead early, though the combination of my first colony
+with my corporation allowing me to get my first new colony turn one, and thus had a guaranteed
+win.
+The obvious issue from this test was how to balance more strategies of play. The only
+strategy players have is to expand the number of colonies they have, and that the one who gets
+biggest, fastest wins. To fix this, I increased the number of resources each building provides,
+removed the need to discard resources at the end of each round, added the ability to exchange
+resources with a central bank, with the rates changing depending on which corporation the player
+has, and disallowed gaining resources on a new colony without constructing a building.
+Turn order was still confusing, and we often lost track of whose turn it was. I thus
+reverted the turn order back to what it was, but this time using a marker to keep track of the first
+player.
+
+Griffith 13
+
+Players were unhappy that they couldn’t make informed decisions regarding making new
+colonies. They wanted to be able to see what systems they could possibly colonize so they could
+choose a system that best suited their needs. Thus, I created a rule that made players reveal all
+systems adjacent to their own.
+For this and all prior tests, I used card-like markers to represent individual resources that
+a player owned. However, I realized during this test that much of the time spent playing the
+game was spent counting out those resources. Thus, I decided to cut those cards and replace them
+with a resource tracker for each player. These trackers could be marked for the current amount of
+each resource that a player owned, shortening resource management time.
+Warships were irrelevant during this test, as people found it more worthwhile to construct
+buildings than to blockade each other’s colonies. I did not know how to make Warships relevant
+without making them overpowered, so I decided to wait for another playtest for a final decision.
+People have also asked for aliens to show up in the game as Salvation: Into the Cosmos is
+a space game and aliens are also hinted at in the story text. I came up with several ideas for how
+to implement them, and, after taking a quick break and mulling over the ideas, I decided to have
+a kind of passive Alien presence. I added special tokens to be placed on the outer ring of
+systems, some blank, some with a drawing of an Alien. When a Colony Ship enters a system
+with one of these tokens, they reveal it. If it has an Alien, the Colony Ship is lost an no one may
+colonize it without first sending in a Warship to remove the Aliens. This adds an element of the
+“unknown” and adds risk into the exploration element of the game.
+During the second quarter, I ran two tests at two different Cal Poly Game Design club
+meetings, and a final test at Captain Nemo’s Saturday free game night. Each of these tests
+
+Griffith 14
+
+included new people separate from the Captain Nemo’s Tuesday night group, and each test
+always included at least one person unfamiliar with the game.
+The first test took three turns due to time constraints. The game itself had mainly
+uneventful slow growth. However, as I was looking for a way to balance Warships, I decided to
+build one and attack the player closest to me. While this expenditure of resources kept me from
+winning the game, the effect of the blockade also kept the person I attacked from winning the
+game as well.
+This result was surprising considering no one built Warships during the last test.
+However, this test showed that a Warship blockading a player’s planet could cripple said player,
+as that player would need to build a Warship in return to end the blockade. Thus, the easiest
+solution was to create a special building that was cheaper to build than a Warship and, while
+unable to generate resources, could destroy attacking Warships or destroy a Warship that’s
+blockading the planet it’s built on.
+I gave up on trying to fight simple initiative turn order. The alternating first player idea,
+when introduced to the new set of testers, was shot down immediately due to it breaking the
+natural game flow. Thus, this and all future game versions utilized a standard initiative turn
+order.
+While informed decisions about where to place new colonies were beneficial, the players
+for this test found that revealing adjacent uncolonized systems made the game boring. They felt
+that these reveals created informed, but easy decisions and removed the exploration element of
+the game. I noticed, during the game, that one of the players really wanted to move his colony
+ship around and seek out a good colony before using his Colony Ship. The rules regarding
+Colony Ship movement and settlement were unclear at this point. Thus, a simple fix was made:
+
+Griffith 15
+
+keep untouched, uncolonized systems hidden, but allow players to decide not to colonize a
+system their Colony Ship enters and let it seek out better systems.
+One issue that popped up was that with the center-most tile, Earth, as an empty system
+that cannot be traveled through, an effective “invisible wall” was placed between players, forcing
+each player to only react to their two nearest neighbors and not someone on the opposite side of
+the game board who may be in the lead. Thus, I made Earth a free move tile where players can
+move their ships and settle otherwise out of reach areas or attack, or threaten to attack, a player
+on the opposite side of the game table.
+I went back a couple of weeks later to test again. We played for a bit longer than last
+time, going for five turns instead of three. None of us really engaged in conflict, we just focused
+on expanding our territories for this game. This time, I brought surveys for people to fill out after
+the game. Three people in total took the survey. All were Cal Poly students, two of whom had
+experience in 4X style games.
+Two of three felt the rules were confusing. This made sense because the rulebook was a
+bit long and repetitive and the third person, who wasn’t confused, took part in the last test and
+ended up helping me explain the rules. Thus, the first major change I made to the game was to
+revise and shorten the rules to two pages, removing many needless detail, examples, and
+repetitions.
+Two of us exploited a loophole that went unnoticed until this game: I had given some
+corporations a bonus where they could, at any time, exchange one their preferred resource for
+one of any other resource. What this meant was they could just keep producing that resource and
+use it for everything, allowing them to expand at a far faster rate than the other corporations.
+Because of this issue, no one felt that they were making complex decisions, and one person
+
+Griffith 16
+
+thought they lost due to chance. Everyone also felt this exploit broke the game balance. Thus, I
+flipped the ratios, so that the corporation bonus allowed them to trade for their preferred resource
+one for one.
+The resource sheets proved very fiddly during the game, and players said they would
+rather try using cards as it felt more natural to use. So, I decided for the next test to try the cards
+again and compare how people liked or disliked them.
+The testers also felt that the game was a bit too small for a possible six player game, and
+that the board would get crowded quickly. One of the testers suggested an idea that I ended up
+taking: a variable sized board. Basically, the idea is that the number of players should determine
+the size of the game board. One ring of systems would be placed around the starting area of the
+board for a two-player game, two rings for a three- or four-player game, and three rings for a
+five- or six-player game. This variable size would allow for players in each game to interact and
+interfere with each other at around the same time, regardless of how many people play the game.
+One of the testers noticed that the numbers I used were random. This was true; as I was
+focused entirely on testing gameplay mechanics, I semi-randomized the resources on all except
+the starting colonies and made very arbitrary end game point values. So, after that game, I knew I
+would at most get one more playtest session during the quarter, so I made those numbers a little
+less random. I evened out the number of resources throughout the collection of systems, and
+made sure that, for each resource, there were nine systems for every number of that resource (one
+through six), while still ensuring each system had no more than eighteen resources total. For the
+end game points, I scaled them based on the relative costs of each point-scoring item, except for
+Warships which were scaled slightly lower. I then scaled the bonus points based off the level of
+difficulty of achievement.
+
+Griffith 17
+
+When asked whether they felt the game I had was a 4X game, on a scale of one to five,
+the testers all marked three, based on the above needed fixes. They also said that they would be
+interested in a more complete version.
+The final playtest was held during Captain Nemo’s Saturday Free Game Night. This time,
+I had four testers, so we tried a larger, five-player game. All the testers were new to the game.
+While the game took far longer than two hours, this was only because we were having fun with
+each other’s company as well as with the game itself. We all enjoyed ourselves, taking turns
+building, attacking, and jokingly insulting each other. There were several points where we would
+spend twenty minutes chatting with and teasing each other forgetting that someone’s turn had
+long since ended. Two of the players ended up fighting each other for the entire game because
+they were good friends. I attacked one of the players next to me midway through the game as he
+was ahead of me, and I promptly was attacked in return. In the end, both that player and another
+were nearly tied; I decided who was the winner on my final turn.
+There were only two minor changes that people recommended. First, people wanted an
+incentive to go to the outer ring of systems that had Alien tokens. The testers never ventured out
+to these outer planets seeing that the other planets had similar resources. Thus, I decided the best
+option would be to mark the top twenty-four systems as outer systems that would be specifically
+used for the outer ring systems in any game.
+Next, while people liked having cards in their hands to keep track of the resources, they
+didn’t like having to count out the resources. Upon this revelation, I immediately thought of
+combining the resource cards and resource counters into a single combined system: the cards
+would be used as normal, but the counters would keep track of total resources gained each turn,
+which players could adjust for each new colony and building.
+
+Griffith 18
+
+D. Final Analysis
+After the game, I conducted a survey of the testers. This was the survey I used:
+Part 1:
+1)
+2)
+3)
+4)
+5)
+6)
+7)
+8)
+
+Are you a student at Cal Poly?
+How old are you?
+How long have you been playing board games?
+What specific board games or board game genres have you played? Did you like these games? Why?
+What is your idea of what a 4X game is? What are the basic components?
+What is your experience with 4X games? What do you like/dislike?
+Would you be interested in buying/playing a 4X game that could be played in a shorter span of time?
+Just by looking at the game and its pieces, what are your initial impressions?
+
+Part 2:
+1)
+
+Please rate your experiences. Feel free to explain your choices:
+
+I felt the rules were intuitive and made sense:
+
+Strongly Disagree 1
+
+2
+
+3
+
+4
+
+5
+
+Agree
+
+I felt the rules were simple and easy to understand:
+Agree
+
+Strongly Disagree 1
+
+2
+
+3
+
+4
+
+5
+
+I felt I had a lot of choices and decisions to make:
+Agree
+
+Strongly Disagree 1
+
+2
+
+3
+
+4
+
+5
+
+I felt the choices I made were difficult: Strongly Disagree 1
+
+2
+
+3
+
+4
+
+5
+
+Agree
+
+I felt I could have made better choices: Strongly Disagree 1
+
+2
+
+3
+
+4
+
+5
+
+Agree
+
+I won/lost based on my decisions:
+
+2
+
+3
+
+4
+
+5
+
+Agree
+
+2
+
+3
+
+4
+
+5
+
+Agree
+
+Strongly Disagree 1
+
+2
+
+3
+
+4
+
+5
+
+Agree
+
+Strongly Disagree 1
+
+2
+
+3
+
+4
+
+5
+
+Strongly Disagree 1
+
+I won/lost based on chance: Strongly Disagree 1
+I felt the game was balanced:
+
+There is a single strategy to winning this game:
+This game is a 4X game:
+
+2
+
+3
+
+4
+
+5
+
+Agree
+
+I want to play this game with friends: Strongly Disagree 1
+
+2
+
+3
+
+4
+
+5
+
+I would buy this game:
+
+3
+
+4
+
+5
+
+Agree
+
+2)
+3)
+4)
+5)
+6)
+7)
+8)
+
+Strongly Disagree 1
+
+Strongly Disagree 1
+
+2
+
+Agree
+
+Agree
+
+What is your favorite aspect of this game? Least favorite?
+Was there any part of this game that was tedious/annoying? Why?
+What was the most exciting part of the game?
+Was there a distinctive point where you knew that you won/lost? Was there a distinctive point where there was a
+clear winner? Explain.
+Did you feel the game was too short, too long or just right?
+Looking just at the game play, what would you say is the main story of this game? Does this game have an underlying
+meaning or message?
+Do you like the premise of the game? Does it match the gameplay?
+
+The results of the Survey are as follows:
+
+Griffith 19
+
+Figure 4: Reponse to Rules Complexity
+
+Figure 6: Response to Game Balance Questions
+
+Figure 5: Response to Choices Questions
+
+Figure 7: Response to 4X Question
+
+Figure 8: Player’s overall enjoyment
+
+Three of the four studied at Cal Poly. All of them played miniatures games as a hobby,
+but all had experience with 4X style games. All of them felt the rules were intuitive and easy to
+understand. They all felt they had a wide range of decisions to make during the game, although
+they were split on how difficult those decisions were. Everyone except the winner felt they could
+have made better decisions. The only person who didn’t feel like they won or lost based on their
+
+Griffith 20
+
+decisions was a player who was attacked on the second turn of the game. While everyone felt
+that the game was balanced, everyone disagreed on whether there was a single strategy to
+winning the game. This stemmed from the fact that everyone who attacked another player early
+on lost. However, everyone did feel that the game was a 4X game, that it was a good foundation
+for further additions and expansions, and that they would buy it if it were sold.
+VI.
+
+Selling the Game
+A. Marketing
+
+If the game were to be sold, marketing would be easy. As this game is a faster 4X game,
+it can be marketed as such to the 4X player demographic as a quicker, simpler 4X game.
+However, its speed means that the target demographic can be expanded to more casual board
+gamers as well, and can be marketed to them as a quick to play strategy game. The larger
+demographic will mean more people will purchase the game and thus the game will make more
+money.
+B. Construction/Manufacturing
+As far as constructing the game, I looked online at the boardgamegeek.com forum for
+information about recommended materials to build the game with. Several form posts
+recommended using chipboard for game boards (Terry). I found 120 pt 12” x 18” chipboard for
+$28.71, roughly $1.15 per sheet (http://www.schrafelpaper.com). I estimate four sheets would be
+the maximum required amount, so chipboard cost would be $4.60. Next, for covering the board
+with graphics and making the cards, it was recommended to use linen paper and linen cover
+stock (Hayes). At thepapermartstore.com, 18” x 12” 100lb linen cover stock is $42 for 125
+sheets, which is around $0.336 per sheet. For cards and board, I estimate nine sheets worth,
+
+Griffith 21
+
+totaling roughly $3.03. Linen paper at thepapermillstore.com sells for $56 for 250 sheets of 18”
+by 12” paper. As this is roughly $0.224 per sheet, and five sheets should be more than enough to
+supply the cards necessary if the cards are somewhat small, then the paper would total around
+$1.13.
+
+Figure 9: Render of potential game piece
+
+As for the buildings, ships, and tokens, another boardgamegeek.com forum post
+suggested using “Dragon Skin” silicone from reynoldsam.com (Pollari). This silicone sells for
+$23.70 for two pounds of the fast cure silicone. With an estimate of half of a pound of silicone
+required, this makes roughly $6 total. Including a high estimate of ink at $2, this brings the total
+material cost to $16.86. However, this is a high estimate using high quality materials. As I expect
+the game to sell for somewhere between $25 and $35, I also expect a company producing this
+game would easily find these materials for cheaper, or different and cheaper materials.
+VII.
+
+Conclusion
+
+In summary, I set out on this project to create a shorter, simpler 4X game and created
+Salvation: Into the Cosmos. Inspired by Settlers of Catan and Shattered Plans, it blended
+elements of these games together, along with many shifts and additions, to achieve this goal.
+After many playtesting sessions, I managed to succeed in making the 4X style of gameplay
+
+Griffith 22
+
+shorter and made a good foundation for future additions and expansions. However, if it were to
+be sold as is, based on the enjoyment level, expanded demographic, and cost to produce, there is
+potential for this game to find financial success.
+
+Griffith 23
+Works Cited:
+A.J. Schrafel Paper Corporation. A.J. Schrafel Paper Corporation, 2017,
+http://www.schrafelpaper.com/thick-chipboard-sheetsbrsize-12-x-18-inches-p-319.html.
+Accessed 21 Mar. 2017.
+Chabris, Christopher. “REVIEW --- The Week – Game On: The Strategic Frontier of ‘Eurogames.’” The
+Wall Street Journal, 07 Feb. 2015,
+http://search.proquest.com.ezproxy.lib.calpoly.edu/docview/1652144707/7AFE555F2EB4175P
+Q/1?accountid=10362. Accessed 26 Oct. 2016.
+Clio, Chang. “Continental Divide.” New Republic, vol. 247, no. 6, Jun. 2016, pp. 17,
+http://eds.a.ebscohost.com.ezproxy.lib.calpoly.edu/ehost/detail/detail?sid=2d06d441-86e24cdd-a50bab984173c99e%40sessionmgr4007&vid=0&hid=4205&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d
+%3d#AN=116656607&db=aph. Accessed 26 Oct. 2016.
+Chaslot, Guillaume, “Monte-Carlo Tree Search in Settlers of Catan.” Lecture Notes in Computer Science,
+vol. 6048, pp. 22-23, http://link.springer.com/chapter/10.1007/978-3-642-12993-3_3. Accessed
+26 Oct. 2016.
+Dragon Skin Series: Addition Cure Silicon Rubber Compounds. Reynolds Advanced Materials, 2017,
+http://www.reynoldsam.com/product/dragon-skin/. Accessed 21 Mar. 2017.
+Emrich, Alan. “MicroProse’s Strategic Space Opera Is Rated XXXX!” Computer Gaming World, September
+1993, pp 92-93.
+“Extra Credits – First Move Advantage – How to Balance Turn-Based Games.” YouTube, uploaded by
+Extra Credits, 27 Aug. 2014, https://www.youtube.com/watch?v=TRHdIScOMWQ.
+
+Griffith 24
+Habib, J. “Sid Meyer’s Civilization IV: Warlords.” IGN, 28 July 2008,
+https://web.archive.org/web/20120312080743/http://uk.guides.ign.com/guides/818084/page_
+2.html.
+Hayes, Nick. Comment on “Making Cards: You’ll never use your old method again.” Board Game Geek,
+21 Mar. 2010, 2:29 p.m., https://boardgamegeek.com/article/4797766#4797766.
+Hendrickson, Phillip. “Cardboard Conundrum: Why a Small University Library has Grown a Monthly
+Board Game Night.” Nebraska Libraries, vol. 6, no. 1, pp. 20-21,
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.674.5730&rep=rep1&type=pdf#pag
+e=20. Accessed 26 Oct. 2016.
+Linen.
+
+PaperMart
+
+Inc.,
+
+2016,
+
+http://www.thepapermartstore.com/paper/cover-and-card-
+
+stock/uncoated/linen.html?all_ln_color_category=1299&all_ln_finish=1693&all_ln_size=1339.
+Accessed 21 Mar. 2016.
+OrbFu et al. “Shattered Plans.” FunOrb Wiki. 23 Jan. 2013.
+http://funorb.wikia.com/wiki/Shattered_Plans.
+Pollari, Mikko. Comment on “Molding your own plastic pieces.” Board Game Geek, 22 Feb. 2010, 12:33
+p.m., https://boardgamegeek.com/thread/498293/molding-your-own-plastic-pieces.
+Siders, Benjamin J. and Kirk a Damman. “Emerging challenges in tabletop gaming: player modifications,
+third-party parts, and disruptive technology.” Landslide, Mar-Apr. 2015: 52. Academic OneFile.
+Web. 26 Oct. 2016.
+Terry, Eric. Comment on “How to Make a Retail-Worthy Quarter-Fold Game Board.” Board Game Geek,
+14 Jan. 2013, 10:32 a.m., https://boardgamegeek.com/thread/913395/how-make-retail-worthyquarter-fold-game-board.
+Veracini, Lorenzo, “Settlers of Catan.” Settler Colonial Studies, vol. 3, no. 1, 2013, pp. 131-133.
+
+Griffith 25
+12 x 18 Paper. The Paper Mill Store Inc., 2017, https://www.thepapermillstore.com/paper/sizes/12-x18paper?q=&hPP=30&idx=prod_default_products&p=0&dFR[tpms_finish_family][0]=Linen&dFR[t
+pms_product_type][0]=Paper&dFR[tpms_size][0]=12%20x%2018&dFR[type_id][0]=simple&is_v
+=1. Accessed 21 Mar. 2017.
+
+

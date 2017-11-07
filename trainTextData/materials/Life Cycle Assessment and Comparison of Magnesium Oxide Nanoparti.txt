@@ -1,0 +1,882 @@
+Life Cycle Assessment and Comparison of
+Magnesium Oxide Nanoparticles Prepared by Aqueous
+and Microwave Synthesis Methods
+
+Jesse Cartland
+Materials Engineering Department
+California Polytechnic State University San Luis Obispo
+Advisor: Prof. Jean Lee
+
+© 2016 Jesse Cartland, Jean Lee
+
+Table of Contents
+
+Abstract
+1. Introduction
+
+1
+
+2. Experimental Procedure
+
+2
+
+2.1 Microwave Synthesis
+
+2
+
+2.2 Aqueous Synthesis
+
+3
+
+2.3 Characterization
+
+5
+
+2.4 Life Cycle Assessment
+
+6
+
+3. Experimental Results
+
+7
+
+3.1 Microwave Synthesis Results
+
+7
+
+3.2 Aqueous Synthesis Results
+
+11
+
+3.3 Life Cycle Assessment Results
+
+13
+
+4. Discussion
+
+16
+
+4.1 Environmental Implications
+
+16
+
+4.2 Structure of Produced MgO Nanoparticles
+
+16
+
+4.3 Uncertainty in Data and Results
+
+17
+
+5. Conclusion
+
+18
+
+6. Acknowledgments
+
+18
+
+7. References
+
+18
+
+Abstract
+Abstract: Magnesium oxide nanoparticles are being used increasingly as catalysts for organic
+synthesis, fuel oil additives, and CO2 adsorbents. There are many ways to produce magnesium
+oxide nanoparticles, but there is little information available regarding the environmental costs of
+production. As demand for environmentally friendly materials increases, it is important to
+understand environmental impact differences between various production methods. This study
+will compare the differences in embodied energy and global warming potential (GWP) between
+two synthesis methods: microwave combustion synthesis (microwave synthesis) and oxidation of
+magnesium hydroxide (aqueous synthesis). The resulting nanoparticles were characterized using
+scanning electron microscopy (SEM), transmission electron microscopy (TEM) and energy
+dispersive X-ray spectrometry (EDS). Nanoparticles produced through microwave synthesis
+formed nanocubes while aqueous synthesis produced round particles with less pronounced
+facets. The embodied energy and GWP were determined using life cycle assessment (LCA), and
+it was found that the embodied energy and GWP of magnesium oxide nanoparticles produced by
+microwave synthesis were significantly less than that of aqueous synthesis.
+1. Introduction
+Magnesium oxide (MgO) is a readily available material that has numerous applications as an
+electrical insulator, thermal insulator, substrate, catalyst1, and CO2 adsorber2. MgO nanoparticles
+have greater utility as catalysts than bulk materials or microparticles due to their increased
+specific surface area. Applications that rely on high surface area MgO particles include CO2
+capture, catalysis of organic reactions, and filtration. MgO nanoparticles are also receiving
+attention as a fuel oil additive that increases fuel efficiency, reduces NOx emissions, and reduces
+sludge buildup within engines3. Magnesium is the eighth most abundant element in the earth’s
+crust and is currently extracted from salt water.
+There are two main approaches to producing MgO nanoparticles: combusting magnesium in
+oxygen, and calcining magnesium hydroxide particles. This study looks into one method from
+each approach. The first method is to combust magnesium metal in oxygen. This results in the
+production of a great amount of heat and light, and produces MgO nanocubes. The particular
+
+1
+
+method in this study has previously been investigated as a way of producing pure, ready-to use
+nanocubes4.
+The second approach is a chemical synthesis method starting with the formation of magnesium
+hydroxide precipitates in an aqueous solution. The magnesium hydroxide is then dried and
+oxidized in a furnace5. In this approach, the rate of reaction can be controlled to a much higher
+degree by altering the concentration of reactants and oxidation temperature. The particle size of
+the resulting MgO nanoparticles is affected by the concentration of the reactants in the aqueous
+step.
+
+2. Experimental Procedure
+2.1 Microwave Synthesis
+In the microwave synthesis method the objective is to vaporize and combust magnesium metal
+by arcing steel wool mixed with magnesium to produce a MgO vapor that will condense on a
+silica substrate. 30 mg of steel wool was gathered into a ball and placed inside an alumina
+crucible. 30 mg of magnesium ribbon was sliced lengthwise to produce thin, wire-like
+magnesium ribbons, then placed in the crucible with the steel wool and lightly mixed. The
+crucible was then covered by a glass microscope slide and a crucible lid. The crucible, slide, and
+lid assembly (Figure 1) were then placed inside a glass bowl within a household 1000 Watt
+microwave (Magic Chef model HMD1110B).
+
+A
+
+B
+
+Figure 1. The alumina crucible containing 30 mg of shredded magnesium ribbon and 30 mg of steel
+wool (A). Filled crucible covered with glass microscope slide and alumina lid (B).
+
+2
+
+The microwave was set for 1000 Watts and turned on for 30 seconds. The magnesium and steel
+wool react in bursts as the material arcs and burns. The material in the crucible has typically
+completed reacting before the microwave turns off. After allowing the crucible to cool for 20
+minutes, it is removed from the microwave. A clearly visible white MgO powder is deposited on
+the microscope slide where it covered the crucible (Figure 2). The mass of the slide with powder
+was compared to the mass of the slide before the process to determine the mass of powder
+produced, which was 16 milligrams. The slide with MgO particles was then stored in a slide case
+for further analysis.
+
+2.2 Aqueous Synthesis
+Reactant solutions of magnesium nitrate and sodium hydroxide were prepared such that mixing
+equal volumes of solution would result in the stoichiometrically ideal balance of reacting ions.
+0.1 M magnesium nitrate solution was prepared by dissolving 1.483 g of magnesium nitrate in
+100 mL of deionized water in a 250 mL glass beaker. 0.2 M sodium hydroxide solution was
+prepared by dissolving 0.799 g of sodium hydroxide in 100 mL of water. The sodium hydroxide
+solution was then mixed into the magnesium nitrate solution under constant stirring on a
+magnetic stir plate. The mixture of magnesium nitrate and sodium hydroxide was left on the stir
+plate for 2 hours to react. The sodium hydroxide reduced the magnesium nitrate to form
+magnesium hydroxide precipitates and sodium nitrate in solution. After 2 hours, stirring was
+ceased and the magnesium hydroxide precipitates were allowed to settle at the bottom of the
+beaker (Figure 3).
+
+Figure 2. MgO produced in the microwave is deposited on the underside of a glass microscope slide.
+
+3
+
+A
+
+B
+
+Figure 3. (A) Magnesium nitrate and sodium hydroxide mixing on a stir plate. (B) Cloudy white
+magnesium hydroxide precipitate settles to the bottom of the aqueous solution.
+
+Once settled, the supernatant was removed and ~50 mL of ethanol was added to it in a washing
+step. The suspension was then left to settle overnight after which the washing step of removing
+the supernatant was removed and adding ~50 mL of ethanol was repeated. After letting the
+precipitate settle overnight once again, the supernatant was removed and the suspension was left
+uncovered under a laminar flow hood for approximately 8 hours. After approximately half of the
+remaining solvent had evaporated, the sample was placed in a Fisher Scientific Isotemp™ Oven
+at 110ºC for 12 hours to remove any remaining solvent (Figure 4).
+
+Figure 4. Dry magnesium hydroxide on the bottom of the beaker after oven drying.
+
+4
+
+After being removed from the oven, the magnesium hydroxide was transferred from the beaker
+to a small alumina crucible for calcination. Calcination of the magnesium hydroxide was carried
+out in a Fisher Scientific Isotemp™ Muffle Furnace at 500ºC for 4 hours. The crucible was then
+removed and allowed to air cool to room temperature (Figure 5). At this point the process for
+producing MgO nanoparticles was complete and the sample was weighed and transferred to a
+plastic test tube for later analysis. 0.2601 grams of MgO nanoparticles was produced using this
+method.
+
+Figure 5. The MgO clumps together in flakes. Agitation of the flakes breaks them up into a fine powder.
+
+2.3 Characterization
+2.3.1 SEM
+To determine the structure of the materials produced, they were first examined using a scanning
+electron microscope (SEM). The samples were not sputtered with conductive metal, but left in
+their as-synthesized condition. For both microwave and aqueous samples, an adhesive copper
+tape was contacted to the powder and placed on an electrically conductive SEM sample holder.
+Secondary electron SEM images were taken of the coated surface of the glass slides used in the
+microwave process. This method was unable to produce SEM images in which the particle
+features were visible, although it did show the presence of small particles, 2 microns in size or
+smaller resulting from microwave synthesis (Figure 6).
+
+5
+
+A
+
+B
+
+Figure 6. SEM images of MgO produced by (A) microwave synthesis and (B) aqueous synthesis.
+
+2.3.2 TEM and EDS
+Because of the small size of the nanoparticles being produced and their non-conductive nature,
+the samples were imaged using the Philips CM200 transmission electron microscope (TEM) at
+Lawrence Berkeley National Laboratory. MgO nanoparticles were dusted onto Formvar-coated
+copper TEM grids for analysis. Energy dispersive x-ray spectrometry (EDS) was also performed
+with this TEM to determine the composition of the produced material.
+2.4 Life Cycle Assessment
+Life cycle assessment (LCA) is a technique used to evaluate the environmental impact of a given
+process or product. For products, life cycle assessment generally consists of 5 different phases:
+materials, manufacturing, transportation, use, and end of life. LCA usually looks at one or more
+impact categories, such as embodied energy, toxicity, and global warming potential (GWP).
+GWP is a relative measure of how much of an impact a greenhouse gas has on the environment.
+GWP is measured in kilograms of CO2 equivalent produced per kilogram of product. The goal of
+this LCA was to find the embodied energy and GWP of the MgO nanoparticles produced via
+each of the microwave and aqueous methods. The LCA performed for this project includes the
+materials and processes (manufacturing) used to produce the MgO nanoparticles. This LCA does
+not explore the transportation, use, or end of life of the MgO nanoparticles. This LCA also does
+not include the embodied energy or GWP of the stir plate, microwave, oven, or furnace used in
+6
+
+the synthesis methods, as the embodied energy and GWP data for these items could not be
+reliably obtained.
+
+In conducting the LCA, material and energy flows for each synthesis method were closely
+tracked. Material inputs were measured by their consumption in grams. The power consumption
+of the microwave and stir plate were measured using an Extech PQ2071 AC Clamp Meter. The
+power consumption of the oven and muffle furnace were estimated based on their power ratings.
+Emissions due to electricity usage, 0.2074 kg CO2/kW-h, was based on the PG&E’s 2009-2013
+emissions average. CO2 equivalence for other greenhouse gases was based on the IPCC Fifth
+Assessment Report6. The embodied energy and GWP were obtained using CES Edupack 2015
+software unless otherwise stated. The values of embodied energies and flows are shown in Table
+1.
+Table 1. Material Embodied Energies and Global Warming Potentials for MgO Nanoparticle Synthesis
+Materials
+
+Embodied Energy (MJ/kg MgO)
+
+GWP (kg/kg MgO)
+
+Magnesium7 *
+
+187.95 - 211.11
+
+25 - 47
+
+Steel Wool
+
+62.2 - 68.6
+
+5.78 - 8.19
+
+Alumina
+
+49.5 - 54.7
+
+7.080 - 7.837
+
+Silica
+
+2.25 - 2.49
+
+7.080 - 7.837
+
+Primary Production Cellulose
+
+49 - 54
+
+3.092 - 3.420
+
+Ethanol8 **
+
+4.816
+
+0.277†
+
+Nitric Acid9
+
+6.000 - 9.267
+
+2.065
+
+Magnesium Nitrate ***
+
+35.902 - 42.474
+
+5.852 - 9.458
+
+Sodium Hydroxide10
+
+3.5
+
+0.633
+
+Water11 ****
+
+0.011359
+
+0.000654†
+
+† When GWP was not given for a material, an approximation was calculated using embodied energy and
+PG&E’s 2009-2013 GHG emission averages.
+* Embodied energy totaled from burning of fuels and electricity usage.
+** Values converted from BTU and gallons.
+*** Embodied energy and GWP calculated from values for magnesium and nitric acid using stoichiometric
+ratios.
+**** Converted from GJ/mega gallon.
+
+7
+
+3. Experimental Results
+3.1 Microwave Synthesis Results
+3.1.1 TEM
+The TEM images of the MgO particles were much more revealing than the SEM images. The
+particles produced by microwave synthesis took the form of nanocubes in the same manner of
+magnesium smoke particles (Figure 7).
+
+Figure 7. TEM images of MgO nanocubes and microparticles produced by microwave synthesis. (TEM
+images courtesy of Prof. Jean Lee)
+
+Not all of the particles produced in microwave synthesis are nanoparticles. Some of the particles
+had characteristic dimensions of greater than 100 nm. However, this method also produced
+particles smaller than 25 nm.
+8
+
+3.1.2 EDS
+EDS results show that the MgO particles produced by microwave synthesis are of high purity.
+The EDS spectrum shows that magnesium, oxygen, and copper were the only elements detected
+in the microwave samples (Figure 8). The copper detected by EDS likely comes from the copper
+grid that the sample is mounted on for TEM.
+
+Figure 8. MgO nanoparticles produced by the microwave synthesis method exhibit clear peaks for
+magnesium and oxygen. Copper peaks are present that are likely due to the copper TEM grid. (EDS
+data courtesy of Prof. Jean Lee)
+
+None of the iron or alloying elements from the steel wool were detected in the MgO particles. It
+is possible that when the steel wool combusts, it immediately forms an ash that settles on the
+bottom of the crucible rather than becoming dispersed in air.
+
+Table 2 shows the quantitative composition results from EDS for particles produced using the
+microwave synthesis method. The ratio of oxygen to magnesium is nearly 1:1 in terms of atomic
+percent. From this data it can be concluded that the particles are made of high purity MgO.
+
+3.2 Aqueous Synthesis Results
+3.2.1 TEM
+The TEM micrographs revealed that the particles produced by the aqueous synthesis method
+were morphologically different than those produced by the microwave synthesis method (Figure
+
+9
+
+9). While particles produced by microwave synthesis were cubes with a wide range of sizes, the
+particles produced by aqueous synthesis tended to be round and between 50 and 100 nm.
+Table 2. Composition of MgO Nanoparticles Produced by Microwave Synthesis
+Element
+
+Weight %
+
+Atomic %
+
+O
+
+34.53
+
+47.08
+
+Mg
+
+54.98
+
+49.32
+
+Cu
+
+10.48
+
+3.6
+
+100
+
+100
+
+Totals
+
+Figure 9. MgO nanoparticles produced by aqueous synthesis. The particles are rounder in shape than
+those produced by microwave synthesis, but still appear to be crystalline, having some flat facets.
+(TEM images courtesy of Prof. Jean Lee)
+
+10
+
+3.2.2 EDS
+The EDS spectrum from the MgO synthesized by the aqueous method shows oxygen, carbon,
+and silicon in addition to the expected magnesium and oxygen (Figure 10). As with the previous
+EDS results, it is likely that the copper is present due to the TEM grid. Carbon is likely present
+from the thin Formvar film coating the TEM grid. The small silicon peak is likely from the EDS
+detector.
+
+Figure 10. EDS spectrum of MgO nanoparticles produced by aqueous synthesis. (EDS data courtesy of
+Prof. Jean Lee)
+
+The composition of the nanoparticles was given in terms of weight percent (Table 3). The
+relative quantities of oxygen and magnesium are compared to each other in Table 4. Pure MgO
+is 38.8 weight % oxygen and 61.2 weight % magnesium, suggesting that the MgO particles
+produced by the aqueous method is oxygen-rich. This excess oxygen may be due to the presence
+of residual magnesium hydroxide and / or the oxygen in the Formvar film.
+
+11
+
+Table 3. Composition of MgO Nanoparticles Produced by Aqueous Synthesis
+Element
+
+Weight %
+
+Atomic %
+
+C
+
+30
+
+50.0
+
+O
+
+18
+
+22.5
+
+Mg
+
+21
+
+17.3
+
+Si
+
+1
+
+0.7
+
+Cu
+
+30
+
+9.5
+
+100
+
+100
+
+Totals
+
+Table 4. Relative Amounts of Oxygen and Magnesium in Nanoparticles Produced by Aqueous Synthesis
+Element
+O
+Mg
+
+Weight %
+46.2
+53.8
+
+Atomic %
+56.6
+43.4
+
+3.3 Life Cycle Assessment Results
+Once the material flows were measured, the energy inputs from materials were calculated by
+multiplying the mass of each material used for synthesis with its embodied energy and adding up
+the results. This sum was then added to the measured or estimated values for power
+consumption to get the total energy input for the process. This total energy was then divided by
+the mass of MgO produced to estimate the embodied energy of the nanoparticles produced. The
+process was then repeated with GWP in place of embodied energy to find the GWP of the
+produced MgO nanoparticles. The results of the LCA can be seen in Figure 11.
+
+The aqueous synthesis approach produces MgO nanoparticles with over ten times the embodied
+energy and GWP of those produced by microwave synthesis. The reason for the disparity
+becomes clear upon examination of the energy and GWP contributions by source for each
+method (Figures 12, 13, 14, and 15).
+
+For the microwave synthesis method, the biggest source of embodied energy was the cleaning
+supplies. The major contributor in this category was cellulose Kimwipes used to clean the
+crucible and other tools. The contribution of the Kimwipes is large because for every 15-17 mg
+of MgO nanoparticles produced, about 3 grams of primary production cellulose in the form of
+Kimwipes was used for cleaning equipment and tools.
+12
+
+Global Warming Potential
+
+Embodied Energy
+45000
+
+700000
+
+749209
+± 28
+
+600000
+500000
+400000
+300000
+200000
+100000
+
+40000
+
+GWP (kg CO2/kg MgO)
+
+Embodied energy (MJ/kg MgO)
+
+800000
+
+30000
+25000
+20000
+15000
+10000
+
+5970
+± 550
+
+42579
+± 11
+
+35000
+
+5000
+
+416
+± 59
+
+0
+
+0
+Microwave
+
+Aqueous
+
+Microwave
+
+Aqueous
+
+Figure 11. LCA results showing embodied energy and GWP for each of the microwave and aqueous
+methods of synthesizing MgO.
+
+For the aqueous synthesis method, the electricity used in the stir plate, oven, and furnace makes
+up the biggest embodied energy contribution. This is due to the fact the oven and furnace are run
+at high temperatures for a long amount of time, and only about 0.26 grams of MgO were
+produced using equipment made for heat treating macroscale samples. The same trends observed
+with the embodied energy for each of the two synthesis methods can be seen with their GWPs
+(Figure 13).
+
+4. Discussion
+4.1 Environmental Implications
+This study suggests that the microwave method for producing MgO nanoparticles used less
+energy and has a lower GWP than the aqueous synthesis method, but there are other
+environmental factors that were not taken into account. If the processes were optimized and the
+quantity of material being processed was increased, there would likely be a dramatic decrease in
+embodied energy and GWP for both methods. None of the equipment in this study was used
+anywhere near full capacity save for the stir plate in the aqueous synthesis method. In addition to
+GHG emissions, other forms of waste should be considered. Microwave synthesis produces solid
+waste in the form of iron oxide and MgO ash while aqueous synthesis produces a solution of
+sodium nitrate. Due to the lengthy high temperature heat treatments required for the aqueous
+13
+
+synthesis method, the microwave synthesis method (or possibly another combustion synthesis
+method) would likely be the more environmentally friendly option.
+
+Sources of embodied energy to produce 1 kilogram of MgO using
+microwave synthesis
+4000
+
+3089 ± 342
+
+GWP (kg CO2/kg MgO)
+
+3500
+3000
+2500
+2000
+
+1581 ± 99
+
+1500
+
+791 ± 50
+
+1000
+
+387 ± 47
+
+500
+
+122 ± 14
+
+0
+Magnesium Steel Wool
+
+0.5
+
+0.2
+
+Alumina
+Crucible
+
+Glass Slide
+
+Cleaning
+Supplies
+
+Ethanol
+
+Electricity
+
+Sources of embodied energy to produce 1 kilogram of MgO using
+aqueous synthesis
+900000
+
+Embodied energy (MJ/kg MgO)
+
+800000
+
+736526
+
+700000
+600000
+500000
+400000
+300000
+200000
+100000
+0
+
+205
+
+0
+
+10718
+
+180
+
+1509
+
+Magnesium
+nitrate
+
+Alumina
+crucible
+
+Sodium
+Hydroxide
+
+Cleaning
+Supplies
+
+Ethanol
+
+44
+Electricity
+
+Water
+
+Figure 12. Breakdown of contributions to the embodied energy associated with the microwave synthesis
+method (top) and the aqueous synthesis method (bottom). The darker shaded regions show the range of
+embodied energy contributions.
+
+14
+
+250
+
+Contributions to emissions when producing 1 kg of MgO using microwave
+synthesis
+
+195 ± 22
+GWP (kg CO2/kg MgO)
+
+200
+
+150
+
+100
+
+91 ± 6
+
+71 ± 26
+46 ± 3
+
+50
+
+13 ± 3
+0
+Magnesium
+
+Steel Wool
+
+0.07
+
+0.02
+
+Alumina
+Crucible
+
+Glass Slide
+
+Cleaning
+supplies
+
+Ethanol
+
+Electricity
+
+Contributions to emissions when producing 1 kg of MgO using aqueous
+synthesis
+50000
+
+42432
+
+45000
+
+GWP (kg CO2/kg MgO)
+
+40000
+35000
+30000
+25000
+20000
+15000
+10000
+5000
+0
+
+46 ± 11
+
+0.005
+
+2
+
+11
+
+87
+
+Magnesium
+nitrate
+
+Alumina
+Crucible
+
+Sodium
+Hydroxide
+
+Cleaning
+Supplies
+
+Ethanol
+
+3
+Electricity
+
+Water
+
+Figure 13. Breakdown of contributions to the GWP associated with the microwave synthesis method (top)
+and the aqueous synthesis method (bottom). The lighter-shaded regions span the range of GWP
+contributions.
+
+15
+
+4.2 Structure of Produced MgO Nanoparticles
+Microwave synthesis produced nanocubes with a wide range of sizes and what are likely to be
+{100} facets corresponding to the Wulff construction for MgO nanoparticles. Aqueous synthesis,
+on the other hand, produced rounder nanoparticles of more consistent size and shape. The
+difference in shape may be due to a variety of factors. The shape of the MgO nanoparticles
+produced by the aqueous synthesis method is likely due to the diffusion of surface atoms
+resulting from the MgO particles being heated at an elevated temperature for a longer time in the
+furnace in comparison to the microwave synthesis method. As temperature increases, the
+differences in the surface energies of various crystalline planes can decrease, leading the
+equilibrium shape to be more spherical, rather than favoring only the lowest energy surfaces12.
+The structure could also relate to how magnesium hydroxide precipitates out of aqueous solution.
+It is possible that after calcination, the shape of the particles doesn’t substantially change when
+the material is converted from magnesium hydroxide to MgO as both materials are solids and
+rely on diffusion to change shape.
+
+4.3 Uncertainty in Data and Results
+Neither synthesis process was optimized for efficiency. This may skew the results in favor of the
+process that just happened to be more efficient. The processes studied were likely created for
+laboratory study and for obtaining quick results. While this study encompasses the energy and
+materials used to produce MgO nanoparticles using these two methods, some of the equipment
+used were not included in the LCA. This was due to the difficulty in finding reliable estimates
+for their embodied energy and GWP. The equipment that was not included are the microwave,
+the stir plate, the oven, and a muffle furnace. Because the microwave is the only item missing
+from the microwave synthesis LCA in contrast to much of the equipment not being included in
+the aqueous synthesis LCA, the addition of the missing equipment to the LCAs is expected to
+have a greater impact on the embodied energy and GWP of MgO nanoparticles produced via
+aqueous synthesis. On the other hand, because lab equipment often has a long lifetime, the
+impact of adding these appliances may be negligible in relation to the materials and energy
+inputs if the equipment is used to produce a large quantity of MgO particles. Other areas that this
+study did not explore are the energy costs of transporting material, or the effects of scaling
+
+16
+
+production. The estimations made for the energy consumption of the oven and furnace may be
+very high as no empirical data was collected.
+
+5. Conclusions
+MgO particles produced by microwave synthesis form well-defined nanocubes with a wide
+distribution of sizes including microscale particles (16 to 350 nm). MgO nanoparticles produced
+by aqueous synthesis are rounder than those produced by microwave synthesis and appear to
+have a narrower size distribution (between 30 and 90 nm).
+
+At laboratory scale, the embodied energy and GWP of MgO nanoparticles produced using the
+microwave synthesis method (5970 ± 550 MJ/kg and 416 ± 59 kg CO2/kg, respectively) were
+found to be significantly less than those produced by aqueous synthesis (749,209 ± 28 MJ/kg and
+42579 ± 11 kg CO2/kg, respectively) using LCA.
+
+6. Acknowledgments
+This work was partially performed at the Molecular Foundry, Lawrence Berkeley National
+Laboratory, and was supported by the Office of Science, Office of Basic Energy Sciences,
+Scientific User Facilities Division, of the U. S. Department of Energy under Contract No. DEAC02-05CH11231.
+I would also like to thank Professor Jean Lee for providing me with guidance and support.
+
+17
+
+7. References
+1. Kumar, Dalip, V. Buchi Reddy, Braj G. Mishra, R.k. Rana, Mallikarjuna N. Nadagouda, and
+Rajender S. Varma. "Nanosized Magnesium Oxide as Catalyst for the Rapid and Green
+Synthesis of Substituted 2-amino-2-chromenes." Tetrahedron 63.15 (2007): 3093-3097.
+ScienceDirect. Web. 18 Nov. 2015.
+2. Choi, Sunho, Jeffrey H. Drese, and Christopher W. Jones. "ChemInform Abstract: Adsorbent
+Materials for Carbon Dioxide Capture from Large Anthropogenic Point Sources."
+ChemSusChem 2.9 (2009): 796-854. Wiley Online Library. Web. 18 Nov. 2015.
+3. Ozgur, Tayfun, Gökhan Tuccar, Erinç Uludamar, Ali Can Yilmaz, Ceyla Güngör, Mustafa
+Ozcanli, Hasan Serin, and Kadir Aydin. "Effect of Nanoparticle Additives on NOx Emissions
+of Diesel Fuelled Compression Ignition Engine." International Journal of Global Warming
+IJGW 7.4 (2015): 487. InderScience Online. Web. 18 Nov. 2015.
+4. Takahashi, Naoyuki. "Simple and Rapid Synthesis of MgO with Nano-cube Shape by Means
+of a Domestic Microwave Oven." Solid State Sciences 9.8 (2007): 722-724. Web.
+5. Park, Jo-Yong, Yun-Jo Lee, Ki-Won Jun, Jin-Ook Baeg, and Dae Jae Yim. "Chemical
+Synthesis and Characterization of Highly Oil Dispersed MgO Nanoparticles." Journal of
+Industrial and Engineering Chemistry 12.6 (2006): 882-887. Web.
+6. Myhre, G., D. Shindell, F.-M. Bréon, W. Collins, J. Fuglestvedt, J. Huang, D. Koch, J.-F.
+Lamarque, D. Lee, B. Mendoza, T. Nakajima, A. Robock, G. Stephens, T. Takemura and H.
+Zhang, 2013: Anthropogenic and Natural Radiative Forcing. In: Climate Change 2013: The
+Physical Science Basis. Contribution of Working Group I to the Fifth Assessment Report of
+the Intergovernmental Panel on Climate Change [Stocker, T.F., D. Qin, G.-K. Plattner, M.
+Tignor, S.K. Allen, J. Boschung, A. Nauels, Y. Xia, V. Bex and P.M. Midgley (eds.)].
+Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA.
+7. Ehrenberger, Simone I., Stephan A. Schmid, Shaobo Song, and Horst E. Friedrich. "Status
+and Potentials of Magnesium Production in China: Life Cycle Analysis Focussing on CO2eq
+Emissions." German Aerospace Center (DLR) (n.d.): n. pag. Elib.dlr.de. Web.
+8. USDA. United States of America Office of Energy Policy and New Uses. 2015 Energy
+Balance for the Corn-Ethanol Industry. By Paul W. Gallagher, Winnie C. Yee, and Harry S.
+Baumes. USDA, Feb. 2016. Web.
+
+18
+
+9. Kirova-Yordanova, Zornitza. "Application of the Exergy Method to the Environmental
+Impact Estimation: The Nitric Acid Production as a Case Study." Energy 36 (2011): 37333744. ScienceDirect. Web.
+10. Thannimalay, Letchumi, Sumiani Yusoff, and Norliyana Zin Zawawi. "Kirova-Yordanova,
+Zornitza. " Life Cycle Assessment of Sodium Hydroxide" Australian Journal of Basic and
+Applied Sciences 7.2 (2013): 421-431. Repository.um.edu.my. Web.
+11. Mo, Weiwei. Water 's Dependence on Energy: Analysis of Embodied Energy in Water and
+Wastewater Systems. Diss. U. of South Florida, 2012. University of South Florida Scholar
+Commons. Web.
+12. Geysermans, P., F. Finocchi, J. Goniakowski, R. Hacquart, and J. Jupille. "Combination of
+
+(100), (110) and (111) Facets in MgO Crystals Shapes from Dry to Wet
+Environment." Physical Chemistry Chemical Physics (2009): n. pag. Web.
+
+19
+
+

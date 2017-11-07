@@ -1,0 +1,1253 @@
+SKYCSR: OPTIMAL COMMUNICATION METHODS FOR COORDINATING GROUND
+SUPPORT IN A PRIVATE AND GENERAL AVIATION SETTING
+
+A Senior Project submitted
+In Partial Fulfillment
+of the Requirements for the Degree of
+Bachelor of Science in Industrial Engineering
+
+the Faculty of California Polytechnic State University,
+San Luis Obispo
+
+by
+Jessica Burke
+March, 2016
+
+Graded by:______________ Date of Submission__________________________
+Checked by:_____________ Approved by:_____________________________
+
+1
+
+ABSTRACT
+SKYCSR
+
+Jessica Burke
+
+Delays due to miscommunication of between the pilot and ground service providers are increasing. The
+objective of this project is to develop a new method of communication between pilots, line service technicians
+and customer service agents. This will be achieved first through an investigation into current methods and state
+of the industry, followed by a survey conducted with a group of pilots and flight schools. This culminates in a
+web application that will take the deficiencies identified in the survey, to make sure ground service or fuel
+orders are explicitly clear and minimize the probability of a mis-fueling, overlooked fueling, or anything else
+that could cause a delayed ground service and unhappy customer. The web application, named “SkyCSR” was
+developed in Visual Studio in an ASP.NET environment. It has an area for FBO’s to login and view inbound
+arrivals as well as upcoming fuelings. The application also has a place for pilots to input their ground service
+needs and also a separate page for fuel orders. During the two iterations, the web application received positive
+feedback, with most of those who reviewed it saying it would be useful to have. The down fall, is that pilots use
+so many apps already that it is difficult to get a stand-alone app, like this one, “off the ground” so to speak. The
+recommendation for this web application would be to try an integrate it with already existing applications and
+websites (i.e. ForeFlight, FltPlan.com) that are already widely used and have saturated the pilot market, but not
+yet developed a side for the Fixed Base Operators.
+
+2
+
+ACKNOWLEDGEMENTS
+CAL POLY INDUSTRIAL ENGINEERING – I couldn’t have asked for a better or more comprehensive and enriching
+undergraduate experience- the faculty, knowledge and industry experience makes for an unparalleled education.
+Thank you for making the Cal Poly Industrial Engineering degree highly regarded by industry.
+ACIJET – Thank you for letting me take surveys and annoy your employees for information. You have all been
+extremely supportive, incredibly helpful, and downright fun over the past three years.
+
+.
+
+3
+
+ACRONYM COLLECTION
+FBO – Fixed Base Operator
+CSR – Customer Service Representative
+ICAO – International Civil Aviation Organization
+UNICOM – Universal Communications
+GSE – Ground Support Equipment
+APU – Auxiliary Power Unit
+GPU – Ground Power Unit
+TSA – Transportation Security Agency
+AFP – Airspace Flow Program
+GDP – Ground Delay Program
+ETMS – Enhanced Traffic Management System
+100LL – 100 Low Lead or AvGas
+Jet A – Jet Fuel
+
+4
+
+TABLE OF CONTENTS
+SKYCSR: OPTIMAL COMMUNICATION METHODS FOR COORDINATING GROUND SUPPORT IN A PRIVATE AND
+GENERAL AVIATION SETTING................................................................................................................................................ 1
+ABSTRACT ........................................................................................................................................................................... 2
+ACKNOWLEDGEMENTS.......................................................................................................................................................... 3
+LIST OF FIGURES ................................................................................................................................................................... 7
+LIST OF TABLES ..................................................................................................................................................................... 8
+INTRODUCTION ...................................................................................................................................................................... 9
+BACKGROUND ...................................................................................................................................................................... 11
+GENERAL AVIATION ........................................................................................................................................................ 11
+CURRENT STATE OF AVIATION....................................................................................................................................... 12
+CHARTER OPERATIONS (PART 135/PART 91) ................................................................................................................ 13
+PSYCHOLOGY OF WAITING ............................................................................................................................................. 15
+FINANCIAL JUSTIFICATION ............................................................................................................................................. 17
+LITERATURE REVIEW.......................................................................................................................................................... 18
+PEER-REVIEWED RESOURCES ........................................................................................................................................ 18
+DATA COLLECTION ............................................................................................................................................................. 19
+TIME STUDIES .............................................................................................................................................................. 19
+FUELING LOGS ............................................................................................................................................................. 20
+DESIGN ................................................................................................................................................................................. 21
+CURRENT WEB APPLICATIONS ....................................................................................................................................... 21
+SURVEY ............................................................................................................................................................................. 22
+LOGIC DEVELOPMENT .................................................................................................................................................... 23
+WEB APPLICATION .......................................................................................................................................................... 24
+SCHEDULED ARRIVALS ............................................................................................................................................... 24
+SCHEDULED FUELINGS ................................................................................................................................................ 25
+CREATE FBO LOGIN & FBO HOME SCREEN ............................................................................................................ 26
+METHODOLOGY ................................................................................................................................................................... 27
+FIRST ITERATION ............................................................................................................................................................. 28
+SECOND ITERATION ......................................................................................................................................................... 29
+WEB APPLICATION EXPANSION ..................................................................................................................................... 30
+CONCLUSION ........................................................................................................................................................................ 31
+WORKS CITED...................................................................................................................................................................... 34
+5
+
+APPENDICES ..................................................................................................................................................................... 36
+APPENDIX A – GENERAL AIRCRAFT/AIRPORT INFORMATION..................................................................................... 36
+APPENDIX B – SURVEY .................................................................................................................................................... 39
+APPENDIX C – WEB APPLICATION SCREEN SHOTS ....................................................................................................... 41
+APPENDIX D - DATA COLLECTION SAMPLES................................................................................................................. 45
+ROUTE MAPPING ......................................................................................................................................................... 46
+
+6
+
+LIST OF FIGURES
+Figure1 Traditional vs. Theoretical model of communication. ........................................................................... 28
+Figure2 Cessna Citation XLS .............................................................................................................................. 36
+Figure 3 Airport Diagram - Commonly used by pilots to denote where FBO's, Flight Schools, Terminals, Taxi
+ways, etc. are located on the field ......................................................................................................................... 36
+Figure 4 Cropped image of an "Instrument Flight Rules" Arrival Plate. The important part of this picture is to
+note the tall mountain ranges that occur north of the San Luis Obispo Airport. These mountain interfere with
+broadcasts regularly. ............................................................................................................................................. 37
+Figure 5 Screenshot of FlightAware .................................................................................................................... 37
+Figure 6 - Screenshot of TraqPak ......................................................................................................................... 38
+Figure 7 Beginning questions of the survey ......................................................................................................... 39
+Figure 8 - second set of questions in survey. Most of the answers allow the respondent to answer more than one.
+............................................................................................................................................................................... 40
+Figure 9 Final page, just contact information and primary airport ID .................................................................. 40
+Figure 10 - Schedule an arrival ............................................................................................................................. 41
+Figure 11 - Schedule a Fueling Page for Pilots/Flight Schools ............................................................................ 41
+Figure 12 FBO Profile Creation Page ................................................................................................................... 42
+Figure 13 FBO side of web application that shows scheduled arrivals for inbound aircraft on a particular day . 42
+Figure 14 FBO side of the web application that shows the upcoming fuel orders. .............................................. 43
+Figure 15 Logic developed in the first quarter to design the algorithm calculating the weights. There is a slight
+difference between this algorithm and the algorithm utilized, is that this algorithm looks at the actual amount of
+fuel being taken. This was omitted after pilot interviews responded that they didn’t always know how much,
+and they weren’t sure what form to put it in (bring up to so many pounds on board, put on pounds, put on
+gallons, etc.) .......................................................................................................................................................... 44
+Figure 16- Example of the Fuel Dispatch Log Used to record fuelings, times, dates, customers, gallons sold, and
+the responsible fueler. ........................................................................................................................................... 45
+Figure 17 Example of the truck sheets used by line service technicians to record gallons sold, meter numbers
+and gallons left in the truck. .................................................................................................................................. 45
+Figure 18 Example of the Jet Truck sheet. It's is used for the same purpose at the 100LL sheet, but with Jet A 45
+
+7
+
+LIST OF TABLES
+Table 1- Words that appeared frequently in order from greatest to least, from the 2011 study of FBO's. ........................... 14
+Table 2 - list of primary objectives for web application ....................................................................................................... 24
+Table 4 - Average yearly sales/hour ..................................................................................................................................... 47
+Table 3 - Average Number of AvGas Purchases Per Hour, Separated by quarter ................................................................ 47
+Table 5 - Average Number of Jet A Purchases/Hour ............................................................................................................ 48
+Table 6 Average, Max, Min of 100LL and Jet Uplifts and Gallons of fuel per uplift .......................................................... 49
+
+8
+
+INTRODUCTION
+Yelling is an exceptionally good motivator. A pilot at the end of an extensive day of flying can be cranky and
+easily set off by some of the most minor of details. On one particular day, the detail was a late taxi, resulting in
+the pilot yelling at the front desk for being incompetent. This outburst was the end-result of communication
+errors that snowballed out of control - culminating in a furious customer and a distraught customer service
+representative. Miscommunication of this magnitude is not a one-time offense; in fact it’s rampant throughout
+the aviation world and due in part to the fact that information flow relies on the archaic form of communication:
+radio frequencies. In the private and general aviation sector, inbound airplanes utilize UNICOM frequencies or
+Global Communication Services (in-flight telephones) to relay messages to ground support at their arrival
+airport. Frequently, these messages get lost in translation due to a number of limitations ranging from
+inattentive ground support who simply don’t hear the radio broadcast, to technological restraint where the
+frequency is literally bounced off a physical object (like a mountain range) and never reaches the Fixed Base
+Operator (FBO).
+There is no other industry on earth that exemplifies the statement “time is money” better than Aviation.
+According to Avinode (Ewalt, 2013), a respected aviation leader and jet brokering company, the most popular
+model of private jet in 2013, was the Citation XL/XLS/XLS+ (See Appendix A, Figure 4), which took off
+144,302 times at the rate of $3,388 USD per hour. In a business where it costs nearly $57 per minute to keep the
+engines running, zero delays is the prime objective, which is why maximum efficiency and pre-planning is the
+top goal for ground services. The aim of this project is to:
+
+
+Investigate most efficient means of communication between ground support and inbound aircraft, that
+ultimately minimizes the total idle and wait time of the aircraft.
+
+
+
+Conduct a survey and interview of pilots, flight schools, and flight instructors to gain an understanding
+of the perceived deficiencies.
+
+
+
+Propose a possible alternative using cell phone and web application technology.
+
+In order to accomplish this project, there will be a survey given to a group of pilots, flight schools, and flight
+instructors regarding their experiences with ground services and the delays that are associated. The survey will
+also be given to local flight schools and private pilots. After the survey has been administered and completed,
+the answers submitted will be evaluated and a potential solution will be foraged from feedback.
+
+9
+
+There must be a thorough investigation into the way communication happens now and the general feeling of
+whether or not it could be better, from pilots, customers, and service providers. The perspective of the pilot
+must be known in addition to the perspective of the ground crews, since both parties have a different point of
+view. This project will query known pilots and ground support crews for their input regarding communication
+or the short-comings of it. As this probe moves forward, the project will also explore whether or not an
+application on a cell phone would be a viable alternative. Given the feedback, the project will design an
+application or system that will allow communication between FBO’s and inbound aircraft to be more
+comprehensive and stable, in order to achieve the final goal of minimizing the number of delays due to ground
+support. The final deliverable will be a website with corresponding application that will be open to a small,
+local, FBO for beta testing.
+
+For the first point of this investigation- to determine the most efficient means of communication between
+ground support and inbound aircraft- this project will survey a group of ground services users (hence forth
+known as customers). By querying this group, a base of data will be gathered to expose what the customer’s
+opinion of ground service delays are. The investigation will look on the side of the ground service providers
+(hence forth known as line service) and how they perceive ground service delays. After the survey has been
+completed, a solution will be pieced together from the feedback gathered.
+
+The final investigation of the project is to look into the possible alternative of UNICOM frequencies. This plays
+heavily into the previous point, but is the actual process of creating the prototype after possible solutions have
+been identified from the survey. So far, there has been general consensus regarding the use of a web application
+for scheduling inbound aircraft and identify GSE needs as they arise, especially since most private jets are
+outfitted with wireless internet access.
+
+The rest of the report is designed as follows: sequentially following this section will be a background on the
+aviation industry and a review of current equipment scheduling models. Immediately after will be the design,
+the paper will go in to the finer details of the actual program including the algorithm used by the web
+application. After this will be an explanation of methods used in the experiment and testing, ending with a show
+of results and discussion about what works and what doesn’t. It will all be wrapped up with a conclusion.
+
+10
+
+BACKGROUND
+GENERAL AVIATION
+The term general aviation is a blanket term that references all aviation that isn’t commercial. It can include
+medical flights, sightseeing, business, corporate, flight lessons, personal flights, among others. According to a
+current and historical trends report, general aviation and air taxi services were responsible for 63% of all tower
+operations (Shetty & Hansman, 2012), leaving all commercial business to the remaining 34%. Bottom line,
+general aviation is a large component of the aviation sector. The Federal Aviation Administration’s published
+an annual document called the Federal Aviation Regulation/Aeronautical Information Manual (FARAIM)
+(Federal Aviation Administration, 2016), a collection of all up-to-date regulations and codes that administer
+laws on everything that relates, even remotely, to aviation.
+The FARAIM is divided into several sections or more commonly referred to as “Parts.” Commercial airlines are
+governed under Code of Federal Regulations (CFR), Title 14, Part 121 named “Operating Requirements:
+Domestic, Flag, and Supplemental Operations” as well as Part 125 – “Certification and Operations: Airplanes
+having a seating capacity of 20 or more passengers or maximum payload capacity of 6,000 pounds or more; and
+Rules Governing persons on board such Aircraft” (Federal Aviation Administration, 2016). This project deals
+exclusively with private and general aviation, which is regulated by Parts 135 (“Operating Requirements:
+Commuter and on-demand operations and rules governing persons on board such aircraft” (Federal Aviation
+Administration, 2016)) and Part 91 (“General Operating and Flight Rules” (Federal Aviation Administration,
+2016)). While part numbers may seem extraneous on the outside, it is imperative pilots and dispatchers know
+what part of the FARAIM they are operating under to ensure they are meeting the regulations set within the
+FAR. For example, all Part 135 must have flight plans filed with the FAA, even when flying under Visual Flight
+Rules1 (VFR) conditions.
+General aviation aircraft can fly into any airport, assuming the aircraft is equipped with all of the correct radios,
+GPS, and that there aren’t any weight, balance, or runway condition issues at the airport. Busy airports, such as
+Los Angeles International Airport (LAX), are considered a Class Bravo Airspace, which means the airplane in
+that airspace must adhere to strict communication and radio equipment guidelines outlined in the FARAIM.
+Barring the minimum equipment list, general aviation (GA) aircraft can go to which ever airport they want.
+Nearly every airport operating around the world has, at least one, Fixed Base Operator (FBO), which is
+responsible for supplying fuel and services to transient and commercial aircraft. FBO’s typically provide 2 types
+
+VFR – Visual Flight Rules: weather conditions generally clear enough to allow the pilot to see where they aircraft is
+going – no thick clouds, fog, rain, or snow to obstruct vision.
+1
+
+11
+
+of fuel: Aviation Gas (AvGas or 100 “Low Lead”) and/or Jet A. 100LL is for smaller, piston engine aircraft and
+is similar to automotive gasoline. Jet A is used only with Jet Engine aircraft, and is similar to diesel. GA pilots
+will fly in, leave their aircraft with the FBO until they return, whether it’s a few hours or a few days later,
+leaving the FBO responsible for the aircraft while they are gone. The FBO offers services such as hotels and
+rental cars, but also services like Ground Power Units (GPU), Air Starts, Auxiliary Power Unit (APU), lavatory
+services, crew lounge, catering, and other amenities.
+There are several ways to fly general aviation. The first and most prevalent is to rent airplanes - flight schools
+around the country will typically offer a deal on aircraft if a pilot wishes to rent the plane for a few hours or
+days. Another popular method is to buy aircraft. Groups of people will become fractional owners of an aircraft
+and use the aircraft when they want. In private aviation, there are hundreds of charter companies that will either
+buy aircraft to charter trips or act as a professional broker for a buyer who wants the aircraft to fly. One of the
+largest jet chartering companies is called NetJets, which relies a fractional ownership model. Customers by
+memberships to NetJets and become “fractional owners” in the aircraft. Their yearly fees go to maintenance of
+the aircraft and operational expenses such as the salary of the pilots, dispatchers and ground support services.
+NetJets operates worldwide and has an expansive fleet of over 650 aircraft, ranging from Embraer Phenom 300
+(Light Cabin) to Global G6000 (Large Cabin) (Fleet, 2016).
+CURRENT STATE OF AVIATION
+The 2008 recession took a massive hit on the general and private aviation industry. In 2015, the number of
+aircraft produced in the United States (2,400 aircraft) still hadn’t recovered to pre-2008 levels which hovered
+above 4,000 aircraft per year (General Aviation Market Data, 2015). In a report put out by the Massachusetts
+Institute of Technology, the number of towered operations in 1990 for commercials and general aviation
+operations, started at 35 million and 37 million, respectively, with a spike in 2000 as the number in operations
+for commercial aviation spiking to 42 million per year, and general aviation increasing to 40 million. After
+2000, oil prices began to increase exponentially causing the number of annual general aviation operating per
+year to begin an aggressive decline, reaching 25 million in 2010 (Shetty & Hansman, 2012) and still declining
+today.
+In a February 2014 hearing to the House of Representatives, Committee on Small Business, the GA industry
+hosts 223,000 aircraft in the US, carrying 166 million passengers annually to airports that have no commercial
+services provided (The FAA's Impact on Small Businesses In the General Aviation Industry, 2014).
+Additionally, the general aviation industry employs 1.2 million people in the US and adds $150 billion (USD)
+to the overall GDP. In his testimony, Representative Graves stated that “In recent years rising fuel costs, the
+12
+
+decline in the number of pilots in the United States, coupled with the drop off in airline production, has left the
+industry vulnerable” (The FAA's Impact on Small Businesses In the General Aviation Industry, 2014). With
+that said, Honeywell has released the expected trends for the upcoming decade, in which they forecast an
+increase in the number of wide/heavy body aircraft purchases (Prince, 2013).
+
+The problem has become the airlines running out of pilots to staff the aircraft. According to the Federal
+Aviation Administration (FAA), the number of US Civil Airmen has been steadily declining over the past
+several decades. According to the General Aviation Market Data, 2014 General Aviation Statistical Databook
+and Industry Outlook, the number of FAA pilot certificates issued in 2014 was 49,566, a steep decline from the
+102,301 licenses issued in 1980 (General Aviation Statistical Databook and 2015 Industry Outlook, 2015). This
+loss2 of human capital has made the need for efficiency within the aviation sector a necessity, especially as
+more and more pilots make the jump from charter (Part 135) to commercial (Part 121) flying.
+
+The current state of aviation is important to developing the next the generation of aviation web applications.
+The industry is accelerating its bounce back from the recession, with high market demand for larger and widerange aircraft, plus the increased globalization of business, private aviation has become an essential tool for
+companies to effectively manage. The next generation of tools used in the aviation industry will need to be
+oriented toward efficiency resources and effective time management.
+
+CHARTER OPERATIONS (PART 135/PART 91)
+
+2
+
+This loss is due, in part, to the rising cost of obtaining a pilot’s license. According to the Aircraft Owners and Pilots
+
+Association (AOPA) website, the average cost hovers around $9,900, only for the private pilot license. To become a Part
+121 (airline) or Part 135 pilot, a student would have to tack on an additional instrument ($8,000) , commercial ($7,000),
+and airline licenses ($15,000), totaling $40,000. The other option is to attend a flight school such as Airline Transportation
+Program (ATP), which, according to their website, boasts a program that can get a student from nothing all the way to a
+multi-engine license, at the cost of $63,995. The aviation community is getting ready for an unparalleled loss of trained
+pilots. The generation of pilots that make up the ranks in commercial companies, are getting ready to retire and leaving
+behind a large hole that is being inadequately filled. To get more people interested in flying, companies such as JetBlue
+offer programs to take people from nothing to a full Airbus A320 Type rating for $125,000.
+13
+
+In the Part 135 world (Grundig,
+2013)3, passengers aboard private jets
+pay top dollar for high quality
+treatment and beyond exceptional
+customer service. Private aircraft
+customers expect no TSA, no wait
+for the plane, speedy arrivals, quick
+
+Buzzwords from 2011 Aviation Business
+International Survey
+200
+180
+160
+140
+120
+100
+80
+60
+40
+20
+0
+
+1.2
+1
+0.8
+0.6
+0.4
+0.2
+0
+
+refuels, cars pulled around, exquisite
+catering, and no shortage of luxury.
+In a 2011 survey conducted by
+Aviation International News
+(Aviation International News, 2011),
+
+Table 1- Words that appeared frequently in order from greatest to least, from the 2011
+study of FBO's.
+
+1500 pilots where asked the question, what makes an FBO excellent? Of the responses gathered, 20% of
+included words like “quick,” “prompt,” “efficient,” while an additional 15% included “attitude,” “friendly,” and
+“courteous” – highlighting the factors of an excellent FBO and the duality of a business that must not only bring
+top quality customer satisfaction but also responsive and efficient attentiveness, with very restricted resources.
+It’s important for FBO’s to pay close attention to these kinds of surveys because it indicates exactly what will
+make or break a trip for a pilot and their passengers. Top notch service makes FBO’s competitive, keeps the
+customers returning to them, and will ultimately keep them in long term business
+The question remains how to keep the pilots happy with “prompt and efficient” service when the demand of jets
+varies widely and frequently. Charter companies will call ahead to set up an arrival, informing the FBO of their
+needs on the ground: transportation (rental car, limousine, personal car), hotel rooms, catering, wine tasting
+tours, whatever they need. This ensures that the FBO will arrange for the services ahead of time to make sure
+their aircraft is serviced quickly. These requests are typically for both the crew of the aircraft and the customers
+on board. Sometimes the charters don’t call ahead to the FBO, in which cases the pilots will typically set
+everything up or just arrive and get everything figured out on the ground. Normally, as the aircraft nears the
+airport; the crew of the airplane will call over the UNICOM frequency 5-15 minutes before landing, and alert
+the FBO of their needs on the ground, which may or may not have been set up previously. At this point, the
+FBO will get as much as they can, staged for the customers on the aircraft (rental car, catering, hotel
+reservations) so that they can have the services ready to go in order to minimize time idling and get their crew
+on their way.
+3
+
+FAR Part 135 applies to turbojet engine powered aircraft with 1-30 seats, non-transport category turbo-propeller powered aircraft
+with 10-19 seats, and transport category turbo props with 20-30 seats.
+
+14
+
+In addition to the needs of the customer, the crew will have a disparate set of needs – Ground Power Unit
+(electricity for avionics, cooling system, radios, while the engines are off), Auxiliary power, Air Start, Fuel, oil,
+De-ice, Icing-Inhibitors, lavatory services, oxygen services, dish washing, linen washing, catering for cabin
+attendants, among others. These needs are also communicated over frequency but take a second seat to the
+needs of the customer depending on whether the passenger(s) are being dropped off or picked up. The crew
+needs are accomplished after the customer has exited the ramp or gone into the FBO.
+Much too often, the needs of inbound aircraft are lost in translation, due to a couple reasons (1) radio frequency
+is picked up by a different FBO that operates on the same frequency, (2) Customer Service at the FBO doesn’t
+hear the radio call, and (3) Connection is bad enough to not be able to hear the incoming transmission. Some of
+these are avoidable, having a customer service agent near or around the radio in addition to having the volume
+sufficiently turned up, is a good resolution. The others are not so easily remedied – mostly due to technical
+limitations. Frequencies, for example, are limited. Frequency allocation is a long process, plus frequencies are
+used multiple times since the bandwidth being allocated by the National Telecommunication and Information
+Administration, is finite. Occasionally, a common frequency overlaps in airspace and causes some confusion on
+the ground as to which FBO in which city the plane is actually going to. Other times the broadcast will never
+actually make it to the FBO. Frequencies, depending on the energy and wavelength, have a limited distance – a
+distance that is sometimes overestimated by pilots. For the San Luis Obispo area, it’s commonly observed if
+airplanes call in too soon, the frequency will bounce off surrounding mountains and never makes it to the FBO
+(See Appendix A, Figure 6).
+PSYCHOLOGY OF WAITING
+An important proverb in the private aviation industry is “hurry up and wait.” Pilots scurry to get to their
+destinations on time, only to be delayed by late passengers, air traffic control, or flow times in to and out of
+busy airports. During the first iteration, a pilot made the comment that nothing was more frustrating than
+waiting on services and seeing the line technicians slowly meandering toward the fuel trucks or support
+equipment, especially when there are plane waiting for service. It’s clear that pilots assume there is going to be
+a wait: there are a limited number of line personnel, a limited number of equipment, and a somewhat endless
+supply of pilots and passengers needing something. It plays right into the psychology of waiting for services, or
+referred to as queuing by industrial engineers; should the pilot see the line working tireless to get all the
+requests met, that they are more readily appeased if their fuel or ground service is delayed, because they know
+it’s not late for a lack of trying, it’s late because there simply weren’t enough resources. According to the New
+York Times article, this is “perceived as fair” and they are willing to wait longer (Matter, 2012). Matter goes
+on to say there is a universally accepted principle when it comes to lines: first come, first served. Should this
+15
+
+queue deviate from the pattern in the slightest, the largest injustice has occurred and it makes those waiting in
+line very upset.
+While waiting on the ramp, the pilots have two priorities: make sure the plane is ready for take-off and make
+sure the plane is ready for take-off before the passengers arrive. The passengers that fly privately, are not
+interested in waiting for the fuel truck to finish fueling or the plane to be un-chocked or loaded up, they are
+interested in getting to their destination as quickly and smoothly as possible. The problem of delays seems to lie
+not only with the high impact airports, but also the small airports with no commercial services that have very
+few resources. Private FBOs at Los Angeles International or San Francisco International will see hundreds of
+aircraft in a single weekend, all needing services of some type. Luckily, chartered aircraft will typically allow
+for an hour of downtime between arrival time at the FBO and expected customer arrival time, in the hope that
+this will ameliorate any potential delays on the ground.
+Another important factor in waiting is the idea that if a business keeps people occupied while they wait, it will
+make them feel as though time is passing more quickly. This was discussed in Matter’s article, Why Waiting is
+Torture, where he included the point that a large number of passenger complaints at the Houston International
+Airport had to do with waiting too long for bags (Matter, 2012). The airports response? Make the route the
+passengers have to take from the airplane to the baggage carousel longer, giving the baggage handlers more
+time to get the bags off the aircraft and on to the conveyors. The passengers ended up with a route that was six
+times longer than the normal route, and the airports ended up with nearly zero complaints (Matter, 2012). This
+was also discussed in a lecture by Don Normal, who stated that “keeping them [customers] moving fast, keep
+them filled with interesting things to look at, interesting activities to do” will make the wait seem so much
+shorter (Norman, 2008). For FBO’s this could mean a multitude of things, for one requests can be filled in
+“Stages.” Typically the aircraft will request fuel, ground services (GPU or APU), and coffee/ice/newspapers. If
+the first two can’t be met right away, let the pilot know, then begin the coffee/ice/newspapers process while
+they are waiting for fuel or other services.
+Going forth, for any kind of aircraft support operation, it should be stressed that while safety is a definite first,
+customer service is a close second, and good customer service, as understood in the 2011 FBO Survey, means
+prompt and swift services. With that said, pilots understand that lack of resources, but they don’t comprehend
+line technicians slowly walking or meandering around on the ramp when there are clearly orders to be filled or
+services to be rendered. The most important psychological factor is to - apology for lack of a better word“look” busy.
+
+16
+
+FINANCIAL JUSTIFICATION
+A large part of the decision to do a web application, hinged on the financial justification. From the FBO
+perspective, a lost sale can result in the loss of thousands of dollars plus the possibility of the customer not
+wanting to return. To understand the financial value of a client, data was collected to understand the number of
+transient aircraft that receive services and the number of gallons sold per uplift. On average, a single day can
+bring in 18 Aviation Gas customers and 12 Jet A customers. Transient 100LL customers take an average of 40
+gallons per uplift, at an average price of $4.63 per gallons, means that the average customer will spend $185 per
+uplift. For Jet A, the average price being $3.61, and taking an average of 370 gallons per uplift, will spend
+$1335.70. Every aircraft that comes in for business, there is a huge value associated with it. The loss of one
+those customers, would mean losing not just that sale, but future sales as well.
+In addition to the lost sales, there is also the added savings of line personnel’s time. While it may not
+necessarily benefit the bottom line of the business or save money on the customer side, giving the FBO and,
+subsequently, the line service technicians a heads up regarding ground services will help them prepare the
+equipment, and not send them scrambling when the plane arrives. A typical aviation ramp can cover a few
+acres, making the movement of line service technician crucial. Should a line service technician not realize a
+plane is requesting a GPU, Air Start or fuel, they may have to back track for several minutes before arriving at
+the equipment needed, adding on more time to the fueling or services. According to the route maps that were
+observed over the course of a week, it was observed that the line would walk back and forth from the fuel truck
+3 to 4 times per hour, at a distance of 170 feet. Assuming they walk at a normal pace of 2 mph, which means it
+takes on average 5.34 minutes to get to the fuel trucks, which makes it 5641 minutes spent per year. At
+California’s current minimum wage of $10.00 per hour, a company can spend $950 on employees walking
+between the fuel trucks and the FBO.
+Any delays or malfunctions on the pilot side, as mentioned before, can be costly as well. The cost to operate and
+maintain a small aircraft like a Cessna 172, which flies an average of 200 hours per year, is around $23,000,
+without including fuel or landing costs (Finance). On the jet side, the cost of operating increases exponentially.
+To own and operate a used Cessna Citation XL/XLS, the average cost is $8.8 million dollars, with fixed costs
+per year running around $425,000 for maintenance and certifications (Van Allen Group, 2012). When the
+engines are running, the Citation operating cost per hour, including the fuel and operating costs run about
+$3,388 USD per hour (Ewalt, 2013). A late fueling or a late ground service could delay the beginning of the trip
+and add on additional time to the bill, resulting in unsatisfied customers and pilots.
+
+17
+
+LITERATURE REVIEW
+PEER-REVIEWED RESOURCES
+The subject of private aviation ground equipment movement and scheduling efficiency has had little research
+published. Private aviation necessitates a reactive response, scheduling can only help so much when most
+arrivals are unplanned or given a short hour or two notice. For the situations in which an FBO is overworked
+with the number of aircraft are near or over the available capacity of the FBO, the research found is based on
+the way triage algorithms are performed. In the aviation world, a First Come, First Serve (FCFS) method is not
+always the most optimal. An example being a small jet may request the use of ground service equipment (i.e.
+having the Ground Power Unit to keep the aircraft electronics running while the engines are off) for two or
+three hours until the passenger arrives, followed ten minutes later by other pilots who decides GPU assistance to
+start the plane, ten minutes.
+There is very minimal literature regarding the optimal ground services arrangement for aircraft that are private
+or general aviation, but plenty of literature regarding the airlines. In one piece titled Reducing Flight Delays
+Through Better Traffic Management (Sud, Tanino, & Wetherly, 2009), the system being tested is called AFP or
+Airspace Flow Program which was introduced as a solution to the Enhanced Traffic Management System
+(ETMS), a decision support tool that utilized the use of ground delays, causing significant wait and idle times to
+build up. The purpose of this paper was to investigate the use of Ground Delay Programs (GDP’s) and whether
+or not they were useful in managing large scale arrivals and departures. It was concluded the GDP’s do not
+work, and instead AFP is a much more time and cost effective style of managing arrivals and departure. While
+this Sud, Tanino, and Wetherly’s paper does not directly relate the investigation of this research, their allocation
+simulation technique is useful and may potentially contribute to analysis later on. The difference is that this
+paper can make assumptions about departure and arrivals times, whereas in the general and private aviation
+world, this assumption cannot be made.
+In another case study, a team investigated the movement paths of aircraft from one area of the airport to another
+in the most efficient way possible, in regards to both time and emissions. This problem applies to all pilots but
+doesn’t necessarily apply to ground support equipment. The motivation behind this piece was investigate the
+efficiency of aircraft movement on taxi ways before and after takeoff. While this large scenario doesn’t apply to
+the research of this paper, the routing mapping does. The team mapped the general steps of the aircraft, then
+applied the Quickest Path Problem with Time Windows (QPPTW) which uses “vertex based label-setting
+algorithm based on Dijsktra’s algorithm and can sequentially route aircraft on the airport surface, using a
+directed graph model of the airport” (Ravizza, Atkin, & Burke, 2014)
+18
+
+Similar to the way a doctor must determine the order of care for patients in the emergency room, so must
+ground service providers determine the customers who need the most attention, and allocate the resources as
+new needs become known. Similarly, a few papers on the topic of triage, advocate for short term, dynamic,
+scheduling that evolves throughout the day and make the case for blocking out times for the most important of
+surgeries or treatments, while less important calls are balanced in between (Rauner, Schaffhauser-Linzatti, &
+Niessner, 2012) (Herring & Herrmann, 2012). These papers commonly rely on capacity planning with finite
+amount of resources.
+Another line of thinking behind job shop scheduling is the use of genetic algorithms, which constantly evolve
+given new constraints and data, and eventually yield several optimal solutions. In this paper, assumptions such
+as processing times are determinable, each vehicle can be processed only one operation as a time, and that there
+are no restrictions, are applicable to the problem of ground support equipment scheduling, but they have a major
+difference: this paper assumes arrival times and departures are known, plus time spent at the terminal is fixed or
+previously know (Cheung, Ip, Lu, & Lai, 2005). These assumptions won’t hold up for the general/private
+aviation sectors since most of these times are influx and constantly changing, but parsing out the information
+yielded from the algorithm into readable Gantt chart was an inventive way to show results and the schedule for
+ground crews.
+
+DATA COLLECTION
+TIME STUDIES
+An important aspect in data collection is the time study. The study conducted for this project looked at the time
+it takes for line service technicians and customer service personnel to fill a customer order for fuel. There are
+two separate studies going on – one from the perspective of the customer service representative, the other from
+the perspective of the line service technician. The reason these time studies are delineated as such, is because
+there are discrepancies present between them due to differences in the time the order is read back versus the
+time the fuel is actually pumped. For example, a customer will call in an order to the customer service
+representative (CSR), and the CSR may become busy with other tasks and forget to call the order out to the line
+service techs. Having the two studies partitioned will reduce the discrepancies that may occur from the CSR not
+calling the fuel order out, or an LST not calling the fuel order back to the CSR.
+For CSR’s, the steps between receiving a fuel call and pushing the button to let the customer out the door, is
+fairly straight-forward. First the call/order is received, which is then called out to the line service technicians
+(LST). The LST’s then call back the fuel order to confirm the order and tail number is correct. The CSR then
+waits for the read back from the line service technician, which after receiving, calls back the account name, tail
+number, ending meter, gallon total, and a cap secured check. The CSR then proceeds to charging the customer
+19
+
+and the customer is then on their way. If this project had been concerned with 5s’ing the station, the steps in this
+process would be broken into micro-movements, times and distances. Since this project is concerned with only
+the major steps and times, the time study remains at a ‘macro’ level, especially since the CSR remains at the
+same location for most of the call.
+With the LST’s, it a similar story, but their tasks are much more easily broken up and regimented such as
+“Chock Truck”, “Ground Aircraft”, etc. While there are more steps and procedures for line service to follow,
+their tasks are easier to delineate and time (i.e. Fueling an aircraft is a prescribed method: chock truck, write
+meters down, ground aircraft, unreel hose, etc.). The LST time study begins with the initial call out of the fuel
+order, and ends as soon as they call the fuel order and gallon total back the CSR.
+FUELING LOGS
+As mandated by the FAA, companies that buy and sell fuel must maintain records of fuel sales for no shorter
+than three years after the exchange was conducted. This means there is copious amounts of digital fueling data
+since 2010, and even further back in paper format. Examples of fueling logs can be found in the Appendix,
+Figures 6, 7, 8. The benefit from this data is that dates and times are recorded for all fueling, which means
+accurate rates of fuel sales can be extracted. Additionally, accounting keeps a record of all fuelings, which were
+accessed to gather the averages of fueling amounts.
+There are a few key performance metrics gleaned from this data. After poring over umpteenth spreadsheets
+there are 6 main categories of fueling data that was collected.
+1) # of AvGas (100LL) uplifts per day and the average
+2) # of Jet A uplifts per day and the average
+3) Amount of AvGas sold per day and average
+4) Amount of Jet A sold per day and the average
+5) Average gallons sold per uplift (100LL/Jet)
+6) Rate of fuelings per hour.
+The first four (number of AvGas and Jet A uplifts per day and the gallons sold per day) can be learned from
+fueling data provided by the accounting department. In their spreadsheet, it has each uplift organized by day and
+gallons sold. Through this data, the actual and average number of uplifts per day can be gleaned. The fifth
+metric, average gallons of AvGas and Jet A sold per uplift, can be found in the same spreadsheet, after a bit of
+data re-organization and manipulation, namely adding up the gallons sold and dividing by the number uplifted
+that day.
+
+20
+
+Finally, the sixth metric, rate of fuelings per hour for AvGas and Jet A, were extracted through a manual
+method. Each day, the customer service representative begins a fuel dispatch sheet, in which the times are
+marked from when the fuel order is called out to line service until when the fuel call is finished. For this paper,
+the time the fuel call is called back is the time in which the fuel call is recorded. By going through every day of
+the 2012 year, one can tally up the number of fuel calls per hour, then using this data from January until
+December, averages and rates can be calculated, and trends can be extrapolated.
+For this research, the fueling logs for both Jet A and Avgas have been parsed out to create an accurate
+representation of the fuelings per hour, broken up by quarter. First is avgas. There is no significant change
+between the number of fuelings per hour, and per quarter, so an average an accurate representation of the yearly
+rate of fuelings. These do not account for the number of aircraft on the ramp at any given time, and,
+additionally, not all aircraft require fuel when they land, they may only be here for a quick pick up or drop off.
+The use of this data though, shows how tied up the resources are on the ramp. As displayed in the Appendix table 2, the average fuel call rates between, 0900 and 1300 hovers between 1 and 2, which means that 2 Avgas
+trucks and 2 line personnel are tied up taking care of those orders. Quarter 2 and Quarter 3 are the busiest for
+the FBO, at the times between 1000 and 1500, where the rates of fuel orders average 1.6 per hour.
+Next is the Jet A data (table 4). The average purchases of Jet fuel per hour reveal an interesting pattern. There
+are 3 distinct spikes in the rates of orders, one around 0800, another at 1200, and a final spike around 1600. This
+pattern is similar to that of a normal working day. The spike around 0800 is due to of the beginning of the work
+day; the jet is picking people up to take them to work, or possibly dropping them off, while the mid-day spike is
+the half day mark, where people either have meetings in the morning and travel in the afternoon, or vice versa.
+The final spike in the day is the reverse of the morning spike, where people are returning from work or coming
+from home. These spikes range from 1.5 to 2.5 jet calls per hour.
+DESIGN
+CURRENT WEB APPLICATIONS
+Websites such as ForeFlight, TraqPak, and Flightaware, which are ubiquitously in industry, are well known, and
+have already engaged the target audience for the SkyCSR web application (commercial and general pilots).
+TraqPak is a subscription based website that allows FBO’s to see the tail number of inbound aircraft, the type of
+aircraft, estimated arrival times, estimated time enroute, and the departure airport. There are no services that are
+included on either of these websites. According to their website, their web application offers live like tracking
+with “Fully integrated functionality driven by FlightView® active air traffic information” and offers a detailed
+historic activity data.
+21
+
+Other websites such as FlightAware, offer live tracking, maps, flight statuses, delays, all aircraft across all
+sectors (airline, private, general, etc.) The company also offers flight planning services such as “airport activity,
+flight and airport maps with weather, aviation statistics, flight planning and instrument flight rules procedures
+for airports in the US” (FlightAware, 2015).
+On the FBO side of the services planning, there aren’t any “industry standard” applications. Some companies
+use web applications called TraqPak, FlightExplorer, or Flightaware. Flightaware is limited only to the planes
+that have filed flight plans, leaving out a large portion of general aviation and VFR flights that don’t require a
+plan to fly. Flightaware is also for general information, meaning anyone, anywhere can access the information,
+which makes some aircraft owners weary, and pay to have their tail numbers blocked from tracking programs.
+FBO’s typically keep track of customer service requests with a Customer Resource Management (CRM) tool
+such as Microsoft CRM or the Oracle application Corridor. Corridor is tailor specifically to the aviation
+industry and has many extremely useful applications. Unfortunately, Corridor is unable to be linked to a web
+application where pilot can arrange an arrival and services needed, and relies on the customer service agent
+inputting all applicable information into the database.
+SURVEY
+The survey was administered to a group located at the San Luis Obispo Airport. Pilots included are general
+aviation pilots (Part 91), contract Pilots (Part 135), and flight schools who call for fuel from the local fuel
+provider. Those who took the survey have dealt with ground services directly – pilots, flight schools who call
+for fuel, etc.
+The goal of the survey (See Appendix B, Figures 7-9) is to take a general baseline for how the ground service
+technicians are doing so far and what the observed causes for delay are, from the customer’s (pilots)
+perspective. The survey included 8 questions, beginning with the participant’s involvement in aviation. It
+specifies classification of the participant, determining whether they are recreational flyers (flying for fun),
+instructors, or FAA Part 121, Part 135, or any other category they fall into. The following questions then ask
+about experiences with delays, how often they happen, and to give specific examples of delay causing behavior
+or scenarios they have personally under gone. The questions include areas for responders for free write
+responses, and the questions leave the answer open so that they participant can respond how they see if, without
+making them feel like their answers should be directed toward any one problem. The final question is a free
+response question and calls on the participants to recount any particular recurring issue or problem they see with
+ground support.
+From the responses (n=34), fueling operations generally run smoothly. 92% of surveyors are based at the local
+airport (KSBP), and they are divided between career pilots (Part 121/ Part 135) and instructor/student (Part
+22
+
+61/Part 91/Recreational), with the majority (85% of respondents) being Part 135. The majority of the
+respondents (25) stated that they were only delayed a few (1-3) times, while 7 respondents stated they had been
+delayed 2-5 times per month, with the last respondent saying they had never been delayed due to waiting for
+ground services. Delays were defined as waiting for services longer than 10 minutes.
+The next question asked what the causes for the delays seemed to be. By asked what the perceived causes are,
+the fuelers can understand how the customers perceive what their delay is being caused by. More than half of
+the respondents (21) reported that they believed their delays was due to the lack of line service personnel (the
+technicians that fuel the jets). A significant portion (14) also reported that their delays were due to their fuel
+order being forgotten or that there wasn’t enough ground service equipment to meet the demand. Other
+responses included “wrong fuel order being executed” and “undertrained staff.” A few respondents choose to
+respond in the write in section, one in particular responded with “lack of communication between ground
+service personnel” and “errors in catering/missing catering.”
+The final question of the survey asked respondents to list a particular instance in which they were delayed on
+the ground due to customer service/line service operations. The goal of this question was to tap into the
+particular memories that caused annoyance. For most pilots, there is always that “one” experience at a jet center
+or FBO that sticks in their mind as being the paragon of incompetence, which was what this question aimed to
+capture. Out of the 16 respondents, 8 responded with being delayed due to the fuel trucks not moving quickly
+enough, that the aircraft must wait for others to be fueled before them, or that there was not enough personnel
+manning the ground support equipment to meet the demand of the incoming aircraft.
+LOGIC DEVELOPMENT
+Once the survey was completed, and the idea for a web application was finalized, a good portion of time was
+spent on developing the logic behind the algorithm (Appendix C – Figure 15). The paper goes into more detail
+later on but generally, the algorithm works by evaluating the needs of the customer and ranking them based on
+how many services they will need on the ground. Services that are labor intensive, long, or directly relate to the
+customer have a heavier weight, while services that are easy to accomplish, may take only one technician or
+relate to the crew have a smaller weighting. The score they are given is the summation of the weights of the
+requested services. The algorithm then looks at whether the aircraft is quick turning or not, if they are quick
+turning the summed weight is multiplied by 10, if they are not quick turning, the summed weight is multiplied
+by 1. Weights are then categorized in to LOW, MED, or HIGH and recorded in the database.
+
+23
+
+WEB APPLICATION
+At the beginning of the project, it was important to identify the basic goals of what the application would be
+able to do. Based on the responses from the survey, there were a handful of tasks that the application must be
+able to do to provide any sort of relief to the ground support team:
+Table 2 - list of primary objectives for web application
+Schedule Arrivals
+Schedule Fuelings
+Create FBO Profile/FBO Login Ability
+Ability for FBO to see needs of inbound aircraft
+List of inbound aircraft organized by urgency
+
+The following sections run through the design of each page involved with the web application.
+SCHEDULED ARRIVALS
+After observing the general and private aviation, there were a few assumptions made regarding basic
+information needed to schedule and arrival. There is a specific reason that scheduling arrivals and fuelings are
+delineated separately. This has to do with understanding the general circumstance of the aircraft – if we know
+there is just a fueling scheduled, the aircraft is most likely already on the field, and the fueling can be done at
+any time or is a known customer. Arrivals are separated because it notes that the aircraft has yet to land on the
+field and may require additional services and assistance beyond fuel.
+The form (see Appendix Figure 6) asks for the most common of requests: Arrival airport identifier (a 4-letter
+code that signifies an airport), the FBO at the airport they are going to (since not all airports have the same
+FBO’s or only one), name, email, tail number, airplane type, arrival date, and arrival time.
+Once the “order” is submitted, an email will be sent to the pilot confirming their order, and an additional email
+will be sent to the email the FBO provides when they signed up. The web application, built primarily with
+ASP.NET and SQL, will organize the aircraft using an algorithm that “weighs” particular ground needs (See
+Figure 5). The more needs an aircraft has, the higher its “weight” becomes.
+The algorithm takes into account how close the aircraft is to landing, whether the aircraft is quick-turning, if
+they are taking fuel, if they have any rental car or personal vehicles that need to be pulled around planeside, etc.
+Aircraft that are landing the same day have a weight of 8, aircraft landing within a day or two have a weight of
+3 and landing outside of the two day window, weight of 1. The rest of the weights are as follows:
+24
+
+Event
+Quickturning Jet A
+100LL
+Rental Car
+Lavatory Service
+GPU
+Catering
+Airstart
+
+Weight
+YES – 10/ NO-1
+10
+7
+8
+3
+4
+4
+6
+
+All weights are added together, then multiplied by the quickturn weight, which is either Yes or No based on the
+pilots input. A score of higher than 110 is recorded as a “HIGH” urgency, a score lower than 40 means “LOW”
+urgency, while score that lie inbetween are recorded are “MED.” The weights were choosen based on time and
+resources expended, plus a consideration toward customer service. Weights ranging from 1 to 3 typically only
+require one line service technician or is a simple and relatively easy task. Weights ranked between 4 and 7, may
+require more technicians and may be more time consuming, while weights above 3 are considered more time
+consuming, hold more in terms of customer satisfaction or take the partipation of more than one technician.
+For example, while a rental car may only take one line service technician to deliver the car to the aircraft, is
+ranked as an 8 because it holds such a high customer satisfaction level. When customers have to wait for rental
+cars that should have been planeside on arrival, are typically dissatisfied with the level of service, and less likely
+to return to that particular FBO. Another example is the airstart. In terms of operability, the airstart is quite
+similar to the GPU, but more difficult to move, hook up to the aircraft and start, and generally takes a longer
+amount of time. It typically takes two technicians, which end up taking more resources away from the rest of
+the ramp, thus the airstart was ranked a 6, while the GPU is ranked a 4.
+After submitting, the web application updates the “Arrival History” table in the database through a series of
+SQL injections, then redirects the user to a “Thank you” page and asks if they want to schedule another arrival
+or if they would like to return to the home screen.
+SCHEDULED FUELINGS
+As mentioned before, the scheduling fuelings page is separate from the arrival scheduling page. Fuelings
+assume the aircraft is already on the field, and streamlines the process by not having to ask for additional
+services. The page (see Appendix Figure 5) opens with the airport identifier of where the aircraft is located, then
+asks for the FBO name where the aircraft is being stored. It then asks the basic questions: what type of fuel,
+fuel request, date and time this needs to be completed by (with an option for ASAP), the account name, tail
+number, and any special requests.
+25
+
+The requester can then submit the fuel order and have the application update the database and send a
+notification to the FBO of the fuel order, both through email and on the FBO’s website. The algorithm this
+webpage passes through is similar to that of the scheduled arrivals, but taking into account the psychology of a
+customer waiting, the most important algorithm is that they are fueled fairly and in the order in which they ask,
+also known as first come, first served. This website will still perform an algorithmic check and assign a weight,
+but these weights will be more at the discretion of the technician.
+The reasoning behind giving discretionary power to the line technician, is that there are often times multiple
+trucks running that can take care of fuelings. For example, an FBO with two trucks servicing an entire airport
+will not fuel aircraft in a First Come, First Served only. They will evaluate the orders in a First Come First
+Serve manner but also consider circumstance. An example would be if the next aircraft in the theoretical queue
+was on the other side of the airfield, while the second aircraft in the queue may be right next to the current
+aircraft, it would be a waste of time to drive to the other side of the airfield, then return to near the same spot
+fuel the other aircraft, especially if they can send the other truck to do the fueling. The web application will
+support a heuristic approach to fueling the aircraft and allow the line service technicians to make the call on
+which fuelings are the most important, with supplemented information provided by the web application and the
+weights calculated.
+CREATE FBO LOGIN & FBO HOME SCREEN
+In order to start viewing arrivals and upcoming fuels, the FBO must create a profile. The profile includes all the
+basic services and amenities the FBO provides plus the airport identifier (ICAO4) they are based at, a primary
+email, telephone number and frequency they monitor (see Appendix – Table 5). Once this has been established,
+the FBO will receive an email that confirms their log in account, then be redirected to the login page.
+The main screen for the FBO, opens to an SQLdatasource produced gridview, which populates based on the
+relationship of the “Arrival FBO” and the “FBONAME” associated with email logged in with. The gridview
+has the arrival id, ICAO, email, name, tail number, aircraft type, ground services and the level assigned to the
+arrival. The arrivals populate based on the associated FBO name with the email that is used to log in.
+The table can be sorted by what ever criteria the user wants to use, and once a record is selected, the form
+underneath the table produces a label with the name and email of the pilot, plus a message box and confirmation
+button. This will enable the FBO to send messages to the pilot if they need to clarify needs, services, or arrivals.
+In the event that the instructions by the pilot are unclear or if there is a problem with the services the FBO is
+offering, this will allow the FBO to contact the pilot quickly.
+4
+
+International Civil Aviation Organization (ICAO) – airport identifiers that are unique. The ICAO for Los Angeles International Aiport is
+KLAX (LAX)
+
+26
+
+Toward the bottom of the page, there is a section for scheduled fuelings. This gridview populates the upcoming
+fuelings and displays the fuel type, request, fueling date, time, account, tail number, plus any special requests.
+The form also allows for ASAP fuelings. When this gridview is selected, a menu appears at the bottom that
+shows the user the exact order with the fuel type and account name. It also displays two buttons, one that says
+“confirm”, the other saying “finished.”
+Ideally the line service technicians will have access to the display which fueling (via Ipad or computer station
+in the fuel trucks or line shack), and they will be able to confirm the order as it arrives, then, once the order is
+complete, press finish. Once they have finished the fueling and pressed finished on the form, the customer who
+submitted the order will get an email notification saying their fueling has been completed, while the FBO will
+be able to see when the fueling has been processed and completed.
+METHODOLOGY
+The first step in developing the web application was to pinpoint the necessary items needed on the forms. This
+was determined, as mentioned before by the pilot survey. The pilot survey was intended to understand the
+deficits that event he more experienced line personnel can experience. In the aforementioned results, it became
+apparent that the majority of delays were caused by the perceived lack of ground support personnel and
+equipment. Since it is not financially responsible to have 9 or 10 line personnel at an airport that experiences
+arrivals at a rate of 6 per hour, during peak season, it would be helpful to be able to see all inbound needs of
+scheduled arrivals, so that ground support equipment can be readied and prepared, whether this means having
+the GPU set up or having the Jet trucks topped off with fuel.
+In addition to the pilot survey, numerous observations and time studies where taken with the line crew at the
+local airport. These observations yielded a few best practice methods for the line crew, that wouldn’t have been
+apparent from surveys. Heuristic methodologies, also known as best practices, are typically learned on the job
+and don’t necessarily follow a standard operating procedure, but make the job of the line service technician
+efficient or easier in some way. For example, a line service technician must ground the aircraft and fuel truck to
+protect themselves and the equipment from electro-static discharge. After observing senior line technicians, it
+became apparent that their best method for making this particular step more efficient was to ground the side of
+the aircraft that would be fuel last5, to save them from walking back and forth an extra trip. Heuristic methods
+like the one described previously, cannot always be accounted for in models, which makes it important to
+provide as much helpful information to the fuelers as possible, but then leave them with the final decision as to
+their next move.
+5
+
+In some types of aircraft, the tanks are filled one by one via fuel caps on the top of the wing. Other aircraft are filled from a single
+opening, similar to a car, on the side of the aircraft. This is referred to as “single point fuelings.”
+
+27
+
+After the pilot survey, the web application was developed. The web application was established using visual
+basic and ASP.NET. As the web application came together, more pilots and flight schools were asked for input
+regarding layout and basic information for arrivals and fuelings. The majority of the programming took place at
+the Cal Poly Industrial Engineering computer labs, since they are equipped with the software needed. For the
+first iteration, the website was reviewed by a local flight instructor and several pilots. They gave specific
+recommendations based on usability, interface, design, application, even further possibilities for expansion. The
+application was iterated three times based on feedback from a select group of pilots, flight schools and
+instructors.
+The web application was re-evaluated to the extent that was applicable to the scope of the project. Additions to
+the application were included after being vetted by multiple users for their input regarding the effectiveness of
+the addition. Most of the additions and expansions to the application came after the first iteration and were then
+vetted and improved upon during the second iteration.
+
+RESULTS AND DISCUSSION
+
+FIRST ITERATION
+During the first iteration it was
+understood that the original design
+needed some reconfiguring. The
+layout of the physical website was
+lacking structure and uniformity, and
+it was noted that several of the
+columns in the grid view showed up
+when they were supposed to be
+hidden. Most of the website was
+manual, meaning the use of “enter”
+
+Figure 1 Traditional vs. Theoretical model of communication.
+
+to move the cursor, actually submitted the form. Generally the layout was satisfactory for the schedule arrival
+and schedule fueling pages.
+Throughout the discussion, fueling became a much more apparent issue than previously realized. After talking
+with pilots, the general consensus was to “get the job done” as quickly as possible with as little error as
+possible. The application, while not being quicker (yet) than calling the FBO, ensures that the needs to
+conveyed to the arrival FBO and takes out any possibility of miscommunication.
+28
+
+The first iteration group observed that fuel orders are typically forgotten or erroneously communicated in the
+process of dispatching the orders to the line service technicians. Customer service agents typically work as
+“middle-men,” where the customer gives the order to the customer service agent, which is then dispersed by the
+agent to the line service personnel. A suggestion from the first iterant group was to make the application
+available to customers who just need fuel and determine a way in which line service technicians would be able
+to interact with the fuel order directly, instead of relying on the customer service agent.
+After this interaction with the first trial, the “schedule a fueling” page was developed. This page, as explained
+before, has the user input types of fuel, special request, account information, etc. The information submitted is
+then stored in the data base and saved until accessed by the FBO, on their home page. The home page then
+shows upcoming fueling and all necessary information. The grid view that this information is stored in expands
+downward to show details regarding the fueling and two buttons: confirm and finish. This portion of the page
+will allow line service technicians to confirm they have received the fuel order. As soon as they push the
+“Confirm” button, the data base will update on both the FBO home screen and the line service screen. After
+confirming, the LST can go fuel the aircraft and upon completion, they can push the finish button, which will
+alert the FBO that the fueling is complete. It will also alert the customer that their fuel order has been complete.
+By having the line service technician directly involved with the customer order and not relying on the customer
+service agent to dispatch out the correct fuel order, the probability of errors in a fuel order will sink. Line
+service technicians are given the fuel order directly; while customer service agents are aware the fuel order has
+been submitted and can monitor the progress as an inactive bystander.
+Throughout the first interaction there was also discussion regarding a “modify” or “cancel” fuel order. This was
+considered, but will ultimately be for a later version of the web application. It was stressed that the most
+important factor is to keep the form simple and straight to the point. Only the most pressing of issues should be
+allowed on the form, everything else should be kept to a minimum. Of the participants, the average time it took
+to put in the fuel order from the web application was 2:05.96 minutes. The average time it took to call in the
+fuel order was 1:02.64 minutes. While it was faster for the participants to call in the order, it can be argued that
+having the physical order in front of the line service technician to ensure the order being executed correctly,
+justifies the extra minute spent to input the order. There is also a learning curve associated with the use of the
+application. As users input more and more arrivals/fuelings, the faster they should, theoretically, get at inputting
+the information.
+SECOND ITERATION
+In the second trial, it was discussed about having a confirmation email for arrivals, to let the pilot know that the
+FBO is aware of their arrival. Instead of putting in a confirmation button, the design leans toward a message
+29
+
+box and email that will confirm any additional orders or reconfirm specific instructions on the ground. This will
+allow the FBO to send customized messages, instead of sending an encompassing “confirmation” email. Most
+of the discussion revolved around current methods similar to the SkyCSR model – FltPlan.com has a similar set
+up but without the weighing algorithm or ability to communicate directly with the FBO. FltPlan.com also lacks
+the infrastructure for FBO’s to see inbound aircraft, and instead relies on faxes built off of the input on their
+web form, that are then faxed to the arrival FBO.
+Through the discourse, it was also mentioned that pilot have so many apps at their disposal that they are
+responsible for, that adding another one may inhibit their job performance. Pilots are responsible for weight and
+balance calculations, including runway calculations, airspeed, flight planning, and fuel loads. Adding an
+additional application, would potentially make it easier on them in the long term by making sure their ground
+support needs are recorded and performed, but adding an additional application to the process, may seem
+counterproductive, especially if they can just can the FBO ahead of time to advise on services.
+Building off of this idea, it seems like the best market entry for a web application like this would be to associate
+it with an already existing application, such as ForeFlight or FltPlan.com. These websites that are ubiquitously
+in industry, are well known, and have already engaged the target audience for the SkyCSR web application
+(commercial and general pilots).
+FBO’s typically keep track of customer service requests with a Customer Resource Management (CRM) tool
+such as Microsoft CRM or the Oracle application Corridor. Corridor is tailor specifically to the aviation
+industry and has many extremely useful applications. Unfortunately, Corridor is unable to be linked to a web
+application where pilot can arrange an arrival and services needed, and relies on the customer service agent
+inputting all applicable information into the database.
+WEB APPLICATION EXPANSION
+After the website had been reviewed a few times, there are a few modifications that will happen in the future.
+First is the addition of a cancel/modify button. This button will allow pilots and flight schools to cancel or
+modify fuel orders that they have already submitted. There are two possible methods to accomplish this, the
+first being that every time an email is sent confirming the fuel order there is a unique “fuel code” sent with the
+email that will allow the pilot to enter into the form and modify or cancel the existing request. The second way
+to do this would be to set up a pilot account similar to that of the FBO account, where the pilots would be able
+to login and view, cancel, or modify orders.
+The next set for the web application is expansion and actual use. The web application, as noted in the interviews
+during the trials, would be the most helpful in smart phone application format, where pilots could just tap on the
+30
+
+app, fill out the form and send it, without having to open a browser. Going off this line of thinking, the
+application could potentially be incorporated into existing sites such as fltplan.com or foreflight, where they
+have the information about the airfield, flight plans, departure plates, arrival plates, and other aviation
+information, already loaded on, and now, with the addition of this web application, they would have a way for
+pilots using their app to communicate directly with the arrival FBO, via their application.
+As the final idea for the future of this web application, it was expressed that maybe using the application as a
+communication and services manager for the FBO would be beneficial. Pilots could input needs and services
+but having the FBO web page tailored to either the customer service desk and the line service technicians would
+help the manage the communication of service needs. The customer service desk would still have the upcoming
+arrival and fuelings open to see and coordinate the inbound arrivals, but line service would be able to update,
+process, and complete fuelings all with the app, which would allow the customer service desk to observe from
+afar and not interrupt the line.
+CONCLUSION
+There is a clear technological crevasse between the needs of the pilot and the FBO’s that provide the services.
+SkyCSR attempts to bridge the gap between pilot and FBO, where already existing applications such as
+ForeFlight, TraqPak, FltPlan.Com, and Corridor, fail to. Communication tends to breakdown as customer
+service agents become impacted by the number of requests and inbound flights, that it can be difficult for them
+to remember every detail to advise the line service technicians, which results in a less than satisfactory customer
+experience. The goal of this project was to create a new form of communication in which the needs of the
+inbound aircraft would be clear and explicitly understood, allowing for ground personnel to ready for the
+aircrafts arrival.
+The first task was to conduct a survey to understand where the perceived deficiencies are, from the perspective
+of the customer, then exploit these deficiencies and provide a solution to solving the communication
+interruptions. Toward the beginning of the survey, it seemed as though a prototype of the web application
+would be unhelpful, and that the majority of issues came from lack of adequate training or just not enough
+personnel on the field. As the survey progressed, however, the prototype of a web application where the pilot
+can schedule fuel and arrival needs, without needing to contact the FBO, was justified by the responses to the
+survey. The web application was attempted using ASP.NET, and went through several iterations before being
+tested twice by both flight instructors and pilots.
+The trials and initial testing of the application early on, proved to be extremely useful. The feedback received
+was both appreciative and constructive; meaning most of those who tested the application saw good potential
+for it and offered some productive critique. Between the trials, the largest difference was the addition of the
+31
+
+fueling page, which caters mostly to the local flight schools to schedule fuelings before and in between lessons.
+In addition to the fueling page, the FBO login page got a “scheduled fueling” gridview, which showed all
+upcoming fuelings. During the first iteration/testing, it was noted that there should be some kind of ability to
+confirm and notify the customer that their fuel order had been completed, which was added before the second
+round of testing.
+Should this project happen again or something similar to it comes up again, it would be beneficial to spend
+more time with the development of the website especially during testing. Next time around, having a large pool
+to test with and reaching out to more pilots, flight schools, and FBOs would help in developing a useable and
+optimal prototype. In even industry application, there is always a need for more and continued testing and
+customer service feedback for improvement, but it’s unacceptable to continue testing a never release a product.
+In the future, 3 or 4 trials of the prototype would be ideal for testing with 3 to 4 people per trial. The small
+group keeps everyone on the same page and interacting with each other, allowing for a discourse about opinions
+of the web application and shared/varied experiences while flying. Having numerous trials just increases the
+opportunity for new ideas and creating an optimal prototype before live testing.
+Another opportunity for improvement would be the addition of a schedule. Since this was a one-person project,
+it was easy to not set a schedule and keep a general idea of the schedule in mind, but having a Gantt chart with
+the due dates and deadlines, would have kept the project moving smoothly and not in spurts. Part of developing
+web applications is the consistent “mind block” –where looking at the same piece of code for longer than 20
+minutes begins to have an adverse effect on performance. There were a handful of times the mental block would
+keep me away from programming, then a few days later, after thinking about the problem and attempting it
+again, the revision in code would work and then I would move on to the next issue. The web application is
+currently working, but could use further development. The layout needs an overhaul but the barebones of the
+application work. The goal is to either develop the application independently for a local fixed base operator, or
+try to appeal a larger application company to develop something further using this framework. The largest
+obstacle that the app would face if the application were to be a “stand alone,” is breaking into the market. Pilots
+aren’t interested in using another application in addition to their already stressful and multitask-oriented jobs,
+especially if it’s for only one airport. Integrating this application into an existing model would be the most
+successful path for this web application.
+Overall, this was a great culminating project. The application of database programming to the aviation industry
+was an ideal intersection for my two favorite things: ASP.NET and airplanes. This senior project was a
+interesting learning experience for me, especially with having to establish my own deadlines and set my own
+
+32
+
+pace. It provided an incredible overall learning experience, and proved to be a great ending that brought
+together most of what I have learned over my Cal Poly career.
+
+33
+
+WORKS CITED
+Association, G. A. (2015). General Aviation Market Data. Retrieved from Aeroweb.
+Association, G. A. (2015). General Aviation Statistical Databook and 2015 Industry Outlook. General Aviation
+Manufacturers Association.
+Aviation International News. (2011). 2011 FBO Survey. FBO Survey: The Americas.
+Bachman, J. (2014, February 11). Yes, There's a Pilot Shortage: Salaries Start at $21,000. Retrieved from
+Bloomberg Business.
+Cheung, A., Ip, W., Lu, D., & Lai, C. (2005). An Aircraft Service Scheduling Model Using Genetic Algorithms.
+Journal of Manufacturing Technology Management, 16(1), 109-119.
+Ewalt, D. M. (2013, February 13). Thirty Amazing Facts about Private Jets. Retrieved from Forbes.
+Federal Aviation Administration. (2016). Federal Aviation Regulations/Aeronautical Information Manual.
+Washington D.C.: United States Government, Federal Register.
+Finance, A. (n.d.). Hypothetical Operating Cost Calculation. Retrieved from Aircraft Ownwer and Pilot
+Assoication.
+Fleet. (2016). Retrieved from NetJets: https://www.netjets.com/Home/
+FlightAware. (2015, March 17). About FlightAware. Retrieved from FlightAware.
+Grundig, J. (2013, August 20). Understanding Part 135. Retrieved from Sherp Report.
+Herring, W. L., & Herrmann, J. W. (2012). The Single Day Surgery Scheduling Problem: Sequential DecisionMakin and Threshold-based Heuristsics. OR Spectrum(34), 429-459.
+Martin, C., Jones, D., & Keskinocak, P. (2003). Optimizing On-Demand Aircraft Schedules for Fractional
+Aircraft Operators. Interfaces, 33(5), 22-43.
+Matter, G. (2012). Why Waiting Is Torture. The New York Times.
+Norman, D. (2008). The Psychology of Waiting Lines.
+Prince, R. A. (2013, June 11). Eight Trends In Private Jet Travel. Retrieved from Forbes.
+Rauner, M. S., Schaffhauser-Linzatti, M. M., & Niessner, H. (2012). Resource Planning for Ambulance
+Services in Mass Casualty Incidents: a DES-based Policy Model. Health Care Management Science, 15,
+254-269. doi:10.1007/s10729-012-9198-7
+Ravizza, S., Atkin, J. A., & Burke, E. K. (2014). A More Realistic Approach for Airport Ground Movement
+Optimisation with Stand Holding. Journal of Scheduling, 507-520.
+Shetty, K. I., & Hansman, J. R. (2012). Current and Historical Trends in General Aviation in the United States.
+Cambridge, MA: Massachusettes Institute of Technology.
+
+34
+
+Sud, V. P., Tanino, M., & Wetherly, J. (2009). Reducing Flight Delays Through Better Traffic Management.
+Interfaces, 39(1), 35-45.
+The FAA's Impact on Small Businesses In the General Aviation Industry, 113-053 (Committee on Small
+Business, US House of Representatives February 5, 2014).
+Van Allen Group. (2012, February). Cessna Citation XLS+. Retrieved from Van Allen Group.
+Visenini, M. S., Borenstein, D., Li, J.-Q., & Mirchandani, P. B. (2014). Review of Real-time Vehicle Schedule
+Recovery Methods in Transportation Services. Journal of Scheduling, 541-567.
+Vossen, T. W., & Ball, M. O. (2006, February). Slot Trading Opportunities in Collaborative Ground Delay
+Programs. Transportation Science, 40(1), 29-43.
+Yang, W., Karaesmen, I. Z., Keskinocak, P., & Tayur, S. (2008). Aircraft and Crew Scheduling for Fractional
+Ownership Programs. Annals of Operations Research, 415-431.
+
+35
+
+APPENDICES
+APPENDIX A – GENERAL AIRCRAFT/AIRPORT INFORMATION
+
+Figure 2 Cessna Citation XLS
+
+36
+Figure 3 Airport Diagram - Commonly used by pilots to denote where FBO's, Flight Schools, Terminals, Taxi ways, etc. are located on the field
+
+Figure 4 Cropped image of an "Instrument Flight Rules" Arrival Plate. The important part of this picture is to
+note the tall mountain ranges that occur north of the San Luis Obispo Airport. These mountain interfere with
+broadcasts regularly.
+
+Figure 5 Screenshot of FlightAware
+
+37
+
+Figure 6- Screenshot of TraqPak
+
+38
+
+APPENDIX B – SURVEY
+
+Figure 1 Beginning questions of the survey
+
+39
+
+Figure 2 - second set of questions in survey. Most of the answers allow the respondent to answer more than one.
+
+Figure 3 Final page, just contact information and primary airport ID
+
+40
+
+APPENDIX C – WEB APPLICATION SCREEN SHOTS
+
+Figure 4 - Schedule an arrival
+
+Figure 5 - Schedule a Fueling Page for Pilots/Flight Schools
+
+41
+
+Figure 6 FBO Profile Creation Page
+
+Figure 7 FBO side of web application that shows scheduled arrivals for inbound aircraft on a particular day
+
+42
+
+Figure 8 FBO side of the web application that shows the upcoming fuel orders.
+
+43
+
+Figure 9 Logic developed in the first quarter to design the algorithm calculating the weights. There is a slight difference between this algorithm44
+and the algorithm utilized, is that this algorithm looks at the actual amount of fuel being taken. This was omitted after pilot interviews responded
+that they didn’t always know how much, and they weren’t sure what form to put it in (bring up to so many pounds on board, put on pounds, put
+on gallons, etc.)
+
+APPENDIX D - DATA COLLECTION SAMPLES
+
+Figure 10- Example of the Fuel Dispatch Log Used to record fuelings, times, dates, customers, gallons sold, and
+the responsible fueler.
+
+Figure 11 Example of the truck sheets used by line service technicians to record gallons sold, meter numbers
+and gallons left in the truck.
+
+Figure 12 Example of the Jet Truck sheet. It's is used for the same purpose at the 100LL sheet, but with Jet A
+45
+
+ROUTE MAPPING
+Line service technicians are constantly driving, walking, running, marshaling, towing, or riding on golf
+carts/tugs to accomplish tasks. They spend most of their down time in the line shack where the radios and
+breakroom is, but then spread out to the commercial terminal to fuel airlines, to the west side to fuel transient
+aircraft, and to Site November and Site Mike (see Appendix, Figure 4) to fuel/tow other aircraft. Their routes
+vary significantly from day to day, and not always in the most efficient manner.
+The route revealed how often and long the ground service technicians walking/riding/running to fulfill an order,
+whether it is for fuel, GPU, APU, lavatory service, or something else. The route begins when the order is
+initially called out and will end when the task is complete on a particular aircraft. The route map also looks at
+the general movement of aircraft, the movement of golf carts, the movement of fuel trucks and the movement of
+personal/rental cars as they enter and exit the ramp.
+
+46
+
+Table 4 - Average Number of AvGas Purchases Per Hour, Separated by quarter
+
+2012 AvGas Purchases/Hour
+Number of Sales Per Hour
+
+2.00
+1.80
+1.60
+1.40
+1.20
+1.00
+0.80
+0.60
+0.40
+0.20
+0.00
+
+600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000
+
+Quarter 1 0.12 0.38 1.28 1.19 1.54 1.22 1.34 1.29 1.33 1.18 1.03 0.56 0.55 0.23 0.67
+Quarter 2 0.23 0.93 1.22 1.57 1.65 1.51 1.60 1.90 1.58 1.35 0.97 0.95 0.69 0.50 0.01
+Quarter 3 0.10 0.34 0.73 1.06 1.73 1.80 1.89 1.82 1.52 1.63 1.42 1.06 0.83 0.71 0.11
+Quarter 4 0.12 0.18 1.02 1.29 1.46 1.25 1.62 1.60 1.39 1.27 0.79 0.74 0.47 0.31 0.05
+Average
+
+0.142 0.457 1.064 1.278 1.594 1.444 1.612 1.65 1.457 1.359 1.052 0.829 0.633 0.437 0.21
+
+Table 3 - Average yearly sales/hour
+
+Average Yearly Sales/Hour
+4
+3.5
+
+Number of Sales/Hour
+
+3
+2.5
+2
+1.5
+1
+0.5
+0
+
+600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000
+
+AvGas Sales
+
+0.142 0.457 1.064 1.278 1.594 1.444 1.612 1.65 1.457 1.359 1.052 0.829 0.633 0.437 0.21
+
+Jet A
+
+0.183 0.538 1.189 1.216 0.942 1.123 1.753 1.09 1.157 0.86 1.699 1.305 0.596 0.45 0.041
+
+Total Average 0.326 0.995 2.253 2.494 2.536 2.568 3.365 2.74 2.614 2.219 2.751 2.134 1.229 0.887 0.251
+
+47
+
+Table 5 - Average Number of Jet A Purchases/Hour
+
+Number of Jet A Sales/Hour
+
+2012 Jet A Purchases/Hour
+3.00
+2.50
+2.00
+1.50
+1.00
+0.50
+0.00
+600 700 800 900
+
+100 110 120 130 140 150 160 170 180 190 200
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+Quarter 1 0.20 0.33 0.87 1.13 0.96 1.03 1.12 1.03 1.02 0.63 1.80 1.08 0.50 0.40 0.01
+Quarter 2 0.17 0.43 1.03 1.06 1.03 1.23 1.46 1.33 0.95 0.88 1.91 1.15 0.62 0.54 0.06
+Quarter 3 0.26 0.75 1.65 1.17 0.88 1.16 1.95 1.09 1.36 0.92 1.57 1.52 0.65 0.57 0.03
+Quarter 4 0.11 0.64 1.21 1.50 0.89 1.08 2.49 0.91 1.29 1.01 1.52 1.47 0.62 0.29 0.06
+Average
+
+0.18 0.54 1.19 1.22 0.94 1.12 1.75 1.09 1.16 0.86 1.7
+
+1.3
+
+0.6 0.45 0.04
+
+48
+
+Table 6 Average, Max, Min of 100LL and Jet Uplifts and Gallons of fuel per uplift
+
+49
+
+

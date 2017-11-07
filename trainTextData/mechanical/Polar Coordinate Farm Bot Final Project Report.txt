@@ -1,0 +1,8399 @@
+POLAR COORDINATE FARMBOT
+
+FINAL PROJECT REPORT
+Interdisciplinary Senior Project 2016-17
+
+SPONSOR: RORY ARONSON
+Team Members:
+Jack Brown
+Kasenia Colombo
+Lucas Salem
+Ning Jeng
+Rory Stothers
+Samuel Lees
+
+Disclaimer Page
+Statement of Disclaimer
+Since this project is a result of a class assignment, it has been graded and accepted as
+fulfillment of the course requirements. Acceptance does not imply technical accuracy or
+reliability. Any use of information in this report is done at the risk of the user. These risks may
+include catastrophic failure of the device or infringement of patent or copyright laws. California
+Polytechnic State University at San Luis Obispo and its staff cannot be held liable for any use or
+misuse of the project.
+
+1
+
+Table of Contents
+Chapter 1: Introduction …………………………………………………………………………..8
+Chapter 2: Project Background and Description ….…………………………………………....10
+Chapter 3: Design Development ..……………………………………………………………….12
+Chapter 4: Final Conceptual Design ….………………………………………………………....15
+Chapter 5: Hardware/Software Design and Development …...………………………………….32
+Chapter 6: Manufacturing and Testing Processes ...……………………………………………..41
+Chapter 7: Management Plan …………………………………………………………………....52
+Chapter 8: Conclusions and Recommendations ………………………………………………...53
+Acknowledgements ……………………………………….…………………………………….55
+Appendices ……………………………………………………………………………………...56
+
+2
+
+List of Tables
+Table 1: Proposed Polar Coordinate Requirements …………………………………………….9
+Table 2: Arm Conceptual Design (1/2) ………………………………………………………...12
+Table 3: Arm Conceptual Design (2/2) ………………………………………………………...13
+Table 4: Base Platform Conceptual Designs …………………………………………………...13
+Table 5: Base to Column Conceptual Designs …...…………………………………………….14
+Table 6: Expected Costs………………………………………………………………………...29
+Table 7: Supplier Summary……………………………………………………………………..30
+Table 8: Safety Concerns………………………………………………………………………..30
+Table 9: Maintenance Tasks……………………………………………………………………..31
+Table 10: Manufacturing Summary……………………………………………………………..41
+Table 11: Tools Needed for Assembly…………………………………………………………..43
+Table 12: Test Plan Summary…………………………………………………………………...48
+Table 13: Test Results Summary……………………...………………………………………...49
+
+3
+
+List of Figures
+Figure 1: Original Cartesian FarmBot ………………………………………………………… 10
+Figure 2: High Level Cartesian FarmBot Design………………………………………………. 10
+Figure 3: Overall Conceptual Design ………………………………………………………….. 15
+Figure 4a: Base to Column Attachment ………………………………………………………...16
+Figure 4b: Interior View of Column …...……………………………….……………………....16
+Figure 4c: Exploded View of Base ...…………………………………………………………...17
+Figure 5a: Adjustable Bearing Mount Assembly……………………………………………….19
+Figure 5b: Exploded View ……………………………………………………………………...19
+Figure 5c: Socket Head Adjusting the Bearings After Assembly ...…………………………...19
+Figure 5d: Bolt Deflection FEA ………………………………………………………………..20
+Figure 5e: Bracket Deflection FEA ……………………………………………………………20
+Figure 6a : Exploded View of the Drivetrain system ………………………………………….21
+Figure 6b: Drivetrain Housing………………………………………………………………....21
+Figure 7a: NEMA 17 Speed-Torque Curve of Steel…………………………………………...22
+Figure 7b: Stress-strain Curve of Steel ………………………………………………………..22
+Figure 8: Tool Bay Plate ……………………………………………………………………....23
+Figure 9: End Caps…………………………………………………………………………….24
+Figure 10: Column Shroud…………………………………………………………………….24
+Figure 11a : Column …………………………………………………………………………..25
+Figure 11b: Column Spacer and Bracket……………………………………………………....25
+Figure 12: Tubing and Wiring Diagram…………………………………………………….....26
+4
+
+Figure 13: Gantry Arm ………………………………………………………………………..27
+Figure 14a: FEA Analysis of Arm …………………………………………………………….28
+Figure 14b: Arm Bracket……………………………………………………………………....28
+Figure 14c: T-Bolt ……………………………………………………………………………..28
+Figure 15: Wiring Diagram…………………………………………………………………….32
+Figure 16: Major Hardware and Software Components……………………………………….34
+Figure 17: Affected Systems…………………………………………………………………...35
+Figure 18: Arduino Steps ……………………………………………………………………...35
+Figure 19: Pseudo Code of Approach………………………………………………………….36
+Figure 20a: FarmBot GUI, Manual Mode……………………………………………………..37
+Figure 20b: Both Coordinate Systems ………………………………………………………...38
+Figure 20c: Farmbot GUI, Script Window …………………………………………………....38
+Figure 21a: Tool Bay Clamp…………………………………………………………………..41
+Figure 21b: Column Shroud…………………………………………………………………...41
+Figure 22: Tool Bay Plate……………………………………………………………………..42
+Figure 23: Testing Functionality Of Final Prototype………………………………………….49
+Figure 24: Watering Attachment On The Tool Head………………………………………….51
+
+5
+
+Executive Summary
+FarmBot Inc. is a local startup that is advancing precision agriculture through automation
+and open source technology. The original FarmBot model, FarmBot Genesis, operates over a
+rectangular area of 3 x 1.5 meters. It plants, waters, weeds and grows produce autonomously
+using CNC technology. Our project sponsor and inventor of FarmBot, Rory Aronson, tasked our
+team with developing and testing a polar coordinate farmbot capable of performing on par with
+the Cartesian farmbot in growing a circular vegetable garden in a user’s backyard. A successful
+project was defined by meeting specific customer requirements and engineering specifications
+predetermined and discussed with our sponsor. The customer requirements include: a central
+pivot, accurate planting, scalable farming area, off the shelf parts, and easy customization by the
+user. Some of the most important polar farmbot engineering specifications include a minimum
+farmable area of 4.5 m​2​, maximum cost of $2200, rotational range of at least 360 degrees, and an
+average velocity of .5 meters per second.
+The polar FarmBot was split into several subsystems: arm, base, drivetrain, electronics,
+and software. Our initial conceptual design was selected with the use of decision matrices to
+optimize for reliability and simplicity while still fulfilling the customer and engineering
+requirements.
+The final design for the base subsystem includes a concrete bucket with an adapter plate
+and a 4.5 inch aluminum pipe secured by a bent plate and two u-bolts. The adapter plate sits on
+three threaded bolts to allow for easy leveling and adjustment. The pipe works in conjunction
+with the adjustable bearing mounts to sustain the moment exerted on the base by the column and
+arm. The adjustable bearing mounts also keep the system vertical and centered. Additional
+stability can be achieved by burying the concrete bucket underground, but regardless, the
+concrete bucket as the base provides enough stability for use above ground over a raised bed.
+The drivetrain subsystem reuses two existing farmbot drivetrains for the movement of the
+z-axis and r-axis. The center rotation drivetrain system uses a NEMA17 stepper motor coupled
+with a 51:1 planetary gear to generate additional output torque. The final design of this
+subsystem has the motor output shaft mate directly with a fixed d-shaped base plate with a
+turntable in between to allow for rotation. This system was considerably simpler and easier to
+assemble than other designs. The use of a steel d-shape plate was discovered to be important in
+minimizing deformation and subsequently any backlash in the rotation. Encoders should also be
+implemented in future versions to resolve this problem.
+The tool bay’s final design consists of a circular pattern with six tooling slots. 3D printed
+clamps allow for the toolbay to be attached to the aluminum pipe. For our prototype, the toolbay
+was laser cut out of wood, but for future iterations, a stiffer and flatter material would ease the
+tool removal and replacement operations. Above the pipe and tool bay sits a 3D printed column
+shroud. The shroud is designed to weatherproof the pipe from water and debris accumulation.
+Wiring runs through a rectangular cutout in the tool bay and over the shroud up to the
+electronic housing that contains the microcontrollers that control the FarmBot movements. Water
+and air tubing also runs from the base of the FarmBot and into the gantry arm where it is
+connected to the universal tool mount. The electronics on the FarmBot consist of a Raspberry Pi,
+which communicates with the FarmBot cloud, and an Arduino MEGA, which runs the RAMPS
+
+6
+
+motor controller. These two devices on the FarmBot communicate using G-Code, an industry
+standard for controlling devices such as CNC machines and 3D printers.
+The report goes into detail about safety concerns involved with our final design as well as
+maintenance considerations that the end user would need to follow in order to keep the FarmBot
+operational. Our team documented all the tools, materials, manufacturing processes and steps
+taken to fully assemble our prototype. Further documents such as drawings, project schedule, and
+all other literature can be found in the appendices. Overall our prototype was functional and
+exceeded our expectations.
+
+7
+
+Chapter 1: Introduction
+The FarmBot Genesis is an automated gardening system, invented by our project sponsor
+Rory Aronson, and built by his startup, FarmBot. The standard-sized Genesis v1.0 model can be
+installed on a pre-existing garden box and has the capacity to grow all of a single user’s
+recommended vegetable needs. The device operates using CNC technology similar to a cartesian
+3D printer to plant, weed and water vegetables. It is claimed to produce 25% fewer carbon
+emissions compared to conventional farming techniques and can be combined with solar panels
+to further decrease its carbon footprint. Through growing produce instead of spending money at
+the grocery store, the Genesis v1.0 model has a return on investment of three to five years.
+Documentation, software and design files pertaining to all FarmBot models are readily
+available online for educators and the DIY community. Additionally, the operating code is
+open-source, making it possible for anyone to build, research or develop a commercially
+automated farming system. Possibilities for modification of FarmBot are endless and can be
+accomplished with consumer grade 3D printed parts or readily available off-the-shelf parts.
+Currently, FarmBot only produces the Genesis model, however Rory Aronson has
+requested the design and fabrication of a new model. This new FarmBot model will rotate around
+a central axis and will be based on a polar coordinate system instead of cartesian coordinate
+system. We are designing this product as an exploration into future possibilities of FarmBot. In
+the end, our sponsor is looking to see if a polar operating FarmBot is feasible or if it has any
+advantages over the cartesian FarmBot.
+To accomplish this, we plan to iterate and test a number of functional prototypes, with the
+goal of creating a final prototype ready for production. Simplicity and manufacturability are our
+sponsor’s guiding values, for an end user group that includes educators, makers, and hobbyists
+who value hackability, scalability and reliability.
+1.1 Objectives
+In order to create a polar FarmBot that satisfies both our end user and sponsor’s needs,
+our team generated a list of technical requirements for the project, many of which are derived
+from the existing cartesian FarmBot. To achieve many of these requirements, we utilized
+existing, generic, off the shelf, or easily user-manufactured parts. We also kept in mind that parts
+in this category must be designed for manufacturing, such that they could be produced in mass
+quantities, or on a part by part basis by the individual builder with prototyping tools.
+Each user's garden plot is different, so our design needed to scale to fit existing plots or
+increase in size to provide for larger fields. Backyard farmers or researchers may need a
+customizable platform upon which they can grow, fertilize and weed in any way they chose. For
+example, this means that the polar FarmBot needs to have options for the farmer to weed either
+chemically or physically, and should be able to operate from multiple types of water sources
+such as elevated rain barrels or pressurized fertigation systems. The customers will also have
+varying food production requirements, so at minimum, produce yield must be enough to sustain
+one individual continuously, which has been calculated by our sponsor to be possible with a 4.5
+square meter plot.
+To satisfy our customer, the FarmBot must be reliable and easily serviceable. Ease of
+access to internal components such as the Arduino and Raspberry Pi, and the use of standard
+8
+
+fasteners and tools are important to the DIY community. Websites like openbuilds.com, an
+online retailer and guide for DIY CNC, will provide inspiration for designs this subgroup is
+accustomed to. Openbuilds.com also provides many components complementary to our FarmBot
+design.
+The main objectives addressed above provide the framework for meeting our project’s
+specific needs. We have quantified more detailed engineering requirements in Table 1
+concerning geometry, motion, safety, and operational parameters. We have ranked each
+requirement with a risk of high, medium, and low directly relating to our priority levels for each
+item. To meet these requirements, we have compliance methods listed in the far right column.
+Most of these requirements are based off of the cartesian FarmBot model’s specifications, which
+can be found in Appendix A.
+To check that these design requirements help us reach our target consumer, we created a
+quality functional deployment (QFD) chart. Found in Appendix B, the QFD helps to create a
+hierarchy of requirement importance to the target customer. We can also use this tool to evaluate
+how our future design will compare to the current FarmBot. Through the QFD chart, we found
+that most relevant customer specifications are the length of the rotating arm, accuracy in the
+equipment, and the stability of the center column.
+
+Table 1: Proposed Polar Coordinate Requirements
+
+9
+
+Chapter 2: Project Background and Description
+The original cartesian FarmBot Genesis is a first-of-its-kind device that has only recently
+entered the market, so by extension the new polar FarmBot has no direct competition. Because of
+this, the Genesis v1.0, seen in Figure 1, will be our greatest source of inspiration. The current
+iteration of FarmBot is a logical starting point to collect design requirements for the new polar
+version.
+
+Figure 1: Original Cartesian FarmBot
+After investigating the original Genesis model and working with our sponsor, we
+determined it advantageous to reuse several design requirements and subassemblies from it for
+our device. For example, we continued using the z-axis and cross slide subassemblies found on
+the Genesis v1.0. shown in Figure 2. We also use V-slot aluminum extrusions as the main
+structural members and make few changes to the electronics. In our new design we look to
+embody simplicity, manufacturability, scalability, and hackability.
+
+10
+
+Figure 2: High Level Cartesian FarmBot Design
+The current system works like a consumer level 3D printer with stepper motors that allow
+the tool head to be positioned at particular X, Y, Z coordinates, as shown in the Figure above.
+Encoders keep track of how far the motors move and can keep track of slippage and stalling. Just
+like a 3D printer, FarmBot uses G-code to communicate actions to the motor controller (in this
+case, an Arduino MEGA and a RAMPS shield).
+Because there are very few devices similar to a polar coordinate CNC farming device on
+the market, we utilized the designs of the cartesian FarmBot as much as possible. Fortunately,
+that original iteration of FarmBot has already been documented meticulously, and there are
+several functioning models accessible to us. The FarmBot website (farmbot.io) contains a wealth
+of information on the use, design and assembly of these parts and subsystems, particularly the
+white paper and documentation sections of the site. Some Other systems, such as rotating ADA
+pool chair lifts, rotating jib cranes and in-ground flagpole bases have also provided inspiration.
+In addition, various external resources exist for developing software and machine
+instruction sets for the polar applications. Both the cartesian and polar versions will use the same
+software, thus Nerves Project (nerves-project.org) and Elixir (elixir-lang.org) will be relevant
+sources of information. Also, both the cartesian and polar versions will make use of G-code (an
+industry-standard numerical control programming language) for tool positioning. Because
+G-code is standardized, we can refer to its specification (see NISTIR 6556 and ISO
+6983-1:2009) when modifying any relevant software.
+With the operating Genesis v1.0 and CAD files, as well as several commercial products
+and numerous relevant internet resources, we believe we have the tools necessary to fully meet
+our project and customer requirements.
+
+11
+
+Chapter 3: Design Development
+3.1 Conceptual Design and Selection
+With our background research and customer requirements in mind, we formulated dozens
+of conceptual design ideas, subsystem by subsystem. We narrowed this large pool of ideas by
+creating mock-ups, running simple calculations and comparing them to our design requirements.
+We entered our top concept choices into decision matrices shown below, and each team
+member rated how well the designs matched our requirements specific to that system. Appendix
+C, D, and E contain our more detailed decision matrices for reference. The concepts were
+compared to one chosen design that acted as a datum and were rated as worse (-), better (+) or
+the same (s) in meeting the requirements. This process did not pinpoint our final subsystem
+designs, but rather identified the strengths and weaknesses of each design and drove our
+inspiration for the final concepts.
+Various arm system designs (Tables 2 and 3), which function as a support and track for
+the cross-slide and z-axis, were analyzed and evaluated through a design matrix shown. Most of
+the arm designs were different answers to two main questions. The first was whether the arm
+should span the radius or diameter of the circular garden plot. This determined how much the
+device would have to rotate before all points on the circle could be reached (360 degrees for the
+radial arm and 180 degrees for the diametral arm.) The second was whether the arm should be
+supported on its far end, with a wheel or track, or be a cantilever beam solely supported at the
+center column. In any case, the system needed to be robust, hit all points on the circle, retain
+precision and be easy to assemble and source.
+Considering these attributes, our initial datum design of choice, a diametral arm with an
+offset, c-shaped column, scored rather low although it was innovative and could hit all points on
+the circle with ease. This design used parts that were expensive and hard to find or manufacture,
+and strayed from one of our guiding objectives of simplicity. Realizing that the job could be
+easily completed with a much simpler design, we decided to use a radial, cantilever arm. This
+decision was further validated with finite element analysis that showed minimal deflection of the
+arm under expected loads, providing the accuracy and reliability we require.
+
+Table 2: Arm Conceptual Design (1/2)
+
+12
+
+Table 3: Arm Conceptual Design (2/2)
+As for our base design, it needed to be reliable and easily installed, adjustable, and
+integrated with the rest of the device. We divided the base design into two main parts: base
+platform (concrete, soil screw, etc.) and base to column attachment. In our search for a reliable
+and strong base platform we considered concrete, fence post spikes, soil screws and buried flat
+plates. These ideas were analyzed according to our customer requirements in a decision matrix
+found in Appendix C. We received mixed results from the analysis. Our team found it difficult to
+come to consensus on what system would be easiest to vertically align and install while still
+providing long term reliability. Again, simplicity guided us to choose concrete, given that it is a
+cheap, commonly used and robust material. From here we looked at possible base to column
+attachments, seen in Table 5, which interface the FarmBot device and the base platform.
+
+Table 4: Base Platform Conceptual Designs
+For the base to column attachment we considered set screws, simple bolted brackets, and
+directly setting the column into concrete/soil. These ideas and others were analyzed in a decision
+matrix found in Appendix E. The most important qualities that emerged were reliability,
+adjustability, and ease of installation. With these qualities in mind, we determined that no single
+design in our matrix was best. Instead we combined multiple aspects into one design, as
+described in detail in the concept subsystems section of our report. Table 4 shows the base
+designs that contributed to our final concept design.
+
+13
+
+Table 5: Base to Column Conceptual Designs
+Our drivetrain was constrained by the final concept designs of the arm, column, and base
+systems. This is because the interface between the column and base dictates how a motor might
+rotate the arm about the vertical axis. One design decision was determining whether the rotating
+mechanism was going to be on the top or the bottom of the column. However, after the decision
+was made to use v-slot extrusions for the column and radial arm and the attachment point was a
+bracket, having the rotation mechanism on the top would be much more difficult. From here, the
+design process was more organic. Ideas were drawn up with different methods of motor
+mounting and gearing system at different locations. Designs also changed as we found different
+types of motors available online. The final drivetrain concept is detailed further below.
+
+14
+
+Chapter 4: Description of Final Design
+4.1: Overview
+Our final conceptual design​ ​fulfills customer requirements of accuracy, reliability, ease of
+assembly, maintenance, part sourcing and customization. The device rotates on top of a central
+concrete base, which acts as a stable platform. It utilizes aluminum v-slot extrusions for the
+structure of the center column and the gantry arm, which also act as platforms for attaching
+elements such as the electronics box and cross slide. V-slot extrusions are already in use on the
+original cartesian FarmBot and have proven easy to source, assemble and modify. Furthermore,
+they provide adequate stiffness and strength for our applications. In addition to the extrusions,
+our design reuses the existing cartesian cross slide and z-axis (with their corresponding
+drivetrains) and electronics. The proposed software makes minimal changes to the original
+cartesian FarmBot code while still providing quick and accurate control of the device. Our
+designs for the arm attachment, base, drivetrain and software and electronics subsystems are
+further detailed below with the assembled subsystems shown in Figure 3.
+
+Figure 3: Overall Conceptual Design
+15
+
+4.2 Final Mechanical Subsystems Design
+4.2.1 Base
+The base system for the polar version of FarmBot is necessary to anchor the column to
+the ground with a stable foundation for the complete system. It must support and counteract the
+weight and moment of the cross-slide and gantry. This design requires ease of assembly,
+easily-sourced parts, and reliability for the user. Additionally, the column must be remain in a
+vertical position such that accuracy of the system is maintained within 5mm of resolution at the
+tip of the tool. It was with these parameters that we arrived at our final design.
+
+Figure 4a: Base to Column Attachment
+
+Figure 4b: Interior View of Column
+
+16
+
+Figure 4c: Exploded View of Base
+The final design is a concrete base with an adapter plate and 4.5-inch pipe attached to it
+by two u-bolts, as seen in Figure 4a. This design came about after deciding that the column
+would be made from two 60x20mm extrusions. The rotating arm would be directly attached at
+the top, meaning that the entire column would rotate. The aluminum pipe allows for the column
+to interface with the base, and it allows the column to brace itself on the inside of the pipe via
+two sets of roller bearings that track along the inside surface of the pipe. As seen in Figure 4b,
+the column contains bearing brackets which span the extrusions, allowing the column to rotate
+within the pipe similar to the load-bearing rotation of a jib crane. The two sets of bearings are
+designed to take the moment load induced by the weight of the z-axis and cross slide
+cantilevered on the arm. The vertical load is taken by a small turntable contained in the
+drivetrain, further detailed below.
+Our team decided on concrete for the base because it is readily available, easy to use and
+allows for the user to set it themselves. This component will not be provided, but is up to the user
+to source. Concrete is heavy and gives a rigid base for the system to support the moment of the
+cross slide and gantry. With the base set in a 5-gallon bucket, it is not necessary to pour a new
+base and support bracket set-up if the device is to be moved. It can be set into the ground, in a
+raised bed, or potentially even above ground with a shorter column, providing the customer with
+flexibility of installation for different environments.
+Adjustability of the base system is in the flat base plate that holds the 4.5-inch pipe.
+Adjusting the nuts that secure the base plate to the threaded bolts allows the user to level and
+relevel the system as necessary. An L-bracket with two 90-degree braces allow the pipe to be
+secured to the base. The pipe is attached to the L-bracket by a pair of U-bolts. This base plate is
+then anchored into the concrete by the three threaded bolts, as shown in the exploded view
+Figure 4c. Furthermore, it is possible that our end software can allow for a calibration round to
+eliminate vertical misalignment of the z-axis to the contour of the farmable plot.
+All of these parts are found off the shelf (OTS), except for the base plate adaptor and the
+17
+
+L-bracket. This base plate is a flat piece of 10mm aluminum that can be fabricated by drilling
+holes of various diameters in the specified locations. The L-bracket will be manufactured using a
+standard 90-degree press brake and the holes drilled accordingly. Further analysis is required to
+analyze the strength of the concrete bolts, as well as the base plate interacting with the entire
+system.
+Overall, the base system satisfies the key customer requirements and engineering
+specifications. Dependable vertical alignment is easily achieved with these OTS and
+easily-sourced parts.
+4.2.2 Adjustable Bearing Mounts
+The adjustable bearing mounts (drawings found in Appendix F.3) are responsible for
+keeping the column tightly centered and vertical inside the base support pipe. The bearings are
+rigidly mounted to the column and ride on the inside face of the pipe, supporting the load of the
+overhung weight of the arm. The adjustable bearing mounts design requires ease of assembly,
+available parts, and reliability for the user. Additionally, they must keep the column rigid in a
+vertical position to maintain a system accuracy of 5mm. The ease of assembly requirement was
+particularly hard to achieve because the adjustable bearing mounts are housed inside the base
+support pipe.
+For assembly, the user must first mount the aluminum brackets to the column extrusions
+in predetermined locations, then mount the bearings onto the aluminum brackets via the eccentric
+spacers. The eccentric spacer is the mechanism that allows the user to adjust the bearings to fit
+snugly against the pipe. The m5 socket head screws that hold the bearings onto the mount have a
+head diameter of 8.5mm, while the eccentric spacers require a 10mm wrench to tighten. This
+allows the assembler to use a 10mm socket wrench to adjust the bearings even after it is inside
+the base support pipe as seen in Figure 5a. Loosening of the eccentric spacers during operation
+was a concern in design of this subassembly. Based on the anticipated friction provided between
+the eccentric spacer and the aluminum bracket, the force required on a single bearing to rotate
+the eccentric spacers out of position was calculated to be above 2300 lbs (full calculation found
+in Appendix G).
+
+18
+
+Figure 5a: Adjustable Bearing Mount Assembly
+
+Figure 5b: Exploded View
+
+Figure 5c: Socket Head Adjusting the Bearings After Assembly
+Analysis was done on the deflection of the Adjustable Bearing Mount Assemblies to
+determine if they would adhere to the precision requirement of 5 mm under normal operating
+loads expected at 67 lb per bearing. FEA analysis was done on the aluminum bracket to
+determine the degree of angular deflection as well as on the bearing retaining bolt to determine
+the linear amount of deflection. Both of these values were used to calculate the resulting total
+linear deflection of the bearings to be .0867 mm, which amplified over a one meter column
+becomes 1.5mm of deflection.
+
+19
+
+Figure 5d: Bolt Deflection FEA
+
+Figure 5e: Bracket Deflection FEA
+
+Stress analysis was also done on the aluminum brackets to ensure that their failure
+strength is above our expected maximum loading. This maximum loading is not expected to
+occur during standard operation but rather in accidental cases such as if something were to fall
+on the arm, or perhaps a child were to try to swing on it. The maximum loading designed for puts
+a 282 lbs on each bearing. Hand calculations were done to ensure that the 6061 aluminum
+bracket could withstand this force. The calculations resulted in a safety factor of 2.15.
+4.2.3 Drivetrain
+The drivetrain subsystem drives the movements of the 3 axes on the polar farmbot: (1)
+center column rotation, (2) cross slide movement along the y-axis, and (3) movement of the
+z-axis. Of these 3 drivesystems, both (2) and (3) can be reused from the previous cartesian
+farmbot system, meaning the re-design will only be required for (1), the rotation of the center
+column. By re-using the two existing drivetrains, it eases both mass production manufacturing
+and customer support on our sponsor’s end.
+
+20
+
+Figure 6a : Exploded View of the Drivetrain system
+
+Figure 6b: Drivetrain Housing
+The final drivetrain design for the center rotation is a compact system that is secured
+directly between the base system and column. The entire drivetrain is also fit within the 4” ID Al
+pipe as seen in Figure 6b. The most relevant customer requirements for the drivetrain included
+21
+
+ease of assembly, manufacturable, use of OTS components, accuracy, and reliability -- we felt
+that this concept was able to fulfill these requirements well. The reasoning behind this design
+was to isolate the loads on the motor such that it would only be subject to torsion required to
+rotate the column and arm. All additional loads would be supported by external loads around the
+motor. In Figure 6b, it can be seen that the adjustable bearing mounts sit directly above of the
+drivetrain, transferring any moment caused by the radial arm and the column not being perfectly
+plumb, to be directly into the pipe, rather than through the drivetrain. It can also be seen that the
+entire column and arm assembly will be fastened directly on top of the drivetrain motor housing
+rectangular tube. This motor housing’s purpose is to transfer all axial load from above down to
+the motor plate, turntable, base plate, and into the base system, with no load directly on the
+motor.
+The motor, as shown in Figure 6a, is the heart of the drivetrain and creates the rotational
+torque. It is a NEMA17 that is coupled directly into a 51:1 planetary gear, which can be
+purchased off-the-shelf online. The rotation of the entire system is possible through the use of a
+turntable, sandwiched between a base plate and motor plate. The base plate is fixed directly with
+the base system and has a D-shaped hole that can couple with the D-shaped motor shaft. The
+motor and motor housing are fixed on top of the motor plate. So when rotating the entire system,
+the motor shaft will be fixed in the base plate, resulting in the motor, motor plate, and
+subsequently the entire system to rotate above the turntable.
+
+Figure 7a: NEMA 17 Speed-Torque Curve
+
+Figure 7b: Stress-strain Curve of Steel
+
+To confirm that this design would be able to meet the design requirements, we
+performed multiple calculations. The two main driving requirements, was to be able to rotate at a
+minimum of 0.5m/s at the end of the arm and to be able to maintain an overall resolution of 5mm
+at the tool head. To confirm these designs, we utilized the motor torque curve (Figure 7a) of the
+standard NEMA17 motor and applied the gear reduction and efficiency rating to find the motor
+output torque was roughly 8N-m. Using the 0.5m/s requirement, we were able to derive the
+angular acceleration of 0.33 rad/s^2 and also use take the mass moment of inertia of the column,
+radial arm, and z-axis to find the required torque, which was ~0.6N-m. The frictional force of the
+system wasn’t taken into account because it could potentially vary from how vertical the entire
+system was, but there was already quite a large safety factor from the large motor output torque.
+Another concern was possibility of the motor shaft breaking under the load. A stress analysis on
+22
+
+the shaft was performed based on the amount of torque applied by the system and it was found to
+be roughly ~11 MPa, which is far below the yield strength of steel as seen in Figure 7b. To solve
+for the resolution, we took the motor step count along with the gear reduction to find a step angle
+of 0.067° which translates to 1.75mm at the end of the arm. As a sanity check, we also calculated
+the angular deflection on the motor shaft to see if there would be any significant effect on
+resolution and we determined that the deflection of 0.0034° or 0.089mm at the end of the arm
+could be deemed negligible.
+Overall, this design was able to fulfill all of our customer requirements particularly being
+easy to assemble and predominantly using only off-the-shelf components. The components that
+did require a level of manufacturing: motor plate, base plate, motor housing, all had relatively
+simple manufacturing operations. The only concern was the broaching process to achieve the
+D-shaped hole for mating between the base plate and motor shaft; however, from a mass
+production standpoint to our sponsor, tooling is very inexpensive and it could perhaps be a
+component sold directly from the Farmbot website. It is also worth noting that if it is discovered
+after testing that additional torque is required, a 50:1 planetary reduction can easily swapped
+with the current 27:1 reduction and the only additional adjustment would be to extend the motor
+housing.
+4.2.4 Tool Bay
+The tool bay​ ​(Figure 8, drawings found in Appendix F.7) stores tool heads (seeders,
+weeders, watering etc) and seed trays while not in use. It is bolted to a 3D printed clamp which
+connects it to the base cylinder. The circular pattern is designed for ease of location by the
+universal tool mount on the z-axis. A rectangular slot is cut in one side of the sheet to allow for
+routing of electronics wiring, vacuum tubing and water.
+
+Figure 8: Tool Bay Plate
+
+23
+
+4.2.5 Weatherproofing
+Given that FarmBot devices face a wide range of environmental conditions,
+weatherproofing is integral to maintaining reliable function. All electronics are sealed in plastic
+enclosures, structural components are made of corrosion resistant aluminum, and all bearings are
+sealed. However, the cylinder housing the rotational drivetrain is especially susceptible to
+gathering water or dirt. To address this, a 3D printed plastic shroud (Figure 10, drawings found
+in Appendix F.8 ) will be placed over the center column to cover the open face of the cylinder
+from rain and other contaminants. The interface between the shroud and the column will be
+sealed with silicone sealant that is quick-drying and flexible. This sealant will also be used to
+seal the bottom end of the pipe. In addition, to prevent water from collecting in the cylinder
+through the open ends of the v-slot extrusions, end caps (Figure 9)​ ​will be added.
+
+Figure 9: End Caps
+
+Figure 10: Column Shroud
+4.2.6 Column
+The central column (Figure 11a) is the backbone of the FarmBot device. It is constructed
+from two 20 x 60 x 1000mm v-slot extrusions connected by six, three hole brackets and spaced
+by cut pieces of 20 x 20mm v-slot extrusion v-slot system was chosen for compatibility with
+existing parts carried over from the Cartesian FarmBot as well as common CNC and 3D printing
+components. It interfaces with the base cylinder through the bearing bracket and is bolted with
+t-bolts to the gantry arm through two flat plates.
+24
+
+Figure 11a : Column
+
+Figure 11b: Column Spacer and Bracket
+
+4.2.7 Tubing and Wiring
+The FarmBot device requires water, power and air to run. 18 gauge electrical wire runs to
+the electrical box, which houses the brains of the device, the vacuum pump, and the three stepper
+motors located on the cross slide, z-axis and inside the base cylinder. ¼” clear PVC tubing
+carries water from a garden hose to the universal tool mount for the watering attachment. Water
+flow is actuated by a solenoid valve inline with the tubing and electrically connected to the
+Arduino. Air is supplied to the seeder tool head by the another length of PVC tubing originating
+at vacuum pump, also powered by the Arduino. The following diagram (Figure 12) illustrates the
+general cable and tubing routing.
+
+25
+
+Figure 12: Tubing and Wiring Diagram
+Specifically, tubing and wiring for the electronics box and tool mount is routed up the
+base cylinder, through the rectangular slot in the tool bay and into the center of the column. They
+are managed by cable carriers (made of individual plastic links) that move with the cross slide
+and z-axis. The wiring for the rotational stepper motor is routed up over the lip of the cylinder,
+below the cylinder shroud, and down through the rectangular motor housing. A gap was left
+between the inner diameter of the shroud and the outer diameter of the pipe to accommodate the
+motor wiring. Appropriate slack has been added to the tubing and wiring to accommodate the
+rotational movement of the device.
+Note: towards the end of the project, a change to the routing design was made to
+accommodate mounting the vacuum on the end of the z-axis near the tool mount. This reduces
+the air tubing required, but also appears to reduce the reliability of the seeding tool. The new
+vacuum has a tendency to clog with dirt and debris, while the original was more tolerant. In this
+new configuration, the air tubing spans only a few inches from the vacuum to the tool mount.
+26
+
+4.2.8 Arm System
+The design requirements for this subassembly are consistent with that of the entire polar
+FarmBot: simplicity, ease of assembly, manufacturability, DIY friendly and low cost. The arm
+system is responsible for providing the length of track on which the end effector will move
+radially on the cross-slide and vertically on the z-axis to reach plants as far as 1.2 meters from
+the central axis and 1.0 meters above the ground. We used the main beam of the gantry on the
+FarmBot Genesis v1.0 as our initial inspiration for the arm system because the function is nearly
+identical. The major design difference between the main gantry beam on the Genesis v1.0 and
+the polar concept (Figure 13) is that the arm is only supported at one end, acting as a cantilever
+beam rather than a simple span.
+
+Figure 13: Gantry Arm
+This drew our concerns to the higher amount of stress that will occur near the joint of the
+arm and column, due to the moment created from the weight of the extrusion and the moving
+cross-slide and z-axis assemblies. This was something that the Genesis v1.0 parts were not
+intentionally designed for. Another concern we identified was the potential for deflection at the
+end of the arm member. With these concerns in mind we continued to evaluate parts on the
+Genesis v1.0 for manufacturability, simplicity and cost purposes.
+The same 20mm x 60mm x 1500mm 6061 Alloy Aluminum V- slot extrusions used as a
+gantry beam on the Genesis v1.0 model are also used in our design. As mentioned previously,
+the arm and the column are connected by a custom, although very simple, 5mm flat aluminum
+plate via T-bolts (Figure 14c), a common and strong type of connection seen in DIY 3D printer
+27
+
+designs. We moved away from the OTS brackets found on the cartesian FarmBot to a custom
+bracket in order to ensure the rigidity of the arm-column connection and reduce deflection of the
+arm.
+Minimal deflection is integral to accurate and precise operation of the entire FarmBot
+system. The extrusion, cross-slide and z-axis are relatively lightweight and the moment created
+by these loads is calculated to be just under 50 N.m when the z-axis and cross-slide are both
+stationary at the outmost position possible along the arm. Unexpected loading, such as if the user
+leaned on the arm for support while harvesting their vegetables was taken into consideration as
+well. For this reason, we instituted a minimum strength requirement that the arm should support
+a downward force of 50 lbs at 1.0 meters from the central axis, equivalent to a moment of
+approximately 200 N.m.
+To confirm that the V-slot extrusion will be sufficient as the main structural member, a
+finite element analysis (Figure 14a) was done using the loads from the weight of the extrusion,
+cross-slide and z-axis. The goal of this analysis was to determine the deflection at the of the
+1500mm long, 6061 aluminum alloy V-slot extrusion under normal operating loads, so the
+unexpected loading of 200 N.m. was not included. The results of the analysis determined that the
+deflection of the extrusion is well under the maximum imprecision requirement of 5 mm, and can
+be considered negligible for the scope of the design.
+
+Figure 14a: FEA Analysis of Arm
+
+Figure 14b: Arm Bracket
+
+Figure 14c: T-Bolt
+The aluminum plate bracket (14b) is also of some concern, as any deflection here will
+result in a reduction of precision amplified by the distance that the cross slide is operating at. For
+example, if the linear pattern of bolt holes in the aluminum plate bracket deflects as much as 1°,
+and the end effector is operating at the maximum radius of 1.2 meters, there will be an
+imprecision of 20mm in the z-axis direction. In order to insure that this does not happen with our
+28
+
+design we have increased the effective cross-sectional area in the second iteration of design.
+Because these parts are inexpensive and easily accessible, we can order them and construct the
+subassembly for physical testing.
+
+4.3 Cost Estimate and Supplier Summary
+The cost estimate for building our prototype is mainly derived from the original cartesian
+FarmBot’s bill of materials (BOM), as our devices share much of the same hardware. The main
+differences between the two BOMs result from new components, some purchased and others
+specially manufactured, in the rotational drivetrain, base, tool bay and column. The following
+table (Table 6)​ ​summarizes our expected costs.
+
+Table 6: Expected Costs
+Our expected cost of $1875 is well below our max cost of $2250 to manufacture our
+FarmBot. A comprehensive BOM detailing each part used in the device, its cost, quantity and
+supplier can be found in Appendix H. The following table (Table 7) summarizes where we will
+be sourcing parts and how many unique parts we will be purchasing. Many of these parts are
+already in our sponsor's inventory and will not need to be ordered. Otherwise, all of these
+suppliers have shipping times of a week or less.
+
+29
+
+Table 7: Supplier Summary
+
+If put into production, the manufacturing cost will be reduced to around $900, in-line
+with the cost reduction seen when our sponsor moved from prototype to Chinese based
+production.
+
+4.4 Safety Concerns
+The following table details the potential safety hazards we’ve identified for FarmBot and
+our precautions to minimize those hazards. An extended safety checklist can be found in
+Appendix I.
+
+Table 8: Safety Concerns
+30
+
+4.5 Maintenance Considerations
+The following table (Table 9) outlines the typical maintenance tasks necessary to keep
+the polar FarmBot in operation. Much of the Polar FarmBot maintenance is the same as for the
+Genesis version, however this section has been updated to reflect any new designs. Detailed
+instructions for carrying out these maintenance tasks can be found on the FarmBot website here:
+http://genesis.farmbot.io/docs/maintenance-guide
+
+Issue
+
+Maintenance Action
+
+Inspection
+Frequency
+
+Debris buildup
+
+Wipe down FarmBot exterior with a damp sponge or
+cloth
+
+Monthly
+
+Loose screws
+
+Tighten loose screws; apply loctite if necessary
+
+Monthly
+
+Shifted spacers
+
+Reset and tighten the eccentric spacers that fix the
+wheels to the cross-slide, z-axis, and column bearing
+mounts
+
+Every 3 months
+
+Loose belt
+
+Loosen and reattach the belt clip plate to the cross-slide
+so that the belt has no slack
+
+Every 3 months
+
+General part damage
+
+Replace the damaged parts
+
+Monthly
+
+Worn leadscrew
+block
+
+Replace the lead screw block
+
+Yearly
+
+Leadscrew buildup
+
+Wipe down leadscrew with a damp sponge or cloth
+
+Yearly
+
+Magnetic debris
+
+Remove the metallic flakes on the magnets of the
+universal tool mount and the magnets on the individual
+tools
+
+Every 3 months
+
+Seeder debris
+
+Run warm water through the injector tip
+
+Every 3 months
+
+Watering nozzle
+debris
+
+Soak in hot water and vinegar mixture for a few hours
+
+Every 6 months
+
+Table 9: Maintenance Tasks
+
+31
+
+Chapter 5: Hardware/Software Design and Development
+5.1 Hardware Design
+
+Figure 15: Wiring Diagram
+The wiring diagram included above, (Figure 15), includes the major electronics
+components used in our design. The diagram shows the interconnection of the components,
+including a Raspberry Pi, Arduino, RAMPS shield, stepper motors, motor controllers, power
+supply, and step-down converter. The power supply converts 120V from an electrical outlet to
+12V DC for powering the RAMPS shield. The power supply also powers a step-down converter
+which converts the 12V DC to 5V DC for powering the Raspberry Pi.
+The pins on the RAMPS shield correspond to sockets on the Arduino, so the shield can
+be plugged into the Arduino; in the same way, the motor controllers plug into the sockets on the
+32
+
+RAMPS shield as shown in the diagram. The stepper motors plug into the stepper ports on the
+RAMPS shield. Note that while the Z-axis stepper motor plugs into the Z-axis port, the R-axis
+and θ-axis motors plug into the Y- and X-axis ports respectively. Lastly, the Pi and Arduino
+communicate via a USB 2.0 cable.
+Shown on the RAMPS are the connections for the water solenoid and the vacuum pump
+as well. These two devices operate on the 12 V from the power supply, and the ramps acts as a
+relay, shielding the rest of the electronics from electromagnetic noise generated by these
+high-inductance devices. Additionally, the tool mount leads connect to the pins on the opposite
+side of the board. In future designs, motor encoders will also be attached there as well.
+There were no significant issues with the hardware design. Because of connectivity
+issues, and while waiting on FarmBot to overhaul the web interface to provide controls for polar
+FarmBot, the Raspberry Pi was fairly obsolete. The current web app cannot control the polar
+FarmBot due to a mix of connectivity issues (which are the result to bugs in the web api and
+FarmBot OS on the Raspberry Pi), version discrepancies (FarmBot started making changes to the
+firmware and fixing said bugs after we made a copy of it and started adding polar code), and
+lacking functionality in the web app (even if it could connect, all input and output would have to
+be done in rectangular coordinates). While these are software issues, they forced us to improvise.
+For example, the USB cable that is supposed to go to the Raspberry Pi was rerouted directly to
+the controlling laptop.
+
+5.2 Software Design
+Throughout the design process, our team focused on reusing the rectangular FarmBot’s
+existing hardware and software, and on minimizing the differences between the new polar and
+existing rectangular code. These specific focuses supported our overall goal of a functional and
+stable system characterized by simplicity, scalability, and hackability. Our hardware/software
+subsystem design embodies our goals of architecture reuse and minimal code changes, and it is
+detailed in the remainder of this section.
+To begin, our design process started with an analysis of the existing hardware and
+software components of the rectangular system. We spent time investigating each component,
+analyzing which could be reused and which needed to be modified. Below, Diagram 1 identifies
+the major hardware and software components involved in our analysis.
+
+33
+
+Figure 16: Major Hardware and Software Components
+As a general overview, the FarmBot system consists of two major subsystems, the
+FarmBot cloud and the FarmBot device. The FarmBot cloud handles nearly all user interaction
+from input of garden specifications, to scheduling tasks, to displaying sensor data and camera
+video streams. The FarmBot device does the actual farming automatically, taking care of
+everything from seeding to watering to harvesting. The commands and configurations input by
+the user to the FarmBot cloud are sent to the FarmBot device through MQTT protocol, which
+connects the MQTT gateway to the Raspberry Pi. The Pi then produces G-Code (an industry
+standard typically used in CNC device control) and sends the G-Code to the Arduino. The
+Arduino is equipped with a RAMPS motor controller shield which drives the stepper motors via
+digital I/O pins.
+After researching how the current FarmBot system works, discussing customer
+requirements with our sponsor, and reading through and testing the code of various software
+components, we determined that it would be possible (and recommended) to reuse the entire
+FarmBot cloud, without requiring any changes to the existing cloud subsystem. That being said,
+it would be recommended to alter the user interface to handle polar functionality in the Web API
+GUI, but this can be left to the developers at FarmBot to update as they see fit with no usability
+impact to our new polar version design.
+That leaves two possible locations to introduce our polar coordinate functionality. The
+first option would be to send polar G-Code from the Pi to the Arduino, and the second would be
+to receive rectangular G-Code instructions as usual and modify the motor control firmware on
+the Arduino. Through investigation of the firmware source code, we discovered that G-Code
+34
+
+instruction processing was coded for each instruction individually, thus, if we were to send new
+polar G-Code, there would be no code (handlers) written to handle these. Because of this (in
+conjunction with the fact that changing the hardware and the positions of the motors will require
+changes to the Arduino motor control firmware anyway), it was decided to introduce all polar
+coordinate functionality in the motor control firmware. Doing so fulfilled our goals of hardware
+and software reuse and minimization of code changes. As seen Diagram 2, our changes affected
+only the two minimally required systems.
+
+Figure 17: Affected Systems
+There are four steps that the Arduino firmware carries out that would be potential spots to
+make the necessary code changes. The Arduino receives raw binary data from the Raspberry Pi
+over a USB connection, the raw data is processed as text and interpreted as rectangular G-Code,
+a handler is executed for each G-Code command received, and the motor controller sends I/O
+signals to the RAMPS motor shield to control the stepper motors. These steps and examples of
+the data and code involved in each step are illustrated in Figure 18.
+
+Figure 18: Arduino Steps
+35
+
+As shown in the figure above, the raw binary data sent from the Raspberry Pi (or
+computer in our case) to the Arduino (#1) is interpreted as G-Code (#2). All of the G-Code
+handlers (#3) are written in C++ code, which is a series of commands and signals to the motors
+(#4). In light of this, changing the handlers is the best approach for implementing a polar system.
+Adjusting the handlers will allow us to optionally convert each rectangular point into a polar
+point, and then appropriate signals can be sent to the motors. An illustration of the types of
+changes we made is below in Diagram 4. (Note, the illustration is simplified, but it demonstrates
+our approach.)
+
+Figure 19: Pseudo Code of Approach
+
+5.3 Software Development
+In order to ensure the software development process could be completed on time and in
+an efficient manner, the following measures were taken. First, code for the current farmbot is
+already available as open-source software on GitHub. The “FarmBot/farmbot-arduino-firmware”
+repository on GitHub was duplicated as a ‘forked repository’ to avoid interfering with
+development of the cartesian version (though the new code can ultimately be merged together).
+Continuing development on GitHub allowed (and will continue to allow in the future)
+incremental code changes to be documented and tracked, in addition to the added comments in
+the source files where code has been modified. Since the code was developed incrementally and
+tested constantly, bugs were addressed as they were created (for example, the negative axes edge
+case that was detected and fixed). Despite these benefits, however, maintaining two separate
+code versions led to frequent compatibility issues between the Arduino and the Raspberry Pi.
+Because we branched off the original code line, we could no longer benefit from updates and bug
+fixes that FarmBot was making to the code we started with.
+Our original plan for system testing was to use the FarmBot web app to send
+cartesian-point instructions to the FarmBot and verify that motors move to correct the positions
+(within acceptable tolerances). In theory this was a good plan. In reality, whenever the FarmBot
+was turned on, it never showed up in the web interface (“FarmBot Disconnected”, and “Unable
+to send command.”) Note that we did not design the web interface or the connection software.
+Our solution to this was to develop a standalone user interface that could send G-Code from a
+36
+
+computer directly to the Arduino. This solution is viable because the Arduino sees no difference
+in the G-Code, and it cannot distinguish whether the commands are being sent by the computer
+or the Raspberry Pi. In the future, when the web API is updated to work with polar FarmBots and
+our changes can be merged with the newest firmware, no changes will need to be made to the
+polar code; the web API just needs to send the G-Code as usual and the polar firmware in the
+Arduino will respond accordingly.
+
+5.4 GUI Development
+The figure below shows the latest iteration of the GUI. It allows the user to control the
+FarmBot by entering either traditional rectangular coordinates or polar coordinates. It also
+provides position adjustment buttons for adjustment relative to the current position. Below that,
+the GUI outputs the current position in both coordinate systems.
+
+Figure 20a: FarmBot GUI, Manual Mode
+Note the 6000 step offset in the GUI above. The offset is the result of converting between
+the two coordinate systems.
+
+37
+
+Figure 20b: Both Coordinate Systems
+In the figure below, the second tab of the GUI is shown. This allows the user to input a
+series of commands which the FarmBot will execute in order (and optionally loop through
+repeatedly.)
+
+Figure 20c: Farmbot GUI, Script Window
+While necessary for us at the time, this user interface that we developed for testing, will
+likely become obsolete in the future. At the time, since we were unable to reliably use the Web
+API for controlling our prototype, we needed a user interface to easily test commands, perform
+functions such as unlocking the z-axis, and execute looping scripts of instructions. This GUI
+served that purpose.
+
+38
+
+5.5 Unit Testing
+Below is a list of unit tests that we ran in order to ensure the rectangular to polar
+conversions were being calculated correctly. All of the tests pass, and the tests checked edge
+cases, so we are confident that the added polar code functions as expected. We did notice
+unexpected behavior at times during the system testing, but we were unable to identify the source
+of this unexpected behavior.
+TOLERANCE = 3 steps
+====
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+====
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+test
+
+POLAR -> RECT tests
+
+====
+
+1: polar(0, 0) -> rect(0, 0), result: (0, 0) [PASS]
+2: polar(4242, 0) -> rect(4242, 0), result: (4242, 0) [PASS]
+3: polar(4242, 180) -> rect(-4242, 0), result: (-4241, 2) [PASS]
+4: polar(4242, 270) -> rect(0, -4242), result: (0, -4242) [PASS]
+5: polar(4242, 90) -> rect(0, 4242), result: (1, 4241) [PASS]
+6: polar(6000, 0) -> rect(6000, 0), result: (6000, 0) [PASS]
+7: polar(6000, 135) -> rect(-4242, 4242), result: (-4242, 4243) [PASS]
+8: polar(6000, 180) -> rect(-6000, 0), result: (-5999, 3) [PASS]
+9: polar(6000, 225) -> rect(-4242, -4242), result: (-4244, -4241) [PASS]
+10: polar(6000, 270) -> rect(0, -6000), result: (-1, -6000) [PASS]
+11: polar(6000, 315) -> rect(4242, -4242), result: (4242, -4242) [PASS]
+12: polar(6000, 45) -> rect(4242, 4242), result: (4244, 4240) [PASS]
+13: polar(6000, 90) -> rect(0, 6000), result: (1, 5999) [PASS]
+RECT -> POLAR tests
+
+====
+
+1: rect(0, 0) -> polar(0, 0), result: (0, 0) [PASS]
+2: rect(4242, 0) -> polar(4242, 0), result: (4242, 0) [PASS]
+3: rect(-4242, 0) -> polar(4242, 180), result: (4242, 179) [PASS]
+4: rect(0, -4242) -> polar(4242, 270), result: (4242, 269) [PASS]
+5: rect(0, 4242) -> polar(4242, 90), result: (4242, 89) [PASS]
+6: rect(6000, 0) -> polar(6000, 0), result: (6000, 0) [PASS]
+7: rect(-4242, 4242) -> polar(6000, 135), result: (5999, 134) [PASS]
+8: rect(-6000, 0) -> polar(6000, 180), result: (6000, 179) [PASS]
+9: rect(-4242, -4242) -> polar(6000, 225), result: (5999, 224) [PASS]
+10: rect(0, -6000) -> polar(6000, 270), result: (6000, 269) [PASS]
+11: rect(4242, -4242) -> polar(6000, 315), result: (5999, 315) [PASS]
+12: rect(4242, 4242) -> polar(6000, 45), result: (5999, 44) [PASS]
+13: rect(0, 6000) -> polar(6000, 90), result: (6000, 89) [PASS]
+
+39
+
+5.6 System Testing
+The following is our script for system-level testing. It allowed us to input a series of
+points and verify whether the system functioned as expected.
+G0 X6000 Y6000 Z0
+G0 X6160 Y6000 Z12950
+G0 X6600 Y6000 Z12950
+G0 X10500 Y6000 Z15000
+F44 P9 V1 W0 T1000 M0
+G0 X5250 Y7298 Z15000
+F44 P9 V1 W0 T1000 M0
+G0 X5250 Y7298 Z12975
+G0 X5913 Y6130 Z12975
+G0 X5842 Y5992 Z12000
+G0 X5842 Y5992 Z12975
+G0 X5402 Y5969 Z12975
+G0 X5300 Y6000 Z10000
+G0 X5876 Y5745 Z10000
+F41 P10 V1 M0
+G0 X5876 Y5745 Z11700
+G0 X5876 Y5745 Z10000
+G0 X6000 Y3500 Z10000
+G0 X6000 Y3500 Z15150
+F41 P10 V0 M0
+G0 X6000 Y3500 Z12975
+G0 X5300 Y6000 Z12975
+G0 X5840 Y6000 Z12975
+G0 X5840 Y6000 Z10000
+G0 X5921 Y6137 Z10000
+G0 X5921 Y6137 Z12975
+G0 X5652 Y6605 Z12975
+G0 X6600 Y6000 Z12950
+G0 X6160 Y6000 Z12950
+G0 X6000 Y6000 Z0
+
+40
+
+Chapter 6: Manufacturing and Testing Processes
+6.1 Manufacturing and Assembly
+The following table (Table 10) summarizes our expected manufacturing process for
+custom “house-built” parts. These processes are further discussed below.
+
+Table 10: Manufacturing Summary
+All custom manufactured parts will be completed by the end of the quarter, 3/14 for
+integration into subassemblies, so that we can proceed with testing and any resulting redesign.
+6.1.a: 3D Printed Components
+The clamp (Figure 21a) connecting the tool bay to the column and the column
+weatherproofing shroud (Figure 21b) will be 3D printed. Both the clamp and column
+weatherproofing shroud can be printed at our sponsor's in-house Formlabs Form 1
+stereolithography printer out of methacrylate photopolymer resin. Both parts will be available the
+next day after we place our order. Before ordering, CAD files will need to be converted to STL
+files.
+When this device goes into production, all plastic parts will be injection molded by
+chinese suppliers that our sponsor has
+developed a relationship with.
+
+​
+
+Figure 21a: Tool Bay Clamp
+
+Figure 21b: Column Shroud
+41
+
+6.1.b: Machined Components (drivetrain plate, eccentric spacer bracket, arm connection
+plate)
+Six components will need to be machined. The eccentric spacer bracket and rotational
+drivetrain motor housing will be cut on the BRAE lab band saw. The two custom motor plates
+will be drilled on the IME lab CNC mill, due to the large number of operations required, and the
+simpler parts, (base plate, eccentric spacer bracket and arm connection bracket) will be drilled on
+Bridgeport Mills in the BRAE lab.
+The drivetrain base plate will be broached with a D-shaped cutter in order to interface
+with the stepper motor shaft
+6.1.c Laser and Plasma Cut Components
+The tool bay plate (Figure 21) will be laser-cut out of 1/10” steel plate with the HAAS
+laser-cutter in the IME department CNC lab. This is the easiest method of manufacturing this
+part given its complex geometry and the equipment at our disposal. In addition, for purposes of
+prototyping, this process has a much shorter lead time than purchasing a part from a vendor.
+The base l-channel will be cut into its rough shape with the BRAE lab plasma cutter, as it
+is a structural component that is too thick to lasercut. It will also be bent to 90 degrees by the
+hydraulic press brake in the BRAE lab.
+Eventually, after prototyping, the tool bay plate and base l-channel will be waterjet cut
+from more weather resistant aluminum plates by a supplier like Big Blue Saw
+(​http://www.bigbluesaw.com/​), or our sponsor’s suppliers in China.
+
+Figure 22: Tool Bay Plate
+6.1.d: Assembly Tools
+The following table (Table 11) details the tools required for assembly of the FarmBot
+device. As per our customer requirement of being DIY friendly, all the tools required to
+assemble the device can be acquired at a local hardware store or online through retailers like
+Amazon.
+
+42
+
+Table 11: Tools Needed for Assembly
+6.1.e: Special Assembly Considerations
+Step by step assembly instructions for the cross slide, z-axis, electronics box, cables and
+tubing and the universal tool mount can be found at the following locations:
+-
+
+Cross Slide: ​http://genesis.farmbot.io/d ocs/cross-slide
+Z-Axis: ​http://genesis.farmbot.io/docs/z-axis
+Electronics Box: ​http://genesis.farmbot.io/docs/electronics
+Cables and Tubing: http://genesis.farmbot.io/docs/cables-and-tubing
+Universal Tool Mount: ​http://genesis.farmbot.io/docs/universal-tool-mount
+Drawings of custom parts used in assemblies can be found in Appendix F.
+Overall Assembly of Polar Farmbot:
+
+Base Adapter to Concrete:
+1. The 5 gallon bucket can be placed in the ground or filled above ground.
+2. Follow the Quikrete instructions to mix concrete within the 5 gallon bucket.
+3. Assemble the adapter plate and the three threaded bolts with their nuts, leaving about ½
+inch of bolt above the top nut. Using the base adapter plate with the threaded bolts
+43
+
+already installed, align the plate and set the bolts several inches into the concrete right
+after the pour.
+4. Using a level and the lag bolt nuts, ensure the adapter plate is completely level and the
+lag bolts are as vertical as possible.
+5. Wait for the concrete to cure.
+Creating the Column:
+1. Using two 20mm x 60mm x 1000mm extrusions, sandwich 20mm x 20mm cut
+extrusions and tighten them together using the M5 screws with the 3-hole bracket.
+2. Six (3 on each side) of these 20mm x 20mm pieces should run down the entire length of
+the column. This will keep the two 1000mm extrusions properly spaced and also increase
+the overall rigidity.
+3. Slide the shroud onto the column from the bottom such that is sits below the bottommost
+3-hole bracket.
+Drivetrain to Base:
+1. Attach motor plate onto the motor using 4x M3 button head screws.
+2. Attach turntable onto motor plate using ¼” wrench on 4x 8-32 threaded steel hex head
+bolts/nuts.
+3. Align the D-slot in the drivetrain base plate to motor shaft.
+4. Slide the shaft into the D- slot and attach the drivetrain base plate and Angle U-bolt
+bracket to the turntable using ¼” wrench on 4x 8-32 threaded steel hex head bolts/nuts.
+5. Align motor housing and L-brackets in position and fasten together with M5 screws.
+6. Align column extrusions to the top of drivetrain system and fasten together with
+T-joining plates. This will involve M5 screws threading into nuts for the motor housing
+and t-nuts for the column. (It is recommended to work on the assembly laying down on a
+table).
+7. Assemble the 4 adjustable bearing mount subassemblies, referencing the exploded view
+in Figure 5b.
+8. Attach the two lower adjustable bearing mounts to the bottom of the column extrusions
+so that the bottom face of the spring loaded T-nuts are flush the bottom of the extrusions.
+9. The adjustable bearing mounts can be fully tightened to the column at this time, but the
+eccentric spacers will be adjusted later so do not over-tighten the bearing retaining bolt.
+10. The desired torque of the bearing retaining bolt can be tested by checking if the eccentric
+spacers are still able to be adjusted by a 10mm socket without excessive effort.
+11. Rotate the eccentric spacers so that the bearings are biased inward towards the column.
+12. Slide the pipe over the entire drivetrain assembly.
+13. Using a 10mm socket on a 6” or larger extension, rotate the eccentric spacers
+incrementally on each side so the bearings ride up against the inside wall of the pipe.
+14. To have room for inserting the socket, remove the bottommost 3-hole bracket and slide
+the shroud out of the way.
+15. Once you get the pipe seated firmly, attached the remaining 2 adjustable bearing mounts
+so that the hex button head screws are just above the outside of the pipe and accessible by
+allen wrench. Tighten down these fully at this location.
+44
+
+16. Using the 10mm socket again, rotate the eccentric spacers incrementally on each side so
+the bearings ride up against the inside wall of the pipe.
+17. Once the eccentric spacers are all tightened, lower the shroud back down above the pipe
+and re-insert the previously removed 3-hole bracket in step 14.
+Base + Drivetrain + Column to Base Adapter:
+1. Align the drivetrain base plate to the appropriate holes along the U-bolt channel and
+fasten the two together using the previous 4x hex head bolts
+2. Ensure the adapter plate on the lag bolts are still level after the concrete has cured.
+3. Remove the base adapter from the lag bolts and align the adapter plate to the U-bolt
+channel. Fasten them together with the U-bolt channel with the appropriate bolts
+4. Align the Base Corner Brackets to the U-bolt Channel. The vertical bolts will go through
+the corner bracket, U-bolt channel, and the adapter plate. The horizontal bolts will only
+go through the corner bracket and U-bolt channel.
+5. Using the U-bolt and U-bolt clamps, tightly secure the pipe to the U-bolt channel.
+6. Place the entire combined system onto the lag bolt and tighten.
+Cross Slide + Z-axis to Column:
+1. Securely attach the radial arm (20x60x1500mm extrusion) and onto the column using the
+two aluminum plate bracket. Ensure all the appropriate bolts are secured before moving
+onto the next steps. There should be 12 M5 screws for each brackets.
+2. Take the assembled z-axis and cross slide assemble the two together
+3. Take the previously assembled z-axis and cross slide assembly and slide these onto the
+radial arm.
+Electronics Box and Tubing/Wiring:
+1. Attach the pre-assembled electronics box onto the column using the 2x M5 screws.
+2. Follow the Tubing/Wiring diagram in Figure 12 to route the cables.
+3. Note that as the wiring/tubing is brought up the column from the base, the bundle should
+slide through the slot on the tool bay.
+4. Leave an appropriate amount of slack in the wiring/tubing right above the tool bay prior
+to bring them through the center of the column.
+5. The wiring from the electronics box to the drivetrain should follow along the bundle and
+create a J-loop as it enters the drivetrain from under the shroud and down through the
+center of the column into the motor housing.
+Finishing Touches:
+1. Place end caps on the end of the column. This step is crucial for preventing water from
+running down the center of the extrusions.
+2. Using the silicone sealant, seal all openings that would allow water to drip within the
+pipe.
+
+45
+
+6.2 Product Realization
+6.2.a Manufacturing Processes Employed
+In creating our device, we generally followed the above manufacturing and assembly
+plan. Many of the brackets and plates were cut, bent, and drilled in the BRAE lab and 3-D
+printed parts were made at the Makerspace. However, a number of important deviations from our
+manufacturing plan were made. They are as follows:
+-
+
+-
+
+-
+
+-
+
+All aluminum plates for the drivetrain, base and gantry were fully or partially waterjet cut
+instead of cnc milled. Given that these plates will be eventually waterjet cut if this device
+goes into production, we decided to test the process on our prototype.We found that the
+supplier, Big Blue Saw, provided acceptable, high tolerance parts for our device.
+The drivetrain base plate was switched from an aluminum plate to a thicker steel one
+(also waterjet cut). The original aluminum plate was wearing prematurely and
+introducing backlash into our device. The steel plates did not have as accurate of a cut
+(probably due to increased thickness), preventing them from interfacing cleanly with the
+motor shaft. This required us to file down the d-hole in order to attach the motor.
+The toolbay plate material was changed from steel to wood, as the IME CNC laser cutter
+did not have an adequate platform for cutting our size part, and we had access to a wood
+laser cutter at the Makerspace. We used ¼” plywood for our plate. We needed to run the
+program multiple times in order to fully cut through the wood. In addition, ¼” plywood
+was slightly too thick for our tools to slide onto, so we needed to sand it down.
+The column shroud was 3-D printed as planned, but did not have enough inner allowance
+to slide freely on the central column. It had to be forcibly slid onto the column with a
+heatgun and mallet. Given this, the design should be changed for future use.
+
+6.2.b Prototype vs. Planned Design
+Our final prototype that we displayed at the exposition was in most aspects identical to
+our planned design. Small differences came about due to available materials or a timeline that
+determined the quickest way to have a working model. Our prototype differs from our planned
+design in a few key ways.
+The differences are listed below:
+- Toolbay
+- Instead of wood, sheet metal or thin plate metal was planned to be used for
+structure. We had a laser cutter available to fabricate a wooden piece.
+- Encoders
+- We had originally proposed encoders on our z-axis and r-axis to track
+location, but this was extra work and an iteration for further prototypes.
+46
+
+-
+
+Electronics box wires
+- Our electronics were connected with longer cables or smaller sections
+spliced together. We had poor cable management, so there should be a
+better way of enclosing the free wires for safety.
+
+6.2.c Recommendations for future manufacturing of your design
+The vast majority of our parts were off the shelf and can be easily acquired by future
+customers. However, a number of key parts were custom manufactured by our team or specially
+ordered from suppliers. These parts cannot be easily manufactured by the average user and
+therefore should be provided by FarmBot as part of a kit or for sale individually through the
+website. All plates should be waterjet cut, including the tool bay, and the 3D printed parts should
+be injection molded.
+6.2.d Cost estimation for future production
+At the current stage, mass production cost is difficult to predict because many designs
+and material use would be different from what is currently being used on the prototype. The
+existing polar farmbot is still in the prototyping phase and has many revisions before it is
+production scale ready. Some examples of this could be brackets that are currently aluminum but
+instead could be made of injection molded plastic. The cost of waterjet parts will also drastically
+reduce under mass production, when right now, the waterjet components cost from a prototyping
+shop for a single farmbot costs ~$120. In terms of a very rough estimate, the cost of
+manufacturing this prototype costs ~$1940.00 so the production cost can be expected to be
+roughly ~$550 based on how the cost of the cartesian farmbot went down from $2,200 in
+prototyping to ~$600 in scaled production.
+6.3 Testing and Design Verification Plan and Report
+A comprehensive design verification plan and report (DVP&R), detailing our engineering
+requirements and how we plan to test and verify that we are meeting them, can be found in
+Appendix J . The following table (Table 12) summarizes a selection of especially important tests
+for the functionality of our device.
+
+47
+
+Table 12: Test Plan Summary
+6.3.a Test Equipment
+Only basic measurement tools are required perform the tests detailed in the DVP&R. A
+measuring tape, stopwatch, and a postal scale will be sufficient to test the functionality and
+performance of our device. A computer hooked up to the FarmBot web app will be necessary to
+run test code (and the device in general).
+
+48
+
+6.3.b Test Results Summary
+
+Test Results Summary Table
+Test Description
+
+Required
+Spec
+
+Actual
+Spec
+
+PASS/FAI
+L
+
+Velocity
+
+Tool velocity at outermost radial position
+
+.5 m/s +/- .2
+ms
+
+.5 m/s
+
+PASS
+
+Software
+
+Conversion Unit Tests
+
+N/A
+
+N/A
+
+PASS
+
+Software
+
+Tool Retrieval Functional Test
+
+N/A
+
+N/A
+
+PASS
+
+Arm
+
+FEA Analysis confirmed that there is no
+bending in the arm
+
+< 5mm
+deflection
+
+.8mm
+
+PASS
+
+Accuracy
+
+Tool head retrieves the tools successfully
+
+9/10 times
+
+9/10 times PASS
+
+Accuracy
+
+Tool head returns the tools successfully
+
+9/10 times
+
+5/10 times FAIL
+
+Rotation
+
+Complete one rotation without stalling
+
+180, -180
+
+180, -180
+
+PASS
+
+Area
+
+Achieve full farmable area
+
+4.5 m²
+
+4.5 m²
+
+PASS
+PASS
+
+Test Name
+
+Tubing
+
+Water flow through tubes
+
+10/10 times
+
+10/10
+times
+
+Seeding
+
+Seeder tool picks up seed
+
+9/10 times
+
+1/10 times FAIL
+
+Table 13: Test Results Summary
+
+Figure 23: Testing Functionality Of Final Prototype
+49
+
+6.3.c Detailed Test Results
+Only the more complicated tests will be discussed in more detail in this section.
+Velocity Test: A video was used to determine the time taken for the farmbot tool to travel
+from one known location to another known location at 120° away. This test was done using a
+99.05:1 reduction motor, and the rotation took 20 seconds to complete, meaning our rotational
+speed is 6° per second. When the arm is at 1.2m from the rotational axis, the tool speed is
+251.2mm per second. This is roughly half of our spec for tool speed. We believe that using a
+50.9:1 stepper motor, which was previously tested and has adequate torque, will roughly double
+the rotational speed of the FarmBot. This will increase the tool speed to approximately 500mm
+per second, which is right at our specification for the final design.
+Accuracy Tests: The accuracy tests need to be explained because there are a few
+discrepancies that affected the test results that may not be obvious and misrepresent the actual
+accuracy and repeatability of the . The FarmBot passed the tool retrieval test with an ability to
+retrieve the tool 9/10 times, but mostly due in fact to the magnetic connectors that attach the
+tools to the tool holders. The magnets allowed for a misalignment between the tool holder and
+tool to be compensated for when magnetic force pushed the tool to the correct location in the tool
+bay directly under the tool holder. The tool return test was a failure at a success rate of only 5/10
+times. The reason for such a bad tool return rate was because of both the backlash in the motors
+as well as high friction between the wood and plastic tools.
+Seeding Test: The seeding tool was a definite failure mainly due to the fact that there was
+excessive vibration and clogging problems from a new prototype vacuum pump that the FarmBot
+research team has only recently started using. The vibration problem was due to the fact that the
+vacuum pump is mounted on the z axis extrusion as opposed to the vacuum pump being mounted
+at the base and wiring the hose through the cable carrier. This caused the whole z axis to vibrate
+during the seeding test, which made it difficult for the seed vacuum nozzle to hold the seeds. We
+discovered that this vacuum pump tends to intake dirt particles after the seed is pushed into the
+ground and the nozzle is exposed. The dirt particles travel up the vacuum and get caught in the
+one-way valve that controls the flow of air in the vacuum, and greatly reduces the suction of the
+pump. We found that this part of the pump must be cleaned about every 10 seeding operations.
+
+50
+
+Figure 24: Watering Attachment On The Tool Head
+
+51
+
+Chapter 7: Management Plan
+7.1 Team Overview
+-
+
+Main sponsor point of contact: Lucas Salem
+Commitment of at least 10 hours per student per week (including class time)
+Team member skillsets:
+-
+
+Kasenia Colombo - ​communication, project management, manufacturing, final
+report editing, accounting, organization.
+
+-
+
+Lucas Salem - ​organization, mechanical design, 2D/3D CAD, excel driven
+design calculations, irrigation design/ hydraulics, mechanics of materials/ stress
+calcs, urban farming/gardening
+
+-
+
+Rory Stothers - ​machining, mechanical design, design for manufacturing, rapid
+prototyping, sketching, interdisciplinary communication, brainstorming, 3D CAD
+
+-
+
+Samuel Lees - ​C programming, Java programming, CAD (SolidWorks),
+Raspberry Pi, Arduino, Scrum
+
+-
+
+Ning Jeng - ​project management, 2D/3D CAD mechanical design, CNC
+manufacturing/G-code, 3D printers, arduino programming, supply chain/vendor
+and factory management, agricultural systems
+
+-
+
+Jack Brown - ​project management, design for manufacturing and assembly, rapid
+prototyping, gardening, process improvement, CAD.
+
+7.2 Gantt Chart:
+Completed Gantt chart is shown in Appendix K, L, & M.
+
+52
+
+Chapter 8: Conclusions and Recommendations
+Our prototype proved the viability of a polar coordinate FarmBot, and revealed the
+potential issues our sponsor may face in bringing this device to market. In comparison to the
+original cartesian FarmBot, our design has fewer parts, is potentially less costly and is portable
+(and therefore easier to install). However, as it is currently designed (and inherent to the polar
+form), it is less scalable and less accurate. With further iterations, these shortcomings could be
+mitigated and a commercially viable product could be produced. The following steps can be
+taken to further refine the design:
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+Motor:
+- Use the 50.9:1 (as opposed to the currently-installed 100:1) geared reduction
+motor because it has enough torque to overcome the friction inside the base and
+will be fast enough to meet the 0.5m/s velocity specification.
+Encoders:
+- Implement the encoders that already exist on the Z- and R-axis motors to the
+Arduino to get feedback on what the actual position of the tool is.
+- Consider designing an auxiliary encoder that directly measures the rotational axis
+to account for the backlash in the rotational motor-to-base connection.
+Weatherproofing:
+- Test the sealant between the pipe shroud and the column to ensure adequate
+weatherproofing.
+- Add a filter to the vacuum hose that takes out dirt particles before reaching the
+vacuum pump.
+Manufacturability/production:
+- Use a standard size fastener for base connections to reduce the variety of parts
+required.
+- The 3/8” base plate could possibly be reduced to a 3/16” plate, try a 3/16” and
+inspect for deflection.
+- Do a comparison between drilling out turntable holes vs. bolt size reduction
+Parts to fine tune:
+- Shroud:
+- 3D print shroud without fillets at 8020 corners to see if it is easier to slide through
+the extrusions.
+- Adjust offset as necessary until shroud slides easily along the column. It can be
+sealed with silicone for weather after assembled.
+D-shape motor plate:
+- Test D-shape hole sizes so dremeling and filing won’t be necessary.
+- Adjusting thickness and material as necessary to reduce on the D-slot taper when
+waterjet.
+Tool Bay:
+- Perform testing of tool retrieval/replacement with a different stiffer and flatter
+material than wood at proper thickness. (ie. metal, acrylic)
+- Try tapering the entry slots such that the tool is caught easily with a small offset.
+53
+
+-
+
+Base:
+- Reduce the size of base plate mounting hardware so that it matches the strength of
+the other hardware used throughout the base/column.
+
+54
+
+Acknowledgements
+The Farmbot Revolution team would like to thank our sponsor, Rory Aronson, for
+creating this opportunity as well as our project advisor, Jim Widmann, for guiding us throughout
+the entire process.
+
+From left: Kasenia, Rory, Sam,
+Ning, Lucas, and Jack
+
+Top from left: Lucas, Jack, Jim,
+Rory (sponsor), Ning
+Bottom from left: Kasenia and
+Rory
+
+55
+
+Appendices
+Appendix A: Existing Cartesian Coordinate Requirements Table
+Appendix B: QFD Table
+Appendix C: Base Decision Matrix
+Appendix D: Arm Attachments Decision Matrix
+Appendix E: Base to Column Attachments Matrix
+Appendix F: Custom Part Drawings
+Appendix G: Bearing Mount Analysis
+Appendix H: Bill of Materials
+Appendix I: Hazard Identification Checklist
+Appendix J: Design Verification Plan and Report
+Appendix K: Fall Quarter Gantt Chart
+Appendix L: Winter Quarter Gantt Chart
+Appendix M: Spring Quarter Gantt Chart
+Appendix N: Product Literature
+
+56
+
+Appendix A. Existing Cartesian Coordinate Requirements Table
+
+Appendix B. QFD Table
+
+Appendix C. Base Decision Matrix
+
+Appendix D. Arm Attachments Decision Matrix
+
+Appendix E. Base to Column Attachments Decision Matrix
+
+Appendix F. Custom Part Drawings
+1.​
+​
+
+Adapter Plate
+
+2.​
+​
+
+Bent U-Bolt Plate
+
+3.​
+​
+
+Adjustable Bearing Bracket
+
+4.​
+​
+
+Motor Housing
+
+5.​
+​
+
+Drivetrain Motor Plate
+
+6.​
+​
+
+Drivetrain Base Plate
+
+7.​
+​
+
+T-Joining Plate
+
+8.​
+​
+
+Tool Holder Plate
+
+9.​
+​
+
+Pipe Clamp 1
+
+10.​ ​ Pipe Clamp 2
+11.​ ​ Column Shroud
+12.​ ​ Shoulder Plate
+
+1
+
+2
+
+1
+
+2
+
+10.000
+
+B
+
+B
+
+4.315
+4.031
+4.061
+Ø.170 typ.
+2.315
+1.531
+1.501
+Ø.433 typ.
+3.720
+
+1.621
+
+.000
+.500
+
+.000
+Ø.394 typ.
+
+Ø.160 typ.
+
+4.000
+3.685
+
+Ø.170 typ.
+
+HD
+HD
+
+HD
+5.000
+
+90.0°
+
+HD
+
+1.685
+1.000
+
+3
+16
+
+Ø.438 typ.
+
+A
+
+R.250
+
+2.500
+
+1.621
+
+.000
+
+.000
+
+6.000
+NAME
+UNLESS OTHERWISE SPECIFIED,
+DIMENSIONS ARE IN INCHES
+.X = ±.1
+.XX = ±.01
+.XXX = ±.0031
+
+DRAWN BY:
+
+APPROVED BY:
+ANGULAR = ±.1 °
+FRACTIONAL = ±1/32
+
+DATE
+
+FARMBOT REVOLUTION
+
+02/13/2017
+
+Lucas Salem
+
+CHECKED BY:
+
+A
+
+Ning Jeng
+
+02/13/2017
+
+Rory Sothers
+
+02/13/2017
+
+PART NAME
+
+Bent U-Bolt Plate
+
+NOTES:
+HD= Hand drill upon installation of corner
+bracket after sheet is bent
+
+REV.
+
+SUBASSEMBLY NAME
+MATERIAL
+
+FINISH
+6061
+
+Base
+SIZE
+
+SCALE
+
+1:3
+
+2
+
+1
+
+Factory
+SHEET
+
+A
+
+1
+
+1 of 1
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+Appendix G: Bearing Mount Analysis
+Scope:
+
+To determine the max force that can be applied at each wheel without the eccentric spacers rotating out of position.
+
+Assumptions:
+
+The eccentric spacer will have to rotate in order for the bearing to become loose.
+
+Calculations:
+Eccentric Spacer
+Radius of Centroid Area
+
+7.70866 mm
+
+Coefficient of Friction
+Stainless Steel on 6061
+
+Bolt Clamping Force
+
+0.45 (dry and clean)
+
+http://www.engineeringtoolbox.com/frictioncoefficients-d_778.html
+
+538
+
+https://www.fastenal.com/content/feds/pdf/TorqueTension%20Chart%20for%20Metric%20Fasteners.
+pdf
+
+Frictional Torque (Rotating) T=uRN
+Worst Case Scenario:
+Acting radius arm:
+
+References
+
+lbs
+
+1866.266586 mm-lbs
+
+When the eccentric spacer is aligned perpendicular to the tangential force from the pipe.
+0.79 mm
+
+Allowable Tangential Force:
+
+2362 lbs
+
+Allowable Force:
+
+2352 lbs
+
+Subassembly
+
+Components
+
+Column
+
+Column Beams - 20mm X 60mm x 1500mm V-slot extrusion
+Cut Column Spacers (20 x 20 x 250mm)
+
+3.00
+
+6
+
+$18.00 http://openbuildspartstore.com/v-slot-linear-rail/
+
+3 hole plate
+
+2.05
+
+6
+
+$12.30 http://openbuildspartstore.com/3-hole-joining-strip-plate/
+
+50.89
+
+1
+
+$50.89 https://www.shapeways.com/
+
+1.85
+
+6
+
+$11.10 http://openbuildspartstore.com/end-cap/
+
+5.50
+
+1
+
+http://www.homedepot.com/p/GE-2-8-oz-Silicone-Sealant-GE$5.50 57/202038072
+
+Gantry Main Beam - 20mm x 60mm x 1500mm V-slot extrusion
+
+25.30
+
+1
+
+$25.30 http://openbuildspartstore.com/v-slot-linear-rail/
+
+Cable Carrier Supports
+
+12.43
+
+6
+
+$74.58 https://www.shapeways.com/
+
+M5 x 10mm Screws
+
+0.12
+
+42
+
+M5 tee nuts
+
+0.28
+
+12
+
+15
+
+2
+
+Cross-Slide Plate
+
+0.00
+
+1
+
+$0.00 https://www.bigbluesaw.com/
+
+M3 x 5mm Setscrews
+
+0.25
+
+2
+
+$0.50 https://www.mcmaster.com/
+
+M5 x 16mm Screws
+
+0.17
+
+4
+
+$0.68 https://www.mcmaster.com/
+
+M5 x 30mm Screws
+
+0.17
+
+12
+
+$2.04 https://www.mcmaster.com/
+
+M5 x 6mm Spacers
+
+0.20
+
+6
+
+M5 x 6mm Eccentric Spacers
+
+2.00
+
+6
+
+M5 Washers
+
+0.03
+
+14
+
+$0.42 https://www.mcmaster.com/
+
+M5 Locknuts
+
+0.08
+
+16
+
+$1.28 https://www.mcmaster.com/
+
+32.50
+
+1
+
+https://farmbot-genesis.readme.io/docs/3d-prints#section$32.50 horizontal-motor-cover
+
+13.84
+
+1
+
+https://farmbot-genesis.readme.io/docs/3d-prints#section-long$13.84 cable-carrier-mount
+
+Polycarbonate V-Wheel
+
+3.95
+
+12
+
+SS-625-2RS Bearings
+
+0.30
+
+24
+
+$7.20 http://zotyindustrial.com/index.php/product/index/id/34.html
+
+M5 Shim
+
+0.25
+
+12
+
+$3.00 http://openbuildspartstore.com/precision-shim-10x5x1mm/
+
+6.95
+
+1
+
+http://openbuildspartstore.com/nut-block-for-8mm-metric-acme$6.95 lead-screw/
+
+20 tooth GT2 Pulley
+
+5.50
+
+1
+
+$5.50 http://openbuildspartstore.com/gt2-2mm-timing-pulley-20-tooth/
+
+Belt Clip Plates
+
+3.00
+
+2
+
+$6.00 https://www.bigbluesaw.com/
+
+M5 x 10mm Screws
+
+0.12
+
+2
+
+$0.24 https://www.mcmaster.com/
+
+M5 tee nuts
+
+0.28
+
+2
+
+GT2 Timing Belt
+
+8.20
+
+12
+
+0.08
+
+2
+
+11.00
+
+1
+
+Arm to Column bracket
+
+Appendix H: Bill of Materials
+
+Location
+
+$50.60 http://openbuildspartstore.com/v-slot-linear-rail/
+
+2.8 oz. Silicone Sealant
+
+Horizontal Motor Housing
+Long Cable Carrier Mount
+
+Leadscrew Block
+
+M3 x 10mm Screws
+Z Axis
+
+Total Cost
+2
+
+Column endcaps
+
+Cross Slide
+
+Quantity
+
+25.30
+
+Weatherproof shroud
+
+Gantry Arm
+
+Cost Per Unit
+
+Z - Axis Beam - 20mm x 20mm x 1000mm V-slot extrusion
+
+$5.04 https://www.mcmaster.com/#92095a208/=1633yc9
+$3.36 http://www.peaksight.com/
+$30.00 House built
+
+$1.20 http://openbuildspartstore.com/
+$12.00 http://openbuildspartstore.com/eccentric-spacer/
+
+$47.40 http://openbuildspartstore.com/xtreme-solid-v-wheel/
+
+$0.56 http://www.peaksight.com/
+$98.40 http://openbuildspartstore.com/
+$0.16 https://www.mcmaster.com/
+$11.00 http://openbuildspartstore.com/v-slot-linear-rail/
+
+M3 x 10mm Screws
+
+0.08
+
+4
+
+$0.32 https://www.mcmaster.com/
+
+M5 x 10mm Screws
+
+0.12
+
+10
+
+$1.20 https://www.mcmaster.com/
+
+M5 x 16mm Screws
+
+0.17
+
+2
+
+$0.34 https://www.mcmaster.com/
+
+M5 x 25mm Screws
+
+0.17
+
+2
+
+$0.34 https://www.mcmaster.com/
+
+M5 x 20mm Spacers
+
+0.2
+
+2
+
+$0.40 https://www.mcmaster.com/
+
+M5 Washers
+
+0.03
+
+2
+
+$0.06 https://www.mcmaster.com/
+
+M5 Locknuts
+
+0.06
+
+2
+
+$0.12 http://www.mcmaster.com/#93625A200
+
+M5 Tee Nuts
+
+0.28
+
+12
+
+40.99
+
+1
+
+Z-Axis Motor Mount
+
+$3.36 http://www.peaksight.com/
+https://farmbot-genesis.readme.io/docs/3d-prints#section-z-axis$40.99 motor-mount
+
+48.41
+
+1
+
+https://farmbot-genesis.readme.io/docs/3d-prints#section-vertical$48.41 motor-cover
+
+Z-Axis Cable Carrier Guides
+
+8.51
+
+4
+
+$34.04 https://www.shapeways.com/
+
+5mm to 8mm Flex Coupling
+
+4.95
+
+1
+
+25.45
+
+2
+
+$50.90 https://www.inventables.com/technologies/drag-chain
+
+8 x 1000mm Leadscrew
+
+31.5
+
+1
+
+$31.50 http://openbuildspartstore.com/8mm-metric-acme-lead-screw/
+
+Liquid/Gas Tubes
+
+0.79
+
+9
+
+Barbs
+
+5.60
+
+3
+
+Barbed adapter
+
+1.62
+
+1
+
+$1.62 https://www.mcmaster.com/#5372k221/=14z0mfg
+
+Garden hose adapter
+
+4.81
+
+1
+
+$4.81 https://www.mcmaster.com/#70815t44/=14jz0ff
+
+O-rings
+
+0.27
+
+3
+
+$0.81 https://www.mcmaster.com/#1171n145/=14abs96
+
+Grommets
+
+0.07
+
+4
+
+$0.28 https://www.mcmaster.com/#9600k33/=14ac8cm
+
+Pressure Regulator
+
+5.27
+
+1
+
+$5.27 Home depot
+
+Solenoid valve
+
+7.95
+
+1
+
+$7.95 https://www.sparkfun.com/products/10456
+
+M3 x 30mm Screws
+
+0.17
+
+12
+
+1.73
+
+12
+
+https://www.amazon.com/gp/product/B005S4HP6K?
+$20.76 redirect=true&pldnSite=1
+
+M3 Locknuts
+
+0.05
+
+12
+
+$0.60 https://www.mcmaster.com/#93625a100/=1622y8k
+
+M5 x 12mm screws
+
+0.15
+
+2
+
+$0.30 https://www.mcmaster.com/#92095a210/=1622vcr
+
+M5 x 30mm screws
+
+0.27
+
+3
+
+$0.81 https://www.mcmaster.com/#92095a218/=1622xok
+
+M5 washers
+
+0.03
+
+3
+
+$0.09 https://www.mcmaster.com/#93475A240
+
+M5 tee nuts
+
+0.28
+
+2
+
+$0.56 http://www.peaksight.com/
+
+M5 locknuts
+
+0.06
+
+3
+
+56.15
+
+1
+
+Vertical Motor Housing
+
+15mm 40mm x 1000mm Cable Carrier
+Cables and Tubing
+
+Universal Tool Mount
+
+M3 x 10mm compressions springs
+
+Universal tool mount base
+Zipties
+
+$7.11 https://www.mcmaster.com/#5233k56
+$16.80 https://www.mcmaster.com/#4406t14/=14ab6e0
+
+$2.04 http://www.mcmaster.com/#92855A335
+
+$0.18 http://www.mcmaster.com/#93625A200
+$56.15 https://www.shapeways.com/
+
+0.05
+
+12
+
+19.20
+
+1
+
+$19.20 https://www.mcmaster.com/#8082K14
+
+barb for 1/4" tube ID
+
+5.60
+
+3
+
+$16.80 https://www.mcmaster.com/#4406T14
+
+1.5mm wide, 9mm ID square-profile O-rings
+
+0.27
+
+3
+
+$0.81 https://www.mcmaster.com/#1171N145
+
+15 x 5 x 5mm ring magnets
+
+1.69
+
+3
+
+$5.07 https://www.apexmagnets.com/15-x-5-x-5mm-rings
+
+M2.5 x 4mm Screws
+
+0.32
+
+16
+
+$5.12 https://www.mcmaster.com/#92095a456/=1622ozu
+
+M2.5 x 6mm Standoffs
+
+2.79
+
+8
+
+$22.32 https://www.mcmaster.com/#93655a092/=1622qcp
+
+M3 x 4mm Screws
+
+0.04
+
+4
+
+$0.17 https://www.mcmaster.com/#92095a471/=1622toy
+
+M4 x 20mm Screws
+
+0.13
+
+6
+
+$0.78 https://www.mcmaster.com/#92095a196/=1622tcd
+
+M5 x 12mm Screws
+
+0.15
+
+2
+
+$0.30 https://www.mcmaster.com/#92095a210/=1622vcr
+
+M5 Tee Nuts
+
+0.28
+
+2
+
+Electronics Housing (with mounting plate)
+
+32.34
+
+1
+
+$32.34 https://www.mcmaster.com/#catalog/123/905/=1633w3m
+
+Raspberry Pi 3 Model B
+
+39.95
+
+1
+
+$39.95 https://www.adafruit.com/products/3055
+
+12.89
+
+1
+
+https://www.amazon.com/SanDisk-Extreme-Adapter-SDSDQXN$12.89 016G-G46A-Version/dp/B00M55BX3G
+
+11.83
+
+1
+
+http://www.sainsmart.com/arduino/control-boards/sainsmartmega2560-r3-development-board-compatible-with-arduino$11.83 mega2560-r3.html
+
+12.82
+
+1
+
+http://www.sainsmart.com/sainsmart-3d-printer-control-board$12.82 ramps-1-4-for-arduino-reprap-mendel-prusa.html
+
+DRV8825 Stepper Drivers
+
+5.95
+
+4
+
+$23.80 https://www.pololu.com/product/1182
+
+Stepper Driver Heatsinks
+
+1.50
+
+1
+
+20 gauge, 12 wire cable, 3m length
+
+Electronics Box
+
+$4.95 https://www.adafruit.com/products/1176
+
+MicroSD card
+Arduino Mega 2560
+RAMPS shield
+
+$0.60 Home depot
+
+$0.56 http://www.peaksight.com/
+
+$1.50 https://ultimachine.com/products/heat-sink-6-3mm-x-4-8mm
+
+4.99
+
+1
+
+https://smile.amazon.com/Belkin-Components-Device-DaisyChain/dp/B000067RMY/ref=pd_sim_sbs_147_2?
+ie=UTF8&dpID=31G1lSlmR0L&dpSrc=sims&preST=_AC_UL320
+$4.99 _SR320%2C320_&refRID=7P8Q2GQ8SQ8N2NM6EEH9
+
+5V power adapter (UBEC DC/DC Step-Down (Buck) Converter - 5V @ 3A
+output)
+
+9.95
+
+1
+
+$9.95 https://www.adafruit.com/products/1385
+
+Power jumper wire
+
+0.31
+
+2
+
+$0.62 https://www.mcmaster.com/#9697t2/
+
+0.30
+
+2
+
+https://www.amazon.com/Wago-222-413-LEVER-NUTS$0.60 Conductor-Connectors/dp/B01M12CRDH
+
+USB cable (Type A male to Type B male)
+
+3 connector lever nuts
+
+25.99
+
+1
+
+https://smile.amazon.
+com/gp/product/B004GN3A2M/ref=oh_aui_search_detailpage?
+$25.99 ie=UTF8&psc=1
+
+Power Supply
+
+50.00
+
+1
+
+$50.00 http://openbuildspartstore.com/12v-29a-power-supply/
+
+Sheet Metal Cutout
+
+10.00
+
+1
+
+$10.00 Home made
+
+Pipe Collar
+
+41.30
+
+1
+
+$41.30 https://www.shapeways.com/
+
+0.40
+
+2
+
+https://www.mcmaster.com/#standard-rounded-head$0.80 screws/=16339vl
+
+0.06
+
+4
+
+$0.24 http://www.mcmaster.com/#93625A200
+
+0.25
+
+2
+
+https://www.mcmaster.com/#standard-rounded-head$0.50 screws/=1633b6r
+
+Seeder Head
+
+18.00
+
+1
+
+$18.00 https://www.shapeways.com/
+
+Watering Nozzle
+
+18.00
+
+1
+
+$18.00 https://www.shapeways.com/
+
+4.95
+
+1
+
+Weeding Head
+
+18.00
+
+1
+
+$18.00 https://www.shapeways.com/
+
+Seed Bin
+
+22.00
+
+2
+
+$44.00 https://www.shapeways.com/
+
+Vacumn Pump
+
+Tool Bay
+
+M5 x 40mm bolt
+M5 Locknut
+M5 x 25mm bolt
+
+Soil moisture sensor
+
+Rotational Drivetrain
+
+$4.95 sparkfun.com
+
+30.00
+
+1
+
+http://omc-stepperonline.kancart.com/item_detail/43-Gear-Ratio27-1-Planetary-Gearbox-High-Torque-Nema-17-Stepper-17HS19$30.00 1684S-PG27
+
+10.00
+
+1
+
+$10.00 https://www.mcmaster.com/#6031k41/=15bw2kp
+
+Motor Housing Tube ((1/2ft) Multipurpose 6061 Aluminum Rectangular Tube
+1/8" Wall Thickness, 2" x 2")
+
+7.49
+
+1
+
+$7.49 https://www.mcmaster.com/#6546k23/=1612i0s
+
+Double L - Brackets
+
+1.25
+
+4
+
+T - Joining Plate
+
+4.65
+
+4
+
+M5 x 6mm Screw Low Profile
+
+0.11
+
+8
+
+5mm Tee Nuts
+
+0.75
+
+10
+
+Motor Plate
+
+0.00
+
+1
+
+$0.00 Machined
+
+Bottom Plate (motor shaft connection)
+
+0.00
+
+1
+
+$0.00 Machined
+
+M3 x 12mm Button Head Screw
+
+0.08
+
+4
+
+$0.32 http://openbuildspartstore.com/button-head-screws-m3-25-pack/
+
+M5 x 8mm Screw Low Profile
+
+0.12
+
+8
+
+$0.96 http://openbuildspartstore.com/low-profile-screws-m5/
+
+M5 x 10mm Button Head Screw
+
+0.13
+
+10
+
+$1.28 http://openbuildspartstore.com/low-profile-screws-m5/
+
+8-32 Thread Size, 5/8" Long 18-8 Stainless Steel Hex Head Screws
+
+0.15
+
+8
+
+$1.21 https://www.mcmaster.com/#92314a196/=166odhl
+
+18-8 Stainless Steel Narrow Hex Nut, 8-32 Thread Size, 1/4" Wide
+
+0.04
+
+8
+
+$0.30 https://www.mcmaster.com/#90730a009/=166oedz
+
+Nema 17 stepper motor + Planetary Hub
+Turntable
+
+Rotary Encoder
+34.49
+
+1
+
+70.00
+
+2
+
+$5.00 http://openbuildspartstore.com/l-bracket/
+$18.60 http://openbuildspartstore.com/t-joining-plate/
+$0.90 http://openbuildspartstore.com/low-profile-screws-m5/
+$7.50 http://openbuildspartstore.com/drop-in-tee-nuts/
+
+http://www.usdigital.
+com/products/encoders/incremental/rotary/kit/E4T-200-197-D-H$34.49 M-B
+
+Linear Drivetrain
+
+NEMA 17 Stepper Motor, encoder and cables
+
+Base/Base Connecition
+
+3/4"-10 Thread, 7-1/2" Long, Fully Threaded ASTM A193 Grade B7 Steel
+Threaded Stud
+
+3.14
+
+3
+
+$9.42 https://www.mcmaster.com/#98750a320/=166pxft
+
+Grade 5, 3/4"-10 Thread Size Medium-Strength Steel Hex Nut
+
+0.44
+
+6
+
+$2.64 https://www.mcmaster.com/#95505a608/=166pv8n
+
+50 lb bag of quickrete
+
+4.00
+
+1
+
+$4.00 Home Depot
+
+$140.00 https://www.alibaba.com/
+
+5 gallon bucket
+
+1
+
+304 Stainless Steel U-Bolt with Round Bracket 3/8"-16 Thread Size, 4-5/8" ID
+
+14.71
+
+2
+
+$29.42 https://www.mcmaster.com/#3042t64/=169970b
+
+4.5 OD Aluminum Pipe
+
+52.28
+
+1
+
+$52.28 https://www.mcmaster.com/#9056k32/=1669qtx
+
+Adapter Base Plate
+
+40.61
+
+1
+
+$40.61 house built
+
+Ubolt L plate
+
+0.00
+
+1
+
+$0.00 house built
+
+Corner Bracket
+
+3.80
+
+2
+
+$7.60 https://www.mcmaster.com/#1088a33/=1686kr9
+
+Size 8 x 7/8" bolts
+
+0.07
+
+8
+
+$0.59 https://www.mcmaster.com/#92210a198/=1687ibz
+
+size 8 nuts
+
+0.03
+
+8
+
+120.00
+
+1
+
+waterjet parts from BBS
+Adjustable bearing mounts Xtra Wide- M5 x 6mm Eccentric Spacers *10mm socket size*
+
+Totals
+
+http://www.homedepot.com/p/The-Home-Depot-5-gal-Homer$2.97 Bucket-05GLHD2/100087613
+
+2.97
+
+$0.25 https://www.mcmaster.com/#91841a009/=1686haz
+$120.00
+https://www.amazon.com/Eccentric-Spacer-Full-SizeWheels/dp/B01D2FAV3K/ref=sr_1_fkmr0_1?
+s=industrial&ie=UTF8&qid=1485997601&sr=1-1$15.00 fkmr0&keywords=m5%2Beccentric%2Bspacers&th=1
+
+1.50
+
+10
+
+M5 x 25mm Flat Socket Screws
+
+0.17
+
+8
+
+Xtreme Mini V Wheel Kit
+
+5.95
+
+8
+
+$47.60 http://openbuildspartstore.com/xtreme-mini-v-wheel-kit/
+
+Spring Loaded T-nut
+
+1.20
+
+8
+
+$9.60 http://openbuildspartstore.com/spring-loaded-tee-nuts/
+
+M5 x 12mm Screws
+
+0.15
+
+8
+
+$1.20 https://www.mcmaster.com/#92095a210/=1622vcr
+
+6061 Aluminum, 90 Degree Angle, 1/8" Thick, 3/4" x 3/4" Legs (1ft)
+
+2.66
+
+1
+565
+
+$1.36 https://www.mcmaster.com/#91292a129/=161jdo9
+
+$2.66 https://www.mcmaster.com/#8982k28/=1637ny9
+$1,940.66
+
+Appendix I. Hazard Identification Checklist
+
+DVP&R
+Report Date: 2/14/17
+
+Sponsor: Rory Aronson
+
+REPORTING ENGINEER: Lucas Salem
+
+TEST PLAN
+Item
+No
+1
+2
+
+Specification or Clause Reference
+
+Requirement
+
+Minimum Radius
+
+1.2m
+
+Minimum Height Clearance Above Soil
+
+1m
+
+Farmable Area
+
+4.5m^2
+
+Appendix J: Design Verification Plan and Report
+
+3
+
+5
+Velocity
+
+0.5 m/s
+
+7
+Rotational Range
+
+360 degrees
+
+Torque Rating from motor
+
+3 N.m
+
+Number of Pinch Points
+
+<10
+
+8
+
+15
+
+18
+
+19
+20
+
+Assembly Time
+
+15 hrs
+
+Number of Parts
+
+799
+
+Shipping Weight
+
+150 lbs (UPS requirement)
+
+21
+Shipping Size (L + Girth) Girth=2x(H+W) 165 in (UPS requirement)
+
+23
+24
+
+Overall resolution
+
+2.5 mm +/- 2.5 mm
+
+Overall resolution: bearings in pipe
+
+<.3mm
+
+Overall resolution: arm/bracket deflection <1mm
+
+25
+
+26
+
+Maintanance Frequency
+Cost to Prototype
+
+once a month
+$2,250
+
+Test Description
+
+TEST REPORT
+Test
+Acceptance Criteria Responsibility
+Radius > 1.2m
+Jack
+Jack
+
+SAMPLES TESTED
+TIMING
+TEST RESULTS
+NOTES
+Quantity
+Type
+Start date Finish date Test Result Quantity Pass Quantity Fail
+Complete
+1
+Measurement 4/18/2017 4/18/2017
+Pass
+1
+0
+Measured from center of Raxis to center of tool
+Complete
+1
+Measurement 4/18/2017 4/18/2017
+Fail
+0
+1
+Lead Screw not long enough
+
+Jack
+
+Complete
+
+1
+
+Measurement 4/18/2017 4/18/2017
+
+Pass
+
+1
+
+0
+
+Calculated from radius
+measurements
+
+Lucas
+
+Complete
+
+2
+
+Measurement 6/6/2017 6/6/2017
+/ Calculation
+
+Pass
+
+2
+
+0
+
+Based off of video from tests
+
+Lucas
+
+Complete
+
+40
+
+Quantity
+
+5/16/2017 5/16/2017
+
+Pass
+
+29
+
+11
+
+Ning
+
+Complete
+
+1
+
+Calculation
+
+2/15/2017 2/15/2017
+
+Pass
+
+1
+
+0
+
+Ning
+
+Complete
+
+1
+
+Quantity
+
+6/1/2017 6/1/2017
+
+Pass
+
+1
+
+0
+
+Sam
+
+Incomplete
+
+0
+
+Timing
+
+4/6/2017 6/2/2017
+
+n/a
+
+n/a
+
+n/a
+
+Sam
+
+Complete
+
+1
+
+Quantity
+
+6/1/2017 6/1/2017
+
+Pass
+
+1
+
+0
+
+Some sticky spots after
+running it through many
+cycles at the exposition
+Calculated from motor data,
+friction was estimated and S.
+F. of 2.5 was used
+There are 4 main points,
+rolllers on z and x axes, and
+bearings on inside lip of pipe
+Our time is ambiguous
+because we did not tear
+down and rebuild fully, but
+believed to be possible in
+under 15 hours
+Total Part Count was 654
+
+Sam
+
+Complete
+
+1
+
+Measurement 6/1/2017 6/1/2017
+
+Pass
+
+1
+
+0
+
+Kassie
+
+Incomplete
+
+0
+
+Measurement
+
+n/a
+
+n/a
+
+n/a
+
+n/a
+
+n/a
+
+Kassie
+
+Incomplete
+
+0
+
+Measurement
+/Quantity
+
+n/a
+
+n/a
+
+n/a
+
+n/a
+
+n/a
+
+Measure radius
+Height above
+ground > 1m
+Measure height clearance
+Area of plot > 4.5
+Run device to max and minimum
+m^2
+positions. Use these measurements
+to calculate farmable area
+Tool holder
+Calculate velocity at outermost
+position on the radial arm, and x and achieves .5 m/s +/.2 m/s
+z axes by measuring time to move
+over a set path
+Achieves 360
+Complete one full rotation of device,
+degrees total
+180 clockwise and 180
+counterclockwise
+Analyze torque output from the motor Achieves 3 N.m +/1 N.m
+to the column based on motor curve
+and moment of inertia
+Number of pinch
+points <10
+Analyze number of pinch points
+Measured time is
+15 hrs +/- 5 hours
+Measure time for ourselves to
+assemble, in addition to one other
+individual unfamiliar with the system
+Number of parts is
+< 799
+Analyze BOM
+Weight of parts
+<150 lbs
+Weigh all parts to be shipped
+Shipping size <165
+in
+Pack all parts to be shipped
+Difference between
+measured and
+actual is less than
+2.5mm +/- 2.5mm
+Send tool head to pre-determined
+position and measure actual vs.
+measured position
+Deflection < 2.5mm
+FEA Analysis of bearing bracket
+Deflection < 2.5mm
+FEA Analysis of Arm/bracket
+Device runs
+Continually run the device on an
+accelerated schedule that simulates a continuously for
+one month without
+months worth of usage (50 hours).
+any necessary
+After test period check against
+maintenance
+maintenance instructions
+Cost < $2,250
+BOM analysis
+
+Test Stage
+
+Rory
+
+Complete
+
+1
+
+Calculation
+
+Rory
+
+Complete
+
+1
+
+Calculation
+
+Rory
+
+Incomplete
+
+0
+
+Inspection
+
+Rory
+
+Complete
+
+1
+
+Quantity
+
+2/15/2017 3/1/2017
+
+Pass
+
+1
+
+0
+
+Pass
+
+1
+
+0
+
+5/23/2017 6/2/2017
+
+n/a
+
+n/a
+
+n/a
+
+4/6/2017 6/2/2017
+
+Pass
+
+1
+
+0
+
+3/2/2017 3/16/2017
+
+Concrete sold seperatley
+We have not packaged all
+the parts, there box size is
+unknown
+Our demonstration for the
+senior exposition had error
+coded into the script such
+that it was repeatable, but
+we did not calculate a raw
+point to point resoution.
+Calculated using expected
+max loading
+Calculated using expected
+max loading
+Run for 4 hours straight
+during the senior exposition
+and testing up to that point.
+
+Total part cost is $1875.05
+
+Appendix K: Fall Quarter Gantt Chart
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+Appendix L: Winter Quarter Gantt Chart	
+	
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+
+Appendix M: Spring Quarter Gantt Chart	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+Appendix N. Product Literature
+
+Quick Reference
+
+NEMA size 17 1.8°
+2-phase stepper motor
+
+Mechanical Specifications
+Dimensions in inches (mm)
+0.94 ± 0.02
+(23.88 ± 0.51)
+
+LMAX
+
+Optional
+rear
+shaft
+
+0.590 (14.86)
+0.177 ± 0.002
+(4.52 ± 0.05)
+
+0.55
+(14)
+
+0.177 ± 0.002
+(4.52 ± 0.05)
+Ø 0.197 (Ø 5.0)
+Flat extends to
+rear end bell
+
+0.08 (2.03)
+11.8 inches (30 cm)
+
+FRONT VIEW
+
+4X Ø M3xP0.5
+0.177 (4.5) deep min
+Ø 0.197 +0/-0.001
+(Ø 4.99 +0/-0.012)
+Ø 0.866 +0/-0.002
+(Ø 22.0 +0/-0.052)
+
+Notes and Warnings
+Installation, configuration and maintenance must be carried out by qualified technicians only. You must have detailed information to be able to carry out this work.
+
+1.22
+(30.99)
+
+• Unexpected dangers may be encountered when working with this product!
+• Incorrect use may destroy this product and connected components!
+
+1.67
+(42.3)
+
+For more information, go to www.imshome.com
+REAR VIEW (Reduced)
+
+Specifications
+1.5 Amp motors
+
+Single length
+
+Part number
+
+Double length
+
+2X M2
+0.20 (5.1)
+deep min
+
+Triple length
+
+M-1713-1.5 • (1)
+
+M-1715-1.5 • (1)
+
+M-1719-1.5 • (1)
+
+32
+
+60
+
+75
+
+Holding torque
+
+oz-in
+N-cm
+
+23
+
+42
+
+53
+
+Detent torque
+
+oz-in
+
+1.7
+
+2.1
+
+3.5
+
+N-cm
+
+1.2
+
+1.5
+
+2.5
+
+Rotor inertia
+
+oz-in-sec2
+
+0.000538
+
+0.0008037
+
+0.0011562
+
+kg-cm2
+
+0.038
+
+0.057
+
+0.082
+
+Weight
+
+oz
+
+7.4
+
+8.1
+
+12.7
+
+grams
+
+210
+
+230
+
+360
+
+Phase current
+
+amps
+
+1.5
+
+1.5
+
+1.5
+
+Motor stack length inches (mm) Single
+
+Double
+
+Triple
+
+Phase resistance
+
+ohms
+
+1.3
+
+2.1
+
+2.0
+
+LMAX
+
+1.57 (40)
+
+1.89 (48)
+
+Phase inductance
+
+mH
+
+2.1
+
+5.0
+
+3.85
+
+0.75 ±0.005
+(19 ±0.13)
+
+1.34 (34.0)
+
+(1) Indicate S for single-shaft or D for double-shaft. Example M-1713-1.5S
+
+Part Numbers
+
+Wiring and Connections
+Signals and wire colors
+
+Example:
+
+Phase A
+
+Red
+
+Phase /A
+
+Blue
+
+Phase B
+
+Green
+
+Phase /B
+
+Black
+
+M - 1 7 1 3- 1. 5 S
+
+Stepper motor frame size
+M - 17 = NEMA 17 (1.7” / 42 mm)
+
+M
+
+- 1
+
+7 1 3 -1 .5 S
+
+Motor length
+13 - = single stack
+15 - = double stack
+19 - = triple stack
+
+M - 1
+
+7 1 3
+
+Phase current
+1.5 = 1.5 Amps
+
+M - 1
+
+7 1 3 -1 .5 S
+
+Shaft
+S = single, front shaft only
+D = double, front and rear shafts
+
+M - 1
+
+7 1 3 -1 .5 S
+
+Optional optical encoder (1)
+ES = Single-end
+ED = Differential
+
+M - 1
+
+7 1 3 -1 .5 E S 1 0 0
+
+1 .5 S
+
+Line count
+100, 200, 250, 400, 500 or 1000 (2)
+(1) An encoder replaces the shaft designator in the part number.
+(2) All encoders have an index mark, except the 1000 line count version.
+
+NEMA17 stepper motor Quick Reference R060210
+
+Torque-speed performance
+
+Optical Encoder Option
+
+Measured at 1.5 Amps RMS
+
+Dimensions in inches (mm)
+Ø 0.078 (1.98) 3 places
+equally spaced on a
+Ø 0.823 (20.9) bolt circle
+
+M-1713-1.5
+Torque in oz-in (N-cm)
+
+0.600
+(15.2)
+
+2X Ø 0.109 (2.7)
+
+1.420
+(36.0)
+
+53 (39)
+
+24 VDC
+48 VDC
+
+1.700
+(43.1)
+0.750
+(19.0)
+
+37 (26)
+
+0.69
+(17.5)
+
+18(13)
+
+Connectivity
+0
+
+0
+
+2000
+(600)
+
+4000
+(1200)
+
+single-end encoder
+
+6000
+(1800)
+
+differential encoder
+2 4 6 8 10
+13579
+
+12345
+
+Speed in full steps per second (rpm)
+M-1715-1.5
+Torque in oz-in (N-cm)
+
+53 (39)
+
+1
+2
+3
+4
+5
+
+24 VDC
+48 VDC
+
+37 (26)
+
+function
+Ground
+Index
+Channel A
++5 VDC input
+Channel B
+
+pin
+1
+2
+3
+4
+5
+
+function
+no connect
++5 VDC input
+Ground
+no connect
+Channel A –
+
+pin
+6
+7
+8
+9
+10
+
+optional interface cable
+available: ES-CABLE-2
+
+interface cable included
+
+single-end encoder
+
+differential encoder
+
+Timing
+
+18(13)
+
+wire
+Brown
+Violet
+Blue
+Orange
+Yellow
+
+Y
+
+X
+
+C
+
+function
+Channel A+
+Channel B –
+Channel B+
+Index –
+Index +
+
+Y
+
+X
+
+CH A +
+
+0
+
+0
+
+2000
+(600)
+
+4000
+(1200)
+
+6000
+(1800)
+
+CH A
+
+Z
+
+Speed in full steps per second (rpm)
+
+CH A Z
+
+CH B
+
+CH B +
+
+t1
+
+M-1719-1.5
+Torque in oz-in (N-cm)
+
+t2
+CH B -
+
+IDX
+t1
+
+Po
+
+53 (39)
+
+t2
+IDX +
+
+24 VDC
+48 VDC
+
+Po
+
+IDX -
+
+37 (26)
+Parameter
+
+Symbol
+
+Min
+
+Cycle error
+
+18(13)
+
+0
+
+0
+
+2000
+(600)
+
+4000
+(1200)
+
+6000
+(1800)
+
+Speed in full steps per second (rpm)
+
+Copyright © Schneider Electric Motion USA
+
+www.schneider-electric-motion.us
+
+Typ
+
+Max
+
+Units
+
+3
+
+5.5
+
+ºe
+
+Symmetry
+
+130
+
+180
+
+230
+
+ºe
+
+Quadrature
+
+40
+
+90
+
+140
+
+ºe
+
+Index pulse width
+
+Po
+
+60
+
+90
+
+120
+
+ºe
+
+Index rise (after Ch A or B rise)
+
+t1
+
+-300
+
+100
+
+250
+
+ns
+
+Index fall (after Ch A or B fall)
+
+t2
+
+70
+
+150
+
+1000
+
+ns
+
+C
+X/Y
+Z
+Po
+
+One cycle: 360 electrical degrees (ºe).
+Symmetry: the measure of the relationship between X and Y, nominally 180ºe.
+Quadrature: the phase lead or lag between channels A and B, nominally 90ºe.
+Index pulse width, nominally 90 ºe.
+NOTE: Rotation is as viewed from the cover side of the encoder.
+
+15.2
+600
+
+12.70
+500
+
+2.54
+100
+
+0.51
+20
+
+20.3
+800
+16×
+
+6.10
+240
+
+1.02
+40
+
+1.27
+50
+
+Board dimensions (top view)
+Scale 3:1
+
+1
+
+6.99
+275
+
+1.27
+50
+
+Connector callouts (bottom view)
+Scale 3:1
+
+2
+
+Isometric view
+
+3
+
+1.8
+71
+8.5
+335
+
+6.0
+236
+
+1.57
+62
+
+4
+
+Profile
+
+Scale 3:1
+
+5
+
+Scale 3:1
+
+Profile with headers
+
+Actual size
+
+6
+
+Scale 3:1
+
+Scale 1:1
+
+https://www.pololu.com/category/156
+Name: A4988
+
+Stepper Motor
+Driver Carrier
+
+1.
+2.
+3.
+
+To get the specified scale, select 100% in print settings.
+Drill location tolerance: ±0.1 [±5].
+Board edge tolerance: ±0.3 [±10].
+
+Drawing date:
+
+15 December 2015
+
+Units:
+
+mm
+[mil]
+
+PCB dev code:
+
+md09b
+
+Item numbers:
+1182, 2975, 2980, 2985
+
+Pololu
+Robotics & Electronics
+
+© 2015 Pololu Corporation
+
+Aqua Tech Trading Corp. Ltd, located in Chongqing, China, which is focused on developing,
+manufacturing and distributing water valves and associated water used equipments.
+
+We are a rapidly expanding company perceived as a growing force in the area of fluid control, we
+attribute our success to extensive product knowledge, our understanding of and responsiveness to
+market requirements and the value we place on excellent customer service.
+
+Aqua Valves have been widely used in agriculture, water supply, water control and water purification
+industries.
+
+The following products are our solenoid valves.
+
+Model No.
+
+AQT15S
+
+Model No.
+
+AQT15SC
+
+Thread Size
+
+1/2" BSP inlet and outlet
+
+Thread Size
+
+1/2" BSP inlet and outlet
+
+Material
+
+PET
+
+Material
+
+PET
+
+Working Temp
+
+0-40℃
+
+Working Temp
+
+0-40℃
+
+Working Pressure
+
+0.02~0.8MPa
+
+Working Pressure
+
+0.02~0.8MPa
+
+Voltage
+
+DC12V,DC24V,AC220V
+
+Voltage
+
+AC/DC 6/9/12/24/36110/220V
+
+Voltage Range
+
+15%
+
+Voltage Range
+
+15%
+
+Style
+
+Closed Valve
+
+Style
+
+Closed Valve
+
+Working
+
+Water, Gas and Oil
+
+Working Environment
+
+Water, Gas and Oil
+
+Lifespan
+
+More than 200,000 times
+
+Lifespan
+
+More than 200,000 times
+
+Certification
+
+CQC/CE
+
+Certification
+
+CQC/CE
+
+Environment
+
+Usage:
+Suit for many kinds of washing machine, drinking water machine, sanitary equipment, water heater, etc. Our products have paased
+CQC and CE. And it meets the requirement of WEEE and ROhS.
+
+Model No.
+
+AQT10S
+
+Model No.
+
+AQT15SL
+
+Thread Size
+
+1/2"10mm BSP inlet and outlet
+
+Thread Size
+
+1/2" BSP inlet and outlet
+
+Material
+
+Plastic and Brass
+
+Material
+
+Plastic and Brass
+
+Working Temp
+
+0~60/100℃
+
+Working Temp
+
+0~100℃
+
+Working Pressure
+
+0.02~0.8MPa, static pressure ≥
+
+Working Pressure
+
+400 millimeter water column
+
+2.0MPa
+Voltage
+
+DC12V,DC24V,AC220V
+
+Voltage
+
+AC/DC 6/9/12/24/36110/220V
+
+Voltage Range
+
+15%
+
+Voltage Range
+
+15%
+
+Style
+
+Closed Valve
+
+Style
+
+Opened Valve
+
+Working Environment
+
+Water, Gas and Oil
+
+Working Environment
+
+Water, Gas and Oil
+
+Lifespan
+
+More than 200,000 times
+
+Lifespan
+
+More than 200,000 times
+
+Certification
+
+CQC/CE
+
+Certification
+
+CQC/CE
+
+Usage: washing machine used solenoid valve
+
+Usage: Specially working in low pressure environment
+
+Model No.
+
+AQT12SL
+
+Model No.
+
+AQT12SLT
+
+Thread Size
+
+1/2"BSP inlet and 12mm outlet
+
+Thread Size
+
+1/2"BSP inlet and 12mm outlet
+
+Material
+
+Plastic and Brass
+
+Material
+
+Plastic and Brass
+
+Working Temp
+
+0~100℃
+
+Working Temp
+
+0~100℃
+
+Working Pressure
+
+400 millimeter water column
+
+Working Pressure
+
+400 millimeter water column
+
+Voltage
+
+DC12V,DC24V,AC220V
+
+Voltage
+
+AC/DC 6/9/12/24/36110/220V
+
+Voltage Range
+
+15%
+
+Voltage Range
+
+15%
+
+Style
+
+Opened Valve
+
+Style
+
+Opened Valve
+
+Working Environment
+
+Water, Gas and Oil
+
+Working Environment
+
+Water, Gas and Oil
+
+Lifespan
+
+More than 200,000 times
+
+Lifespan
+
+More than 200,000 times
+
+Certification
+
+CQC/CE
+
+Certification
+
+CQC/CE
+
+Usage: Specially working in low pressure environment
+
+Usage: Specially working in low pressure environment
+
+Model No.
+
+AQT15SCB
+
+Model No.
+
+AQT15SP
+
+Thread Size
+
+1/2"BSP inlet and let
+
+Thread Size
+
+1/2"BSP inlet and 12mm outlet
+
+Material
+
+Brass
+
+Material
+
+Plastic
+
+Working Temp
+
+0~100℃
+
+Working Temp
+
+1℃-75℃
+
+Working Pressure
+
+0.02~0.8MPa
+
+Flow rate
+
+0.02Mpa≥3 L/min, 0.1Mpa≥12
+L/min,
+
+0.8Mpa≥35 L/min
+
+Voltage
+
+DC12V,DC24V,AC220V
+
+Voltage
+
+AC220V
+
+Voltage Range
+
+15%
+
+Voltage Range
+
+15%
+
+Style
+
+Closed Valve
+
+Resistance Coil
+
+4.75KΩ±0.25KΩ (20℃)
+
+Working Environment
+
+Water, Gas and Oil
+
+Working Environment
+
+Water
+
+Lifespan
+
+More than 200,000 times
+
+Lifespan
+
+More than 1,000,000times
+
+Certification
+
+CQC/CE
+
+Certification
+
+0
+
+Usage: Specially working in low pressure environment
+
+Usage: Water used solenoid valve
+
+And the diagram picture of these valves as follows:
+
+Nylon Cable Drag Chain
+Specifications:
+Material: Nylon PA66
+Inside Measurement: 15 * 30mm
+Outside Measurement: 20 * 38.2mm
+Bending Radius: 28mm
+Pitch: 20mm
+Number of Chain: 50
+Length: 1000mm(40”)
+
+Mounting Drawing for Bridge Style 15mm Series
+
+Mounting Chart for Bridge Style15mm Series
+IH
+
+IW
+
+OH
+
+OW
+
+Bending Radius
+
+Style
+
+Connecting Pitch
+
+15
+
+20
+
+20
+
+28.2
+
+A=11
+
+15
+
+30
+
+30
+
+38.2
+
+A=14
+18 28 38
+
+15
+
+40
+
+20
+
+48.2
+
+B=20
+
+15
+
+50
+
+20
+
+58.2
+
+B=20
+
+IH= Inner Height IW= Inner Width OH=Outer Height OW= Outer Width
+Unit= mm
+
+E4T
+
+Miniature Optical Kit Encoder
+Page 1 of 6
+
+Description
+The E4T miniature transmissive optical encoder is designed to provide digital
+quadrature encoder feedback for high volume, limited space applications. The
+E4T is designed to be a drop in replacement for the E4P that offers higher
+maximum speed and increased output drive. The E4T utilizes an innovative,
+push-on encoder disk which accepts shaft diameters of 2.0mm to .250".
+The E4T miniature encoder base provides mounting holes for two #3-48, length
+3/16" or two M2.5, length 4mm screws on a .586" bolt circle. The encoder cover
+is easily snapped onto the base and is marked with the connector pin-out.
+The E4T series encoder is connected using a 4-conductor, high retention,
+polarized, 1.25mm pitch connector. Mating cables and connectors (see the
+Cables / Connectors web page) are not included, and are available separately.
+
+Features
+E4T Optical Kit Encoder
+Push-on hub - spring loaded collet design
+Minimum shaft length of .275"
+Fits shaft diameters of .079" to .250"
+100 to 500 cycles per revolution (CPR)
+400 to 2,000 pulses per revolution (PPR)
+Single +5V supply
+
+Rev. 161213070222
+
+E4T
+
+Miniature Optical Kit Encoder
+Page 2 of 6
+
+E4T Differential
+
+E4T Single Ended
+
+Rev. 161213070222
+
+E4T
+
+Miniature Optical Kit Encoder
+Page 3 of 6
+
+Environmental
+Parameter
+
+Value
+
+Units
+
+Operating Temperature
+
+-20 to 100
+
+C
+
+Electrostatic Discharge, IEC 61000-4-2
+Single-ended (-S version)
+Differential (-D version)
+
+± 12
+±7
+
+kV
+
+Shock, 6 millisecond, half-sine
+
+75
+
+G
+
+Vibration (20Hz to 2kHz, sinusoidal)
+
+20
+
+G
+
+Mechanical
+Parameter
+
+Value
+
+Units
+
+Max. Shaft Axial Play
+
+± .010
+
+in.
+
+Max. Shaft Runout (TIR)
+
+.002
+
+in.
+
+Max. Acceleration
+
+250,000
+
+rad/sec²
+
+Maximum RPM (1)
+e.x. CPR = 300, max. rpm = 20,000
+e.x. CPR = 200, max. rpm = 30,000
+
+minimum value of
+(6,000,000/CPR)
+and (60,000)
+
+rpm
+
+Max. Codewheel Moment of Inertia
+
+5.1 x 10^-7
+
+oz-in-s²
+
+Mounting Screw Size
+Default (D-option base)
+Metric (M-option base)
+
+#3-48 x 3/16"
+M2.5, length 4mm
+
+Screw Bolt Circle Diameter
+
+.586 ±.005
+
+in.
+
+Minimum Shaft Length (2)
+
+.275
+
+in.
+
+Maximum Shaft Length (2)
+
+.395 (D option) /
+no limit (H option)
+
+in.
+
+Mounting Screw Torque
+
+2-3
+
+in-lbs
+
+Technical Bulletin TB1001 - Shaft and Bore Tolerances
+
+Download
+
+(1) 60,000 rpm is the maximum rpm due to mechanical considerations. The maximum rpm due to the module's 100kHz maximum
+output frequency is (6,000,000/CPR).
+(2) Including axial play.
+
+Single-ended Electrical
+Specifications
+
+Min.
+
+Typ.
+
+Max.
+
+Units
+
+Notes
+
+Rev. 161213070222
+
+E4T
+
+Miniature Optical Kit Encoder
+Page 4 of 6
+
+Supply Voltage
+
+4.5
+
+5.0
+
+5.5
+
+V
+
+25
+
+30
+
+mA
+
+no load
+
+0.4
+
+V
+
+IOL = 8 mA
+
+V
+
+no load
+
+V
+
+IOH = -8 mA
+
+4.0
+
+V
+
+no load
+
+Output Rise Time
+
+100
+
+ns
+
+no load
+
+Output Fall Time
+
+50
+
+ns
+
+no load
+
+Supply Current
+Low-level Output
+
+0.035
+High-level Output
+
+2.4
+
+Differential Electrical
+Specifications
+
+Min.
+
+Typ.
+
+Max.
+
+Units
+
+Supply Voltage
+
+4.5
+
+5.0
+
+5.5
+
+V
+
+27
+
+32
+
+mA
+
+no load
+
+V
+
+Min. @ 25mA load, Typ. @ no load
+
+V
+
+Typ. @ no load, Max. @ 4.5mA load
+
+V
+
+RL = 100 ohm
+
+Supply Current
+Single-Ended Output Voltage High
+
+4.75
+
+Single-Ended Output Voltage Low
+Differential Output Voltage
+
+5.0
+0.25
+
+3.0
+
+0.60
+
+3.8
+
+Differential Output Rise/Fall Time
+
+20
+
+Notes
+
+ns
+
+Phase Relationship
+
+Parameter
+
+Min.
+
+Typ.
+
+Max.
+
+Units
+
+Symmetry, S
+
+105
+
+180
+
+255
+
+electrical degrees
+
+Quadrature Delay, Q
+
+30
+
+90
+
+150
+
+electrical degrees
+
+(1) A leads B for clockwise shaft rotation, B leads A for counter clockwise shaft rotation viewed from the cover side of the encoder.
+(2) Typical values represent the encoder performance at typical mounting alignment, whereas the maximum values represent the
+encoder performance across the range of recommended mounting tolerance.
+
+Pin-out
+
+Rev. 161213070222
+
+E4T
+
+Miniature Optical Kit Encoder
+Page 5 of 6
+
+4-pin Single-ended
+
+6-pin Differential
+
+Pin
+
+Description
+
+Pin
+
+Description
+
+1
+
++5VDC power
+
+1
+
+Ground
+
+2
+
+A channel
+
+2
+
+A channel
+
+3
+
+Ground
+
+3
+
+A- channel
+
+4
+
+B channel
+
+4
+
++5VDC power
+
+5
+
+B channel
+
+6
+
+B- channel
+
+(1) 4-pin single-ended mating connector isCON-MIC4
+(2) 6-pin differential mating connector isCON-MIC6
+
+Options
+H-option (Hole In Cover)
+The H-option adds a 0.295" diameter hole in the cover for the shaft to pass through.
+M-option (Metric Mounting Screws)
+Provides alternate metric M2.5, length 4mm screws. When M-option is NOT specified the default is #3-48 x 3/16" screws.
+
+Accessories
+1. Centering Tool*
+Part #: MCTOOL - (Shaft Diameter)
+Description: This reusable tool is used to accurately center the E4T base on the shaft.
+2. Spacer Tool*
+Part #: SPACER-E4T
+Description:This reusable tool is used to properly space the codewheel from the encoder.
+*Both the MCTOOL and SPACER-E4T tools are included with all packaging options.
+
+Assembly Instructions
+E4T Assembly Instructions - http://usdigital.com/assets/assembly/E4T%20Assembly%20Instructions.pdf
+
+Ordering Information
+E4T -
+
+-
+
+-
+
+-
+
+-
+
+-
+
+Rev. 161213070222
+
+E4T
+
+Miniature Optical Kit Encoder
+Page 6 of 6
+
+CPR
+
+Bore
+
+Output
+
+Cover
+
+Base
+
+Packaging
+
+100
+
+079 =2mm
+
+D =Default
+
+120 =
+
+098 =
+2.5mm
+
+S =Single
+Ended
+
+D =Default
+
+108
+
+H =Hole in
+Cover
+
+B =Encoder components packaged in bulk.
+One spacer and one centering tool per 100
+encoders.
+
+125 =
+
+118 =3mm
+
+M =Alternate metric
+M2.5, length 4mm
+screws
+
+128 =
+
+125 =1/8"
+
+200 =
+
+157 =4mm
+
+250 =
+
+188 =3/16"
+
+256 =
+
+197 =5mm
+
+300 =
+
+236 =6mm
+
+360 =
+
+250 =1/4"
+
+D =Differential
+
+1 =Each encoder packaged individually.
+One spacer tool and one centering tool per
+100 encoders.
+2 =Each encoder packaged individually.
+One spacer and one centering tool per
+encoder.
+
+400 =
+500 =
+
+Notes
+Cables and connectors are not included and must be ordered separately.
+US Digital® warrants its products against defects in materials and workmanship for two years. See complete warranty for details.
+
+Rev. 161213070222
+
+MP2307
+3A, 23V, 340KHz Synchronous Rectified
+Step-Down Converter
+The Future of Analog IC Technology
+
+DESCRIPTION
+
+FEATURES
+
+The MP2307 is a monolithic synchronous buck
+regulator. The device integrates 100mΩ
+MOSFETS that provide 3A of continuous load
+current over a wide operating input voltage of
+4.75V to 23V. Current mode control provides
+fast transient response and cycle-by-cycle
+current limit.
+
+•
+
+An adjustable soft-start prevents inrush current
+at turn-on and in shutdown mode, the supply
+current drops below 1µA.
+This device, available in an 8-pin SOIC
+package, provides a very compact system
+solution with minimal reliance on external
+components.
+
+EVALUATION BOARD REFERENCE
+Board Number
+
+Dimensions
+
+EV2307DN-00A
+
+2.0”X x 1.5”Y x 0.5”Z
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+3A Continuous Output Current
+4A Peak Output Current
+Wide 4.75V to 23V Operating Input Range
+Integrated 100mΩ Power MOSFET Switches
+Output Adjustable from 0.925V to 20V
+Up to 95% Efficiency
+Programmable Soft-Start
+Stable with Low ESR Ceramic Output Capacitors
+Fixed 340KHz Frequency
+Cycle-by-Cycle Over Current Protection
+Input Under Voltage Lockout
+Thermally Enhanced 8-Pin SOIC Package
+
+APPLICATIONS
+•
+•
+•
+•
+•
+
+Distributed Power Systems
+Networking Systems
+FPGA, DSP, ASIC Power Supplies
+Green Electronics/Appliances
+Notebook Computers
+
+“MPS” and “The Future of Analog IC Technology” are Registered Trademarks of
+Monolithic Power Systems, Inc.
+
+TYPICAL APPLICATION
+C5
+10nF
+
+INPUT
+4.75V to 23V
+
+Efficiency vs
+Load Current
+100
+95
+
+7
+
+8
+
+90
+
+1
+BS
+SW
+
+EN
+
+MP2307
+SS
+GND
+4
+
+FB
+COMP
+
+3
+
+OUTPUT
+3.3V
+3A
+
+5
+
+6
+
+C3
+3.9nF
+
+EFFICIENCY (%)
+
+2
+IN
+
+VIN = 5V
+VIN = 12V
+
+85
+80
+
+VIN = 23V
+
+75
+70
+65
+60
+55
+50
+0.1
+
+1.0
+LOAD CURRENT (A)
+
+10
+
+MP2307_EC01
+
+MP2307_TAC01
+
+MP2307 Rev. 1.9
+5/28/2008
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+1
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+
+ABSOLUTE MAXIMUM RATINGS (1)
+
+PACKAGE REFERENCE
+
+Supply Voltage VIN ....................... –0.3V to +26V
+Switch Voltage VSW ................. –1V to VIN + 0.3V
+Boost Voltage VBS ..........VSW – 0.3V to VSW + 6V
+All Other Pins................................. –0.3V to +6V
+Junction Temperature...............................150°C
+Lead Temperature ....................................260°C
+Storage Temperature .............–65°C to +150°C
+
+TOP VIEW
+BS
+
+1
+
+8
+
+SS
+
+IN
+
+2
+
+7
+
+EN
+
+SW
+
+3
+
+6
+
+COMP
+
+GND
+
+4
+
+5
+
+FB
+
+EXPOSED PAD
+ON BACKSIDE
+
+Recommended Operating Conditions
+
+Input Voltage VIN ............................ 4.75V to 23V
+Output Voltage VOUT .................... 0.925V to 20V
+Ambient Operating Temp .............. –40°C to +85°C
+
+MP2307_PD01_SOIC8N
+
+Thermal Resistance
+Part Number*
+
+Package
+
+Temperature
+
+MP2307DN
+
+SOIC8N
+(Exposed Pad)
+
+–40° to +85°C
+
+*
+
+(2)
+
+For Tape & Reel, add suffix –Z (eg. MP2307DN–Z)
+For Lead Free, add suffix –LF (eg. MP2307DN–LF–Z)
+
+(3)
+
+θJA
+
+θJC
+
+SOIC8N .................................. 50 ...... 10... °C/W
+
+Maximum Power Dissipation Operating
+(TA=25°C)
+(4)
+SOIC8N , POUT ....................... .......... ........ 2W
+Notes:
+1)
+2)
+3)
+
+4)
+
+Exceeding these ratings may damage the device.
+The device is not guaranteed to function outside of its operating conditions.
+Measured on approximately 1” square of 1 oz copper.
+Derating 20mW/°C at TA > 25°C
+
+ELECTRICAL CHARACTERISTICS
+VIN = 12V, TA = +25°C, unless otherwise noted.
+Parameter
+
+Symbol
+
+Condition
+
+Min
+
+Typ
+
+Max
+
+Units
+
+Shutdown Supply Current
+
+VEN = 0V
+
+0.3
+
+3.0
+
+µA
+
+Supply Current
+
+VEN = 2.0V, VFB = 1.0V
+
+1.3
+
+1.5
+
+mA
+
+0.925
+
+0.950
+
+V
+
+Feedback Voltage
+
+VFB
+
+4.75V ≤ VIN ≤ 23V
+
+0.900
+
+Feedback Overvoltage Threshold
+Error Amplifier Voltage Gain (5)
+Error Amplifier Transconductance
+High-Side Switch On-Resistance
+
+1.1
+
+V
+
+400
+
+V/V
+
+820
+
+µA/V
+
+RDS(ON)1
+
+100
+
+mΩ
+
+RDS(ON)2
+
+100
+
+AEA
+(5)
+
+Low-Side Switch On-Resistance (5)
+
+GEA
+
+∆IC = ±10µA
+
+High-Side Switch Leakage Current
+
+VEN = 0V, VSW = 0V
+
+Upper Switch Current Limit
+
+Minimum Duty Cycle
+
+Lower Switch Current Limit
+
+From Drain to Source
+
+COMP to Current Sense
+Transconductance
+
+GCS
+
+Oscillation Frequency
+
+Fosc1
+
+Short Circuit Oscillation Frequency
+
+Fosc2
+
+VFB = 0V
+
+Maximum Duty Cycle
+
+DMAX
+
+VFB = 1.0V
+
+Minimum On Time (5)
+
+TON
+
+EN Shutdown Threshold Voltage
+EN Shutdown Threshold Voltage
+Hysterisis
+
+MP2307 Rev. 1.9
+5/28/2008
+
+0
+4.0
+
+300
+
+VEN Rising
+
+mΩ
+10
+
+5.8
+
+A
+
+0.9
+
+A
+
+5.2
+
+A/V
+
+340
+
+380
+
+110
+
+1.1
+
+µA
+
+KHz
+KHz
+
+90
+
+%
+
+220
+
+ns
+
+1.5
+220
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+2.0
+
+V
+mV
+
+2
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+
+ELECTRICAL CHARACTERISTICS (continued)
+VIN = 12V, TA = +25°C, unless otherwise noted.
+Parameter
+
+Symbol Condition
+
+EN Lockout Threshold Voltage
+EN Lockout Hysterisis
+Input Under Voltage Lockout
+Threshold
+Input Under Voltage Lockout
+Threshold Hysteresis
+Soft-Start Current
+Soft-Start Period
+Thermal Shutdown (5)
+
+VIN Rising
+
+VSS = 0V
+CSS = 0.1µF
+
+Min
+
+Typ
+
+Max
+
+Units
+
+2.2
+
+2.5
+210
+
+2.7
+
+V
+mV
+
+3.80
+
+4.05
+
+4.40
+
+V
+
+210
+
+mV
+
+6
+15
+160
+
+µA
+ms
+°C
+
+Note:
+5) Guaranteed by design, not tested.
+
+MP2307 Rev. 1.9
+5/28/2008
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+3
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+
+TYPICAL PERFORMANCE CHARACTERISTICS
+C1 = 2 x 10µF, C2 = 2 x 22µF, L= 10µH, CSS= 0.1µF, TA = +25°C, unless otherwise noted.
+Steady State Test
+Waveforms
+
+Steady State Test
+Waveforms
+
+Startup through
+Enable Waveforms
+
+VIN = 12V, VOUT = 3.3V, IOUT = 0A
+
+VIN = 12V, VOUT = 3.3V, IOUT = 3A
+
+VIN = 12V, VOUT = 3.3V, No Load
+
+VIN
+20mV/div.
+
+VIN
+200mV/div.
+
+VOUT
+20mV/div.
+
+VOUT
+20MV/div.
+
+VSW
+10V/div.
+
+VSW
+V/div.
+
+IL
+1A/div.
+
+VEN
+5V/div.
+VOUT
+2V/div.
+
+IL
+1A/div.
+
+IL
+2A/div.
+
+VSW
+10V/div.
+
+2ms/div.
+MP2307-TPC01
+
+MP2307-TPC02
+
+MP2307-TPC03
+
+Startup Through
+Enable Waveforms
+
+Shutdown Through
+Enable Waveforms
+
+Shutdown Through
+Enable Waveforms
+
+VIN = 12V, VOUT = 3.3V,
+IOUT = 3A (Resistance Load)
+
+VIN = 12V, VOUT = 3.3V, No Load
+
+VIN = 12V, VOUT = 3.3V,
+IOUT = 3A (Resistance Load)
+VEN
+5V/div.
+
+VEN
+5V/div.
+VOUT
+2V/div.
+
+VEN
+5V/div.
+VOUT
+2V/div.
+IL
+2A/div.
+VSW
+10V/div.
+
+IL
+1A/div.
+
+VOUT
+2V/div.
+IL
+2A/div.
+
+VSW
+10V/div.
+
+VSW
+10V/div.
+
+2ms/div.
+
+2ms/div.
+MP2307-TP04
+
+MP2307-TPC05
+
+MP2307-TPC06
+
+Load Transient Test
+Waveforms
+
+Short Circuit Test
+Waveforms
+
+Short Circuit Recovery
+Waveforms
+
+VIN = 12V, VOUT = 3.3V,
+IOUT = 1A to 2A step
+
+VIN = 12V, VOUT = 3.3V
+
+VIN = 12V, VOUT = 3.3V
+
+VOUT
+200mV/div.
+
+VOUT
+2V/div.
+
+VOUT
+2V/div.
+IL
+1A/div.
+ILOAD
+1A/div.
+
+IL
+2A/div.
+
+MP2307 -TPC07
+
+MP2307 Rev. 1.9
+5/28/2008
+
+IL
+2A/div.
+
+MP2307-TPC08
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+MP2307-TPC09
+
+4
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+
+PIN FUNCTIONS
+Pin #
+
+Name
+
+1
+
+BS
+
+2
+
+IN
+
+3
+
+SW
+
+4
+
+GND
+
+5
+
+FB
+
+6
+
+COMP
+
+7
+
+EN
+
+8
+
+SS
+
+MP2307 Rev. 1.9
+5/28/2008
+
+Description
+High-Side Gate Drive Boost Input. BS supplies the drive for the high-side N-Channel MOSFET
+switch. Connect a 0.01µF or greater capacitor from SW to BS to power the high side switch.
+Power Input. IN supplies the power to the IC, as well as the step-down converter switches.
+Drive IN with a 4.75V to 23V power source. Bypass IN to GND with a suitably large capacitor
+to eliminate noise on the input to the IC. See Input Capacitor.
+Power Switching Output. SW is the switching node that supplies power to the output. Connect
+the output LC filter from SW to the output load. Note that a capacitor is required from SW to
+BS to power the high-side switch.
+Ground (Connect the exposed pad to Pin 4).
+Feedback Input. FB senses the output voltage and regulates it. Drive FB with a resistive
+voltage divider connected to it from the output voltage. The feedback threshold is 0.925V. See
+Setting the Output Voltage.
+Compensation Node. COMP is used to compensate the regulation control loop. Connect a
+series RC network from COMP to GND. In some cases, an additional capacitor from COMP to
+GND is required. See Compensation Components.
+Enable Input. EN is a digital input that turns the regulator on or off. Drive EN high to turn on
+the regulator; low to turn it off. Attach to IN with a 100kΩ pull up resistor for automatic startup.
+Soft-Start Control Input. SS controls the soft-start period. Connect a capacitor from SS to GND
+to set the soft-start period. A 0.1µF capacitor sets the soft-start period to 15ms. To disable the
+soft-start feature, leave SS unconnected.
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+5
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+
+OPERATION
+FUNCTIONAL DESCRIPTION
+The MP2307 regulates input voltages from
+4.75V to 23V down to an output voltage as low
+as 0.925V, and supplies up to 3A of load
+current.
+The MP2307 uses current-mode control to
+regulate the output voltage. The output voltage
+is measured at FB through a resistive voltage
+divider and amplified through the internal
+transconductance error amplifier. The voltage at
+the COMP pin is compared to the switch current
+(measured internally) to control the output
+voltage.
+
+The converter uses internal N-Channel
+MOSFET switches to step-down the input
+voltage to the regulated output voltage. Since
+the high side MOSFET requires a gate voltage
+greater than the input voltage, a boost capacitor
+connected between SW and BS is needed to
+drive the high side gate. The boost capacitor is
+charged from the internal 5V rail when SW is low.
+When the FB pin voltage exceeds 20% of the
+nominal regulation value of 0.925V, the over
+voltage comparator is tripped and the COMP
+pin and the SS pin are discharged to GND,
+forcing the high-side switch off.
+
++
+CURRENT
+SENSE
+AMPLIFIER
+
+OVP
+1.1V
+
+-OSCILLATOR
++
+
+FB 5
+
+110/340KHz
+0.3V
+
+RAMP
+
+1
+
+BS
+
+3
+
+SW
+
+4
+
+GND
+
+5V
+
+--+
+
++
+0.925V
+
+IN
+
+--
+
+CLK
+
+-SS 8
+
++
+
+2
+
++
+
+ERROR
+AMPLIFIER
+
+S
+
+Q
+
+R
+
+Q
+
+CURRENT
+COMPARATOR
+
+COMP 6
+--
+
+EN 7
+2.5V
+
++
+
+EN OK
+
+OVP
+
+1.2V
+
+IN < 4.10V
+
+LOCKOUT
+COMPARATOR
+
+IN
++
+
+7V
+Zener
+1.5V
+
+--
+
+INTERNAL
+REGULATORS
+SHUTDOWN
+COMPARATOR
+
+MP2307_BD01
+
+Figure 1—Functional Block Diagram
+
+MP2307 Rev. 1.9
+5/28/2008
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+6
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+
+APPLICATIONS INFORMATION
+The inductance value can be calculated by:
+
+COMPONENT SELECTION
+Setting the Output Voltage
+The output voltage is set using a resistive
+voltage divider connected from the output
+voltage to FB. The voltage divider divides the
+output voltage down to the feedback voltage by
+the ratio:
+VFB = VOUT
+
+R2
+R1 + R2
+
+R1 + R2
+R2
+
+⎞
+⎟⎟
+⎠
+
+Where VOUT is the output voltage, VIN is the
+input voltage, fS is the switching frequency, and
+∆IL is the peak-to-peak inductor ripple current.
+
+ILP = ILOAD +
+
+R2 can be as high as 100kΩ, but a typical value
+is 10kΩ. Using the typical value for R2, R1 is
+determined by:
+R1 = 10.81 × ( VOUT − 0.925 ) (kΩ)
+
+For example, for a 3.3V output voltage, R2 is
+10kΩ, and R1 is 26.1kΩ. Table 1 lists
+recommended resistance values of R1 and R2
+for standard output voltages.
+Table 1—Recommended Resistance Values
+VOUT
+
+R1
+
+R2
+
+1.8V
+2.5V
+3.3V
+5V
+12V
+
+9.53kΩ
+16.9kΩ
+26.1kΩ
+44.2kΩ
+121kΩ
+
+10kΩ
+10kΩ
+10kΩ
+10kΩ
+10kΩ
+
+Inductor
+The inductor is required to supply constant
+current to the load while being driven by the
+switched input voltage. A larger value inductor
+will result in less ripple current that will in turn
+result in lower output ripple voltage. However,
+the larger value inductor will have a larger
+physical size, higher series resistance, and/or
+lower saturation current. A good rule for
+determining inductance is to allow the peak-topeak ripple current to be approximately 30% of
+the maximum switch current limit. Also, make
+sure that the peak inductor current is below the
+maximum switch current limit.
+
+MP2307 Rev. 1.9
+5/28/2008
+
+⎛
+VOUT
+V
+× ⎜⎜1 − OUT
+f S × ∆I L ⎝
+VIN
+
+Choose an inductor that will not saturate under
+the maximum inductor peak current, calculated
+by:
+
+Thus the output voltage is:
+VOUT = 0.925 ×
+
+L=
+
+⎛
+VOUT
+V
+× ⎜1 − OUT
+2 × f S × L ⎜⎝
+VIN
+
+⎞
+⎟⎟
+⎠
+
+Where ILOAD is the load current.
+The choice of which style inductor to use mainly
+depends on the price vs. size requirements and
+any EMI constraints.
+Optional Schottky Diode
+During the transition between the high-side
+switch and low-side switch, the body diode of
+the low-side power MOSFET conducts the
+inductor current. The forward voltage of this
+body diode is high. An optional Schottky diode
+may be paralleled between the SW pin and
+GND pin to improve overall efficiency. Table 2
+lists example Schottky diodes and their
+Manufacturers.
+Table 2—Diode Selection Guide
+Part Number
+
+Voltage/Current
+Rating
+
+B130
+SK13
+
+30V, 1A
+30V, 1A
+
+MBRS130
+
+30V, 1A
+
+Vendor
+Diodes, Inc.
+Diodes, Inc.
+International
+Rectifier
+
+Input Capacitor
+The input current to the step-down converter is
+discontinuous, therefore a capacitor is required
+to supply the AC current while maintaining the
+DC input voltage. Use low ESR capacitors for
+the best performance. Ceramic capacitors are
+preferred, but tantalum or low-ESR electrolytic
+capacitors will also suffice. Choose X5R or
+X7R dielectrics when using ceramic capacitors.
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+7
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+Since the input capacitor (C1) absorbs the input
+switching current, it requires an adequate ripple
+current rating. The RMS current in the input
+capacitor can be estimated by:
+I C1 = ILOAD ×
+
+VOUT ⎛⎜ VOUT ⎞⎟
+× 1−
+VIN ⎜⎝
+VIN ⎟⎠
+
+When using tantalum or electrolytic capacitors,
+the ESR dominates the impedance at the
+switching frequency. For simplification, the
+output ripple can be approximated to:
+∆VOUT =
+
+VOUT ⎛
+V
+× ⎜1 − OUT
+f S × L ⎜⎝
+VIN
+
+⎞
+⎟⎟ × R ESR
+⎠
+
+The worst-case condition occurs at VIN = 2VOUT,
+where IC1 = ILOAD/2. For simplification, use an
+input capacitor with a RMS current rating
+greater than half of the maximum load current.
+
+The characteristics of the output capacitor also
+affect the stability of the regulation system. The
+MP2307 can be optimized for a wide range of
+capacitance and ESR values.
+
+The input capacitor can be electrolytic, tantalum
+or ceramic. When using electrolytic or tantalum
+capacitors, a small, high quality ceramic
+capacitor, i.e. 0.1µF, should be placed as close
+to the IC as possible. When using ceramic
+capacitors, make sure that they have enough
+capacitance to provide sufficient charge to
+prevent excessive voltage ripple at input. The
+input voltage ripple for low ESR capacitors can
+be estimated by:
+
+Compensation Components
+MP2307 employs current mode control for easy
+compensation and fast transient response. The
+system stability and transient response are
+controlled through the COMP pin. COMP is the
+output of the internal transconductance error
+amplifier.
+A
+series
+capacitor-resistor
+combination sets a pole-zero combination to
+govern the characteristics of the control system.
+
+∆VIN =
+
+ILOAD
+V
+× OUT
+C1 × fS
+VIN
+
+⎛
+V
+× ⎜⎜1 − OUT
+VIN
+⎝
+
+⎞
+⎟⎟
+⎠
+
+The DC gain of the voltage feedback loop is
+given by:
+A VDC = R LOAD × G CS × A EA ×
+
+Where C1 is the input capacitance value.
+Output Capacitor
+The output capacitor (C2) is required to
+maintain the DC output voltage. Ceramic,
+tantalum, or low ESR electrolytic capacitors are
+recommended. Low ESR capacitors are
+preferred to keep the output voltage ripple low.
+The output voltage ripple can be estimated by:
+∆VOUT =
+
+VOUT ⎛
+V
+× ⎜⎜1 − OUT
+fS × L ⎝
+VIN
+
+⎞
+⎞ ⎛
+1
+⎟
+⎟⎟ × ⎜ R ESR +
+⎜
+8 × f S × C2 ⎟⎠
+⎠ ⎝
+
+Where C2 is the output capacitance value and
+RESR is the equivalent series resistance (ESR)
+value of the output capacitor.
+When using ceramic capacitors, the impedance
+at the switching frequency is dominated by the
+capacitance which is the main cause for the
+output voltage ripple. For simplification, the
+output voltage ripple can be estimated by:
+∆VOUT =
+
+MP2307 Rev. 1.9
+5/28/2008
+
+⎛
+V
+× ⎜⎜1 − OUT
+VIN
+× L × C2 ⎝
+
+VOUT
+8 × fS
+
+2
+
+VFB
+VOUT
+
+Where VFB is the feedback voltage (0.925V),
+AVEA is the error amplifier voltage gain, GCS is
+the current sense transconductance and RLOAD
+is the load resistor value.
+The system has two poles of importance. One
+is due to the compensation capacitor (C3) and
+the output resistor of the error amplifier, and the
+other is due to the output capacitor and the load
+resistor. These poles are located at:
+fP1 =
+
+GEA
+2π × C3 × A VEA
+
+fP2 =
+
+1
+2π × C2 × R LOAD
+
+Where GEA is the error amplifier transconductance.
+
+⎞
+⎟⎟
+⎠
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+8
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+The system has one zero of importance, due to the
+compensation capacitor (C3) and the compensation
+resistor (R3). This zero is located at:
+f Z1 =
+
+1
+2π × C3 × R3
+
+The system may have another zero of
+importance, if the output capacitor has a large
+capacitance and/or a high ESR value. The zero,
+due to the ESR and capacitance of the output
+capacitor, is located at:
+fESR
+
+1
+=
+2π × C2 × R ESR
+
+In this case, a third pole set by
+compensation capacitor (C6) and
+compensation resistor (R3) is used
+compensate the effect of the ESR zero on
+loop gain. This pole is located at:
+fP 3 =
+
+the
+the
+to
+the
+
+1
+2π × C6 × R3
+
+The goal of compensation design is to shape
+the converter transfer function to get a desired
+loop gain. The system crossover frequency
+where the feedback loop has the unity gain is
+important. Lower crossover frequencies result
+in slower line and load transient responses,
+while higher crossover frequencies could cause
+system instability. A good standard is to set the
+crossover frequency below one-tenth of the
+switching frequency.
+To optimize the compensation components, the
+following procedure can be used.
+1. Choose the compensation resistor (R3) to set
+the desired crossover frequency.
+
+2. Choose the compensation capacitor (C3) to
+achieve the desired phase margin. For
+applications with typical inductor values, setting
+the compensation zero (fZ1) below one-forth of
+the crossover frequency provides sufficient
+phase margin.
+Determine C3 by the following equation:
+C3 >
+
+Where R3 is the compensation resistor.
+3. Determine if the second compensation
+capacitor (C6) is required. It is required if the
+ESR zero of the output capacitor is located at
+less than half of the switching frequency, or the
+following relationship is valid:
+f
+1
+< S
+2π × C2 × R ESR
+2
+
+If this is the case, then add the second
+compensation capacitor (C6) to set the pole fP3
+at the location of the ESR zero. Determine C6
+by the equation:
+C6 =
+
+2π × C2 × fC VOUT 2π × C2 × 0.1 × fS VOUT
+×
+<
+×
+GEA × GCS
+VFB
+GEA × GCS
+VFB
+
+Where fC is the desired crossover frequency
+which is typically below one tenth of the
+switching frequency.
+
+MP2307 Rev. 1.9
+5/28/2008
+
+C2 × R ESR
+R3
+
+PCB Layout Guide
+PCB layout is very important to achieve stable
+operation. It is highly recommended to duplicate
+EVB layout for optimum performance.
+If change is necessary, please follow these
+guidelines and take Figure2 for reference.
+1)
+
+Keep the path of switching current short
+and minimize the loop area formed by Input
+cap., high-side MOSFET and low-side
+MOSFET.
+
+2)
+
+Bypass ceramic capacitors are suggested
+to be put close to the Vin Pin.
+
+3)
+
+Ensure all feedback connections are short
+and direct. Place the feedback resistors
+and compensation components as close to
+the chip as possible.
+
+4)
+
+ROUT SW away from sensitive analog areas
+such as FB.
+
+Determine R3 by the following equation:
+R3 =
+
+4
+2π × R3 × f C
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+9
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+5)
+
+Connect IN, SW, and especially GND
+respectively to a large copper area to cool
+the chip to improve thermal performance
+and long-term reliability.
+
+External Bootstrap Diode
+An external bootstrap diode may enhance the
+efficiency of the regulator, the applicable
+conditions of external BS diode are:
+z
+
+VOUT is 5V or 3.3V; and
+
+z
+
+Duty cycle is high: D=
+
+VOUT
+>65%
+VIN
+
+In these cases, an external BS diode is
+recommended from the output of the voltage
+regulator to BS pin, as shown in Figure3
+External BST Diode
+IN4148
+BS
+
+MP2307
+SW
+
+CBST
+
+L
+
+5V or 3.3V
+COUT
+
+Figure 3—Add Optional External Bootstrap
+Diode to Enhance Efficiency
+The recommended external BS diode is IN4148,
+and the BS cap is 0.1~1µF.
+TOP Layer
+
+Bottom Layer
+Figure 2―PCB Layout (Double Layer)
+
+MP2307 Rev. 1.9
+5/28/2008
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+10
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+
+TYPICAL APPLICATION CIRCUIT
+C5
+10nF
+
+INPUT
+4.75V to 23V
+
+2
+7
+
+8
+
+1
+
+IN
+
+BS
+SW
+
+EN
+
+MP2307
+SS
+GND
+
+FB
+COMP
+
+4
+
+5
+
+6
+
+C6
+(optional)
+
+OUTPUT
+3.3V
+3A
+
+3
+
+C3
+3.9nF
+
+D1
+B130
+(optional)
+
+MP2307_F03
+
+Figure 4—MP2307 with 3.3V Output, 22uF/6.3V Ceramic Output Capacitor
+
+MP2307 Rev. 1.9
+5/28/2008
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+11
+
+MP2307 – 3A, 23V, 340KHz SYNCHRONOUS RECTIFIED STEP-DOWN CONVERTER
+
+PACKAGE INFORMATION
+SOIC8N (EXPOSED PAD)
+0.189(4.80)
+0.197(5.00)
+8
+
+0.124(3.15)
+0.136(3.45)
+5
+
+0.150(3.80)
+0.157(4.00)
+
+PIN 1 ID
+
+1
+
+0.228(5.80)
+0.244(6.20)
+
+0.089(2.26)
+0.101(2.56)
+
+4
+
+TOP VIEW
+
+BOTTOM VIEW
+
+SEE DETAIL "A"
+
+0.013(0.33)
+0.020(0.51)
+
+0.051(1.30)
+0.067(1.70)
+SEATING PLANE
+0.000(0.00)
+0.006(0.15)
+
+0.0075(0.19)
+0.0098(0.25)
+
+SIDE VIEW
+
+0.050(1.27)
+BSC
+
+FRONT VIEW
+
+0.010(0.25)
+x 45o
+0.020(0.50)
+GAUGE PLANE
+0.010(0.25) BSC
+
+0.050(1.27)
+
+0.024(0.61)
+
+0o-8o
+
+0.016(0.41)
+0.050(1.27)
+
+0.063(1.60)
+
+DETAIL "A"
+0.103(2.62)
+
+0.138(3.51)
+
+RECOMMENDED LAND PATTERN
+
+0.213(5.40)
+
+NOTE:
+1) CONTROL DIMENSION IS IN INCHES. DIMENSION IN
+BRACKET IS IN MILLIMETERS.
+2) PACKAGE LENGTH DOES NOT INCLUDE MOLD FLASH,
+PROTRUSIONS OR GATE BURRS.
+3) PACKAGE WIDTH DOES NOT INCLUDE INTERLEAD FLASH
+OR PROTRUSIONS.
+4) LEAD COPLANARITY (BOTTOM OF LEADS AFTER FORMING)
+SHALL BE 0.004" INCHES MAX.
+5) DRAWING CONFORMS TO JEDEC MS-012, VARIATION BA.
+6) DRAWING IS NOT TO SCALE.
+
+NOTICE: The information in this document is subject to change without notice. Users should warrant and guarantee that third
+party Intellectual Property rights are not infringed upon when integrating MPS products into any application. MPS will not
+assume any legal responsibility for any said applications.
+MP2307 Rev. 1.9
+5/28/2008
+
+www.MonolithicPower.com
+MPS Proprietary Information. Unauthorized Photocopy and Duplication Prohibited.
+© 2008 MPS. All Rights Reserved.
+
+12
+
+350W Single Output Switching Power Supply
+
+■ Features
+AC input range selectable by switch
+Withstand 300VAC surge input for 5 second
+Protections: Short circuit / Overload / Over voltage /
+Over temperature
+
+Forced air cooling by built-in DC fan
+Built-in cooling Fan ON-OFF control
+1U low profile
+Withstand 5G vibration test
+LED indicator for power on
+No load power consumption<0.75W
+100% full load burn-in test
+High operating temperature up to 70℃
+Operating altitude up to 5000 meters (Note.8)
+High efficiency, long life and high reliability
+3 years warranty
+
+LRS-350
+
+series
+
+■ Applications
+Industrial automation machinery
+Industrial control system
+ Mechanical and electrical equipment
+ Electronic instruments, equipments or
+apparatus
+
+■ Description
+LRS-350 series is a 350W single-output enclosed type power supply with 30mm of low profile design. Adopting
+the input of 115VAC or 230VAC (select by switch), the entire series provides an output voltage line of 3.3V,
+4.2V, 5V, 12V, 15V, 24V, 36V and 48V.
+In addition to the high efficiency up to 89%, with the built-in long life fan LRS-350 can work under -25~
++70℃ with full load. Delivering an extremely low no load power consumption (less than 0.75W), it allows
+the end system to easily meet the worldwide energy requirement. LRS-350 has the complete protection
+functions and 5G anti-vibration capability; it is complied with the international safety regulations such as
+UL60950-1. LRS-350 series serves as a high price-to-performance power supply solution for various
+industrial applications.
+
+■ Model Encoding
+LRS - 350 - 3.3
+Output voltage
+Output power
+Series name
+
+File Name:LRS-350-SPEC 2016-04-29
+
+LRS-350
+
+350W Single Output Switching Power Supply
+
+series
+
+SPECIFICATION
+LRS-350-3.3
+
+LRS-350-4.2 LRS-350-5
+
+LRS-350-12
+
+LRS-350-15 LRS-350-24 LRS-350-36 LRS-350-48
+
+DC VOLTAGE
+
+3.3V
+
+4.2V
+
+5V
+
+12V
+
+15V
+
+24V
+
+36V
+
+48V
+
+RATED CURRENT
+
+60A
+
+60A
+
+60A
+
+29A
+
+23.2A
+
+14.6A
+
+9.7A
+
+7.3A
+
+CURRENT RANGE
+
+0 ~ 60A
+
+0 ~ 60A
+
+0 ~ 60A
+
+0 ~ 29A
+
+0 ~ 23.2A
+
+0 ~ 14.6A
+
+0 ~ 9.7A
+
+0 ~ 7.3A
+
+RATED POWER
+
+198W
+
+252W
+
+300W
+
+348W
+
+348W
+
+350.4W
+
+349.2W
+
+350.4W
+
+RIPPLE & NOISE (max.) Note.2 150mVp-p
+
+150mVp-p
+
+150mVp-p
+
+150mVp-p
+
+150mVp-p
+
+150mVp-p
+
+200mVp-p
+
+200mVp-p
+
+VOLTAGE ADJ. RANGE
+
+3.6 ~ 4.4V
+
+4.5 ~ 5.5V
+
+10.2 ~ 13.8V 13.5 ~ 18V
+
+VOLTAGE TOLERANCE Note.3 ±4.0%
+
+±4.0%
+
+±3.0%
+
+±1.5%
+
+±1.0%
+
+±1.0%
+
+±1.0%
+
+±1.0%
+
+LINE REGULATION Note.4 ±0.5%
+
+±0.5%
+
+±0.5%
+
+±0.5%
+
+±0.5%
+
+±0.5%
+
+±0.5%
+
+±0.5%
+
+LOAD REGULATION Note.5 ±2.5%
+
+±2.5%
+
+±2.0%
+
+±1.0%
+
+±0.5%
+
+±0.5%
+
+±0.5%
+
+±0.5%
+
+88.5%
+
+89%
+
+MODEL
+
+OUTPUT
+
+INPUT
+
+SETUP, RISE TIME
+
+1300ms, 50ms/230VAC
+
+HOLD UP TIME (Typ.)
+
+16ms/230VAC
+
+VOLTAGE RANGE
+
+90 ~ 132VAC / 180 ~ 264VAC by switch
+
+FREQUENCY RANGE
+
+47 ~ 63Hz
+
+EFFICIENCY (Typ.)
+
+79.5%
+
+AC CURRENT (Typ.)
+
+6.8A/115VAC
+
+INRUSH CURRENT (Typ.)
+
+60A/115VAC
+
+LEAKAGE CURRENT
+
+<2mA / 240VAC
+
+OVER LOAD
+PROTECTION
+
+2.97 ~ 3.6V
+
+OVER VOLTAGE
+OVER TEMPERATURE
+
+FAN ON/OFF CONTROL
+FUNCTION (Typ.)
+
+21.6 ~ 28.8V 32.4 ~ 39.6V 43.2 ~ 52.8V
+
+1300ms,50ms/115VAC at full load
+
+12ms/115VAC at full load
+
+81.5%
+
+240 ~ 370VDC
+85%
+
+83.5%
+
+(switch on 230VAC)
+
+86%
+
+88%
+
+3.4A/230VAC
+60A/230VAC
+
+110 ~ 140% rated output power
+Protection type : Hiccup mode, recovers automatically after fault condition is removed
+3.8 ~ 4.45V
+
+4.6 ~ 5.4V
+
+5.75 ~ 6.75V 13.8 ~ 16.2V 18 ~ 21V
+
+28.8 ~ 33.6V 41.4 ~ 46.8V 55.2 ~ 64.8V
+
+Protection type : Hiccup mode, recovers automatically after fault condition is removed
+Hiccup mode, recovers automatically after fault condition is removed
+RTH3≧50℃ FAN ON, ≦40℃ FAN OFF
+
+WORKING TEMP.
+
+-25 ~ +70℃ (Refer to "Derating Curve")
+
+WORKING HUMIDITY
+
+20 ~ 90% RH non-condensing
+
+ENVIRONMENT STORAGE TEMP., HUMIDITY -40 ~ +85℃, 10 ~ 95% RH
+TEMP. COEFFICIENT
+
+SAFETY
+
+±0.03%/℃ (0 ~ 50℃)
+
+VIBRATION
+
+10 ~ 500Hz, 5G 10min./1cycle, 60min. each along X, Y, Z axes
+
+SAFETY STANDARDS
+
+UL60950-1 approved
+
+WITHSTAND VOLTAGE
+
+I/P-O/P:3KVAC
+
+I/P-FG:2KVAC
+
+O/P-FG:0.5KVAC
+
+ISOLATION RESISTANCE I/P-O/P, I/P-FG, O/P-FG:100M Ohms/500VDC / 25℃/ 70% RH
+MTBF
+OTHERS DIMENSION
+PACKING
+NOTE
+
+327.9K hrs min.
+
+MIL-HDBK-217F (25℃)
+
+215*115*30mm (L*W*H)
+0.76Kg; 15pcs/12.4Kg/0.78CUFT
+
+1. All parameters NOT specially mentioned are measured at 230VAC input, rated load and 25℃ of ambient temperature.
+2. Ripple & noise are measured at 20MHz of bandwidth by using a 12" twisted pair-wire terminated with a 0.1uf & 47uf parallel capacitor.
+3. Tolerance : includes set up tolerance, line regulation and load regulation.
+4. Line regulation is measured from low line to high line at rated load.
+5. Load regulation is measured from 0% to 100% rated load.
+6. Length of set up time is measured at cold first start. Turning ON/OFF the power supply very quickly may lead to increase of the set up
+time.
+7.The 150% peak load capability is built in for up to 1 second for 12~48V.LRS-350 will enter hiccup mode if the peak load is delivered
+for over 1 second and will recover once it resumes to the rated current level(115VAC/230VAC).
+8. The ambient temperature derating of 5℃/1000m is needed for operating altitude greater than 2000m(6500ft).
+
+File Name:LRS-350-SPEC 2016-04-29
+
+LRS-350
+
+350W Single Output Switching Power Supply
+
+series
+
+Block Diagram
+RECTIFIERS
+&
+FILTER
+
+115/230V(SW)
+
+fosc : 65KHz
+
+FAN
+FAN ON/OFF CONTROL
+
+EMI
+FILTER
+
+I/P
+
+RECTIFIERS
+&
+FILTER
+
+POWER
+SWITCHING
+
+RECTIFIERS
+
++V
+-V
+
+O.T.P.
+O.V.P.
+
+FG
+PWM
+CONTROL
+
+O.L.P.
+
+Derating Curve
+
+DETECTION
+CIRCUIT
+
+Static Characteristics
+
+100
+
+100
+
+90
+80
+
+70
+
+LOAD (%)
+
+LOAD (%)
+
+60
+40
+
+20
+
+-25
+
+180 ~ 264VAC
+90 ~ 132VAC
+
+80
+
+60
+50
+40
+
+-20
+
+-10
+
+0
+
+10
+
+20
+
+30
+
+40
+
+AMBIENT TEMPERATURE (℃)
+
+50
+
+60
+
+70
+
+(HORIZONTAL)
+
+90
+180
+
+95
+190
+
+100
+200
+
+105
+210
+
+110
+220
+
+115
+230
+
+120
+240
+
+125
+250
+
+132
+264
+
+INPUT VOLTAGE (VAC) 60Hz
+
+File Name:LRS-350-SPEC 2016-04-29
+
+LRS-350
+
+350W Single Output Switching Power Supply
+Mechanical Specification
+
+Case No.207A
+
+series
+
+Unit:mm
+
+215
+32.5
+
+150
+
+36.7
+
+LED
++V
+ADJ.
+9
+4-M4 L=3mm
+
+7
+
+50
+
+6
+
+115
+
+135
+
+9.5
+
+8
+
+5
+47.45
+
+8
+
+4
+3
+
+32.5
+
+2
+
+16
+
+1
+
+15
+150
+
+32.5
+
+Terminal Pin No. Assignment :
+
+6.5 6.5
+
+12.5
+
+30
+
+12.8 6.9
+
+2
+Air flow
+direction
+
+4-M4(Both Sides) L=5mm
+
+Pin No.
+1
+2
+3
+
+Assignment
+AC/L
+AC/N
+FG
+
+Pin No.
+Assignment
+4~6
+DC OUTPUT -V
+7~9
+DC OUTPUT +V
+
+Installation Manual
+Please refer to : http://www.meanwell.com/webnet/search/InstallationSearch.html
+
+File Name:LRS-350-SPEC 2016-04-29
+
+Mouser Electronics
+Authorized Distributor
+
+Click to View Pricing, Inventory, Delivery & Lifecycle Information:
+
+Mean Well:
+LRS-350-12 LRS-350-3.3 LRS-350-4.2 LRS-350-15 LRS-350-48 LRS-350-5 LRS-350-36 LRS-350-24
+
+5
+
+4
+
+3
+
+2
+
+1
+
+~0V
+3V3
+PP8
+PP1
+PP2
+
+Q3
+
+6
+7
+
+3
+2
+1
+
+1
+4
+
+1
+
+C5
+1u
+1005
+
+D5
+
+3
+
+5
+
+VIN2
+EN2
+
+C3
+10u
+2012
+
+C4
+10u
+2012
+
+C8
+10u
+2012
+
+R3
+47K
+1%
+1005
+
+A1
+B1
+C1
+
+E2
+D3
+
+5
+11
+13
+
+E1
+
+FB
+SCL
+SDA
+
+AGND
+
+PGND
+PGND
+PGND
+PGND
+
+A2
+B2
+
+R55
+0R
+1% VDD_CORE
+1005
+
+VDD_CORE
+
+L3
+
+INT_SCL
+INT_SDA
+
+10
+
+NC1
+NC2
+PAD
+
+PVIN
+PVIN
+PVIN
+SW1
+SW2
+
+PP9
+L2 4.7u 2A
+SRN4018-4R7M
+
+FB2
+GND
+GND
+
+EN
+
+2
+
+SMBJ5.0A
+C2
+100n
+1005
+
+D2
+
+C161
+1u
+1005
+
+AVIN
+
+4
+
+LX2
+
+5V_CORE VDD_CORE
+
+U16
+
+D1
+
+C7
+10u
+2012
+
+L1 4.7u 2A
+SRN4018-4R7M
+
+1V8
+
+1
+12
+
+BCM857BS
+
+R2
+10K
+1%
+1005
+
+8
+
+LX1
+
+FB1
+
+3
+9
+
+POWER IN
+
+VIN1
+EN1
+
+5V
+
+C1
+47u
+3216
+
+U14
+
+2
+
+PP3
+PP4
+PP5
+PP6
+
+R1
+100K
+1%
+1005
+
+PP7
+
+MF-MSMF250/X
+
+2
+
+8
+9
+
+10103594-0001LF
+
+1
+
+7
+6
+
+5V
+
+6
+
+1
+2
+3
+4
+5
+
+J1
+
+5V_CORE
+
+U3
+
+2
+
+PP35
+
+F1
+D
+
+5V
+
+DMG2305UX
+
+C162
+10u
+2012
+
+470n
+
+C163
+47u
+3216
+
+E3
+
+D
+
+PP58
+R56
+NF
+1%
+1005
+
+A3
+B3
+C2
+C3
+
+RT8088AW SC
+
+PAM2306AYPKE
+
+1V8
+3V3
+
+T5
+
+Q7
+DMG2305UX
+
+XTALN
+
+R79
+
+C12
+1u
+1005
+
+47K
+
+C164
+220n
+1005
+
+C13
+220n
+1005
+
+F18
+
+Q8
+MMBT3904T
+
+1005
+R71
+18K
+1%
+1005
+
+R70
+8.2K
+1%
+1005
+
+1%
+
+PP21
+C165
+100n
+1005
+
+3V3
+
+D1
+RED
+1611
+
+X1
+
+XTALP
+
+V8
+
+XTAL_P
+
+1
+
+3
+5V
+
+C10
+18p
+1005
+
+19.2MHz
+
+3
+1
+
+C6
+100n
+1005
+
+RUN
+
+R5
+10K
+1%
+1005
+
+U4
+
+C11
+18p
+1005
+
+VCC
+
+D2
+GREEN
+1611
+
+POWER OK
+"PWR" LED
+
+STATUS
+"ACT" LED
+C
+
+Q1
+DMG1012T
+
+2
+
+RST
+GND
+
+PP13
+
+Q6
+DMG1012T
+
+STATUS_LED
+
+R8
+470R
+1%
+1005
+
+APX803-46SAG
+
+2
+1
+
+C188
+220n
+1005
+
+RUN
+
+RUN
+
+RUN
+
+PLL_VDD_OUT
+PLL_VDD
+XOSC_VDD
+
+4
+
+1
+
+R68
+10K
+1%
+1005
+
+U5
+W6
+V6
+
+2
+
+C
+
+R20
+470R
+1%
+1005
+
+PP10
+PLL_VDD
+
+R69
+10K
+1%
+1005
+
+U8
+
+R7
+470R
+1%
+1005
+
+XTAL_N
+
+3
+
+1V8
+R67
+47K
+1%
+1005
+
+PLL_1V8
+
+AGND_13
+AGND_14
+
+2
+
+5V_CORE
+
+W16
+W18
+
+5V
+
+3V3
+
+U1N
+BCM2837
+
+C9
+220n
+1005
+
+J2
+SDRAM_LDO_EN
+
+SDRAM_LDO_EN
+
+PW R_LOW _N
+
+RUN
+
+2W PIN HEADER
+
+3V3
+
+5V
+
+3V3
+
+CAMERA
+
+DISPLAY
+3V3
+
+CAM1_DN1
+CAM1_DP1
+CAM1_CN
+CAM1_CP
+CAM_GPIO0
+CAM_GPIO1
+SCL0
+SDA0
+
+SCL0
+SDA0
+3V3
+
+30
+29
+28
+27
+26
+25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+DSI1_DN1
+DSI1_DP1
+DSI1_CN
+DSI1_CP
+DSI1_DN0
+DSI1_DP0
+SCL0
+SDA0
+
+3V3
+
+1-1734248-5
+
+30
+29
+28
+27
+26
+25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+
+R23
+1.8K
+1%
+1005
+
+R24
+1.8K
+1%
+1005
+
+ID_SD
+ID_SC
+GPIO2
+GPIO3
+
+N2
+B11
+P1
+L4
+M2
+L2
+M1
+J4
+K1
+B10
+K2
+K3
+B9
+H3
+
+GPIO4
+GPIO5
+GPIO6
+GPIO7
+GPIO8
+GPIO9
+GPIO10
+GPIO11
+GPIO12
+GPIO13
+
+1-1734248-5
+
+G4
+J5
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+CAM1_DN0
+CAM1_DP0
+
+B
+
+J4
+
+GPIO0
+GPIO1
+GPIO2
+GPIO3
+GPIO4
+GPIO5
+GPIO6
+GPIO7
+GPIO8
+GPIO9
+GPIO10
+GPIO11
+GPIO12
+GPIO13
+
+VDDIO2_1
+VDDIO2_2
+
+J3
+
+GPIO14
+GPIO15
+GPIO16
+GPIO17
+GPIO18
+GPIO19
+GPIO20
+GPIO21
+GPIO22
+GPIO23
+GPIO24
+GPIO25
+GPIO26
+GPIO27
+
+C64
+100n
+1005
+
+C67
+220n
+1005
+
+U1C
+BCM2837
+
+J2
+L3
+A8
+H1
+E2
+H2
+F1
+G3
+F2
+F3
+D1
+D2
+B5
+C5
+
+C65
+100n
+1005
+J8
+
+GPIO14
+GPIO15
+GPIO16
+GPIO17
+GPIO18
+GPIO19
+GPIO20
+GPIO21
+GPIO22
+GPIO23
+GPIO24
+GPIO25
+GPIO26
+GPIO27
+
+(SDA1)
+(SCL1)
+(GPIO_GCLK)
+
+GPIO2
+GPIO3
+GPIO4
+
+(GPIO_GEN0)
+(GPIO_GEN2)
+(GPIO_GEN3)
+
+GPIO17
+GPIO27
+GPIO22
+
+(SPI_MOSI)
+(SPI_MISO)
+(SPI_SCLK)
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+
+GPIO10
+GPIO9
+GPIO11
+ID_SD
+GPIO5
+GPIO6
+GPIO13
+GPIO19
+GPIO26
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+
+GPIO14
+GPIO15
+GPIO18
+
+(TXD0)
+(RXD0)
+(GPIO_GEN1)
+
+GPIO23
+GPIO24
+
+(GPIO_GEN4)
+(GPIO_GEN5)
+
+GPIO25
+GPIO8
+GPIO7
+ID_SC
+
+(GPIO_GEN6)
+(SPI_CE0_N)
+(SPI_CE1_N)
+
+B
+
+GPIO12
+GPIO16
+GPIO20
+GPIO21
+
+ID_SD and ID_SC PINS:
+These pins are reserved for HAT ID EEPROM.
+At boot time this I2C interface will be
+interrogated to look for an EEPROM
+that identifes the attached board and
+allows automagic setup of the GPIOs
+(and optionally, Linux drivers).
+DO NOT USE these pins for anything other
+than attaching an I2C ID EEPROM. Leave
+unconnected if ID EEPROM not required.
+
+40W 0.1" PIN HDR
+
+20
+21
+
+GPIO EXPANSION
+
+HDMI_T2P
+HDMI_T2N
+HDMI_T1P
+
+H5V
+5V
+
+U9
+PP20
+
+1
+C54
+100n
+1005
+
+3
+
+IN
+
+OUT
+
+GND
+RT9741CGV
+
+A
+
+2
+C56
+100n
+1005
+
+HDMI_T1N
+HDMI_T0P
+HDMI_T0N
+HDMI_CKP
+HDMI_CKN
+HDMI_CEC
+HDMI_SCL
+HDMI_SDA
+H5V
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+
+R61
+1.8K
+1%
+1005
+
+AUD_3V3
+
+J6
+47151-1051
+
+C58
+
+R16
+
+AUDIO_L
+U11
+AUD_PW M1
+
+1 A1
+2
+
+HDMI
+AUD_PW M0
+
+J7
+
+GND
+
+Y1
+
+6
+
+220R
+1005
+1%
+
+C59
+100n
+1005
+
+R17
+100R
+1%
+1005
+
+47u
+3216
+
+2
+PP25
+
+4
+5
+
+A/V
+
+5
+
+VCC
+
+3
+
+3
+
+4
+A2
+
+Y2
+
+C60
+
+R18
+
+A
+
+1
+
+PP26
+AUDIO_R
+
+NC7W Z16
+
+C61
+100n
+1005
+
+C62
+100n
+1005
+
+R19
+100R
+1%
+1005
+
+47u
+3216
+
+R60
+1.8K
+1%
+1005
+
+COMPVID
+
+22
+23
+
+HDMI_HPD
+
+220R
+1005
+1%
+
+© Raspberry Pi 2015
+www.raspberrypi.org
+Title
+
+Drawn By
+James Adams
+
+Raspberry Pi 3 Model B (Reduced Schematics)
+Size
+
+Ref
+A2
+
+Date:
+5
+
+4
+
+3
+
+2
+
+Rev
+RPI-3B
+
+1.2
+
+Monday, April 04, 2016
+1
+
+Sheet
+
+1
+
+of
+
+1
+
+1
+2
+3
+
+3
+2
+1
+
+

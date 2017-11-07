@@ -1,0 +1,618 @@
+Attachable
+Protective
+Skate Shoe
+Toecap
+Tyler Huff
+2016 Senior Project
+Liberal Arts and Engineering Studies
+Cal Poly, San Luis Obispo
+
+Table of Contents
+Introduction
+Product Description
+Problem Product Solves
+Product Viability
+Quality of Solution
+Novelty
+Shape Considerations
+Initial Design
+Adjustments
+Material Considerations
+Properties
+Selection Process
+Tested Materials
+Attachment
+Initial Attachment
+Final Attachment
+Product Testing
+Testing Methodology
+Results
+Market Climate
+Skate Shoe Companies
+Customer Archetypes
+Final Considerations
+Cost Estimation
+Final Product
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+2
+
+Introduction
+Product Description
+An attachable, protective toecap for skateboarding shoes lengthens the short
+lifetime of skate shoes. The toecap extends from the outer side of shoe toes
+and stops just before hitting the laces. It follows the contours of the foxing
+tape. The foxing tape is the rubber strip connecting the sole to the upper part
+of shoes. The toecap is 0.4cm thick, 3.5cm wide, and 11.1cm long. It is a skinny
+strip of rubber adding extra protection to areas more susceptible to wear
+and tear from skateboarding. The toecap is essentially a
+generic, attachable extension of skate shoe soles
+to improve the lifespan of
+skateboarding shoes.
+
+“The toecap
+is essentially
+a generic,
+attachable,
+extension of
+skate shoe
+soles”
+
+Black leftshoe
+toecap
+
+The toecap attaches with glue, however it will ideally attach with an adhesive
+strip on the inside. The product delivers an aesthetic solution to an age-old
+problem in skateboarding, and makes application easy as possible on the
+user. The toecap improves the lifetime of shoes at a cheap cost. The
+skateboarding community needs an inexpensive, effective solution to
+protecting expensive skateboarding shoes.
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+3
+
+Problem Product Solves
+Virtually every s skateboarder rips his or her shoes. It is an inevitable result of
+skateboarding. The problem arises from how skaters perform all their tricks.
+The fundamental trick, and one that is present in all derivative tricks, is the
+ollie. The ollie allows skaters to jump off the ground and bring their board
+with them. When a skater ollies,
+he must aggressively slide his
+shoe against the griptape. When
+his shoe is sliding, it is at an angle
+exposing the outside canvas to
+the rough surface of the griptape,
+as seen in the diagram. Nearly
+every time a skater does a trick,
+he has to slide his exposed shoe
+against the griptape. In a typical
+skateboarding session, a skater
+may do upwards of
+
+Mechanics of
+an Ollie
+
+200 tricks.
+
+Repeatedly sliding
+against the griptape
+causes wear and tear in
+skateboarding shoes.
+The wear is usually
+isolated to the outside
+portion of the shoes
+because the motion is
+fundamental to almost all
+skateboarding tricks.
+Shoes can wear out very
+quickly for advanced
+skateboarders, however they
+all eventually wear out for skaters of all skill levels.
+Ripped shoes
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+4
+
+Product Viability
+Quality of Solution
+The toecap provides an elegant, simple solution to a problem continually
+troubling skaters. The toecap is elegant because of its simple, aesthetically
+pleasing design. It seamlessly fits the contours of shoes. The design protects
+vulnerable areas only, contributing to its sleek and seamless aesthetic. The
+result is a beautiful product lengthening the lifetime of skateboarding shoes.
+
+“The toecap
+seamlessly fits
+contours of
+skate shoes”
+White rightshoe toecap
+
+Other fixes to wear and tear lack the simple attachment method the toecap
+does. A common solution is “Shoe Goo”. Shoe Goo is glue made for shoes.
+Applying Shoe Goo is a messy, time-consuming process. A skater must
+squeeze it out of the bottle and then push it around with his hands. After a
+messy, time-consuming application, all Shoe Goo can offer is an unsightly
+quick fix. Skaters tend to apply Shoe Goo several times throughout the
+lifetime of a shoe, as it is just a temporary solution.
+
+Novelty
+Among other strengths, the toecap also offers novelty. Skateboarding has
+never seen something like this. An attachable protective toecap catches the
+skateboarder’s eye. When buying a pair of skate shoes, a skater may not
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+5
+
+be inclined to buy a tube of Shoe Goo along with her purchase. She has
+probably used Shoe Goo before, understands its messy, time-consuming
+application, and knows Shoe Goo will not last long anyways. An attachable,
+protective, toecap in the same price range as Shoe Goo will grab her
+attention. She has never seen anything like this. It is novel.
+
+Shape Considerations
+Initial Design
+4 5/8”
+
+In the early brainstorming
+stages, designing a toecap
+following the contours of
+foxing tape was the first
+logical step. Pulling from the
+curves of the most generic
+looking skate shoes, the
+diagram to the right
+indicates the curves of the
+left and right toecaps from
+a top down view. The
+curves start just before the
+end of the toes and stop
+after 4 3/8 inches.
+
+“Designing a
+toecap that
+follows the
+contours of foxing
+tape was the first
+logical step”
+
+Left Shoe
+
+Right Shoe
+
+4 3/8”
+1 1/4”
+
+Top-down view of left
+and right toecaps
+
+Next was determining the vertical curve. The
+vertical curve is the bend from the shoe sole to the
+flat canvas directly on top of the skater’s foot. This curve
+is harder to model because it gradually changes. The curve is
+sharper near the front and more gradual at the end of the toecap. This makes
+sense because feet are flat at the toes and more curved at the ankle.
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+6
+
+18.25625mm
+
+Right Shoe
+
+Left Shoe
+2.381250mm
+
+6.35mm
+
+12.7mm
+
+1.5875mm
+
+28.5700mm
+
+20.63750mm
+
+Front Cross Section
+Determined from angle change
+
+2.381250mm
+
+Right Shoe
+
+Left Shoe
+6.35mm
+
+12.7mm
+
+1.5875mm
+
+34.925mm
+
+26.98750mm
+
+Back Cross Section
+
+The diagrams to the left
+depict the difference in
+curvature. The curvature
+linearly changes from the
+front end to the back end of
+the toecap. The diagrams
+also indicate the rounded
+edges. They are rounded so
+they will not catch on
+anything.
+The final consideration for
+the initial design was to add
+a lip on the inside. It
+protrudes for the entire
+length of the toecap to
+utilize structural support
+provided by the foxing tape.
+Securely attaching the
+toecap is critical. The lip
+allows the toecap to rest on
+the foxing tape found in
+skate shoes.
+
+Design Adjustments
+After 3D printing the initial design, the toecap underwent adjustments. From
+attempting to fasten the toecap to multiple shoes, it became obvious the
+front needed to curve more to securely latch on to the very end of shoes.
+Thus, the first change was increasing the curve at the front of the toecap. The
+toecap also appeared thick. The second adjustment was a slight reduction in
+the thickness in an effort to make the toecap blend in more. Lastly, the
+toecap looked so different and novel, engraving the name was a way to
+identify it. By engraving the name, the question “What is this?” is answered
+just by looking at the toecap.
+
+`
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+7
+
+Material Considerations
+Properties
+1. Flexible
+A critical concern for the toecap is flexibility. When performing tricks, skate
+shoes change shape in a quick, drastic way. A rigid material would fall off
+shoes because it would not adapt to changes in the shoe. However, a flexible
+material can change shape when under stress,
+2. Non-deformable
+In addition to a flexible toecap, it must also retain its shape when shoes
+return to their normal shape. Flexibility and non-deformability are
+complementary. The toecap must change shape when skaters perform tricks
+and snap back to its original form once skaters complete their tricks.
+3. Durable
+The most important property concerning the toecap is durability. If the
+toecap is not durable enough to withstand the griptape, then there is no need
+for it. The toecap must be hard to not deteriorate from the griptape, but it
+must also have a high coefficient of friction so skaters’ feet will not slip when
+performing tricks.
+4. Inexpensive
+Finally, if the toecap is not cheap, skaters will not buy it. Cost is always a
+factor and is no exception for this product. Skate shoes are expensive, the
+toecap delivers an inexpensive solution to protecting expensive skate shoes.
+If the toecap were expensive, skaters would buy new skate shoes instead.
+
+Selection Process
+The selection process involved finding materials that exhibit all the abovementioned properties. To find these materials, CES Selector, a material
+selector software, compared quantifiable material properties against each
+other. For each comparison, only the materials located inside the user-set
+“bounding box” passed. Thus, any materials located inside all the bounding
+boxes are the ones that satisfied all the restraints.
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+8
+
+The graph to the right
+compares Elongation versus
+Flexural modulus and
+includes a bounding box.
+Flexural modulus is just the
+tendency of a material to
+bend. Elongation refers to
+the amount a material can
+stretch. In terms of the
+toecap, the material needs
+to stretch and bend a lot.
+Some of the materials in the
+bounding box include
+thermoplastics, Polysulfide
+rubber, and synthesized
+rubbers.
+
+Another important concern is
+durability. The chart to the left
+measures Hardness versus
+Fracture Toughness. Hardness
+refers to the resistance of a
+material to indentation. Fracture
+Toughness refers to the
+resistance of a material to the
+propagation of a crack. The
+harder the material and less
+likely it is to crack the better it
+can withstand griptape. The
+materials indicated in the
+bounding box are the same as
+the ones mentioned above.
+
+Other properties such as price and density were compared to form a robust
+restraint criterion. The materials satisfying all the properties were in some
+form or another, rubbers. Besides natural rubber, elastomers passed all the
+restraints.
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+9
+
+Tested Materials
+The two materials tested were urethane rubbers. One had a Shore 80A
+hardness and the other had a Shore 60A hardness. The Shore 80A rubber
+was durable, yet lacked the grip necessary for performing tricks. The Shore
+60A rubber was not as hard, but did grab the griptape better. A Shore
+hardness around 60-70A may be a suitable medium.
+
+Attachment
+Initial Attachment
+For prototyping purposes, using Shoe
+Glue to attach the toecaps seemed like
+an apt solution. Skaters use it for
+protecting their shoes, so they are
+already familiar with it. They would just
+use it to apply a toecap instead. Using a
+solution (Shoe Goo) to protecting skate
+shoes as a way to attach another
+solution to protecting skate shoes was
+redundant, but the focus was on the
+design and material, not how it
+attached.
+
+Shoe Goo
+
+During the first testing stage, Shoe Goo
+did not bond to the rubber toecaps. For
+productive testing, the toecap needed another simple attachment method.
+Instead of Shoe Goo, Super glue worked well. Skaters testing the toecap
+generally had no problems attaching the toecap and subsequently were able
+to judge the toecap based on its shape and material.
+Although Super glue was an effective solution to attaching the toecaps, the
+problem with Super glue is that it makes the toecap a two-product solution.
+Skaters are familiar with using glue to protect their shoes. Using glue, which
+does protect skate shoes, to attach a toecap that protects their shoes is
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+10
+
+again, redundant. Even if the toecap does a better job of protecting shoes,
+using glue to attach it in sense defeats the purpose of the toecap.
+
+Two
+Product
+Solution
+Ideal Attachment
+Double-sided adhesive tape covering the inside portion of the toecap would
+make for the simplest and most effective attachment method. All the
+consumer would have to do is peel off the liner, then press the inside
+adhesive onto the vulnerable area of their shoes. Designing the adhesive into
+the toecap makes the method for attachment self-contained. It turns the
+toecap into a one-product solution.
+
+Product Testing
+Testing Methodology
+To assess toecap viability, twelve skaters tested out toecaps over the span of
+about two weeks. They picked a toecap from a small sample, attached it
+using Super glue, and received a survey to complete after skating 1-2 weeks.
+Once each skater had an impression of the product, he or she completed a
+general survey. The survey asked for general impressions of the product, how
+it affected their ability, how well it protected their shoes, and what they
+thought about the attachment method.
+
+Results
+The surveys indicated largely positive results. In the free response section,
+one participant said the toecap is “a great idea for the skate industry”.
+Another participant exclaimed, “Overall I was very impressed with how well it
+performed and held up against the griptape”.
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+11
+
+Attachment method
+None of the twelve skaters said attaching the toecap was difficult. Eleven said
+it was easy to attach and one skater was neutral. However, in the free
+response section, five participants indicated they would prefer adhesive tape
+to Super glue. One skater succinctly answered, “would be faster and easier to
+attach and replace”. Although the sample size is small, skaters are
+comfortable using glue, so they may not consider how much easier using
+adhesive tape could be.
+
+Performance/Ability Impact
+As indicated in the chart to the
+right, ten of twelve participants
+were neutral or said the toecap
+positively affected their ability. A
+positive affect on ability was an
+unforeseen benefit to the toecap.
+Three participants tested the
+harder rubber (Shore 80A
+hardness) toecaps. Two of those
+three participants said the toecap
+had a negative impact on ability.
+These participants probably thought
+the toecap made sliding their feet
+against the griptape too slippery
+because the toecap’s hardness
+made the coefficient of friction
+lower than what they are used too.
+
+How did the toecap affect
+ability/performance?
+
+6	
+
+5	
+
+5	
+
+4	
+
+4	
+3	
+2	
+
+2	
+1	
+
+1	
+0	
+
+0	
+1	
+Negative
+
+2	
+
+3	
+Neutral
+
+4	
+
+5	
+Positive
+
+Protection
+
+“No one indicated
+
+Those surveyed thought the toecap did an excellent
+the toecap did
+job of protecting their shoes. One participant said
+poorly protecting
+the toecap did a good job and eleven said the
+toecap did a great job protecting vulnerable areas.
+their shoes”
+No one indicated the toecap did poorly protecting
+their shoes. When asked if the toecap was a better
+alternative to other techniques for protecting skate shoes,
+every participant exclaimed it was a better alternative. Half of the
+participants said the toecap was a great alternative to other solutions.
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+12
+
+Market Climate
+Skate Shoe Companies
+With non-traditional skate shoe
+companies entering the
+skateboarding industry, profits
+greatly outweigh skateboarder’s
+interests. Corporations such as
+Nike SB are not interested in
+making a durable shoe because a
+durable shoe limits profit. They are
+content with the status quo and skateboarders do not demand a better shoe.
+Shoe companies sometimes advertise shoes as durable, but in most cases,
+they are not.
+
+Customer Archetypes
+Lifer
+The lifer is the most important customer archetype. This person could be in
+his early teens or 30s. What matters, is that they are committed to
+skateboarding. This person cannot imagine themselves without
+skateboarding, and do not know what they would be doing with out it. They
+understand holes in shoes will happen and have tried multiple ways to fix the
+problem. They view any real solution to protecting skate shoes as a valuable
+fix to a problem robbing them of countless dollars. They will gladly spend
+money on a toecap if it makes their shoes last longer, and will buy successive
+toecaps for their shoes. Since they are likely to buy multiple
+toecaps throughout their skating careers, they are the
+“Lifers will gladly
+most important customer archetype.
+
+Teenage Skater
+
+spend money on a
+toecap if it makes
+their shoes last
+longer”
+
+The teenage skater is the second most important
+customer archetype. His mean age is 15 years old. He
+identifies as a skater, hangs out with skaters, and skates
+with his friends most days after school. He enjoys skateboarding, put in
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+13
+
+the effort to learn how to skateboard, and understands the problem of
+wearing down skate shoes. His Mom is often annoyed at how quickly he ruins
+his shoes. Sometimes he will use Shoe Goo to prevent his shoes from ripping
+and sometimes he will not. He has not critically thought about how much
+money he loses from ripping his shoes, but hates when they rip. This person
+will buy a toecap because he sees the value in it and views it as something
+cool and novel. His Mom is happy to buy him something that will protect his
+expensive shoes.
+There are more teenage skaters than lifers, however all lifers were once
+teenager skaters. The importance and value in the teenage skater is that he
+may turn into a lifetime customer if he turns into a lifetime skateboarder.
+
+Mom
+The last customer archetype, but still important is the Mom of a skater. This
+skater is younger, in his preteen to early teen years. He does not yet fully
+shop for himself. The Mom tends to buy his clothes and shoes, or at least have
+the final say in what her son wears. Her kid is similar to the teenager skater,
+but younger. This Mom is also involved in her son’s interests. She supports
+skateboarding, but also realizes how costly her son’s shoes are. Whether her
+son shows her a toecap, or she comes across one on her own, she sees the
+value of the toecap in protecting her son’s skate shoes. She will buy a toecap
+for her son without considering her son’s opinion. The prospect of saving
+money overpowers her son’s opinions and she usually has the final say on
+what her son wears.
+An important distinction between the teenager skater using his Mom’s money
+to buy a toecap and the Mom buying her son a toecap is that in the Mom
+customer archetype buys her son a toecap without consulting her son.
+
+Final Considerations
+Cost Estimation
+The survey asked participants what they would pay for a toecap. Their
+answers were insightful. First, they would not want to buy a pair right and left
+shoe toecaps. This is because skaters tend to stand one way on their boards,
+called a stance. A skater has either a “regular” or “goofy” stance, according to
+what feels natural to them. Since they tend to stand one way, only one of
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+14
+
+their shoes wears out. Buying a toecap for both shoes would be unnecessary.
+Participants also indicated they would rather buy a pack of toecaps as
+opposed to just one. Participant’s answers to how much they would pay for
+one toecap ranged from $2.50 to $20. The mean however, was $7.50 for one
+toecap. For a pack of two toecaps, a realistic price point is $14. In terms of
+profitability, this is a satisfactory price point as a prototyping company, Proto
+Labs, quoted them at $3.50 each to manufacture.
+
+Final Product
+The final product will include a succinctly packaged set of two left-shoe or
+right-shoe toecaps in black or white with instructions for application. There
+are no sizes, and no extra baggage. The only extra item up for consideration
+is adding a sticker inside, since stickers are a tradition in skateboarding
+products. A skater will easily understand what the product is by the simple
+and readable packaging. The potential consumer will notice the novelty,
+confidence, and service the toecap offers from the packaging and product
+aesthetic.
+
+Skate Shoe Toecap | LAES Senior Project | Cal Poly, SLO
+
+15
+
+

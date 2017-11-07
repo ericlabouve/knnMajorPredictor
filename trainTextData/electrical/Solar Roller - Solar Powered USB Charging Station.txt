@@ -1,0 +1,1646 @@
+Solar Roller - Solar Powered USB Charging Station
+
+A Senior Project
+presented to
+the Faculty of the Electrical Engineering Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree
+Bachelor of Science
+
+by
+
+Aaron Bartfeld
+Tanner Mjelde
+Kaylan Naicker
+June, 2017
+
+© 2017 Aaron Bartfeld, Tanner Mjelde, and Kaylan Naicker
+
+Abstract
+
+As the necessity for renewable energy increases, solar power becomes more and more
+prevalent. At the same time, as technology increases, the necessity for charging one’s electronic
+devices also increases. The Solar Roller merges solar energy with the ability to charge one's
+electronic device in one compact cart. The Solar Roller is a solar-powered USB charging station
+that allows people of all backgrounds to develop a better understanding of alternative fuels,
+while charging their USB device. It has a touch screen display that provides voltage levels of the
+battery as well as a TV that displays solar powered information. The goal is to create a useful
+solar-powered system to charge people’s devices, while providing information about the
+opportunities that solar power can provide.
+
+2
+
+TABLE OF CONTENTS
+SECTION
+
+PAGE
+
+Abstract………………………………………………………………………………………..2
+Chapter 1: Introduction………………………………………………………………………..5
+Chapter 2: Background………………………………………………………………………..11
+Chapter 3: Design Requirements……………………………………………………………...16
+Chapter 4: Design……………………………………………………………………………..25
+Chapter 5: Hardware Test and Results………………………………………………………..30
+Chapter 6: Conclusion………………………………………………………………………...43
+References…………………………………………………………………………...………..44
+Appendices………………………………………………………………………………..…..46
+
+FIGURES & TABLES
+
+PAGE
+
+Table 1-1: Leveled Costs of Different Power Plants………………………………………...6
+Figure 1-1: Coal. Natural Gas, and Solar Emissions…………………………………………..7
+Figure 1-2: Solar Panel Installation in 1970s…………………………………………………..8
+Figure 1-3: Solar Panel Field in the 2000’s…………………………………………….……...8
+Figure 1-4: Growth in Solar Photovoltaic Installations………………………………………..9
+Figure 1-5: Price Decrease and Installations increase of Solar PV…………………………...10
+Figure 2-1: Cellphone Ownership 2004-2013………………………………………………...13
+Figure 2-2: Commercially Available USB Solar Charger…………………………...………..15
+Figure 3-1: Level 0 Block Diagram………………………………………………………..….16
+Table 3-1: Level 0 Functional Decomposition………………………………………………..16
+Figure 3-2: Level 1 Block Diagram…………………………………………………………..18
+3
+
+Table 3-2: Level 1 Functional Decomposition…………………………………………….18
+Figure 3-3: Side View of the Cart………………………………………………………….22
+Table 3-3: Solar Roller Component Specifications………………………………………..23
+Figure 4-1: Protection Schematic………..………………………………………………...26
+Figure 4-2: Battery Percentage…………………………………………………………….28
+Figure 4-3: Wire Gauge Chart……………………………………………………...……...29
+Table 5-1: Current Measurements for Each Load………………………………………....31
+Figure 5-1: Current Drawn by TV Test Setup……………………………………………..32
+Figure 5-2: LED Light Strip Current Draw Test Setup……………………………………32
+Table 5-2: Load Test Results………………………………………………………………33
+Figure 5-3: Microcontroller Test Setup…………………………………………………....34
+Table 5-3: Microcontroller Battery level Test……………………………………………..35
+Figure 5-4: Open Circuit Voltage test Setup……………………………………………….37
+Figure 5-5: Short Circuit Current Test Setup……………………………………………....38
+Table 5-4: Solar Panel Test Results………………………………………………...……....38
+Figure 5-6: Buck Converter Testing Set Up……………………………………………..…39
+Figure 5-7: Output Voltage Peak to Peak Ripple…………………………………………..39
+Table 5-5: Buck Converter Testing Results………………………………………………..40
+Table 5-6: Load and Line Regulation……………………………………………………...41
+.
+Table 5-7: Output Peak to Peak Ripple for Buck Converter….…………………………...42
+Table 7-1: Estimated Cost Overview……………………………………………………...47
+Table 7-2Actual Cost Overview………………………………………………………......47
+
+4
+
+Chapter 1. Introduction
+
+In recent years, the consequences of our reliance on fossil fuels has begun to make an
+impact on the environment, as global temperatures have continued to rise year by year. In order
+to combat this change, alternative sources of energy, such as wind and solar, must take over the
+leading role of fossil fuels. Renewable forms of energy have been gaining traction, as more and
+more homeowners are installing rooftop solar systems, and there have been many large-scale
+solar farms constructed in the past few years. These successful installations of solar and other
+forms of renewable energy have proven that fossil fuels may no longer need to be relied upon,
+and the addition of more will only be beneficial.
+According to the United State Energy Information Administration, the leveled energy
+costs of solar energy are much higher compared to common sources such as natural gas, coal,
+and various renewable sources, as seen in Table 1-1. Solar energy is much more expensive than
+natural gas per kwH over twenty years [1]. These values take into consideration the high costs of
+infrastructure and maintenance; not just the raw consumable cost. Despite this, solar energy has
+several advantages. As non-renewable resources are depleted, their cost will increase
+exponentially if we do not begin using more sources of renewable energy. Other alternatives like
+wind power and hydroelectric power are limited by where they can be placed. Solar energy,
+while initially expensive, can be placed and moved virtually anywhere. If previous trends
+continue, the cost of solar cells will continue to fall, making solar energy economically viable.
+
+5
+
+Table 1-1: Levelized Costs of Different Power Plants
+
+The obvious benefit of solar power over fossil fuels is that they are essentially 100%
+clean energy, producing zero emissions that directly contribute to climate change and
+environmental concerns. Extracting and using fossil fuels is expensive and harmful to the
+environment. Greenhouse gases, which are produced when fossil fuels are burned, lead to rising
+global temperatures and climate change. Climate change contributes to serious environmental
+and public health issues, including extreme weather events, rising sea levels, and ecosystem
+changes. Figure 1-1 shows Renewable Energy Corporation's statistics of the carbon dioxide
+emissions of Coal, Natural Gas, and Solar in grams of CO2 per kWh of energy. Solar emissions
+has a mere fraction of the emissions of the other two.
+Solar panels also provide energy reliability, security, and independence. The rising and
+setting of the sun is obviously extremely consistent and reliable. All around the world,
+information is available on when the sun rises and falls every day. On top of reliability, there is
+security in the fact that no one can buy the sun or turn it into a monopoly. People do not have the
+6
+
+power or ability to stop the sun from coming up everyday. Since the “fuel” for solar panels
+cannot be bought or monopolized, there is energy independence. It is free for all to use.
+
+Figure 1-1. Coal, Natural Gas, and Solar Emissions
+
+Solar power as we know it today is a fairly modern technology, being in mainstream use
+since the 1950’s. In 1953, a group of three scientists discovered silicon solar cells, which were
+only capable of producing enough electricity to run small devices. At this point, it was estimated
+that a 1-Watt solar cell cost around $300, much improvements had to be done to make them
+more affordable and usable for the average consumer. In the 1970’s, Exxon spearheaded research
+towards more affordable solar cells. From the 1970’s to the 1990’s, solar panels started to
+become more relevant, not just for big companies that could afford them. Figure 1-2 shows solar
+panels being installed in the 1970’s, and Figure 1-3 shows a solar panel field from the 2000’s.
+
+7
+
+The relevance of solar panels has increased exponentially in just the last 40 years. Now,
+in 2017, a high-quality 150W solar panel typically costs around $215. This makes it more
+reasonable to fund for a homeowner.
+
+Figure 1-2. Solar Panel Installation in 1970s
+
+Figure 1-3. Solar Panel Field in the 2000’s
+
+8
+
+With all of the advantages of solar panels and their decreasing prices, the solar industry
+has grown exponentially in recent years. According to the Solar Energy Industries Association,
+the installations of solar panels in the US reached an all-time high in 2016, seen in Figure 1-4.
+This is mainly due to the commercial prices, which have fallen 58% since 2012 and by 16% just
+in the last year [2], as shown in Figure 1-5. Solar energy isn’t just big in the United States, but all
+around the world. According to the International Energy Agency (IEA), “about half a million
+solar panels were installed every day around the world last year (2015)” [3]. The IEA also
+predicts that Solar power could be the world’s main energy source by 2050 [4]. Overall,
+renewable energy is a growing industry, and it is continuing to gain popularity worldwide, from
+residential to commercial to industrial uses.
+
+Figure 1-4. Growth in Solar Photovoltaic Installations
+
+9
+
+Figure 1-5. Price Decrease and Installations Increase of Solar PV
+
+10
+
+Chapter 2. Background
+
+Renewable energy, more specifically solar, has begun to grow in popularity throughout
+the world. However, many people are still unaware about the benefits of solar power, and lack a
+strong education on the topic. The EU, a very well-developed solar market, still generates only
+3% of its energy from solar. Part of this can be attributed to a lack of understanding about solar,
+which leads to improper use or poor maintenance of the system, as well as not installing solar
+altogether [1]. The goal of the Solar Roller proposed by this senior project is to educate people
+on the importance of alternative forms of energy such as solar power, and provide an immersive
+experience in which people can have hands-on involvement through DC devices including
+device charging and audio/video playback.
+Solar energy is a topic that has gained more and more recognition in the recent years, yet
+many people are unaware of the benefits that it can provide. According to an article written by
+SolarTown, many people around the world have reservations about adopting solar energy. The
+most common issue with the adoption of solar energy is the perceived price. According to a
+survey taken from citizens in the United States, Japan, China, and India, 45% of people do not
+believe using solar energy is profitable [2]. While the cost of solar infrastructure is high, it is
+important to consider the effects on the environment that adopting solar energy would bring.
+Economically, many do not consider the eventual costs of dealing with environmental damages
+and depleting sources of non-renewable energy. Of the people surveyed, 46% thought that solar
+energy adoption would not provide additional jobs; a quarter feared that it would decrease
+employment. It is clear from these opinions that many are hesitant to begin adopting solar
+energy, and that better education about solar energy would be beneficial worldwide.
+11
+
+The most important way that the proposed Solar Roller will help educate others about
+solar energy is just by being seen. Laura Wisland of Clean Energy stated that in 2013, there were
+only 400,000 homes in the United States with rooftop solar panels [3]. Many people do not see
+solar energy being used, so they are not aware of it. Vehicles like the Prius and Tesla promote
+alternative energy use by being seen by the public consistently. By creating a product that visibly
+advertises its use of solar energy, we are making more people aware of solar energy and its
+advantages. While states like California have increased how much power is supplied through
+solar energy, this power is generated away from the public eye. By increasing the amount of
+people who are aware of the costs and benefits of solar energy, we can increase the widespread
+usage of renewable energies. This would persuade more companies to invest in solar energy,
+hopefully adding more jobs in the energy field.
+While having an educational purpose, our senior project will also provide a practical
+charging station and media hub. According to the Pew Research Center, as of 2013, 91% of
+adults own a cell phone [4]. Figure 2-1 shows the trend from Nov 2004 to May 2013 of
+cellphone ownership. With cell phone technology exponentially increasing since this study was
+taken, and the overall price of a cell phone decreasing, it is safe to assume that the number of
+people with a cell phone has increased to over 91% in 2017. With the large majority of people
+with a cell phone, there is a need for keeping them charged while on the go. There is a need for
+finding accessible energy in areas that normally wouldn’t have an outlet. A portable charging
+station could help alleviate the dilemma of having an uncharged cell phone in an area without a
+wall outlet.
+
+12
+
+Figure 2-1. Cellphone Ownership 2004-2013
+
+College campuses, public parks, and music festivals are some of the main target markets
+that would greatly benefit from a portable charging station. With around 32 million people
+attending music festivals each year according to a study done by Digital Music News [5], the
+need for charging is huge. Music festivals can range from 4-10 hours a day in an outdoor area
+with little to no areas to charge an electronic device. Using the statistic that 91% of adults have
+cell phones and 32 million people attend music festivals a year, over 29 million cell phones will
+be at the festivals. Most of the people using the cell phones will be using high battery usage
+
+13
+
+applications such as taking video and pictures. People need to charge their phones at music
+festivals, and a portable solar charging station could perfectly fix this problem.
+Another area that would greatly benefit from a portable charging station is college
+campuses. Many college campuses have a lawn or outdoor area that students can relax, study,
+and eat at. At Cal Poly, Dexter Lawn is this place. Dexter Lawn is a popular area that is always
+filled with students that have their phones on them. Most of these students are enjoying the
+outdoor, so they are usually not to active on their phones. It is also safe to assume that not
+everyone has a fully charged phone. A portable station that the students can safely charge their
+phones while they enjoy the outdoors would fit in perfectly on Dexter Lawn.
+
+There are many commercially available portable USB charging hubs, yet the majority of
+these are not solar-powered and are meant to be connected through a USB port on your computer
+or laptop. Small solar USB chargers are currently available as well, however, these have a small
+solar panel always connected to it and only provide charging for one or two devices at the same
+time. These products can also be very expensive, and not convenient for the average person to
+charge their device. The current products that are available are also not meant to be educational,
+instead they are just another item that can be bought in a store. Figure 2-2 is an example of the
+commercial and personal solar-powered USB chargers that are available today in stores and
+online. They are very small, and do not provide external information such as the current that a
+connected device is being charged with, or any other educational aspect.
+
+14
+
+Figure 2-2. Commercially Available USB Solar Charger [6]
+
+The Solar Roller is a portable solar-powered USB charging station, that includes
+interactive peripherals such as an LCD display for current and voltage readings, lights, and
+speakers, that allow for a hands-on approach to learning about solar and renewable energy. This
+is what makes the Solar Roller unique, is that it is intended as an educational tool to demonstrate
+the use of solar energy, but also is fully functional as a USB charging station. Most of the
+aforementioned chargers are small plug-and-play systems, while the Solar Roller is truly a learnby-doing way to learn about solar energy. We would like to provide educational opportunities to
+people of all ages, and want to inform the public about where the world is headed in terms of
+energy, and what they can do to be a part of it.
+
+15
+
+Chapter 3. Design Requirements
+
+Figure 3-1 shows the basic level 0 block diagram of the proposed Solar Roller, with one
+input coming from light (into the solar panel) and the other coming from a user, such as an
+auxiliary audio input. The two outputs are a 5V USB output which is used for charging a device
+and the port displays/audio from the user’s input.
+
+Figure 3-1. Level 0 Block Diagram
+
+The following Table 3-1 list and details the functional decomposition for the solar roller
+design.
+Table 3-1. Level 0 Functional Decomposition
+
+I/O
+
+Type
+
+Description
+
+Light from the Sun
+
+Solar Panel
+
+Takes in energy from the sun
+in the form of light, converts
+
+16
+
+the light to a voltage/current
+
+User Input
+
+3.5mm auxiliary audio jack
+
+Allows the user to play music
+through the charging station
+while waiting for their device
+to charge
+
+USB 5V Output
+
+USB
+
+What the user connects their
+smartphone or device to
+charge
+
+Video/Sound
+
+Speaker/Display
+
+Outputs music of the user’s
+choice to listen to while
+charging their device
+
+Figure 3-2 shows the detailed breakdown of the Solar Roller. Light is taken in as an input
+into the solar panel, which converts it into a voltage/current. This is then sent into the battery for
+storage through the charge controller, to protect overcharging of the battery. The battery is then
+used to power the individual USB ports, as well as the microcontroller, strand lights, DC
+Television, and speakers. The outputs are 5V USB ports, which will be used to charge
+compatible devices, as well as LCD displays under each USB port displaying the current and
+voltage of the port. Another output is the light from the strand lighting, which is a basic, noninteractable output. Next is the output from the DC TV, which will be a premade informational
+
+17
+
+video about solar energy or renewable energy in general, or other educational materials. The last
+output are speakers, which play audio of the user’s choice as input through the 3.5mm auxiliary
+jack. Table 3-2 details the level 1 functional decomposition of the proposed solar roller.
+
+Figure 3-2. Level 1 Block Diagram
+
+Table 3-2: Level 1 Functional Decomposition
+
+I/O
+
+Type
+
+Description
+
+18
+
+Light
+
+Solar Panel
+
+Light is converted to
+current/voltage through the
+solar panel, is then stored in
+the battery which is limited
+by the charge controller
+
+USB 5V Out
+
+USB 2.0
+
+What the user connects their
+smartphone or device to
+charge
+
+LCD Display
+
+Display
+
+Small displays on each USB
+port that display the
+voltage/current of the port,
+controlled by a
+microcontroller
+
+Sound Out
+
+Speaker
+
+A speaker that plays whatever
+is input through the 3.5mm
+jack by a user
+
+Light Out
+
+Strand Lighting
+
+A basic output, 12V strand
+lighting powered by the
+battery
+
+19
+
+DC TV Display Out
+
+12V DC Television
+
+Will display a premade
+informational video, about
+solar or renewable energy
+
+20
+
+Technical Specifications
+The following explains in more details specific requirements on several components in
+the proposed solar roller.
+
+Load types and specifications:
+● 10 USB charging ports - Maximum of 5V, 1A each. Necessary to provide charge to up to 10
+connected devices.
+● MP3 Player, Speakers, Television, String Lights - Be able to run off a maximum of 25W.
+Provides entertainment to users of the Solar Roller.
+● Charge controller - Able to deliver enough current to each branch of the circuit while also
+providing overcharge protection for the battery.
+● Arduino w/ LCD - Displays current charge level of the battery and the power going to each
+branch of the circuit. Powered with MP3 player, speakers, and television.
+● Mobility - Light and balanced enough for one or two people to easily maneuver.
+
+The Solar Roller will utilize a car that is approximately 45 inches long, 23 inches wide,
+and 23 inches tall. The Solar Panel is situated 25 inches above the top of the cart. Figure 3-3
+shows a sketch of the side view of the cart. On top of the cart, there is 10 USB charging ports
+that are evenly spaced out. The first USB charger is spaced 3 inches from the side, and there is a
+USB charger every 4 inches thereafter. There is a speaker situated on top of the cart along with
+the TV and LCD display for the micro controller. The last addition that will be added to the cart
+is the light string that is connected right below the solar panel.
+
+21
+
+Figure 3-3. Side View of the Cart
+
+The basic design idea behind this project starts with a Solar Panel that will charge a
+battery through a charge controller. The charge controller will help regulate and manage the
+power produced by the solar panel to be either going to the loads or charge the battery. The
+power will then be distributed to three separate circuits feeding 3 separate sets of loads, each
+with their own circuit breaker that will protect each load. Two of the loads will contain 5 USB
+chargers in parallel. The third load has one USB charger, the TV, and the microcontroller. Table
+3-3 summarized the component specifications of the proposed solar roller system.
+
+22
+
+Table 3-3. Solar Roller Component Specifications
+
+Specification
+
+Implementation
+
+Testing
+
+USB Charging ports that
+
+Two loads of five charging
+
+Each DC-DC buck converter
+
+supply 5V and up to 1A.
+
+ports each (25 W maximum);
+
+tested individually to test for
+
+each load protected by circuit
+
+faults. Five working
+
+breakers.
+
+converters placed in parallel
+and tested with multiple
+devices charging. Final
+testing done with all loads in
+use (MP3 player, speakers,
+TV, Arduino, and 10 devices
+charging).
+
+MP3 player, speakers, TV,
+
+All devices on one load with
+
+MP3 is charged using another
+
+string lights
+
+Arduino. Speakers are
+
+tested buck converter.
+
+powered via 3.5mm jack
+
+Arduino is powered using a
+
+connected to MP3 player.
+
+twelfth buck converter. TV
+powered directly from 12V
+load. Power monitored to
+ensure 25W max load.
+
+Charge Controller
+
+Prevents solar panel from
+
+Battery is able to be charged
+
+23
+
+overcharging the battery.
+
+and deliver enough power
+from the battery to every load
+
+Arduino w/ LCD
+
+Monitors and displays battery
+
+Battery content can be
+
+power and current delivered
+
+verified by checking the
+
+to loads
+
+voltage of the battery. Current
+to each load can be measured
+manually and verified with
+Arduino display.
+
+Mobility
+
+Needs to be easily moved by
+
+Movement tested over grass,
+
+no more than two people over
+
+dirt, cement, gravel, carpet,
+
+multiple surfaces.
+
+tile, and any other available
+surfaces.
+
+24
+
+Chapter 4. Design
+
+Solution Statement
+The Solar Roller is intended to alleviate the need for small-scale energy in areas isolated
+from main power lines. Areas such as parks, school campuses, and other outdoor areas where
+people may require power for their various mobile devices are often devoid of energy options
+due to the difficulty and cost of supplying power to large outdoor areas.
+The Solar Roller provides a mobile power hub for users who need a quick charge for their
+phones. Currently, the existing solution for users who need mobile power on the go are to carry
+USB battery packs or spare batteries. These options can be expensive for the individual, and
+sometimes cumbersome to carry with you all the time. Instead of relying on everyone to own and
+carry their own portable energy storage, Solar Rollers can service many people concurrently.
+Cell phones are crucial to everyday life. Unfortunately, current cell phone batteries do not
+last as long as we would like. Many users have to charge their phones 1-2 times every day. When
+a dead phone means you cannot contact your friends or call an Uber to pick you up, a spot to
+quickly charge your phone is a welcome luxury.
+
+Protection Schematic
+The protection that we used with circuit breakers is shown in Figure 4-1. To arrive at our
+desired breaker size, knowing that DC breakers are approximately 80% efficient, the maximum
+load current was calculated and the breakers were sized at 1.25x that of maximum expected
+25
+
+current. We chose to have a 10A breaker before each of the three loads rather than one main
+breaker protecting all of the loads in order to control which loads will and won't work in case of
+a trip. The drawback of one main breaker is that if a trip were to occur, all of the loads would
+lose power and nobody would be able to charge from the ports. With a breaker on each of the
+loads, this allows for some of the loads to function properly if there is a trip on a different load.
+There is a 6A breaker between the solar panel and the charge controller, as the maximum rated
+current output of the panel is around 4 amps, and this is just another level of added protection to
+the system. The 30A breaker after the battery is there to allow the three loads to get their current
+requirements satisfied, while protecting against excess current leaving the battery and damaging
+the loads.
+
+Figure 4-1. Protection Schematic
+
+Breakers were chosen for the protection of the system rather than fuses because fuses
+need to be physically replaced when there is too much current flowing through them. With
+breakers, a simple flip of the switch can restore them to their original functionality.
+26
+
+We sized our breakers based on the current going to each load. For all of the calculations
+we used the equation for real power in DC: Power = Current * Voltage. For Load 1 and Load 2,
+we connected 5 Buck converters to USB in parallel. We did all of the sizing of the breakers in
+reference to the maximum possible ratings that the system could take. The maximum output
+power of the Buck converters is rated at 15W. The input voltage of the Buck converters was
+12V, so assuming the Buck converter was working at a theoretical 100% efficiency, the
+maximum input current would be:
+
+𝐼𝑖𝑛𝑚𝑎𝑥𝑒𝑎𝑐ℎ =
+
+15𝑊
+= 1.25𝐴
+12𝑉
+
+Since there are 5 converters in parallel, the maximum current of the system would be
+𝐼𝑖𝑛𝑚𝑎𝑥𝑡𝑜𝑡𝑎𝑙 = 1.25𝐴×5 = 6.25𝐴
+DC Breakers are known to be around 80% efficient, so we multiplied the maximum current by
+1.25 to get a total max current of the load to be 7.81A. We chose the 10A breaker because the 8A
+breaker would be too close, and the 10A breaker was the next available size.
+For Load 3, we connected 2 USB chargers, lights, and a TV in parallel. The two USB
+chargers will draw a maximum of 2.5A. The lights were measured to be drawing at 0.5A. The
+maximum current of the TV is rated at 3A. In total, the maximum current of Load 3 is therefore:
+𝐼𝐿𝑜𝑎𝑑3 = 2.5𝐴 + 0.5𝐴 + 3𝐴 = 6𝐴
+This yields the breaker sizing of:
+𝐼𝑏𝑟𝑒𝑎𝑘𝑒𝑟3 = 6𝐴×1.25 = 7.5𝐴
+
+27
+
+The display for the Solar Roller is designed using an Arduino Uno and an LCD screen.
+The screen displays the percentage of the remaining battery power. The deep-cycle battery
+voltage is divided between a 16kΩ and a 10kΩ resistor. From Figure 4-2, the range of voltages
+out battery will have is 11.80V to 12.85V. This means that the voltage across the 10kΩ resistor is
+4.54V and 4.94V. The voltage across the 10kΩ resistor is input into the Arduino through the
+analog port. This value is converted by the microcontroller into a 10-bit value representing its
+voltage up to a maximum of 5V. For example, at 4.54V the value is:
+
+1023 ∙
+
+4.54
+= 928
+5.00
+
+On this scale, 920 is set as 0% battery while 1020 is set as 100%. This percentage is then written
+to the LCD screen.
+
+Figure 4-2. Battery Percentage
+
+Adding up all of the load currents maxes together, the total maximum current of the
+entire system from the charge controller is 23.12A. The battery chosen for the Solar Roller is
+
+28
+
+rated at 75Ah. With the battery on full charge and every device of the Solar Roller being in use,
+the battery should last
+75𝐴ℎ
+= 3.24ℎ
+23.12𝐴
+This time is assuming that the solar panel is not charging the battery while in use.
+The size of the breaker on the solar panel is 6A. This is calculated based on the solar
+panel rating of 4.5A. Thus, multiplying it by 1.25 would yield 5.625A. A 6A breaker was the
+closest commercially available breaker size.
+In addition of the breakers, the sizing of the wires was important. The current flowing
+through the system does not exceed 35A and no wire is longer than 7 feet, so a 10 gauge wire
+was chosen for the system. Even though the loads individually aren’t meant to exceed 10A, we
+decided for efficiency reasons to use the 10 AWG wire in bulk and use it throughout the system.
+Figure 4-3 shows how the length and current vary with wire gauge size.
+
+Figure 4-3. Wire Gauge Chart
+
+29
+
+Chapter 5. Hardware Test and Results
+
+The bulk of the hardware design for the Solar Roller consisted of the overall system
+components, as well as the protection of the system. This included breakers and the charge
+controller, as well as the wiring of the system. Extensive labor was also required in the assembly
+of the Solar Roller. With all of the main components planned out to determine where they should
+go on the cart, we had to strip wires and crimp them to fit the solar panel, battery, and charge
+controller together, as well as the circuit breakers and various loads..
+We decided to solder 24 gauge wires individually to each USB buck converter, and then
+connect them in parallel with larger 10 gauge wires that were able to carry the current of the
+whole system. Once each load of 5 USB chargers was soldered together, the positive lead could
+be crimped and attached to the circuit breaker. Before attaching to the circuit breaker, however,
+we ran a test on each port and the entire 5 USB system to test the current carrying capabilities of
+the load. The test was done by connecting a multimeter in series with each load to measure the
+current, a very simple connection. The results are shown in Table 5-1. The negative lead was left
+untouched to be tied together with all the negative leads of each load, so they would connect to
+the charge controller through one main negative wire. The testing of each USB port was done
+with 12V from a power supply, and connecting a standard micro-USB cable and checking the
+charging ability on a phone.
+
+30
+
+Table 5-1: Current Measurements for Each Load
+Average Current (Amps)
+
+Peak Current (Amps)
+
+Load 1
+
+8.18
+
+9.12
+
+Load 2
+
+8.37
+
+9.23
+
+Load 3
+
+7.17
+
+8.56
+
+For the TV and LED lights, tests were ran with the multimeter to determine the current
+draw and power draw from these two loads. A multimeter was connected in series with each
+load, and the current was entered into Table 5-1.
+
+Equipment Required for Load Testing:
+● FLUKE 179 True RMS Multimeter
+● Banana-to-banana lead
+● Banana-to-grabber lead
+
+31
+
+Figure 5-1: Current Drawn by TV Test Setup
+
+Figure 5-2: LED Light Strip Current Draw Test Setup
+
+32
+
+Table 5-2: Load Test Results
+Load
+
+Current (A)
+
+Power (W)
+
+LED Light Strip
+
+0.046
+
+0.55
+
+DC TV
+
+0.954
+
+11.45
+
+The third load is the one that varied from the other two. We used the same idea of having
+a 24 gauge wire connected with the 10 gauge wires in parallel for the 2 USB ports on this load.
+We then soldered the positive and negative ends of the LED light load in parallel. Lastly, we
+soldered wire to the 12V adapter for the DC TV and put that in parallel with the rest of the load.
+The positive wire of the entire load was attached to the last 10 Amp breaker and the negative was
+connected with the other two negatives of Load 1 and 2. The third load also includes the
+microcontroller that displays the battery percentage. The battery was connected to a voltage
+divider which reduced the input voltage to a value between 2 and 3 V. The input to the
+microcontroller is also protected by a zener diode that maintains a maximum of 5V. This voltage
+then corresponds to a percent charge of the battery. This was tested by inputting possible battery
+voltages and examining how accurately the microcontroller reported that voltage. The test bench
+setup is seen in Figure 5-3.
+
+33
+
+Figure 5-3: Microcontroller Test Setup
+
+The battery is simulated by a DC power supply supplying between 11.6 and 13 V. The
+battery percentage is then displayed on the screen and verified by hand. The divided voltage is
+also measured and used to approximate the analog value that the arduino should register. The
+expected and measured values in Table 5-3.
+
+34
+
+Table 5-3: Microcontroller Battery Level Test
+
+Battery
+Voltage (V)
+
+Analog In (V)
+
+Expected
+Analog Value
+
+Expected
+Battery
+Percentage
+
+Measured
+Analog Value
+
+Measured
+Battery
+Percentage
+
+11.6
+
+2.7
+
+837
+
+EMPTY
+
+818
+
+EMPTY
+
+11.7
+
+2.72
+
+844
+
+0
+
+825
+
+0
+
+12
+
+2.79
+
+866
+
+27
+
+846
+
+27
+
+12.2
+
+2.84
+
+880
+
+45
+
+859
+
+47
+
+12.5
+
+2.91
+
+902
+
+73
+
+879
+
+74
+
+12.8
+
+2.98
+
+924
+
+100
+
+898
+
+100
+
+13
+
+3.02
+
+938
+
+FULL
+
+911
+
+FULL
+
+The Expected Analog Value is calculated by dividing the analog in voltage by the
+reference voltage of the arduino (3.3 V) and multiplying by 1024 (the Arduino is accurate to 10
+bits). The measured value differs slightly, but because the amount it differs by is consistent
+regardless of possible input values, it does not affect the accuracy of measuring the battery
+percentage. The battery percentage is calculated by finding the analog value measured when
+inputting 11.7 volts (a dead battery), the analog value measured when inputting 12.8 volts (a full
+battery), and the difference between them. The percentage of the battery is then the ratio between
+the difference of the input analog value and the minimum analog value (825) and the range of
+analog values (73).
+
+35
+
+ex. if the battery voltage is 12.2, the analog output is 859. The difference between this
+value and the minimum value of 825 is 34. 34 divided by 73 (the difference between
+maximum and minimum voltage) is 0.47. This is verified by observing the
+microcontroller screen read 47 % battery.
+
+In addition to displaying the battery life, the microcontroller also displays a random fact
+about solar energy on the screen to educate users about solar and renewable energy impact on the
+environment. These facts and the Arduino code can be seen in Appendix A.
+
+To test the charging capabilities of the solar panel and the charge controller, the cart was
+rolled into the sun as the voltage of the battery was measured. In direct sunlight with no loads
+active, the battery voltage slowly increased, indicating that the battery was being charged.
+
+To test the operation of the solar panel, the cart was moved outdoors, on a sunny day
+where the panel had ample sunlight to generate voltage. The open circuit voltage was measured
+from the leads of the panel, and the results are in Table 5-4. The short circuit current was also
+measured with the multimeter, with the results shown in Table 5-4. These tests were made at
+approximately 1:30 PM in June, when the sun was very high in the sky. The nominal OC voltage
+and SC current were obtained from the label on the panel.
+
+Equipment Required for Solar Panel Testing:
+36
+
+● FLUKE 179 True RMS Multimeter
+● Banana-to-grabber leads (x2)
+
+Figure 5-4: Open Circuit Voltage Test Setup
+
+37
+
+Figure 5-5: Short Circuit Current Test Setup
+
+Table 5-4: Solar Panel Test Results
+
+Open-Circuit
+(Nominal)
+
+Open-Circuit
+(Tested)
+
+Short-Circuit
+(Nominal)
+
+Short-Circuit
+(Tested)
+
+Voltage (V)
+
+43.5
+
+38.6
+
+N/A
+
+N/A
+
+Current (A)
+
+N/A
+
+N/A
+
+4.75
+
+4.727
+
+As seen in Chapter 4, the loads were made sure to be connected into one positive wire
+and one negative wire as to fit into the charge controller. Once the connections were made and
+38
+
+all of the ports were given a final check, we cut the holes for the USB chargers to stick up
+through and glued them in. Lastly, the TV was placed on top of the cart with the speakers and
+touch screen, and the side panels of the cart were fastened on.
+
+Figure 5-6: Buck Converter Testing Set Up
+
+Figure 5-7: Output voltage Peak to Peak Ripple
+
+39
+
+For testing the buck converter, we used a DC Power Supply (Rigol DP832), a Digital
+Wattmeter (Yokogawa WT 330), and an Electronic Load (BK Precision). Our setup is shown in
+Figure 5-6. We tested 3 input voltages to have a high voltage, low voltage and a nominal
+voltage. The voltages used were 9V, 12V, and 15V. At each voltage, we tested the 4 separate
+load scenarios to see how the converter’s efficiency changed under different loads. Table 5-5
+shows our results. From the table, it is clear that highest efficiency was at the nominal 12V that
+the buck converter is rated for. It is also clear that at low load, the efficiency of the converter was
+the highest.
+
+Table 5-5: Buck Converter Testing Results
+12V
+
+9V
+
+Load Current
+(A)
+
+Output Voltage
+(V)
+
+Output Power
+(W)
+
+Input Power
+(W)
+
+Efficiency
+(%)
+
+3
+
+4.531
+
+13.593
+
+18.5
+
+73.48%
+
+2
+
+4.705
+
+9.41
+
+11.6
+
+81.12%
+
+1
+
+4.883
+
+4.883
+
+5.3
+
+92.13%
+
+0.5
+
+4.903
+
+2.4515
+
+2.56
+
+95.76%
+
+Load Current
+(A)
+
+Output Voltage
+(V)
+
+Output Power
+(W)
+
+Input Power
+(W)
+
+Efficiency
+(%)
+
+3
+
+4.532
+
+13.596
+
+20.4
+
+66.65%
+
+2
+
+4.705
+
+9.41
+
+12.4
+
+75.89%
+
+1
+
+4.887
+
+4.887
+
+5.8
+
+84.26%
+
+40
+
+15V
+
+0.5
+
+4.977
+
+2.4885
+
+2.7
+
+92.17%
+
+Load Current
+(A)
+
+Output Voltage
+(V)
+
+Output Power
+(W)
+
+Input Power
+(W)
+
+Efficiency
+(%)
+
+3
+
+4.545
+
+13.635
+
+18.3
+
+74.51%
+
+2
+
+4.702
+
+9.404
+
+11.6
+
+81.07%
+
+1
+
+4.881
+
+4.881
+
+5.4
+
+90.39%
+
+0.5
+
+4.973
+
+2.4865
+
+2.6
+
+95.63%
+
+Along with testing efficiency, we tested Load and Line Regulation and Output Peak to
+Peak Voltage Ripple. Load Regulation was found by taken with the following equations. The
+Load Regulation results were slightly larger, but the Line Regulation was minimal.
+
+Table 5-6: Load and Line Regulation
+Load Regulation
+
+Line Regulation
+
+8.21%
+
+0.287%
+
+41
+
+The Output Peak to Peak Ripple results is shown in Table 5-7 and a screenshot of the
+oscilloscope is shown in Figure 5-7. The buck converter has a very low ripple which is ideal.
+
+Table 5-7: Output Peak to Peak Ripple for Buck Converter
+Output Pk-Pk Ripple
+(V)
+
+Output Pk-Pk Ripple (%)
+
+0.00342
+
+0.075%
+
+42
+
+Chapter 6. Conclusion
+
+The Solar Roller was effectively able to charge an array of devices through the USB
+ports, as well as provide enough power to supply a TV as well as a lighting system. At full load
+with a fully charged battery, the Solar Roller system can run without a direct source of light for
+approximately 3-4 hours. This successfully satisfied our original project requirements, and
+exceeded expectations when it came to charging and current handling capabilities. Based on
+feedback and comments regarding the Solar Roller, it was concluded that this solar powered
+charging station is something that the general public would enjoy to use at events or festivals.
+If we had more time and money to improve this project, it would be nicer to clean up the
+connections to the USB chargers. Due to money constraints, we used extra 10 gauge wires in
+connection even though a smaller 16 gauge wire would have sufficed. This would have greatly
+cut down on the clutter. It would have also been nice to spend more time securing all the wires
+and equipment in the cart. While transporting the Solar Roller currently, wires can easily come
+loose and come apart.
+
+43
+
+References
+
+Chapter 1
+[1]. US EIA, "Levelized Cost and Levelized Avoided Cost of New Generation Resources in the
+Annual Energy Outlook 2016," EIA. [Online]. Available:
+http://www.eia.gov/outlooks/aeo/pdf/electricity_generation.pdf
+[2]. S. E. I. Association, "Solar industry facts and figures," SEIA. [Online]. Available:
+http://www.seia.org/research-resources/solar-industry-data. Accessed: Feb. 6, 2017.
+[3]. G. Smith, Fortune.com, 2016. [Online]. Available: http://fortune.com/2016/10/25/solarpower-capacity-coal-electricity-generation/. Accessed: Feb. 6, 2017.
+[4]. M. Casey, fortune.com, 2014. [Online]. Available: http://fortune.com/2014/09/29/solarpower-could-be-worlds-main-energy-source-by-2050/. Accessed: Feb. 6, 2017.
+
+Chapter 2
+[1].
+
+Karakaya, "Science for Environment Policy,". [Online]. Available:
+http://ec.europa.eu/environment/integration/research/newsalert/pdf/what_are_the_barriers_t
+o_solar_energy_adoption_442na2_en.pdf. Accessed: Feb. 24, 2017.
+
+[2].
+
+SolarTown, "Consumer Awareness is the Greatest Challenge to Solar Energy," SolarTown.
+2012. [Online]. Available: http://www.solartown.com/community/news/view/consumerawareness-is-the-greatest-challenge-to-solar-energy/
+
+[3].
+
+L. Wisland, "How Many Homes Have Rooftop Solar? The Number is Growing…,"Union
+of Concerned Scientists. 2014. [Online]. Available: http://blog.ucsusa.org/laurawisland/how-many-homes-have-rooftop-solar-644
+44
+
+[4].
+
+L. Rainie, "Cell phone ownership hits 91% of adults," Pew Research Center, 2013.
+[Online]. Available: http://www.pewresearch.org/fact-tank/2013/06/06/cell-phoneownership-hits-91-of-adults/. Accessed: Feb. 24, 2017.
+
+[5].
+
+N. Ulloa, "32 Million people in the U.S. Attend music festivals," in Breaking News, Digital
+Music News, 2015. [Online]. Available: http://www.digitalmusicnews.com/2015/04/14/32million-people-in-the-u-s-attend-music-festivals/. Accessed: Feb. 24, 2017.
+
+[6].
+
+Levin Solar Charger 6000mAh. 2015. Available: http://cdn.colourmylearning.com/wpcontent/uploads/2015/06/LevinSolarCharger6000mAhBatteryUSBc.jpg
+
+45
+
+Appendix A: Senior Project Analysis
+Project Title: Solar Roller
+Students: Tanner Mjelde, Kaylan, Naicker, Aaron Bartfeld
+Advisor: Taufik
+1. Summary of Functional Requirements
+a. Overall Capabilities
+i.
+The Solar Panel provides power to the USB charging ports, TV, lights,
+and microcontroller display
+ii. LCD screens should show how voltage level of battery
+2. Primary Constraints
+a. Challenges associated with the project
+i.
+Designing the power distribution circuit
+ii. Implementing the microcontroller with the LCD screen
+iii. Keeping the cost reasonable
+iv.
+Designing protection circuitry for safe operation
+3. Economic
+a. What will impact the result?
+i.
+Human Capital: The development of this device will create jobs in
+engineering, manufacturing, sales, and marketing
+ii. Financial Capital: This product is designed for an initial 50% profit on
+each unit.
+iii. Natural Capital: Our design is using completely renewable energy that will
+only benefit the environment. If the solar roller were to break completely
+and become useless, most of the parts are recyclable except for some of
+the circuitry.
+iv.
+Cost: The cost is very flexible because of how many different companies
+supply the same parts at different prices. Our goal is to get quality at the
+lowest price. It is very important to us that our product is quality because
+of the large scale of the design and the idea of self sustainability.
+
+46
+
+Table 7-1: Estimated Cost Overview
+
+Part
+
+Quantity
+
+Cost
+
+Microcontroller
+
+1
+
+~$30
+
+USB Chargers
+
+10
+
+~$50
+
+Cart
+
+1
+
+~$150
+
+Solar Panel
+
+1
+
+~$200
+
+Power Circuit
+
+1
+
+~$100
+
+LCD Screen
+
+1
+
+~$30
+
+Battery
+
+1
+
+~$100
+
+Speakers
+
+1
+
+~$50
+
+Table 7-2: Actual Cost Overview
+
+Part
+
+Quantity
+
+Cost
+
+Microcontroller
+
+1
+
+N/A
+
+USB Chargers
+
+10
+
+$85
+
+Cart
+
+1
+
+N/A
+
+Solar Panel
+
+1
+
+N/A
+
+47
+
+LCD Screen
+
+1
+
+$25
+
+Circuit Breakers
+
+5
+
+$86.65
+
+Battery
+
+1
+
+$105
+
+Speakers
+
+1
+
+$15
+
+4. If manufactured on a commercial basis
+a. Expect 50 units being sold in the first year after final prototypes were made.
+b. Total cost would be around $1400 to the event planner or school
+c. Actual Manufacturing cost would be around $970. Possibly less if we produce at a
+large quantity and can buy parts in bulk
+d. The prices of maintaining can range from $0-$500 depending on how good the
+company/school takes care of the product. It should be self-sustainable due to the
+solar power, but people always seem to break things.
+5. Environmental
+a. The main environmental impact would be positive. Manufacturing the parts could
+be detrimental to the environment because of the unknown facility emission laws
+in countries outside the United States. Once the solar roller is built and in use,
+there are no emissions because it essentially just a solar panel and a battery.
+6. Manufacturability
+a. The Solar Roller is a large design that requires multiple parts. Individual
+components would have to make separately and then assembled at a later time.
+The solar panel to usb chargers would be done. Then the power to microcontroller
+to LCD screens would be done. Once both of those key electrical engineering
+components are made, the assembly step would take place. Everything would be
+correctly placed in the cart.
+7. Sustainability
+a. The product life of our product should depend on the life of weakest component
+because it is self-sustainable.
+b. It is dependent on sunlight to power the cart, however once the battery is charged
+the cart can be operated without the need for sun. It has capabilities to run for 3-4
+hours at full load from the fully charged battery. The time required to charge
+depends on irradiance from the sun, this varies for the area one lives and the time
+of the year it is.
+8. Ethical Consideration
+a. The design is meant to be used by all and to better the environment. There are no
+ethical drawbacks that would harm society besides the fact that people might
+48
+
+spend more time on their phones than they previously did.
+b. Not all of the components will be recyclable.
+c. The components that we use are most likely going to be manufactured overseas
+where labor laws are not as strict as they are in America. We will strive to buy
+from companies that treat their workers well and are made in the United States.
+9. Health and Safety
+a. The Solar Roller won’t have an impact on the heath of user directly, but because
+of its renewable and clean energy reliance, it will contribute to a cleaner
+environment. This will in turn indirectly improve the quality of life where the
+Solar Roller is used.
+b. There is no gas or generator involved in the design so this will make the Solar
+Roller safer from possible catastrophes from those devices
+10. Social and Political
+a. The usage of cellphones around the Solar Roller will increase due to the
+accessibility of the charging station.
+11. Development
+a. Insight on protection circuitry such as breakers was gained from research
+throughout this project
+
+49
+
+Appendix B: Microcontroller Code
+// IMPORTANT: Adafruit_TFTLCD LIBRARY MUST BE SPECIFICALLY
+// CONFIGURED FOR EITHER THE TFT SHIELD OR THE BREAKOUT BOARD.
+// SEE RELEVANT COMMENTS IN Adafruit_TFTLCD.h FOR SETUP.
+//Technical support:goodtft@163.com
+#include <Adafruit_GFX.h>
+// Core graphics library
+#include <Adafruit_TFTLCD.h> // Hardware-specific library
+// The control pins for the LCD can be assigned to any digital or
+// analog pins...but we'll use the analog pins as this allows us to
+// double up the pins with the touch screen (see the TFT paint
+example).
+#define LCD_CS A3 // Chip Select goes to Analog 3
+#define LCD_CD A2 // Command/Data goes to Analog 2
+#define LCD_WR A1 // LCD Write goes to Analog 1
+#define LCD_RD A0 // LCD Read goes to Analog 0
+#define LCD_RESET A4 // Can alternately just connect to Arduino's
+reset pin
+// When using the BREAKOUT BOARD only, use these 8 data lines to the
+LCD:
+// For the Arduino Uno, Duemilanove, Diecimila, etc.:
+//
+D0 connects to digital pin 8 (Notice these are
+//
+D1 connects to digital pin 9
+NOT in order!)
+//
+D2 connects to digital pin 2
+//
+D3 connects to digital pin 3
+//
+D4 connects to digital pin 4
+//
+D5 connects to digital pin 5
+//
+D6 connects to digital pin 6
+//
+D7 connects to digital pin 7
+// For the Arduino Mega, use digital pins 22 through 29
+// (on the 2-row header at the end of the board).
+// Assign human-readable names to some common 16-bit color values:
+#define
+BLACK
+0x0000
+#define
+BLUE
+0x001F
+#define
+RED
+0xF800
+#define
+GREEN
+0x07E0
+#define CYAN
+0x07FF
+#define MAGENTA 0xF81F
+#define YELLOW 0xFFE0
+#define WHITE
+0xFFFF
+Adafruit_TFTLCD tft(LCD_CS, LCD_CD, LCD_WR, LCD_RD, LCD_RESET);
+// If using the shield, all control and data lines are fixed, and
+// a simpler declaration can optionally be used:
+// Adafruit_TFTLCD tft;
+50
+
+float volt = 0;
+float convert = 0;
+float per = 0;
+void setup(void) {
+Serial.begin(9600);
+Serial.println(F("TFT LCD test"));
+#ifdef USE_ADAFRUIT_SHIELD_PINOUT
+Serial.println(F("Using Adafruit 2.4\" TFT Arduino Shield Pinout"));
+#else
+Serial.println(F("Using Adafruit 2.4\" TFT Breakout Board Pinout"));
+#endif
+Serial.print("TFT size is "); Serial.print(tft.width());
+Serial.print("x"); Serial.println(tft.height());
+tft.reset();
+uint16_t identifier = tft.readID();
+if(identifier == 0x9325) {
+Serial.println(F("Found ILI9325 LCD driver"));
+} else if(identifier == 0x9328) {
+Serial.println(F("Found ILI9328 LCD driver"));
+} else if(identifier == 0x4535) {
+Serial.println(F("Found LGDP4535 LCD driver"));
+}else if(identifier == 0x7575) {
+Serial.println(F("Found HX8347G LCD driver"));
+} else if(identifier == 0x9341) {
+Serial.println(F("Found ILI9341 LCD driver"));
+} else if(identifier == 0x8357) {
+Serial.println(F("Found HX8357D LCD driver"));
+} else if(identifier==0x0101)
+{
+identifier=0x9341;
+Serial.println(F("Found 0x9341 LCD driver"));
+}
+else if(identifier==0x1111)
+{
+identifier=0x9328;
+Serial.println(F("Found 0x9328 LCD driver"));
+}
+else {
+Serial.print(F("Unknown LCD driver chip: "));
+Serial.println(identifier, HEX);
+Serial.println(F("If using the Adafruit 2.8\" TFT Arduino shield,
+the line:"));
+Serial.println(F(" #define USE_ADAFRUIT_SHIELD_PINOUT"));
+Serial.println(F("should appear in the library header
+(Adafruit_TFT.h)."));
+Serial.println(F("If using the breakout board, it should NOT be
+51
+
+#defined!"));
+Serial.println(F("Also if using the breakout, double-check that all
+wiring"));
+Serial.println(F("matches the tutorial."));
+identifier=0x9328;
+}
+tft.begin(identifier);
+}
+void loop(void) {
+tft.fillScreen(BLACK);
+unsigned long start = micros();
+tft.setCursor(0, 0);
+analogReference(EXTERNAL);
+volt = analogRead(5);
+per = 100*(volt - 825)/73;
+convert = volt*3.889/1024 *11/2.5;
+tft.println();
+tft.setTextColor(GREEN);
+tft.setTextSize(2);
+tft.println("Battery Level:");
+tft.setTextColor(RED);
+tft.setTextSize(3);
+if (per > 100)
+{
+tft.println("FULL");
+}
+else if (per < 0)
+{
+tft.println("EMPTY");
+}
+else
+{
+tft.println(per);
+}
+tft.println();
+tft.setTextColor(WHITE);
+tft.setTextSize(2);
+if (per < 20)
+{
+tft.println("California leads all");
+tft.println("states in solar");
+tft.println("energyy capacity");
+tft.println("with 18296 MW.");
+tft.println("The next highest");
+52
+
+tft.println("capacity is North");
+tft.println("Carolina (3016 MW) [SEIA].");
+}
+else if (per < 40 && per > 20)
+{
+tft.println("The first silicon");
+tft.println("solar cell was built");
+tft.println("by Bell Laboratories");
+tft.println("in 1954.");
+}
+else if (per < 60 && per > 40)
+{
+tft.println("Every kWh of solar");
+tft.println("energy avoids ");
+tft.println("emitting 1.1 pounds");
+tft.println("of CO2. [EPA]");
+}
+else if (per < 80 && per > 60)
+{
+tft.println("US solar energy");
+tft.println("consumption in 2016");
+tft.println("had the same carbon");
+tft.println("offset as 1.5");
+tft.println("billion trees.");
+}
+else if (per > 80)
+{
+tft.println("In 2017, 1 kW of");
+tft.println("solar energy costs");
+tft.println("$0.12. In 1977, 1");
+tft.println("kW of solar energy");
+tft.println("cost $77,000.
+[PVinsights]");
+}
+delay(30000);
+}
+
+53
+
+

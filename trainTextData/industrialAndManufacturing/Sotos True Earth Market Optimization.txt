@@ -1,0 +1,1087 @@
+Soto’s True Earth Market Optimization
+A Senior Project Submitted
+In Partial Fulfillment
+of the Requirements for the Degree of
+Bachelor of Science in Industrial Engineering
+Presented to:
+The Faculty of California Polytechnic State University,
+San Luis Obispo
+by
+Hiro Fujita
+Chris Luong
+Sean MacWilliams
+IME 481: Senior Project Design I
+Project Advisor: Xuan Wang
+Project Client: Andre Ponce
+
+i|Page
+
+Graded by: _____________________
+
+Date of Submission: ___________________
+
+Checked by: ____________________
+
+Approved by: ________________________
+
+Executive Summary
+Soto’s True Earth Market is a new organic market startup which is located in a historical facility in the small
+town of Cambria. The new owner of Soto’s Andre Ponce has a vision to create a community revolved
+around local organic foods and sustainability. Since Soto’s is still in the initial startup phase there is a large
+amount of room for optimization and redesign in order to create a solid customer foundation. Andre
+presented several opportunities for improvement to the team. With a time constraint of solely two quarters
+the project team decided to provide the following:
+●
+
+Old and new deli/smoothie department layouts
+
+●
+
+Old and new facility layouts
+
+●
+
+Economic analysis of equipment purchases
+
+The overall objective of this project was to provide a concrete layout and operating procedure for the overall
+facility of Soto’s market along with an evaluation of potential equipment purchases for their food service
+station. The constraints of the project was anything excluded from the deliverables and any further redesign
+outside of the main shopping area of Soto’s market.
+In the following report the overall background of the project is described in more detail along with the
+project scope for optimizing Soto’s. Also, an in depth literature review is included to provide a greater insight
+on how to approach and achieve the overall goal of the project. Through all the research that the project
+team obtained a proposed methodology for each deliverable was created to streamline the next steps of the
+project. Included along with the proposed methodology is also proposed schedule to be followed in order to
+efficiently complete the project.
+
+ii | P a g e
+
+Table of Contents
+
+Contents
+Table of Figures .......................................................................................................................... iv
+Introduction................................................................................................................................ 1
+Background ................................................................................................................................ 3
+Literature Review ........................................................................................................................ 4
+Grocery Market Design ............................................................................................................ 4
+Food Workstation Redesign ..................................................................................................... 5
+Time Studies ........................................................................................................................... 6
+Sustainability and the Environment .......................................................................................... 8
+5S Methods ............................................................................................................................. 9
+Ergonomics............................................................................................................................11
+Economic Analysis .................................................................................................................12
+Design .......................................................................................................................................13
+Soto’s True Earth Market Overview .........................................................................................13
+Project Charter .......................................................................................................................13
+Benchmarking ........................................................................................................................14
+Current State Facility Layout ...................................................................................................16
+Simulation Model ...................................................................................................................16
+Equipment Purchasing ...........................................................................................................18
+Suggested Future State Facility Layout ....................................................................................19
+Methods ....................................................................................................................................21
+Facility Redesign ....................................................................................................................21
+Equipment Purchasing ...........................................................................................................21
+Results and Discussion...............................................................................................................24
+Facility Redesign ....................................................................................................................24
+Equipment Purchasing ...........................................................................................................25
+Workstation Redesign .............................................................................................................28
+Soto’s Deli Workstation Redesign ........................................................................................28
+Soto’s Smoothie Workstation Redesign ................................................................................30
+Conclusion.................................................................................................................................33
+References .................................................................................................................................36
+Appendix ...................................................................................................................................39
+
+iii | P a g e
+
+Table of Illustrations
+List of Figures
+Figure 1: Time Studies From Gus's ............................................................................................................................... 15
+Figure 2: Original State of Soto's.................................................................................................................................... 16
+Figure 3: Simulation Model of Deli................................................................................................................................ 17
+Figure 4: Criteria for AHP Analysis ............................................................................................................................... 18
+
+List of Appendices
+Appendix A: Plan to Complete Project ......................................................................................................................... 39
+Appendix B: AHP Model Notes .................................................................................................................................... 40
+Appendix C: AHP Model Excel Sheet I ....................................................................................................................... 41
+Appendix D: AHP Model Excel Sheet II ..................................................................................................................... 42
+Appendix E: Results of AHP Model ............................................................................................................................. 42
+Appendix F: Lassen's Benchmarking............................................................................................................................. 43
+Appendix G: Lucy's Benchmarking ............................................................................................................................... 43
+Appendix H: Deli/Smoothie Current State Model ..................................................................................................... 44
+Appendix I: Revised Deli/Smoothie Area .................................................................................................................... 45
+Appendix J: Grocery Current State Layout .................................................................................................................. 46
+Appendix K: Grocery Design Alternative 1 ................................................................................................................. 47
+Appendix L: Grocery Design Alternative 2 .................................................................................................................. 48
+Appendix M: Grocery Design Final Alternative .......................................................................................................... 49
+Appendix N: Smoothie Area Simulation Model .......................................................................................................... 50
+Appendix O: SweetHome3D CAD Model................................................................................................................... 51
+Appendix P: SweetHome3D CAD Model II ............................................................................................................... 52
+
+iv | P a g e
+
+Introduction
+Organic foods in recent years have developed an avid and rising market within the confounds of the United
+States. Among this new market large grocery companies have arisen such as Whole Foods, Trader Joe’s, and
+more. Soto’s True Earth Market breaks against the norms of corporate grocery markets and brings together a
+collective group effort to inform and support the community in regards to organic foods.
+
+The project with Soto’s was acquired through a comprehensive list of opportunities made available through
+the IME department at Cal Poly San Luis Obispo. Andre Ponce, the process owner was in the initial start-up
+phase of creating the foundation for his market at the start of this project. Due to the fact that the market
+was still in an initial startup phase, an initial customer base had to be established to further promote Soto’s.
+Andre requested the need for a customer oriented facility layout that would create the ideal shopping
+experience. Included in this facility layout was also a workstation design for Soto’s deli and smoothie section.
+Moreover, since the market was still under construction there was a need to purchase the necessary
+equipment for Soto’s operations.
+
+In order to provide a solution to the issues presented by Andre, several deliverables had to be provided.
+First, prior to starting the project a project charter was created to provide Andre and the team with a solid
+foundation of what was to be achieved. Old and new layouts were necessary in order to gauge the
+improvements made by the new proposed layout. To obtain a quantitative measure of these improvements,
+the potential for a simulation model was also proposed, dependent upon time constraints. Multiple criteria
+decision analysis was used in order to achieve the most economical equipment purchases in regards to
+Andre’s constraints. These several deliverables were the foundation in determining when the project was
+ready to be closed out.
+
+1|Page
+
+The main objective of this project was to create a layout for the overall facility of Soto’s market as well as
+provide standard operating procedures and equipment purchasing evaluation for their deli and smoothie
+department. Any further redesign outside of the main shopping area of Soto’s as well as any extra
+deliverables were not included in this project. The following report goes over the necessary steps we took to
+achieving these deliverables including but not limited to literature reviews, time studies, and ergonomic
+analysis.
+
+2|Page
+
+Background
+As stated earlier the market for organic foods has seen a steady rise throughout the years since the earlier
+2000’s. With this rise has come the emergence of large corporations such as Whole Foods, Trader Joe’s, and
+others. Soto’s True Earth Market was originally a small local grocery market located in the coastal town of
+Cambria, CA. Andre Ponce, now the new owner of the historic landmark plans to create a new image for the
+market as a new frontier for organic foods in the small town of Cambria.
+Cambria with a modest population of approximately 6,000 residents has difficulties acquiring organic foods
+within a close proximity of the town. The closest grocery market was about 10 miles away and with all the
+elderly citizens in the area this made grocery shopping difficult. Andre saw this difficulty in acquiring healthy
+and organic food after moving to Cambria and decided to create a change in this small town.
+Andre, purchased Soto’s with a vision to provide the town of Cambria with a reliable source for organic
+foods to better the health of the local citizens. His vision was to create a community to that inform the
+general public of the health benefits of eating local and organic. The products and services he provides
+aspires to withhold his pillars of a healthy individual, society, environment, but does not neglect the need for
+taste either!
+
+3|Page
+
+Literature Review
+Grocery Market Design
+Many people generally assume that grocery market layouts have been the way they are just because that’s the
+way things have done for a while now. Little do they know that there are various psychological and scientific
+methodologies in supermarket layouts. This method is described in further detail in the article “Consumption
+Universes Based Supermarket Layout Through Association Rule Mining and Multidimensional Scaling”.
+These various floor layouts strongly influence shopping atmosphere, shopping behavior, and operational
+efficiency (Cil). There are two different methods of creating a grocery layout according to Cil, the traditional
+approach and the consumption universes approach. The traditional layout is essentially stocking items
+logically based on their category. The latter approach, consumption universes introduces a new concept of
+product layout that creates correlations between different products in order to determine the overall product
+layout. These two previous concepts are only in regards to product placement within a grocery market layout.
+Cil also goes over briefly the various store layouts such as grid layout, race track layout, freeform layout, and
+circulation spine layout (Cil). Of the several layout presented, Soto’s environment seems most accustomed to
+using a grid layout with the traditional product placement approach.
+There are various tactics that grocery stores use to entice the customers into buying more. Morse describes
+these methods in her article, “Supermarkets Give You the Runaround for a Reason Grocery Store Layouts
+Designed to Increase Impulse Sales, Improve Convenience.” Certain products are used to initially bring
+people into the store but causes them to buy more. Objects like cashiers are strategically placed in order to
+defer the path of the customers to a different section of the store (Morse). Grocery stores will also place
+expensive goods at the beginning to get people to make purchases before they think about what they put in
+their cart (Morse). Music can have a profound effect, as a study showed that there is a relation between slow
+music and increased time spent in the store (Morse).
+
+4|Page
+
+Soto’s is still preparing to open their doors to the public. The owners purchased the store and kept much of
+the original design and layout intact while only doing some renovations. That being said, they have not had
+the chance to take into consideration these concepts since they are more focused on the practicality and
+functionality of the grocery store. By using these marketing and psychology tools, the project can assist the
+market by designing an efficient facility that is strategically put together to maximize sales.
+Looking deeper into the relationship between amount of sales and facility design of a market one can refer to
+experiment performed by a group of professors at Kansai University in 2009 (Kholod, Nakahara,Azuma and
+Yada). In this experiment the use of RFID trackers were used to see how customers moved around the layout
+of the store. After compiling all data they reproduced the locations of the customers using x and y
+coordinates. They found by looking at the data there were distinct number of routes customers took around
+the store. In addition these findings helped categorize customers: Wandering customers, Decisive customers
+and Mixed customers(Kholod, Nakahara,Azuma and Yada 278). In addition to observing wandering degree
+of customers, they computed the purchasing sensitivity in relation to each area/department of the
+store(Kholod, Nakahara,Azuma and Yada 279). By understanding these to factors they stated they said they
+were able to make specific recommendations for certain areas of the store. Soto’s will be able to benefit from
+the findings of this study because it shows a rather high correlation coefficient of approximately 0.8457
+(Kholod, Nakahara,Azuma and Yada 275). This correlation coefficient provides reliability that sales and
+facility design have a rather high positive linear relationship.
+
+Food Workstation Redesign
+Soto’s plans to open a deli and smoothie section after their initial opening of the grocery market itself. Prime
+considerations typically taken into account for food workstation design is ergonomics, efficiency, and food
+safety. In regards to food safety the article “Tracking Cross-Contaminations Transfer Dynamics at a Mock
+Retail Deli Market Using GloGerm” is a great reference on how to design sanitary deli workstations.
+According to the author, Jessica Maitland the likelihood of contamination is higher in deli meats sliced at
+retail markets than those at a processing plant (Maitland). The case study covers the design criteria created to
+5|Page
+
+simulate the spread of germs in a deli workstation using an abiotic surrogate called GloGerm. The findings
+from the case study states that the highest degree of spread in their study was through the user’s gloves.
+Other findings also included the levels of contaminations within the slicer and meat chub. These
+experimental results can assist in creating a standard operating procedure for the deli portion of Soto’s
+market. Not only that, but it also brings insight on how Soto’s should handle their supply chain in regards to
+meats as well as employee sanitation.
+In the paper titled “A Simulation Modeling Approach for Process Improvements in a Fast Food Restaurant”
+by Kadanian Serge, the use of simulation is used to find the optimal solution to a multi-variable problem.
+Simulation here provides one with a great example of how to deal with an environment that is subjected to a
+high level of randomness. To validate their findings to be as realistic as possible, the use of historical data
+from other fast food restaurants was used (Kadanian). The use of historical data in a simulation is a great way
+to recreate a real life environment. At Soto’s True Earth Market the implementation of simulation using
+historical data from similar environments can be used to produce an accurate time study and flow of work. By
+the team implementing this type of simulation model they can collect a realistic simulation of the work station
+design. Calculating in any random variability typically observed in markets.
+
+Time Studies
+Time studies are a valuable tool within Industrial Engineering to validate the method for a process at hand.
+According to the book, Manufacturing Systems Engineering, “Time study is a systematic procedure for
+measuring the length of time required and establishing an allowed time standard to perform work, based
+upon measurement of work content of the prescribed method by an operator of average skill, working with
+average effort, under normal conditions” (Hitomi 116). Even though Soto’s is a brand new business, it is
+beneficial to pay close attention to important processes so that they can become as lean as possible at an early
+state. The project will strive to identify a process within the business that requires particular attention. With
+the concept of continuous improvement in mind, conducting a time study during the project can help
+establish predetermined time standards to use for comparison in the future as the market continues evolve
+6|Page
+
+(Hitomi 119). In order to accomplish this, a Work Factor (WF) and Methods Time Measurement (MTM)
+must be done to get a detailed analysis of the entire process (Hitomi 120).
+
+7|Page
+
+Sustainability and the Environment
+There are various businesses that are similar to Soto’s market that have developed ways to maintain a
+consistent business. Whole Foods is well known for their natural products, but also for their ethical ways of
+doing business as it relates to the people and environment. The secret behind its success is the way the
+business has focused on the mission rather than making money. Whole Foods created seven main goals to
+assist each of the stakeholders of the company. These are the following goals (Whole Foods Market 378):
+1.
+
+Sell the highest quality natural and organic products.
+
+2.
+
+Satisfy and delight customers.
+
+3.
+
+Support team members’ happiness and excellence.
+
+4.
+
+Create wealth through profits and growth.
+
+5.
+
+Care about local communities and the environment.
+
+6.
+
+Create win-win partnerships with suppliers.
+
+7.
+
+Promote stakeholders’ health by providing healthy eating education.
+
+By striving to uphold and stay true to these goals, they are able to do business the way that no other groceries
+have before. They buy locally and have a strict policy on only buying meat from places that treat animals
+properly (Whole Foods Market 378). Unlike many others, Whole Foods does not charge suppliers to put
+products on the shelf, but simply makes an assessment about whether or not the product is a right fit for the
+business (Whole Foods Market 378). Soto’s can learn from the success of Whole Foods by implementing
+similar strategies to the business. Andre Ponce, the owner, stresses the importance of the triple bottom line,
+especially as it relates to taking care of the environment. The goals mentioned above can help the project with
+establishing policies for the market that will develop the culture and overall business.
+Another strong business that shares similar characteristics with Soto’s is Trader Joe’s. The article “Trader
+Joe’s Company: Retailing - Company Profile & SWOT Report” provides a thorough analysis of the business.
+The strengths of this company are the diversity of the products across the locations, and the way the
+company manages each store as its own unit (Trader Joe’s 12). This allows for flexibility in decision making
+8|Page
+
+by the people who are present. A weakness of Trader Joe’s is that they do not have online shopping available
+and are currently limited to just retail (Trader Joe’s 12). Some opportunities they have for the future are the
+trends in people buying organic products (Trader Joe’s 13). As always, there are threats to the business.
+Trader Joe’s must make sure to keep up with the evolving interests of the customers, while competing with
+retail powerhouses (Trader Joe’s 13).
+Soto’s is similar to Trader Joe’s in the way the business is setup. They focus on healthy products while
+maintaining a local atmosphere. Many of the aspects of the SWOT analysis and report can be taken into
+consideration for the project. As the market is preparing for its opening, they must think of ways to
+distinguish themselves from the competition to develop a solid reputation. Also, Soto’s can see how
+successful businesses such as Trader Joe’s goes about dealing with their SWOTs and assess whether any of
+them coincide with their current situation.
+
+5S Methods
+In an environment such as Soto’s, it is imperative that 5S principles are used to ensure a clean and organized
+workplace for the employees and customers. As it originated in Japan, 5S stands for the following terms: Seiri,
+Seiton, Seiso, Seiketsu, Shitsuke (Michalska and Szewieczek 211). With limited space available, Seiri should be
+used at Soto’s to identify which products are necessary and those that are not. Although it will take a while
+for employees to get acclimated to the new business, Soto’s must make sure that the organization of products
+and materials follow a standard process as they hire and train new employees. As a market, the majority of the
+available space is shared between the customers and the employees. It is the responsibility of the business to
+make sure that they provide a safe and clean place for the people that are there. Perhaps the most difficult
+aspect for Soto’s would be the duty of sustaining the state of the business once they reach an organized state.
+By keeping these principles in mind, the project will strive to assist the business in creating an efficient
+environment. (Michalska and Szewieczek 212).
+
+9|Page
+
+These principles of 5S are essential in any sort of working environment, that being said different industries
+have different insights on how to approach 5S and the DMAIC process. The article “A Lean Six Case Study:
+An Application of the “5s” Techniques” go into more detail about each step of the 5Sing process. As stated
+previously Seiri (Sort) involves the process of red-tagging or removing any unnecessary waste including
+tangible materials as well as information. The next several steps of 5S are very applicable to the deli and
+smoothie workstation in maintaining an efficient and effective operation. Seiton (Straighten) is the next step
+in the 5S process which follows these four rules (Pranckevicius):
+1. Decide what things should be put away
+2. Determine how many things should be put away
+3. Decide where things should be put away
+4. Determine the layout for things to be put away
+Following Seiton is Seiso (Shine) or maintaining a clean work station from your general work area to the
+surrounding area along with the tools being used. In conjunction with Seiso is Seiketsu (Standardize) which is
+pursued at two levels. Level 1 is to create a company culture of organization, while level 2 is the development
+and implementation of policies and procedures to promote 5S (Pranckevicius). The final step in 5S is
+Shitsuke (Sustain) which is essentially education to employees and the cooperation of upper management to
+maintain these habits. By systematically going through the 5S process for their ready foods section Soto’s can
+better serve the local community of Cambria. Moreover, the concept of 5S in a food station leads to more
+sanitary food which upholds the pillars of Soto’s Market.
+Although 5s is one of the most popular and widespread processes among process improvement tools a low
+percentage of companies actually fully implement it (Bayo-Moriones, Bello-Pintado and Merino-Diaz de
+Cerio). From the article 5s Use In Manufacturing Plants: contextual factors and impact on operating
+performance, it states that in Japan 5s is seen as a philosophy, while in the US and Western cultures view 5s
+as just “housekeeping”(Bayo-Moriones, Bello-Pintado and Merino-Diaz de Cerio 218). The way the Western
+
+10 | P a g e
+
+cultures portray 5s leads to the low importance of upholding 5s in the workplace. Soto’s can use 5s as a
+building block to reaching optimal processes throughout the entire company.
+
+Ergonomics
+The design of workstations in recent years have been influenced by the emergence of human factors
+engineering which includes the topic of ergonomics. The article, “Ergonomic Evaluation in a Beverage and
+Food Service Application” goes over some basic questions and concepts that are used in designing ergonomic
+work cells. Some sample questions include “What slows you down while you work?” and “What things about
+the design trouble you while working?” (Cohen). The questions can vary in wording and are not limited to
+these two, but they are essential to determining how to redesign or design a work cell for the better of the
+user. Some considerations for the design include the frequency of use, sequence, importance-of-use
+principles, as well as a logical processing line. (Cohen). These several pieces of information can lead to a
+better workday for the employees working at Soto’s. By maintaining healthy employees, Soto’s is not only
+retaining their pillar of health, but also creating happy employees which leads into happier customers.
+In the article “Industrial workstation design: A systematic ergonomics approach” by Das and Sengupta,
+they go into great detail about the correct approach in developing an ergonomic work station. When
+dealing with ergonomics, once of the most important aspects is the height since it can vary so greatly from
+person to person. Some results of poor height settings are backaches if it is too low, and shoulder/neck pain
+if it is too high (Das and Sengupta 158). Even factors as small a eye height can play a major role, as the
+authors state, “The optimum display height for the normal (slump) eye height is 15” downward gaze” (Das
+and Sengupta 159). In the article they also include a case study of a designing a checkout stand for a store
+using ergonomic principles. The steps they took in developing their design as well as their conclusions will be
+very beneficial for the study of Soto’s market.
+
+11 | P a g e
+
+Economic Analysis
+The economic analysis of the proposed findings from the studies taken at Soto’s True Earth Market can be
+looked at as plausible or implausible depending on the economic analysis results. At Soto’s the purchase of
+new equipment has a huge economic cost for the company. This decision will be made using the MCDA
+models (Yilidrim, Colin and Ike). The team will be implementing both AHP and Goal programming to find
+an optimal solution for equipment purchases (Yilidrim, Colin and Ike). Using first the Analytic Hierarchy
+Process (AHP) to prioritize each goal and then using those prioritization ratings established to plug into the
+goal programming model to obtain an optimal solution (Yilidrim, Colin and Ike). This idea of using AHP
+first, then goal programming was derived from the paper written by Yilidrim, Colin and Ike. In this example
+they used the MCDA in a different application of decision making, although this provided the team with a
+great reference using both models to reach a conclusion (Yilidrim, Colin and Ike).The decision analysis
+models can be intertwined with qualitative and quantitative criteria. This makes it a powerful tool when
+analyzing economic cons and benefits to find an optimal solution.
+
+12 | P a g e
+
+Design
+Soto’s True Earth Market Overview
+During the initial project creation phase Soto’s True Earth Market was still undergoing its startup
+development phase. The owner of Soto’s, Andre had a vision of a small yet substantial grocery market that
+provided the local community with organic farm-to-table foods. With this vision there were an array of tasks
+the project team could choose from. However, any technical work for the team could only be performed
+once the store was finally open for business.
+By March, Soto’s had finally made its grand opening in Cambria as a local organic grocery market. The store
+was split into several departments from produce, frozen goods, refrigerated goods, dried goods, and packaged
+goods. Customers walk into the store and immediately find fresh produce grown by local farmers and can
+either move to refrigerated goods or dried goods. Following their purchase selections there is a single cashier
+that can check out the customer. A more detailed visual of the facility itself is shown in Appendix H and J.
+At the time, Soto’s deli and smoothie section was still not operational, however the vision was to create
+something similar to Jamba Juices and Subway on a smaller scale. With its own unique vision, Soto’s True
+Earth Market is a business with lots of potential for growth in the future.
+
+Project Charter
+Following an overview of Soto’s overall facility as well as the owner’s future vision of the store the team
+developed a project charter to establish the overall logistics of the proposed project. The project charter itself
+established and addressed all the stakeholders to be involved in the optimization of Soto’s True Earth Market.
+Also included in the project charter was the problem statement and business case that was apparent to the
+team after touring the facility and speaking with the owner of Soto’s. Following the problem statement, a
+project scope was also established. The team paid careful attention to make sure that the scope would
+encompass many of the skills they had learned while also being manageable given the time frame. This aspect
+
+13 | P a g e
+
+of the charter was discussed thoroughly between the team members in order to create a reasonable yet
+effective scope for the allocated time provided to them for senior project.
+The overall purpose of the project charter was to establish a clear goal for the optimization initiative for both
+the project team as well as stakeholders. This was not only to have a clear line of communication between all
+stakeholders but as well as to define what exactly the project team can and cannot do. This prevents any
+misinterpretation between the project team and client in regards to what is being accomplished throughout
+the project term. Not only that, but it also defines a clear completion date along with the deliverables for the
+project. The project charter was an essential initial deliverable for the project team in order to properly start
+the optimization initiative. Although the project charter defines concrete goals, it was consistently being
+updated to a certain extent as the project progressed. Overall, the project charter is a valuable tool to keep a
+team on track in any type of project environment.
+
+Benchmarking
+As stated in the project overview above, Soto’s True Earth Market is a local startup organic grocery market.
+With that current business status there was no initial deli and smoothie layout for the project team to
+benchmark their design alternatives off of. In order to fill in this information, gap the project team went out
+to various other businesses to analyze their processes and perform time studies; the businesses ranged from
+High St. Deli, Gus’s Groceries, Lucy’s, and more. Though the final product in these businesses were similar,
+the various processes and designs that are used varied from place to place. The project team created standard
+times for each business in order to identify standard work times for Soto’s. These models and time studies
+can be found below as well as in Appendix F and G. These work measurements were necessary to determine
+standard times for the processes of smoothie and sandwich making at Soto’s.
+The studies taken from the various businesses also provided the team with new outlooks on how to approach
+their workstation alternatives. Decisions on where equipment should be placed as well as any necessary
+equipment purchases were quickly realized after studying the processes of similar businesses. Moreover, the
+
+14 | P a g e
+
+ergonomics and placement of equipment for workstations was also much more apparent after seeing both the
+effective and poor aspects of each business’s workstation. This also showed what can be done given the
+present constraints at Soto’s, such as the equipment, structures, and more. Overall, the benchmarking
+procedures allowed for a smooth transition into developing the necessary deliverables to the project team’s
+client.
+
+Figure 1: Time Studies From Gus's
+
+15 | P a g e
+
+Current State Facility Layout
+In conjunction with the benchmarks for the deli and smoothie department of Soto’s True Earth market, the
+project team also created a current state layout for Soto’s overall storefront. This included not only the deli
+and smoothie area, but the grocery portion as well. The project team obtained measurements from Soto’s
+True Earth market and created a rough sketch of the overall facility. Thereafter a Visio model was created
+for both the grocery area as well as the deli and smoothie area as shown in Appendix H and J. Along with
+the Visio models a CAD file was also created through the use of a third party CAD software called Sweet
+Home 3D which is shown in Appendix O. Starting from the right of the model is the entrance of Soto’s and
+going left are its grocery aisles into the deli and smoothie area with the warehouse to the very far left of the
+model.
+
+Figure 2: Original State of Soto's
+
+16 | P a g e
+
+Simulation Model
+In order to get a realistic understanding of the new processes, the team used a simulation software
+called Simio to replicate the proposed workstation redesign for the deli and smoothie area. As
+mentioned earlier, time studies were collected from various businesses such as High St Deli, Gus’s
+Groceries, and more to be used for this purpose. By developing this model, the team was able to
+obtain an idea of how efficient the potential redesign could be by running various tests. The
+simulation model used for the deli workstation is shown below, the simulation model for the
+smoothie section can be found in Appendix N.
+
+Figure 3: Simulation Model of Deli
+
+17 | P a g e
+
+Equipment Purchasing
+Equipment purchasing for facilities is dependent on many different variables. These variables were obtained
+by the project team visiting the client site to better understand the goals and background of the company. By
+conducting interviews of the owners the project team was able to better understand and document the goals
+that Soto’s wanted to target. One of the requirements Soto’s required was that every blender model be NSF
+approved. In addition, the owner did not have any preference on the size of the blenders for the smoothie
+workstation. The project team continued forward by making an assumption that all blenders were the same
+size. This assumption was made because the team didn’t want this variable to affect the optimal solution.
+Following the interview, the owner was asked to rank these different variables in order of importance to align
+with the company's overall goals. These variables were ranked as follows.
+1. Company reputation
+2. Price
+3. U.S. sourced parts
+4. Noise level
+5. Reliability
+
+Figure 4: Criteria for AHP Analysis
+
+18 | P a g e
+
+This ranking system was used in the matrices designed for calculating weights for each brand of blender.
+Once all computations were calculated and adjusted the team was able to run a sensitivity analysis to better
+understand how pricing affects the results of the AHP model.
+
+Suggested Future State Facility Layout
+Facility layouts incorporate a multitude of different factors that can differ greatly from store to store. Each
+business will have their own constraints, whether it is the size of the facility, personal preference, budget, and
+more. There is no such thing as a perfect facility layout, however, a design can be put together that maximizes
+efficiency while creating an optimal shopping experience for the customers. The team began by taking
+measurements of the entire store and all of the components (Shelves, equipment, etc.) that were present.
+Next, the design and measurements were put together to build a current state model of the facility on Visio.
+With so many different options and perspectives on new designs, the team decided to develop two draft
+layouts based on different approaches.
+Layout 1 located in Appendix K was designed using a theory by professor Paul Harrison at Deakin
+University. In the grocery market the project team placed the produce near the front, to catch the viewer's
+eyes as they are walking by.
+Layout 2 located in Appendix L was based on the design methods of Sprouts. They have distanced
+themselves from the traditional design of a grocery store by placing produce in the back of the store as
+described in the article written by Max Nisen. They understand their customers and realize that these are the
+primary goods that they look for in the store. Though Soto’s is a different entity, the two companies share a
+similar vision for their customers. Based on the existing layout of the store, the alternative design was
+developed as seen in Appendix L.
+After discussing the various options provided, the team incorporated several aspects from each proposal and
+put together a final layout for the new facility as seen in Appendix M. Most notably, the produce is expanded
+and pushed to the back end.
+19 | P a g e
+
+Similarly, the workstation for both the deli and smoothie department was also part of this future state facility
+redesign. Although there was no initial design implemented into Soto’s for these two workstations, the
+project team utilized research and benchmarking in order to create a data driven design. The final
+workstation redesign can be found in Appendix I.
+
+20 | P a g e
+
+Methods
+Facility Redesign
+As mentioned in the design section, two preliminary facility layouts were developed based on two different
+approaches. In order to get the most optimal facility layout for Soto’s True Earth Market we developed a
+hybrid of the two proposed layouts. We justified placement of products/departments based on sales data
+found at FMI.org and www.supermarketnews.com. These sources were beneficial in getting an overall
+perspective on the spending habits of nationwide customers.
+
+Equipment Purchasing
+Soto’s True Earth Market needed to purchase blenders for the smoothie workstation. The project team used
+an AHP (Analytical Hierarchy Process) model to decide which blender should be purchased to align with
+Soto’s Business strategy. The project team visited the facility to interview the owner and workers about what
+was important to the company when it came to blenders. After compiling the feedback and asking the owner
+to rank the variables the project team began to organize the data into an Excel sheet as seen in Appendix C,
+D and E. Using these weights given to each variable the project team were able to form a matrix comparing
+the different variables associated with each blender model. The blender Vitamix:QO was the best fit for
+Soto’s True Earth Market given the owners ranking system in the AHP model.
+
+Work Station Redesign
+Due to the startup phase of Soto’s True Earth market there was no initial baseline for the deli and smoothie
+section for the market. In order to obtain insight on how both a deli and smoothie workstation should be
+properly designed the project team examined and performed time studies on businesses of a similar nature.
+After analyzing several similar businesses, the team collectively extracted pros and cons out of each design in
+order to create the optimal deli and smoothie department for Soto’s. Design methods from IME 443 such as
+L-shape and U-shape workstation designs were also taken into consideration for the Soto’s deli and smoothie
+21 | P a g e
+
+department. A SIMIO model was created in order to justify the optimal layout and resources necessary for
+Soto’s deli and smoothie department. Since no baseline numbers were available to input for the SIMIO
+model, the benchmarks performed at several facilities were used in order to gauge the standard time for the
+workstations. Two simulation models were designed one for the deli workstation as well as one for the
+smoothie workstation.
+The simulation model for the proposed deli and smoothie workstation for Soto’s is shown in Appendix N
+and Figure 3. Although the simulation model is not necessarily an exact replication of how the deli would
+operate it provides ample information to determine key metrics in that department. The processing times,
+arrival rates, and other metrics for the simulation model were acquired through the benchmarks performed.
+The steps in the deli simulation model are as follows:
+1. The customer comes in and places an order
+2. Meat is obtained from the deli case and sliced accordingly
+3. Cheese is obtained from the deli case and sliced accordingly
+4. Operator walks approximately 4 feet and slices the bread
+5. The bread is then toasted for 60 seconds
+6. The sandwich is spread and layered according to customer specifications
+7. The operator then cuts the sandwich
+8. The sandwich is wrapped and delivered to the customer
+The steps for the smoothie simulation model are as follows
+1. The customer comes in and places an order
+2. The fruit is retrieved and prepared
+3. Place the fruit in the blender and blend
+4. Remove blender, pour the drink, and hand it to the customer
+5. Wash the blender
+
+22 | P a g e
+
+The simulation model for the Soto’s deli and smoothie department was performed during peak hours from
+12 PM to 2 PM with an average arrival rate of 2 orders every 3.33 minutes. Other metrics in terms of
+processing times were obtained through benchmark numbers from various other businesses. Through this
+simulation of the deli workstation at Soto’s the project team several key performance indices (KPI) to better
+understand the baseline performance of the workstation. The KPIs were essential in helping the project team
+determine alternative scenarios for Soto’s in terms of future capacity rates and hires. The KPIs below were
+the select few chosen by the project team to determine the success of simulation experiments:
+●
+
+Work Element Utilization Rates
+
+●
+
+Number of Sandwiches/Drinks Outputted
+
+●
+
+Time to Create Sandwiches/Drinks
+
+These 3 KPIs assisted the team in determining how work elements could be changed to better utilize
+elements within the workstation. Not only that, but the KPIs were also taken into consideration to consider
+the potential for higher customers in the near future for Soto’s True Earth Market as well. With that the
+following experiments were conducted in the simulation model as follows:
+1. No changes, baseline
+2. 20% Increase in customer demand
+3. Hire one more employee to work the deli/smoothie area
+More information in regards to the specifics of each experiment will be explained in more depth in the results
+section for the workstation redesign.
+
+23 | P a g e
+
+Results and Discussion
+Facility Redesign
+After taking aspects from two draft layouts, the final design was developed as seen in Appendix M. The team
+held onto several theories such as keeping dairy products to the back, and incorporating promotional goods
+at the front to attract initial customers. However, one major way the team went against the traditional design
+is by following in Sprout’s footsteps by placing produce towards the back of the store. The design fits the
+goals of the store while also continuing to attract new customers.
+With any facility redesign, at the end of the day there are always countless other options based on different
+interpretations and perspectives. The major limitation was that there is certain equipment such as freezers and
+refrigerators that are placed in the facility. Though these can be moved or replaced, it will be a costly
+initiative. The only aspect that is difficult to interpret regarding facility redesigns is that there isn’t a strict way
+to quantitatively backup a design. Small grocery store designs can be very subjective as there is not much
+space to work with and can be based on a unique vision. In the end, some questions that remain unanswered
+are:
+1. Will there be any renovations in the future?
+2. Are there any plans of expansion in the future?
+3. Which equipment will be replaced or moved in the future?
+Based on the final design layout, the team believes that by implementing similar changes to the current design
+the business can achieve positive business results. By pulling customers to search for produce and other
+popular goods at the back of the store, this may positively impact the sales of other goods. In addition, with
+the development of the deli and smoothie area this can be a great combination to encourage further
+purchases for a quick snack. However, problems might come up when dealing with which equipment to
+move/renew, or developing a fresh mindset to try something different. The design should be used as little or
+
+24 | P a g e
+
+as much as the owner believes is beneficial to the store. The owner can take bits and pieces that align with
+what is manageable as well as what the current business goals are.
+Economic Analysis & Discussion
+Currently, the produce section is 27 ft^2 in size. FMI shows that for every square foot of selling space, the
+weekly sales were equivalent to $11.98. In the final layout of the facility design, the produce section has been
+expanded to 6ft x 9ft or 54 ft^2. Though the size of the expansion may depend on a multitude of factors,
+with this scenario the produce section has expanded by 27ft^2 and can expect to make an increase of $11.98
+x 27 = $323.46.
+
+Equipment Purchasing
+Using an AHP model the project team was able to define an optimum blender for the Soto’s True Earth
+Market. The Vitamix:QO was established to be the best fit for the companies ranking of variables defined in
+the prior section. The results were not as expected because prior to researching and running the AHP model
+the team believed that Blendtec would be the top brand for blenders based on the customer’s personal
+beliefs. The theory/beliefs of the customer did not hold true after further analyzing the different models
+using the AHP model. The design to use a AHP model to calculate the best piece of equipment was perfect
+for this situation because many of the variables were not quantifiable. In addition, the team’s cost estimates
+were roughly followed because the exact costs couldn’t be put into the model. Rather the price was initially
+given an overall weight to describe it going through the rest of the model and then each individual model was
+compared given the retail prices. Based on the fact that the Vitamix:QO received the highest score of 0.257
+we can conclude that the designed does not need to be changed to obtain an optimal solution. Although if
+the customer would like to weight the variables differently one can easily change the optimal solution by
+accessing the Dashboard provided in the Excel spreadsheet (Appendix C,D,E)
+In the method of deriving this solution and testing it there were not any unusual conditions the project team
+ran into. The results were not difficult to interpret because the final scoring system ranks each piece of
+
+25 | P a g e
+
+equipment on a scale of 0.0-1.0 with 1.0 being the best. This test provided the project team with the exact
+answer to the questions the customer wanted, no questions were left unanswered.
+Based on the results the project team predicts the customer will purchase this piece of equipment based on
+the customer defined variables and priorities aligning well. Legitimate problems might crop up during the
+ranking step. One must make sure to really understand the customer’s organization and thinking to properly
+weigh the variables properly. If these weights aren’t a perfect representation of the owner’s thoughts the
+project team could have possibly chosen a piece of equipment that doesn’t align with the business. The use of
+design/theory here might be limited by the need of the customer. In terms of Soto’s the project team
+developed the Excel spread sheet to be interactive including a dashboard to play with the weights of each
+variable. This allows the customer to actively adjust weights and see how that affects the optimal equipment
+purchase.
+Economic Analysis
+An economic analysis was provided here by creating a sensitivity analysis on price of each blender model. In
+this model the project team was able to see how the effects of price directly affected the optimal solution.
+●
+
+With “2” points of importance, the preferred blender is the Vitamix: QO with an overall AHP score
+of .2574 (current client preference*)
+
+●
+
+With “4” points of importance, the preferred blender is the Vitamix: QO with an overall AHP score
+of .2492
+
+●
+
+With “6” points of importance, the preferred blender is the Vitamix: QO with an overall AHP score
+of .2419
+
+●
+
+With “8” points of importance, the preferred blender is the Vitamix: VP with an overall AHP score
+of .2388
+
+●
+
+With “10” points of importance, the preferred blender is the Vitamix: VP with an overall AHP score
+of .2419
+
+26 | P a g e
+
+This analysis provided Soto’s with a better understanding of how the effects of price have on the output of
+the team’s AHP model. As the importance of price increased the preferred blender changed because of the
+weights defined in the prior interviews conducted.
+
+27 | P a g e
+
+Workstation Redesign
+The final workstation layouts were determined through a collective consensus between the project team
+members after a thorough analysis of the benchmarks and layouts obtained from benchmark studies. Both
+the deli and smoothie layouts were created not only according to IME 443 concepts but as well as visual
+analysis of other similar businesses as previously stated. In the following paragraphs the results and
+discussions of the deli and smoothie workstation layouts will be discussed in more detail. The deli section
+will be addressed first, then followed by the smoothie department.
+
+Soto’s Deli Workstation Redesign
+Experiment #1
+In terms of the baseline simulation model, the metrics outputted were used to compare the hypothetical
+alternatives that the project team suggested. The key metrics acquired from this baseline experiment are as
+follows:
+●
+
+Average number of sandwiches made: 53.8
+
+●
+
+Time to create a sandwich: 5.32 minutes
+
+The utilization rates varied from work element to work element but will be discussed in more detail in regards
+to the other experiments that affect them accordingly. Overall, most of the work elements were extremely
+underutilized which shows that the deli has potential to take on more demand.
+Experiment #2
+As stated above low utilization rates equate to potential for higher demand; in order to determine the
+potential capacity of Soto’s deli the project team decided to increase customer demand by approximately
+20%. The metrics obtained from this experiment are the following:
+●
+
+Average number of sandwiches made: 66.1
+
+●
+
+Time to create a sandwich: 6.58 minutes
+
+28 | P a g e
+
+The utilization rates in this experiment increased by approximately 20% following the 20% demand increase.
+Even with this increase the highest utilization rate is at 89% for spreading and layering the sandwich, whereas
+the lowest utilization rate is at cutting the sandwich at 5%. With these utilization rate it is apparent that some
+work elements could be combined.
+Moreover, with the results provided above it is apparent that Soto’s deli does have the potential to handle
+extra demand if needed in the future. Although the sandwich creation time increases by approximately 1
+minute the amount of sandwiches outputted is still significantly higher than the original. As stated previously
+in regards to the utilization rate, some elements could be merged together to not only increase utilization
+rates, but as well as reducing sandwich creation time.
+Experiment #3
+The project team also considered that hiring one more employee could also significantly impact Soto’s deli in
+terms of sandwiches made. The key performance indices for this experiment are as follows:
+●
+
+Average number of sandwiches made: 54.8
+
+●
+
+Time to create a sandwich: 4.85 minutes
+
+Utilization rates for this experiment essentially stayed stagnant except for the work element of spreading and
+layering the sandwich. The utilization for this work element essentially went down due to the extra resource
+provided for the task. The project team agreed that until Soto’s achieved higher demands for sandwiches,
+hiring an extra employee would not be economically feasible in terms of net profit returns for another
+employee.
+Economic Analysis & Discussion
+Collectively and separately the experiments presented the project team with a large supply of information in
+order to justify their deli workstation layout. The baseline experiment used arrival rate metrics that the team
+had acquired by analyzing the customer base of Soto’s over the course of 2 hours on a random weekday.
+These metrics from the simulation experiment were compared to the next 2 experiments in order to gauge
+29 | P a g e
+
+the potential success of the hypothetical changes that could occur in the near future for Soto’s deli. As stated
+previously the original layout for Soto’s deli workstation is heavily underutilized due to Soto’s startup status
+contributing to lower demand at peak hours. The project team wanted to analyze the effects that added
+demand would have on the layouts utilization rates along with the effects of an additional employee working
+the deli.
+Looking at the KPIs obtained from experiment 2 it is apparent that Soto’s has the capacity necessary to meet
+higher demand at peak hours. Although the flow time per sandwich has increased by approximately 1 minute
+the deli is outputting more sandwiches than the original design with this 20% increase in demand.
+Considering that each sandwich averages around $10 this would result in an increase of revenue by about
+$120/day for the peak hours of 12 PM to 2 PM. This reconfirms the project team’s evaluation that Soto’s
+deli could handle a significant demand increase without any additional resources.
+Following the demand increase experiment the project team decided to gauge the potential benefit for Soto’s
+to hire an additional employee for their deli. Due to the demand constraint of the original design there was
+no change to the amount of sandwiches created throughout the peak hours timespan. The additional
+employee also decreases utilization rates significantly as well. However, the flow time per sandwich as a result
+of the change was reduced by approximately 8%. Considering that the average hourly wage of an employee is
+$12, Soto’s would save about $0.09 per sandwich with the extra employee. With approximately 54
+sandwiches during peak hours the total savings from time would only be about $5.07. With these numbers
+the project team decided it would be unnecessary to hire another employee for the deli until the demand for
+sandwiches increases dramatically.
+
+Soto’s Smoothie Workstation Redesign
+Experiment #1
+In terms of the baseline simulation model the smoothie department had a similar simulation design compared
+to that of the deli workstation. One key assumptions were made in the creation of the smoothie workstation
+30 | P a g e
+
+simulation: fruit was already prepared prior to the peak hours from 12 PM to 2 PM. The results of that
+experiment are as follows:
+●
+
+Average number of smoothies made: 54.9
+
+●
+
+Time to make a smoothie: 1 minute
+
+The utilization rates, similar to those of the deli section were relatively low for each work element, averaging
+approximately under 15% for each work element. Also similarly, this shows that the smoothie workstation
+has potential for handle more demand as well.
+Experiment #2
+Considering that the smoothie section also has potential to handle more demand the project team decided to
+increase demand by 20% to see the effects. Similar to that of the deli workstation the smoothie workstation
+experienced similar results in terms of KPIs. The results from the experiment are as follows:
+●
+
+Average number of smoothies made: 68.7
+
+●
+
+Time to make a smoothie: 1 minutes
+
+In terms of the utilization rates the work elements experienced an increase of approximately 24% for their
+corresponding utilization rates. This still leaves the smoothie department with a significantly low utilization
+rate, representing the potential to handle even more demand for the smoothie department.
+Experiment #3
+Another consideration the project team made would be whether or not adding another employee to the
+smoothie department would be economically feasible. The results from adding an extra employee are as
+follows:
+●
+
+Average number of smoothies made: 54.9
+
+●
+
+Time to make a smoothie: 0.88 minutes
+
+31 | P a g e
+
+Similar to the new utilization rates from the deli workstation, the smoothie department experienced a similar
+decrease in utilization rates as well. This decline was approximately 50% representing that the smoothie
+section did not necessarily require an extra employee either.
+Economic Analysis and Discussion
+Just like the deli workstation, the smoothie workstation was also designed through information obtained
+through literature reviews as well as benchmarks from other smoothie businesses. These metrics were
+applied into the simulation model in order to obtain a baseline for the potential that Soto’s smoothie layout
+would have in terms of the corresponding KPIs.
+Considering that each smoothie averages around $5 per drink in the current state of the economy, the project
+team determined the revenue increase from a 20% demand increase. Soto’s would make approximately $69
+more per day during peak hours which adds up to $16,560 per year considering 5 day weeks. These numbers
+reconfirm the project team’s findings that Soto’s smoothie department could handle more demand.
+
+Final Overall Workstation Discussion
+Overall, it is prevalent that both Soto’s deli and smoothie department has the necessary capability to handle
+demand. With the current forecasted demand used for the experiment, the simulation model shows that both
+workstations are capable of handling a significant amount of more demand. This dilemma, although
+unrelated to the workstation redesign provides the project team and client with data to account for future
+demand increases at Soto’s. Moreover, for both workstation adding one more employee was essentially
+disadvantageous for Soto’s. Although adding an extra resource decreased the processing time for both
+departments, the economic returns were essentially negative in regards to the time decrease. All in all, the
+current baseline layout for Soto’s deli and smoothie area is ideal considering the prior research and
+benchmarking performed by the project team.
+
+32 | P a g e
+
+Conclusion
+All in all, the project problem statement to create a concrete facility and department layout for Soto’s True
+Earth market was essentially achieved. The objectives that the project team set forth was to provide Soto’s
+with a concrete layout, standard operating procedures, as well as an economic evaluation of potential
+equipment purchases were all provided to the client. The solution approach taken by the project team was
+essentially in line with the DMAIC process. Referencing the design portion of the report provides a more
+detailed look at the exact steps taken by the project team to achieve the objectives and deliverables of the
+project for Soto’s True Earth Market.
+In terms of results, the final layout for both the grocery and deli/smoothie department were by far the most
+important results created by the project team. Although the other aspects of the project were necessary as
+well, it was the collective effort of all those findings that produced the final proposed facility layout. With the
+data obtained from benchmarking, literature reviews, and the simulation models the project team could
+confidently justify the final layout as an optimal alternative to Soto’s current facility design.
+Based on our experimental results the theory behind designing a layout for a grocery store is highly based off
+psychology and product placement. When designing the layout one must make decisions based on historical
+data both intrinsic and extrinsic. The theories used to create facility designs for a manufacturing environment
+are not fully applicable to an environment you are planning for a customer to directly interact with. These
+facilities have much more variance each time a customer enters the system. In addition, when focusing in on
+the workstation design and equipment purchasing the theories taught within the industrial engineering
+curriculum were fully applicable.
+In terms of project success, the project team sufficed the objectives stated in the introduction of the project
+report. Although the strongest deliverable was definitely the facility layout, the standard operating procedures
+and economic analysis were definitely products of the proposed layout. Standard operating procedures were
+necessary in order to create the simulation model for the deli and smoothie section. By achieving one
+
+33 | P a g e
+
+deliverable it essentially provided the knowledge necessary to achieve a future deliverable. Similarly, the
+economic analysis tied together the workstation redesign to take into consideration the equipment necessary
+to operate a deli and smoothie bar as well. So in regards to objectives, the achievement of one led to the
+achievement of the other until the overall project was completed.
+In this project the team revisited many topics from engineering economics, operations research, facility
+redesign, ergonomics, simulation, project management and time studies. If the project team was given the
+opportunity to continue, they would implement the previous stated recommendations and collect data on the
+performance. Over a sufficient period of time to collect data on the two workstations the project team would
+like to make improvements to increase overall throughput and utilization levels. Because these two
+workstation designs would be baselines for Soto’s True Earth Market we could reevaluate and develop better
+designs to maximize overall net profits. Based on the project team’s findings they would recommend that
+Soto’s True Earth Market take into consideration these findings and implement as needed depending on
+resources and business goals. In addition, Soto’s should reach back out to the team to evaluate how the
+changes have affected the overall system given sufficient time for the effects to take place.
+As a whole the overall facility layout of Soto’s True Earth Market is bound to have an effect for both the
+local community of Cambria as well as the environment as a whole. In terms of a system view the facility
+layout for Soto’s has a huge impact for the community. Given that Soto’s is a local organic market that also
+gives back to the local community, providing the company with potential improvements can provide
+customers with a better shopping experience. With a more pleasant shopping experience the customer base
+increases which then leads to Soto’s being able to give more back to the community; these include charities,
+delivery services to the elderly, as well as the potential to buy more local produce from farmers.
+Environmentally, the proposed layout will in theory provide Soto’s with higher net profit margins which can
+lead to higher purchases of organic, non-gmo, local goods. These purchases encourage more farmers to farm
+using more sustainable methods to brand their goods as environmentally friendly and local. The more local
+produce there is the less demand there will be for harmful chemicals, genetically modified plants, as well as
+
+34 | P a g e
+
+poor farming methods. Realistically, the project as a whole will give Soto’s the necessary resources in the
+future to make an impact on the community of Cambria as well as the environment. However, it is not the
+project deliverables but rather Soto’s business model itself that makes it such a sustainable and honest
+company that people want to shop at.
+
+35 | P a g e
+
+References
+Das, Biman, and Arijit K. Sengupta. “Industrial workstation design: A systematic ergonomics approach.”
+Applied Ergonomics. Vol. 27. 1996. 157-163. Print.
+Hitomi, Katsundo. Manufacturing Systems Engineering: A Unified Approach to Manufacturing Technology, Production
+Management, and Industrial Economics. London: Taylor and Francis, 1996. Print.
+Michalska, J., and D. Szewieczek. "The 5S methodology as a tool for improving the organization." Journal of
+Achievements in Materials and Manufacturing Engineering 24.2 (2007): 211-214.
+Morse, Libby. "Supermarkets Give You the Runaround for a Reason Grocery Store Layouts Designed to
+Increase Impulse Sales, Improve Convenience." Chicago Tribune (pre-1997 Fulltext): 5. Jun 07 1993.
+ProQuest. Web. 1 Feb. 2016.
+
+Trader Joe's Company: Retailing - Company Profile & SWOT Report. Basingstoke: Progressive Digital Media, 2014.
+ProQuest. Web. 1 Feb. 2016.
+"Whole Foods Market, Inc.: Natural Foods Supermarket Success." Innovation Masters: History's Best Examples of
+Business Transformation. Ed. Miranda H. Ferrara and Michele P. LaMeau. Detroit: Gale, 2012. 377-379.
+Gale Virtual Reference Library. Web. 1 Feb. 2016.
+Cil, I. "Consumption Universes Based Supermarket Layout Through Association Rule Mining
+and Multidimensional Scaling." Expert Systems with Applications, 39.10 (2012): 8611-8625.
+Maitland, J, R Boyer, D Gallagher, S Duncan, N Bauer, J Kause, and J Eifert. "Tracking
+Cross-Contamination Transfer Dynamics at a Mock Retail Deli Market Using GloGerm." Journal of
+Food Protection, 76.2 (2013): 272-282.
+Pranckevicius, Dario, Deisell M Diaz, and Howard Gitlow. "A Lean Six Sigma Case Study: An
+Application of the '5s' Techniques." Journal of Advances in Management Research, 5.1 (2008): 63-79.
+36 | P a g e
+
+Cohen, Joseph, and Andrew S Imada. "Ergonomic Evaluation in a Beverage and Food Ser
+Application." Human Factors and Ergonomics Society Annual Meeting Proceedings, 49.8 (2005):
+
+832.
+
+Karwowski, W. "Ergonomics and Human Factors: The Paradigms for Science, Engineering, Design,
+Technology and Management of Human-compatible Systems."Ergonomics, 48.5 (2005): 436-463.
+Yusuff, Rosnah Mohd. "RULA Anlysis of Work-Related Disorder among Packaging Industry Worker Using
+Digital Human Modeling (DHM)." Current Trends in Ergonomics: Selected, Peer Reviewed Papers from the 2nd
+International Conference on Ergonomics (ICE 2013), September 2-4, 2013, Kuala Lumpur, Malaysia. N.p.: n.p.,
+n.d. 9-15. Print.
+Yilidrim, Omurtag, Colin O. Benjamin, and Ike C. Ehie. 1990 International Industrial Engineering Conference:
+Proceedings, San Francisco, California May 20-23, 1990. Norcross, GA: Institute of Industrial Engineers,
+1990. 224-29. Print.
+A simulation modeling approach for process improvements in a fast food restaurant Kadanian,
+Serge (Industrial and Mechanical Engineering Department, Lebanese American University, Byblos,
+Lebanon); Arnaout, Jean-Paul Source: 28th Annual National Conference of the American Society for
+Engineering Management 2007 – Innovation Management: Innovation in a Flattened World, ASEM 2007, p
+157-160, 2007, 28th Annual National Conference of the American Society for Engineering Management 2007 Innovation Management: Innovation in a Flattened World, ASEM 2007
+
+Kholod, Marina (Data Mining Laboratory, Research Institute for Socionetwork Strategies, Kansai University,
+Suita, Osaka, 564-8680, Japan); Nakahara, Takanobu; Azuma, Haruka; Yada, Katsutoshi Source:
+Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and
+Lecture Notes in Bioinformatics), v 6278 LNAI, n PART 3, p 273-280, 2010, Knowledge-Based and
+Intelligent Information and Engineering Systems - 14th International Conference, KES 2010, Proceedings
+
+37 | P a g e
+
+Alberto Bayo‐Moriones, Alejandro Bello‐Pintado, Javier Merino‐Díaz de Cerio, (2010) "5S use in
+manufacturing plants: contextual factors and impact on operating performance", International Journal
+of Quality & Reliability Management, Vol. 27 Iss: 2, pp.217 - 230
+
+38 | P a g e
+
+Appendix
+
+Appendix A: Plan to Complete Project
+
+39 | P a g e
+
+Appendix B: AHP Model Notes
+
+40 | P a g e
+
+Appendix C: AHP Model Excel Sheet I
+
+41 | P a g e
+
+Appendix D: AHP Model Excel Sheet II
+
+Appendix E: Results of AHP Model
+
+42 | P a g e
+
+Appendix F: Lassen's Benchmarking
+
+Appendix G: Lucy's Benchmarking
+
+43 | P a g e
+
+Appendix H: Deli/Smoothie Current State Model
+
+44 | P a g e
+
+Appendix I: Revised Deli/Smoothie Area
+
+45 | P a g e
+
+Appendix J: Grocery Current State Layout
+
+46 | P a g e
+
+Appendix K: Grocery Design Alternative 1
+
+47 | P a g e
+
+Appendix L: Grocery Design Alternative 2
+
+48 | P a g e
+
+Appendix M: Grocery Design Final Alternative
+
+49 | P a g e
+
+Appendix N: Smoothie Area Simulation Model
+
+50 | P a g e
+
+Appendix O: SweetHome3D CAD Model
+51 | P a g e
+
+Appendix P: SweetHome3D CAD Model II
+
+52 | P a g e
+
+

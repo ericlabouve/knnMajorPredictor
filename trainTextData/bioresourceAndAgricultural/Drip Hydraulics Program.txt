@@ -1,0 +1,1668 @@
+DRIP HYDRAULICS PROGRAM
+
+by
+
+Garret Blocher
+
+BioResource and Agricultural Engineering
+BioResource and Agricultural Engineering Department
+California Polytechnic State University
+San Luis Obispo
+2014
+
+TITLE
+
+:
+
+Drip Hydraulics Program
+
+AUTHOR
+
+:
+
+Garret Blocher
+
+DATE SUBMITTED
+
+:
+
+April 1, 2015
+
+Daniel J. Howes
+Senior Project Advisor
+
+Signature
+
+Date
+
+C. Arthur MacCarley
+Department Head
+
+Signature
+
+Date
+
+ii
+
+ACKNOWLEDGEMENTS
+
+First and foremost, I would like to thank my senior project advisor, Dr. Howes, for all of
+his help and understanding throughout this process. He has been my mentor during the
+most arduous years of my life pushing me to achieve great things in the field of water.
+Secondly, I would like to thank Dr. Burt to whom I owe thanks for paving the way down
+this long path on which I have embarked.
+
+iii
+
+ABSTRACT
+This senior project report lays out the production of drip hydraulics software composed in
+Microsoft Excel and backed by coding in Visual Basic for Applications. The program
+performs 2 main functions useful in the design of irrigation systems. The first is based on
+performing single hose computations under three different circumstances. It can solve for
+the average emitter flow rate given the hose inlet pressure, the inlet pressure given the
+average emitter flow rate, and can model hose pressures and flow rates while flushing.
+The second function is to place a manifold in the hydraulically optimum location on a
+slope. One advantage of this software over its former DOS version is the designer has
+access to all of the data used in the calculations including the entire Bernoulli tables that
+model flows and pressures at every emitter in the field. As this could also be a point of
+weakness, great effort was put into making the software simple to follow and displaying
+pertinent information in intuitive locations.
+Throughout the creation of this program, results were compared against the original to
+ensure it yielded similar answers. However, since the two use drastically different ways
+to narrow in on a solution, it is impossible to match results exactly. Regardless, various
+trial inputs and results were recorded using both platforms. These can be seen in
+Appendix C. All things considered, this project still came within 1% of the results of the
+original on 84% of the computations and within 10% on 97% of the computations.
+
+iv
+
+DISCLAIMER STATEMENT
+
+The university makes it clear that the information forwarded herewith is a project
+resulting from a class assignment and has been graded and accepted only as a fulfillment
+of a course requirement. Acceptance by the university does not imply technical accuracy
+or reliability. Any use of the information in this report is made by the user(s) at his/her
+own risk, which may include catastrophic failure of the device or infringement of patent
+or copyright laws.
+Therefore, the recipient and/or user of the information contained in this report agrees to
+indemnify, defend and save harmless the State its officers, agents and employees from
+any and all claims and losses accruing or resulting to any person, firm, or corporation
+who may be injured or damaged as a result of the use of this report.
+
+v
+
+TABLE OF CONTENTS
+
+SIGNATURE PAGE
+ACKNOWLEGEMENTS
+ABSTRACT
+DISCLAIMER STATEMENT
+TABLE OF CONTENTS
+LIST OF FIGURES
+LIST OF TABLES
+INTRODUCTION
+LITERATURE REVIEW
+Distribution Uniformity
+Friction Loss
+Design of Lateral
+Manifold Placement
+Flushing
+Computer Programming Options
+PROCEDURES AND METHODS
+Program Planning
+Program Construction
+Program Description
+Input
+Output
+RESULTS
+Program Testing
+Comparing Results
+DISCUSSION
+Code Organization
+Logic Structure
+Error Handling
+Obsolescence
+RECOMMENDATIONS
+REFERENCES
+APPENDICES
+Appendix A: How Project meets requirements for the BRAE Major
+Appendix B: Bernoulli Table
+Appendix C: Results Comparison Data
+
+vi
+
+ii
+iii
+iv
+v
+vi
+vii
+viii
+1
+2
+2
+4
+5
+11
+14
+14
+15
+15
+15
+16
+16
+17
+21
+21
+21
+22
+22
+22
+23
+23
+24
+26
+28
+28
+31
+33
+
+LIST OF FIGURES
+
+Page
+1.
+
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+Moody Diagram. This relates the Darcy-Weisbach friction factor (f), Reynolds
+number (Re) and relative roughness for flow in a circular pipe (Burt and Styles
+1
+2011).
+Lateral, riser, sprinkler assembly with marked points of interest (Hathoot et al.
+1994)
+1
+Flow path due to online drip emitter (a) and inline drip emitter (b)
+(Provenzano and Pumo 2004)
+1
+Comparison of pressure variation along uphill and downhill manifold sections (Burt
+1
+and Styles 2011)
+Input sheet shown with example data
+1
+Overall layout of Computations sheet
+1
+Pressure Distribution Chart on Computations sheet
+1
+Results section on Computations sheet
+1
+Distribution Uniformity section on Computations sheet
+1
+
+LIST OF TABLES
+vii
+
+5
+7
+9
+12
+16
+18
+19
+19
+20
+
+Page
+1.
+
+Examples of components that affect uniformity (Burt et al. 1997)
+
+1
+
+5
+
+2.
+3.
+4.
+5.
+6.
+
+“F” factor for multiple outlets
+1
+“Z” factor for a given elevation/friction ratio
+1
+Color designations for Figure 6 above
+1
+Trial input values used in programming testing and debugging……………..
+Percent of computed results that fall within various percent differences…….
+
+7
+9
+12
+30
+31
+
+viii
+
+1
+
+INTRODUCTION
+
+An efficient irrigation system has many important factors to consider that all apply to
+maintaining a high distribution uniformity (DU). This idea involves ensuring that all the
+plants in the field receive similar volumes of water over a given period thus decreasing
+the amount of discrepancy between the water received by two different areas in the field.
+With a large gap between the highest and lowest amounts of water distributed, the
+irrigator has to make a decision on how much water to apply such that the plants in the
+areas getting little water are still satisfied with over-application and deep percolation in
+other areas in the field. So, how does this affect you?
+Everyone depends on food. With California experiencing a drought, it is vital to conserve
+water at every corner especially in an industry that consumes a large portion of our water
+resources — agriculture. People worldwide rely on engineers to make sound design
+decisions that make possible use of water on crops that result in the highest yield in the
+field. However, designing the best irrigation system possible relies on several iterations
+and monotonous computations that engineers just do not have time to do in this fastpaced time in agriculture. Coupled with human input comes human error and without the
+use of software to aid in these computations, mistakes can be made.
+This is where software can assist. Software essentially takes inputs from the user and runs
+all the necessary calculations behind the scenes to generate outputs. If designed correctly,
+this can significantly reduce the workload of the users giving them the power to finish
+multiple projects in the time that was formerly taken to complete just one.
+The objective of this project is to create software that will help make irrigation system
+design decisions with respect to where to place the manifold as well as output desired
+values based on user input. The project will rely heavily on Microsoft Visual Basic coded
+into a user-friendly Excel spreadsheet. It will utilize several theoretical calculations
+regarding friction characteristics as well as rules developed by Dr. Charles Burt,
+chairman of the Irrigation Training and Research Center at Cal Poly, San Luis Obispo.
+This software update from DOS to a more recent language is essential due to the
+limitations associated with the former. The current platform allows the user to change
+only one variable at a time as well as limits the user to very slow navigation. Most
+students that come into the department struggle to download and run the necessary
+applications to use the archaic language while some don’t even know what DOS is. With
+the proposed software, these issues will no longer be an issue. The Microsoft-based
+software will give the user the ability to easily navigate through several different design
+computations while allowing them to use a more up-to-date platform.
+
+2
+
+LITERATURE REVIEW
+
+Distribution Uniformity
+Distribution uniformity (DU) is a value used as a performance index for a singular field
+(Burt and Styles 2011). Distribution uniformity (DU) has many components that
+contribute to the overall non-uniformity of a system which include: pressure differences,
+uneven spacing, unequal drainage, or “other” which takes into account unavoidable
+irrigation system issues such as clogging or wear (Burt 2004). But before DU is expanded
+upon, the idea of “low quarter” must first be explained. The low quarter depth, dlq, is
+equal to the volume accumulated in ¼ total area of elements with the smallest depth
+divided by ¼ of the total area of elements. This simply means the average depths
+accumulated in the area of the field that receives the least amount of water (Burt et al.
+1997). This value plays a vital role in the computation of DUlq as shown in equation 2
+with which a grower or designer can use to gain an understanding of how well the
+irrigation system is distributing the water. But, before this term can be expressed, one
+must understand the dlq. This is defined as the average depths of water that is
+accumulated over the quarter of the field receiving the smallest depths and is expressed in
+equation 1.
+
+
+1
+. 	
+
+.  4 	 		    	 
+
+1
+  	 		  
+4
+
+ 
+where:
+
+
+
+
+(1)
+
+(2)
+
+davg = Average depth applied
+
+Even though this value is an indicator of the uniformity of distributed water, it does not
+signify whether the water applied is being beneficially used. This is a term referred to as
+irrigation efficiency (Burt et al. 1997). A field can have a high distribution uniformity
+while over-applying water such that it is lost to deep percolation which results in a poor
+irrigation efficiency.
+The best way to ensure that an irrigation system is designed with the highest DU possible
+is to consider all aspects of the transportation of the water from the water source to the
+crop with the most important factor being friction loss between the these points. Table 1
+shows various issues resulting in a lowered DU as well as what causes them. For
+sprinkler systems, these uniformity components include flow rate differences between
+sprinklers, catch can non-uniformity, unequal application while system is starting up and
+shutting down, and effects crops on the field edge experience. Drip and microspray
+systems experience similar uniformity issues including differences in discharge been
+
+3
+emitters, variations in emitters due to manufacturing, plugging, and non-proportional
+volume application to a given plant area (Burt et al. 1997). One of the largest contributors
+to these issues are variations in pressure along laterals and manifolds which result in
+discrepancies in emitter out flow and lateral inflows, respectively. This occurs because as
+water travels down either of these system components, a portion of it exits along the
+length. This causes differing flow rates in the sections of pipe between points of exit and,
+as consequence, differing head loses in these sections. How this is accounted for when
+designing an irrigation system is through the use of a “Bernoulli Table” on a spreadsheet
+whose purpose is to model the various pressure differences along either a lateral or
+manifold while taking all the aforementioned variables into account. An example of this
+can be seen in Appendix B. The proposed software will utilize this technique to acquire
+the distribution uniformity along individual laterals (DUhose) and DU for manifolds.
+Table 1. Examples of components that affect uniformity (Burt et al. 1997)
+Uniformity component
+Factors causing nonuniformlty
+(a) Components and factors of DU for hand-move sprinkler irrigation systems
+Pressure differences
+Flow rate differences between
+sprinklers
+Different nozzle sizes
+Nozzle wear
+Nozzle plugging
+Sprinkler pattern nonuniformity
+Spacing
+Sprinkler design
+Nozzle size and pressure
+Wind
+Vertical orientation
+Plant interference around sprinkler
+Unequal application during start-up and Pipe diameter and length
+shutdown
+Duration of set
+Edge effects
+Inadequate overlap on field edges
+(b) Components and factors of DU for drip/microirrigation systems
+Differences in discharge between
+Pressure differences
+emitters
+Plugging of emitters
+Manufacturing variation
+Soil differences, if the emitters are
+buried
+Different emitter types in the same
+field
+Temperature differences along a lateral
+Volumes applied not proportional to
+plant area (assuming same plant age)
+
+Variations in plant spacing are not
+matched by emitter spacing or
+scheduling
+
+4
+Unequal discharge
+Friction Loss
+As water travels through a pipe, it loses energy due to friction. This results in a lowering
+pressure along the length of the pipe or hose. This is a key element to the design of an
+irrigation system in regards to hose lengths, manifold placement, and overall layout of a
+system. Several equations have been generated to estimate losses due to friction,
+however, the Darcy-Weisbach equation has shown to be the most accurate and reliable
+(von Bernuth 1990). This equation is shown below:
+  !
+where:
+
+"# $
+'
+2&
+V=
+L=
+D=
+g=
+f=
+
+(3)
+Water velocity (ft/sec)
+Pipe length (ft)
+Inside diameter (ft)
+Acceleration due to gravity (ft/sec2)
+A friction factor dependent on Reynolds Number (Re)
+
+In order to find the correct friction factor (f) for the Darcy-Weisbach equation knowing
+the relative roughness and Reynolds Number, one must refer to the Moody Diagram
+which can be seen in figure 1. If the flow of water is considered laminar, that is, having a
+uniform velocity profile and an Re < 2,000, then one would use equation 4. Or, more
+commonly for this application, if one is determining the friction factor for a small
+diameter pipe, this factor varies according to equation 5 which is also known as the
+Blasius equation (Provenzano and Pumo 2004; Demir 2007).
+  64)* +,
+
+  0.302 )* +/.$0
+
+(4)
+
+(Re < 2,000)
+(2,000≤ Re ≤100,000)
+
+(5)
+
+Even though the Blasius equation is quite often used in hand calculations, the most
+common for computer applications is the Fanning equation, shown as equation 6, because
+of its wider range of allowable Reynolds numbers (Burt and Styles 2011).
+  0.0056 2 0.5 )* +/.3$
+
+(2,000≤ Re ≤1,000,000)
+
+(6)
+
+The Reynolds Number (Re) is a dimensionless value defined as:
+#
+
+where:
+V = Water velocity (ft/sec)
+D = Inside diameter (ft)
+2
+v = Kinematic viscosity of water (ft /sec)
+)* 
+
+(7)
+
+5
+
+Figure 1. Moody Diagram. This relates the Darcy-Weisbach friction factor (f), Reynolds
+number (Re) and relative roughness for flow in a circular pipe (Burt and Styles 2011).
+Design of a Lateral
+A lateral is the smallest diameter pipe in the field onto which emitters (sprinklers,
+microsprayer, inline/online emitters, etc.) are attached (Phocaides 2007). To design an
+irrigation system properly, one must assess the total head loss throughout the lateral
+including friction loss along the pipe, local losses from emitters, and minor losses due to
+fittings and connectors (Provenzano 2005). In a drip hose/tape system, the lateral is
+usually composed of a polyethylene and is extruded in various thicknesses depending on
+the application. In a sprinkler irrigation system, there are also two commonly used
+options. One consists of 30 foot lateral sections of aluminum or PVC pipe that can be
+moved by hand. In the second, a solid set system, laterals are buried PVC pipe with
+sprinkler risers spaced at a predetermined interval. Since both drip and sprinkler systems
+are still commonly used, the program to be created will be able to handle input for both
+scenarios.
+Emitter Types. Sprinklers are a very common irrigation device in almost all crop types.
+They are designed with either a fixed or rotating head and utilize a small orifice through
+which water is discharged.
+Drip tape, the thinner of the two polyethylene pipe options, utilizes emitters that are
+integrated in the tape and use a turbulent path to increase velocity past the emitter such
+that any suspended solids in the water are carried through the path and beyond the emitter
+hole. While reducing clogs, this induces a local loss at the emitter that, by itself, is
+
+6
+negligible. However, this loss has gained interest in the development of drip hydraulic
+modeling software over the last few years. It has been shown to have a considerable
+contribution to the overall head loss when there are a large number of these instances
+along the length of a lateral which, in most cases, there are (Gyasi-Agyei 2013). These
+drip tape emitters come in two forms. The first is a welded-on emitter that can be inserted
+into the hose as the polyethylene is extruded. The tape then acts as the outer shell of the
+emitter and has holes along its length for flow discharge. Other tape emitters are part of
+the tape which has paths spanning the entire run to keep the flow turbulent and solids
+suspended. They are constructed with overlapping layers of polyethylene (Burt and Styles
+2011).
+Drip hose, a more stout alternative to drip tape, tends to support microsprayers and online drip emitters. Both of these emitters use a barb to stay attached to the drip hose,
+however, this barb obstructs the flow path resulting in a local head loss as well. A
+characteristic of on-line emitters is susceptibility to plugging. Unless the emitter has an
+exceptional tortuous path, multiple flexible orifices, or a rather large orifice, this type of
+emitter is sensitive to plugging (Burt and Styles 2011).
+Discharge. Emitter discharge flow rate is proportional to the point pressure at the orifice
+with respect to the emitter exponent and an empirically derived emitter constant. This is
+characterized by equation 8 below (Burt and Styles 2011).
+4  5 67
+
+where:
+
+(8)
+Q=
+k=
+P=
+x=
+
+Emitter discharge (GPH)
+Nozzle discharge coefficient
+Pressure at nozzle (psi)
+Emitter exponent
+
+Sprinkler Discharge. Sprinkler discharge uses an emitter coefficient of 05 and can
+simply be calculated based on the relation between pressure and flow rate shown in
+equation 9 below (Hathoot et al. 1994).
+4  5 6/.0
+where:
+
+(9)
+Q = Emitter discharge (GPH)
+k = Nozzle discharge coefficient
+P = Pressure at nozzle (psi)
+
+The nozzle discharge coefficient can be easily calculated given the manufacturers’
+sprinkler data. However, a value not typically taken into account is the loss due to friction
+in the sprinkler riser (Hathoot et al. 1994). Even though this may be a negligible value, it
+can still alter the emitter discharge and therefore should be taken into account. The
+following set of equations, 10 through 15, show a condensed progression of formulas
+used by Hathoot et al. to calculate the exact (theoretical) discharge of a sprinkler with a
+riser. The variables used relate to figure 2 which shows a lateral, riser, sprinkler
+assembly.
+
+7
+
+Figure 2. Lateral, riser, sprinkler assembly with marked points of interest (Hathoot et al.
+1994)
+Equation 10 shows how Pu is related to Pk by taking into account the various losses
+between the two points.
+68  69 2 68: 2 6:9 2 ;
+where:
+
+Pu =
+Pk =
+Pur =
+Prk =
+hR =
+
+(10)
+
+Pressure at point u (psi)
+Pressure at point k (psi)
+Pressure loss from point u to point r (psi)
+Pressure loss from point r to point k (psi)
+Height of riser
+
+One can note that equation 11 is simply a minor loss formula which multiplies a
+coefficient specific to the junction by the corresponding velocity head. This head loss Pur
+can only be calculated if the coefficient Kur is determined.
+
+68:  <8: !
+where:
+
+48$
+'
+2&=$
+
+Kur =
+Qu =
+g=
+A=
+
+(11)
+
+A coefficient found using Gardel’s equation
+Lateral discharge at point u (GPH)
+acceleration due to gravity (ft/s2)
+Cross-sectional area of lateral (ft2)
+
+Several studies conducted by Gardel and Rechsteiner (1970) resulted in the development
+of equation 12. This study involved the research and testing of various pipe connections
+
+8
+including a 90 degree tee connection which most closely represents the link between the
+lateral and a sprinkler riser.
+	
+D0.4 @ 0.1 =E
+A $
+A $
+<8:  0.95 ?1 @
+B 2 ? B C@0.3 2
+F
+	 $
+48
+48
+D E
+=
+where:
+q = flow rate through riser (GPH)
+Qu = Lateral discharge at point u (GPH)
+a = Cross-sectional area of riser (ft2)
+A = Cross-sectional area of lateral (ft2)
+
+(12)
+
+The result of combining equations 11 and 12 is shown in equation 13.
+	
+D0.4 @ 0.1 =E
+48$
+A $
+A $
+68: 
+B 2 ? B C@0.3 2
+G0.95 ?1 @
+FH
+	 $
+2&=$
+48
+48
+D=E
+
+(13)
+
+If the riser is long, equation 14, developed by Kincaid and Heerman (1970), can be
+substituted with the Darcy-Weisbach equation. However, most cases do not use
+particularly long risers so this equation will suffice.
+6:9
+
+
+48$
+DJ.$ E
+KL
+
+I
+
+2&=$
+
+where:
+
+Prk =
+Qu =
+g=
+A=
+
+(14)
+
+Head loss through the riser (psi)
+Lateral discharge at point u (GPH)
+Acceleration due to gravity (ft/s2)
+Cross-sectional area of lateral (ft2)
+
+By substituting equations 13 and 14 into 10 while considering sprinkler i, one can replace
+Pk with its respective sprinkler pressure, Pi resulting in equation 15 below.
+	
+D0.4 @ 0.1 E
+4M$
+AM $
+AM $
+=
+AM  <N O6M @
+G0.95 ?1 @ B 2 ? B C@0.3 2
+F
+	 $
+2&=$
+4M
+4M
+D=E
+@
+
+48$
+
+2&=$
+
+I
+
+DJ.$
+
+
+E
+KL H @
+
+; P
+
+(15)
+
+Using equation 15, the sprinkler discharge can be calculated.
+Drip Emitter Discharge. Drip emitters bring about an entirely different set of concerns
+than sprinklers. These include variations due to the manufacturing process, water
+temperature effects, and clogging (Provenzano 2007). The biggest concern with
+inconsistency in manufacturing, while usually maintaining a coefficient of variation (cv)
+below 0.10, is a hose distribution uniformity (DUhose). Some refer to this as emission
+
+9
+uniformity (EU) but the concept is the same. The contribution cv lends to DUhose is
+represented in equation 16 as defined by Karmeli and Keller (1975).
+DUSTU*  ?1 @ 1.27
+where:
+
+DUhose
+=
+cv =
+N=
+Qmin =
+Qavg =
+
+
+
+
+√X
+
+B!
+
+4YMZ
+'
+4
+
+(16)
+
+Hose distribution uniformity
+Coefficient of variation
+Number of emitters per plant
+Minimum flow rate along the lateral (GPM)
+Average flow rate along the lateral (GPM)
+
+Another factor one must consider with regard to drip emitters, both online and inline, is
+local head loss due to either a barb or coextruded emitter that disrupts the streamline and
+flow characteristics of the traveling water. The protrusion of the barb into the flow path
+causes a contraction in the drip hose effectively reducing the cross-sectional area of the
+lateral resulting in an increased head loss. Similarly, an inline emitter reduces the area in
+the tape compared to a section just upstream of the emitter causing loss in head
+(Provenzano and Pumo 2004).
+
+Figure 3. Flow path due to online drip emitter (a) and inline drip emitter (b)
+(Provenzano and Pumo 2004)
+By introducing an emitter in a pipe, the lateral incurs head loss due to both contraction
+and enlargement represented as λc and λs, respectively (Provenzano and Pumo 2004).
+This is modeled in figure 3 above. Below are the equations Provenzano and Pumo (2004)
+used in their study of flow characteristics past various drip emitters. Equation 17 was
+developed by Bagarello et al. (1997) and shows that the coefficient of kinetic head is
+independent of Reynolds number as it only relies on the ratio of the area of the pipe and
+the reduced area due to a protruding emitter.
+
+10
+=M
+	  1.68 ! @ 1'
+=
+
+,.$J
+
+where:
+
+(17)
+
+a = Coefficient of kinetic head
+Ai = Area of pipe section (in2)
+Ag = Flow cross-section area (in2)
+
+Equation 18 is the end result of a series of theoretical computations performed by
+Provenzano and Pumo (2004).
+\ 	 !
+where:
+
+#$
+'
+2&
+
+(18)
+λ=
+a=
+V=
+g=
+
+Head Loss due to contraction and enlargement
+Coefficient of kinetic head
+Mean flow velocity (ft/s)
+Acceleration due to gravity (ft/s2)
+
+Using this, one could develop a Bernoulli table as shown in Appendix B that not only
+takes into account friction loss along the lateral, but local losses due to protruding
+emitters as well. However, the concern with this is that, to adequately take this effect into
+account in the proposed software, the dimensions of several emitters would have to be
+determined and inputted to reduce the work of the user or future professors for the BRAE
+414 class.
+Effects of Temperature. It is typical to add about 2.5% of the total lateral length to the
+total computation due to the fact that in changing temperatures, the polyethylene hoses
+shrink and swell (Burt and Styles 2011). This concept should definitely be considered
+when calculating the friction loss in a system as it plays a vital role in determining the
+inlet pressure of the system. The coefficient of thermal expansion for a polyethylene hose
+is 0.00012 ft/degrees F, however, this changes slightly from polymer to polymer. In a
+study conducted by Clark (2005), several brands of drip tape were tested to see the effects
+that an increase in water temperature and pressure would have on the discharge. The drip
+tapes were tested with water temperatures ranging from 20 degrees C to 50 degrees C at
+55, 69, and 83 kPa. To relate the tests to each other, the group used equation 19 below.
+This ensured that each tape could be compared to the others as it involved determining a
+“temperature flow rate index” number also referred to as temperature discharge ratio or
+TDR (Clark 2005).
+]) 
+where:
+
+A^ °
+A$/ °
+
+(19)
+
+qt° = Emitter discharge at each measured temperature (GPH)
+q20° = Emitter discharge at initial base temperature (GPH)
+
+In this study, the highest TDR recorded was 1.97 with a water temperature of 50 degrees
+C at 83 kPa. This means that the discharge of the emitter was almost twice as high as it
+
+11
+was when tested at initial conditions. Other tapes’ TDR values ranged from 0.94 to 1.12
+which may lead one to believe that the case with a TDR of 1.97 was an outlier, however,
+even a 12% increase in emitter discharge is substantial enough to cause concern
+especially in a large field with tens of thousands of emitters. Water temperature doesn’t
+typically play as significant a role in the design of an irrigation system as variations in
+friction and elevation do, but is should be a point of concern especially in areas with high
+temperatures.
+Spaghetti Hose Losses. Microsprayers typically demand higher flow rates than standard
+drip emitters (between 4 and 30 GPH for Bowsmith Fanjets) and thus incur large losses
+in the couplers and tubing supplying them. It is not unusual to see losses of 2 – 6 psi
+though the two components (Burt and Styles 2011) and this needs to be accounted for in
+the overall design. The equations below (20 and 21) show how the losses through the
+tubing and couplers, respectively, are determined:
+  < !
+where:
+
+  < !
+where:
+
+4,.`0
+'
+ a.``
+
+Hf =
+K=
+Q=
+D=
+
+4$
+'
+a
+
+Hf =
+K=
+Q=
+D=
+
+(20)
+Friction loss (psi/ft)
+4.37 x10-7 for English units (4.82 for metric)
+Flow rate (GPH)
+Tubing ID (inches)
+
+(21)
+Friction loss (psi/ft)
+4.37 x10-7 for English units (4.82 for metric)
+Flow rate (GPH)
+Tubing ID (inches)
+
+Manifold Placement
+The overall goal of an irrigation system is to have all the emitter pressures equal
+throughout the field so that the distribution uniformity is high. However, this can be
+difficult to do if the system is to be designed on a sloping field. In order to get relatively
+similar pressures along all the emitters, a manifold which serves laterals in two directions
+has to be placed uphill from the serviced area (Burt and Styles 2011). This decision is
+based on the idea that as water travels down a lateral, it losses energy due to friction. But,
+if the lateral runs downhill, this lost energy can be accounted for or even negated due to
+the potential energy of the water being converted to kinetic energy and thus making up
+the difference. So, if a manifold is placed higher up on the hill, there is a lower pressure
+requirement needed to serve the most uphill emitter while the downhill lateral remains
+mostly unaffected by the increased friction loss accompanied with increased length
+because it is made up for with greater potential energy to begin with. This effect is
+modeled in figure 4.
+
+12
+
+49.50
+49.00
+
+Pressure (psi)
+
+48.50
+48.00
+Uphill
+
+47.50
+
+Downhill
+47.00
+46.50
+46.00
+
+-20
+
+0
+
+20
+
+40
+
+60
+
+Flow Rate (GPH)
+
+Figure 4. Comparison of pressure variation along uphill and downhill manifold sections
+(Burt and Styles 2011)
+The two conditions for ideal manifold placement are that both the average emitter
+pressures as well as inlet pressures are equal on both the uphill and downhill sides. So, if
+the downhill side has da higher pressure than the uphill side, move the manifold down the
+hill. The same concept applies if the uphill side is greater. This is an iterative process in
+which differing lengths of uphill and downhill hoses are tested in order to meet these
+conditions. Keller and Bliesner (1990), however, developed a concept that can
+significantly reduce the number of iterations. This process first involves determining the
+number of outlets on the lateral. A correction factor, F, is then found using table 2 which
+is multiplied by the mainline friction loss yielding the total lateral friction as shown in
+equation 19. Then, by comparing that number to the slope of the field, the designer can
+interpolate a Z factor from table 3 with which they can multiply by the overall lateral
+length, as shown in equation 20, to get an idea of the distance uphill from the bottom the
+field the manifold should be (Burt 2013).
+]	 "		   b c]	 	  d
+
+(22)
+
+"
+	  e f]	 "		 "&g
+
+(23)
+
+where:
+
+where:
+
+Hf = Friction Loss (ft, m)
+F = Correction Factor
+
+Z = Keller’s manifold placement factor
+
+13
+Table 2. “F” factor for multiple outlets
+Number of
+outlets on the
+lateral
+1
+5
+10
+20
+40
+100
+more than 100
+
+Correction
+Factor, F
+1
+0.457
+0.402
+0.38
+0.364
+0.356
+0.351
+
+Table 3. “Z” factor for a given elevation/friction ratio
+Elevation/Friction
+
+Z
+
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+1.7
+1.8
+1.9
+2
+2.1
+2.2
+2.3
+2.4
+
+0.5
+0.56
+0.6
+0.65
+0.69
+0.72
+0.75
+0.78
+0.81
+0.83
+0.85
+0.87
+0.89
+0.91
+0.92
+0.93
+0.94
+0.95
+0.96
+0.97
+0.98
+0.98
+0.99
+0.99
+1
+
+14
+This process can be used to get an idea of where to begin the iterations and rarely yields
+the best answer on the first try. The proposed program could use this process to help
+reduce its footprint and speed up computations.
+Flushing
+Flushing is an essential practice in irrigation system maintenance to ensure the longevity
+of the investment. By not performing this task, the emitters could become plugged,
+sediment could accumulate in pipes and hoses, and distribution uniformity could be
+drastically reduced. Flushing is most easily performed through the implementation of
+flush manifolds. With a manifold on the downstream ends of the hose runs, the tapes are
+more likely to be flushed frequently, equalization of pressure can take place in the case of
+crimped tape, and, in the case of a tape break, the opportunity of soil entry into tape is
+diminished (Burt and Styles 2011). Some design considerations when it comes to these
+manifolds include:
+1. Pressure regulating valves need to have the ability to allow for higher flow rates
+and downstream pressures during flushing
+2. Drip tape must be thick enough to withstand higher pressures
+3. Flush manifolds should not be tapered to allow for high flow rates through the
+tapes and the manifolds themselves
+4. Header manifolds should be designed to handle flows at flushing as opposed to
+normal operation criteria
+5. Pump must be oversized to accommodate flushing requirements.
+Tape Inlet Pressure. The drip tape inlet pressure typically increases during flushing
+periods due to increased friction in the tape (due to higher flows though the tape and the
+emitters) as well as friction requirements for the flush manifold itself, elevation changes
+along the manifold, and any minor losses than incur through the tape/manifold fittings,
+valves, and flushouts.
+Tape Inlet Flow Rate. With increased inlet pressures comes an increase in inlet flow
+rate. Because, when the valves at the downstream ends of the drip tapes are opened, there
+is an additional loss due to the friction characteristics of the flush manifolds, the tapes
+have a downstream pressure during flushing. This downstream pressure has an effect on
+the new inlet flow rate resulting in a flow that is proportional to the difference in the
+upstream and downstream ends of the drip tape (Burt and Styles 2011).
+Computer Programming Options
+There are a plethora of computer languages available that have a wide array of
+advantages and disadvantages with regard to optional functions, user friendliness, and
+overall performance. For a robust program that will be easy for the users to operate and
+navigate, it is decided to use Excel as the host for Visual Basic for applications. It is also
+possible to use VB.NET code with Excel but because the proposed software is operating
+through a host and not as a standalone program, it will be easier to code through Excel’s
+integrated development environment (IDE).
+
+15
+PROCEDURES AND METHODS
+
+Program Planning
+Original Program Analysis. Because this project entails updating an existing program
+from an out-of-date platform to more recent software, time has to be spent assessing and
+critiquing the current version in search for a more efficient and user-friendly path to the
+needed output. By analyzing the original program, one could find and fix flaws or bugs
+for the update.
+User Interface Layout. A program that is to be used by students and professionals for
+years to come needs to be intuitive and easy to use. It is imperative to establish a program
+structure with logical flow so the user will not get lost in pages of user forms and sheet
+after sheet of useless data that will require sorting through. It is for this reason that the
+new program will utilize Visual Basic coding that will generate only the desired outputs.
+Flow Chart Generation. In order to create a program that gets to the final result in the
+most efficient manner, the program designer must sketch several flow charts to visualize
+the flow of data though the embedded code. This is the most important step as it dictates
+whether the construction phase will take days or weeks.
+Program Construction
+Coding Standards. Like most engineering work, there are several common practices
+and standards to adhere to. One of the most important standards include commenting
+throughout the code so anyone that accesses it can understand the steps taken to perform
+a task. In Visual Basic, comments can be offset using apostrophes (‘). By placing this
+symbol at the beginning of a line, the creator is signifying that they want this marked line
+to be neglected when the program runs through all the lines of code. Another practice is
+to condense the code to the fewest lines possible while still performing the task at hand.
+This ensures the software will have a small electronic footprint and is not taxing on the
+system when performing routines.
+Functions and Subroutines. Functions and subroutines differ in the fact that functions
+return a result where the latter carries out a set of instructions. These are tested and
+debugged throughout the programming process to ensure proper operation. It is even
+more important to keep these two organized and working if several are interrelated and
+dependent on one another.
+Controls. Often times, excel workbooks that have several different options that the user
+can select from. These options can be displayed, accessed and selected through easy-touse “controls” such as a list box, combo box, drop downs, and check boxes. The former
+two are typically used in applications with a large array of data that would be
+cumbersome in a simple drop down. Checkboxes are often the best option in cases
+requiring only a few options or when multiple options need to be selected.
+
+16
+Program Description
+The workbook created takes user input regarding key aspects of hose hydraulics and
+generates a solution based on the user’s task at hand. There are 3 sub functions behind the
+“Single Hose” computation selection each based on slightly different calculation
+methods. These include solving for the average flow rate of the emitters given an inlet
+pressure, solving for the inlet pressure given a desired average flow rate, and modeling
+the hose during flushing. The user also has the option to select the “Manifold Placement”
+computation and this will allow them to place a manifold in a field such that the manifold
+is the correct distance uphill from the center to minimize energy losses in the system and
+increasing distribution uniformity.
+Input
+When the user opens the spreadsheet, they are only given the choice to decide what type
+of calculation they would like to perform—Single Hose or Manifold Placement. This
+decision then changes key aspects of the spreadsheet to make navigation somewhat less
+overwhelming. Once an option is selected, the spreadsheet will allow the user to input
+more values about the irrigation system in question. Figure 5 below depicts the Input
+worksheet with a few of the cells filled out and options selected.
+
+Figure 5. Input sheet shown with example data
+User Interface. One of the constraints with the former program was with the step by
+step terminal based user interface. While the software is very powerful, users were
+distracted by its outdated feel. With this in mind, this project was designed with
+consideration to the user throughout the process. Knowing that this workbook would be
+used by a wide variety of individuals, the user interface was created to be simple and
+intuitive. More than anything, however, the program needs to be robust. The user needs
+to have the option to run a calculation then, on a whim, change any value used by the
+program without being interrupted by an error message. In order to do this, several things
+need to be performed at once. Depending on which cell was changed, worksheet code
+may hide or unhide rows with regard to the procedure the user is trying to carry out. By
+
+17
+limiting the cells the user is able to enter data into, several issues can be avoided from the
+start. The program may also call functions to change other aspects of the workbook such
+as the chart display, textbox labels, or text color. Some subroutines can also be called
+with the use of buttons. For example, the button on the Computations worksheet runs
+certain parts of its code depending on several cell values throughout the workbook. The
+text on this button is also changed between “Match Flows”, “Match Pressures”, and
+“Place Manifold” depending on user input. Another key aspect of the interface is the use
+of drop down lists on the input sheet further limiting the user to follow designated paths
+through the workbook.
+Output
+Main Functions. As can be seen in Figure 5 above, when “Single Hose” is chosen from
+the drop down list, three check boxes appear which are used to determine which
+calculations will be performed by the program. The first option is to solve for the average
+flow rate of the emitters along an individual hose with emitters with a constant spacing
+given the inlet pressure of the hose. How this function operates is by changing the point
+pressure of the most downstream emitter until the user’s desired input pressure is
+reached. The second option is to calculate the inlet pressure of an individual hose given
+an average inlet pressure. This is performed by changing the pressure of the most
+downstream emitter until the average flow rate is equal to the input desired flow rate. The
+third and final single hose computation the program can perform is modeling the hose
+pressures and emitter flow rates while being flushed. In this, the velocity is converted to a
+flow rate and this is added to the flow rate at the most downstream emitter. The
+calculations to follow use the same technique as the other two functions to generate a
+table of flows versus pressures but now with an increased flow rate due to flushing
+requirements.
+If the user decides they would like to determine the hydraulically optimum location for
+their manifold, they need only to select the “Manifold Placement” option from the
+dropdown list on the input sheet and the spreadsheet updates all the formulas, text boxes,
+and chart to allow the computation to take place. The main function driving this is
+actually dependent on two tables based on the calculations performed in the function to
+calculate the inlet pressure given the desired average flow rate. One table is dedicated to
+only the downhill portion of the hose while the other is for the uphill. The program
+changes the most downstream point pressure on both of the tables (represented as either
+end of the total length of the hose) until the average flow rate of the hoses equal the
+user’s desired average flow rate. It then compares the inlet pressures of the two sides of
+the hose and if the uphill pressure is higher than the downhill, then the downhill length
+can be increased to decrease the friction lost in the excessive length the uphill section has.
+Data Portrayal. Once the user has filled in all of the required cells on the Input sheet,
+they can then press the Computations button to navigate to the results from the data they
+had entered. Once here, the user must click on the button on the far left of the screen
+which will read either “Match Flows”, “Match Pressures”, or “Place Manifold” as
+
+18
+discussed above. The screenshot in Figure 6 shows the overall layout of the sheet with
+subsequent Figures 7, 8, and 9 being more detailed looks at areas that display useful
+output data for the user. Table 4 shows the color designations of each section with regard
+to Figure 6.
+
+Figure 6. Overall layout of Computations sheet
+
+Table 4. Color designations for Figure 6 above
+Color
+
+Section
+Key Values
+Keller Values
+Pressure Distribution Chart
+Results
+Distribution Uniformity
+Downhill Bernoulli Table
+Uphill Bernoulli Table
+
+The Key Values section is exactly that. It displays values from the Input sheet as well as
+values easily derived from input data all of which will be used in one or more
+computations carried out by the spreadsheet. The Keller Values table is derived from
+formulas based on the Keller “Z” method for placing a manifold. This method is not ideal
+for use in software applications as it is not as accurate as the techniques used by this
+program. However, it is still good to use as a check to ensure the program is operating as
+it should. The Pressure Distribution Chart is a dynamic chart that displays the pressures
+of all the emitters along the hose and changes its axes titles depending on user input. If a
+“Single Hose” calculation were to be performed, the chart would only display the
+pressure distribution for hose going one way from the manifold. Alternatively, if a
+“Manifold Placement” calculation were performed, the chart would model the pressures
+of the hoses on either side of the manifold. An example of this is shown in Figure 7 using
+
+19
+arbitrary data for a drip tape system. In this figure, the pressure along the y-axis is
+modeled at all the emitters in on the hose. The emitter number is given on the x-axis.
+
+Figure 7. Pressure Distribution Chart on Computations sheet
+The Results section, shown in Figure 8, displays important values that reference the
+Bernoulli tables’ dynamic ranges. These values are dependent on where the 0th emitter is
+which is representative of the inlet to the hose. For example, the table extends down to
+the maximum number of emitters possible with regard to total length and emitter spacing.
+However, the table only generates emitter values on the emitters that are in the field. For
+example, if the total length of the hose is 600 feet with a 12 inch emitter spacing, the
+downhill length could be calculated to be 384 feet. There would be 385 emitters on the
+downhill side and 216 emitters on the uphill. To take this farther, to solve for the average
+emitter pressure on the downhill side, the dynamic range would have to adjust its height
+to extend from the pressure of the most downstream emitter all the way to the inlet
+represented as the 385th outlet. This range of pressure values are then averaged to yield
+your answer.
+
+Figure 8. Results section on Computations sheet
+
+20
+
+Figure 9. Distribution Uniformity section on Computations sheet
+Figure 9 above, the Distribution Uniformity section, also uses dynamic ranges but in a
+very different manner. Since the low quarter distribution uniformity takes into account
+only a select few of the values in its calculation, all flow rate values had to be ranked
+from greatest to smallest between two separate tables. A function then averages the
+lowest 25% of these values and divides it by the average of all flowrates yielding DUlq.
+Overall, the program uses a total of 10 dynamically named ranges to perform its in-depth
+computations most of which are in the Downhill and Uphill Bernoulli Tables. These
+tables are extremely similar except when it comes to the change in elevation column. The
+elevation in the uphill is subtracted from the pressures instead of added to account for
+energy loss due to increase in elevation.
+
+21
+RESULTS
+
+Program Testing
+Since there was already reliable software available to perform the same tasks as this
+project, results were tested against it to see how much variance there was between the
+platforms. In this, one input at a time was changed to extreme values on both the high and
+low ends. This led to the discovery of various bugs in the program which were fixed and
+retested. Table 5 below shows the input values used in the tests while Appendix C
+displays the results
+Table 5. Trial input values used in programming testing and debugging
+Input Description
+Hose ID
+Total Hose Length
+Slope of Hose
+Water Temp Entering Hose
+Extra Percentage of Hose Length for Expansion
+Emitter Spacing
+Manufacturing Coefficient (cv)
+Number of emitters per plant
+Nominal flow rate
+Pressure of the above nominal flow rate
+Emitter Discharge Exponent
+Desired inlet pressure
+Desired average flow rate
+Pressure at downstream end during flushing
+
+Initial
+Value
+0.875
+500
+0.2
+70
+2
+12
+0.03
+1
+0.27
+5
+0.5
+5
+0.27
+7
+
+Low
+Value
+0.5
+10
+-1
+35
+0
+6
+0
+1
+0.05
+1
+0
+0
+0.1
+0.1
+
+High
+Value
+1
+1200
+5
+150
+10
+300
+0.1
+10
+0.5
+10
+1
+10
+2
+10
+
+Comparing Results
+All of the single hose computations performed very well when compared to the original
+drip hydraulics software. Table 6 below shows, out of the 408 comparable computations,
+what the percent error was between platforms. It can be seen that the newer program
+performed very well considering different techniques were used in the computation of
+results.
+Issues. One of the issues witnessed with comparing the results this way was the lack of
+precision. Because all of the results were given in values rounded up to the tenths place, it
+became difficult to realistically stack one against the other. This is even more pronounced
+when comparing values less than 1. In one case, a maximum pressure difference along a
+hose that the original program calculated was 0.008 psi when a value of 0.0085 psi was
+determined for the same output in the new program. A difference of 0.0005 psi can be
+
+22
+Table 6. Percent of computed results that fall within various percent differences
+Percent Difference
+
+Number of Values
+
+Percent of total values
+
+< 1%
+< 10%
+< 25%
+< 50%
+
+344
+395
+404
+404
+
+84%
+97%
+99%
+99%
+
+calculated from this which when divided by the 0.008 psi leads to a 6.8% error. It is
+scenarios like this that made up the majority of the 16% missing from the “less than 1%
+difference” row in Table 5. As for the 3% of values from “less than 10% difference” up,
+an explanation can be seen in Appendix C next to these high values. In short, this
+occurred due to script in the original to code skip processes like tolerance checking and
+value correction. Another constraint to consider is the older software has a limit of
+around two thousand outlets but with the new program, the user is only limited by the
+time they want to spend waiting for calculations to take place. Because this project
+generates the Bernoulli tables only to the number of emitters necessary, its usefulness is
+endless.
+
+23
+DISCUSSION
+
+Code Organization
+In programming, syntax is the backbone of orders to be carried out by the processor and
+it varies from language to language. This includes various looping strategies, If
+statements, and variable declaration that can all be used in different ways to yield the
+same result. However, some practices are not only more efficient and faster than others,
+but easier to understand. Great lengths were went to in order to have the most efficient
+code while maintaining a high level of clarity. In a program with as many variables as
+this one has, it cannot be stressed enough the importance of having code that not only the
+author can read, but others as well. As a coding standard, anyone with access to the
+source code needs to be able to dissect various parts of the code and understand how it
+functions. A technique used in this project to aid in understanding code is the use of
+comments throughout. Key parts of functions and subroutines were described in plain
+English so someone else can get an understanding of what the code is actually doing.
+Logic Structure
+A difficult task to overcome was determining the best way to direct the user through the
+user interface. With the user having the ability to do 4 different calculations, subroutines
+had to be made such that the functions they carry out are dependent on what path the user
+wants to take. For example, the check boxes on the input sheet are just cells, not objects.
+In the initial state, the text and border colors in these six cells are the same as the fill of
+the cells they lie on (dark gray). Upon selecting “Single Hose”, these are made visible by
+changing the text and border colors to another color (light gray). These then appear to be
+normal checkboxes that the user can select to determine what task they would like to
+perform. But, it doesn’t stop there. As the user clicks on the boxed cell, a
+“Selection_Change” macro (code that fires when cells within a specified range are
+selected) checks that status of the value within the clicked cell and if it contains not text,
+then the code changes the value to “X”. While doing so, it also deletes any other X’s that
+may be in one of the other two check boxes. This is an important step in the avoidance of
+errors that may arise from having several checkboxes containing X’s as other macros that
+perform tasks dependent this selection need to know which functions to run.
+As for the main functions driving the Bernoulli tables and various other subroutines, the
+majority of computations were performed using If statements. For example, if the
+downhill length is equal to the total length, “No Uphill Section” is displayed throughout
+the workbook. This is, of course, always displayed when the user is performing Single
+Hose calculations, but also when the manifold placement function decides that the
+optimum location for the manifold is on the top of the slope. The manifold placement
+function also incorporates the use of a For loop. The logic behind it goes something as
+follows. For X = 0 to the number of iterations the code defines, set the downhill length
+equal to half of the total length plus X multiplies by 10% of the total length. This is
+performed until the uphill inlet pressure is greater than or equal to the downhill inlet
+pressure.
+
+24
+Error Handling
+Several steps were taken to prevent the user from inputting data that will break the
+functions used. On the input page alone, there are forty-two possible message boxes that
+appear and warn the user if a value they entered is either too high or too low. These error
+messages reference a hidden sheet named “Limits” in which upper and lower bounds are
+set for all user input boxes. The values on this sheet are also related to the path the user is
+on in their computations. For example, if the user states they are doing calculations for
+drip tape, then the maximum nominal flow rate they can enter is two gallons per hour.
+However, if the user decides to select drip hose, then this upper bound increases to
+twenty gallons per hour.
+Another error message that may occur is one that fires when the slope is too steep for the
+“Solve average GPH given Inlet P” function. This only occurs when the slope is negative
+indicating that water is being pumped uphill. In this situation, the most downstream point
+pressure is set to zero and the Inlet pressure is checked. If the inlet pressure is greater
+than the desired inlet pressure, then the desired inlet pressure cannot be achieved and the
+message box appears.
+Obsolescence
+Technology is an ever-evolving and growing industry. As it was the goal of this project to
+bring former software up to date, it will be the goal of another to outdo this one. An issue
+faced during the creation of this program was with the use of ActiveX controls. With a
+Windows update, all ActiveX controls in workbooks were rendered useless. To avoid this
+issue altogether, the decision to use shapes instead of controls was made. There is less
+one can do with shapes as opposed to controls, however, it seems to be the safest route to
+go with regard to obsolescence.
+
+25
+RECOMMENDATIONS
+
+For the sake of time, over anything else, several ideas for this project were not pursued.
+These include the ability to select the emitter of choice as opposed to entering
+manufacturer data manually, generating a summary table for key values, making all
+formulas dependent upon user-defined constants, working in metric units, as well as
+making the entire project an excel plugin so use with any workbook. Each one of these
+would require numerous hours of coding and workbook manipulation to complete
+without lending much in terms of overall user experience. However, time saved though
+use of these additions could lead to improved design capability and greater efficiency in
+the office. How these tasks would have been carried out is described below.
+There are hundreds of emitter types, configurations, and orientations to be found in
+industry literature. Short of releasing new lines or discontinuing old products, the data
+associated with this key design criteria is relatively constant. One goal for a future release
+of the project would be allowing the user to select the emitter they would like to use for
+their design from an easy to use list box. The user would be asked if they know
+specifically which emitter they would like to use and if the answer is “Yes”, then a list
+box will be made visible containing an array of available emitters. Upon selection, the
+project is populated with known values of nominal pressure, flow rates at this nominal
+pressure, and the emitter exponent stored on an emitter database sheet. But, if the user is
+unsure of the emitter type or the emitter is not in the database, data would be entered
+manually like it currently is.
+Another update from the original should generate a summary table so the user can have
+the option to display vital information quickly and can even be given the option to export
+this data to another workbook. As it is, the Computations sheet displays all of the
+information used in the complex calculations performed by various macros. It is difficult
+to find information useful to the user’s design as too many cells have to be sifted through.
+If a summary table can be generated containing this data, the overall effectiveness of this
+program will improve.
+One area of improvement would be to relate the formulas to cells containing various
+constants such as viscosity and acceleration due to gravity. This was attempted in early
+version of the project but was later abandoned in an attempt to compare results with Dr.
+Burt’s original drip hydraulics software. Now that the workbook is reasonably close to
+producing the results of the BASIC-backed software, it would not be too difficult to
+retool the formulas to refer to user-defined constants. This also expands the overall
+usability of the project to industries designing relatively incompressible fluid conveyance
+systems with different fluid densities such as the oil industry. This leads to the next
+suggested upgrade that also increases the number of possible users and that is to give the
+user the option to work in metric units.
+With the option to work in metric units, the user is not confined to work with data
+displayed with imperial units. This would, again, only increase the reach and worldwide
+usability of the software. However, this would probably be the most daunting task among
+
+26
+those suggested. Not only would formulas have to be changed, but text next to input and
+output cells would have to as well.
+The last recommendation would be to make the entire workbook an excel plugin. As a
+plugin, the designer could work in their own irrigation design spreadsheet and press a
+button on the ribbon to generate this program within it. It would load the required sheets,
+formatting, formulas, and source code so the designer doesn’t have to navigate to another
+workbook in a separate window. This would be the ideal solution to reduce the footprint
+of the project as it could be stored in the Excel directory itself and only called when
+needed.
+Other, smaller upgrades that are not so daunting include locking the Computations sheet
+until all data is filled on Input sheet, running the code behind the variable button on the
+Computations sheet upon opening the sheet, and warning the user that the Computations
+sheet is not up to date if input data has been changed since last running the main
+subroutine. Also, it would be useful if the chart’s x axis title changed from “Downhill” to
+“Uphill” if a negative slope is entered under a single hose computation.
+
+27
+REFERENCES
+Book
+1. Burt, Charles M. "Hand Move Sprinklers." Irrigation Design Manual. San Luis
+Obispo, Ca: ITRC, 2013. N. pag. Print.
+2. Burt, Charles, and Stuart W. Styles. Drip and Micro Irrigation Design and
+Management: For Trees, Vines, and Field Crops: Practice plus Theory. San Luis
+Obispo, CA: Irrigation Training and Research Center, 2011. Print.
+3. Keller, J. and R.D. Bliesner. 1990. Sprinkle and Tricle Irrigation. Van Nostrand
+Reinhold. N.Y., N.Y.
+4. Phocaides, Andreas. Handbook on Pressurized Irrigation Techniques. Rome: FAO,
+2007. Print.
+Technical report
+1. Burt, Charles M. Surface Drip Tape Irrigation Systems as an Alternative to SDI for
+Field and Row Crops. Tech. no. 06-002. San Luis Obispo, Ca: ITRC, 2006. Print.
+Journal article
+1. Bagarello V; Ferro V; Provenzano G; Pumo D (1997). Evaluating pressure losses in
+drip irrigation lines. Journal of Irrigation and Drainage Engineering (ASCE),
+123(1), 1–7
+2. Burt, C. M., A. J. Clemmens, T. S. Strelkoff, K. H. Solomon, R. D. Bliesner, L. A.
+Hardy, T. A. Howell, and D. E. Eisenhauer. "Irrigation Performance Measures:
+Efficiency and Uniformity." Journal of Irrigation and Drainage
+Engineering 123.6 (1997): 423-42. ASCE. Web.
+3. Clark, G. A., F. R. Lamm, and D. H. Rogers. "Sensitivity Of Thin-Walled Drip Tape
+Emitter Discharge To Water Temperature." Applied Engineering in
+Agriculture 21.5 (2005): 855-63. Web.
+4. Demir, V., H. Yurdem, and A. Degirmencioglu. "Development of Prediction Models
+for Friction Losses in Drip Irrigation Laterals Equipped with Integrated In-line
+and On-line Emitters Using Dimensional Analysis." Biosystems Engineering 96.4
+(2007): 617-31. Web.
+5. Gyasi-Agyei, Yeboah. "A Bayesian Approach for Identifying Drip Emitter Insertion
+Head Loss Coefficients." Biosystems Engineering 116.1 (2013): 75-87. Web.
+6. Gardel, A., and Rechsteiner, G. F. (1970). "Les pertes de charge dans les
+
+28
+branchements en te des conduites de section circulaire." Bulletin Technique de la
+Suisse Romande, 96(25).
+7. Hathoot, Helmi M., Hussein M. Abo-Ghobar, Ahmed I. Al-Amoud, and Fawzi S.
+Mohammad. "Analysis and Design of Sprinkler Irrigation Laterals." Journal of
+Irrigation and Drainage Engineering 120.3 (1994): 534-49. Web.
+8. Keller, J., and Karmelli, D. (1974). "Trickle irrigation design parameters." Trans.
+ASAE, 17(4), 678-684.
+9. Kincaid, D. C., and Heermann, D. F. (1970). "Pressure distribution on a center pivot
+sprinkler irrigation system." Trans. ASAE, 13(5), 556-588.
+10. Provenzano, Giuseppe, and Domenico Pumo. "Experimental Analysis of Local
+Pressure Losses for Microirrigation Laterals." Journal of Irrigation and Drainage
+Engineering 130.4 (2004): 318-24. Web.
+11. Provenzano, Giuseppe, Domenico Pumo, and Pietro Di Dio. "Simplified Procedure to
+Evaluate Head Losses in Drip Irrigation Laterals." Journal of Irrigation and
+Drainage Engineering 131.6 (2005): 525-32. Web.
+12. Provenzano, Giuseppe, Pietro Di Dio, and Guillermo Palau Salvador. "New
+Computational Fluid Dynamic Procedure to Estimate Friction and Local Losses in
+Coextruded Drip Laterals." Journal of Irrigation and Drainage Engineering 133.6
+(2007): 520-27. Web.
+13. von Bernuth, R. D. (1990). "Simple and accurate friction loss equation for plastic
+pipe." J. Irrig. and Drain. Engrg., ASCE, 116(2), 294-298.
+14. ASCE. (1978). "Describing irrigation efficiency and unifonnity." J.lrrig. and Drain.
+Engrg.• ASCE, 104(1), 35-41.
+
+29
+
+APPENDIX A
+HOW PROJECT MEETS REQUIREMENTS FOR THE BRAE MAJOR
+
+30
+HOW PROJECT MEETS REQUIREMENTS FOR THE BRAE MAJOR
+
+Major Design Experience
+The BRAE senior project must incorporate a major design experience. Design is the
+process of devising a system, component, or process to meet specific needs. The design
+process typically includes fundamental elements as outlined below. This project
+addresses these issues as follows.
+
+Establishment of Objectives and Criteria. The objectives and criteria for this project
+are established to meet the needs of irrigation designers and the expectations of the
+Irrigation Training and Research Center. See Design Parameters and constraints below
+for a more thorough discussion of objectives and criteria.
+Synthesis and Analysis. This project incorporates fluid dynamic computations,
+empirical values derived from ITRC research, and coding techniques to attain key values
+used for irrigation design.
+Construction, Testing and Evaluation. The software was developed using various flow
+charts to yield the result the user is looking for. It was then tested for bugs and issues to
+ensure proper operation every time. The results of the finished product were compared to
+the original software for accuracy and precision.
+Incorporation of Applicable Engineering Standards. The coding behind this project
+follows coding conventions such that it is easy to follow for someone else who may have
+to edit it for future updates.
+Capstone Design Experience
+The BRAE senior project is an engineering design project based on the knowledge and
+skills acquired in earlier coursework (Major, Support and/or GE courses). This project
+incorporates knowledge/ skills from these key courses.
+
+
+
+
+
+
+
+
+BRAE 236 Principles of Irrigation
+BRAE 312 Hydraulics
+BRAE 414 Irrigation Engineering
+BRAE 533 Irrigation Project Design
+BRAE 438 Drip/Micro Irrigation
+CSC 231 Programming for Engineering Students
+CSC 234 C and Unix
+
+Design Parameters and Constraints
+This project addresses a significant number of the categories of constraints listed below.
+
+31
+Physical. The software should be small and require very little computer resources as
+well as maintain an easy to navigate user interface.
+Economic. This program will save time and money as it will speed up the design
+process.
+Environmental. Better irrigation designs created using this software can lead to more
+efficient use of water and fertilizers decreasing the potential for ground water
+contamination.
+Sustainability. This program can help a designer achieve a high distribution uniformity,
+a key aspect of irrigation efficiency. With a higher irrigation efficiency, more water and
+energy can be conserved.
+Manufacturability. This is a single software package that will have bugs worked out.
+Health and Safety. A better design give the grower the opportunity to focus more on the
+health of their crop.
+Ethical. The software will help the designer along the process deterring them from
+cutting corners on irrigation design.
+Social. Having an irrigation system with high distribution uniformity is good for society
+as it can potentially lead to more efficient use of water and fertilizer.
+Political. Political criteria for this project fall in line with the social aspect as reducing
+wasted water and fertilizer can help a grower stay within strict political bounds on
+resource use.
+Aesthetic. The program is to be extremely user-friendly and easy to follow as well as
+have a dark, metro theme to stick to current software norms.
+
+32
+
+APPENDIX B
+BERNOULLI TABLE
+
+33
+
+Downhill Bernoulli Table
+
+34
+
+APPENDIX C
+RESULTS COMPARISON DATA
+
+35
+
+36
+
+37
+
+38
+
+39
+
+

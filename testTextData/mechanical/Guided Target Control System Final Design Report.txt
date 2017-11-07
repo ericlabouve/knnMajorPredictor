@@ -1,0 +1,5804 @@
+Guided Target Control System
+Final Design Report
+for Daimler Trucks North America
+
+Team SLONav
+John Barry
+
+jdbarry@calpoly.edu
+
+Zach Eagan
+
+zeagan@calpoly.edu
+
+Ryan Mackintosh
+
+rmackint@calpoly.edu
+
+Advisor
+Professor Charles
+Birdsong
+
+cbirdson@calpoly.edu
+
+California Polytechnic State University
+San Luis Obispo, CA
+June 2017
+
+Statement of Disclaimer
+Since this project is a result of a class assignment, it has been graded and accepted as
+fulfillment of the course requirements. Acceptance does not imply technical accuracy or
+reliability. Any use of information in this report is done at the risk of the user. These risks
+may include catastrophic failure of the device or infringement of patent or copyright
+laws. California Polytechnic State University at San Luis Obispo and its staff cannot be
+held liable for any use or misuse of the project.
+
+1
+
+Table of Contents
+Statement of Disclaimer
+
+1
+
+Table of Contents
+
+2
+
+Executive Summary
+
+5
+
+1 - Introduction
+
+6
+
+1.1 - Problem Statement
+
+6
+
+1.2 - Specifications
+
+6
+
+1.3 - Project Management
+
+10
+
+1.3.1 - Management
+
+10
+
+1.3.2 - Project Timetable
+
+11
+
+2 - Background
+2.1 - Advanced Driver Assistance Technology
+
+12
+12
+
+2.1.1 - Autonomous Emergency Braking (AEB)
+
+12
+
+2.1.2 - Autonomous Emergency Braking (AEB) Testing
+
+12
+
+2.2 - Existing Products
+
+13
+
+2.2.1 - ABD/DRI Guided Soft Target
+
+13
+
+2.2.2 - Messring NHTSA Vehicle Target
+
+13
+
+2.2.3 - Virtual Vehicle Testing
+
+14
+
+2.3 - Patents
+
+14
+
+2.4 - Standards
+
+15
+
+2.5 - Technology
+
+15
+
+2.5.1 - GPS
+
+15
+
+2.5.1.1 - WAAS
+
+15
+
+2.5.1.2 - DGPS
+
+15
+
+2.5.1.3 - LAAS/GBAS
+
+16
+
+2.5.2 - Inertial Measurement Unit (IMU)
+
+16
+
+2.5.3 - Kalman Filter
+
+16
+
+2.6 - Technical Challenges
+
+18
+
+2.6.1 - Position Accuracy
+
+18
+
+2.6.2 - Constant Acceleration and Deceleration
+
+18
+
+3 - Design Development
+
+18
+
+3.1 - Idea Generation
+
+18
+
+3.1.1 - Ideation Session 1
+
+19
+
+3.1.2 - Ideation Session 2
+
+19
+2
+
+3.1.3 - Ideation Session 3
+
+20
+
+3.1.4 - Ideation Session 4
+
+21
+
+3.2 - Concept Selection
+
+22
+
+3.2.1 - Sensor and Actuator Concept Selection
+
+23
+
+3.2.2 - Controller Concept Selection
+
+25
+
+3.3 - Description of Lead Concept
+
+29
+
+3.3.1 - Lead Concept Vs. Engineering Specifications
+
+30
+
+3.3.2 - Risks and Challenges
+
+31
+
+4 - Final Design Description
+
+32
+
+4.1 - Overall Design Summary
+
+32
+
+4.2 - Detailed Design Description
+
+32
+
+4.2.1 - Microcontroller
+
+32
+
+4.2.2 - Sensor Feedback System
+
+33
+
+4.2.3 - Control Systems
+
+34
+
+4.2.3.1 - Steering Control
+
+35
+
+4.2.3.2 - Acceleration Control
+
+41
+
+4.2.4 - Final Enclosure
+
+42
+
+4.2.5 Component Mounting Plate
+
+43
+
+4.3 - Cost Analysis
+
+45
+
+4.4 - Physical System Wiring
+
+45
+
+4.6 - Software Overview
+
+48
+
+4.7 - Manufacturing and Assembly
+
+53
+
+4.7.1 - Initial Component Test Rig Assembly
+
+53
+
+4.7.1.1 - Building the Test Board
+
+53
+
+4.7.1.2 - Configuring Sensors
+
+56
+
+4.7.2 - Enclosure Fabrication and Assembly Plan
+
+56
+
+4.7.3 - Maintenance Considerations
+
+57
+
+4.8 - Safety Considerations
+
+57
+
+4.8.1 - Batteries
+
+58
+
+4.8.2 - Out of Control Vehicle
+
+58
+
+5 - Product Realization
+5.1 - Manufacturing Process
+
+59
+59
+
+5.1.1 - Enclosure
+
+59
+
+5.1.2 - Wiring
+
+59
+
+5.1.3 - Printed Circuit Boards
+
+61
+
+5.1.4 - 3D Printed Parts
+
+61
+
+5.1.5 - Software
+
+61
+
+5.2 - Alterations from Planned Design
+
+62
+3
+
+5.2.1 - Hall Effect Sensors
+
+62
+
+5.2.2 - Digital to Analog Converter Board
+
+64
+
+5.3 - Future Design Recommendations
+
+65
+
+5.3.1 - Control Electronics Recommendations
+
+66
+
+5.3.2 - Control Software Recommendations
+
+67
+
+5.3.3 - Mechanical Hardware Recommendations
+
+68
+
+6 - Design Verification Testing
+6.1 - Planned Scaled System Validation
+
+69
+69
+
+6.1.1 - Sensor Testing
+
+69
+
+6.1.2 - Sensor Integration Testing
+
+70
+
+6.1.3 - Control System Testing
+
+70
+
+6.1.4 - Safety System Testing
+
+71
+
+6.2 - Integration with Frame Design
+
+71
+
+6.2.1 - Motor Controller Testing
+
+71
+
+6.2.2 - Sensor Accuracy
+
+71
+
+6.2.3 - Braking Actuator Control
+
+72
+
+6.3 - Planned Track Day Testing
+
+72
+
+6.3.1 - Safety Systems
+
+72
+
+6.3.2 - Control Systems
+
+72
+
+6.3.3 - Track Day Safety
+
+73
+
+6.4 Test Results
+
+73
+
+6.4.1 Test Code
+
+73
+
+6.4.2 Frame Resonance
+
+74
+
+6.4.3 Steering Control
+
+75
+
+6.4.4 Acceleration Control
+
+76
+
+7 - Conclusion and Recommendations
+
+77
+
+7.1 - Recommendations for Future Improvement
+References
+
+77
+78
+
+4
+
+Executive Summary
+Problem Summary
+Daimler Automotive, the parent company of mercedes-benz requires improved methods for
+testing their Autonomous Emergency Braking Systems. To this end they have presented a
+series of four senior projects to California Polytechnic State University in San Luis Obispo. One
+of the Projects is to build a facsimile of a human crossing the street. The other three projects of
+which this is a part; are to produce an autonomous car facsimile. These projects are intended
+for use in testing new Autonomous Emergency Braking Systems and may serve as the basis for
+future senior projects.
+Organisation
+The Daimler/Cal Poly senior projects are as follows:
+● Crosswalker
+○ Human walker facsimile
+● Target Practice
+○ Soft, car shaped, target intended for safe, repeated impact testing at low speed
+● Roadkill
+○ Frame designed to move and carry the soft target during testing
+● SLONav
+○ Control System for the guided target frame
+This report focuses primarily on the control and electrical systems of the guided target frame.
+For more details on the other projects please see their respective reports. There is no joint
+summary report.
+Project Focus
+The SLONav control system is intended to provide control and autonomous navigation to the
+guided target frame. The control system is intended to allow navigation between GPS based
+waypoints, provide precision control of vehicle velocity, and allow retrieval of test data. above all
+else the guidance system is intended to improve the safety of operator and test technicians.
+Timeline
+The full system as described in this report was developed over the course of nine months, as a
+standard three quarter senior project. The first quarter was primarily dedicated to the
+development of requirements, scope, and other managerial details. The second quarter was
+devoted to project design. The third quarter was devoted to construction of the final system and
+integration with the other teams.
+Results
+The final controls system developed for this project is electrically complete. It is capable of radio
+controlled operation and data collection. An autonomous control software framework is partially
+complete but not ready for deployment. Additionally closed loop control and multipoint waypoint
+mapping has been partially implemented but not deployed. The controls system is at a good
+stage to be continued as a mechatronics or software engineering project in further years.
+
+5
+
+1 - Introduction
+1.1 - Problem Statement
+Daimler Trucks North America has a need to test advanced driver assistance technology they
+are developing for use in their future vehicles. Daimler’s current test methods involve towing a
+prop foam vehicle which emulates the rear end of a car, in front of the vehicle they are testing.
+Although this method is reliable, it does not provide them with the accuracy, nor the data
+acquisition, they hope to achieve with their tests. Alternative test vehicles provide the
+functionality that Daimler seeks, however they are expensive. The need for more effective
+testing at a cheaper cost has led Daimler Trucks, in cooperation with Cal Poly’s Mechanical
+Engineering program to issue the Guided Target Control System project to our senior project
+group SLONav. Our goal for this project was to develop and build the mechatronics and control
+system necessary to navigate the guided target frame vehicle and to collect data during testing.
+
+1.2 - Specifications
+When developing our specifications we considered a few target customers for our product. The
+customers we considered for this project were the test technicians at Daimler who would use
+this equipment directly, the advanced driver assistance systems engineering team at Daimler
+whose systems this device would test, the guided target frame team, and future students who
+may be developing additional functionality for this system. The requirements we developed to
+address the needs of the customers are the following:
+1. Electronics required to control the motors
+2. Control system software for steering target frame
+3. Software for controlling speed, acceleration, and deceleration of target frame
+4. Integration of safety features such as an emergency stop protocol
+5. Data acquisition system for recording of critical variables
+6. Sensor integration and placement
+7. Power supply for control and data acquisition electronics
+8. Packaging of electronic bundle
+9. Hardware necessary for interfacing with target frame
+10. Velocity setpoints that need to be reached at the trigger positions during testing
+11. Acceleration and deceleration profiles that occur in between trigger positions
+12. An unlimited number of configurable trigger points
+13. A maximum speed that the vehicle will be able to effectively control
+14. Accuracy of the vehicle position along a straight path
+15. Ability to integrate with target frame team’s design
+16. Total cost of development
+17. Integration of an emergency stop (E-Stop) protocol
+18. Integration of other appropriate safety features
+6
+
+19. Collection of critical data variables(i.e. position, velocity, and acceleration)
+20. Modular and maintainable code base for future development
+21. User interface
+22. Power required to run electronics and sensors
+23. Reliability of the system to conduct test procedure
+With these requirements we utilized the quality function deployment (QFD) method to analyze
+our requirements compared to our customers, competitors and specifications. A copy of our
+QFD spreadsheet can be seen in Appendix A.
+
+7
+
+Table 1.1 Formal Engineering Specifications for Guided Target control system
+project. Risk refers to the difficulty of meeting the specification and is assigned as
+High (H), Medium (M), or Low (L). Compliance refers to validation methods which
+are Analysis (A), Test (T), Similarity to Existing Designs (S), and Inspection (I).
+Spec. #
+
+Parameter Description
+
+Requirement/Target Tolerance
+
+Risk Compliance
+
+1
+
+Controllable Speed
+
+32.2 kph
+
+Min
+
+M
+
+A, T
+
+2
+
+Number of trigger points
+
+10
+
+Min
+
+H
+
+A, T
+
+3
+
+Positional accuracy with
+regard to trigger points
+
+±1.5 meters
+
+Max
+
+H
+
+A, T
+
+4
+
+Straight line accuracy
+between trigger points
+
+±0.5 meters
+
+Max
+
+H
+
+A, T
+
+5
+
+E-Stop signal latency
+
+100 ms
+
+Max
+
+M
+
+A, T
+
+6
+
+Acceleration
+
+1 m/s​2
+
+± 0.12 m/s​2 H
+
+A, T
+
+7
+
+Deceleration
+
+3.5 m/s​2
+
+± 0.12 m/s​2 H
+
+A, T
+
+8
+
+Acceleration/Deceleration
+setting
+
+0.25 m/s​2
+increments
+
+Min
+
+H
+
+A, T
+
+9
+
+Initial setup time
+
+30 min
+
+Max
+
+M
+
+T
+
+10
+
+Setup time between tests
+
+10 min
+
+Max
+
+M
+
+T
+
+11
+
+Percentage of successful
+tests conducted without
+control system faults
+
+94%
+
+Min
+
+M
+
+A, S
+
+12
+
+Latency for control loop
+feedback
+
+28 ms
+
+Max
+
+H
+
+A, T
+
+13
+
+Size
+
+90% within 10cm x
+20cm x 20cm
+
+Max
+
+L
+
+I
+
+14
+
+Cost of control system/data
+acquisition hardware
+
+$1200
+
+Max
+
+L
+
+A
+
+15
+
+Power independent memory
+
+Included
+
+Min
+
+L
+
+I
+
+16
+
+Code Documentation
+
+All major functions
+and modules
+commented
+
+Min
+
+L
+
+S, I
+
+The target values in our engineering specifications were developed in a few different ways.
+Some of our specifications were already defined in the Daimler project proposal or stated by our
+sponsor (David Smith) during our initial meeting. The specifications that were determined this
+way were the minimum max speed, minimum number of trigger points, and cost. The positional
+8
+
+accuracy and straight line accuracy specifications were determined during meetings with a
+representative of our sponsor (Thomas Stevens).
+The E-Stop signal latency was based on the maximum required speed, our predictions of the
+stopping deceleration, and the typical latency of radio communication protocols [17]. Our
+acceleration and deceleration specifications were obtained from the guided target frame group,
+based on information provided by David Smith.
+The initial setup time and setup time between tests specifications were suggested by our
+sponsor. The initial setup time specification was determined by roughly estimating how long it
+would take to upload a test protocol, for the GPS to get an initial position from a “cold” start, and
+any other initialization routines required by the software. The setup time between tests
+specification was based on the time needed to retrieve data in between tests.
+The reliability specification was determined by reading a National Highway and Traffic Safety
+Administration (NHTSA) docket regarding the planned criteria for recognizing new vehicles as
+having a crash imminent braking system [8]. In the NHTSA docket they list that a new vehicle
+must have 7 out of 8 valid test trials for most of their test scenarios. Since our design will likely
+have to conduct tests similar to these trials we decided that it should have a reliability of two
+times the number of valid trials which makes the reliability rated at 15 out of 16 trials or
+approximately 94%.
+The sensor cycle latency specification was determined by calculating the time necessary for the
+test vehicle to go outside of the 0.5 m straight line accuracy requirement which is approximately
+56 milliseconds. We decided that if we need the test vehicle to maintain the positional accuracy
+it would need more than one sensor cycle to correct itself so we decided that a cycle latency 28
+ms would be more robust and open up the possibility of controlling the test vehicle at higher
+speeds.
+The size specification was determined by looking at similar vehicle data logging products like
+the OXTS RT2000 (Appendix B) which has GPS and inertial measurement tracking in a
+package that is approximately 9.25” by 4.75” by 3”. We believed that some of the sensors would
+likely need to be outside of the main electronics bundle so decided that the requirement would
+be that 90% of the electronics must fit in the 8” by 8” by 4” footprint.
+The power independent requirement was included because we believed that the system would
+need some way of storing long term data regarding its operation routines and to have test data
+be retrievable if the system fails because of a power loss.
+Lastly, the code documentation specification was determined from the fact that the code written
+for the system will need to have standardized formatting to simplify debugging and promote
+modularity of the code. The standardized formatting was also intended to make it easier for
+future teams to develop the code base further and implement more advanced features.
+9
+
+The risk of each specification was determined heuristically by the group members based on our
+previous project experiences and understanding of the specification. We defined the risk as
+being the perceived difficulty of meeting the specification. The highest risk specifications were
+determined to be positional accuracy of the test vehicle, the straight line accuracy of the test
+vehicle, the sensor latency timing, the configurable acceleration/deceleration, and the number of
+trigger points that need to be implemented. We determined these specifications were the
+highest risk because they require fast, accurate, and sensitive sensor feedback which put a
+higher emphasis on efficient control code. We determined the controllable speed to be medium
+risk because the timing constraints of that specification is significantly slower than the high risk
+specifications. The setup time specifications were determined to be medium risk because most
+of the system (microcontroller and sensors other than GPS) will likely need a few seconds to
+initialize. The GPS sensor and the physical manipulation of the test vehicle will have a much
+larger impact on the setup time. The E-Stop delay was determined to be medium risk because
+even though it has a moderate timing constraint, the code necessary to implement it was
+thought to be simpler than the control code. The size and cost were determined to be low risk
+specifications because microcontroller, embedded PCs, and other electronics are low cost,
+approximately 10 USD for a typical microcontroller (Appendix H), and very small, 10mm by
+10mm footprint for a typical microcontroller (Appendix H). We determined that the code
+documentation was a low risk specification since limited time is the main deterrent of proper
+documentation.
+The compliance for each specification states the general method of testing that will be taken to
+validate the specifications. The four methods of compliance we have defined are, analysis (A),
+test (T), similarity to existing designs (S), and inspection (I). The analysis method required that
+we have appropriate calculations or simulation code to prove that the specification has been
+satisfied. An example of this would be determining the execution time of the control loop to
+determine if we can control the vehicle traveling at 20 mph. The analysis compliance method
+will be the first compliance test for most of the specifications. The test method will require
+physical testing of the specification and verifying test data. An example of this would be having
+the target frame drive at 20mph using our control loop and observing the response over a set
+distance on a dry flat track with minimal wind (10 mph or less). The test compliance method was
+the last compliance test for most of the specifications. The similarity to existing designs method
+will require comparisons of our design to a system with known values for the specification being
+tested. An example would be comparing our electronics and enclosure design to a similar
+product that is used in a similar environment such as the OXTS RT2000 (Appendix B). The
+similarity method will depend on available information for comparable products. The inspection
+method requires verifiable measurements that the system meets the specification. An example
+of this would be measuring the final dimensions of the electronics bundle we developed to show
+that they meet the size specification. The inspection compliance will be conducted after the
+analysis compliance method.
+
+10
+
+1.3 - Project Management
+For the purposes of organisation, members of the SloNav team were each assigned official
+responsibilities depending on their skills and interests. These assignments were not always
+followed strictly, however they provided the team with a rapid method for breaking up tasks
+throughout the project. As follows are the roles assigned to each member.
+
+1.3.1 - Management
+Ryan Mackintosh
+● Communications Officer
+○ Main point of contact with sponsor
+○ Responsible for drafting any emails
+○ Liable for keeping sponsor informed on meeting agenda and project progress
+● Progress Progression Documentation
+○ Maintain Critical Path Documentation throughout the course of the project
+● Test plan developer
+○ Aid the development of any necessary test plans to debug software
+○ Lead the development of any hardware testing needed. (eg. Impact, vibrations
+testing, etc.)
+● Lead support structure designer
+○ Responsible to designing and prototyping all support structures. (eg. controller
+fixture)
+● Assistant electronics technician
+○ Assist in development and assembly of any custom circuit boards required
+John Barry
+● Secretary/Recorder
+○ Maintain information repository for team (GitHub, Google Drive, etc.)
+○ Complete weekly status report.
+○ Assign due dates to all project tasks on a weekly basis.
+○ Keep Log of all information discussed during sponsor meetings
+● Information gathering
+○ Compile all research documentation in info. repository
+● Inventory manager
+○ In charge of sourcing and tracking all required materials for testing
+● Test plan developer
+○ Aid the development of any necessary test plans to debug software
+Zach Eagan
+● Team Treasurer
+○ Maintain team material budget
+○ Update Bill of Materials as project progresses
+○ Responsible for communicating any purchases need to sponsors
+● Inventory manager
+11
+
+●
+
+●
+●
+
+○ In charge of sourcing all required materials for testing
+Lead test plan developer
+○ Lead the development of any necessary test plans to debug software
+○ Assist the development of any hardware testing needed. (eg. Impact, vibrations
+testing, etc.)
+Codebase maintenance
+○ Responsible for reviewing and maintaining all code implemented
+Lead electronics technician
+○ Responsible for assembling circuits
+
+1.3.2 - Project Timetable
+In order to coordinate the project development through its three quarter duration we developed
+a comprehensive Gantt chart with our expected timeline. The full Gantt chart may be found in
+Appendix D. Listed below are the major project milestones.
+● Preliminary Design Review → Nov 15th, 2016
+○ Document chosen concept for design with supporting evidence
+● Critical Design Review → Feb 7th, 2017
+○ Provide detail overview of how chosen design will be achieved
+● Manufacture and Testing Review → March 16th, 2017
+○ Evaluation of manufacturing and testing procedures planned to construct and
+verify prototype
+● Project Update Report → March 16th, 2017
+○ Brief summary of project status
+● Prototype testing → April 4th, 2017
+○ Beginning of final design verification
+● Final Design Review → June 2nd, 2017
+○ Final project report which builds on Critical design review with final design
+specifications and results
+● Design Expo → June 2nd, 2017
+○ Presentation of final design at Cal Poly
+
+2 - Background
+2.1 - Advanced Driver Assistance Technology
+The purpose of the project was to develop a test vehicle which Daimler can use to assist with
+testing the advanced driver assistance technology they are developing for trucks and buses.
+Advanced driver assistance technology encompasses a variety of systems that improve the
+driving experience and provide safety features to reduce accidents. Some examples of these
+systems are adaptive cruise control and autonomous emergency braking. Adaptive cruise
+control is a system for a vehicle that attempts to maintain the vehicle’s speed but adjusts the
+speed to keep a safe distance from other vehicles. Autonomous emergency braking (AEB) is a
+12
+
+collision avoidance technology that is used to avoid or reduce the severity of imminent crashes.
+Through the project description and our meetings with Daimler it was suggested that this project
+will mainly be used to improve the testing of the autonomous emergency braking systems that
+they are developing. While we focussed on autonomous emergency braking test conditions, the
+test vehicle is designed to be capable of conducting tests for other systems Daimler is
+developing. The paper “Advanced Driver Assistance Systems” published in SAE International
+gives a overview of the current systems available today [1].
+
+2.1.1 - Autonomous Emergency Braking (AEB)
+Autonomous Emergency Braking (AEB) is a system that integrates sensors into the front of a
+vehicle to monitor proximity and relative speed of other vehicles to determine if a collision will be
+imminent. If a collision is imminent then the system will apply the vehicle brakes in an attempt to
+avoid the collision or minimize damage and injury. A report on AEB systems by the National
+Highway Traffic Safety Administration (NHTSA) states that these systems could potentially
+prevent up to 910,000 accidents within the United States, if widely adopted [2].
+
+2.1.2 - Autonomous Emergency Braking (AEB) Testing
+The testing of AEB systems is a new requirement for automotive manufacturers with standard
+testing procedures being first established as recently as 2012 for the NHTSA [2] and 2013 for
+the European New Car Assessment Programme (Euro NCAP) [3]. The testing procedures
+generally involve the vehicle under test trying to avoid crashing into a test vehicle under various
+relative speed conditions. The relative speed conditions are the following:
+1. Vehicle under test moving at test vehicle with it stationary
+2. Vehicle under test moving at test vehicle with it decelerating
+3. Vehicle under test moving at test vehicle with it at lower speed
+The procedures and specific test criteria are explained thoroughly in the standards from the
+NHTSA [2] and Euro NCAP [3].
+
+2.2 - Existing Products
+Through our research we found several existing solutions to the problem we are solving with
+this project. The existing solutions we found mainly fell into two categories which were an
+autonomous test vehicle with many advanced features, a car analog that was towed by another
+vehicle being driven manually, and a virtual simulation testing autonomous software.
+
+2.2.1 - ABD/DRI Guided Soft Target
+The first device that we found when researching was the Guided Soft Target Vehicle produced
+by AB Dynamics (ABD) and Dynamic Research, Inc (DRI). This device is an example of an
+autonomous test vehicle.
+
+13
+
+Figure 2.1 Low profile guided soft target frame produced by ABD/DRI from the
+specification sheet provided by ABD (Appendix B).
+The ABD/DRI guided soft target consists of a low profile frame and a breakaway car shaped
+shell that mounts to the frame. This product has GPS tracking capabilities and uses an inertial
+measurement unit (IMU) to keep the vehicle following a precise path. The vehicle has the
+capability to follow programmed paths with predefined speed profiles and coordinate its motion
+with other vehicles. It is also capable of being manually or autonomously driven. Perrone
+Robotics has a device that is similar to ABD/DRI’s Guided Soft Target Vehicle called the
+Automated Vehicle Test System. The Perrone Robotics product has a higher top speed than
+ABD/DRI (55 mph versus approximately 42 mph) and uses the general purpose robotics and
+automated vehicle operating system that they have developed called MAX. Both the ABD/DRI
+and Perrone Robotics systems solve the problem, but our sponsor has suggested that they
+have more features than they need and the cost of these systems are high.
+
+2.2.2 - Messring NHTSA Vehicle Target
+The Messring NHTSA Vehicle Target is a partial vehicle shell that is connected by a long frame
+to a tow car. This product is similar to the current product that Daimler wants to replace. The tow
+car is driven by a person and the vehicle shell represents the rear end of a common vehicle.
+The low frame is to allow for the vehicle under test to stop after it hits the vehicle shell but
+before it reaches the tow car.
+
+14
+
+Figure 2.2​ Messring NHTSA vehicle target attached to towing vehicle for testing
+from website.
+(www.messring.de/test-facilities-and-components/aeb-test-systems/mhtsa-vehicl
+e-target-ssv/)
+This product provides a robust platform for collision testing but requires a human driver and a
+seperate car to be used for conducting any tests. The flexibility of having a human driver is
+helpful for conducting a variety of test speeds and conditions. The downside of this system is
+that having a human driver can lead to inconsistency in the velocity and acceleration
+requirements of the test since it is difficult to perform exact accelerations and decelerations
+consistently. This system lacks some of the data logging features required (i.e. velocity and
+GPS) without extra equipment.
+
+2.2.3 - Virtual Vehicle Testing
+In the past few years some autonomous vehicle manufacturers such as Google, have employed
+alternate test methods to validate their autonomous cars. Rather than solely conducting physical
+tests, Google has decided to complement its already impressive road testing initiative, with
+virtual simulation verifications [4]. Although these simulations only focus on validation of the
+vehicle software, it is has proven to be an invaluable part of the testing procedure since it allow
+for decades worth of data in a few hours. The simulations also enable companies to test
+thousands of unique scenarios, that would otherwise be too dangerous. Although the California
+DMV has acknowledged the value that simulated testing presents, it has not currently allowed
+for virtual simulations to replace physical test.
+
+2.3 - Patents
+During our research of existing products we found that DRI has applied for patents regarding
+the technology they have developed for Guided Soft Target Vehicle. The patents cover a variety
+of topics that are used within their product such as a method of trajectory planning [5],
+breakaway antennas, base station system architecture, and radar signature minimization [6].
+
+15
+
+These patents are thorough but very specific to the systems that DRI designed and are currently
+pending approval.
+
+2.4 - Standards
+During the course of our research we found a few standard test protocols developed by different
+entities. One was produced by the European New Car Assessment Programme (Euro NCAP)
+which is an organization that provides car safety information to the public. We used the Euro
+NCAP test specification on automatic emergency braking [3] as a resource to understand the
+type of testing our project will participate in. Another standard that we found was from the
+Insurance Institute for Highway Safety [7] which provided some information regarding data
+acquisition equipment used during their tests. A docket from the National Highway Traffic Safety
+Administration regarding Crash Imminent Braking systems [8] along with the their report on AEB
+systems [1] was used to further understand the type of testing our project will be used for. All of
+these standard protocols were used in determining our engineering specifications, which is
+explained in our objectives section.
+
+2.5 - Technology
+2.5.1 - GPS
+Through our interviews with our sponsors at Daimler and our further research into alternative
+solutions we found one of the primary requirements of the project is the ability to accurately
+determine the position of the test vehicle. One option for determining the position of the test
+vehicle is to use a GPS location receiver. While standard GPS has a defined accuracy of 20ft
+under normal conditions [9] our project specifications require a minimum positional accuracy of
+5ft. Additionally most GPS receivers have a maximum refresh rate of only 10 Hz, which, at our
+defined 20mph will be insufficient to correct for unexpected drift. For this reason we conducted
+research into augmented GPS systems including Wide Area Augmentation System (WAAS) and
+the Differential Global Positioning System (DGPS).
+2.5.1.1 - WAAS
+The Wide Area Augmentation system is designed primarily for aircraft control, but is common in
+many US based GPS systems. This network of augmentation satellites provides accuracy
+averaging 2–3 meters within the US [10].
+2.5.1.2 - DGPS
+Differential GPS relies on a nearby base station able to average the GPS signal over a 24-hour
+period and transmit the precise current inaccuracy to the receiver. This method supports up to
+10 cm accuracy under ideal conditions depending on distance from the base station, calibration
+time, and environmental conditions [11]. A nationwide DGPS network is available though
+coverage and accuracy are dependent on location [12]. Additionally, single purpose base
+stations may be set up assuming compliance with FAA and FCC regulations.
+16
+
+2.5.1.3 - LAAS/GBAS
+Local Area Augmentation System, or Ground Based Augmentation System. This system of
+ground based stations can be used to augment GPS to accuracies of less than a meter but
+require extensive permanent infrastructure [13]. With this method a series of local short range
+transmitters provide GPS updates by comparing current GPS measurements at each tower with
+the known fixed positions of the towers [14].
+
+2.5.2 - Inertial Measurement Unit (IMU)
+An inertial measurement unit is a packaged combination of sensors typically used to determine
+the position, velocity, and acceleration of a moving body. The sensors most commonly found in
+IMUs are accelerometers, gyroscopes, and magnetometers. The accelerometers are used to
+measure accelerations of the body it is attached to, typically in the three dimensions. The
+gyroscopes are used to measure the rate of rotation of the body, usually about three axises.
+The magnetometers measure the magnetic field strength the body is subjected to, usually in
+three dimensions. Unlike GPS devices, IMUs are not able to determine the absolute position of
+the object they are mounted to because they only measure movement from their previous
+position. A method of navigation called dead reckoning where the difference between the
+current reading and a previous reading is used to estimate how far the object has traveled.
+
+2.5.3 - Kalman Filter
+A Kalman filter is an algorithm that utilizes a linear model of a system, sensors, and their
+associated uncertainties to get more accurate predictions of what the system is doing than
+utilizing the information directly. Kalman filters are mainly used when you have multiple sensors
+with system that is continuously changing. The Kalman filter has two main steps which are the
+prediction and update. The prediction step utilizes the previous state of the system and
+estimates how the system has changed at the current time. The update step uses the predicted
+system change and compares it to sensor measurements to produce a more accurate estimate.
+The diagram in Figure 2.3 shows helps with visualizing the flow of data. Figure 2.4 shows a
+simple visual of how the values from the prediction step is combined with the measurements
+from the update step to produce a more accurate value.
+
+17
+
+Figure 2.3 ​Drawing of a information flow for a generic Kalman filter [15]. The
+blocks represent a vector of variables that are being estimated. The ​k subscript
+represent the current value of that variable and the ​k-1 subscript represents the
+previous value. The arrows coming from letters with ​k subscripts represent the
+models and uncertainties that influence the variable at the different steps.
+
+Figure 2.4 Drawing of the probability distribution functions for the position of a
+car as it is moving along a track [16]. The orange distribution represents the
+prediction of the position based on a model of the system. The gray distribution
+represents the position based on a sensor measurement. The green distribution
+represents the position based on combining the measurement and prediction
+using a Kalman filter.
+
+18
+
+2.6 - Technical Challenges
+2.6.1 - Position Accuracy
+Our positional accuracy requirement is specified as no more than ± 1.5 meters from any
+positional waypoint and no deviation of more than ± 0.5 meters from the straight line between
+waypoints. This is to ensure that the target frame is always in view of measurement systems on
+the Vehicle Under Test. This positional accuracy was one of the main challenges for our control
+system as this required algorithms to combine sensors and increase accuracy beyond that of
+any single sensor. The GPS system in particular is of concern for these specifications. Though
+GPS systems under ideal conditions can fix position within tens of centimeters, normal
+operation provides accuracy of only 0.5 - 3 meters. Additionally few GPS units provide updates
+at higher than 10 Hz and no GPS unit we have found so far provides higher than 20 Hz within
+our price range. These low accuracy specifications mean we are largely unable to rely only on
+absolute position measurements for determining our position on the track.
+
+2.6.2 - Constant Acceleration and Deceleration
+Daimler has specified that they want to be able to control the acceleration and deceleration of
+the test vehicle based on trigger points that are defined on the test vehicle path. This
+requirement was a technical challenge for two main reasons. The first reason is that the
+acceleration and deceleration rates depend on variables such as the final chassies design
+which were outside of our control. The other reason that this requirement is a challenge is that
+the drive and braking systems can have nonlinearities that the controls must compensate for.
+An example of a nonlinearity could be a deadband, which is an region where changes in the
+control signal do not affect the response. Dead bands can occur with electric motors, hydraulic
+systems, etc.
+
+3 - Design Development
+Once we defined our engineering specifications and confirmed them with our sponsor, we
+began our conceptual design process. We started by defining three main functions that our
+design concept had to accomplish which were locate itself, make decisions, and control outputs.
+We used these functions as topics for four ideation sessions. After we completed the last
+ideation session we used the ideas we generated to build design concepts for the different
+functions and compared them using a series of weighted matrices.
+
+3.1 - Idea Generation
+Over the course of several ideation sessions recorded directly in Appendix E we developed a
+comprehensive list of possible solutions to the three major challenges of this project. Namely,
+how the vehicle would locate itself, how it would then make decisions based on the position and
+
+19
+
+other sensor data, and how the control system would finally output its decisions to the chassis
+motors and actuators.
+
+3.1.1 - Ideation Session 1
+Our first ideation session focused on finding unconventional methods for our control system to
+locate itself relative to both its environment and the GPS coordinate system. We found many
+impractical solutions to replace conventional sensors, some of which should work given enough
+development like using star constellations for night only navigation, but most of which were
+unfeasible. This session was particularly important in getting the team to think about the
+inaccuracies inherent in conventional sensors as well as producing a list of possible alternatives
+to the standard GPS and IMU design. Some of the most notable of these ideas are discussed
+below.
+● Computer Vision:
+○ We considered several options for computer vision including stereo distance
+measurements, track marker identification, and motion tracking. These methods
+could provide all the information necessary to direct the vehicle however they are
+expensive in development, maintenance, and processing power.
+● GPS:
+○ As our specified nodes are defined by physical location as well as time and
+velocity we determined that GPS alone is not sufficient as it only provides
+position and low resolution velocity data. It is however essential as GPS is our
+only source of absolute spatial measurements.
+● Revolution Sensor (Motor Shaft Encoder):
+○ To adjust individual motor control algorithms we needed a way to directly
+measure the rotation of each powered motor. A revolution sensor allows us to
+take this measurement independent of external conditions.
+● Inertial Measurement Unit (IMU):
+○ An IMU allows our system to monitor its orientation, linear acceleration, and
+rotational acceleration which helps determine relative motion between GPS
+measurements.
+● Track Markers (Magnetic, RFID, Paint/Chalk)
+○ We considered various types of track markers to provide additional absolute
+information to our system. This system was later discarded as we hoped to avoid
+any modifications to the test track.
+● Whiskers/Antenna:
+○ A less conventional method this system would utilise direct contact sensors to
+locate the edges of the track. This method may be practical in the future as an
+emergency prevention feature to avoid injury or loss of control but would not be
+sufficiently adaptable to help with guiding the vehicle.
+
+20
+
+3.1.2 - Ideation Session 2
+Our second session focused on the types of actuators we might need to control and the control
+signals associated with each type. This session allowed us to examine aspects common to most
+vehicles. Our first task in this ideation session was to make a list of possible actuators we might
+be asked to control. A few of these options are listed below.
+● Brakes:
+○ Hydraulic Disk
+○ Drum
+○ Inductive
+● Drive:
+○ DC Motor
+○ Stepper Motor
+○ AC Motor
+○ Rocket
+● Steering:
+○ Wind Flaps
+○ Electronic Differential
+○ Steering Linkage
+We next attempted to determine a few control signals which were sufficient for a large number
+of the possibilities. We determined that the most likely control scheme would be a combination
+of digital signals, analog signals, pulsed DC signal such as Pulse Width Modulation, and
+external control interface such as SPI or I2C the event that the chassis team selects motors with
+built in controllers.
+
+3.1.3 - Ideation Session 3
+In our third ideation session we focused on an overview of the control logic. During this session
+we were able to model the overall program flow of our system using sticky notes. This initial flow
+chart closely resembles the basis for our top level program design.
+Our top level program flow chart from ideation session 3 is shown in Figure 3.1. Our program
+begins with a check of important safety features to ensure the system is ready to be safely
+operated at which point it notifies the operator. The system then loads the test map and
+compares it to GPS data to calculate a direct route to the next waypoint. Steering and control
+algorithms adjust the chassis motors before looping back to recalculate route based on new
+sensor data.
+
+21
+
+Figure 3.1 ​Initial program flow.
+
+3.1.4 - Ideation Session 4
+In our final official ideation session we looked at possible hardware architectures, with an aim to
+find as many different ways as possible to bridge the gap from our sensors to our actuators. Our
+primary architectures shown below were designed with consideration to major issues, such as
+control loop latency and complexity.
+
+Figure 3.2​ Partially distributed architecture.
+Our first model shown in Figure 3.2 utilises hardware abstraction which distributes multiple types
+of communications signals and evaluation of sensor data on external processors to reduce code
+complexity for the CPU. By utilizing a dedicated hardware block to handle input and output the
+CPU can spend more time monitoring the system performance.
+
+22
+
+Figure 3.3​ Centralised architecture.
+Our second model, put all the computation on a single central processor. This model also began
+to look at additional sensors and requirements such as the need for smooth power to the
+sensors.
+
+Figure 3.4​ Fully distributed architecture.
+Our third model focused entirely on hardware abstraction. By removing the CPU entirely we
+considered a system where no single failure would disable the system. Here the sensors are
+buffered directly into separate control blocks each of which makes it’s own decision based on
+the input data.
+
+3.2 - Concept Selection
+In order to select the best concepts from our ideation sessions we employed a series of Pugh
+matrices, included below. For each aspect of the design, we compared our top options against a
+23
+
+set of criteria developed specifically for that aspect. Our final design matrix compares different
+combinations of the best options from the two subcategories, sensor type and processor type,
+which we believed were most influential to our overall project. These options were ranked based
+on a further set of weighted criteria. The more unconventional and infeasible ideas were quickly
+eliminated, leaving us with a small selection of designs with a large amount of prior
+development and infrastructure. Our top option uses a single multi-core microprocessor for
+logical control taking input from a combination of GPS, IMU, and wheel encoders outputting via
+dedicated motor controllers to the larger chassis.
+
+Figure 3.5 Symbol key used by all the following Pugh matrices as a method of
+rating various concepts against one another.
+
+3.2.1 - Sensor and Actuator Concept Selection
+The Pugh matrix in Figure 3.6 illustrates the outcome of the selection process used to determine
+how the vehicle should locate itself during testing. From these results we determined that an
+RFID, IMU, RPM sensor, and GPS receiver would all provide useful location data. After some
+discussion, it was decided that it would be advantageous to consider using a collection of
+sensor types. This would provide more data as well as serving as a method of checking our
+sensors to ensure they are all working properly. We chose to include the IMU, GPS receiver,
+and RPM sensor in this collection. The RPM sensor was chosen because we felt it to be the
+most reliable since it functioned in a semi-mechanical way. The IMU was selected because it
+would provide the most accurate velocity and acceleration data, as well as being easy to embed
+into our microcontroller. The GPS was chosen because it provided the most effective positioning
+data, which was vital to our testing procedure. The RFID was not included because we did not
+feel it could provide any additional data that wasn’t covered by the other sensors.
+
+24
+
+Figure 3.6 Pugh matrix evaluating different methods the vehicle could use to
+locate itself during testing.
+The orientation data acquisition matrix in Figure 3.7 was fairly similar to the previous location
+matrix, however it was more focused on ensuring that the vehicle would have reference to the
+direction it was traveling in. This matrix was crucial to determining our success in meeting our
+±0.5 meters course deviation specification. The results revealed that we should consider the
+viability of utilizing a dual gps system, with the hope of improving the vehicle’s ability to
+determine its direction. It also reinforced our previous decision to include an IMU.
+
+Figure 3.7 Pugh matrix evaluating different methods of determining the
+orientation of the vehicle.
+The Pugh matrix shown in Figure 3.8 highlighted our decision process in selecting the primary
+types of linear actuator present in our system. Both the electromagnetic and piezoelectric
+actuators proved to be reasonable options, primarily due to their controllability and simplicity
+with respect to system integration. However, we chose electromagnetic actuators due to their
+availability and intuitive nature.
+
+25
+
+Figure 3.8 Pugh matrix evaluating different types of linear actuators the controller
+would operate to control the vehicle’s braking.
+
+3.2.2 - Controller Concept Selection
+The control signal outputs matrix in Figure 3.9 was used to determine the best type of signal
+transmission to use with the components chosen to operate the vehicle. As anticipated, the
+outcome indicated that either discrete or digital voltages would be preferable, due to their
+commonality and processing power. However, the actual chosen signal types were determined
+by the requirements of the frame’s actuators.
+
+Figure 3.9 Pugh Matrix evaluating different types of output signal the controller
+would send to our system’s actuators and the vehicle motors.
+The outcome of our communications matrix in Figure 3.10 indicated that radio signals were the
+optimal method of communication with our vehicle. It was decided that the primary function of
+the communications system would be to indicate to the vehicle when the user wanted to begin
+and end the test. More importantly it would serve as our method of transmitting an emergency
+26
+
+stop command. As a result of these needs, we determined that the distance and frequency at
+which the user could communicate with the vehicle was of major importance. Both the RC Radio
+and base station with radio satisfied these categories, however the base station with radio was
+chosen because it exceeded the RC radio‘s user interface. Later in the design process
+additional research showed the added complexity of the base station was too high, and the cost
+of useing an existing system was sufficiently low that we opted for a high quality long range
+model aircraft remote control.
+
+Figure 3.10 Pugh matrix evaluating different types of long range communications
+that the test engineer could use to communicate with the vehicle.
+The operating system style Pugh matrix in Figure 3.11 was one of most influential decisions for
+the microcontroller selection. The results of the matrix revealed that a hardware only or
+embedded control style would be preferable due primarily to their ease of design and low
+latency. Upon further consideration, embedded control was selected, since a hardware only
+approach would have only been practical if the system was chosen to be FPGA based.
+
+Figure 3.11 Pugh matrix evaluating different styles of operating system that
+could be embedded in our controller.
+
+27
+
+The outcome of the processor style Pugh matrix shown in Figure 3.12, rivaled the vehicle
+location method as the function that most heavily influenced our overall project direction. The
+results from the processor matrix revealed that there were three feasible processor styles that
+could form the bedrock of our control system: a Harvard based microcontroller, distributed
+control, and FPGA (field-programmable gate array). These three options stood out primarily due
+to their low latency, and ability to implement a fail-safe program, both of which were crucial to
+our system operations. All three types were considered in the final design matrix.
+
+Figure 3.12 Pugh matrix evaluating different types of processors that our control
+system would be based on.
+The results of our data upload and download pugh matrix shown in Figure 3.13, reinforced the
+decision to select a USB type data storage. USB was chosen as the primary method of data
+storage and retrieval in order to meet the power independent memory specification. This
+specification was chosen to increase the system’s convenience. Since the removable type of
+USB further supported this philosophy it was selected as the final choice of data storage.
+
+Figure 3.13 Pugh matrix evaluating different methods to collect and transfer any
+valuable data.
+
+28
+
+The list of potential designs for the final design matrix shown in Figure 3.14, was formed by
+listing every possible combination of the system’s two most influential functions, locate itself and
+processor style. The concepts in this list were then compared to a weighted list of criteria that
+needed to be satisfied. The criteria chosen for our matrix was based on the specifications listed
+in the project’s QFD analysis. From this list control feedback latency was given the highest
+weight factor do to its importance in our system’s basic functionality and data accuracy.
+Positional accuracy was also weighed highly, since the test vehicle’s ability to follow a straight
+path was deemed to be critical to successfully test Daimler’s autonomous vehicles systems.
+E-stop signal latency was also highly ranked due to its influence in safely operating the test
+vehicle. The outcome of the matrix revealed that a system which employed all three sensor
+types, controlled by a microcontroller was the best option. These results confirmed our suspicion
+this type of system would be the best option due to its high performance across all noteworthy
+criteria, specifically in positional and straight line accuracy. Although the choice of using a
+microcontroller somewhat sacrificed our signal and feedback latency compared to FPGA or
+distributed control, we believed it would excel in maintainability, as well as being more
+approachable for future students working on our system.
+
+Figure 3.14 Final design matrix evaluating the best overall combination of
+sensors and control system layouts.
+In order to begin testing of our designs as soon as possible we developed an additional design
+matrix, shown in Figure 3.15, to select an appropriate microcontroller and development
+package. Our highest ranking option for controller is the STM32 Nucleo-64 line of development
+boards. These boards have good support because they are compatible with Arduino shields
+developed for the Arduino Uno (Appendix H) and STM has developed their own versions of
+shields for these boards. The Nucleo-64 boards also have a good amount of processing power
+and all the peripherals we found important (Appendix H). The peripherals which we weighted
+29
+
+the highest were the timers, analog to digital converters (ADC), hardware floating point units
+(FPU), and communications protocols. The Nucleo-64 boards ranked the highest in almost all of
+those categories.
+
+Figure 3.15 Design matrix evaluating the best overall microcontrollers to control
+our system.
+
+3.3 - Description of Lead Concept
+Based on the idea generation, Pugh matrices, and weighted decision matrices we produced (as
+shown in sections 3.1 and 3.2) our lead concept was as follows:
+●
+
+●
+
+●
+
+●
+
+STM Nucleo-64 (microcontroller) based central processing unit
+○ This component will provide the primary processing power for our system. It has
+sufficient I/O capabilities and processing power and a good support community.
+GPS, IMU, and motor encoder based control system
+○ These three sensors together we expect will provide sufficient positional, velocity
+and acceleration data to maintain course even at high speeds.
+Single threaded embedded code
+○ Due to the need for low latency algorithms we have opted to avoid the use of any
+abstracting operating system. The program will run as a single thread with short
+interrupts only.
+Removable USB storage for test protocol upload and sensor data download
+
+30
+
+○
+
+●
+
+●
+
+As a simple method of transferring data between the vehicle and the user we
+have selected a removable storage medium which can be loaded with test
+waypoints and from which test data can later be retrieved.
+Focus on controlling electromagnetic actuators
+○ For ease and accuracy of control we recommend the use of standard electric
+motors and actuators. Though this is ultimately not our decision we will plan for
+this until informed otherwise.
+Base station radio communication
+○ To allow easy feedback and control to and from the vehicle during a test we have
+opted for minimal user control using a radio base station. This system will be
+based on a minimal computer interface connected to a radio transceiver. E-stop
+and some other minor controls will be included but the primary purpose is to
+provide feedback during a test.
+
+The STM Nucleo-64 board was used as the primary processing unit for the control system and
+data acquisition unit. The Nucleo board handles all control algorithm processing, interfacing with
+sensors, sending control outputs to any actuator driver boards, and saving data to a memory
+storage device. The main sensors in the system are a GPS, IMU, and motor encoder. We
+planned on implementing sensor fusion algorithms (such as a Kalman filter) to get our position,
+velocity, or acceleration data from these sensors when possible. The code written for the system
+was written without utilizing a real time operating system. The USB removable storage was
+eventually replaced with and SD card and reader and is used for both uploading the test
+protocol code and saving the critical sensor data for test evaluation. The removable storage
+utilises a simple filesystem to differentiate data files from testing protocols. The hierarchy of
+signals was be used during our critical design phase to help with determining the specific sensor
+signals for use with our system. The hierarchy also helped us with determining our
+recommendations to other test vehicle groups regarding components or actuators. Radio
+communication is primarily used to have the test vehicle initiate the current loaded test protocol
+and as a manual emergency stop by the operator.
+
+3.3.1 - Lead Concept Vs. Engineering Specifications
+Many of our specifications depend on how quickly we can receive data from our sensors and
+process it. Specifications that depend on this latency are our max controllable speed, positional
+accuracy, straight line accuracy, and a few others. These specifications contributed to our
+sensor feedback latency specification of 28 milliseconds. To ensure that we would be able to
+meet this latency specification we did some preliminary calculations regarding the time required
+by the processor to calculate a PID (Proportional, Integral, Derivative) control algorithm and the
+update frequency of an IMU, GPS, and motor encoders.
+To calculate the time required by the processor to calculate a PID control algorithm some
+assumptions were made. First, the velocity form of the PID algorithm [18] was assumed and the
+number of operations needed to process the algorithm were estimated. The estimated number
+31
+
+of arithmetic operations was 16 and the number of read or write operations was 18. Next, the
+number of clock cycles for the two types of operations were estimated assuming an ARM Cortex
+M4 based microcontroller. The number of clock cycles necessary for an arithmetic operation
+was determined to be 12 and read/write operation was determined to be 5 [19]. Next, the
+number of clock cycles needed for the PID calculation was determined to be approximately 280.
+We assumed that the clock speed of the microcontroller was 32 MHz because that is the lowest
+clock speed available out of the STM Nucleo-64 boards. We determined that the processing
+time necessary for the controller to calculate the PID algorithm was 8.8 microseconds which is
+much less than the 28 millisecond latency specification.
+To determine the IMU sensor latency we used the specifications from the Bosch BNO055 IMU
+[20]. We based the latency on this sensor because it has an integrated microcontroller (ARM
+M0+) which performs a sensor fusion algorithm which means that we can get positional data
+(Euler angles or quaternions) directly from the sensor. The BNO055 latency can also be used
+as a rough estimate for the latency of other IMU sensors in which we implemented the sensor
+fusion algorithm on our microcontroller. The latency of the BNO055 is approximately 10
+milliseconds which is less than the 28 millisecond latency specification.
+To determine the GPS latency we looked at various GPS modules available. We found that
+most GPS modules update in a range of 50 milliseconds to 1 second. The latency of the GPS
+will be too low to be used by itself for positioning the test vehicle but it can be used in
+conjunction with the IMU. The GPS provides absolute position feedback which can be used to
+correct the IMU if the absolute position begins to drift. Since the GPS is not used as the primary
+navigational sensor then the high latency of the measurements does not greatly affect the
+positional accuracy.
+To determine the motor encoder latency we had to make a few assumptions. First, we assumed
+that the encoder readings would be handled by an interrupt service routine on the
+microcontroller which takes approximately 12 clock cycles to start [19]. Next, we assumed that
+the amount of processing required in the interrupt service routine would take approximately 50
+clock cycles. The last assumption we made was that we were using a medium resolution
+magnetic encoder (64 counts per revolution). With these assumptions we determined that it
+would take 1.4 microseconds to process the shaft turning one degree. While the result from this
+calculation is tough to use, it does show that the processing time necessary is much less than
+the 28 millisecond latency.
+
+3.3.2 - Risks and Challenges
+The chosen design has a few potentially dangerous failure methods. Since the system relies on
+GPS, a failure in this system could lead to dramatic and unexpected behavior such as the
+vehicle traveling rapidly in the wrong direction. Another possible source of failure is the use of a
+single CPU. If this component reaches an infinite loop or encounters some other unexpected
+32
+
+error it could leave the motor controllers in an on state with no limiting input. This could again
+cause the vehicle to drive in unexpected directions or stop suddenly. Please note: this exact
+event has been observed when software was not fully checked before uploading. To avoid such
+events in the future all programs should be thoroughly tested to ensure latency under all logical
+paths is within bounds.
+The most difficult challenges of this design are to ensure we are getting sufficient sensor data to
+make informed decisions. Since no single sensor has both accuracy and refresh rate necessary
+to guide the vehicle by itself. We have to rely on sensor fusion algorithms to ensure the accurate
+position, velocity, and acceleration. Considering the complexity of some of these algorithms
+ensuring the control loop will never fail or reach an infinite loop is another important challenge.
+
+4 - Final Design Description
+4.1 - Overall Design Summary
+The SLONav autonomous target control system is based on a single embedded microcontroller.
+The system actuates two brushless DC motors via electronic speed controllers. The
+microcontroller interfaces with an H-Bridge circuit to operate a linear actuator controlled
+hydraulic brake. To avoid severe electronic noise from high power systems for the brushless
+motors, the electronic speed controllers provide opto-isolation between the microcontroller input
+and the motor output. Power for the braking actuator and emergency stop release servo is
+provided by a LiPo battery within the control system enclosure. The microcontroller operates off
+of a 9V battery supply.
+To gather data about the motion of the vehicle, the system utilizes an IMU, a GPS, and shaft
+encoders. The IMU provides relative acceleration and both absolute and relative orientation
+data, the GPS module provides absolute position and time data, and the pair of shaft encoders
+provide real time velocity approximations. The sensor data provides the position, velocity,
+acceleration, and heading of the vehicle which is stored on a microSD card for later analysis.
+The operator interfaces with the system using a radio controller that provides inputs for throttle,
+brake, emergency stop, and mode selection.
+A map of waypoints and velocity setpoints is loadable via SD card allowing rapid and safe
+modification of test parameters for autonomous operation. Under autonomous operation the
+system
+controls
+the
+heading
+and
+acceleration
+of
+the
+vehicle
+using
+proportional-integral-derivative (PID) controllers to compensate for disturbances and produce
+the desired performance.
+
+33
+
+4.2 - Detailed Design Description
+4.2.1 - Microcontroller
+Our final microcontroller selection is the STM32 Nucleo. This microcontroller provides the
+processing speed, power output, hardware based signal acceleration, and number of GPIO pins
+necessary to control this system. The Nucleo is powered by a 9V supply which is separate from
+the other power systems. The Nucleo has the capacity to supply 5V and 3.3V power to the
+sensors used in the system.
+Hardware accelerated signal processing built into the Nucleo will be used to interface with
+components via numerous common signal protocols without slowing or interrupting program
+flow. Our design calls for communications over SPI, I2C, and UART simultaneously which
+makes the hardware acceleration desirable. Additionally the Nucleo has multiple hardware
+timers which were used to set the control loop latency and schedule other tasks.
+
+4.2.2 - Sensor Feedback System
+The sensor feedback system allows for monitoring all of the crucial motion parameters need to
+autonomously control the vehicle. Due to the selected motor controller’s limited programming
+capacity; the central microcontroller handles almost all of sensor input directly. Sensor data is
+sampled and logged for analysis as well as used for autonomous operation.
+Absolute position and time are given by the GPS receiver module. This allows the system to
+update its position at a rate of 10Hz. Current physical and simulated testing shows this is
+sufficient at low speed however ongoing modeling and testing may prove that a 20Hz GPS or
+Kalman filter is needed later on. The GPS receiver communicates via UART, has built in data
+logging and and optional independent power supply.
+Absolute orientation and acceleration of the vehicle is provided by the IMU. Absolute orientation
+data is based on a built in 3 axis magnetometer, 3 axis acceleration, and 3 axis angular velocity
+which is filtered by an on chip processor. Acceleration data is based on a three axis
+accelerometer with updates at 100 Hz. This IMU has sufficient resolution to achieve our goal of
+0.25 m/s​2 increments. In conjunction with absolute values from that GPS our simulations show
+this sensor is sufficient to achieve the 1.5m positional accuracy required by specification.
+Vehicle velocity is provided by a pair of shaft encoders mounted to the motor shafts. The refresh
+rate is dependent on the speed of the vehicle. These sensors are monitored using pin change
+hardware interrupts on the Nucleo. The velocity provided by the encoders is in pulses per
+update rate. Calculating the linear velocity of the vehicle is done by using the encoder pulses
+per revolution, transmission gearing ratio, and wheel radius These sensors can be used as a
+continuous safety check to show the motors are behaving as expected.
+34
+
+Feedback from the braking linear actuator is provided by a built in linear potentiometer. This
+data is sampled by the Nucleo analog to digital converter (ADC). The potentiometer is used to
+determine the position of the linear actuator for providing variable braking. We have not mapped
+the linearity of the braking actuator however preliminary tests suggest it is capable of providing
+the 0.25 m/s​2​ braking increments required by our specifications.
+Also considered as external sensor inputs are the remote control inputs from the radio receiver.
+The radio receiver provides user control to the system. Using the radio controller the user may
+start or stop the autonomous operation, engage the emergency stop, and take direct control of
+the vehicle. The E-Stop will also engage automatically when the radio is out of range. The radio
+receiver
+has
+a
+refresh
+rate
+of
+approximately
+50
+Hz.
+
+Figure 4.1​ Signal flow diagram.
+As shown in Figure 4.1, each sensor utilizes a separate signal protocol. This was the result of
+the sensors we chose and adds some wiring complexity to the controls system. However the
+STM32 Nucleo has sufficient pins and hardware acceleration to manage all these sensors
+simultaneously without impeding program flow. Utilizing a separate accelerator for each sensor
+also reduces the chance of bus contention.
+
+35
+
+4.2.3 - Control Systems
+The vehicle will have two main control systems, one that controls the steering of the car and
+another that controls the acceleration of the vehicle. The steering control system is used to keep
+the vehicle on a straight line path for the length of the test being conducted. The acceleration
+control system will be used to reach the velocities desired at points on the track specified by the
+user using constant acceleration or deceleration between the points. The main control
+mechanism that will be be used for the steering control is a proportional-integral-derivative (PID)
+controller and the acceleration control will utilize a PID controller.
+4.2.3.1 - Steering Control
+The steering control system will employ a follow the carrot path tracking approach for
+maintaining a straight line path. The follow the carrot method utilizes “carrot points” which are
+points along the path that are ahead of the vehicle based on chosen “look ahead” distance. The
+angle between the vehicle and the carrot point determines our desired vehicle heading which
+we will compare with the heading feedback from our IMU sensor. A basic illustration of this
+method, which comes from a thesis on skid steering control [21], can be seen in Figure 4.2.
+
+Figure 4.2 ​Illustration of follow the carrot method for path tracking.
+The heading error found by the follow the carrot method will be used as the input of a PID
+controller to produce a steering adjustment signal. The steering adjustment signal is added to
+the desired velocity signal for one motor and subtracted from the velocity control signal of the
+other motor to produce the difference in motor velocities that will steer the vehicle. The sign of
+
+36
+
+the heading error also determines which motor increases velocity and which motor decreases
+velocity.
+To analyze our steering control system we developed a model of the vehicle dynamics and the
+motors. This model was translated into Simulink to conduct simulations of the different PID
+controller types to determine which parts of the PID were essential and the approximate gains of
+those coefficients. The Simulink model contains three major subsystems which
+compartmentalize parts of the system so that the control loop is easier to identify. The major
+subsystems are the motor control and the vehicle dynamics. The overall view of the Simulink
+model is given by Figure 4.3.
+
+Figure 4.3 Steering control Simulink model overview. This model shows the
+subsystems, the input signals, feedback loop, and PID controller.
+The motors were modeled as independent first order systems because it introduces some delay
+to the response of the motors which compensates for the inertia of the rotor. The motor control
+block of our Simulink model can be seen in Figure 4.4.
+
+Figure 4.4 Simulink subsystem that models the two brushless motors which drive
+the vehicle. The values of the variables can be found in Table 5.1 and in the
+Matlab script (Appendix F). Saturation blocks were included to limit the output of
+the motors to the maximum voltage available from the batteries.
+
+37
+
+Table 4.1 Summary of motor model variables. Motor gain and gear ratio are
+based on values given to us by the frame design team and the motor time
+constant was an educated guess since the specifications were not available.
+Motor Model Variable
+
+Value
+
+Units
+
+Motor Gain (k_motor)
+
+167
+
+RPM/V
+
+Motor Time Constant (t_motor)
+
+0.025
+
+1/sec
+
+Gear Ratio (gear_ratio)
+
+0.2439
+
+RPM/RPM
+
+The vehicle dynamics of the vehicle was modeled using a skid steering model of the vehicle.
+Skid steering is a method of where each side of the vehicle has wheels which are driven at the
+same rate but the two sides are independently controlled. This method of steering is the style of
+steering that vehicles with treads or rigid frames tend to use. We chose to use this model
+because it was the closest model we could find to the design of the vehicle. The actual vehicle
+has two independent motors driving the rear wheels and a solid front axle. The skid steering
+model we used was from a paper by Zhang Yu from the Intelligent Vehicle Symposium 2013
+[22]. The paper derives a model of the lateral dynamics of a skid steered vehicle which assumes
+that the velocity of the center of gravity is constant, the tire properties are in the linear region,
+the center of gravity is close to the ground, and the air resistance and gyroscopic effects are
+negligible. The equations derived are the following,
+
+m(v˙ + uω) = − 2u (aK αf − bK αr )ω −
+I z ω˙ =
+
+1 B2
+[ (K xf
+u 2
+
+2
+
+2
+
++ K xr ) + 2(a K αf + b K αf )]ω −
+
+2
+(K αf
+u
+
+2
+(aK αf
+u
+
++ K αr )v
+
+− b K αf )v +
+
+B
+(K xf
+2
+
++ K xr ) Δu
+.
+u
+
+Illustrations of the system are provided by Figure 4.5 and Figure 4.6.
+
+38
+
+Figure 4.5​ Illustration of the kinematic diagram for the skid steering model [22].
+
+Figure 4.6​ Illustration of the kinetic diagram for the skid steering model [22].
+
+39
+
+The K α and K x variables given in the equations represent the cornering stiffness and
+longitudinal stiffness of the tires. Since the frame team is planning on using the same tires for all
+the wheels we were able to simplify the model equations slightly, so the equations we used in
+the Simulink model were the following,
+2K α
+(a − b)ω − 4Kuα v − uω
+um
+2K α (a2 + b2 )]ω − 2Kα
+(a − b)v
+Izu
+
+v̇ = −
+ω̇ =
+
+1
+[B 2 K x
+Izu
+
++
+
++
+
+B 2 K x Δu
+Iz u
+
+.
+
+These equations were used to develop the vehicle dynamics subsystem in the Simulink model
+which can be seen in Figure 4.7.
+
+Figure 4.7 Simulink subsystem that models the skid steering vehicle dynamics.
+The values of the variables can be found in Table 4.2 and in the Matlab script
+(Appendix F).
+
+40
+
+Table 4.2 Summary of vehicle model variables. The track width, length, moment
+of inertia, mass, and radius of tire were estimates give to us by the frame design
+team. The center of gravity distances were assumed to be slightly skewed
+towards the motor since the batteries will likely be closer to the motors. The
+cornering stiffness coefficient was estimated by using 15% of the load on the
+vehicle (300 lbs evenly distributed per degree) and the longitudinal slip stiffness
+coefficient was assumed to be the same.
+Vehicle Model Variable
+
+Value
+
+Units
+
+Track Width (B)
+
+5
+
+ft
+
+Length (L)
+
+7
+
+ft
+
+Distance between solid axle and
+center of gravity (a)
+
+3.75
+
+ft
+
+Distance between motor axles and
+center of gravity (b)
+
+3.25
+
+ft
+
+Mass of vehicle (m)
+
+9.31
+
+lb​m
+
+Moment of inertia (I)
+
+1458
+
+lb/ft​2
+
+Radius of tire (R)
+
+0.33
+
+ft
+
+Longitudinal slip stiffness (Kx)
+
+2150
+
+lb
+
+Cornering stiffness (Ka)
+
+2150
+
+lb/rad
+
+With the motor and vehicle dynamics subsystems we were able to simulate the response of the
+system by adding a disturbance force in the lateral direction and plot the path of the vehicle.
+After running a few simulations it became clear that this system would not be stable without
+some derivative control so we decided to tune a PID controller since we would need some
+integral control to compensate for steady state error. An example of one of the tuned PID
+responses is given by Figure 4.8.
+
+41
+
+Figure 4.8 Response of the model to a lateral force step disturbance of 30 lb.
+The PID gains are a proportional gain of 1, integral gain of 0.15, and derivative
+gain of 0.2. The PID is calculated using the standard ideal form.
+While the simulation we created proves the feasibility of the steering control scheme, there are
+some assumptions that were made which could have a significant effect on the response of the
+final system. The simulation makes the assumption that the wheels do maintain contact with the
+ground at all times. This may not be the case if large steering angles are required because
+either the front or driven wheels will likely lose traction. Another issue will be the resistance to
+turning because of the solid front axle which will need to take a torsional load to allow for the
+speed difference between the wheels when turning. Further testing was done on this control
+scheme using the scale model we built, discussed in Section 6.1, to validate it and make
+modifications as necessary.
+4.2.3.2 - Acceleration Control
+The goal of the acceleration control system is to achieve a constant acceleration and
+deceleration rate of the vehicle. The control system will have to actuate two motors and a linear
+actuator connected to a hydraulic brake. Since the motors will be controlled using an electronic
+speed control (ESC) our control system will need to generate an speed input for the ESC. To
+accomplish this we will implemented a PID controller that will operates on acceleration feedback
+provided by the IMU.
+
+42
+
+Figure 4.9 ​Illustration of the acceleration control loop.
+There will be three cases that the system will have to deal with which are acceleration, constant
+velocity, and deceleration. The acceleration case will be actuated by evenly splitting the
+controller output between the two motors. The constant velocity case will require some braking
+to respond to disturbances but the motor controller can provide some braking which should be
+enough for the constant velocity case. The deceleration case will require actuating the braking
+system as well as a decrease in the motor speed. The control output will be split amongst the
+motors and braking actuation.
+There are a few possible problems with this design which may lead to modification of the
+scheme. The frame design team’s proposition of a using a linear actuator to engage a hydraulic
+brake will have a significant dead time associated with it. This will make it difficult to work in
+tandem with the motor actuation for the deceleration case and may require some predictive
+control tools, such as a feedforward loop, which will help compensate for the dead time. This
+issue may be encountered in the acceleration case because of the delay resulting from the
+inertia of the motors when changing velocity. This delay could lead to the vehicle not quite
+reaching the proper velocity at the next trigger point and could be compensated for with some
+predictive control as well. Lastly, accelerometers inherently provide noisy data which could lead
+to erratic behavior from the controller if not filtered properly.
+As with the steering control, we performed nearly all testing and validation of this control
+scheme using the scale model.
+
+4.2.4 - Final Enclosure
+To ensure that our control system would be able to perform without hinderance, the physical
+enclosure layout of our final design had several requirements. Most importantly our enclosure
+had to adequately protect all of our core electrical components during regular testing. We did
+not design the enclosure for direct impact since, based on preliminary research, it would over
+complicate the design, dramatically increase the price, and limit the number of routing options
+provided to the control system.
+Our enclosure provides the user with easy access to all of our components for maintenance and
+calibration purposes. We restricted our list of options to enclosures that could be purchased off
+the shelf, and later modified to meet our needs. This decision was made to limit the amount of
+43
+
+time spent on fabrication and increase control system development time. Finally, our system
+needed to be relatively inexpensive, since a large portion of our budget had already been
+committed to the control components.
+We were able to meet almost all of our requirements, with a latched steel electrical enclosure
+with knockouts, from McMaster-Carr shown in Figure. 4.10. The enclosure was 12’’ x 12’’ x 4’’
+giving us ample room to fit all of our protected components as well as fitting within the frame
+teams maximum size requirements. An additional feature of the enclosure selected was that it
+latched shut to ensure that it will not open while the vehicle is moving.
+We also considered a polycarbonate enclosure with a viewing window but it was decided that
+the higher cost did not warrant the slight improvement in user interaction. It should be noted that
+our chosen enclosure is larger than the dimensions originally listed in the specifications,
+however, we did not see this as an issue as that specification was listed exclusively to ensure
+we fit within the frame.
+
+Figure 4.10​ CAD model of selected electrical enclosure.
+
+4.2.5 Component Mounting Plate
+For the internal layout of Inside of our enclosure, we wanted a design that would give all of our
+components easy access to the enclosure breakouts as well as maximizing the number of
+options for wiring routes throughout the enclosure. To do this we selected a layout which placed
+all of our components on a raised mounting plate shown in Figure 4.11. This configuration
+ensured that we would have a high level of flexibility on our component placement as well as
+easy wiring through the knockouts which were at a center height of 4cm above the base of the
+enclosure. Additionally, we designed the mounting plate to be fully removable with the use of a
+few hex keys to improve its transportability as well as the ease of maintenance.
+
+44
+
+Figure 4.11 ​Exploded view of full enclosure assembly.
+We also wanted a design that minimized the amount of machining that needed to be done. To
+achieve this specification, we limited our material options to those that could be fabricated using
+the laser cutter located in the Mustang 60 machine shop on campus. Both, aluminum and wood
+were considered, but we chose a 12'' x 12'' x 7/64'' Acetal plastic sheets to minimize the
+possibility of an electrical arc forming to the board, as well as it’s easy manufacturing
+capabilities. It should be noted that the board size will be cut down, using a table saw, to a size
+of 10.62’’ x 10.75’’ x 7/64’’ to ensure that the board can be easily removed pats the lip of the
+enclosure.
+The final component layout on the board was chosen by our team to minimize the distance that
+wires had to travel within the enclosure. To accomplish this we placed the Nucleo
+microcontroller near the center of the platform with open paths to each of our sensors and
+battery, shown in Figure 4.12. Each of the individual components locations were chosen to
+place them near the closest breakout to try to limit the complexity of the final system wiring.
+Additionally the battery used to power our control system was to be placed within the enclosure
+near the front, held in place by a velcro strap and a small fabricated plastic wedge.
+
+45
+
+Figure 4.12 Final component layout. Nucleo board (center), GPS (lower left),
+IMU (upper right, SD Card (middle right), Battery (top center), Iso Optilators (top
+right and bottom).
+The location of our SD Card breakout was of high importance to us as we wanted to be placed
+in a way that the user could easily load the micro SD card into the enclosure without having to
+open the entire enclosure. Our solution to this was to use one of the enclosure’s knockouts as
+an SD card port shown in Figure 4.13, where the user could easily load the test plans before
+each vehicle run. The final construction did not implement this feature, instead opting to place
+the SD card within the enclosure without utilising the knockout.
+
+Figure 4.13​ MicroSD card knockout.
+
+46
+
+4.3 - Cost Analysis
+According to our updated Bill of Materials. The total cost for the controls system, associated
+wiring, enclosure and safety features totals $1406. This estimate is slightly over our initial
+budget of $1200 . The highest cost items are the high power systems. The two motor controllers
+at $638 combined are the most significant cost followed by the radio controller at $179 and the
+polarity protection for the power systems at $102. There were a few low cost items that were
+purchased and not used in the final design. See Appendix C for the full detailed Bill of Materials.
+
+4.4 - Physical System Wiring
+The electrical system is separated into two discrete blocks. To avoid noise from the large motors
+and controllers we initially planned to use optical isolator breakout boards to isolate the main
+power system from the control system. When implementing the system we discovered the
+electronic speed controllers already had these built in, so the isolation boards were
+unnecessary.
+
+47
+
+Figure 4.14​ Motor power schematic.
+The main power system, as shown in Figure 4.14 refers to those electrical systems which are
+directly related to powering or controlling the two main motors. This system is composed of two
+brushless DC electronic speed controllers, circuit protection, main batteries, and controller
+interface connector. The main power system is wired with 6awg wire and 6awg battery lugs
+between the main batteries and the motor controllers. A 400A thermal breaker ensures that the
+system will not remain active after a major short. During implementation the thermal breaker
+was replaced with two 200A main contactors, as suggested by the specification sheet, which
+also allowed for microcontroller to enable or disable power. Additional 200A inline fuses allow
+immediate severing of power in the event either motor controller exceeds its maximum rated
+current draw. The battery connection to the main circuit is hardwired must be manually broken
+before charging.
+It is recommended to remove and charge the batteries individually. It is recommended that the
+main contactors are turned off when breaking the power circuit. Reverse polarity protection
+handled by two automotive starter solenoids ensures that the primary motor controllers will not
+be damaged in the event of maintenance error.
+
+Figure 4.15​ Electronic control schematic.
+48
+
+The controls system circuit, as shown in Figure 4.15 refers to all components dedicated to
+sensor input, user input, and decision making. The control system also contains a low power
+motor controller for the braking linear actuator actuator and sufficient power for all controls
+system components. Power for the braking actuator is supplied by the LiPo battery contained in
+the enclosure.
+The control system circuit is almost entirely contained within the controls enclosure. The only
+external components are the GPS antenna, and the RC receiver. The RC receiver supplies data
+to the control system via seven standard servo wires. Connections between control system
+components utilise standard male pin headers and female head ribbon cables.
+To increase sensor accuracy and decrease communications failures, there is no direct electrical
+connection between the power system and the control system. If electrostatic build up proves to
+be an issue later on a single high impedance connection may be allowed between the controls
+system enclosure and the frame.
+
+4.6 - Software Overview
+The overall program flow has three major parts, system power on, system ready, and failsafe.
+The system power on section is shown in Figure 4.16 This section handles initialization of all
+sensors including any necessary startup calibration. If any sensor fails to respond or behaves in
+an unexpected manner the sensor is aborted and the system records the error. When all
+sensors have been initialized the initialization function returns success or failure. If any sensor
+has failed the system then aborts startup indicates which sensors failed and enters a hard loop
+until reboot. This helps ensure that the system will not function in an unsafe manner. In the
+event that the sensors successfully initialise the system will initialise all actuators and check the
+preloaded map, if the map is invalid the system indicates the error and again enters a loop until
+reboot. A valid map is required even if an autonomous test is not intended, this is a sanity check
+for the operator and in later revisions the map may be used to restrict operator control to a
+region defined in both velocity and physical space. When fully initialized the program enters the
+system ready phase.
+
+49
+
+Figure 4.16​ Power on flowchart.
+The system ready phase shown in Figure 4.17 constitutes the the primary control loop. This
+phase begins with a proximity check to ensure the system has sufficient room to move without
+injuring itself or others. This feature is included as a strong safety recommendation for future
+iterations however was implemented in the final design.
+The software design provides two modes of operation, autonomous and radio manual control. In
+autonomous mode the system samples each sensor value at the maximum refresh rate for that
+sensor. This tactic of polling sensors at their individual refresh rate allows the control loop to
+achieve latencies well within our spec of 28 ms per cycle. Polling of the sensors at their
+individual refresh rate was not implemented in this design because of the complexity of polling
+scheduling. Values are then passed through a Kalman filter using the control filters scheme to
+provide a continuous approximation of vehicle position, velocity, acceleration, and orientation.
+The Kalman filter was not implemented in this version of the design due to time constraints but
+portions of the necessary code are supplied in the code repository. The filtered values are then
+compared to the preloaded test map, and the control algorithm updates an array of actuator
+values to the next checkpoint. When a checkpoint is reached, or missed the system updates the
+current checkpoint to the next in the map. When the last checkpoint is reached or if the system
+exceeds test parameters, the test is ended and the system enters failsafe.
+In operator control mode signals from the radio controller are interpreted and relayed directly to
+the drive system allowing the vehicle to be driven much like a hobby RC car. This mode is
+50
+
+intended for use primarily as a retrieval method. In this mode radio signal latency is the limiting
+factor on operating latency since standard hobby RC vehicles operate at a 50 Hz (20 ms)
+refresh rate.
+
+Figure 4.17​ System ready flowchart.
+The failsafe mode may be entered any time an error is detected, the system determines it is
+outside safe operating conditions, or the test is completed. The failsafe mode may also be
+entered in the event the operator initiates the E-Stop, radio communications are lost, or if the
+GPS detects that the vehicle is outside the map boundary. As shown in Figure 4.18 the failsafe
+mode simply sets all motors to full stop or coast depending on speed and initiates the braking
+51
+
+system. The operator may then take control of the system to return it to the track start however
+the system will no longer move without direct operator control.
+
+Figure 4.18​ Failsafe and E-stop interrupt flowchart.
+Though other versions in the development repository match the software for design more
+closely, the final program uploaded to the controls system is a much simplified version. Once
+initial system power on checks such as the Map Valid check are complete The final program
+used for full scale vehicle testing follows the flowchart in ​Figure 4.18.1 ​and ​Figure 4.18.2. ​ This
+program is intended to increase safety by ensuring the operator is in control of the vehicle at all
+times. Autonomous mode and all high latency functions have been removed providing the
+minimum possible delay between operator command and vehicle actuation.
+
+52
+
+Figure 4.18.1 ​Full scale test primary control loop.
+
+Figure 4.18.2 ​Full scale test sensor loop.
+
+53
+
+4.7 - Manufacturing and Assembly
+The control focused nature of this project resulted in relatively little fabrication to be done. The
+majority of our components were electrical or electronic hardware, almost all of which are off the
+shelf, with a few exceptions. The assembly time for this project was much more significant since
+it required soldering and cable routing.
+
+4.7.1 - Initial Component Test Rig Assembly
+To ensure that we would be able to test our vehicles control system without relying on the other
+Daimler sponsored teams, we developed a 1:5 scale model of the final vehicle. This initial test
+platform was fabricated with low cost and high adjustability in mind to enable us to redesign it
+cheaply and quickly should any of the specifications from the other teams change. To meet
+these requirements, we used parts that had either been donated by the Cal Poly Mechatronics
+department or that we already owned. Since we had very little time to select our components
+and test them, we were concerned with the development time of the platform. As a result, we
+chose to use off the shelf physical hardware parts to mount the wheels and shafts.
+
+Figure 4.19​ Initial vehicle test rig.
+4.7.1.1 - Building the Test Board
+To find the dimensions of our test platform we consulted the frame team on their planned
+wheelbase and track, which was chosen to be approximately 7’ x 5’ respectively. To feasibly
+produce a model of the final vehicle, we chose to scale the final dimensions by 1:5, resulting in
+a wheelbase and track of 16.8’’ x 12’ respectively.
+
+54
+
+Figure 4.20​ Concept drawing detailing vehicle layout and dimensions.
+To construct the base of the vehicle, we used Acrylonitrile butadiene styrene (ABS) sheets
+supplied by Mechatronics department. Unfortunately, these were only available in a 12’’ x 12’’
+size, so we chose to offset two layers to achieve our vehicle size requirements.
+The next step was to select our platform’s wheels. We only had a few options readily available
+to us, but to save time and cost we decided to choose a set of 3.5’’ hobby wheels that were
+available to us from a previous mechatronics vehicle project. Although they did not match the
+scaled size chosen for the full vehicle, we determined that for the initial testing of our sensors
+and control system they would be adequate. The front wheels were initially mounted to the base
+using off the shelf hobby bearing blocks on two separate axles. However, this design was later
+changed to a layout in which they were connected together by a solid shaft to more accurately
+mimic the final vehicle design. Despite the knowledge that the frame team would be using a
+transmission system the rear wheels were directly mounted to two independently driven dc
+motors. We excluded the transmission from our model since we did not feel that the model’s
+capability to test our components would be improved by the inclusion of a scaled transmission
+system, as well as the higher cost that such a model would entail.
+
+55
+
+Figure 4.21​ Front (left) and rear (right) wheel mounts of test platform.
+The brushed DC motors mounted to the base, were chosen to accurately reflect the frame
+team’s initial motor selection, as well as our motor encoder specification. However, since our
+initial prototype, they have revised their choice to a set of brushless DC motors without
+encoders. Fortunately, to limit costs we were using motors donated by the Mechatronics
+department and therefore, have not suffered any additional costs. For further iterations of the
+test platform, we will switch to a set of brushless motors with electronic speed controllers.
+The final element of our test platform was to mount our electronics. We wanted each component
+to be attached to the platform both securely and adjustably. To meet these requirements we
+decided to place velcro strips between a breadboard and the ABS sheet. Using a breadboard
+allowed us to easily prototype and reconfigure our circuits as well as remove our components
+for individual testing.
+
+Figure 4.22​ Test platform electronic component configuration.
+
+56
+
+4.7.1.2 - Configuring Sensors
+Sensor configuration during system startup is limited to call response to ensure each sensor is
+functioning properly. If sensor values are outside expected norms or otherwise invalid they will
+be rejected and the sensor initialisation marked as failed. Later iterations of the project may be
+able to implement startup time sensor calibration using timed motions. However this is outside
+the scope of this iteration. According to tests on our physical model, full sensor initialisation
+requires only a few seconds. This puts our initial startup well within the specification of 10
+minutes between tests.
+
+4.7.2 - Enclosure Fabrication and Assembly Plan
+The enclosure as a whole required very little actual machining to be done. Our design only two
+requires two components to be fabricated, and both of them are a relatively simple process. The
+primary part to be fabricated is the component mounting plate shown in Figure 4.23. We chose
+and Acetal plate for this part since it will allow us to use the Mustang 60 laser cutter for
+fabrication. Laser cutting the board will reduce our fabrication time as well as ensure an
+extremely high level of accuracy for the small electrical components holes. There is a risk that
+laser cutting our board will slightly melt the Acetal during the process, and cause some level of
+slop. However, we are not worried about this since once the holes have been located on the
+board by the initial laser cut we can refine their tolerances using a small drill press.
+
+Figure 4.23​ CAD model of component mounting plate.
+The other part to be manufactured, is the battery wedge shown in Figure 4.24. This part will be
+used to hold our Turnigy LiPo battery in place while the vehicle is moving. The wedge will be
+placed up against the base of our battery, holding it on three sides. It will also serve as a way to
+attach a nylon strap which will run overtop of the battery and prevent it from lifting. Due to the
+simplicity of its design and the low stresses the part experiences, the wedge will be made of
+PLA filament using a Ultimaker 2 Extended+ 3D printer provided by the Cal Poly Innovation
+57
+
+Sandbox. It should be noted that the dimensions of the final Battery wedge will be slightly larger
+due to a recent change in battery selection.
+
+Figure 4.24​ CAD model of battery wedge.
+
+The rest of the parts which make up our final enclosure assembly are all of the shelf, from either
+manufacturing or electronics suppliers. All of our parts are fastened together using metric hex
+bolts, nylon spacers and nuts on the underside of the enclosure and mounting plate. We also
+included rubber bumpers on the bottom of the enclosure to avoid a metal on metal interface
+which could possibly damage our enclosure and cause unwanted vibration throughout the
+control system.
+
+4.7.3 - Maintenance Considerations
+The control system has no moving parts, and as such should not need significant maintenance.
+However the controls battery will need to be recharged daily under expected testing conditions.
+Some components may also need adjusting from time to time. To access the controls system
+the enclosure has a hinged lid. This will allow the battery to be removed and replaced as
+needed. For any more significant maintenance the enclosure is designed to be easily removable
+from the chassis. All internal components may be easily removed by unplugging the female
+headed ribbon cables and unscrewing from the enclosure via standard hex key. The power
+systems must be disconnected from the batteries before any maintenance. All power system
+components are easily accessible from nearly any side of the chassis.
+
+4.8 - Safety Considerations
+Although the control system hardware is relatively safe, there are a few potential safety hazards,
+to both humans and itself. The primary purpose of this project is to control a relatively heavy
+object travelling at high speeds. If the system is not tuned properly then relatively minor
+deviations from normal in our outputs could result in an unstable system which will cause the
+58
+
+system to act erratically and potentially injure humans or the system itself. The electronic
+components of this system will not be grounded to the earth in any significant way so,
+depending upon the voltages used, a minor internal short could induce electric burn dangers to
+human operators. A detailed list of potential failure mode effects can be found in Appendix H,
+which is our Failure Mode Effects Analysis document. Below we discuss two of the major
+systems that have the highest chance of injury.
+
+4.8.1 - Batteries
+The primary power source for the system is an array of three 12V batteries wired in series
+totalling 36V. Though these batteries are outside the scope of the control system they pose the
+highest risk and are therefore noted here. The batteries chosen are sealed lead acid batteries
+for automotive use. The batteries should be charged individually when completely separated
+from the system. The greatest risk when considering these batteries is a short across the
+terminals of any one, or series connected set. In the event of a short across any of these
+batteries they will dump current at their maximum capacity, will most certainly heat up due to
+internal resistance, and may fuse, melt, or vaporize whatever material induced the short. Under
+these conditions the batteries may burn humans nearby, may release hydrogen gas, and may
+leak strong acids.
+An additional risk is a mechanical rupture in the battery casing. If a rupture occurs the batteries
+may leak acid. Additionally under conditions of great shock or mechanical pressure which would
+cause such a rupture the batteries may develop an internal short posing secondary problems. In
+order to be properly prepared for problems arising from the batteries, always have on hand
+chemical resistant rubber gloves, a chemical resistant bucket for disposal of the batteries, and a
+box of baking soda to neutralize any acid spills. Avoid direct skin contact with leaking batteries,
+and immediately wash any exposed skin with water to avoid chemical burns.
+
+4.8.2 - Out of Control Vehicle
+The second major risk is that of an out of control vehicle. Power calculations show the vehicle
+will be capable of rapid acceleration and may be capable of velocities exceeding 30 MPH. With
+this in mind the consequences of losing control of the vehicle are extremely high, potential harm
+to human operators and bystanders as well as damage to the system and other property may
+occur. To avoid this danger we have implemented a number of software and hardware
+safeguards. The program flow includes numerous checkpoints designed to ensure the vehicle is
+under control at all times. The system is designed to lock in an inert state with brakes fully
+locked in the event of any error. Similarly in the event of a controller loss there is a brake
+release servo is designed to fail closed. The primary safety feature to stop an out of control
+vehicle during testing is the user operated E-stop. The radio controller we have chosen has a
+minimum refresh rate of 50Hz. This gives a maximum time between the user triggering the
+E-stop on the radio, and the E-stop interrupt on the vehicle of only 20ms well within our
+specification of 100ms.
+
+59
+
+5 - Product Realization
+The final stage of our senior project was to fabricate and assemble it based on the final design
+we had created. As with any first generation prototype, certain last minute modifications had to
+be made, and due to unexpected challenges, some features that were originally planned were
+not fully realized. Although our final project shown in figure 5.1, was not as fully featured as we
+originally anticipated, it has succeeded in setting the groundwork for future teams to build upon
+what we’ve learned and revise our design.
+
+Figure 5.1​ Final Guided Target Vehicle (control system in center)
+
+5.1 - Manufacturing Process
+Although the guided target control project had relatively few machined parts, a good portion of
+our effort was directed towards refining the physical system. Between the electrical and
+mechanical hardware we had to manufacture several mounting brackets and circuit boards, as
+well as establish the wiring for the entire system.
+
+5.1.1 - Enclosure
+The baseplate on which the electronics are mounted is made from Delrin which is electrically
+insulative. The delrin plate was laser cut to size and all holes for mounting screw were likewise
+machined. Most of the mounting holes were not used since some the components in the
+enclosure were changed or moved from the design of the mounting plate proposed in the critical
+design report. Electronic components were intended to be mounted on plastic spacers and
+bolted to the Delrin. The IMU, GPS receiver, and STM32 Nucleo were mounted in this way
+however some other components such as the SD card reader were never permanently affixed.
+The brake battery is secured with a velcro strip and a custom fitted support as intended in our
+final design. The enclosure knockouts were removed with a standard ball pein hammer. Plugs
+were later added to those knockouts which were no longer in use. The control electronics
+enclosure is mounted to the central electronics platform by the same four hex bolts which
+secure the baseplate to the enclosure.
+
+60
+
+5.1.2 - Wiring
+Wiring within the controls enclosure served to connect the sensors to the Nucleo and conduct
+signals from the Nucleo to components outside the control electronics enclosure. To reduce the
+chance of wires coming loose we utilised ribbon cables wherever possible and grouped
+connections. This allowed for the ability to modify the design which wouldn’t be as easily
+accomplished with a hardwired design.
+Wiring outside the controls enclosure regularly required thick gauge wire and crimps. All power
+system wiring between the batteries fusing and main contractors was completed with 4 gauge
+cables suitable for the potentially high currents. After the main contactors we utilised six gauge
+wire to connect to the ESC and motors. The ESC’s are connected to the motors using bolt
+through crimp connections.
+
+Figure 5.2​ Crimping wires with crimping tool.
+Each connection is encased in a removable shrink tube cover. Most wiring on the chassis is
+protected by watertight plastic conduit, but some exceptions to this. Wires which do not leave
+the central electronics platform are not shielded inside watertight conduit. The signal wires from
+the shaft encoders are also not shielded within the conduit which runs from the motors to the
+central housing. The hall effect sensors and shaft encoders are mounted alongside the motors
+and share power and ground wires. Power for these components is provided by a five volt
+supply built into the motor ESCs. As a protective measure against accidental shorts there is no
+chassis ground. All ground connections are made through shielded cables directly to the main
+batteries or central control electronics.
+The radio receiver and GPS antenna both extend outside the electronics enclosure. In the event
+the soft target is covered in a radio reflective layer these components should be mounted
+outside the soft target to ensure the best possible radio and GPS connection. The radio cable
+includes a simple breakaway point to help protect the enclosure during impacts however the
+GPS does not have this feature. All impacts with the vehicle should be avoided for this iteration
+of the design.
+61
+
+5.1.3 - Printed Circuit Boards
+To facilitate wiring we designed two printed circuit boards (PCB) using a PCB design software
+called EAGLE. The PCBs were machined using a small PCB mill called the Othermill, provided
+by the Innovation Sandbox. One board served to provide power for all sensors and connections
+simplify connections with the Nucleo (Figure 5.3) while the other allowed use of two digital to
+analog converters (DAC) used to communicate from the Nucleo to the motor electronic speed
+controllers. Since the boards were produced using a mill they do not have a solder mask layer,
+so we used Kapton tape to insulate the traces after manufacturing. Additionally we utilized two
+standard solder protoboards to mount the hall effect sensors near the motors.
+
+Figure 5.3​ Board layout for connector board.
+
+5.1.4 - 3D Printed Parts
+Do to the availability of free 3D printing on campus provided by the Innovation Sandbox, we
+utilized a number of 3D printed components. The components that were 3D printed for our
+design were the bracket for the LiPo battery within the enclosure, shaft encoder mounts, hall
+effect sensor mounts, and caps to cover the main contactors for safety. Drawings of these parts
+can be found in Appendix H.
+
+62
+
+5.1.5 - Software
+All of the software developed is under Git version control. Git was used since it allowed for
+easier management of files as well as simplifying software collaboration. The Git repository is
+accessible via a public GitHub account (https://github.com/jbarry510/slonav). The software used
+in the project is contained in the tests folder and is broken into folders for actuators, sensors,
+data collection, and full system. The actuator, sensor, and data collection folders contain a main
+file with test code, associated libraries, and a makefile which simplifies compiling the necessary
+code. The mBed development libraries, which provide drivers for the Nucleo hardware, are
+included in the repository and referenced by the make files. Two header files are provided in the
+mBed folder (pinout.h and pinout_model.h) which contain the pin names defined in the rest of
+the software. The full system folder contains test code that implements autonomous control
+loops as well as the radio control program and the makefiles for these programs reference
+libraries the required libraries from the other folders. When a program is compiled for the Nucleo
+using the make files a binary file is generated in the build folder. To flash the binary file on the
+Nucleo, copy the binary file to the file system that is mounted when the Nucleo is plugged into a
+computer via USB and wait until the status light finishes flashing red and green.
+
+5.2 - Alterations from Planned Design
+During the implementation of our design, some modifications were necessary to properly
+integrate our design with the full scale vehicle because of design oversights and
+incompatibilities between our design and the frame design.
+
+5.2.1 - Hall Effect Sensors
+In order to properly run the chosen motors using the our ESC’s we needed three hall effect
+sensors mounted near each motor to detect the position of the rotor. The sensors are necessary
+for the ESC to properly commutate the motor as it is spinning. The sensors were not included in
+the original planned design due to late changes in the motor selection made by the frame team.
+These sensors look very similar to standard transistors but latch on when exposed to one pole
+of a magnet and latch off when exposed to the other side.
+The hall effect sensors must be properly positioned so that they trigger when the back EMF of
+each motor phase crosses zero and wired so that there is a 120° electrical phase shift between
+the signals as the motor rotates. Since there are 10 pole pairs in the motors we used it was
+determined that physical spacing of 12°, or any multiple of 12°, between the sensors was
+necessary to achieve the proper electrical phase shift. The sensor mount was designed to be
+placed along a circle of a diameter that is 5 mm greater than the diameter of the motors (110
+mm). The sensor mount has a 12.57 mm arc length between the sensors. To determine the
+proper orientation of the sensor bracket so that the motor poles aligned with the sensors we
+used an oscilloscope to measure the sensor output and back EMF of the motor while spinning it
+with a cordless drill. Figure 5.4 shows the setup used to find the orientation of the sensors and
+Figure 5.5 and Figure 5.6 show examples of the waveforms observed on the oscilloscope. In the
+63
+
+event that the motors begin to sound “grumbly”, especially at low speeds, it is likely the result of
+the Hall effect sensors having fallen slightly out of phase. This can also happen if the motors or
+sensors are wired incorrectly. Figure 5.7 shows the hall sensor mount model, the grooves help
+with placing the sensors at the proper spacing.
+
+Figure 5.4​ Hall effect sensor orientation setup.
+
+Figure 5.5 ​Example of waveform generated by observing two of the motor phases.
+
+64
+
+Figure 5.6​ Example of waveform generated by hall effect sensors.
+
+Figure 5.7​ Hall sensor mounting bracket.
+
+5.2.2 - Digital to Analog Converter Board
+The digital to analog converter board allows the Nucleo to interface with the motor ESCs via
+their built in analog throttle and braking inputs. In the original design we planned on using the
+Nucleo’s built-in DAC but we realized later that the Nucleo only has two DAC channels. It would
+have been possible to utilize the built-in DAC for just throttle input to each ESC but one of the
+65
+
+DAC channel pins conflicted with the pins used for interfacing with the SD card. This lead to us
+developing a DAC breakout board which provides four 12-bit DAC channels which provide the
+throttle and brake inputs. The DACs used are MCP4922-E/P produced by Microchip which each
+provide two channels.
+The DAC board communicates with the Nucleo through SPI protocol and has a built in voltage
+level shifter ( to assist in the transition from the Nucleo’s 3.3V logic high and the DAC chips 5V
+logic high. The 5V logic of the DAC allows the Nucleo to utilize the full 0 to 5V range of the
+throttle and brake input since the Nucleo would have only provided 0 to 3.3V with it’s built-in
+DAC. Figure 5.8 shows the wiring schematic for the DAC board and Figure 5.9 shows the board
+layout for the DAC PCB.
+
+Figure 5.8​ Wiring schematic for DAC breakout board.
+
+66
+
+Figure 5.9​ Board layout for DAC breakout board.
+
+5.3 - Future Design Recommendations
+Although our plans for this project were only created for the span of one senior project class,
+there are still many areas in which the vehicle control system can be improved. The three main
+areas of the project: control electronics, control software, and mechanical hardware each have
+ways in which they can be refined or reiterated to better meet the specifications originally
+designated by Daimler.
+
+5.3.1 - Control Electronics Recommendations
+In its current state, the vehicle hardware is fully capable of handling input from all our sensors
+as well as controlling the vehicle’s motors and brakes. However, the wiring within the enclosure
+as well as throughout the frame could be substantially improved in terms of usability and
+simplicity. The enclosure currently has countless wires spread throughout it, connecting the
+Nucleo board to it’s many inputs and outputs.
+
+67
+
+Figure 5.10 ​Final enclosure wiring.
+As seen in Figure 5.10 these connections are made using standard ribbon cables and
+connectors. Although this type of connection allow for easy layout alteration and component
+addition, it is not secure enough to be completely reliable. During our testing we had several
+cases in which a wire came loose which caused an electrical failure in the field. Additionally,
+these failures were very difficult to diagnose and were often misattributed to software issues.
+To solve the wiring issues within the enclosure, we recommend designing and manufacturing a
+large connector board or shield, which will plug directly into the chosen microcontroller. Unlike
+the connector board that we developed for our final system, this new board should also include
+secure mounts for each component included in the enclosure as well as all the appropriate pin
+connections. By securing everything to the board and minimizing how many loose ribbon cables
+are used, the overall reliability of the system should be greatly improved. If a connector board
+approach is not taken, we recommend improving the current wiring to either include proper
+labeling or a more consistent wire color coding scheme to improve the user interface as well as
+using latching connectors. Lastly, once the PCB designs have been validated we suggest
+having them manufactured by a PCB manufacturer so that they have a proper solder mask and
+silkscreen labels for components.
+The wiring from the controller to the rest of the system could be improved with the addition of
+detachable wire connectors placed within the enclosure. Currently, we have several wires
+routed directly from the Nucleo through the conduit, to components outside the enclosure.
+Although these wires are well insulated and protected, they are not easily removed for
+maintenance. The addition of detachable connectors would allow the user to completely detach
+
+68
+
+the control board from the rest of the vehicle, thus improving user access and the modularity of
+the hardware.
+We also faced issues during testing with the limited power provided by the 9V battery. Once
+everything was plugged in, the control system demanded approximately 4 Watts which resulted
+in a runtime of only a couple hours before the battery needed to be replaced. To resolve these
+issues we recommend replacing the current 9V battery power source with a different power
+source, with a more stable current flow.
+Near the end of the project some inconsistencies were noticed when resetting the Nucleo
+hardware. These inconsistencies gave the impression that some of the variables used in the
+control code stored on the board of the board was not being reset properly. Moving forward, if
+these inconsistencies keep resurfacing then the root cause should be thoroughly investigated
+since it is a major safety concern since it could lead to erratic behavior of the vehicle.
+
+5.3.2 - Control Software Recommendations
+The software flow has been one of the main hurdles throughout this project. Currently the
+primary control loop is suited best for radio control and data gathering. To provide truly
+autonomous control we recommend the use of a more abstracted program flow. Options for this
+include but are not limited to utilizing a Real Time Operating System (RTOS) or schedule
+manager to handle system tasks, or implementing a simple API to allow the Nucleo to abstract
+the hardware away from a larger processor. Utilizing a scheduler would allow the
+implementation of much more complex tasks than can be reasonably allocated by a human.
+Moving forward a higher level of abstraction is the primary challenge.
+During the preliminary testing the acceleration control loop, the behavior of the vehicle was
+erratic. It was determined that the likely cause of the behavior was related to the inherently
+noisy data from the accelerometer. The data retrieved would oscillate between large positive
+and negative numbers at times when the vehicle experienced quick movements. This suggests
+that using the accelerometer as feedback is not desirable and another more robust control
+scheme should be investigated. One possible replacement scheme would be to utilize a velocity
+setpoint controller which would provide a tracking setpoint to the motors and operate on the
+error produced by the desired velocity at the next trigger point minus the velocity needed to
+reach it based on the predicted time till arrival. A paper by Tsz-Chiu Au discussing this approach
+can be found in the 2012 IEEE International Conference publication [23].
+Sensor fusion using an extended Kalman filter was researched and partially implemented for the
+final design but was not completed. The implementation was going to use the TinyEKF library
+(https://github.com/simondlevy/TinyEKF) which requires a measurement model, process model,
+the Jacobians of those models, and noise models. The library may require some modification
+since it implements the prediction and update steps as one function which may not be desirable
+for project. The state variables that were chosen were the longitudinal position, lateral position,
+69
+
+longitudinal velocity, longitudinal acceleration, and heading. The measurements that were
+chosen to be provided to the filter were longitudinal acceleration (IMU), lateral acceleration
+(IMU), heading (IMU), longitudinal position (GPS), lateral position (GPS), and longitudinal
+velocity (encoders). A thesis by Jonathan Webster at Virginia Polytechnic Institute was found to
+be helpful for developing the models need for the Kalman filter implementation [24]. The code
+that was developed is available within the GitHub repository for the project within the fusion
+folder.
+
+5.3.3 - Mechanical Hardware Recommendations
+Although the project does not have many physical parts, there are a few improvements that
+could be made for future iterations of the project.
+
+Figure 5.11​ Encoder mount on full scale vehicle.
+Primarily, the encoder mounts shown in figure 5.11 that are currently in place, served primarily
+as a rapid prototype to test if we could get readings from the shaft encoder while the vehicle
+was running. The mounts are both 3D prints made from PLA plastic, and are therefore not
+highly durable. Although they are reinforced and completely functional, if the motor shaft ever
+shifted out of alignment, it could easily rip apart the plastic. As a result we recommended that
+that mounts be redesigned to be made from a more durable and stiff material in future versions
+of the project.
+
+70
+
+Figure 5.12 ​Hall effect sensor mount on full scale vehicle.
+We recommend future additions include a more robust mounting system for the hall effect
+sensors compared to those shown in Figure 5.12. At the moment they have a tendency to fall
+out of alignment under heavy vibrations which is not suitable for long term testing.
+
+6 - Design Verification Testing
+During the design stages of our project, we developed a multi-stage test plan to validate our
+system design against our specifications. These tests were separated into three phases, the
+first phase involved testing the scale model, the next phase was to test the integration with the
+frame design, and the last phase was full functional system testing, running the vehicle in a
+secure location. All of these tests and the evaluation criteria are documented in our design
+verification plan and report which can be found as Appendix I. Unfortunately, due to the time
+constraints imposed by the senior project class, as well as a few unforeseen complications from
+the other teams, much of our testing had to be revised and several of our test plan milestones
+were not met.
+
+6.1 - Planned Scaled System Validation
+Early in the initial planning phase, it was decided that we would need to develop a test platform
+to enable us to test our control system without relying on the completion of the other
+autonomous target projects. We designed the platform to be a 1:5 scale model of the final
+vehicle with the hope of being able to scale our vehicle dynamic controls. However, after some
+discussion with Dr. Birdsong, it was determined that due to the high number of variables in the
+driving mechanics we would use the test platform mainly for sensor, software, and control
+system validation. The scaled system is discussed in detail in Section 5.7.1.
+
+71
+
+6.1.1 - Sensor Testing
+Using the test platform, we developed drivers necessary to communicate with the different
+sensors. With our driver integration mostly complete we were then able to begin testing control
+loops and integration without waiting for the full scale components. We were able to collect data
+from the sensors over time which were used to check the performance of the sensors as well as
+evaluate the impulse response of the chassis and the latency of our control loops.
+For the inertial measurement unit (IMU) we focussed on determining the accuracy of the
+heading orientation, and sensor latency. Testing the heading angle was done by comparing the
+angle to a known reference, and rotating it to see if it accurately determines the difference in
+angular orientation. Our preliminary IMU tests were sufficient to allow the development of a
+successful PID based heading control algorithm.
+For the GPS focussed on the positional accuracy and sensory latency. To determine the
+positional accuracy we intended to take readings at different points in an open area where we
+could measure the distance between those points. The measurements were to be compared
+against the GPS readings to determine the accuracy. The sensor latency was be determined in
+a similar manner as the IMU. Unfortunately we had considerable difficulty obtaining a GPS lock
+and it was not until late in the project that we had the ability to take these measurements
+For the motor encoders we focussed on the accuracy of reading pulses. To determine the
+accuracy of pulses we connected the encoder to a shaft and had it complete a full rotation while
+measuring the number of pulses generated. We were able to confirm in this method the proper
+functioning of our shaft encoders.
+
+6.1.2 - Sensor Integration Testing
+The next step in testing the sensors will involve testing the accuracy of our heading orientation,
+position, velocity readings, and latency after implementing the extended Kalman filter. The
+orientation and position tests will be conducted similarly to the IMU and GPS tests. The velocity
+verification will be done by having the test platform travel at a set velocity while measuring the
+time it takes to move between two marked points. We intended to compare this data versus the
+output from the filter to determine the velocity accuracy. The latency would be determined
+similar to the method described in the previous section.
+
+6.1.3 - Control System Testing
+The last step in testing with the scale test platform will be to validate the control schemes. For all
+software deployed to the final vehicle there was an analogous piece which we tested on the
+scale platform. For any team moving forward this scale platform testing will be essential to
+ensure safety of both systems and personnel. The first step in testing the control systems will be
+to determine the gains for the PID controllers. This should be done by using a relay method [25],
+where you replace the controller with a relay which produces a set of positive or negative control
+72
+
+outputs depending on the value of the process variable versus the setpoint. The period and
+amplitude of this relay output should be measured to give the ultimate period and amplitude of
+the system. This can then be used to calculate the PID gains based on various methods such
+as Ziegler Nicholas, Cohen Coon, etc. This full testing remains to be completed for the
+autonomous control algorithms.
+The validation of the steering system was intended to done by conducting a chalk line test. A
+piece of chalk will be attached to the vehicle and it will try to follow a marked straight line. The
+difference between the straight line and the chalk marks will be used to determine the accuracy
+of following the straight line. We also intended to use this test to fine tune our controller gains.
+These tests were not completed do to time constraints.
+The validation of the acceleration control system will involve marking trigger points along a
+linear path and loading a velocity profile that contains an acceleration, constant velocity, and
+deceleration section. At each point we would measure the time from the previous point and with
+these measurement we can determine the velocity profile. The data from the sensors should
+also be compared against the test readings.This test was not implemented in the final control
+scheme.
+
+6.1.4 - Safety System Testing
+The emergency braking system and radio control systems were tested for latency and range.
+The range was tested by measuring the distance from the test platform the radio controller could
+be before the microcontroller no longer registers its inputs. We found this to be well over a mile
+and was still operable through multiple concrete walls.The latency of the system was of
+continuous concern throughout the project as we found there was often a noticeable or
+significant delay between actuation of the E-Stop and activation of the brakes.
+
+6.2 - Integration with Frame Design
+Due to considerations of scale time and resources the scale model was inherently unlike the
+final chassis in many respects. Because of this difference, interfacing the controls system with
+the final chassis required significant additional testing. To ensure the controls system is properly
+calibrated, and all safety measures are effective we integrated the controls system with the
+frame using a series of comprehensive full scale tests. Each component was tested to ensure it
+was at the same level of operability as on the small scale test vehicle. The only component
+which has not been thoroughly tested in this manner is the main powered break which was not
+mounted on the chassis until the last days of the project.
+
+6.2.1 - Motor Controller Testing
+To ensure that the final motor controller will integrated successfully with the software we
+developed using the scale model we tested the motor controller with one of the drive motors
+before mounting to the chassis. It will also be necessary to characterize the motor which we
+have not had time to complete. For this purpose connect one motor at a time, independent of
+73
+
+the chassis or any gearing and test the motor at numerous speeds, for torque, accuracy, and
+power draw. Motor speed will be determined both by the shaft encoders and by timed strobe
+light. These tests should be repeated at various battery levels to determine any deviation in the
+motor controllers to changes in voltage.
+
+6.2.2 - Sensor Accuracy
+When the control system is integrated with the frame and the soft target there is the possibly we
+will lose some of the accuracy of our sensor readings. The soft target team is using material that
+attempts accurately match the signature of a vehicle on the road and which will likely affect our
+radio transmission and GPS sensor. To determine the accuracy of the vehicle after integrating
+with other designs, we planned to conduct similar sensor tests as described in Section 6.1.1 and
+6.1.4. We also planned to ensure that the encoders accurately read the velocity of the final drive
+motors. To check the encoders we intended to mount the encoders with the frame lifted off the
+ground and then use the motor controller to set the speed and we will determine the velocity
+based on the encoder pulses. This testing was partially complete when the project ran out of
+time
+
+6.2.3 - Braking Actuator Control
+To begin determining control variables for the braking system we disconnected the motors (for
+safety) and performed a series of tests using external power to move the vehicle. While the
+vehicle was moving applied various levels of braking to determine variables such as braking
+force, time to stop, and braking control precision.
+
+6.3 - Planned Track Day Testing
+The culmination of all the testing done in the previous sections was intended to be the testing of
+the fully integrated system at a test track in a nearby town. The main focus of these tests was to
+verifying that the safety systems work and verifying the performance of our final design.
+Unfortunately neither we nor the other Daimler Teams were fully ready for original track day so it
+was cancelled. A later track day was scheduled and hardware issues arose during testing that
+prevented us from testing the full scale vehicle.
+
+6.3.1 - Safety Systems
+For safety, full scale testing began with tests of all individual components to ensure everything
+was operating in good order. Controls system safety testing began by checking the decision
+making with simulated input, and by stress testing the error checking algorithms for the map,
+radio, and GPS failsafes. Sensors were tested primarily through the use of impulse testing and
+some unpowered motion. Again interference from the chassis and soft target may prove
+hazardous in the future.
+For a full system safety checklist pleases see the pre-test checklist included with this report.
+
+74
+
+Testing of power system fusing and circuit protection must be conducted with the motor
+controllers disconnected and fully removed from the chassis. This will be a series of destructive
+tests designed to burn out every fuse in the power system. Replacement fuses as well as a
+class C fire extinguisher should be kept on hand. If the circuit protection works as designed the
+fuses will fail safely and individually without affecting the others. These tests should be done at
+least once before any high speed operation of the vehicle is attempted.
+
+6.3.2 - Control Systems
+Testing of the final control system was very similar in nature to testing on the scale model. We
+intended to begin with determining the values of the controller gains using the relay method
+described in Section 6.1.3. However, The acceleration and steering control systems were not
+ready for testing in the same manner as described in Section 6.1.3.
+
+6.3.3 - Track Day Safety
+The inherently dangerous nature of a high powered system traveling under its own control at
+high velocities requires a number of stringent safety precautions be taken during testing. The
+following safety guidelines are recommended for all track day personnel and all tests.
+1) Never stand directly in front or behind the vehicle
+2) The E-stop shall be under operator control whenever the batteries are connected.
+3) Regardless of time saved no personnel should be stationed at the far end of a test. Or
+within the GPS defined map of the track.
+4) At all times a class 2A 10BC (universal) fire extinguisher shall be present at both ends of
+the track.
+5) A battery safety and disposal bucket should be placed at both ends of the track.
+6) Battery Safety guidelines described in the safety section shall be followed
+7) When the main batteries are installed and the main breaker closed no persons shall
+make physical contact in any way with the system. All adjustments must be performed
+before the system is powered on. This excluded powering down the system by pushing
+the main breaker.
+8) The control system should always be powered on before the power system.
+9) Sections of the code designed to prevent tampering with the system or unsafe operation
+shall not be altered on track day. If there is a significant program bug it should be fixed
+and fully tested prior to track day.
+For further safety measures and track day procedure please see the attached documents Track
+day test protocol and pre-test checklist (Appendix J).
+
+6.4 Test Results
+Due to delays in manufacturing the full scale vehicle resulting from shipping, design oversights,
+and issues on our track testing day many of the tests were unable to be completed to the level
+that was planned. This section covers the tests that were formally completed and analyzed.
+75
+
+6.4.1 Test Code
+When developing and integrating drivers for the various actuators and sensors in the system,
+test code was written to verify the operation of the devices. The test code for each device is
+available on the GitHub repository within the folders relating to the devices. Many of these tests
+were evaluated qualitatively based on serial output from the Nucleo. The tests can be used to
+further evaluate the hardware by future teams, if desired.
+
+6.4.2 Frame Resonance
+Upon noticing that the frame is extremely flexible and acts as a damped mass spring system
+when loaded with the main batteries we conducted a series of resonance tests utilising the
+onboard IMU. We set the chassis on a flat level surface fully loaded with all final components
+including batteries motors and controls systems. We applied impulse to the frame to induce
+resonance and recorded the resulting acceleration using the controls system IMU. Impulse was
+applied in all directions and from all sides of the vehicle. Magnitude of the impulses applied was
+also varied so as to reveal as much of the frames underlying natural and forced response as
+possible. The goal of these tests was to identify frequencies which we should expect and be
+able to filter out of IMU data for autonomous control.
+
+Figure 6.1 ​Data gathered from impulse testing by IMU.
+76
+
+According to our analysis of the data recorded, which involved correlating the IMU readings with
+the system latency and GPS timestamps, the chassis has a primary resonant frequency on the
+Z axis of approximately 2.8Hz. This resonant frequency has very limited damping, with a
+standard damping coefficient as low as 0.18. The result is a dramatic flexing of the vehicle on
+the XY plane under nearly any applied impulse. Less dramatic resonances were found on the X
+and Y axis of the vehicle however these were much higher frequency and had much higher
+levels of damping. These axis should not be a significant concern in the operation of the vehicle.
+The Z axis however should be monitored closely to ensure the center of the chassis does not
+oscillate sufficiently to make contact with the ground.
+
+6.4.3 Steering Control
+To evaluate the feasibility of using a heading based steering control loop, the sensor
+development platform was used to perform a basic test. The test compared a heading angle
+change over a 16 ft distance of steering control implementation, with a proportional gain of 5,
+versus the uncontrolled system. The test was also used to determine the drift of the system over
+that distance by using a marker attached to the back of the vehicle while it drove over a long
+piece of paper. Figure 6.2 is a picture of the test setup.
+
+Figure 6.2 ​Picture of the steering control test setup.
+For measuring the heading angle change we used the readings from the IMU which are
+summarized by Figure 6.3.
+
+77
+
+Figure 6.3 ​Heading angle error over time. Tests were conducted with the sensor
+platform traveling a distance of approximately 16ft. Maximum heading error of the
+controlled platform was approximately 1.5°. The controlled tests used a
+proportional gain of 5 and no integral or derivative gain.
+From the test we were also able to determine that the vehicle would drift from the straight line by
+approximately 3 in over 16 ft (approximately 1.5%) when controlled. This test proves that the
+heading based steering control is feasible for the final design but further testing and tuning of
+the hardware on the full scale vehicle would need to be done to implement the control loop.
+
+6.4.4 Acceleration Control
+A preliminary test to determine the feasibility of the acceleration control scheme was conducted
+on the sensor platform. The tests quickly made it apparent that acceleration control based on
+the IMU accelerometer values would not work well. The noisy nature of the accelerometer
+measurement lead to erratic unstable behavior of the vehicle. The response was improved
+when a simple low pass filter was implemented by averaging four readings prior to closing the
+control loop. Figure 6.4 shows an example of the data produced by the IMU during one of the
+acceleration test runs.
+
+78
+
+Figure 6.4 Example of acceleration control data. Test was conducted with a
+proportional gain of 1.0 and no integral or derivative gain. The response of the
+system was unstable because of large and fast magnitude changes.
+Since the car was only using a proportional gain it needed an initial bump to start accelerating.
+The sensor platform was programmed to accelerate to 0.25 m/s over 0.25 m distance, then hold
+that velocity for another 0.25 m, and then decelerate to 0 m/s at 0.75 m.
+
+7 - Conclusion and Recommendations
+The autonomous test target is designed and intended to reduce human testing error, increase
+testing accuracy, and remove danger to the human operators. Our controls system is a
+fundamental component of this larger vehicle. The controls system as designed has the
+capacity to maneuver our vehicle in a straight line through a series of precise acceleration
+profiles over nearly two miles of track. The controls system is also designed to be sufficiently
+adaptable and modular that it can be used by future students as a platform for further
+autonomous test target development. If properly constructed and calibrated we predict our
+controls system will provide a safe and effective alternative to the human driven testing currently
+in use.
+
+7.1 - Recommendations for Future Improvement
+At the completion of our senior project, there are many steps that still need to be taken to fully
+realize Daimler’s original vision for the final Guided Target Vehicle. On the controls side of the
+project, we have produced the hardware and software capable of operating the target frame
+remotely, but not autonomously. In its current state, the navigation system is able to take user
+remote control input to drive, steer, and brake, as well as make corrective action using IMU data
+
+79
+
+when veered off course. However, none of these features have been fully refined and have
+much room for improvement.
+The next steps for this project will be to reiterate the hardware layout to a more compact form, to
+better accommodate Daimler’s future plans to be able to drive over the frame. However, the
+primary focus for future control system teams will be to build upon the existing vehicle control to
+implement autonomous driving capabilities. To enable autonomy, the system will need a more
+refined method of acceleration control, as well as complete sensor fusion.
+
+References
+[1]
+Paul, A., Chauhan, R., Srivastava, R., and Baruah, M., "Advanced Driver Assistance
+Systems," SAE Technical Paper 2016-28-0223, 2016, doi:10.4271/2016-28-0223.
+[2]
+National Highway Traffic Safety Administration. Automatic Emergency Braking System
+(AEB) Research Report. N.p.: n.p., August 2014. Print.
+[3]
+European New Car Assessment Programme. Test Protocol - AEB Systems. Version 1.1.
+N.p.: n.p., June 2015. Print.
+[4]
+Kastrenakes, Jacob. "Google Is Testing Its Autonomous Cars in a 'Matrix-style' Version
+of California." The Verge. N.p., 21 Aug. 2014. Web. 10 Nov. 2016.
+[5]
+Kelly, Joseph, Peter Broen, Jordan Silberling, and John Zellner. System and Method for
+Testing Crash Avoidance Technologies. Dynamic Research Inc., assignee. Patent 8762044.
+pending. Print.
+[6]
+Kelly, Joseph, Peter Broen, Jordan Siberling, Nenah Bozin, and John Zellner. Devices,
+Systems, and Methods for Testing Crash Avoidance Technologies. Dynamic Research, Inc.,
+assignee. Patent 8583358. pending. Print.
+[7]
+Insurance Institute for Highway Safety. Autonomous Emergency Braking Test Protocol.
+Version 1. N.p.: n.p., October 2013. Print.
+[8]
+United States. National Highway Traffic Safety Administration. Department of
+Transportation. ​New Car Assessment Program​. By Daniel C. Smith. 0006 ed. Vol. 2015.
+N.p.:n.p., n.d. Print. NHTSA.
+[9]
+GPS performance standard - Welcome to GPS.gov. (n.d.). Retrieved October 24, 2016,
+from http://www.gps.gov/technical/ps/2008-SPS-performance-standard.pdf
+
+80
+
+[10]
+WAAS Performance Standard - GPS. (n.d.). Retrieved October 24, 2016, from
+http://www.gps.gov/technical/ps/2008-WAAS-performance-standard.pdf
+[11]
+Differential GPS - gpsinformation.org. (n.d.). Retrieved October 24, 2016, from
+http://www.gpsinformation.org/dale/dgps.htm
+[12]
+Comparing Four Methods of Correcting GPS Data: DGPS, WAAS ... (n.d.). Retrieved
+October 24, 2016, from
+http://www.fs.fed.us/t-d/pubs/pdfpubs/pdf04712307/pdf04712307dpi300.pdf
+[13]
+Ground-Based Augmentation System (GBAS) - Navipedia. (n.d.). Retrieved October 24,
+2016, from http://www.navipedia.net/index.php/Ground-Based_Augmentation_System_(GBAS)
+[14]
+GBAS Frequently asked questions. (n.d.). Retrieved October 24, 2016, from
+https://www.faa.gov/about/office_org/headquarters_offices/ato/service_units/techops/navservice
+s/gnss/laas/media/GBAS_FAQ.pdf
+[15]
+
+"How a Kalman Filter Works, in Pictures." Bzarg. N.p., 11 Aug. 2015. Web.
+
+[16]
+Faragher, Ramsey. "Understanding the Basis of the Kalman Filter Via a Simple and
+Intuitive Derivation [Lecture Notes]." IEEE Signal Processing Magazine 29.5 (2012): 128-32.
+University of Cambridge, Sept. 2012. Web.
+[17]
+Staff, RC Heli Pilot. "RC System Performance: Latency & Resolution - RC Heli Pilot
+Magazine." RC Heli Pilot Magazine. N.p., 2015. Web. 17 Nov. 2016.
+[18]
+
+Åström, Karl J., and Tore Hägglund. PID Control. 1993. Print.
+
+[19]
+ARM Limited. "Cortex®-M4 Technical Reference Manual." 0439B ARM.DDI (2010): n.
+pag. Web.
+[20]
+Bosch Sensortec, “Intelligent 9-axis absolute orientation sensor,” BNO055 datasheet,
+November 2014.
+[21]
+Golconda, Suresh. "Steering control for a skid-steered autonomous ground vehicle at
+varying speed." ​Master's thesis, Univ. Louisiana at Lafayette, Lafayette, LA​ (2005).
+[22]
+Z. Yu, H. Jibin, L. Xueyuan, L. Shupeng and G. Jing, "A linear lateral dynamic model of
+skid steered wheeled vehicle," ​2013 IEEE Intelligent Vehicles Symposium (IV)​, Gold Coast,
+QLD, 2013, pp. 964-969.
+
+81
+
+[23]
+Au, Tsz-Chiu, Michael Quinlan, and Peter Stone. "Setpoint Scheduling for Autonomous
+Vehicle Controllers." ​2012 IEEE International Conference on Robotics and Automation​ (2012):
+n. pag. Web.
+[24]
+Webster, Jonathan M. "A Localization Solution for an Autonomous Vehicle in an Urban
+Environment." Thesis. Virginia Polytechnic Institute and State University, 2007. Web.
+[25]
+VanDoren, Vance. "Relay Method Automates PID Loop Tuning." Control Engineering.
+Control Engineering, Sept. 2009. Web.
+
+82
+
+Appendices
+Appendix A - QFD Spreadsheet
+
+Figure A1. Original Quality function deployment spreadsheet to analyze
+our customer requirements and create our engineering specifications.
+Some specifications have been changed based on sponsor and advisor
+feedback.
+A1
+
+Appendix B - Competitor Specification Sheets
+
+A2
+
+A3
+
+A4
+
+A5
+
+A6
+
+A7
+
+A8
+
+Appendix C - Bill of Materials
+**”Part Ref. Number” based on the part number in the parts list and drawings
+Table C1. ​Final Bill of Materials. The P column refers to if the item was purchased, R
+refers to if the item was received, and U refers to if the item was used in the final project.
+Green implies that the column is true and red means it is false.
+Part
+Category
+
+Part Type
+
+MCU
+
+Battery
+
+Central
+Control
+
+Part Ref.
+Number
+
+Vendor
+Item
+Number
+
+Vendor
+
+Qty
+
+Unit Cost
+
+Cost
+
+STM32
+Nucleo-64
+F446RE
+
+10
+
+3A991A
+2
+
+ST
+
+1
+
+$13
+
+$13
+
+Turnegy
+Lipo Battery
+
+7
+
+T2650.3
+Turnegy
+S.20
+
+1
+
+$11.02
+
+$11.02
+
+Amazon
+
+1
+
+$2.95
+
+$2.95
+
+Amazon
+
+1
+
+$3.20
+
+$3.20
+
+TurnigyTurnegy
+3S
+
+1
+
+$4.81
+
+$4.81
+
+Selected
+Part
+
+9V
+Enclosed
+9V Holder Battery
+Holder
+W/Switch
+
+49
+
+Duracell
+CopperTop
+9V Battery - 9V Size Alkaline
+Battery
+
+50
+
+Battery
+Charger
+
+Turnigy 12v
+2-3S Basic
+Balance
+Charger
+
+22
+
+IMU
+
+BNO055
+Absolute
+Orientation
+Sensor
+
+9
+
+2472
+
+Adafruit
+
+1
+
+$34.95
+
+$34.95
+
+GPS
+
+Ultimate
+GPS
+Breakout 66
+channel w/
+10Hz
+updates
+
+8
+
+724
+
+Adafruit
+
+1
+
+$39.95
+
+$39.95
+
+AR610
+(pairs with
+DX6e)
+
+23
+
+SPM66
+50
+
+Horizon
+Hobby
+
+1
+
+(included
+transmitter)
+
+0
+
+24
+
+321217
+03
+
+Amazon
+
+1
+
+$6.25
+
+$6.25
+
+Radio
+Comms
+
+Power
+Ferrite
+Conditioner Bead
+
+P?
+
+R?
+
+U?
+
+VUPN7
+826
+
+MN1604
+B2Z
+
+A9
+
+Opto
+Isolators
+
+Sparkfun
+optoisolator
+breakout
+
+11
+
+SD Card
+Breakout
+
+Micro SD
+card
+breakout
+(part 254)
+
+12
+
+KBL BLDC
+MOTOR
+Motor ESC SPEED
+CONTROLL
+ER
+
+Frame
+Interface
+
+5
+
+$4.95
+
+$24.75
+
+254
+
+Adafruit
+
+1
+
+$7.50
+
+$7.50
+
+KBL483
+01X
+
+Kelly
+Motor
+Controls
+
+2
+
+$319.00
+
+$638.00
+
+RB-Ite-1 RobotSh
+16
+op
+
+4
+
+$2.62
+
+$10.48
+
+Proximity
+Startup
+E-stop
+
+Adjustable
+PIR Motion
+Sensor
+
+26
+
+27
+
+77082
+
+Del City
+
+1
+
+$44.29
+
+$44.29
+
+Thermal
+Breaker
+
+Hi-Amp
+Surface
+Mount
+Circuit
+Breakers
+
+28
+
+MJZ-20
+0D
+
+Golf Cart
+Parts
+Outlet
+
+2
+
+$51.43
+
+$102.86
+
+SPST 48V
+Reverse 200A
+polarity
+Grounded
+protection Intermittent
+Solenoid Solenoid
+
+Enclosure
+
+BOB-09
+Sparkfun
+118
+
+Braking
+Motor
+Driver
+
+VNH5019
+Motor
+Driver
+Carrier
+
+29
+
+1451
+
+Polulu
+
+1
+
+$24.95
+
+$24.95
+
+Motor
+Encoder
+
+CUI Inc.
+AMT102-V
+
+39
+
+102-130
+7-ND
+
+Digikey
+
+2
+
+$23.63
+
+$47.26
+
+Electrical
+enclosure
+with
+Enclosure knockouts
+
+2
+
+75065K McMaster
+59
+-Carr
+
+1
+
+$41.22
+
+$41.22
+
+Delrin®
+Enclosure
+Acetal
+Fastener
+Resin
+plate
+Sheets
+
+6
+
+8573K2 McMaster
+85
+-Carr
+
+1
+
+$12.30
+
+$12.30
+
+13
+
+93657A McMaster
+021
+-Carr
+
+3
+
+$1.09
+
+$3.27
+
+Spacers
+
+Nylon
+Unthreaded
+Nucleo
+Spacers
+
+A10
+
+Screws
+
+Nuts
+
+Nylon
+Unthreaded
+Sensor
+Spacers
+
+14
+
+93657A McMaster
+212
+-Carr
+
+10
+
+$1.02
+
+$10.20
+
+Nylon
+Unthreaded
+Plate
+Spacers
+
+3
+
+94639A McMaster
+862
+-Carr
+
+1
+
+$8.51
+
+$8.51
+
+M2
+Stainless
+Steel
+Socket
+Head Screw
+
+16
+
+91292A McMaster
+835
+-Carr
+
+1
+
+$3.86
+
+$3.86
+
+M3
+Stainless
+Steel
+Socket
+Head Screw
+
+17
+
+91292A McMaster
+123
+-Carr
+
+1
+
+$6.00
+
+$6.00
+
+M5
+Stainless
+Steel
+Socket
+Head Screw
+
+18
+
+91292A McMaster
+127
+-Carr
+
+1
+
+$7.78
+
+$7.78
+
+M6
+Stainless
+Steel
+Socket
+Head Screw
+
+4
+
+91292A McMaster
+144
+-Carr
+
+1
+
+$7.76
+
+$7.76
+
+M2
+Medium-Str
+ength Steel
+Thin Hex
+Nut
+
+19
+
+90695A McMaster
+025
+-Carr
+
+1
+
+$3.64
+
+$3.64
+
+M3
+Zinc-Plated
+Steel Hex
+Nut
+
+20
+
+90591A McMaster
+250
+-Carr
+
+1
+
+$2.06
+
+$2.06
+
+M5
+Zinc-Plated
+Steel Hex
+Nut
+
+21
+
+90591A McMaster
+260
+-Carr
+
+1
+
+$2.61
+
+$2.61
+
+M6
+High-Streng
+th Steel Hex
+Nut
+
+5
+
+99899A McMaster
+211
+-Carr
+
+1
+
+$7.53
+
+$7.53
+
+A11
+
+Discrete 3
+Hall Effect pin hall
+Sensors effect
+sensors
+Rubber
+Bumpers
+
+Adhesive
+round back
+bumpers
+
+51
+
+Digikey
+
+6
+
+$0.57
+
+$1.71
+
+30
+
+8771K8 McMaster
+2
+-Carr
+
+1
+
+$5.67
+
+$5.67
+
+Rubber
+Weatherpro
+damper for
+of window
+enclosure
+insulation
+lid
+
+54
+
+5602-32 HomeDe
+-AFC
+pot
+
+1
+
+$2.12
+
+$2.12
+
+Conduit
+
+1/2 in. x 100
+ft. Flexible
+Aluminum
+Conduit
+
+31
+
+5602-30 HomeDe
+-AFC
+pot
+
+1
+
+$32.37
+
+$32.37
+
+Radio
+Antenna
+
+Spectrum
+DX6e
+
+32
+
+SPM66
+50
+
+Horizon
+Hoby
+
+1
+
+$179.00
+
+$179.00
+
+SD card
+Reader
+
+IOGEAR
+micro SD
+reader
+
+33
+
+GFR204
+Amazon
+SD
+
+1
+
+$4.69
+
+$4.69
+
+SMA
+external
+antenna
+
+34
+
+$12.92
+
+$12.92
+
+External
+GPS
+antenna
+
+HIGHROCK
+Controls
+Automotive
+interface
+Connectors
+connectors
+Power
+8AWG
+systems
+Battery
+connectors Lugs
+Controls
+power
+Switch
+GPS
+Antenna
+adapter
+
+960
+
+adafruit
+
+1
+
+35
+
+HRD-P
+N791219
+89
+
+Amazon
+
+1
+
+7.99
+
+7.99
+
+36
+
+33461
+
+Pilotshop
+
+20
+
+1
+
+20
+
+1
+
+2.95
+
+2.95
+
+$3.95
+
+$3.95
+
+Total
+
+$1,406
+
+Toggle
+Switch and
+Cover
+
+37
+
+SMA
+adapter
+
+38
+
+COM-11
+Sparkfun
+310
+
+851
+
+adafruit
+
+1
+
+A12
+
+Appendix D - Gantt Chart
+
+Figure D.1 Gantt Chart showing major milestones and tasks in project
+timeline. Part 1 of 7.
+
+A13
+
+Figure D.2 Gantt Chart showing major milestones and tasks in project
+timeline. Part 2 of 7.
+
+A14
+
+Figure D.3 Gantt Chart showing major milestones and tasks in project
+timeline. Part 3 of 7.
+
+A15
+
+Figure D.4 Gantt Chart showing major milestones and tasks in project
+timeline. Part 4 of 7.
+
+A16
+
+Figure D.5 Gantt Chart showing major milestones and tasks in project
+timeline. Part 5 of 7.
+
+A17
+
+Figure D.6 Gantt Chart showing major milestones and tasks in project
+timeline. Part 6 of 7.
+
+A18
+
+Figure D.7 Gantt Chart showing major milestones and tasks in project
+timeline. Part 7 of 7.
+
+A19
+
+Appendix E - Design Ideation Sessions and Brainstorming
+
+Figure E.1​ Ideation session list
+
+Figure E.2​ Locate itself ideation session
+
+A20
+
+A21
+
+Figure E.3​ Sensor and actuator ideation sessions.
+
+A22
+
+Appendix F - Detailed Supporting Analysis
+Steering Simulation Matlab Script
+test_vehicle_model.m
+Script contains variable declarations and loads data necessary to execute the test
+vehicle Simulink model (test_vehicle_model.slx)
+% Developed by: SloNav (John Barry, Zach Eagan, Ryan Mackintosh)
+% Date Created: Jan. 19, 2017
+% License: MIT
+Clears workspace, command window, and closes windows
+clear ​all
+close ​all
+clc
+Controller
+% Setpoints and disturbances
+look_ahead = 1;
+% Look ahead carrot point [ft]
+disturb_time = 5;
+% Time of disturbance [sec]
+disturb_val = 30;
+% Intensity of disturbance [lb]
+speed_sp = 30;
+% 2 * Speed of motors [%FS]
+% PID Controller coefficients for steering system
+steer_P = 1;
+steer_I = 0.15;
+steer_D = 0.2;
+steer_N = 100;
+Inputs
+Variables that define the initial conditions and length of simulation
+u_start = 0.01; ​% Starting speed of the vehicle [ft/s]
+t_start = 0;
+% Simulation start time [s]
+t_stop = 70; % Simulation stop time [s]
+Motor variable declarations
+Variables are used for both motors
+% Motor variables
+k_motor = 167;
+% Motor gain (Kv) [RPM/V]
+t_motor = 0.025;
+% Motor time constant [1/sec]
+gear_ratio = 1/4.1;
+% Gearing after motor [RPM/RPM]
+Vehicle dynamics variable declarations
+Geometry
+A23
+
+B = 5;
+% Track width [ft]
+L = 7;
+% Length between axles [ft]
+a = 3.75;
+% Distance from center of gravity to solid axle [ft]
+b = L - a;
+% Distance from center of gravity to motors [ft]
+m = 300/32.2;
+% Mass of vehicle [lb]
+I = 210000/(12^2); ​% Moment of inertia of vehicle [lb*ft^2]
+% Tire properties
+R = 4/12;
+​% Wheel radius [ft]
+Kx = 2150;
+% Longitudial slip stiffness [lb/rad]
+Ka = 2150;
+% Cornering stiffness [lb/rad]
+Runs Simulink model
+Executes the test_vehicle_model.slx
+sim(​'test_vehicle_model'​);
+figure(1);
+plot(pos(:,1),pos(:,2));
+xlabel(​'X Position'​);
+ylabel(​'Y Position'​);
+
+A24
+
+Appendix G - Failure Mode Effects Analysis (FMEA)
+*See the following pages
+
+A25
+
+Appendix H - Parts List and Part Drawings
+*Read index as, 1. = drawing #100, 1.2 = drawing #120, 1.2.3 = drawing #123
+**BOM reference number listed in (_parentheses_)
+1.
+
+Enclosure Layout
+1.1.
+Electrical Enclosure with Knockouts ( 2 )
+1.2.
+M6 Stainless Steel Socket Head Screw ( 4 )
+1.3.
+M6 High-Strength Steel Hex Nut ( 5 )
+
+2.
+
+Component Plate Layout ( 1 )
+2.1.
+Component Plate ( 6 )
+2.2.
+Additional Parts
+2.2.1.
+Nylon Unthreaded Plate Spacers ( 3 )
+2.2.2.
+Nylon Unthreaded Nucleo Spacers ( 13 )
+2.2.3.
+Nylon Unthreaded Sensor Spacers ( 14 )
+2.2.4.
+Battery Wedge ( 15 )
+2.3.
+M2 Stainless Steel Socket Head Screw ( 16 )
+2.4.
+M3 Stainless Steel Socket Head Screw ( 17 )
+2.5.
+M5 Stainless Steel Socket Head Screw ( 18 )
+2.6.
+M2 Medium-Strength Steel Thin Hex Nut ( 19 )
+2.7.
+M3 Zinc-Plated Steel Hex Nut ( 20 )
+2.8.
+M5 Zinc-Plated Steel Hex Nut ( 21 )
+
+3.
+
+Central Control
+3.1.
+Lipo Battery ( 7 )
+3.2.
+10 Hz 66 Channel GPS ( 8 )
+3.3.
+BNO055 IMU ( 9 )
+3.4.
+STM32 Nucleo-64 F446RE ( 10 )
+3.5.
+Basic Balance Charger ( 22 )
+3.6.
+AR610 Radio Comms ​( 23 )
+3.7.
+Micro SD Card Breakout ( 12 )
+
+4.
+
+Frame Interfacing
+4.1.
+KBL BLDC Motor Speed Controller​ ( 25 )
+4.2.
+**Part number not used**
+4.3.
+**Part number not used**
+4.4.
+Grounded Intermittent Solenoid​ ( 28 )
+4.5.
+Brake Motor Driver ​( 29 )
+4.6.
+Encoder Bracket ( 38 )
+4.7.
+Shaft Encoders (39)
+4.8.
+Hall Effect Sensor Bracket
+
+4.9.
+
+Brake Servo Mount
+
+5.
+
+External Enclosure Components
+5.1.
+**Part number not used**
+5.2.
+Liquidtight Conduit​ ( 31 )
+5.3.
+Spectrum Radio Antenna​ ( 23 ) **See Drawing #: 360
+5.4.
+MicroSD Reader/Writer​ ( 33 )
+5.5.
+GPS Antenna ( 34 )
+5.6.
+Hall Effect Sensors ( 51 )
+5.7.
+Battery Lugs​ ( 36 )
+5.8.
+Rocker Switch ​( 37 )
+5.9.
+SMA adapter ( 38 )
+
+6.
+
+Electrical Schematic
+6.1.
+Power System Electronics
+6.2.
+DAC Board Schematic
+6.2.1.
+DAC Board PCB Layout
+6.3.
+Connector Board Schematic
+6.3.1.
+Connector Board PCB Layout
+6.4.
+Microcontroller Wiring Schematic
+
+1) Enclosure Drawings
+
+2) Component Plate Layout
+
+3) Central Control
+
+4) Frame Interfacing
+
+5) External Enclosure Components
+
+6) Electrical Schematics and PCB Layouts
+
+Appendix I - Design Verification Plan and Report (DVP&R)
+Table J1​ DVP&R Test Plan.
+
+DVP&R
+Date: 6/2/17
+
+Daimler Trucks
+
+Guided
+Target
+Control
+System
+
+TEST PLAN
+Item
+No
+
+Specificatio
+n or Clause
+Reference
+
+1
+
+2
+
+Controllable
+Speed
+
+3
+
+4
+
+5
+
+6
+
+Number of
+Trigger
+Points
+
+Test
+Description
+
+Dr. Birdsong
+
+TEST REPORT
+
+Acceptanc
+Test
+e Criteria Responsibility
+
+TEST RESULTS
+Test
+Result
+
+Quantity Quantity
+Pass
+Fail
+
+NOTES
+
+Test Max
+Speed
+
+Reach at
+least 32.2
+kph
+
+Ryan
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+Test Speed
+Increments
+
+Speed set
+in 1 kph
+increments
+
+Ryan
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+Test Speed
+Accuracy
+
+Speed
+accurate to
+within 0.5
+kph
+
+Ryan
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+Upload and
+run a large
+test map
+
+Map has
+>= 10
+points
+
+Zach
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+Vehicle
+stops
+within 1.5
+meters of
+each
+center
+point
+
+Zach
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+Zach
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+Full stop at
+each spatial
+location
+allowing time
+Positional
+to verify
+Accuracy(wi
+position
+th regard to
+trigger
+Run Map
+points)
+dragging
+
+Marked
+Path
+chalk or other deviates no
+temporary
+more than
+marker to
+1.5 meters
+verify path
+from any
+
+A27
+
+position
+point
+
+7
+
+Comparison
+of actual path
+with retrieved
+sensor data
+
+Retrieved
+data
+deviates no
+more than
+0.5 meters
+from
+verified
+path
+
+Zach
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+8
+
+Marked
+Path
+Run Map
+deviates no
+dragging
+more than
+chalk or other
+0.5 meters
+temporary
+from the
+marker to
+straight line
+verify path
+between
+two points
+
+Zach
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+9
+
+Comparison
+of actual path
+with retrieved
+sensor data
+
+Retrieved
+data
+deviates no
+more than
+0.5 meters
+from
+verified
+path
+
+Zach
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+10
+
+Synchronise
+clocks and
+compare log
+of E-stop
+push to
+actuation
+occurrence
+
+100ms
+
+John
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+Δt <= 3s
+
+John
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+11
+
+Positional
+Accuracy
+(with
+regards to
+straight line
+between
+defined
+points)
+
+E-Stop
+signal
+Latency
+
+Starting at 0,
+3, and 6
+meters per
+second
+measure the
+Acceleration time for the
+vehicle to
+travel to a
+point 4.5,
+13.5, and
+22.5 meters
+
+A28
+
+away
+respectively.
+
+12
+
+Starting at 0,
+3, and 6
+meters per
+second
+measure the
+Deceleration
+time for the
+vehicle to
+come to a full
+and complete
+stop.
+
+Δt <= 3s,
+6s, 9s
+
+John
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+15
+
+Starting at 0
+m/s run
+several tests
+of
+accelerations
+at multiples
+of 0.25m/s^2.
+Mark a
+distance 20
+meters down
+the track and
+Acceleration measure the
+/
+time for the
+Deceleration vehicle to
+reach this
+point. Do this
+test again at
+3 and 6 m/s
+starting to
+ensure the
+control holds
+through the
+full range of
+vehicle
+velocities.
+
+Control of
+acceleratio
+n is
+accurate to
+within
+0.25m/s^2
+over the full
+range of
+the velocity
+and
+acceleratio
+n.
+
+John
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+A29
+
+16
+
+Starting with
+the vehicle as
+separate
+major
+components
+(chassis,
+control, soft
+Initial Setup
+target) time
+Time
+the assembly
+of the vehicle
+and loading
+of the first
+map using
+four or fewer
+persons
+
+Δt <= 30
+minutes
+
+Ryan
+
+Pass
+
+2
+
+0
+
+26 min setup
+time
+
+17
+
+Time the
+reset time
+between
+several
+different runs.
+Time from
+Setup time
+the time the
+Between
+last run ends
+Tests
+to the time
+the vehicle is
+ready to go
+waiting only
+for the start
+button.
+
+Δt <= 10
+minutes
+
+Ryan
+
+Pass
+
+1
+
+0
+
+5 min setup time
+
+18
+
+Percentage Mark each
+of
+test and note
+successful failures and
+tests
+causes. Keep
+conducted
+a rolling
+without
+average of
+control
+testing
+system fault
+problems
+
+94%
+success
+rate for
+control
+system
+
+John
+
+Fail
+
+0
+
+1
+
+~50%
+
+A30
+
+19
+
+include
+counter in the
+code which
+notes each
+full cycle
+completion
+Latency for
+and the
+Δt <= 28ms
+control loop elapsed time
+for full
+feedback since the end control loop
+of the last full
+cycle. Include
+this data in
+the final
+system test
+output
+
+Zach
+
+N/A
+
+N/A
+
+N/A
+
+20
+
+90% of the
+volume of
+Measure by
+the control
+approximate
+system is
+volume the
+contained
+size of the
+within a
+control
+single 16in
+system
+X 16in X
+4in box
+
+John
+
+Pass
+
+1
+
+0
+
+Zach
+
+Fail
+
+0
+
+1
+
+Over budget
+
+Zach
+
+N/A
+
+N/A
+
+N/A
+
+Did not perform
+test
+
+Size
+
+21
+
+Cost of
+At the end of
+control
+the project
+system/data calculate the
+acquisition
+final BOM
+hardware
+total cost
+
+22
+
+Have three
+programmers
+with no prior
+knowledge of
+Time for
+our code
+Code
+major
+read the
+documentati
+modificatio
+documentatio
+on
+n <= 2
+n and make a
+hours
+successful
+modification
+or develop a
+new function.
+
+Cost <=
+$1200
+
+Did not perform
+test
+
+A31
+
+Appendix J - Pre-Test Safety Checklist and Test Procedures
+
+SLONAV Pre-Test Checklist
+Note 1: Team SLONAV, Daimler Trucks, and CalPoly take no responsibility for
+injuries incurred during testing of the autonomous test target system. We strongly
+recommend you utilize other test equipment whenever possible.
+Note 2: Refraining from performing any check in full or ignoring a failure for any
+reason will likely cause serious injury or death
+Note 3: Read all safety checks, instructions, manuals, and related documentation
+before beginning any test.
+Note 4: Before Activation of system have on hand one or more Battery safety kits.
+These kits should consist at minimum of the following items:
+1. PVC or Neoprene rubber gloves designed for handling battery acid of
+30-70% dilute sulfuric acid.
+2. PVC bucket at least large enough to hold one standard size car battery
+in the event of a slow leak.
+3. A large box of Sodium Bicarbonate (Baking Soda) for use neutralizing
+small spills of battery acid.
+4. Fire Extinguisher Class ABC for putting out small fires
+5. A set of MSDS for all batteries
+6. Phone numbers for local chemical spill and hazardous materials
+authorities
+Note 5: For any problems which cannot be handled by the above battery safety kit
+please call local Police/Fire/Emergency services at “911”
+Note 6: For those testing outside the USA please confirm the emergency phone
+number for your local Police/Fire/Emergency services prior to beginning a test as it
+may be different from the number listed in ​NOTE 5.
+
+A32
+
+ID
+
+1.000 Physical Checks
+
+1.100
+
+Perform the following checks with batteries in place but
+not electrically connected
+
+1.200
+
+With the exception of the Wheels, the Frame is no
+lower than 1.5 inches off the ground at any point.
+
+1.300
+
+The tires are between 25 and 30 PSI
+
+1.400
+
+No loose bolts
+
+1.411
+
+No loose bolts (Back Left section)
+
+1.412
+
+No loose bolts (Back Right section)
+
+1.413
+
+No loose bolts (Front Left section)
+
+1.414
+
+No loose bolts (Front Right section)
+
+1.421
+
+No loose bolts (Center Frame section)
+
+1.431
+
+No loose bolts (Electronics Enclosure)
+
+1.441
+
+No loose bolts (Battery Tie-Downs)
+
+1.500
+
+No loose wires
+
+1.511
+
+No loose wires (Back Left Motor)
+
+1.512
+
+No loose wires (Back Left Hall Effect Sensor)
+
+1.513
+
+No loose wires (Back Left Shaft Encoder)
+
+1.514
+
+No loose wires (Back Left Conduit)
+
+1.521
+
+No loose wires (Back Right Motor)
+
+1.522
+
+No loose wires (Back Right Hall Effect Sensor)
+
+1.523
+
+No loose wires (Back Right Shaft Encoder)
+
+1.524
+
+No loose wires (Back Right Conduit)
+
+Pass
+
+Fail
+
+A33
+
+1.531
+
+No loose wires (Front Axle E-Brake)
+
+1.532
+
+No loose wires (Front Axle Main Brake)
+
+1.533
+
+No loose wires (Front Axle Conduit)
+
+1.541
+
+Radio Wire Safely Tied Down
+
+1.551
+
+GPS wire Safely Tied Down
+
+1.561
+
+No loose wires or connectors in central electronics
+mounting
+
+1.600
+
+Both Fuses Intact
+
+1.700
+
+No Apparent Burns or abrasions on chassis or
+electronics
+
+1.800
+
+E-Brake is in the closed position
+
+1.900
+
+Front wheels will not turn and vehicle is difficult to move
+
+ID
+
+2.000 Battery Power Checks
+
+2.100
+
+The three main batteries do not appear damaged or
+leaking
+
+2.200
+
+The three main batteries each have a voltage between
+11v and 13v when measured by accurate multi-meter
+
+2.300
+
+The three main batteries have their original bolts and
+washers
+
+2.400
+
+The Brake Battery does not appear damaged or leaking
+
+2.500
+
+The Brake Battery has a voltage between 11v and 13v
+when measured by accurate multi-meter
+
+2.600
+
+The Nucleo Battery does not appear damaged or
+leaking
+
+2.700
+
+The Nucleo Battery has a voltage between 8v and 10v
+when measured by accurate multi-meter
+
+Pass
+
+Fail
+
+A34
+
+2.800
+
+ID
+
+When powered on the Radio shows full power
+
+3.000 Wheel Alignment Checks
+
+3.000
+
+Support the rear wheels off the ground
+
+3.111
+
+Left Wheel Alignment is square
+
+3.112
+
+Right Wheel Alignment is square
+
+3.211
+
+Left Wheel Chain is taut but not ridged
+
+3.212
+
+Right Wheel Chain is taut but not ridged
+
+3.311
+
+There is no debris in Left chain, gear, or motor
+
+3.312
+
+There is no debris in Right chain, gear, or motor
+
+3.411
+
+Left wheel assembly turns smoothly without grinding
+
+3.412
+
+Right wheel assembly turns smoothly without grinding
+
+3.500
+
+Return Back Wheels to ground
+
+ID
+
+4.000 E-Brake Checks
+
+4.000
+
+Ensure Main Batteries are disconnected.
+
+4.100
+
+Connect the Brake Battery
+
+4.200
+
+Connect the Nucleo Battery and power on Nucleo
+
+4.300
+
+Power on Radio
+
+4.400
+
+Toggle the radio E-Stop
+
+4.410
+
+E-Brake toggles with radio E-Stop
+
+4.500
+
+With E-Stop Engaged Power Down Nucleo
+
+ID
+5.001
+
+5.000 Power Up Procedure
+
+Pass
+
+Fail
+
+Pass
+
+Fail
+
+Pass
+
+Fail
+
+Brake Battery is connected
+A35
+
+5.002
+
+Nucleo power is off
+
+5.003
+
+Nucleo Battery is connected
+
+5.004
+
+Main Batteries are disconnected
+
+5.005
+
+Main Power Switch is OFF
+
+5.006
+
+All Previous Checks Passed
+
+5.100
+
+Load Map File and insert SD card into onboard reader
+
+5.200
+
+Clear Non-Essential Personnel from track
+
+5.300
+
+Connect Main Batteries
+
+5.310
+
+No solenoid actuation click was audible
+
+5.400
+
+Power on Remote Control
+
+5.410
+
+Ensure all switches and controls are in the default
+arrangement. Most importantly the E-Stop should be
+engaged, the Mode Select should be at position 2 and
+the Throttle should be at zero
+
+5.500
+
+Flip Main Power Switch to ON
+
+5.510
+
+No solenoid actuation click was audible
+
+5.500
+
+Stand to the Left side of the Vehicle
+
+5.600
+
+Flip Nucleo Power Switch to ON
+
+5.610
+
+No solenoid actuation click was audible
+
+5.700
+
+Back away at least ten feet from the vehicle. Do not
+stand behind or in front of the vehicle.
+
+5.710
+
+Call “Vehicle Enabled Clear Track!”
+
+5.800
+
+Disengage E-stop.
+
+5.810
+
+Solenoid Actuation Was Audible
+
+5.900
+
+Begin Test
+A36
+
+ID
+
+6.000 Power-Down Procedure
+
+6.000
+
+Engage E-Stop
+
+6.100
+
+Wait for vehicle to come to a complete stop
+
+6.200
+
+Approach vehicle cautiously from the side.
+
+6.300
+
+Flip Main Power to OFF
+
+6.400
+
+Flip Nucleo Power to OFF
+
+6.500
+
+Open Controls Box and remove SD card for review
+
+6.600
+
+The Following Steps can be skipped in the event of
+repeating a test within the next ten minutes.
+
+6.700
+
+Disconnect Main Batteries
+
+6.800
+
+Disconnect Nucleo Battery and Brake Battery. Power
+Down Radio.
+
+6.900
+
+Store Vehicle in a cool dry location out of Direct
+sunlight.
+
+Pass
+
+Fail
+
+A37
+
+​SLONav
+
+Full Scale Test Plan
+Test Date:
+
+Conducted By:
+Conducted At:
+Reliability
+●
+
+Throughout testing keep track of number of resets done and number of successful
+tests
+# of scheduled resets:
+# of unscheduled resets:
+# of successful tests:
+
+Initial Startup
+●
+
+Start stopwatch
+
+●
+
+Conduct full safety checklist (See SLONav Checklist)
+
+●
+
+Stop stopwatch when vehicle is awaiting user input
+Goal: 30 mins
+Actual:
+Notes:
+
+Reset Procedure for Radio Control Mode
+○
+
+Ensure Estop is engaged
+
+○
+
+Approach vehicle from left side.
+
+○
+
+Turn off main power
+
+○
+
+Turn off Nucleo power
+
+○
+
+Remove SD card
+
+○
+
+Retrieve data and load new map file
+
+○
+
+Insert SD card
+
+○
+
+Ensure Brake power is connected
+
+○
+
+Turn on main power
+
+○
+
+Turn on Nucleo power
+A38
+
+○
+
+Should not hear an audible solenoid click
+
+○
+
+If solenoid click audible turn off main power
+
+Reset Time Test
+○
+
+Start stopwatch
+
+○
+
+Conduct reset procedure for radio control mode
+
+○
+
+Stop stopwatch when vehicle is awaiting user input
+
+Goal: 10 mins
+Actual:
+Notes:
+
+Radio Range
+○
+
+Put car on block so that wheels are not touching ground with power off
+
+○
+
+Start car in radio control mode
+
+○
+
+Move away from vehicle in 25 ft increments until range exceeds boundary of
+testing area
+
+○
+
+At each increment, slowly increase throttle until wheel visibly turn. Then return
+throttle to low
+
+○
+
+Testing at extreme range may require a spotter to stay with the vehicle, in
+contact with the operator by phone or walkie-talkie
+
+○
+
+Finish by engaging emergency brake
+
+○
+
+Initiate standard power down procedure
+
+Goal: 1 Mile
+Actual:
+Notes:
+
+A39
+
+Standard Radio Control Test
+○
+
+Ensure Vehicle is powered down
+
+○
+
+Ensure standard pre-test checklist complete
+
+○
+
+Load valid map file to SD card.
+
+○
+
+Place vehicle on blocks so that tires do not touch the ground
+
+○
+
+Insert SD card
+
+○
+
+Ensure Brake power is connected
+
+○
+
+Power up radio
+
+○
+
+Switch main power to ON
+
+○
+
+Switch nucleo power to ON
+
+○
+
+Disengage radio E-stop
+
+○
+
+Listen for audible solenoid click
+
+○
+
+Power down and abort test if no “click” heard
+
+○
+
+Switch mode select to radio control
+
+○
+
+Confirm main break activates with right joystick
+
+○
+
+Confirm wheel spin when throttle is brought up
+
+○
+
+Confirm wheel speed ratio changes when left joystick is moved left and right
+
+○
+
+Engage E-stop
+
+○
+
+Wait for system to stop moving
+
+○
+
+Shut off main power
+
+○
+
+Shut off Nucleo power
+
+○
+
+Remove SD card
+
+○
+
+Review DATA
+
+Goal: Safe control of vehicle
+Actual:
+Notes:
+
+A40
+
+Test Upload and Data Collection
+●
+
+●
+
+●
+
+SD card detect
+○
+
+Ensure Vehicle is powered down
+
+○
+
+Remove SD card
+
+○
+
+Initiate standard radio control test (Do not reinsert SD card)
+
+○
+
+Vehicle should not respond to user input
+
+○
+
+Power down
+
+Map check
+○
+
+Load a completely blank SD card into vehicle.
+
+○
+
+Attempt radio control test.
+
+○
+
+Vehicle should not respond to user input.
+
+○
+
+Power down.
+
+Map invalid check
+○
+
+Ensure Vehicle is powered down
+
+○
+
+Alter a valid map file so it is invalid in one or more ways.
+
+○
+
+Initiate standard radio control test (use the invalid map file)
+
+○
+
+Vehicle should not respond to user input.
+
+○
+
+Power down
+
+Goal: Vehical non-responsive for all tests
+Actual:
+Notes:
+Sensor Verification
+IMU
+●
+
+Orientation
+○
+
+Mark points in front of vehicle corresponding to every 15 degrees of a circle
+with center at center of vehicle rear axle.
+
+○
+
+Start vehicle in radio control mode with motor power manually shut off
+
+○
+
+Manually move vehicle front end to each marked angle.
+
+○
+
+Pause at each angle for at least five seconds
+
+○
+
+Return vehicle to original orientation
+A41
+
+●
+
+○
+
+Power down vehicle
+
+○
+
+Ensure data gathered matches 15 degree increments as marked on track
+
+Acceleration
+■
+
+Warning! Begin tests at slowest possible speeds. Run multiple tests at
+higher speed only after lower speeds are confirmed controllable and
+safe.
+
+○
+
+Mark start and stop point on track exactly 20ft apart
+
+○
+
+Mark emergency points on track 20 ft beyond the start and stop marks
+
+○
+
+Place vehicle at the start mark oriented so it will drive toward the stop
+
+○
+
+Move all personnel behind and to the sides of the vehicle
+
+○
+
+Ready one or more persons with stop-watches.
+
+○
+
+Ready one person as the caller. This person's job is to call start and stop
+when the vehicle crosses the start and stop lines.
+
+○
+
+Start vehicle in radio control mode
+
+○
+
+Use radio to accelerate the vehicle to a constant speed maintain speed until
+reaching the stop mark. REduce throttle to zero and engage brake. Engage
+E-stop if vehicle reaches the emergency mark.
+
+○
+
+Start stopwatch when vehicle begins moving
+
+○
+
+Stop stopwatch when vehicle crosses stop point.
+
+○
+
+Analyze data by comparing acceleration to average acceleration calculated
+
+○
+
+For additional data gathering position a radar gun to the rear and side of the
+vehicle and record velocity from this.
+
+●
+
+Deceleration
+■
+
+Warning! Begin tests at slowest possible speeds. Run multiple tests at
+higher speed only after lower speeds are confirmed controllable and
+safe.
+
+○
+
+Mark start and stop point on track exactly 20ft apart
+
+○
+
+Mark emergency points on track 20 ft beyond the start and stop marks
+
+○
+
+Place vehicle at the emergency mark beyond the start mark oriented so it will
+drive toward the stop mark
+
+○
+
+Move all personnel behind and to the sides of the vehicle
+
+○
+
+Ready one or more persons with stop-watches.
+
+○
+
+Ready one person as the caller. This person's job is to call start and stop
+when the vehicle crosses the start and stop lines.
+A42
+
+○
+
+Start vehicle in radio control mode
+
+○
+
+Use radio to accelerate the vehicle to a constant speed maintain speed until
+reaching the start mark. Reduce throttle to zero and engage brake. Engage
+E-stop if vehicle reaches the emergency mark.
+
+○
+
+Start stopwatch when vehicle reaches start mark
+
+○
+
+Stop stopwatch when vehicle crosses stop point.
+
+○
+
+For additional data gathering position a radar gun to the rear and side of the
+vehicle and record velocity from this.
+
+Encoders
+●
+
+Velocity
+○
+
+Analyze data from IMU tests by comparing encoder readings to IMU readings,
+distance of travel, stop watch readings and radar gun readings.
+
+GPS
+●
+
+●
+
+Location
+○
+
+Ensure Vehicle is unpowered
+
+○
+
+Move vehicle to start mark
+
+○
+
+Connect Computer to vehicle and initiate serial read of GPS data.
+
+○
+
+Wait for GPS to lock
+
+○
+
+Confirm GPS value with known good value from phone or dedicated module
+
+○
+
+Move GPS to stop mark reconfirm vGPS output
+
+○
+
+Power down
+
+Time
+○
+
+Ensure Vehicle is unpowered
+
+○
+
+Move vehicle to start mark
+
+○
+
+Connect Computer to vehicle and initiate serial read of GPS data.
+
+○
+
+Wait for GPS to lock
+
+○
+
+Confirm GPS time with known good value from phone or dedicated module
+
+○
+
+Move GPS to stop mark reconfirm GPS time output
+
+○
+
+Power down
+
+Goal: GPS matches known good values to within 0.5 meters. Time to within 1 second
+Actual:
+Notes:
+A43
+
+Emergency Stop
+○
+
+Place Vehicle on blocks.
+
+○
+
+Conduct standard radio control test
+
+○
+
+Time latency between E-stop engaged and E-brake engaged.
+
+Goal: 100ms latency on brake engagement
+Actual: 25% 50% 75% NOTE: ​Do not conduct this test until it is confirmed that the E-stop is sufficiently powerful to
+slow the vehicle. Test this by pushing the vehicle unpowered with E-Stop engaged.
+○
+
+Mark start and stop point on track exactly 20ft apart
+
+○
+
+Mark emergency points on track 20 ft beyond the start and stop marks
+
+○
+
+Place vehicle at the start mark oriented so it will drive toward the stop
+
+○
+
+Clear Track
+
+○
+
+Start Vehicle in radio control mode
+
+○
+
+Accelerate vehicle to ¼ throttle
+
+○
+
+Engage E-Stop when vehicle reaches the stop mark
+
+○
+
+Start Stop Watch when E-stop is engaged.
+
+○
+
+Stop Stop watch when vehicle is completely stopped.
+
+Vehicle Dynamics
+○
+
+Put vehicle in radio control mode
+
+○
+
+Perform various vehicle maneuvers
+
+○
+
+Accelerate then decelerate to stop
+
+○
+
+Lane change
+
+○
+
+Max turning radius
+
+○
+
+Save and analyze data for future use
+
+A44
+
+Notes:
+
+Other Tests Performed
+
+Notes:
+
+A45
+
+Appendix K - Operator's Manual
+
+Operator Manual
+SLONav Senior Project 2017
+Summary
+This manual serves as a guide to the standard operation of the guided target control system
+developed by the SLONav team for Daimler North America as a Mechanical Engineering
+senior project (2016-2017).
+Startup
+1. Generate a map data file that contains the boundary of the track, positions of trigger
+points, and desired velocities at those points using the template file.
+2. Load the map data file to an SD card and insert the SD card into the appropriate port
+in the control system enclosure.
+3. Turn on power to the control system and vehicle
+4. Wait for GPS to obtain a fix and status lights are green.
+a. Note:​ For first time startup in a new location this could take as long as half an
+hour. Normal time for GPS lock is 5-10 minutes
+5. With all status lights green and radio controller off, flip the main power switch to ON
+6. From this point onward stand clear of the vehicle by at least 5 meters unless powering
+down the vehicle.
+Operation
+1. With all switches set to default settings power on the radio controller. Ensure the
+E-STOP is switch is set to stop.
+a. Note:​ E-STOP switch is the toggle switch furthest back on the top left of the
+controller.
+2. Watch for the vehicle status light to blink off for one second every five seconds. This
+confirms radio control.
+3. Clear all remaining personnel from test track. Ensure no one is within 5 meters of the
+vehicle.
+
+A46
+
+Autonomous Test
+1. Flip the mode switch on the remote control to autonomous.
+a. Note: ​Mode switch is the three position toggle switch on the right side above
+the left joystick.
+
+2. To start test flip the E-STOP switch to run.
+3. To prematurely end the test flip the E-STOP switch to stop.
+Manual Test
+1. Flip the mode switch on the remote control to manual.
+2. To start test flip the E-STOP switch to run.
+3. To end the test flip the E-STOP switch to stop.
+4. Use the right joystick to control braking and the left joystick to control throttle and
+steering.
+Shutdown
+1. Make sure the vehicle has stopped moving and engage the E-STOP.
+2. One person may then approach the vehicle and manually power down the the main
+power system by flipping the main switch to off.
+3. With the vehicle powered down switch the controls system switch to OFF.
+4. When the controls system has powered down, indicated by an unlit indicator light,
+remove the SD card.
+5. Once the SD card has been removed, review test data via any common spreadsheet
+viewer.
+
+A47
+
+

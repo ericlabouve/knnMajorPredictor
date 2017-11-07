@@ -1,0 +1,1719 @@
+PREDICTING FLEXURAL STRENGTH OF COMPOSITE HONEYCOMB
+SANDWICH PANELS USING MECHANICAL MODELS OF FACE SHEET
+COMPRESSIVE STRENGTH
+
+A Senior Project
+Presented to the Faculty of the Materials Engineering Department
+California Polytechnic State University, San Luis Obispo
+
+In Partial Fulfillment
+of the Requirements for the Degree
+Bachelor of Science, Materials Engineering
+
+Authors:
+Nick Bruffey
+William Shiu
+June, 2016
+
+Advisor: Prof. Blair London
+Sponsor: Zodiac Aerospace
+
+Abstract
+The design process at Zodiac Aerospace requires the ability to accurately predict the strength of
+a composite honeycomb core sandwich panel to adhere to strict FAA regulations. The most
+common failure mode in long beam composites is in compression. Following ASTM D7249 for
+a four-point bend test of a long beam flexural test, a mechanical model has been developed that
+relates the compressive strength of glass fiber face sheets to the flexural strength of the sandwich
+panel. Zodiac does not currently have data on the compressive strength of the face sheets, so
+testing was performed to find this property. Asymmetric panels (n:n+1 plies) were designed to
+ensure a compressive failure in a four-point bend test. The compressive strength of the face
+sheets were found to be 26-42 ksi. To validate the model, testing on symmetric panels was
+performed in a full factorial design. Face sheet thickness, core direction and core thickness were
+variables tested within the panels. The failure loads increased significantly with higher face sheet
+thickness and core thickness, and are therefore important factors in the model. The study on core
+direction is inconclusive; however, there is reason to believe a difference exists between the two.
+Two correction factors regarding the core and fabric directions are added to modify the model.
+Some limitations of the model were also found, as a shear strength limit needs to be incorporated
+in a complete prediction of failure loads of the sandwich panels.
+Keywords: Cabin Interiors, Composite Materials, Compressive Failure, Compressive Strength,
+Core Shear, Face Sheet Debonding, Flexural Strength, Four-point Bend Test, Glass Fiber Fabric,
+Honeycomb Sandwich Panel, Materials Engineering, Mechanical Model, Mechanics of
+Materials, Nomex Honeycomb, 8-Harness Satin Weave.
+
+Acknowledgements
+We would like to thank Professor Blair London for advising us throughout this project and to
+Dan Helms and Richard Morrison for all of their guidance and support during the project, as well
+as everyone at Zodiac Aerospace for their time and participation in several aspects of this project
+including the sponsorship of this project.
+
+.
+
+Table of Contents
+1. INTRODUCTION................................................................................................................................... 1
+1.1. COMPOSITES INDUSTRY ........................................................................................................... 1
+1.2. SANDWICH PANEL COMPOSITES............................................................................................ 2
+1.3. PREDICTING THE FLEXURAL STRENGTH OF A SANDWICH PANEL ............................ 6
+1.4. MECHANICS ................................................................................................................................... 8
+2. EXPERIMENTAL PROCEDURES ................................................................................................... 12
+2.1 MATERIAL PROPERTIES TESTING ........................................................................................ 12
+2.2 FACE SHEET THICKNESS.......................................................................................................... 15
+2.3 MODEL VALIDATION TESTING .............................................................................................. 17
+3. RESULTS .............................................................................................................................................. 18
+3.1 FACE SHEET MEASUREMENTS ............................................................................................... 18
+3.2 ASYMMETRIC PANEL TESTING .............................................................................................. 19
+3.3 PREDICTED LOADS..................................................................................................................... 21
+3.4 SYMMETRIC PANEL TESTING................................................................................................. 22
+4. ANALYSIS ............................................................................................................................................ 24
+4.1 CORRECTION FACTORS ........................................................................................................... 24
+4.2 PREDICTION COMPARISONS .................................................................................................. 25
+4.3 PREMATURE FAILURE MODES ............................................................................................... 28
+5. CONCLUSIONS ................................................................................................................................... 31
+6. REFERENCES ...................................................................................................................................... 32
+APPENDIX A – ASYMMETRIC BEAM TEST DATA ....................................................................... 33
+APPENDIX B – SYMMETRIC BEAM TEST DATA........................................................................... 36
+
+List of Figures
+FIGURE 1: MOST COMMON MATERIALS USED IN THE BOEING 787. .................................................................................2
+FIGURE 2: THIS IS A SCHEMATIC OF A HONEYCOMB SANDWICH PANEL SHOWING THE LAYUPS OF THE FACE SHEETS,
+ADHESIVES AND CORE. ........................................................................................................................................... 3
+FIGURE 3: WITH AN APPLIED LOAD ON THE SANDWICH PANEL, THE FACE SHEETS CARRY THE LOAD, THE CORE
+SUPPORTS THE PANEL AND IS IN SHEAR. ................................................................................................................. 3
+FIGURE 4: THIS SHOWS A COMPARISON OF A SANDWICH PANEL CONSTRUCTION AND AN I-BEAM SHOWING
+SIMILARITIES. ........................................................................................................................................................ 4
+FIGURE 5: COMPARING THE RELATIVE STIFFNESS, STRENGTH AND WEIGHT OF SANDWICH PANELS COMPARED TO A
+SOLID MATERIAL. ................................................................................................................................................... 4
+FIGURE 6: THE ORIENTATION OF A HONEYCOMB CORE WITH HIGHLY ANISOTROPIC BEHAVIOR IN THE T, L AND W
+DIRECTIONS. .......................................................................................................................................................... 5
+FIGURE 7: SCHEMATIC OF THE 7781, 8-HARNESS SATIN WEAVE; (A) THE UNIT CELL OF THE WOVEN FABRIC AND (B)
+HOW THE WARP AND FILL YARNS INTERLACE WITH EACH OTHER. .......................................................................... 6
+
+FIGURE 8: A) DIAGRAM OF A 3-POINT BEND TEST (ABOVE) AND RESULTING STRESS DISTRIBUTION (BELOW). B) THIS
+SET-UP IS FOR A 4-POINT BEND TEST. ..................................................................................................................... 7
+FIGURE 9: DIMENSIONS OF THE CROSS-SECTION OF A HOLLOW RECTANGLE USED IN THE PREVIOUS YEAR’S SENIOR
+PROJECT. .............................................................................................................................................................. 10
+FIGURE 10: SCHEMATIC OF THE SANDWICH PANEL UNDER BENDING (A) THE CROSS-SECTIONAL VIEW OF THE
+SANDWICH PANEL AND (B) THE FREE BODY DIAGRAM ILLUSTRATING THE BENDING MOMENT. ............................ 11
+FIGURE 11: SCHEMATIC OF THE ASYMMETRIC PANEL DESIGN OF N:(N+1) FOR SANDWICH PANELS CONTAINING
+PREPREG 7781 FABRIC AND 0.5 INCH NOMEX HONEYCOMB CORE. ....................................................................... 12
+FIGURE 12: MANUFACTURED LARGE SANDWICH PANEL THAT WAS CUT INTO THE LONG BEAM SPECIMENS ACCORDING
+TO THIS DIAGRAM. IT WAS NOT KNOWN HOW MANY OF EACH SPECIMEN WAS CUT THIS WAY, AS THIS IS SIMPLY A
+REPRESENTATION OF WHAT WAS BELIEVED TO HAVE OCCURRED. THIS EXPLAINS WHY THERE ARE L AND W
+SPECIMENS IN THE ASYMMETRIC PANEL TESTING. THE FABRIC DIRECTION OF THESE PANELS IS ALSO UNKNOWN.
+............................................................................................................................................................................13
+FIGURE 13: SCHEMATIC SHOWING THE TEST FIXTURE SETUP DIMENSIONS. IN THIS CASE, S=22" AND L=4" .................14
+FIGURE 14: THIS IS THE FOUR-POINT BEND TEST SET UP ON A SHIMADZU TESTING MACHINE WITH A LONG BEAM
+SPECIMEN INSTALLED. THE FIXTURE DIMENSIONS FOR THIS SETUP ARE DETAILED IN FIGURE 16. THE MAXIMUM
+LOAD CELL RECOMMENDED FOR THIS TEST WAS 5KN. ......................................................................................... 15
+FIGURE 15: DRAWINGS FROM ASTM D5467 DEPICTING ACCEPTABLE AND NOT ACCEPTABLE FAILURE MODES DURING
+THE COMPRESSION OF FACE SHEETS IN A SANDWICH PANEL CONSTRUCTION. ...................................................... 15
+FIGURE 16: OPTICAL MICROSCOPE IMAGES OF THE SANDWICH PANEL FACE SHEETS. A) 1-PLY SPECIMEN MEASURED TO
+APPROXIMATELY 270 MICRONS (0.0106"). THE WHITE STRIP IS A METAL CLIP HOLDING THE SAMPLE. 200X. B) 2PLY SPECIMEN MEASURED TO APPROXIMATELY 535 MICRONS (0.021"). 100X C) 3-PLY SPECIMEN MEASURED TO
+APPROXIMATELY 700 MICRONS (0.0276"). 100X. ................................................................................................ 16
+FIGURE 17: REPRESENTATION OF A 23 SCREENING DESIGN USED FOR MODEL VALIDATION TESTING. THIS TESTS THE 3
+FACTORS OF FACE SHEET THICKNESS, CORE THICKNESS AND CORE DIRECTION, EACH CONTAINING 2 LEVELS. .... 17
+TABLE II: 23 SCREENING DESIGN TREATMENTS ............................................................................................................18
+FIGURE 18: COMPARISON OF ALL FACE SHEET THICKNESS METHODS. THE OPTICAL MICROSCOPE (RED LINE)
+CONFIRMED THE 2015 PROJECT MEASUREMENTS (BLUE LINE). THE JPS DATA ASSERTS THAT IT IS ACCURATE TO
+ASSUME THAT THE NUMBER OF PLIES CAN BE MULTIPLIED BY 0.0086" AS WAS CONFIRMED BY THE RECEIVING
+TESTING OF 4 PLY SAMPLES BY ZODIAC. THIS WAS INITIALLY CRITICIZED, BUT WAS LATER FOUND TO BE THE
+MOST ACCURATE.................................................................................................................................................. 19
+FIGURE 19: A) PLOT OF ASYMMETRIC FAILURE LOADS. THE 1-PLY L SPECIMENS ARE CIRCLED BECAUSE THEY FAILED
+PREMATURELY IN FACE SHEET DEBONDING. B) PLOT OF ASYMMETRIC FAILURE LOADS WITH 1-PLY L SPECIMENS
+REMOVED. LINEAR TREND LINES CAN NOW BE DRAWN COMPARING THE L AND W DIRECTIONS. ......................... 20
+FIGURE 20: PLOT OF ALL 8 TREATMENTS AND THEIR RESPECTIVE PREDICTED FAILURE LOADS FOR MODEL VALIDATION.
+EACH BLACK STAR REPRESENTS THE MEAN PREDICTED FAILURE LOAD. ..............................................................21
+FIGURE 21: A) ASYMMETRIC 1-PLY L SPECIMEN THAT FAILED PREMATURELY IN FACE SHEET DEBONDING. B) FOURPOINT BEND TEST OF A 3-PLY, W, 0.5" CORE SYMMETRIC PANEL THAT FAILED PREMATURELY IN CORE SHEAR.
+NOTE THAT THE SHARP ANGLES ARE WHERE THE SHEAR OCCURRED. ..................................................................23
+FIGURE 22: PLOT OF ALL 8 TREATMENT PREDICTIONS WITH THE BLUE AND RED STARS REPRESENTING MEAN FAILURE
+LOADS OF THE FOUR SUCCESSFUL TREATMENTS. ................................................................................................. 26
+FIGURE 23: PLOT OF ALL 8 TREATMENT PREDICTIONS WITH THE BLUE AND RED STARS REPRESENTING THE MEAN
+FAILURE LOADS OF ALL FOUR SAMPLES THAT FAILED PREMATURELY IN TESTING. ............................................... 27
+FIGURE 24: SHEAR STRESS AND BENDING MOMENT ON THE LONG BEAM SANDWICH PANEL. ........................................28
+FIGURE 25: GRAPH SHOWING THE MINIMUM CORE SHEAR STRESS, WHICH CAN BE USED TO DETERMINE WHETHER THE
+PANEL WILL FAIL IN THE FACE SHEET OR IN THE CORE. ABOVE THE BLACK LINE, CORE SHEAR IS EXPECTED MORE
+OFTEN, AND BELOW THE LINE, ONLY FACE SHEET FAILURE SHOULD OCCUR......................................................... 30
+
+FIGURE 26: A) AN ASYMMETRIC PANEL (L CORE) WITH 1 PLY ON TOP AND 2 PLIES ON BOTTOM. THE 1-PLY LAYER
+DOES NOT APPEAR TO HAVE ANY EXTRA RESIN (SEEN IN THE RED CIRCLES) FLOWING FROM THE FACE SHEET INTO
+THE CORE, WHEREAS THE 2-PLY DOES. B) AN ASYMMETRIC PANEL (W CORE) WITH 3 PLIES ON THE TOP AND 4
+PLIES ON THE BOTTOM. TO CONTINUE WITH THE 2-PLY IMAGE TO THE LEFT, THE 3-PLY LAYER CONTAINS MORE
+RESIN THAN THE 2-PLY AND THE 4-PLY CONTAINS MORE RESIN THAN THE 3-PLY. ............................................... 31
+
+1. INTRODUCTION
+1.1. COMPOSITES INDUSTRY
+A composite is a made from two or more materials with significantly different properties that,
+when combined, produce properties different from the constituent materials. Composites are
+commonly used in applications, such as the aerospace industry, that require high strength and
+lightweight materials. Fiber-reinforced composites derive these unique properties from the way
+they are manufactured. Fibers are bound with a matrix material and each has a role: the fibers
+carry the load applied to the composite and the matrix both transfers the load to the fibers and is
+responsible for shape retention of the composite.
+The aerospace industry uses various types of composites for different parts of a plane, all with
+unique properties and associated costs. To increase flexural strength, a sandwich structure
+adheres the fiber-reinforced polymer to a honeycomb core structure. The core is not designed to
+carry the load and therefore does not need to be strong so inexpensive materials are often used.
+The popularity of sandwich-structured composites has rapidly increased in recent years and
+perhaps none more so than in the aerospace industry. The use of composites is centered on
+weight reduction and the associated fuel savings. The Boeing 787 (Figure 1) [1] consumes 20%
+less fuel than conventional aluminum designs. The 787 is fabricated from approximately 50%
+composites compared to its predecessor, the 777, with only 12% [2]. Many of the primary
+structural components of the plane require high strength so typically a carbon fiber reinforced
+polymer (CFRP) sandwich composite is used. Secondary structures, such as cabin interiors, do
+not have high strength requirements so less expensive glass fiber reinforced polymer (GFRP)
+sandwich composites are used.
+
+1
+
+Figure 1: Most common materials used in the Boeing 787.
+
+Zodiac Aerospace is a French company that specializes in aeronautical systems and has five
+divisions: Aircraft Systems, AeroSafety, Gallery and Equipment, Cabin and Structures, and Seats
+[3]. The Cabin and Structures division (Santa Maria, CA) focuses on the secondary structure of
+private planes and mainly uses honeycomb sandwich panels in their design. This senior project is
+a continuation of the previous year’s (2015) senior project through this division. A model for
+predicting flexural strength with ply tensile data was developed last year and the deliverable for
+this senior project is to develop a model using compressive data.
+1.2. SANDWICH PANEL COMPOSITES
+Sandwich construction has been used extensively in aerospace and other industries as lightweight
+structures with high in-plane and flexural stiffness, while keeping the production cost low [4] [5].
+A sandwich panel normally consists of three main components: a thick core, two thin face sheets
+and an adhesive (Figure 2) [6].
+
+2
+
+Figure 2: This is a schematic of a honeycomb sandwich panel showing the layups of the face sheets, adhesives and core.
+
+The core of the sandwich panels are soft, lightweight, and can be made of metals, polymers or
+aramid fibers such as Kevlar and Nomex. Different core configurations are also available--two of
+the most common are honeycomb and foam core [7] [8]. The face sheets are strong and stiff and
+are often composite laminates or metals. In structural applications the face sheets carry most of
+the in-plane and bending loads and the core is responsible for supporting the face sheets,
+transferring the load, and carrying the through-the-thickness shear load (Figure 3) [5] [7].
+
+Figure 3: With an applied load on the sandwich panel, the face sheets carry the load, the core supports the panel and is in shear.
+
+Sandwich panels increase the flexural strength and stiffness the same way an I-beam does
+(Figure 4) [5]. The face sheets act as the flanges of an I-beam to carry loads, and the core acts
+like the web, but gives continuous support to the face sheets. The stiffness of the panels can be
+increased significantly with a higher core thickness while adding little weight (Figure 5) [5].
+Cabin interior designs often require lightweight materials and flexural strength. Zodiac uses an
+3
+
+aramid honeycomb core and a woven glass fiber fabric with a phenolic resin matrix as the face
+sheet.
+
+Figure 4: This shows a comparison of a sandwich panel construction and an I-beam showing similarities.
+
+Figure 5: Comparing the relative stiffness, strength and weight of sandwich panels compared to a solid material.
+
+Compared to a foam core, honeycomb has a higher stiffness in the through-the-thickness
+direction producing better support to the face sheets and thus a higher flexural strength [7]. A
+honeycomb core has continuous materials in the through-the-thickness (T direction) but acts as
+hollow tube structures (Figure 6) [5]. The hexagonal configuration is the most commonly used
+because it is the most efficient shape for carrying loads. There are other configurations—
+
+4
+
+reinforced hexagonal, over-expanded, and square cores—which are used for reinforcement
+needed in special orientations [8]. Aramid honeycomb cores are usually manufactured by
+adhesive bonding and expansion. Honeycomb substrates are bonded together using heat-curable
+adhesives. Once cured, the aramid papers are pulled in the W direction and the hexagonal
+structures are formed. The structure and the manufacturing process of honeycombs produce a
+highly anisotropic behavior. Honeycomb cores have higher shear strength in the L direction, as it
+is pulling on the aramid papers alone. In the W direction, the strength and stiffness rely on the
+adhesive bond strength, making the W direction much weaker than the L. The T direction has the
+highest tensile and compressive strength [8].
+
+Figure 6: The orientation of a honeycomb core with highly anisotropic behavior in the T, L and W directions.
+
+Zodiac prefers a style 7781 weave glass fiber fabric, also known as an 8-harness satin weave, for
+the face sheets. There are two types of yarns in the weave: the warp yarns along the longitudinal
+direction and the fill yarns along the width which runs 90° to the warp yarns. During production,
+the warp yarns are pulled and the fill yarns are weaved through and therefore the warp yarns are
+stronger. In the 8-harness satin weave, the fill yarns float over seven warp yarns and under one
+(Figure 7) [9]. Although woven fabrics do not have the high ultimate strength like unidirectional
+laminates, the pliable woven structure provides more balanced properties in all directions. The
+bidirectional reinforcement in each layer of fabric also gives a higher impact resistance. In
+addition to sufficient mechanical properties, the ease of handling and low production cost proves
+that woven fabric is ideal for sandwich panels in cabin interiors applications. There are different
+kinds of weave, such as the plain weave, twill weave and other satin weave. The 8-harness satin
+weave is the most pliable satin weave and forms well around compound curves [10].
+5
+
+(a)
+
+(b)
+Figure 7: Schematic of the 7781, 8-harness satin weave; (a) the unit cell of the woven fabric and (b) how the warp
+and fill yarns interlace with each other.
+
+The phenolic resin is a thermoset polymeric resin; it forms a three dimensional structure upon
+curing. Epoxy is the most commonly used matrix in the composites industry because of its
+relatively high strength and stiffness. Phenolic does not have the strength and stiffness of the
+epoxy, but it is self-extinguishing, which is crucial for cabin interiors design as it is required by
+the FAA. At high temperatures, the phenolic resin degrades and forms a char structure and stops
+burning [11]. Phenolic resin is not only used as the matrix for the glass fiber composite face sheet
+as the aramid core is also coated with phenolic. The self-extinguishing behavior can be used to
+protect the honeycomb core structure and although there may be significant anisotropic
+shrinkage, phenolic resin prevents the structure from collapsing completely [11].
+1.3. PREDICTING THE FLEXURAL STRENGTH OF A SANDWICH PANEL
+The flexural strength of a material (also known as modulus of rupture) describes its ability to
+resist failure while bending under a load. There are two main tests that can be performed on a
+6
+
+material to determine the flexural strength: a three-point or a four-point bend test. A three-point
+bend test places a specimen on two support points while a load point exerts a force directly in the
+middle of the support span (Figure 8a) [3]. A four-point bend test has two load points equally
+spaced across the support span (Figure 8b). The distance between the load points forms the load
+span. Stress is distributed differently in a three-point bend test than it is in a four-point bend test
+and this is often the determining factor in which test will be performed on a given material. In a
+three-point test the stress is highly concentrated at the single load point (Figure 8a). In a fourpoint test the stress is evenly distributed between the two load points (Figure 8b). The maximum
+moment is the same regardless of which test is performed.
+
+(a)
+
+(b)
+
+Figure 8: A) Diagram of a 3-point bend test (above) and resulting stress distribution (below). B) This set-up is for a 4-point bend
+test.
+
+With a mathematical mechanical model, a designer can input the number of plies in the panel
+along with other specifications and accurately predict the flexural strength. Zodiac Aerospace
+wants to be able to predict the flexural strength of its sandwich panels because it will prevent
+having to over-engineer the design to ensure that it will meet FAA requirements. In aerospace
+extra weight is money--it is estimated that a one pound reduction in weight will result in an
+7
+
+estimated $1,500 in fuel savings over the life of the design [12]. If Zodiac is able to reduce the
+amount over-engineering required in current designs, the panels may be designed thinner, saving
+significant weight.
+1.4. MECHANICS
+Sandwich panels have various failure modes during bending. The failure mode depends on the
+geometry of the panel, the properties of the constituent materials and the loading condition [13].
+The initiation of a particular failure mode may trigger and interact with other failure modes. The
+most common failure modes include tensile and compressive failure of the face sheet, face sheet
+debonding, delamination, indentation, core failure and compressive face wrinkling or buckling
+[4] [5] [7] [13] [14]. Debonding and delamination occur when the adhesive and the resin,
+respectively, cannot withstand the shear stress applied on the sandwich panel. Indentation and
+core failure occur when the ultimate stress of the core is reached and the core fails prior to the
+face sheet. The face wrinkling or buckling only occurs on the side of the sandwich panel in
+compression where localized short-wavelength buckling occurs [4]. Face wrinkling is controlled
+by the shear modulus of the core in the through-the-thickness direction, so it only occurs when
+the face sheet is thin or the core cannot provide enough support to the face sheet. This is
+common for foam cores but not honeycomb structures. A critical wrinkling stress can be defined
+by Equation 1 [4], [7],
+
+(1)
+where c is a constant usually taken as 0.5, 0.6 or 0.65, Ef1 is the Young’s modulus of the face
+sheet, Ec3 and G13 are the Young’s modulus and transverse shear modulus of the core,
+respectively, in the through-the-thickness direction. A honeycomb core provides significant
+stiffness so therefore face wrinkling does not occur.
+The tensile or compressive failure of the face sheet is the only failure mode that maximizes the
+flexural strength. In general, composites have a higher tensile strength than compressive strength
+so compressive failure is expected. Testing results from Zodiac show that their sandwich panels
+fail most commonly in compression, although they have not reported the failure mode in most
+cases. The test Zodiac recommends is a four-point bend test for long beam sandwich
+8
+
+construction—a modified test method of ASTM D7249. Zodiac experiences compressive failure
+most often, therefore the previous year’s senior project focused on the tensile properties of the
+face sheets to find a better understanding of the lesser known properties. In this senior project,
+the focus is solely on the compressive strength of the face sheets. The reason for both projects is
+that Zodiac needs a complete set of data for their products and materials specification required
+by the FAA. Therefore, understanding the compressive behavior of the face sheets and sandwich
+panels is important in product design.
+When a compressive load is applied to composites, there are two main failure mechanisms that
+the materials will follow. Fiber kinking occurs when the elastic shear stress limit is reached and
+this is triggered by a combination of compression and shear loading. Fiber micro-buckling can be
+seen as localized buckling of fibers which is sensitive to misalignment of fibers during
+production. While there are mechanical models regarding the two major compressive failure
+mechanisms, studies have shown the two failure modes often occur simultaneously [15]. For
+woven fabric composites (due to interlaced fibers) the bundles of fibers surrounding the interlace
+regions carry more of the load [9].
+To develop the mechanical model to predict the flexural strength of the sandwich panel, the
+previous year’s project used Equation 2 [3], relating the flexural strength to the bending moment
+and the second moment of area,
+
+(2)
+
+where M is the bending moment about the neutral axis, y is the perpendicular distance to the
+neutral axis, and Ix is the second moment of area about the neutral x-axis. Since the core of the
+sandwich panel is not expected to carry the load, the second moment of area is calculated using a
+model of a hollow rectangle (Figure 9).
+
+9
+
+Figure 9: Dimensions of the cross-section of a hollow rectangle used in the previous year’s senior project.
+
+After combining the equations for the bending moment and the second moment of area, the
+general equation for flexural strength is Equation 3,
+
+(3)
+
+where P is the maximum load, h is the thickness of the sandwich panel, S and L are the support
+span and load span, respectively, b is the base width, tp is the ply thickness of the face sheet, and
+n is the number of plies in the face sheet. From Equation 3, the final model of the 2015 project
+(Equation 4) for the load was developed to solve for the maximum load.
+
+(4)
+
+This year, a new model has been developed with a few modifications. An equation specifically
+relating the face sheet strength to the flexural strength of the sandwich panel is used in Equation
+5 [5] [16],
+
+(5)
+
+where hf is the thickness of the face sheet, d is the distance between the two centroids of the face
+sheets (Figure 10) [16]. The centroid of the face sheet is used because the strength of the core can
+be ignored, leaving hollow area in the middle. Using the centroid can also utilize the design for
+sandwich panels with unequal thickness of face sheets. This can benefit Zodiac if the
+10
+
+compressive strength is found to be lower than the tensile strength, so thinner face sheets can be
+used in the compressive side of the sandwich panels.
+
+(a)
+
+(b)
+
+Figure 10: Schematic of the sandwich panel under bending (a) the cross-sectional view of the sandwich panel and (b) the free
+body diagram illustrating the bending moment.
+
+From a four-point bend test, the maximum bending moment should be defined by Equation 6.
+
+(6)
+
+Combining Equations 5 and 6 will give the maximum tensile or compressive strength of the face
+sheet in Equation 7.
+
+(7)
+
+The final model, solving for the maximum load, is Equation 8.
+
+(8)
+
+This model will be used to predict the flexural strength of the sandwich panels for Zodiac using
+the compressive strength of the face sheets.
+
+11
+
+2. EXPERIMENTAL PROCEDURES
+2.1 MATERIAL PROPERTIES TESTING
+Zodiac currently has empirical data for their sandwich panels, meaning that all of the failure data
+gathered from four-point bend tests are lumped into one group. The previous year’s project
+aimed at separating the tensile data out of that group and this project is attempting to do the
+same, but for compression. This proves slightly more difficult because the compressive strength
+of 7781 fabrics is not as readily studied as the tensile strength. The lack of reliable values from
+literature led to the need to develop a plan to generate a trustworthy compressive strength for the
+7781 fabric. Initial thoughts were to use ASTM D6641, which is a typical compression test.
+However, with some analysis regarding the face sheets intended for testing, it was determined
+that the largest gage length for the test would have been approximately 0.2 inches to avoid
+premature failures. This length was deemed too small and therefore not acceptable for that test,
+as the recommended minimum gage length is approximately 0.5 inches.
+
+An alternative test was developed to find the compressive strength of the face sheets. While
+symmetric sandwich panels will often fail in compression, asymmetric panels were decided upon
+in order to ensure compressive failures. The panel design (Figure 11) was set to be n:(n+1),
+meaning that there would be 1 extra ply added to the bottom of the panel, strengthening the
+tensile side.
+
+Figure 11: Schematic of the asymmetric panel design of n:(n+1) for sandwich panels containing prepreg
+7781 fabric and 0.5 inch Nomex honeycomb core.
+
+12
+
+The initial design of the test called for 30 panels from each group, for a total of 90 specimens.
+All 90 specimens were to be made with the fabric and the core in the strongest directions—warp
+and L, respectively. The core used for all panels was a 0.50" thick Nomex honeycomb. The
+design of these panels was supposed to limit the variation in the results, as it was simply the
+failure load values that were the relevant data sought, which would be converted to compressive
+strength. However, due to manufacturing limitations at the time, the large single panel from
+which the long beam specimens were cut differently than expected (Figure 12), with some beams
+being cut correctly and some just the opposite. As a result, only 75 specimens were cut, 25 for
+each of the 1, 2 and 3 ply groups. Table I shows the variation in the specimens, with each being
+referred to as L or W based on longitudinal core direction. This was an unexpected problem, but
+it later proved to be an important part of the experiment as will be discussed in later sections.
+The fabric direction was also unknown for all specimens, although it is believed that the warp
+direction coincides with the L-direction because that was what was called for in the original
+design. This is, however, only speculation as there was no true way to test for this at this stage of
+the project. This means that at this point there will be no way to differentiate whether a
+difference seen in failure load can be attributed to core direction or fabric direction.
+
+Figure 12: Manufactured large sandwich panel that was cut into the long beam specimens according to this diagram. It was not
+known how many of each specimen was cut this way, as this is simply a representation of what was believed to have occurred.
+This explains why there are L and W specimens in the asymmetric panel testing. The fabric direction of these panels is also
+unknown.
+
+Table I: Asymmetric Specimen Core Directions
+Core Direction
+L
+W
+
+1-Ply
+5
+20
+
+13
+
+2-Ply
+9
+13
+
+3-Ply
+7
+18
+
+The asymmetric panels were subjected to a four-point bend test following a Zodiac standard that
+is based on ASTM D7249 for a long beam composite sandwich panel. The test was performed on
+a Shimadzu testing machine at the Zodiac facility. The test fixture dimensions (Figure 13) and
+fixture setup (Figure 14) followed the standards, with the load span (L) set to 4" and the support
+span (S) set to 22". The dimensions of each panel were 3" wide and 24" long. The panels were
+subjected to a bending force until failure and each specimen was then inspected for whether it
+had failed properly or not. The only proper failure for this test was observed when there was a
+complete failure of the face sheet in compression (top skin of the panel, as opposed to tension in
+the bottom skin). A proper failure or a premature failure will determine whether or not the load
+value is valid for use in the analysis (Figure 15).
+
+Figure 13: Schematic showing the test fixture setup dimensions. In this case, S=22" and L=4"
+
+After the asymmetric panels were tested, the loads and specimen dimensions were input to the
+model to calculate the compressive strength of the 7781 fabric. This value was used to make
+predictions in the second round of testing.
+
+14
+
+Figure 14: This is the four-point bend test set up on a Shimadzu testing machine with a long beam specimen installed. The
+fixture dimensions for this setup are detailed in Figure 16. The maximum load cell recommended for this test was 5kN.
+
+Figure 15: Drawings from ASTM D5467 depicting acceptable and not acceptable failure modes during the compression of face
+sheets in a sandwich panel construction.
+
+2.2 FACE SHEET THICKNESS
+A modification of the previous year’s model has been made on the thickness of the face sheet. In
+the manufacturing process, the multi-ply face sheets are compressed to bind together, giving a
+chance for the resin to flow around the system. Therefore, the face sheet thickness can be defined
+simply by multiplying the thickness of each ply of glass fibers to the number of plies. Using the
+
+15
+
+data from the previous year’s senior project, an equation for the face sheet thickness with respect
+to the number of plies is developed in Equation 9.
+
+(9)
+The data from last year’s project fits perfectly into this equation; however, calculating stresses
+from the asymmetric test data has shown that this may not be an appropriate approximation of
+the face sheet thickness because the one ply compressive strength was much lower than that of
+the two and three ply. The compressive strength is a material property of the face sheet and
+therefore should remain constant, regardless of ply count. This led to an investigation into the
+true face sheet thickness of the specimen. Two measurement procedures were performed—one
+was to remove the face sheet from the core, sand off any remaining resin, and take several
+measurements with calipers. The other method involved taking a small 0.5" by 0.5" section of
+the sandwich panel, mounting it in acrylic and viewing the cross section of the face sheet under
+the microscope (Figure 16).
+
+(a)
+
+(b)
+
+(c)
+
+Figure 16: Optical microscope images of the sandwich panel face sheets. A) 1-ply specimen measured to approximately 270
+microns (0.0106"). The white strip is a metal clip holding the sample. 200x. B) 2-ply specimen measured to approximately 535
+microns (0.021"). 100x C) 3-ply specimen measured to approximately 700 microns (0.0276"). 100x.
+
+The microscope measurements aligned well with Equation 9. The peel-off method was not as
+close to the equation, but was a physical measurement of the face sheet. Data from the fabric
+manufacturer, JPS, was also researched. Their measurements were of the fabric without resin, so
+a bit of skepticism regarding using that data was somewhat warranted [17]. To go along with the
+
+16
+
+JPS data, Zodiac provided as-received measurements for 4 ply fabrics that could be compared to
+predictions made by the other methods.
+
+2.3 MODEL VALIDATION TESTING
+
+In order for the model to be valid, it must be able to accurately predict a failure load of various
+sandwich panel designs. From the asymmetric testing, an average compressive strength for the
+fabric was found and would then be used to make predictions. The model contains several
+variables that can easily be changed, so it was decided that it would be the most useful to set up a
+design that tested multiple factors. A 23 screening design was established to do this. Represented
+by a cube (Figure 17), this test incorporated 2 levels of 3 factors. Table II consolidates the tests
+performed, showing that there are 8 treatments in this design. Each treatment consists of 3
+samples (3 separately manufactured batches), and each sample consists of 3 specimens (a large
+panel cut into 3 long beam specimens). From this design, a total of 72 specimens were to be
+tested. It was decided that this round of testing was to be performed on symmetric panels, of
+which the dimensions were 3" wide and 18" long. This led to a change in the test fixture setup
+from the asymmetric panels (3"x24"), and the new load span was set to 5", while the support
+span was set to 15". The core material remained Nomex honeycomb for both the 0.50" and 0.25"
+core. While the change in specimen geometry was not a variable that was included in the
+screening design, it is a variable in the model and was therefore something to account for in the
+analysis.
+
+Figure 17: Representation of a 23 screening design used for model validation testing. This tests the 3 factors of face sheet
+thickness, core thickness and core direction, each containing 2 levels.
+
+17
+
+Table II: 23 Screening Design Treatments
+
+3. RESULTS
+
+3.1 FACE SHEET MEASUREMENTS
+
+All thicknesses were plotted on the same graph (Figure 18) to observe trends. All methods were
+input to the model with the failure loads to determine which method was the most accurate
+approximation for these sandwich panels. Knowing that the compressive strength of the fabric is
+a material property of the fabric itself, it should remain constant regardless of ply count. This
+knowledge was used, along with the model, to determine which thickness approximation would
+most accurately predict the failure loads. All methods were used to calculate a compressive
+strength based on both the asymmetric and symmetric data. It was determined that the JPS data
+(black line on Figure 18), which multiplies the number of plies by 0.0086", was the most
+accurate as far as predicting consistent compressive strengths. It also incorporated the asreceived testing values (purple dots on Figure 18) better than any other method. It was therefore
+concluded that it was best to use the JPS data to estimate the face sheet thickness for sandwich
+panels.
+
+18
+
+Figure 18: Comparison of all face sheet thickness methods. The optical microscope (red line) confirmed the 2015 project
+measurements (blue line). The JPS data asserts that it is accurate to assume that the number of plies can be multiplied by 0.0086"
+as was confirmed by the receiving testing of 4 ply samples by Zodiac. This was initially criticized, but was later found to be the
+most accurate.
+
+3.2 ASYMMETRIC PANEL TESTING
+
+A total of 75 asymmetric panels were subjected to a four-point bend test. The mean failure loads
+for these tests are in Table III, and the raw data can be found in Appendix A. A plot of all failure
+loads (Figure 19a) shows a linear trend of increasing load as the face sheet thickness increases.
+During testing, the 1-ply L specimens (5) each failed prematurely due to face sheet debonding
+from the core. These values were much lower than expected, and were therefore removed from
+the data set and linear trend lines were drawn, predicting a new value for the 1-ply L (Figure
+19b). The data shows a difference of approximately 20-30% between the L and W core
+directions. At this time, it was not possible to determine whether it was the core direction or the
+fabric direction that was the possible reason for the difference in load. Referring back to the
+diagram of how the asymmetric panels were cut (Figure 12), it is clear that there were different
+core directions, but it is not clear whether or not there were different fabric directions that
+
+19
+
+coincided with the core directions, as it was not known exactly how the fabric was placed during
+the manufacturing process.
+Table III: Mean Failure Loads of Asymmetric Panels
+
+(a)
+
+(b)
+Figure 19: a) Plot of asymmetric failure loads. The 1-ply L specimens are circled because they failed prematurely in face sheet
+debonding. b) Plot of asymmetric failure loads with 1-ply L specimens removed. Linear trend lines can now be drawn comparing
+the L and W directions.
+
+20
+
+Table IV contains the mean compressive values that were calculated from the failure loads. The
+average strength from the actual failure load of the 1-ply L value from the test was 24.5 ksi. It
+was replaced with a predicted value of 38.54 ksi that followed the linear trend that was expected.
+These values are calculated using the model and the face sheet thicknesses mentioned in Section
+3.2.
+
+Table IV: Mean Compressive Strengths of Asymmetric Panel Testing
+
+3.3 PREDICTED LOADS
+The predicted failure loads for each treatment of the symmetric panel test were calculated using
+the compressive strength generated from the asymmetric tests (Figure 20) (Table V).
+
+Figure 20: Plot of all 8 treatments and their respective predicted failure loads for model validation. Each black star represents the
+mean predicted failure load.
+
+21
+
+Table V: Predicted Average Failure Loads for Symmetric Panel Testing
+
+3.4 SYMMETRIC PANEL TESTING
+A total of 72 specimens from eight different treatments were tested. The mean load, standard
+deviation of the loads and the calculated compressive strength are shown in Table VI, and the
+raw data can be found in Appendix B. Out of the eight treatments, four of them failed completely
+in premature failure modes and the data points cannot be used to validate the mechanical model,
+and thus they were shaded red in the table. The groups that failed are the 1-Ply L direction and 3Ply W direction. In the treatments that passed, the failure loads were within 4-9% of the
+predicted values. This has proved the mechanical model valid regarding face sheet thickness and
+core thickness. However, there are no direct comparisons between core direction in the test,
+therefore the effect of core direction in flexural strength of sandwich panel is not verified.
+
+Table VI: Average Failure Loads and Compressive Strengths for Symmetric Panel Testing
+
+The four treatments that failed were subjected to two different premature failure modes, the 1Ply L direction all failed in face sheet debonding (Figure 21a), while the 3-Ply W direction failed
+in core shear (Figure 21b). The failure loads of these groups were far below the predicted values,
+except for the 3-Ply W direction, 0.25" Core. This group was still considered failure from the
+observation of the specimens, where the face sheet did not break when core shear occurred.
+
+22
+
+(a)
+
+(b)
+Figure 21: a) Asymmetric 1-ply L specimen that failed prematurely in face sheet debonding. b) Four-point bend test of a 3-ply,
+W, 0.5" core symmetric panel that failed prematurely in core shear. Note that the sharp angles are where the shear occurred.
+
+23
+
+4. ANALYSIS
+4.1 CORRECTION FACTORS
+In the process of verifying the mechanical model, two original assumptions were proved to be
+invalid. First, the model assumes the core does not take any load and the only impact on the
+flexural strength from the core is due to its thickness. From the results of the asymmetric beam
+tests, the samples in L direction are 20-30% stronger than the ones in W direction. As discussed
+in the Introduction, the L direction of a honeycomb core is expected to have a higher strength as
+the force is pulling on the Nomex paper, while the weaker adhesive bonds are the critical factor
+on the strength in W direction. Therefore, the stronger L direction should be able to transfer the
+load more effectively to the face sheets while withstanding a higher shear stress. Since the
+asymmetric test result agreed with this trend, a correction factor regarding the core direction in
+the sandwich panel should be added to modify the mechanical model.
+
+The different compressive strength in the asymmetric test, however, can also be explained by the
+fabric directions. Based on the published data from the manufacturer of the 7781-glass fiber
+fabric, the tested warp direction tensile strength is at 500 lb/in. and the fill direction strength is
+400 lb/in. [17] These values were generated by tensile tests of dry fabrics. Although this is not
+the compressive strength of the fabric that is used to predict the flexural load in the model, it is
+shown the warp direction is 20% stronger than the fill direction. This percent difference is
+similar to the results in the asymmetric beam tests. In Figure 12, it is also shown that if the fabric
+layups were done correctly, the stronger L direction samples would also be in the stronger warp
+direction and the W direction samples would be in fill direction. There is a high probability that
+the fabric directions were the main factor for the different compressive strength. This is the
+second invalid assumption, as there is no factor regarding the fabric directions in the mechanical
+model.
+
+However, the fabric directions were also unclear during the manufacturing of the asymmetric
+samples. The layups of the 2- and 3-ply samples might result in an isotropic face sheet, so the
+core direction would be the determining factor for the differences of the compressive strength.
+
+24
+
+Since the symmetric test failed to test for the effect of core direction on flexural strength (more
+explanation in Section 4.2), it is possible that both the core and fabric directions have an effect.
+To modify the model, two correction factors should be added. The correction factor for core
+direction, c1, would affect the overall flexural strength of the sandwich panel; while the
+correction factor for fabric direction, f1, would be directly related to the compressive strength of
+the face sheet. With the correction factors, the new mechanical model is shown in Equation 10.
+
+(10)
+
+Since the L and warp are the stronger directions—which should contribute to the highest flexural
+strength of the sandwich panel—the values of the correction factors are set to be 1.0 in those two
+directions. For W and fill directions, the values are believed to be around 0.7-0.8, based on the
+test results from the asymmetric panels and published data.
+4.2 PREDICTION COMPARISONS
+The predicted loads that were calculated for the eight treatments on symmetric panels can be
+found in Table V referenced earlier. All of the predictions had made the assumption that the
+panel would bend until failure in compression of the face sheet. This was the case for four of the
+eight treatments. The other half failed prematurely, and therefore produced invalid data in the
+analysis, and this can be seen in Table VI. The four successful treatments have been plotted on
+the same graph as the predicted loads and the mean value of each treatment is represented by a
+star (Figure 22). These treatments all failed around 4-9% of the predicted values.
+
+25
+
+Figure 22: Plot of all 8 treatment predictions with the blue and red stars representing mean failure loads of the four successful
+treatments.
+
+The prematurely failed treatments, however, often failed at a much lower load than predicted.
+Again, the mean value of each of these treatments was plotted on the same graph of the predicted
+values and is represented by a star (Figure 23).
+
+26
+
+Figure 23: Plot of all 8 treatment predictions with the blue and red stars representing the mean failure loads of all four samples
+that failed prematurely in testing.
+
+From both plots, it can be seen that the 3-ply panels were stronger than the 1-ply panels and the
+0.50" core was stronger than the 0.25" core. Both of these were predicted by the model and
+confirmed by the tests. However, it is not possible to determine whether it was the core direction
+or fabric direction that is responsible for the correction factors because the core directions were
+not able to be directly compared to each other—the 3-ply W could not be compared to the 3-ply
+L and the 1-ply W could not be compared to the 1-ply L. Had the 1-ply L and 3-ply W samples
+not failed prematurely and failed in compression of the face sheet instead, the evidence for which
+variable would be responsible for the correction factor would have been in the failure load—if
+the failure load of the W specimens reached the same value as the L specimens for a given ply,
+then it would be evidence that the fabric is the cause, as the fabric direction was known in the
+symmetric samples to be in the stronger warp along the length of the beam. However, if the L
+specimens remained 20-30% stronger than the W, it could be concluded that the core direction
+was the reason.
+
+It is also important to note where the 3-ply W, 0.25" core specimens failed in relation to their
+predicted values. They failed within the predicted region for that sample, but the samples did not
+27
+
+fail in compression of the face sheets. They instead failed in core shear, the same way the 0.50"
+samples did, and were therefore not considered valid data points.
+4.3 PREMATURE FAILURE MODES
+CORE SHEAR
+The symmetric beam tests failed to verify the effect of core direction on the flexural strength of
+sandwich panel because different premature failure modes occurred to different treatments of the
+tests. In the 3-Ply W samples, both of the 0.25" and 0.50" core samples failed in core shear.
+Figure 14 shows a normal deflection of the sandwich panel under bending, where a smooth curve
+should be seen throughout the panel. When sandwich panels fail in core shear, two step-like
+features appear outside the loading span (Figure 21b). Core shear occurs outside the load span
+because the sandwich panel experiences the maximum shear stress in between the support and
+load points (Figure 24).
+
+Figure 24: Shear stress and bending moment on the long beam sandwich panel.
+
+Core shear occurs when the maximum shear strength of the core is reached before the
+compressive strength of the face sheet. The shear strength of the core can be calculated by
+Equation 11, relating the applied load to the geometry of the core.
+
+28
+
+(11)
+
+Since the shear strength of the core is another known material property, like the compressive
+strength, it should be consistent if the same material is used in the sandwich panel design.
+Equation 10 can be rearranged for direct use to predict the failure load of sandwich panels that
+are subjected to core shear failure, as shown in Equation 12.
+
+(12)
+
+This equation should be used to predict the failure load along with the mechanical model. While
+the mechanical model is used to predict the load when compressive failure on the face sheet
+occurs, this equation can calculate the limit at which core shear becomes the dominated failure
+mode. The two models should be used together, and the lower calculated load would be the
+anticipated failure load and failure mode.
+
+From the data provided by Zodiac Aerospace, the minimum average roll values of shear strength
+of the specific Nomex Honeycomb core used in the samples are 155psi for L direction and 84psi
+for W direction. In the tests for 3-Ply W samples, the minimum average shear strength value is
+represented by the black line in a graph of failure load against core thickness (Figure 25). This
+line is a limit at which, below the line, face sheet failure would be the dominant failure mode and
+the mechanical model could be used to accurately predict the failure load; above the line, core
+shear would occur more often, so the shear strength equation should also be used to predict the
+failure load. The test data of the 3-ply W samples was represented by the red dots, as both
+treatments failed in core shear, and therefore both appear above the line.
+
+29
+
+Figure 25: Graph showing the minimum core shear stress, which can be used to determine whether the panel will fail in the face
+sheet or in the core. Above the black line, core shear is expected more often, and below the line, only face sheet failure should
+occur.
+
+The 3-Ply L treatments did not fail in core shear because the shear strength is higher in L
+direction, the ultimate compressive strength of the face sheet is reached first. The same happened
+to the 1-Ply W treatments.
+FACE SHEET DEBONDING
+The 1-ply L samples in both the symmetric and asymmetric panels all failed in face sheet
+debonding. There is a standard test method that can be used to test the bond of the face sheet to
+the core called the drum peel-off method (ASTM D1781). It would be interesting to determine
+this bond strength, as it could prove that some of the processing of the sandwich panels may need
+to be adjusted to account for this. One theory that was developed to explain the weak bond of the
+1-ply samples was the amount of resin that was able to penetrate into the core. As can be seen in
+the asymmetric panels (Figure 26), the resin did not appear to go far into the core at all when
+compared to the 2, 3 and 4-ply regions.
+
+30
+
+(a)
+
+(b)
+
+Figure 26: A) An asymmetric panel (L core) with 1 ply on top and 2 plies on bottom. The 1-ply layer does not appear to have
+any extra resin (seen in the red circles) flowing from the face sheet into the core, whereas the 2-ply does. B) An asymmetric panel
+(W core) with 3 plies on the top and 4 plies on the bottom. To continue with the 2-ply image to the left, the 3-ply layer contains
+more resin than the 2-ply and the 4-ply contains more resin than the 3-ply.
+
+The trend, as it appears in this case, is that as the number of plies increases, the amount of resin
+that runs into the core also increases. The additional resin may act as a bond strength increasing
+mechanism. Again, this is mostly a process controlled response, so perhaps the time, temperature
+or pressure (or any other related factor) may be able to be changed to avoid this problem. Testing
+the bond strength between the face sheet and the core was not able to be performed in this
+project, so these are only theories that were developed to explain what was seen. A future
+iteration of this project would be best served to further investigate this claim.
+
+5. CONCLUSIONS
+1.
+
+It is believed that the mechanical model has been validated for use and the following are
+some important factors that have been identified to consider in the application of the model.
+
+2.
+
+The shear strength of the core must be calculated and compared to the model predicted load
+in order to determine the failure mode for a specific sandwich panel.
+
+3.
+
+The proper correction factors must be used at the appropriate times, although confirming the
+exact value and cause needs additional testing.
+
+4.
+
+It is important to always consider the way in which the sandwich panels are processed, as
+this may lead to premature failures such as debonding.
+
+31
+
+6. REFERENCES
+[1] Boeing I, “Boeing 787 from the Ground Up,” 2006. [Online]. Available:
+http://www.boeing.com/commercial/aeromagazine/articles/qtr_4_06/article_04_2.html.
+[Accessed 19 1 16].
+[2] Boeing II, “Aero,” [Online]. Available:
+http://modernairliners.com/Boeing787_files/Specifications.html. [Accessed 26 1 2016].
+[3] J. P. Justin Lui, “Improving Product Design by Predicting Flexural Strength of a Honeycomb
+Core Sandwich Panel Compostite Using Ply Tensile Strength,” San Luis Obispo, 2015.
+[4] I. Daniel, “Failure Modes of Composite Sandwich Beams,” International Journal of Damage
+Mechanics, vol. 11, pp. 309-334, October 2002.
+[5] Hexcel, “HexWeb Honeycomb Sandwich Design Technology,” December 2000.
+[6] S. Batchu, “Stress Ebook LLC,” 15 August 2014. [Online]. Available:
+www.stressebook.com/honeycomb-sandwich-panels.
+[7] E. Gdoutos, “Compression Facing Wrinkling of Composite Sanwich Structures,” Mechanics
+of Materials, vol. 35, pp. 511-522, 2003.
+[8] J. Kindinger, “Lightweight Structural Cores,” ASM Handbooks, vol. 21, pp. 180-183, 2001.
+[9] T. Ishikawa, “Stiffness and Strength Behavior of Woven Fabric Composites,” Journal of
+Material Science, vol. 17, pp. 3211-3220, 1982.
+[10] ACP Composites, “Woven Fabric Style Guide,” 21 October 2015. [Online]. Available:
+http://www.acpsales.com/woven-fabric-style-guide.html.
+[11] C. Branca, “Char Structure and Combustion Kinetics of a Phenolic-Impregnated Honecomb
+Material,” Industrial & Engineering Chemistry Research, vol. 52, pp. 14574-14582, 2013.
+[12] R. Morrison, Interviewee, Senior Project Sponsor. [Interview]. 28 October 2015.
+[13] J. Abot, “Fabrication, Testing and Analysis of Composite Sandwich Beams,” Composites
+Science and Technology, vol. 60, pp. 2455-2463, 26 January 2000.
+[14] M. Ashby, Materials Selection in Mechanical Design, 4 ed., Butterworth-Heinemann, 2011.
+[15] A. Jumahat, “Fracture Mechanisms and Failure Analysis of Carbon Fiber/Toughened Epoxy
+Composites Subjected to Compressive Loading,” Composite Structures, vol. 92, pp. 295305, 6 August 2009.
+[16] L. Carlsson, Structural and Failure Mechanics of Sandwich Composites, vol. 121, Springer,
+2011.
+[17] JPS Industries Inc., "Composite Materials".
+
+32
+
+Appendix A – Asymmetric Beam Test Data
+1-Ply
+
+Specimen
+1_1
+1_2
+1_3
+1_4
+1_5
+1_6
+1_7
+1_8
+1_9
+1_10
+1_11
+1_12
+1_13
+1_14
+1_15
+1_16
+1_17
+1_18
+1_19
+1_20
+1_21
+1_22
+1_23
+1_24
+1_25
+Average
+
+Core Direction
+W
+W
+W
+W
+L
+W
+W
+W
+W
+W
+W
+W
+L
+W
+W
+W
+L
+W
+W
+W
+W
+L
+L
+W
+W
+L
+W
+
+Failure Load (lb)
+79.97
+107.76
+102.92
+99.89
+56.41
+104.00
+80.93
+96.58
+94.87
+94.69
+96.92
+98.79
+69.93
+104.32
+99.91
+95.00
+80.82
+101.32
+93.04
+90.71
+105.79
+79.54
+71.70
+90.09
+93.08
+71.68
+96.20
+
+33
+
+Compressive Strength (ksi)
+27.07
+36.47
+34.84
+33.81
+19.09
+35.20
+27.39
+32.69
+32.11
+32.05
+32.81
+33.44
+23.67
+35.31
+33.82
+32.15
+27.35
+34.30
+31.49
+30.70
+35.81
+26.92
+24.27
+30.49
+31.51
+24.26
+32.49
+
+2-Ply
+
+Specimen
+2_1
+2_2
+2_3
+2_4
+2_5
+2_6
+2_7
+2_8
+2_9
+2_10
+2_11
+2_12
+2_13
+2_14
+2_15
+2_16
+2_17
+2_18
+2_19
+2_20
+2_21
+2_22
+2_23
+2_24
+2_25
+Average
+
+Core Direction
+L
+L
+L
+L
+L
+L
+L
+L
+L
+L
+W
+W
+W
+W
+W
+W
+W
+W
+W
+L
+L
+W
+W
+W
+W
+L
+W
+
+Failure Load (lb)
+217.34
+248.38
+235.76
+257.47
+232.75
+234.68
+222.23
+250.83
+230.39
+261.15
+166.42
+157.87
+179.18
+171.98
+181.64
+206.63
+215.89
+208.4
+203.27
+240.23
+235.63
+173.04
+170.54
+199.91
+204.56
+238.90
+187.6407692
+
+34
+
+Compressive Strength (ksi)
+36.18
+41.34
+39.24
+42.86
+38.74
+38.56
+36.99
+41.75
+38.35
+43.47
+27.7
+26.28
+29.82
+28.63
+30.23
+34.39
+35.94
+34.69
+33.83
+39.99
+39.22
+28.8
+28.39
+33.28
+34.05
+39.72
+31.23
+
+3-Ply
+
+Specimen
+3_1
+3_2
+3_3
+3_4
+3_5
+3_6
+3_7
+3_8
+3_9
+3_10
+3_11
+3_12
+3_13
+3_14
+3_15
+3_16
+3_17
+3_18
+3_19
+3_20
+3_21
+3_22
+3_23
+3_24
+3_25
+Average
+
+Core Direction
+W
+L
+L
+L
+L
+L
+L
+L
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+L
+W
+
+Failure Load (lb)
+259.9
+344.34
+357.02
+350.35
+309.43
+313.86
+341.09
+358.66
+262.06
+261.77
+261.79
+263.52
+261.06
+256.7
+264.58
+273.43
+271.96
+266.14
+290.09
+264.71
+256.55
+266.38
+259.36
+259.6
+270.6
+344.22
+265.01
+
+35
+
+Compressive Strength (ksi)
+36.18
+41.34
+39.24
+42.86
+38.74
+38.56
+36.99
+41.75
+38.35
+43.47
+27.7
+26.28
+29.82
+28.63
+30.23
+34.39
+35.94
+34.69
+33.83
+39.99
+39.22
+28.8
+28.39
+33.28
+34.05
+40.12
+33.51
+
+Appendix B – Symmetric Beam Test Data
+
+Sample
+
+Number
+of Plies
+
+Core
+Thickness
+(in.)
+
+Core
+Direction
+
+P1
+
+1
+
+0.5
+
+L
+
+P2
+
+3
+
+0.5
+
+L
+
+P3
+
+1
+
+0.5
+
+W
+
+P4
+
+3
+
+0.5
+
+W
+
+P5
+
+1
+
+0.25
+
+L
+
+P6
+
+1
+
+0.25
+
+W
+
+P7
+
+3
+
+0.25
+
+W
+
+P8
+
+3
+
+0.25
+
+L
+
+Failure
+Load (lb)
+104.36
+107.39
+92.63
+504.22
+494.54
+518.86
+98.69
+83.8
+97.42
+288.47
+55.84
+70.78
+77.35
+67.9
+64.6
+62.1
+200.71
+190.46
+188.54
+346.31
+349.05
+329.05
+
+36
+
+(S-L)
+
+Average
+Load (lb)
+
+Compressive
+Strength (ksi)
+
+10
+
+101.46
+
+19.33
+
+12
+
+505.87
+
+37.29
+
+12
+
+93.3
+
+21.33
+
+12
+
+288.47
+
+21.26
+
+10
+
+74.07
+
+27.99
+
+12
+
+64.87
+
+29.17
+
+12
+
+193.24
+
+27.16
+
+10
+
+341.47
+
+39.99
+
+Sample
+
+Number
+of Plies
+
+Core
+Thickness
+(in.)
+
+Core
+Direction
+
+P9
+
+1
+
+0.25
+
+L
+
+P10
+
+3
+
+0.25
+
+L
+
+P11
+
+3
+
+0.5
+
+L
+
+P12
+
+3
+
+0.25
+
+W
+
+P13
+
+1
+
+0.25
+
+W
+
+P14
+
+1
+
+0.5
+
+L
+
+P15
+
+1
+
+0.5
+
+W
+
+P16
+
+3
+
+0.5
+
+W
+
+Failure
+Load (lb)
+100.87
+97.15
+89.75
+293.64
+295.34
+301.08
+524.35
+512.48
+497.67
+226.5
+78.86
+65.61
+61.51
+91.61
+91.63
+104.13
+162.72
+155.36
+128.44
+283.47
+283.95
+285.28
+
+37
+
+(S-L)
+
+Average
+Load (lb)
+
+Compressive
+Strength (ksi)
+
+10
+
+95.92
+
+35.94
+
+12
+
+293.35
+
+41.23
+
+12
+
+511.5
+
+37.71
+
+12
+
+266.5
+
+31.83
+
+10
+
+68.66
+
+25.73
+
+12
+
+114.95
+
+21.9
+
+12
+
+148.84
+
+34.03
+
+10
+
+284.23
+
+18.62
+
+Sample
+
+Number
+of Plies
+
+Core
+Thickness
+(in.)
+
+Core
+Direction
+
+P17
+
+1
+
+0.25
+
+W
+
+P18
+
+3
+
+0.25
+
+L
+
+P19
+
+3
+
+0.5
+
+W
+
+P20
+
+1
+
+0.25
+
+L
+
+P21
+
+1
+
+0.5
+
+W
+
+P22
+
+3
+
+0.25
+
+W
+
+P23
+
+1
+
+0.5
+
+L
+
+P24
+
+3
+
+0.5
+
+L
+
+Failure
+Load (lb)
+86.01
+78.79
+71.81
+300.23
+275.83
+279.91
+284.21
+44.15
+46.03
+45.81
+175.42
+156.91
+106.47
+184.48
+76.82
+108.28
+91.13
+499.9
+484
+497.51
+
+38
+
+(S-L)
+
+Average
+Load (lb)
+
+Compressive
+Strength (ksi)
+
+10
+
+78.87
+
+29.57
+
+12
+
+285.32
+
+40.1
+
+12
+
+284.21
+
+20.95
+
+12
+
+45.33
+
+20.38
+
+10
+
+166.17
+
+31.66
+
+12
+
+184.48
+
+25.93
+
+12
+
+92.08
+
+21.05
+
+12
+
+493.8
+
+36.4
+
+

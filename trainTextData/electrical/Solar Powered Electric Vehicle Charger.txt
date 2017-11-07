@@ -1,0 +1,660 @@
+SOLAR POWERED ELECTRIC VEHICLE CHARGER
+
+by
+Andrew Moradpour
+Jessica Bombardier Shaw
+
+Senior Project
+
+ELECTRICAL ENGINEERING DEPARTMENT
+
+California Polytechnic State University: San Luis Obispo
+
+2017
+
+TABLE OF CONTENTS
+Section
+
+Page
+
+Acknowledgements……………………………………………………………………………………...3
+I. Abstract………………………………………………………………………………………....4
+II. Background……………………………………………………………………………………..5
+III. Requirements and Specifications……………………………………………………………….6
+IV. Design…………………………………………………………………………………………..7
+V. Integration………………………………………………………………………….……….......8
+VI. Testing………………………………………………………………………….……………...11
+VII. Conclusions………………………..………………………………….……………………….15
+VIII. References………………………………………………………………………….……...…. 16
+Appendices
+A. Senior Project Analysis………………………………………………………………….…….17
+B. Schematic………………………………………………………………………….…………..23
+C. Time Schedule Allocation……………………………………………………………..………24
+
+1
+
+LIST OF TABLES AND FIGURES
+Tables
+
+Page
+
+Table I: ​Engineering Requirements and Specifications………..…………………….………….....….6
+Table II: ​Time to Charge (Current system).………..…………………….…………………………..14
+3. Table III: ​Time to Charge (Improved system).………..……………………​.………………….....15
+1.
+2.
+
+Figures
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+
+Figure 1: ​Sources of U.S. Electricity Generation, 2016………………………………….………...…...5
+Figure 2: ​Solar Panel Cart………………………………………………………….…….......…..…......7
+Figure 3: ​Wiring Diagram of Outback Flexman 80 MPPT Solar Charge Controller…….….…...….....8
+Figure 4: ​Wire Connector………..…………………….…….………..………………..……...…….….8
+Figure 5: ​Circuit Breaker Connection Terminals………..………………………..……………...……..8
+Figure 6: ​Battery Terminals ………..…………………….…….………..…………………….…..…....9
+Figure 7: ​Shunt Resistor Terminals ………..…………………….…………………….…….….…..….9
+Figure 8: ​Back View of the TriMetric Battery Monitor Panel………..………………………....……..10
+Figure 9: ​View of the Disconnect Cables………..…………………….…………………….………....10
+Figure 10: ​Inverter Connections………..…………………….………………………………………...10
+Figure 11:​ Battery to Ford Focus Connection………..…………………….……………………….…..11
+Figure 12: ​Charge Controller to Battery Connection………..…………………….…………………...11
+Figure 13: ​Battery Monitor to Battery Connection………..…………………….……………………...12
+Figure 14: ​Complete Solar Powered Electric Vehicle Charger as Shown in the Senior Project Expo.13
+Figure 15: ​Original Estimate Cost………..…………………….……………………………………....18
+Figure 16: ​Actual Final Cost of Component Parts………..…………………….……………………...19
+Figure 17: ​Final Design of the Solar Powered Electric Vehicle Charger………..……………………..23
+Figure 18:​ EE 461 Gantt Chart………..…………………….…….………..……………………..…....24
+Figure 19:​ EE 462 Gantt Chart………..……………………....…….………..…………………………24
+
+2
+
+ACKNOWLEDGEMENTS
+Andrew Moradpour
+I wish to thank my family, friends, and loving girlfriend, who aspire me to be the best person I can be.
+Jessica Bombardier Shaw
+First off, I would like to thank Dale Dolan for your guidance throughout this entire year, both with this
+project and in all the power classes. Thank you to my parents and family for all the love and support
+throughout my college years. Thanks to all the professors in the Electrical Engineering Department for
+helping me reach graduation. Thank you to Vicky Tarnovetchi for inspiring me to choose Electrical
+Engineering. I dedicate my work in this project to my grandfather who finally got his engineer in the
+family.
+
+3
+
+ABSTRACT
+This project will look into how to create an efficiently-operated solar powered electric vehicle charger.
+The solar panel will harvest energy from the sun that will be stored a battery pack to be readily available
+to charge an electric vehicle. These stations could be commercialized to be located along a highway, or
+personalized for a in-house installation.
+
+4
+
+BACKGROUND
+With electric vehicles becoming more affordable every year, investors are starting to see the demand for
+charging stations rise as well [1]. We wanted to use this fact and the idea that electric vehicle consumers
+are typically environmentally friendly individuals to create a electric vehicle charger using 100%
+renewable energy.
+As of now, the electric grid in the United States is not nearly as dependent on renewable energy as it is
+with fossil fuels [2]. This means that electric vehicle owners that charge their electric vehicle on the
+electric grid could be contributing harmful emissions to the environment. We wanted to reduce this
+impact as much as a possible by creating an off-the-grid, solar powered electric vehicle charger.
+
+Figure 1: ​Sources of U.S. Electricity Generation, 2016 [2]
+
+5
+
+REQUIREMENTS AND SPECIFICATIONS
+Table I: ​Engineering Requirements and Specifications
+Engineering Requirement
+High voltage
+3 prong 1​20V AC output from the
+system.
+
+Durable base
+System must be able to be installed on
+any terrain and capable of
+withstanding any weather and remain
+online and stable.
+
+Large battery capability
+Battery capability must be enough to
+provide vehicles with a generous
+charge when it the battery is full.
+
+Current flow measurement
+The system must be able to display
+how much current is entering and
+leaving the battery.
+
+System protection
+The system shall have some sort of
+protection set in place to prepare
+against faults and provide a quick
+disconnect.
+
+Justification
+This provides the user with the ease of
+using their at regular electric vehicle
+charger that they would normally use
+at home.
+The system must be able to withstand
+normal, everyday use in the elements
+in order for it to be practical.
+
+In order to get the most out of this
+system, the battery must be large
+enough to provide enough charge to
+the electric vehicle in the case the user
+wants a quick charge.
+Total current flow shows the user the
+state of the system. This indicator
+allows the user to know the status of
+the battery which is going to be
+important when charging their electric
+vehicle.
+System protection is necessary to
+protect the user and the system itself.
+
+6
+
+DESIGN
+Our design was limited to what resources were available for us. Luckily, the majority of the equipment for
+this system was provided by our advisor, Dale Dolan, and the Electrical Engineering Department. We
+originally envisioned a much larger system with multiple solar panels and batteries to provide a quick
+charge time for the electric vehicle but we quickly realized that the amount of materials required would
+put us way over our $400 senior project budget. We ended up using only one 435 W solar panel and a
+1.2kWh deep cycle battery. The stand for our project was even from an older student's senior project.
+
+Figure 2: ​Solar Panel Cart
+
+The only equipment we had to purchase ourselves was a deep cycle battery and the circuit breaker.
+Despite all of this, we were still able to provide an AC 120 V output that allows current to be drawn in a
+surprisingly fast manor.
+We came up with the design of the system with the help of our advisor over the span of winter and spring
+quarter. With his vast knowledge in this field, he helped us incorporate system protection and a way to
+display the total current entering and leaving the system using a clever wiring technique, a shunt resistor,
+and a battery monitor. The basic components of the design were simple and logical in what would be
+needed to convert solar energy into battery energy, then be able to discharge the battery’s energy to be
+available for and used by the electric vehicle.
+The final design can be found in ​Appendix B.
+
+7
+
+INTEGRATION
+1. Connect solar panel to charge controller.
+a. Crimp MC4 connectors to 14 AWG wire and make a connection to the positive and
+negative terminals of the solar panel.
+b. Strip the other end of the 14 AWG wires and connect it to the designed PV+ and PVwire terminals of the charge controller as shown below:
+
+Figure 3: ​Wiring Diagram of Outback Flexman 80 MPPT Solar Charge Controller [3]
+
+2. Connect charge controller to circuit breaker and battery
+a. Strip the end of a 4 AWG wire and connect one end to the BAT+ terminal.
+b. With the other end of the 4 AWG wire, attach a wire connector and attach it to one side
+of the 100A circuit breaker.
+
+8
+
+Figure 4: ​Wire Connector [4]
+
+​Figure 5: ​Circuit Breaker Connection Terminals [5]
+
+c. Do the same with another 4 AWG wire, but this time attach a wire connector to both
+sides of the wire.
+d. Now connect one end of this wire to the opposite terminal of the circuit breaker and the
+other end to the positive terminal of the battery.
+e. For the negative terminal, strip one end of a 4 AWG wire and make a connection in the
+BAT- terminal of the charge controller.
+f. With the other end of this wire, attach a wire connector on. This end of the cable will
+connect to the shunt resistor.
+
+Figure 6: ​Battery Terminals [6]
+
+3. Installing the battery monitor
+a. Connect the end of the 4 AWG cable that is coming from the BAT - terminal of the
+charge controller to one of the top connections of the shunt resistor.
+b. On the other side of the shunt resistor, strip and crimp a 2/0 wire and make a connection
+to the negative terminal of the battery.
+
+9
+
+Figure 7: ​Shunt Resistor Terminals [7]
+
+c. Open up the battery monitor and strip four 24 AWG wires and feed them into G1, G2,
+SIG, and B1+.
+d. Locate the side connection lug on the shunt resistor.
+e. Connect SIG to the side closest to the negative terminal of the battery.
+f. Connect G1 and G2 to the opposite side.
+g. Connect B1+ to the positive terminal of the battery using the fuse connector provided.
+
+Figure 8: ​Back View of the TriMetric Battery Monitor Panel [8]
+
+4. Installing the inverter
+a. Attach a wire connector to one end of two 2/0 wires.
+b. On the other side of both of the wires, attach a wire disconnect connector to provide a
+safe way to connect the circuit.
+c. Repeat this process so you have two pairs of a male/female disconnect connectors to a
+wire connector.
+d. With a wire with a male disconnect, make a connection to the connection of the shunt
+resistor furthest from the negative terminal of the battery.
+e. With the other male wire, make a connection to the positive terminal of the battery.
+f. Connect the wires with female disconnects, to the positive and negative terminal of the
+inverter.
+g. Connect the wire that is connected to the negative terminal of the inverter to the wire
+connected to the connector on the shunt resistor farther from the negative terminal of the
+battery.
+10
+
+h. Connect the wire that is connected to the positive terminal of the inverter to the wire
+connected to the positive terminal of the battery.
+
+Figure 9: ​View of the Disconnect Cables
+
+Figure 10:​ Inverter Connectors
+
+11
+
+TESTING
+Testing this system was done in multiple stages. We first connected the battery to the inverter to see if the
+electric vehicle we used for testing (Ford Focus) would have an issue with the lack of ground in the
+system.
+
+Figure 11:​ Battery to Ford Focus Connection
+
+Once we saw the Ford Focus was charging (noted by a blinking light on the charger) we decided to move
+on and work on the front end of our system. Our next move was connecting the charge controller to
+circuit breaker and powering it with the battery.
+
+Figure 12: ​Charge Controller to Battery Connection
+
+The charge controller appeared to turn on as expected. Next, we set up the battery monitor and configured
+it to our 12V battery size.
+
+12
+
+Figure 13: ​Battery Monitor to Battery Connection [8]
+
+The battery monitor was displaying the proper voltage (~12V) and zero current (which is correct since
+there was no load in this connection).
+After testing each individual part of our system, we decided to tie everything together with the solar
+panel. The solar panel used was a part of a previous senior project and is located on a dual-axis adjustable
+rack (see ​Figure 1)​.
+
+13
+
+Figure 14: ​Complete Solar Powered Electric Vehicle Charger as Shown in the Senior Project Expo
+
+Once everything was connected the system immediately started charging the Ford Focus. The numbers
+recorded that day is shown below:
+Charge controller
+IN: 55-63V (fluctuating), 6.1A
+OUT: 11.4V, 28.6A
+Battery Monitor
+Charging car: 11.4V, -112A
+No load: 12.7V, +25.9A
+Inverter
+11.1 Vdc, 135-138A
+AC Watts, 1250
+We knew the battery monitor was operating correctly in the prefered orientation (displaying I​CC​ - I​INV​)
+because we were reading a negative current when the car was charging and a positive current when we
+disconnected the load.
+
+14
+
+From this information, we came up a time-to-charge calculation.
+12 V Battery:
+Panel power: 300-400 Wh
+Time to charge 1.2 kW battery: 3 - 4 hours
+Ford Focus:
+Ford focus has a 6.6 kW battery size and 115 mi range.
+Our battery is 1.2 kWh.
+The Ford focus would be charging at a rate of ​1.5 kWh​ but the battery only “sees” it being discharged at a
+rate at about ​1.25 kWh ​due to the solar panel charging the battery as it’s being depleted*.
+This means that the battery in our system will only last about 1 hour before it is discharged completely.
+This in return proves a “fast charge” of about 26 miles in 1 hour.
+115 mi range/6.6 kW = 17.42 mi/kW
+(17.42 mi/kW)(1.5 kW) = 26.13 mi
+Once the battery is depleted, the EV will no longer charge as fast. This is because the EV will be charged
+directly from the solar panel at a rate of 300 - 400 Wh under direct sunlight.
+With Battery: 1 hr @ 1.5 kWh
+Remainder of car battery: 6.6kW - 1.5 kW = 5.1 kW
+Charging the remainder of the battery with just solar panel:
+5.1 kW/0.300 kWh = 17 hours @ 300 Wh
+5.1 kW/0.400 kWh = 12.75 hours @ 400 Wh
+Total time to fully charge battery: ​13.75 - 18 hours**
+Table II: ​Time to Charge (Current system)*
+
+Battery
+
+3 - 4 hours
+
+Ford Focus
+
+13.75 - 18 hours
+
+*​Assuming we have a fully charged battery, fully depleted ford focus, and under direct sunlight
+**Note that this would not be possible to charge the remainder of the battery in one day as there is
+approximately 14 hours of sunlight per day in San Luis Obispo this time of year [9].
+
+15
+
+CONCLUSIONS
+This senior project has taught us both a tremendous amount about renewable energy, systems engineering,
+and electric vehicles. On top of this, we both feel that we have improved time management, organization
+skills, and teamwork. Despite the speed bumps with finding the resources to complete this project, we
+would say that we are both pleased with our efforts in producing a working prototype for the senior
+project expo.
+One thing we would like to emphasize is how unpractical the system is with just one solar panel and
+battery. We discovered that it could take almost ​18 hours​ under direct sunlight to fully charge a ford focus
+with our system. This is impossible at any time of year in San Luis Obispo, where there’s only 14 hours
+of daylight and those hours of sun aren’t efficiently collected by a solar panel, even with a dual-axis
+tracker built into the system because it will not likely achieve direct sunlight. This means that this system
+will take multiple days to fully charge an electric vehicle, and no one would realistically use that type of
+charger when they could much more easily plug it into an electrical outlet and charge in just a few hours.
+With just adding one extra solar panel and battery in parallel with its kind, it cuts the time to charge in
+more than half.
+Table III: ​Time to Charge (Improved system)***
+
+Battery
+
+1.5 - 2 hours
+
+Ford Focus
+
+6.5 - 8 hours
+
+***​Assuming we have a 2 fully charged batteries, fully depleted ford focus, and 2 panels under direct
+sunlight
+This is a huge improvement in overall system efficiency and becomes a much more practical system. The
+extra batteries are essential to keep the voltage above the shut-off level that the inverter activates. During
+the senior project expo, as the Focus was being charged with this system, when the inverter voltage
+dropped to around 10.7 V, it would no longer allow the Focus to draw current and charge the vehicle.
+This took a matter of hours, if not less than a full hour to occur. This is a major flaw in the system, with
+an easy remedy of adding more deep cycle batteries to the system. With a higher budget or additional
+resources we could’ve built upon our system to make it more practical for consumer use, but we are
+happy with a working finished product.
+We’d like to give a big thanks to our advisor, Dale Dolan, for sticking with us throughout this year and
+being a great help with the design, construction, and allowing us to borrow so much of his personal
+resources. We truly could not have done this without him and we wish him the best in his future
+endeavors.
+
+16
+
+REFERENCES
+[1]
+[2]
+[3]
+[4]
+[5]
+[6]
+[7]
+[8]
+[9]
+
+MarketWatch, “​Electric Vehicle Charging Station Market”. [Online].
+Available: ​http://www.marketwatch.com​. [Accessed: June 8, 2017].
+U.S. Energy Information Administration, “Electricity in the U.S.”. [Online].
+Available: ​https://www.eia.gov​. [Accessed: June 8, 2017].
+Outback Power, “FLEXmax Series Charge Controllers,” FLEXmax 80, FLEXmax 60 Owner's Manual,
+Feb. 2012.
+Lowes, “Hillman 4-Count Ring Wire Connectors”. [Online]. Available: ​https://www.lowes.com​.
+[Accessed: June 8, 2017].
+Powerwerx, “Resettable Circuit Breaker Cooper Bussmann”. [Online]. Available: ​https://powerwerx.com​.
+[Accessed: June 8, 2017].
+BatteriesPlus, “D​eep Cycle 100AH AGM Battery Duracell Ultra 12V SLA Sealed Lead Acid”. [Online].
+Available: ​https://battiesplus.com​. [Accessed: June 8, 2017].
+Solar-Electric, “Deltec 500 amp, 50 millivolt current shunt”. [Online].
+Available: ​https://www.solar-electric.com​. [Accessed: June 8, 2017].
+Tri-Metric, “Battery system monitor,” INSTALLER’S INSTRUCTIONS FOR TRI-METRIC, Jan. 2015.
+Timeanddate, “San Luis Obispo, California, USA — Sunrise, Sunset, and Daylength, June 2017”. [Online].
+Available: h
+​ ttps://www.timeanddate.com/​. [Accessed: June 8, 2017].
+
+17
+
+APPENDIX: A — ANALYSIS OF SENIOR PROJECT DESIGN
+Project Title: Solar Powered Electric Vehicle Charger
+Student’s Names:
+Jessica Bombardier Shaw, Andrew Moradpour
+
+Student’s Signatures:
+Advisor’s Name:
+
+Dale Dolan
+
+Date: 6/9/17
+A. Summary of Functional Requirements
+I.
+II.
+III.
+
+The system shall provide fast, reliable, and clean energy to an electric vehicle.
+The system shall obtain its energy via a solar panel and store it using batteries.
+The system shall be compatible with all electric vehicles.
+
+B. Primary Constraints
+I.
+The main difficulty was obtaining all materials necessary to implement the design. Most
+
+II.
+III.
+
+of the equipment required cost more than $200 each, and the Cal Poly senior project
+budget is only $200 per person.
+Our budget limited the amount of battery storage space available to use which in turn
+limited how fast we could charge an electric vehicle
+Physically, the solar cart we were using could only support one solar panel. This affects
+the input power in the system.
+
+C. Economic
+I.
+
+II.
+
+III.
+
+Human Capital​ – This system requires a small amount of engineers to oversee
+production. There will be troubleshooting involved along with a continued effort to
+increase efficiency and reduce costs.
+Financial Capital​ – There will be a large amount of investment needed up-front to
+initialize manufacturing of this system. It is also unclear what the market for this type of
+product might be or the price prospective customers would be willing to pay for it at this
+time. The initial price might be much more than a customer is willing to pay and then the
+business would not be able to maintain production. It might be too soon for a product of
+this kind to be on the market. But, for an individual willing to make a personal
+investment and create this system themself, the return on their investment will be great by
+reducing their electricity bill from their EV charging costs.
+Natural Capital ​– This product will utilize several electrical components including a
+solar panel, a battery, and an inverter. The design is meant to reduce carbon emissions
+caused by utilities that still burn fossil fuels which in turn powers electric vehicles, but
+18
+
+IV.
+
+there is an environmental impact in regards to production of solar panels and mining for
+solar cell resources, along with the other metals and elements involved with the
+electronics of the system. Proper recycling of these components would be encouraged and
+accepted as we are marketing to environmental conscious consumers.
+Manufactured Capital -​- All components used in this system are manufacturable
+components. The cost would reduce tremendously if the system was manufactured rather
+than individual components being purchased and assembled by hand. There will be in
+increase in jobs related to power systems, power electronics, manufacturing, and sales.
+
+Where/when costs/benefits accrue:
+The costs will all be upfront with the purchase of components for the system. There may be
+additional costs down the line as the battery and solar panel degrades (the Deep Cycle 100AH
+AGM Battery lifetime is 4-7 years and the 435W SunPower Solar Panel has about a 40 year
+lifetime). The benefits will accrue once the amount of electricity or cost for payments at public
+charging stations surpass the cost of the system. This exact amount of time will depend on the
+time of day the EV is normally charged at home and the cost of electricity at that time; the
+amount of charging done at public stations and the average amount paid; and the final cost of the
+system to the individual.
+
+Figure 15: ​Original Estimate Cost
+
+19
+
+Figure 16: ​Actual Final Cost of Component Parts
+
+Note: items in bold and italics were items owned by Cal Poly, the EE Department, or Dale Dolan.
+Items unitalicized/unbolded were items purchased by the students for the project and donated
+back to the department.
+
+20
+
+Earning and Profits
+The intended use of the project is personal, at-home EV charging. From this project we would
+only earn based on the amount of money saved. Those selling the components profit, unless the
+entire system became manufactured by one company.
+Timing
+This is the perfect time for a product like this to emerge. Electric vehicles are on the rise and
+more people are becoming environmentally conscious and aware of their own carbon footprint. In
+addition to this, it is becoming more cost-effective for homeowners to install solar on their homes
+to reduce their electricity bill. The combination of these factors will lead more people to seek out
+ways to continue in being “green” and reducing energy costs while using clean energy options.
+If manufactured on a commercial basis:
+Estimated number of devices sold per year
+Estimated manufacturing cost for each device
+Estimated purchase price for each device
+Estimated profit per year
+Estimated cost for user to operate device
+
+= 100
+= $2,906.84
+= $2,906.84*(1.3) = $3,778.90
+= ($3,778.892- $2,906.84)*10 = $8720.52
+= $0
+
+D. Environmental
+I.
+When manufacturing this system, the factory will consume additional power that may or not be
+the result of a renewable resource. If human workers are used at the plant, additional fossil fuels
+will be burned if they travel to work in a combustible-engine vehicle. Therefore, with each unit
+built, additional fumes and chemicals will be emitted to the environment.
+II.
+There is environmental impacts and concerns in mining the elements used for the solar cells. To
+reduce that, the optimal solar panel would be one that created their cells using recycled glass for
+the silicon cells.
+III.
+The natural resource/ecosystem impact would be minimal. If the system was installed on a stand
+on one’s property, the stand dug into the ground would be no more damaging than a light pole
+installation and the solar panel mounted on top would be no more impactful than a backyard patio
+set umbrella. Most people would likely choose to install the solar panels to their roof, eliminating
+both these concerns.
+IV.
+The project is intending to help the environment by increasing the appeal of electric vehicles,
+reducing the amount of energy required on a utility system to charge these cars, and reduce the
+amount of fossil fuels required to meet the demands of the system. Overall, the intention is to
+reduce carbon emissions and create a completely clean electric vehicle.
+
+21
+
+E. ​ ​Manufacturing
+I.
+We estimate that we will sell a few amount of these devices initially (average of ~5 units/yr) and
+then after a few years reach some sort of linear progression (15 units/yr).
+II.
+The estimated manufacturing cost can be taken from our bill of materials: $2,906.84. Later in our
+products lifetime we will have a larger demand for our product so we can begin to buy in bulk
+from the manufacturer in order to save money.
+III.
+The problems we may face while manufacturing this system is finding top of the line
+manufacturers that we can rely on to provide us with a safe and sturdy product that is also
+cost-effective and produced in the most environmentally-friendly way.
+F. Sustainability
+I.
+There is degradation expected with the components of the system. The lead acid batteries we will
+using tend to last 4-7 years depending on the amount of use. After that, they will need to be
+replaced. It is also wise to have the battery checked for leaks periodically. Additionally, it is also
+expected that the solar panels will degrade and lose efficiency after 20-40 years. It is also
+encouraged to maintain panels by cleaning and checking for damages periodically.
+II.
+The solar panels needed for this project contributions to the supply of silicon that we have on this
+planet. Luckily, Silicon is a very abundant element and makes up a large chunk of the earth’s
+mass. On top of this, additional metal would have to be mined in order to make up the system’s
+build. As of today, the components used for the system are considered sustainable. There will
+need to be a continued effort in electronics and metallurgic recycling to ensure these components
+remain sustainable.
+III.
+The most important upgrade on the current system would be to add additional batteries. As the
+system is, it can not fully charge an electric vehicle. The addition of batteries and possible solar
+panels will allow the system to charge the electric vehicle in a more reasonable amount of time.
+IV.
+Some possible issues or challenges associated with upgrading the design would be additional
+material costs & maintenance fees that would have to be added to the total cost of the product.
+G. Ethical
+I.
+The use of this product promotes clean and renewable energy. In order to uphold these positive
+implications, all processes along the way must be clean and ethical.
+II.
+There could be ethical implications if the system was installed on a stand and created shading or
+hindered views of one's neighbors.
+H. Health and Safety
+I.
+The idea of the system is to reduce carbon emissions from combustion vehicles and electric
+utilities that get their fuel from nonrenewable sources. As small of an impact as this project might
+make in the overall scheme of things, it is important nonetheless as it helps reduce harmful
+emissions.
+II.
+There may be concerns with the current manufacturing process of solar panels and other
+electronics used in the system. These concerns would need to be studied and addressed if the
+project was manufactured.
+III.
+The system itself shall be sturdy and safe to operate to avoid any damages that may occur to an
+operator. To ensure this, our manufacturers must have proof of a safe workplace for all of their
+22
+
+workers and a quality assurance team that prevents defects in our materials used that may cause
+issues to our consumers.
+I. Social and Political
+I.
+The main impact this project would have on society would be a positive one. An electric vehicle
+powered completely by the sun promotes the use of electric vehicles and the production of energy
+in a clean and responsible manner.
+II.
+There might be delay on efforts to expand electric vehicles and reduce fossil fuel use with the
+current US administration. This might have repercussions on products that encourage the use of
+renewable energies over fossil fuels. The exact impact of this is currently unknown. This project
+is currently the best option for an individual to own and produce electricity on their own.
+J. Development
+I.
+Developments that are currently being worked towards are:
+A. More efficient/cheaper commercial solar panels
+B. More efficient/cheaper energy storage
+C. DC Supercharging
+II.
+From these developments, electric vehicles (along with renewable energy) will become more
+abundant.
+
+23
+
+APPENDIX B: PROJECT SCHEMATIC
+
+Figure 17: ​Final Design of the Solar Powered Electric Vehicle Charger
+
+24
+
+APPENDIX C: TIME SCHEDULE ALLOCATION
+
+25
+
+
