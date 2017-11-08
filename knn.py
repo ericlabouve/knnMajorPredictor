@@ -39,13 +39,27 @@ def computeKnn(k, testVector, trainingVectors):
 
     return neighbors
 
+def getMajor(neighbors):
+    count = dict()
+    for neighbor in range(len(neighbors)):
+        if neighbors[neighbor][0] in count:
+            count[neighbors[neighbor][0]] = count[neighbors[neighbor][0]] + 1
+        else:
+            count[neighbors[neighbor][0]] = 1
+
+    return max(count, key=count.get)
 
 if __name__ == '__main__':
+    k = 5
     trainVectors = generateTrainingVectors()
     testVectors = generateTestingVectors()
 
     #print(euclideanDistance(testVectors[0][1], testVectors[1][1]))
-    neighbors = computeKnn(14, testVectors[5], trainVectors)
+
+    # computing the k-nearest neighbors for test document 6
+    neighbors = computeKnn(k, testVectors[4], trainVectors)
    
     for neighbor in neighbors:
        print(neighbor[0])
+    
+    print("Predicted major is: " + getMajor(neighbors))
