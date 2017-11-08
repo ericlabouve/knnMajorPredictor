@@ -1,6 +1,10 @@
 from generateVectors import generateTrainingVectors
 from generateVectors import generateTestingVectors
+from collections import defaultdict
+from confusionMatrix import ConfusionMatrix
 import operator
+
+
 
 def euclideanDistance(v1, v2):
     # https://stackoverflow.com/questions/18554012/intersecting-two-dictionaries-in-python
@@ -21,23 +25,16 @@ def euclideanDistance(v1, v2):
 
 def computeKnn(k, testVector, trainingVectors):
     # use a priority queue to order trainingVectors based on smallest distance to cmputeKnn
-    #pass
     distances = []
     for x in range(len(trainingVectors)):
-		dist = euclideanDistance(testVector[1], trainingVectors[x][1])
-		distances.append((trainingVectors[x], dist))
-
+        dist = euclideanDistance(testVector[1], trainingVectors[x][1])
+        distances.append((trainingVectors[x], dist))
     distances.sort(key=operator.itemgetter(1))
     neighbors = []
-
     for x in range(k):
         neighbors.append(distances[x][0])
-
-    # testing the sorted values
-    #for dist in range(len(distances)):
-    #    print(distances[dist][0][0] + " : " + str(distances[dist][1]))
-
     return neighbors
+
 
 def getMajor(neighbors):
     count = dict()
@@ -46,20 +43,25 @@ def getMajor(neighbors):
             count[neighbors[neighbor][0]] = count[neighbors[neighbor][0]] + 1
         else:
             count[neighbors[neighbor][0]] = 1
-
     return max(count, key=count.get)
 
+
 if __name__ == '__main__':
-    k = 5
+    k = 7
     trainVectors = generateTrainingVectors()
     testVectors = generateTestingVectors()
+    allVectors = trainVectors + testVectors
 
-    #print(euclideanDistance(testVectors[0][1], testVectors[1][1]))
+    # Cross validation
+    confusionMatrixes = defaultdict(ConfusionMatrix)
+    for i in range(len(allVectors)):
+        vector = allVectors.pop(0)  # Remove vector from dataset
+        neighbors = computeKnn(k, vector, allVectors)
+        allVectors.append(vector)  # Add vector back into dataset
+        prediction = getMajor(neighbors)
+        confusionMatrixes[vector[0]].add(vector[0], prediction)
+        #print("Predicted: " + prediction + "\tActual: " + vector[0])
 
-    # computing the k-nearest neighbors for test document 6
-    neighbors = computeKnn(k, testVectors[4], trainVectors)
-   
-    for neighbor in neighbors:
-       print(neighbor[0])
-    
-    print("Predicted major is: " + getMajor(neighbors))
+    for key, value in confusionMatrixes.items():
+        print(key + ":")
+        print("Precision: " + str(value.precision()) + " Recall: " + str(value.recall()) + " F-Score: " + str(value.fscore()) + "\n")
