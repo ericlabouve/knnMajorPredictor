@@ -1,6 +1,6 @@
 from generateVectors import generateTrainingVectors
 from generateVectors import generateTestingVectors
-
+import operator
 
 def euclideanDistance(v1, v2):
     # https://stackoverflow.com/questions/18554012/intersecting-two-dictionaries-in-python
@@ -24,7 +24,7 @@ def computeKnn(k, testVector, trainingVectors):
     #pass
     distances = []
     for x in range(len(trainingVectors)):
-		dist = euclideanDistance(testVector, trainingVectors[x])
+		dist = euclideanDistance(testVector[1], trainingVectors[x][1])
 		distances.append((trainingVectors[x], dist))
 
     distances.sort(key=operator.itemgetter(1))
@@ -32,6 +32,10 @@ def computeKnn(k, testVector, trainingVectors):
 
     for x in range(k):
         neighbors.append(distances[x][0])
+
+    # testing the sorted values
+    #for dist in range(len(distances)):
+    #    print(distances[dist][0][0] + " : " + str(distances[dist][1]))
 
     return neighbors
 
@@ -41,3 +45,7 @@ if __name__ == '__main__':
     testVectors = generateTestingVectors()
 
     #print(euclideanDistance(testVectors[0][1], testVectors[1][1]))
+    neighbors = computeKnn(14, testVectors[5], trainVectors)
+   
+    for neighbor in neighbors:
+       print(neighbor[0])
