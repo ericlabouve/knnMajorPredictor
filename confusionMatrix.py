@@ -3,8 +3,8 @@ from collections import defaultdict
 class ConfusionMatrix:
     def __init__(self):
         self.tp = 0  # True Positive
-        self.fp = 0  # False Positive
-        self.fn = 0  # False Negative - Knn never uses
+        self.fp = 0  # False Positive - Knn never uses
+        self.fn = 0  # False Negative
         self.tn = 0  # True Negative - Knn never uses
         self.total = 0
 
@@ -13,9 +13,9 @@ class ConfusionMatrix:
         # True positive
         if actual == classified:
             self.tp += 1
-        # False positive
+        # False negative
         elif actual != classified:
-            self.fp += 1
+            self.fn += 1
         self.total += 1
 
 

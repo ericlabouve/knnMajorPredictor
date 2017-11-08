@@ -62,6 +62,17 @@ if __name__ == '__main__':
         confusionMatrixes[vector[0]].add(vector[0], prediction)
         #print("Predicted: " + prediction + "\tActual: " + vector[0])
 
+    avgPrecision = 0
+    avgRecall = 0
+    avgFscore = 0
     for key, value in confusionMatrixes.items():
         print(key + ":")
+        avgPrecision += value.precision()
+        avgRecall += value.recall()
+        avgFscore += value.fscore()
         print("Precision: " + str(value.precision()) + " Recall: " + str(value.recall()) + " F-Score: " + str(value.fscore()) + "\n")
+    avgPrecision /= len(confusionMatrixes)
+    avgRecall /= len(confusionMatrixes)
+    avgFscore /= len(confusionMatrixes)
+    print("Averages:")
+    print("Precision: " + str(avgPrecision) + " Recall: " + str(avgRecall) + " F-Score: " + str(avgFscore))
