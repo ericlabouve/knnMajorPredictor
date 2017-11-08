@@ -21,10 +21,23 @@ def euclideanDistance(v1, v2):
 
 def computeKnn(k, testVector, trainingVectors):
     # use a priority queue to order trainingVectors based on smallest distance to cmputeKnn
-    pass
+    #pass
+    distances = []
+    for x in range(len(trainingVectors)):
+		dist = euclideanDistance(testVector, trainingVectors[x])
+		distances.append((trainingVectors[x], dist))
+
+    distances.sort(key=operator.itemgetter(1))
+    neighbors = []
+
+    for x in range(k):
+        neighbors.append(distances[x][0])
+
+    return neighbors
 
 
 if __name__ == '__main__':
     trainVectors = generateTrainingVectors()
     testVectors = generateTestingVectors()
-    print(euclideanDistance(testVectors[0][1], testVectors[1][1]))
+
+    #print(euclideanDistance(testVectors[0][1], testVectors[1][1]))
