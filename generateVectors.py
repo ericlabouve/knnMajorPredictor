@@ -29,3 +29,6 @@ def generateTestingVectors():
         for filename in os.listdir(dir):  # For each file in all directories
             testVectors.append((category, getTfVector(dir + filename)))
     return testVectors
+
+def generateVectors():
+    return generateTrainingVectors() + generateTestingVectors()
