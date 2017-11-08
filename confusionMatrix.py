@@ -8,7 +8,6 @@ class ConfusionMatrix:
         self.tn = 0  # True Negative - Knn never uses
         self.total = 0
 
-
     def add(self, actual, classified):
         # True positive
         if actual == classified:
@@ -16,14 +15,12 @@ class ConfusionMatrix:
         # False negative
         elif actual != classified:
             self.fn += 1
-        self.total += 1
-
 
     def precision(self):
         return self.tp / (self.tp + self.fp)
 
     def recall(self):
-        return self.tp / self.total
+        return self.tp / (self.tp + self.fn)
 
     def fscore(self):
         return (2 * self.precision() * self.recall()) / (self.precision() + self.recall())
