@@ -10,10 +10,10 @@ Eric LaBouve:
 - Made slides 1 - 7 on the presentation.
 
 Jason Chin:
-- Collected test and training data for bioresource & agricultural, computer, electrical, industrial & manufacturing, liberal arts, materials, and mechanical engineering.
+- Collected test and training data for liberal arts, materials, and mechanical engineering.
 - Implemented the Matrix class and all methods inside agglomerative.py.
-- Implemented the initial knn algorithm in knn.py.
 - Refactored the design of the code: separated the main function into its own file, moved functions around to make more logical sense.
 
 Minjie Fang:
-
+- Collected test and training data for bioresource & agricultural, computer, electrical, and industrial & manufacturing engineering.
+- Implemented the initial knn algorithm in knn.py.
