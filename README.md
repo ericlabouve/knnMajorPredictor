@@ -17,3 +17,4 @@ Jason Chin:
 Minjie Fang:
 - Collected test and training data for bioresource & agricultural, computer, electrical, and industrial & manufacturing engineering.
 - Implemented the initial knn algorithm in knn.py.
+- Made slides 8 - 9 on the presentation
