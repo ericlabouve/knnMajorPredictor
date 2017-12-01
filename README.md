@@ -24,15 +24,15 @@ The following table is our resulting data for our KNN system:
 
 | Major | Precision | Recall | F-Score |
 | --- | --- | --- | --- |
-|Electrical|0.53|0.80|0.64|
-Aerospace     0.50        0.20      0.29
-Computer      0.14        0.30      0.19
-Mechanical    0.66        0.40      0.50
-Bio and Agr   0.63        0.50      0.55
-Materials     1.0         0.1       0.18
-Liberal Arts  1.0         0.1       0.18
-Architectural 0.26       0.60      0.36
-Average       0.59        0.38      0.46
+| Electrical | 0.53 | 0.80 | 0.64 |
+| Aerospace | 0.50 | 0.20 | 0.29 |
+| Computer | 0.14 | 0.30 | 0.19 |
+| Mechanical | 0.66 | 0.40 | 0.50 |
+| Bio and Agr | 0.63 | 0.50 | 0.55 |
+| Materials | 1.0 | 0.1 | 0.18 |
+| Liberal Arts | 1.0 | 0.1 | 0.18 |
+| Architectural | 0.26 | 0.60 | 0.36 |
+| Average | 0.59 | 0.38 | 0.46 |
 
 With a precision close to 0.60 and a recall of close to 0.40, the system is not reliable but performs significantly better than picking a category at random. The system could be improved if the text vectors were normalized or a more accurate distance function was used such as Okapi25. 
 
