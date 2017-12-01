@@ -22,7 +22,8 @@ The systems were evaluated using cross validation since we only had 90 data poin
 
 The following table is our resulting data for our KNN system:
 
-|Major|Precision|Recall|F-Score|
+| Major | Precision | Recall | F-Score |
+| --- | --- | --- | --- |
 |Electrical|0.53|0.80|0.64|
 Aerospace     0.50        0.20      0.29
 Computer      0.14        0.30      0.19
