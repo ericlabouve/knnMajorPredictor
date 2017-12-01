@@ -23,7 +23,7 @@ The systems were evaluated using cross validation since we only had 90 data poin
 The following table is our resulting data for our KNN system:
 
               Precision   Recall    F-Score
-Electrical    0.53        0.80      0.64
+Electrical    0.53        0.80      0.64\n
 Aerospace     0.50        0.20      0.29
 Computer      0.14        0.30      0.19
 Mechanical    0.66        0.40      0.50
